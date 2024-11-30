@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "0.1": {
     "added": ["Imported the v2018 code base into v2024"],
     "changed": [
       "Clean up v2018 related calculations and data that did not carry over to v2024"
