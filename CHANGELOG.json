@@ -10,7 +10,8 @@
       "Allow special warband upgrade to be take aside from other wargear options",
       "Remove the Rohan Royal Guard from the unit selector in Army of Edoras where it did not belong",
       "Updated the MWF value on the War Mumak of Harad when the Beastmaster is chosen as an option",
-      "Correctly remove special rules from the PDF that are linked to an option that is not selected"
+      "Correctly remove special rules from the PDF that are linked to an option that is not selected",
+      "Correctly handle 'upgrade to armoured ...' options when generating the profiles for the PDF"
     ]
   },
   "0.1": {
