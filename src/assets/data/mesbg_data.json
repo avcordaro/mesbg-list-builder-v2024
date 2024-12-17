@@ -513,6 +513,716 @@
       }
     ]
   },
+  "[army-of-gundabad] azog-the-defiler": {
+    "model_id": "[army-of-gundabad] azog-the-defiler",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Azog the Defiler",
+    "unit_type": "Hero of Legend",
+    "base_points": 175,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0668",
+        "name": "Stone flail",
+        "points": 15
+      },
+      {
+        "id": "OPT0669",
+        "name": "Heavy armour",
+        "points": 10,
+        "included": true,
+        "quantity": 1
+      }
+    ]
+  },
+  "[army-of-gundabad] bolg-spawn-of-azog": {
+    "model_id": "[army-of-gundabad] bolg-spawn-of-azog",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Bolg, Spawn of Azog",
+    "unit_type": "Hero of Valour",
+    "base_points": 175,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0670",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      },
+      {
+        "id": "OPT0671",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[army-of-gundabad] gundabad-orc-captain": {
+    "model_id": "[army-of-gundabad] gundabad-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-gundabad] goblin-mercenary-captain": {
+    "model_id": "[army-of-gundabad] goblin-mercenary-captain",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Goblin Mercenary Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-gundabad] gundabad-catapult-troll": {
+    "model_id": "[army-of-gundabad] gundabad-catapult-troll",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Catapult Troll",
+    "unit_type": "Independent Hero",
+    "base_points": 180,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:0:5"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-gundabad] troll-brute": {
+    "model_id": "[army-of-gundabad] troll-brute",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Troll Brute",
+    "unit_type": "Independent Hero",
+    "base_points": 120,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Troll Brute",
+        "0:0:0:4"
+      ],
+      [
+        "Orc Commander",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-gundabad] gundabad-troll": {
+    "model_id": "[army-of-gundabad] gundabad-troll",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Troll",
+    "unit_type": "Warrior",
+    "base_points": 120,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0677",
+        "name": "Exchange club for Scythe Gauntlets",
+        "points": 10
+      }
+    ]
+  },
+  "[army-of-gundabad] gundabad-ogre": {
+    "model_id": "[army-of-gundabad] gundabad-ogre",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Ogre",
+    "unit_type": "Warrior",
+    "base_points": 60,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-gundabad] war-bat": {
+    "model_id": "[army-of-gundabad] war-bat",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "War Bat",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-gundabad] gundabad-berserker": {
+    "model_id": "[army-of-gundabad] gundabad-berserker",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Berserker",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0676",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-gundabad] gundabad-orc-warrior": {
+    "model_id": "[army-of-gundabad] gundabad-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0672",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0673",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0674",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0675",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-gundabad] goblin-mercenary": {
+    "model_id": "[army-of-gundabad] goblin-mercenary",
+    "army_type": "Evil",
+    "army_list": "Army of Gundabad",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Goblin Mercenary",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-lake-town] the-master-of-lake-town": {
+    "model_id": "[army-of-lake-town] the-master-of-lake-town",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "The Master of Lake-town",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:4:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-lake-town] bard-the-bowman": {
+    "model_id": "[army-of-lake-town] bard-the-bowman",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard the Bowman",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0735",
+        "name": "Windlance",
+        "points": 50,
+        "type": "siege_engine"
+      }
+    ]
+  },
+  "[army-of-lake-town] tauriel-ranger-of-mirkwood": {
+    "model_id": "[army-of-lake-town] tauriel-ranger-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Tauriel, Ranger of Mirkwood",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0738",
+        "name": "Elf bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[army-of-lake-town] braga-captain-of-the-guard": {
+    "model_id": "[army-of-lake-town] braga-captain-of-the-guard",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Braga, Captain of the Guard",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] fili-the-dwarf": {
+    "model_id": "[army-of-lake-town] fili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] kili-the-dwarf": {
+    "model_id": "[army-of-lake-town] kili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] oin-the-dwarf": {
+    "model_id": "[army-of-lake-town] oin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] bofur-the-dwarf": {
+    "model_id": "[army-of-lake-town] bofur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] lake-town-guard-captain": {
+    "model_id": "[army-of-lake-town] lake-town-guard-captain",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Guard Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] alfrid-the-councillor": {
+    "model_id": "[army-of-lake-town] alfrid-the-councillor",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Alfrid the Councillor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:1"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-lake-town] bard's-family": {
+    "model_id": "[army-of-lake-town] bard's-family",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard's Family",
+    "unit_type": "Independent Hero",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 3,
+    "MWFW": [
+      [
+        "Bain, Son of Bard",
+        "0:1:2:1"
+      ],
+      [
+        "Sigrid",
+        "0:1:2:1"
+      ],
+      [
+        "Tilda",
+        "0:1:2:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-lake-town] lake-town-guard": {
+    "model_id": "[army-of-lake-town] lake-town-guard",
+    "army_type": "Good",
+    "army_list": "Army of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Guard",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0736",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0737",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-thror] thror-king-under-the-mountain": {
+    "model_id": "[army-of-thror] thror-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thror, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[army-of-thror] thrain-son-of-thror": {
+    "model_id": "[army-of-thror] thrain-son-of-thror",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thrain, Son of Thror",
+    "unit_type": "Hero of Valour",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-thror] young-thorin-oakenshield": {
+    "model_id": "[army-of-thror] young-thorin-oakenshield",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Thorin Oakenshield",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-thror] young-dwalin-the-dwarf": {
+    "model_id": "[army-of-thror] young-dwalin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Dwalin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-thror] dwarf-king": {
+    "model_id": "[army-of-thror] dwarf-king",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf King",
+    "unit_type": "Hero of Valour",
+    "base_points": 85,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-thror] young-balin-the-dwarf": {
+    "model_id": "[army-of-thror] young-balin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Balin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-thror] grim-hammer-captain": {
+    "model_id": "[army-of-thror] grim-hammer-captain",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Grim Hammer Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-thror] erebor-dwarf-captain": {
+    "model_id": "[army-of-thror] erebor-dwarf-captain",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Erebor Dwarf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-thror] grim-hammer-warrior": {
+    "model_id": "[army-of-thror] grim-hammer-warrior",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Grim Hammer Warrior",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "default_throw": true,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-thror] erebor-dwarf-warrior": {
+    "model_id": "[army-of-thror] erebor-dwarf-warrior",
+    "army_type": "Good",
+    "army_list": "Army of Thror",
+    "profile_origin": "Dwarven Holds",
+    "name": "Erebor Dwarf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0715",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0716",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0717",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[army-of-the-white-hand] saruman": {
     "model_id": "[army-of-the-white-hand] saruman",
     "army_type": "Evil",
@@ -936,6 +1646,147 @@
     "warband_size": 6,
     "options": []
   },
+  "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain": {
+    "model_id": "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin Oakenshield, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[assault-on-ravenhill] dwalin-the-dwarf-champion-of-erebor": {
+    "model_id": "[assault-on-ravenhill] dwalin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-ravenhill] legolas-greenleaf-prince-of-mirkwood": {
+    "model_id": "[assault-on-ravenhill] legolas-greenleaf-prince-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Legolas Greenleaf, Prince of Mirkwood",
+    "unit_type": "Hero of Valour",
+    "base_points": 105,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0800",
+        "name": "Orcrist",
+        "points": 0,
+        "included": true,
+        "quantity": 1
+      }
+    ]
+  },
+  "[assault-on-ravenhill] fili-the-dwarf-champion-of-erebor": {
+    "model_id": "[assault-on-ravenhill] fili-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-ravenhill] kili-the-dwarf-champion-of-erebor": {
+    "model_id": "[assault-on-ravenhill] kili-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-ravenhill] tauriel-ranger-of-mirkwood": {
+    "model_id": "[assault-on-ravenhill] tauriel-ranger-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Tauriel, Ranger of Mirkwood",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[assault-on-ravenhill] bilbo-baggins-master-burglar": {
+    "model_id": "[assault-on-ravenhill] bilbo-baggins-master-burglar",
+    "army_type": "Good",
+    "army_list": "Assault on Ravenhill",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bilbo Baggins, Master Burglar",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[atop-the-walls] gandalf-the-white": {
     "model_id": "[atop-the-walls] gandalf-the-white",
     "army_type": "Good",
@@ -1143,6 +1994,242 @@
         "id": "OPT0513",
         "name": "Flaming Ammunition",
         "points": 10
+      }
+    ]
+  },
+  "[azog's-hunters] azog-the-defiler": {
+    "model_id": "[azog's-hunters] azog-the-defiler",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Azog the Defiler",
+    "unit_type": "Hero of Legend",
+    "base_points": 175,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0690",
+        "name": "The White Warg",
+        "points": 50,
+        "type": "mount",
+        "mount_name": "The White Warg"
+      }
+    ]
+  },
+  "[azog's-hunters] bolg-spawn-of-azog": {
+    "model_id": "[azog's-hunters] bolg-spawn-of-azog",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Bolg, Spawn of Azog",
+    "unit_type": "Hero of Valour",
+    "base_points": 175,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0691",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      },
+      {
+        "id": "OPT0692",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[azog's-hunters] narzug-hunter-orc-captain": {
+    "model_id": "[azog's-hunters] narzug-hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Narzug, Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[azog's-hunters] yazneg-hunter-orc-captain": {
+    "model_id": "[azog's-hunters] yazneg-hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Yazneg, Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0693",
+        "name": "Fell Warg and lance",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      }
+    ]
+  },
+  "[azog's-hunters] fimbul-hunter-orc-captain": {
+    "model_id": "[azog's-hunters] fimbul-hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fimbul, Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0694",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      }
+    ]
+  },
+  "[azog's-hunters] hunter-orc-captain": {
+    "model_id": "[azog's-hunters] hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0695",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      },
+      {
+        "id": "OPT0696",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0697",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[azog's-hunters] hunter-orc-warg-rider": {
+    "model_id": "[azog's-hunters] hunter-orc-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0700",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0701",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[azog's-hunters] fell-warg": {
+    "model_id": "[azog's-hunters] fell-warg",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[azog's-hunters] hunter-orc-warrior": {
+    "model_id": "[azog's-hunters] hunter-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Azog's Hunters",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0698",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0699",
+        "name": "Two-handed weapon",
+        "points": 1
       }
     ]
   },
@@ -3523,6 +4610,627 @@
       }
     ]
   },
+  "[desolator-of-the-north] smaug": {
+    "model_id": "[desolator-of-the-north] smaug",
+    "army_type": "Evil",
+    "army_list": "Desolator of the North",
+    "profile_origin": "Smaug",
+    "name": "Smaug",
+    "unit_type": "Hero of Legend",
+    "base_points": 700,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:0:20"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[erebor-&-dale] thror-king-under-the-mountain": {
+    "model_id": "[erebor-&-dale] thror-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thror, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[erebor-&-dale] girion-lord-of-dale": {
+    "model_id": "[erebor-&-dale] girion-lord-of-dale",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Girion, Lord of Dale",
+    "unit_type": "Hero of Legend",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[erebor-&-dale] thrain-son-of-thror": {
+    "model_id": "[erebor-&-dale] thrain-son-of-thror",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thrain, Son of Thror",
+    "unit_type": "Hero of Valour",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-&-dale] young-thorin-oakenshield": {
+    "model_id": "[erebor-&-dale] young-thorin-oakenshield",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Thorin Oakenshield",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-&-dale] young-dwalin-the-dwarf": {
+    "model_id": "[erebor-&-dale] young-dwalin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Dwalin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-&-dale] young-balin-the-dwarf": {
+    "model_id": "[erebor-&-dale] young-balin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Young Balin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-&-dale] grim-hammer-captain": {
+    "model_id": "[erebor-&-dale] grim-hammer-captain",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Grim Hammer Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-&-dale] erebor-dwarf-captain": {
+    "model_id": "[erebor-&-dale] erebor-dwarf-captain",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Erebor Dwarf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-&-dale] captain-of-dale": {
+    "model_id": "[erebor-&-dale] captain-of-dale",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Captain of Dale",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-&-dale] grim-hammer-warrior": {
+    "model_id": "[erebor-&-dale] grim-hammer-warrior",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Grim Hammer Warrior",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "default_throw": true,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[erebor-&-dale] erebor-dwarf-warrior": {
+    "model_id": "[erebor-&-dale] erebor-dwarf-warrior",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Dwarven Holds",
+    "name": "Erebor Dwarf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0750",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0751",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0752",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[erebor-&-dale] warrior-of-dale": {
+    "model_id": "[erebor-&-dale] warrior-of-dale",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Warrior of Dale",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0753",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0754",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0755",
+        "name": "Esgaroth bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0756",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0757",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[erebor-reclaimed] thorin-oakenshield-king-under-the-mountain": {
+    "model_id": "[erebor-reclaimed] thorin-oakenshield-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin Oakenshield, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0727",
+        "name": "Orcrist",
+        "points": 10
+      }
+    ]
+  },
+  "[erebor-reclaimed] dain-ironfoot-lord-of-the-iron-hills": {
+    "model_id": "[erebor-reclaimed] dain-ironfoot-lord-of-the-iron-hills",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dain Ironfoot, Lord of the Iron Hills",
+    "unit_type": "Hero of Valour",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-reclaimed] dwalin-the-dwarf": {
+    "model_id": "[erebor-reclaimed] dwalin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-reclaimed] fili-the-dwarf": {
+    "model_id": "[erebor-reclaimed] fili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-reclaimed] kili-the-dwarf": {
+    "model_id": "[erebor-reclaimed] kili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-reclaimed] balin-the-dwarf": {
+    "model_id": "[erebor-reclaimed] balin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Balin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[erebor-reclaimed] gloin-the-dwarf": {
+    "model_id": "[erebor-reclaimed] gloin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] iron-hills-captain": {
+    "model_id": "[erebor-reclaimed] iron-hills-captain",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0728",
+        "name": "Exchange shield and spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[erebor-reclaimed] dori-the-dwarf": {
+    "model_id": "[erebor-reclaimed] dori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] nori-the-dwarf": {
+    "model_id": "[erebor-reclaimed] nori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] bifur-the-dwarf": {
+    "model_id": "[erebor-reclaimed] bifur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] bofur-the-dwarf": {
+    "model_id": "[erebor-reclaimed] bofur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0734",
+        "name": "Troll Brute",
+        "points": 100,
+        "type": "mount",
+        "mount_name": "Troll Brute"
+      }
+    ]
+  },
+  "[erebor-reclaimed] bombur-the-dwarf": {
+    "model_id": "[erebor-reclaimed] bombur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bombur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] oin-the-dwarf": {
+    "model_id": "[erebor-reclaimed] oin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] ori-the-dwarf": {
+    "model_id": "[erebor-reclaimed] ori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Ori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[erebor-reclaimed] iron-hills-warrior": {
+    "model_id": "[erebor-reclaimed] iron-hills-warrior",
+    "army_type": "Good",
+    "army_list": "Erebor Reclaimed",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0729",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0730",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0731",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0732",
+        "name": "Crossbow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0733",
+        "name": "Mattock",
+        "points": 1
+      }
+    ]
+  },
   "[fangorn] treebeard": {
     "model_id": "[fangorn] treebeard",
     "army_type": "Good",
@@ -3622,6 +5330,110 @@
         "points": 0
       }
     ]
+  },
+  "[garrison-of-dale] girion-lord-of-dale": {
+    "model_id": "[garrison-of-dale] girion-lord-of-dale",
+    "army_type": "Good",
+    "army_list": "Garrison of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Girion, Lord of Dale",
+    "unit_type": "Hero of Legend",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0744",
+        "name": "Windlance",
+        "points": 50,
+        "type": "siege_engine"
+      }
+    ]
+  },
+  "[garrison-of-dale] captain-of-dale": {
+    "model_id": "[garrison-of-dale] captain-of-dale",
+    "army_type": "Good",
+    "army_list": "Garrison of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Captain of Dale",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[garrison-of-dale] warrior-of-dale": {
+    "model_id": "[garrison-of-dale] warrior-of-dale",
+    "army_type": "Good",
+    "army_list": "Garrison of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Warrior of Dale",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0745",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0746",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0747",
+        "name": "Esgaroth bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0748",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0749",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[garrison-of-dale] windlance": {
+    "model_id": "[garrison-of-dale] windlance",
+    "army_type": "Good",
+    "army_list": "Garrison of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Windlance",
+    "unit_type": "Siege Engine",
+    "base_points": 70,
+    "siege_crew": 1,
+    "MWFW": [
+      [
+        "Windlance - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
   },
   "[garrison-of-ithilien] faramir": {
     "model_id": "[garrison-of-ithilien] faramir",
@@ -3907,6 +5719,367 @@
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      }
+    ]
+  },
+  "[goblin-town] the-goblin-king": {
+    "model_id": "[goblin-town] the-goblin-king",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "The Goblin King",
+    "unit_type": "Hero of Legend",
+    "base_points": 150,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:3"
+      ]
+    ],
+    "warband_size": 24,
+    "options": []
+  },
+  "[goblin-town] grinnah-goblin-jailer": {
+    "model_id": "[goblin-town] grinnah-goblin-jailer",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "Grinnah, Goblin Jailer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[goblin-town] the-goblin-scribe": {
+    "model_id": "[goblin-town] the-goblin-scribe",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "The Goblin Scribe",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:1:1:1"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[goblin-town] goblin-captain": {
+    "model_id": "[goblin-town] goblin-captain",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "Goblin Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[goblin-town] gollum": {
+    "model_id": "[goblin-town] gollum",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "Gollum",
+    "unit_type": "Independent Hero",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:0:1:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[goblin-town] goblin-warrior": {
+    "model_id": "[goblin-town] goblin-warrior",
+    "army_type": "Evil",
+    "army_list": "Goblin-town",
+    "profile_origin": "The Misty Mountains",
+    "name": "Goblin Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0709",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[halls-of-thranduil] thranduil-king-of-the-woodland-realm": {
+    "model_id": "[halls-of-thranduil] thranduil-king-of-the-woodland-realm",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Thranduil, King of the Woodland Realm",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0758",
+        "name": "Great Elk",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Great Elk"
+      },
+      {
+        "id": "OPT0759",
+        "name": "Heavy armour",
+        "points": 10
+      }
+    ]
+  },
+  "[halls-of-thranduil] legolas-greenleaf-prince-of-mirkwood": {
+    "model_id": "[halls-of-thranduil] legolas-greenleaf-prince-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Legolas Greenleaf, Prince of Mirkwood",
+    "unit_type": "Hero of Valour",
+    "base_points": 105,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0760",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0761",
+        "name": "Orcrist",
+        "points": 10
+      },
+      {
+        "id": "OPT0762",
+        "name": "Elven cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[halls-of-thranduil] tauriel-ranger-of-mirkwood": {
+    "model_id": "[halls-of-thranduil] tauriel-ranger-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Tauriel, Ranger of Mirkwood",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0763",
+        "name": "Elf bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[halls-of-thranduil] palace-guard-captain": {
+    "model_id": "[halls-of-thranduil] palace-guard-captain",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Palace Guard Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0764",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[halls-of-thranduil] mirkwood-elf-captain": {
+    "model_id": "[halls-of-thranduil] mirkwood-elf-captain",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[halls-of-thranduil] mirkwood-ranger-captain": {
+    "model_id": "[halls-of-thranduil] mirkwood-ranger-captain",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Ranger Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[halls-of-thranduil] mirkwood-elf-knight": {
+    "model_id": "[halls-of-thranduil] mirkwood-elf-knight",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Knight",
+    "unit_type": "Warrior",
+    "base_points": 16,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[halls-of-thranduil] mirkwood-ranger": {
+    "model_id": "[halls-of-thranduil] mirkwood-ranger",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Ranger",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "default_bow": true,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[halls-of-thranduil] palace-guard": {
+    "model_id": "[halls-of-thranduil] palace-guard",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Palace Guard",
+    "unit_type": "Warrior",
+    "base_points": 12,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0768",
+        "name": "Shield and Elven spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0769",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0770",
+        "name": "Elven Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[halls-of-thranduil] mirkwood-elf-warrior": {
+    "model_id": "[halls-of-thranduil] mirkwood-elf-warrior",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0765",
+        "name": "Elf bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0766",
+        "name": "Elven Glaive",
+        "points": 2
+      },
+      {
+        "id": "OPT0767",
+        "name": "Shield",
+        "points": 1
       }
     ]
   },
@@ -6588,6 +8761,728 @@
       }
     ]
   },
+  "[pits-of-dol-guldur] azog-the-defiler": {
+    "model_id": "[pits-of-dol-guldur] azog-the-defiler",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Azog the Defiler",
+    "unit_type": "Hero of Legend",
+    "base_points": 175,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0678",
+        "name": "The White Warg",
+        "points": 50,
+        "type": "mount",
+        "mount_name": "The White Warg"
+      }
+    ]
+  },
+  "[pits-of-dol-guldur] the-keeper-of-the-dungeons": {
+    "model_id": "[pits-of-dol-guldur] the-keeper-of-the-dungeons",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Keeper of the Dungeons",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:0:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[pits-of-dol-guldur] gundabad-orc-captain": {
+    "model_id": "[pits-of-dol-guldur] gundabad-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[pits-of-dol-guldur] hunter-orc-captain": {
+    "model_id": "[pits-of-dol-guldur] hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0679",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      },
+      {
+        "id": "OPT0680",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0681",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[pits-of-dol-guldur] thrain-the-broken": {
+    "model_id": "[pits-of-dol-guldur] thrain-the-broken",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "The Free Peoples",
+    "name": "Thrain the Broken",
+    "unit_type": "Independent Hero",
+    "base_points": 10,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:1:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[pits-of-dol-guldur] mirkwood-giant-spider": {
+    "model_id": "[pits-of-dol-guldur] mirkwood-giant-spider",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[pits-of-dol-guldur] mirkwood-hunting-spider": {
+    "model_id": "[pits-of-dol-guldur] mirkwood-hunting-spider",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[pits-of-dol-guldur] hunter-orc-warg-rider": {
+    "model_id": "[pits-of-dol-guldur] hunter-orc-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0688",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0689",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[pits-of-dol-guldur] gundabad-orc-warrior": {
+    "model_id": "[pits-of-dol-guldur] gundabad-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Gundabad Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0682",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0683",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0684",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0685",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[pits-of-dol-guldur] fell-warg": {
+    "model_id": "[pits-of-dol-guldur] fell-warg",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[pits-of-dol-guldur] hunter-orc-warrior": {
+    "model_id": "[pits-of-dol-guldur] hunter-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Pits of Dol Guldur",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0686",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0687",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[radagast's-alliance] radagast-the-brown": {
+    "model_id": "[radagast's-alliance] radagast-the-brown",
+    "army_type": "Good",
+    "army_list": "Radagast's Alliance",
+    "profile_origin": "The Free Peoples",
+    "name": "Radagast the Brown",
+    "unit_type": "Hero of Legend",
+    "base_points": 145,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0801",
+        "name": "Exchange Staff for Great Eagle",
+        "points": 55,
+        "type": "mount",
+        "included": true,
+        "quantity": 1,
+        "mount_name": "Great Eagle"
+      }
+    ]
+  },
+  "[radagast's-alliance] beorn": {
+    "model_id": "[radagast's-alliance] beorn",
+    "army_type": "Good",
+    "army_list": "Radagast's Alliance",
+    "profile_origin": "The Free Peoples",
+    "name": "Beorn",
+    "unit_type": "Hero of Valour",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[radagast's-alliance] gwaihir": {
+    "model_id": "[radagast's-alliance] gwaihir",
+    "army_type": "Good",
+    "army_list": "Radagast's Alliance",
+    "profile_origin": "The Free Peoples",
+    "name": "Gwaihir",
+    "unit_type": "Hero of Valour",
+    "base_points": 150,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[radagast's-alliance] great-eagle": {
+    "model_id": "[radagast's-alliance] great-eagle",
+    "army_type": "Good",
+    "army_list": "Radagast's Alliance",
+    "profile_origin": "The Free Peoples",
+    "name": "Great Eagle",
+    "unit_type": "Warrior",
+    "base_points": 100,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[radagast's-alliance] fledgeling-great-eagle": {
+    "model_id": "[radagast's-alliance] fledgeling-great-eagle",
+    "army_type": "Good",
+    "army_list": "Radagast's Alliance",
+    "profile_origin": "The Free Peoples",
+    "name": "Fledgeling Great Eagle",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[rangers-of-mirkwood] legolas-greenleaf-prince-of-mirkwood": {
+    "model_id": "[rangers-of-mirkwood] legolas-greenleaf-prince-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Legolas Greenleaf, Prince of Mirkwood",
+    "unit_type": "Hero of Valour",
+    "base_points": 105,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0771",
+        "name": "Elven cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[rangers-of-mirkwood] thorin-oakenshield": {
+    "model_id": "[rangers-of-mirkwood] thorin-oakenshield",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin Oakenshield",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0773",
+        "name": "Orcrist",
+        "points": 10,
+        "included": true,
+        "quantity": 1
+      },
+      {
+        "id": "OPT0803",
+        "name": "The Oakenshield",
+        "points": 5
+      }
+    ]
+  },
+  "[rangers-of-mirkwood] dwalin-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] dwalin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 95,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood": {
+    "model_id": "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Tauriel, Ranger of Mirkwood",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0772",
+        "name": "Elf bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[rangers-of-mirkwood] fili-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] fili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rangers-of-mirkwood] kili-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] kili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rangers-of-mirkwood] balin-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] balin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Balin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rangers-of-mirkwood] gloin-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] gloin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] mirkwood-ranger-captain": {
+    "model_id": "[rangers-of-mirkwood] mirkwood-ranger-captain",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Ranger Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] bilbo-baggins": {
+    "model_id": "[rangers-of-mirkwood] bilbo-baggins",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bilbo Baggins",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:3:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0774",
+        "name": "Sting",
+        "points": 5,
+        "included": true,
+        "quantity": 1
+      },
+      {
+        "id": "OPT0775",
+        "name": "The One Ring",
+        "points": 0,
+        "included": true,
+        "quantity": 1
+      }
+    ]
+  },
+  "[rangers-of-mirkwood] dori-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] dori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] nori-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] nori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] oin-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] oin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] bifur-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] bifur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] bofur-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] bofur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] bombur-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] bombur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bombur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] ori-the-dwarf": {
+    "model_id": "[rangers-of-mirkwood] ori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Dwarven Holds",
+    "name": "Ori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[rangers-of-mirkwood] mirkwood-ranger": {
+    "model_id": "[rangers-of-mirkwood] mirkwood-ranger",
+    "army_type": "Good",
+    "army_list": "Rangers of Mirkwood",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Ranger",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "default_bow": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
   "[realms-of-men] king-of-men-arnor": {
     "model_id": "[realms-of-men] king-of-men-arnor",
     "army_type": "Good",
@@ -8331,6 +11226,346 @@
       }
     ]
   },
+  "[rise-of-the-necromancer] sauron-the-necromancer": {
+    "model_id": "[rise-of-the-necromancer] sauron-the-necromancer",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Sauron, The Necromancer",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:25:0:1"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[rise-of-the-necromancer] khamul-the-easterling": {
+    "model_id": "[rise-of-the-necromancer] khamul-the-easterling",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Khamul the Easterling",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-abyssal-knight-1": {
+    "model_id": "[rise-of-the-necromancer] the-abyssal-knight-1",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Abyssal Knight",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-abyssal-knight-2": {
+    "model_id": "[rise-of-the-necromancer] the-abyssal-knight-2",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Abyssal Knight",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-dark-headsman": {
+    "model_id": "[rise-of-the-necromancer] the-dark-headsman",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Dark Headsman",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-forsaken": {
+    "model_id": "[rise-of-the-necromancer] the-forsaken",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Forsaken",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-keeper-of-the-dungeons": {
+    "model_id": "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Keeper of the Dungeons",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:0:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-lingering-shadow": {
+    "model_id": "[rise-of-the-necromancer] the-lingering-shadow",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Lingering Shadow",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-slayer-of-men-1": {
+    "model_id": "[rise-of-the-necromancer] the-slayer-of-men-1",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Slayer of Men",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-slayer-of-men-2": {
+    "model_id": "[rise-of-the-necromancer] the-slayer-of-men-2",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Slayer of Men",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] the-witch-king-of-angmar": {
+    "model_id": "[rise-of-the-necromancer] the-witch-king-of-angmar",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "The Witch-king of Angmar",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:0:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[rise-of-the-necromancer] hunter-orc-captain": {
+    "model_id": "[rise-of-the-necromancer] hunter-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0702",
+        "name": "Fell Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Fell Warg"
+      },
+      {
+        "id": "OPT0703",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0704",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[rise-of-the-necromancer] mirkwood-giant-spider": {
+    "model_id": "[rise-of-the-necromancer] mirkwood-giant-spider",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[rise-of-the-necromancer] mirkwood-hunting-spider": {
+    "model_id": "[rise-of-the-necromancer] mirkwood-hunting-spider",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[rise-of-the-necromancer] hunter-orc-warg-rider": {
+    "model_id": "[rise-of-the-necromancer] hunter-orc-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0707",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0708",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[rise-of-the-necromancer] fell-warg": {
+    "model_id": "[rise-of-the-necromancer] fell-warg",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[rise-of-the-necromancer] hunter-orc-warrior": {
+    "model_id": "[rise-of-the-necromancer] hunter-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Rise of the Necromancer",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Hunter Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0705",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0706",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[rivendell] elrond": {
     "model_id": "[rivendell] elrond",
     "army_type": "Good",
@@ -9025,6 +12260,1050 @@
     "warband_size": 0,
     "options": []
   },
+  "[survivors-of-lake-town] bard-the-bowman": {
+    "model_id": "[survivors-of-lake-town] bard-the-bowman",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard the Bowman",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0739",
+        "name": "Armour and horse",
+        "points": 20,
+        "type": "mount",
+        "included": true,
+        "quantity": 1,
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[survivors-of-lake-town] gandalf-the-grey": {
+    "model_id": "[survivors-of-lake-town] gandalf-the-grey",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gandalf the Grey",
+    "unit_type": "Hero of Valour",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0743",
+        "name": "Horse",
+        "points": 20
+      }
+    ]
+  },
+  "[survivors-of-lake-town] lake-town-militia-captain": {
+    "model_id": "[survivors-of-lake-town] lake-town-militia-captain",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Militia Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[survivors-of-lake-town] percy-lake-town-archer": {
+    "model_id": "[survivors-of-lake-town] percy-lake-town-archer",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Percy, Lake-town Archer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[survivors-of-lake-town] hilda-bianca": {
+    "model_id": "[survivors-of-lake-town] hilda-bianca",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Hilda-Bianca",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[survivors-of-lake-town] bilbo-baggins-master-burglar": {
+    "model_id": "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bilbo Baggins, Master Burglar",
+    "unit_type": "Independent Hero",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[survivors-of-lake-town] bard's-family": {
+    "model_id": "[survivors-of-lake-town] bard's-family",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard's Family",
+    "unit_type": "Independent Hero",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 3,
+    "MWFW": [
+      [
+        "Bain, Son of Bard",
+        "0:1:2:1"
+      ],
+      [
+        "Sigrid",
+        "0:1:2:1"
+      ],
+      [
+        "Tilda",
+        "0:1:2:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[survivors-of-lake-town] alfrid-the-councillor": {
+    "model_id": "[survivors-of-lake-town] alfrid-the-councillor",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Alfrid the Councillor",
+    "unit_type": "Independent Hero",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[survivors-of-lake-town] lake-town-militia": {
+    "model_id": "[survivors-of-lake-town] lake-town-militia",
+    "army_type": "Good",
+    "army_list": "Survivors of Lake-town",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Militia",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0740",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0741",
+        "name": "Light shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0742",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] gandalf-the-grey": {
+    "model_id": "[the-battle-of-five-armies] gandalf-the-grey",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gandalf the Grey",
+    "unit_type": "Hero of Legend",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0778",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] dain-ironfoot-lord-of-the-iron-hills": {
+    "model_id": "[the-battle-of-five-armies] dain-ironfoot-lord-of-the-iron-hills",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dain Ironfoot, Lord of the Iron Hills",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0777",
+        "name": "War Boar",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "War Boar"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] radagast-the-brown": {
+    "model_id": "[the-battle-of-five-armies] radagast-the-brown",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "The Free Peoples",
+    "name": "Radagast the Brown",
+    "unit_type": "Hero of Legend",
+    "base_points": 145,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0799",
+        "name": "Exchange Staff for Great Eagle",
+        "points": 55,
+        "type": "mount",
+        "included": true,
+        "quantity": 1,
+        "mount_name": "Great Eagle"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] bard-the-bowman": {
+    "model_id": "[the-battle-of-five-armies] bard-the-bowman",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard the Bowman",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0795",
+        "name": "Exchange great bow for armour and horse",
+        "points": 20,
+        "type": "mount",
+        "included": true,
+        "quantity": 1,
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] thorin-oakenshield-king-under-the-mountain": {
+    "model_id": "[the-battle-of-five-armies] thorin-oakenshield-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin Oakenshield, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0776",
+        "name": "Orcrist",
+        "points": 10
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] thranduil-king-of-the-woodland-realm": {
+    "model_id": "[the-battle-of-five-armies] thranduil-king-of-the-woodland-realm",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Thranduil, King of the Woodland Realm",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0786",
+        "name": "Great Elk",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Great Elk"
+      },
+      {
+        "id": "OPT0787",
+        "name": "Heavy armour",
+        "points": 10
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] beorn": {
+    "model_id": "[the-battle-of-five-armies] beorn",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "The Free Peoples",
+    "name": "Beorn",
+    "unit_type": "Hero of Valour",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] gwaihir": {
+    "model_id": "[the-battle-of-five-armies] gwaihir",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "The Free Peoples",
+    "name": "Gwaihir",
+    "unit_type": "Hero of Valour",
+    "base_points": 150,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] dwalin-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] dwalin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] legolas-greenleaf-prince-of-mirkwood": {
+    "model_id": "[the-battle-of-five-armies] legolas-greenleaf-prince-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Legolas Greenleaf, Prince of Mirkwood",
+    "unit_type": "Hero of Valour",
+    "base_points": 105,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0788",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0789",
+        "name": "Orcrist",
+        "points": 10
+      },
+      {
+        "id": "OPT0790",
+        "name": "Elven cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] fili-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] fili-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] kili-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] kili-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] balin-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] balin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Balin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-battle-of-five-armies] gloin-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] gloin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] tauriel-ranger-of-mirkwood": {
+    "model_id": "[the-battle-of-five-armies] tauriel-ranger-of-mirkwood",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Tauriel, Ranger of Mirkwood",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0791",
+        "name": "Elf bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] iron-hills-captain": {
+    "model_id": "[the-battle-of-five-armies] iron-hills-captain",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0779",
+        "name": "Exchange shield and spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] bilbo-baggins-master-burglar": {
+    "model_id": "[the-battle-of-five-armies] bilbo-baggins-master-burglar",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bilbo Baggins, Master Burglar",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] dori-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] dori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] mirkwood-elf-captain": {
+    "model_id": "[the-battle-of-five-armies] mirkwood-elf-captain",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] nori-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] nori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] bifur-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] bifur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] bofur-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] bofur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0804",
+        "name": "Troll Brute",
+        "points": 100,
+        "type": "mount",
+        "mount_name": "Troll Brute"
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] bombur-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] bombur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bombur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] oin-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] oin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] lake-town-militia-captain": {
+    "model_id": "[the-battle-of-five-armies] lake-town-militia-captain",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Militia Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] ori-the-dwarf-champion-of-erebor": {
+    "model_id": "[the-battle-of-five-armies] ori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Ori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] percy-lake-town-archer": {
+    "model_id": "[the-battle-of-five-armies] percy-lake-town-archer",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Percy, Lake-town Archer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] hilda-bianca": {
+    "model_id": "[the-battle-of-five-armies] hilda-bianca",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Hilda-Bianca",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-battle-of-five-armies] bard's-family": {
+    "model_id": "[the-battle-of-five-armies] bard's-family",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard's Family",
+    "unit_type": "Independent Hero",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 3,
+    "MWFW": [
+      [
+        "Bain, Son of Bard",
+        "0:1:2:1"
+      ],
+      [
+        "Sigrid",
+        "0:1:2:1"
+      ],
+      [
+        "Tilda",
+        "0:1:2:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-battle-of-five-armies] alfrid-the-councillor": {
+    "model_id": "[the-battle-of-five-armies] alfrid-the-councillor",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Alfrid the Councillor",
+    "unit_type": "Independent Hero",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-battle-of-five-armies] great-eagle": {
+    "model_id": "[the-battle-of-five-armies] great-eagle",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "The Free Peoples",
+    "name": "Great Eagle",
+    "unit_type": "Warrior",
+    "base_points": 100,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-battle-of-five-armies] fledgeling-great-eagle": {
+    "model_id": "[the-battle-of-five-armies] fledgeling-great-eagle",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "The Free Peoples",
+    "name": "Fledgeling Great Eagle",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-battle-of-five-armies] iron-hills-goat-rider": {
+    "model_id": "[the-battle-of-five-armies] iron-hills-goat-rider",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Goat Rider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0785",
+        "name": "Exchange war spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] mirkwood-elf-knight": {
+    "model_id": "[the-battle-of-five-armies] mirkwood-elf-knight",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Knight",
+    "unit_type": "Warrior",
+    "base_points": 16,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-battle-of-five-armies] iron-hills-warrior": {
+    "model_id": "[the-battle-of-five-armies] iron-hills-warrior",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0780",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0781",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0782",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0783",
+        "name": "Crossbow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0784",
+        "name": "Mattock",
+        "points": 1
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] mirkwood-elf-warrior": {
+    "model_id": "[the-battle-of-five-armies] mirkwood-elf-warrior",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Mirkwood Elf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0792",
+        "name": "Elf bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0793",
+        "name": "Elven Glaive",
+        "points": 2
+      },
+      {
+        "id": "OPT0794",
+        "name": "Shield",
+        "points": 1
+      }
+    ]
+  },
+  "[the-battle-of-five-armies] lake-town-militia": {
+    "model_id": "[the-battle-of-five-armies] lake-town-militia",
+    "army_type": "Good",
+    "army_list": "The Battle of Five Armies",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Lake-town Militia",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0796",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0797",
+        "name": "Light shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0798",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[the-black-gate] mordor-troll-chieftain-general": {
     "model_id": "[the-black-gate] mordor-troll-chieftain-general",
     "army_type": "Evil",
@@ -9583,6 +13862,179 @@
     "warband_size": 0,
     "options": []
   },
+  "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills": {
+    "model_id": "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dain Ironfoot, Lord of the Iron Hills",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0718",
+        "name": "War Boar",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "War Boar"
+      }
+    ]
+  },
+  "[the-iron-hills] dwarf-king": {
+    "model_id": "[the-iron-hills] dwarf-king",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf King",
+    "unit_type": "Hero of Valour",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-iron-hills] iron-hills-captain": {
+    "model_id": "[the-iron-hills] iron-hills-captain",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0719",
+        "name": "Iron Hills Chariot",
+        "points": 170,
+        "type": "mount",
+        "mount_name": "Iron Hills Chariot"
+      },
+      {
+        "id": "OPT0720",
+        "name": "Exchange shield and spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[the-iron-hills] iron-hills-chariot": {
+    "model_id": "[the-iron-hills] iron-hills-chariot",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Chariot",
+    "unit_type": "Warrior",
+    "base_points": 80,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-iron-hills] iron-hills-goat-rider": {
+    "model_id": "[the-iron-hills] iron-hills-goat-rider",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Goat Rider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0726",
+        "name": "Exchange war spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[the-iron-hills] iron-hills-warrior": {
+    "model_id": "[the-iron-hills] iron-hills-warrior",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0721",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0722",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0723",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0724",
+        "name": "Crossbow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0725",
+        "name": "Mattock",
+        "points": 1
+      }
+    ]
+  },
+  "[the-iron-hills] iron-hills-ballista": {
+    "model_id": "[the-iron-hills] iron-hills-ballista",
+    "army_type": "Good",
+    "army_list": "The Iron Hills",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Ballista",
+    "unit_type": "Siege Engine",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 3,
+    "MWFW": [
+      [
+        "Iron Hills Ballista - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
   "[the-last-alliance] elendil": {
     "model_id": "[the-last-alliance] elendil",
     "army_type": "Good",
@@ -10026,6 +14478,552 @@
         "0:0:2:1"
       ]
     ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-three-trolls] bill-the-troll": {
+    "model_id": "[the-three-trolls] bill-the-troll",
+    "army_type": "Evil",
+    "army_list": "The Three Trolls",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bill the Troll",
+    "unit_type": "Hero of Valour",
+    "base_points": 150,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-three-trolls] bert-the-troll": {
+    "model_id": "[the-three-trolls] bert-the-troll",
+    "army_type": "Evil",
+    "army_list": "The Three Trolls",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bert the Troll",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-three-trolls] tom-the-troll": {
+    "model_id": "[the-three-trolls] tom-the-troll",
+    "army_type": "Evil",
+    "army_list": "The Three Trolls",
+    "profile_origin": "The Misty Mountains",
+    "name": "Tom the Troll",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-white-council] elrond": {
+    "model_id": "[the-white-council] elrond",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elrond",
+    "unit_type": "Hero of Legend",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[the-white-council] saruman": {
+    "model_id": "[the-white-council] saruman",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "The Free Peoples",
+    "name": "Saruman",
+    "unit_type": "Hero of Legend",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[the-white-council] gandalf-the-grey": {
+    "model_id": "[the-white-council] gandalf-the-grey",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "The Free Peoples",
+    "name": "Gandalf the Grey",
+    "unit_type": "Hero of Valour",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-white-council] radagast-the-brown": {
+    "model_id": "[the-white-council] radagast-the-brown",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "The Free Peoples",
+    "name": "Radagast the Brown",
+    "unit_type": "Hero of Valour",
+    "base_points": 145,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0802",
+        "name": "Radagast's Sleigh",
+        "points": 35,
+        "type": "mount",
+        "mount_name": "Radagast's Sleigh"
+      }
+    ]
+  },
+  "[the-white-council] galadriel-lady-of-light": {
+    "model_id": "[the-white-council] galadriel-lady-of-light",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "The Free Peoples",
+    "name": "Galadriel, Lady of Light",
+    "unit_type": "Hero of Valour",
+    "base_points": 125,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-white-council] thrain-the-broken": {
+    "model_id": "[the-white-council] thrain-the-broken",
+    "army_type": "Good",
+    "army_list": "The White Council",
+    "profile_origin": "The Free Peoples",
+    "name": "Thrain the Broken",
+    "unit_type": "Independent Hero",
+    "base_points": 10,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:1:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[thorin's-company] thorin-oakenshield": {
+    "model_id": "[thorin's-company] thorin-oakenshield",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin Oakenshield",
+    "unit_type": "Hero of Legend",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0710",
+        "name": "Orcrist",
+        "points": 10
+      },
+      {
+        "id": "OPT0711",
+        "name": "The Oakenshield",
+        "points": 5
+      }
+    ]
+  },
+  "[thorin's-company] gandalf-the-grey": {
+    "model_id": "[thorin's-company] gandalf-the-grey",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Gandalf the Grey",
+    "unit_type": "Hero of Valour",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] gwaihir": {
+    "model_id": "[thorin's-company] gwaihir",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Gwaihir",
+    "unit_type": "Hero of Valour",
+    "base_points": 150,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] radagast-the-brown": {
+    "model_id": "[thorin's-company] radagast-the-brown",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Radagast the Brown",
+    "unit_type": "Hero of Valour",
+    "base_points": 145,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:6:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0714",
+        "name": "Radagast's Sleigh",
+        "points": 35,
+        "type": "mount",
+        "mount_name": "Radagast's Sleigh"
+      }
+    ]
+  },
+  "[thorin's-company] dwalin-the-dwarf": {
+    "model_id": "[thorin's-company] dwalin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 95,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] fili-the-dwarf": {
+    "model_id": "[thorin's-company] fili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Fili the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] kili-the-dwarf": {
+    "model_id": "[thorin's-company] kili-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Kili the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] balin-the-dwarf": {
+    "model_id": "[thorin's-company] balin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Balin the Dwarf",
+    "unit_type": "Hero of Valour",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[thorin's-company] gloin-the-dwarf": {
+    "model_id": "[thorin's-company] gloin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] bilbo-baggins": {
+    "model_id": "[thorin's-company] bilbo-baggins",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bilbo Baggins",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:3:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0712",
+        "name": "Sting",
+        "points": 5
+      },
+      {
+        "id": "OPT0713",
+        "name": "The One Ring",
+        "points": 0
+      }
+    ]
+  },
+  "[thorin's-company] dori-the-dwarf": {
+    "model_id": "[thorin's-company] dori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] nori-the-dwarf": {
+    "model_id": "[thorin's-company] nori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] oin-the-dwarf": {
+    "model_id": "[thorin's-company] oin-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] bifur-the-dwarf": {
+    "model_id": "[thorin's-company] bifur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] bofur-the-dwarf": {
+    "model_id": "[thorin's-company] bofur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] bombur-the-dwarf": {
+    "model_id": "[thorin's-company] bombur-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bombur the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:2:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] ori-the-dwarf": {
+    "model_id": "[thorin's-company] ori-the-dwarf",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "Dwarven Holds",
+    "name": "Ori the Dwarf",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[thorin's-company] great-eagle": {
+    "model_id": "[thorin's-company] great-eagle",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Great Eagle",
+    "unit_type": "Warrior",
+    "base_points": 100,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
     "warband_size": 0,
     "options": []
   },

@@ -17,6 +17,15 @@
       "warning":"An Assault Upon Helm's Deep Army must always contain an Uruk-hai Captain, who is always the Army's General."
     }
   ],
+  "Assault on Ravenhill":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain"
+      ],
+      "warning":"An Assault on Ravenhill Army must include Thorin, who is always the Army's General."
+    }
+  ],
   "Atop the Walls":[
     {
       "type":"compulsory",
@@ -87,6 +96,35 @@
       "warning":"A Defenders of Helm's Deep Army must include Th\u00e9oden, King of Rohan, who is always the Army's General."
     }
   ],
+  "Desolator of the North":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[desolator-of-the-north] smaug"
+      ],
+      "warning":"A Desolator of the North Army must always include Smaug, who is always the Army's General."
+    }
+  ],
+  "Erebor & Dale":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[erebor-&-dale] thror-king-under-the-mountain",
+        "[erebor-&-dale] thrain-son-of-thror",
+        "[erebor-&-dale] young-thorin-oakenshield",
+        "[erebor-&-dale] young-balin-the-dwarf",
+        "[erebor-&-dale] young-dwalin-the-dwarf"
+      ],
+      "warning":"An Erebor & Dale Army must include at least one Unique Erebor Hero."
+    },
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[erebor-&-dale] girion-lord-of-dale"
+      ],
+      "warning":"An Erebor & Dale Army must include Girion."
+    }
+  ],
   "Fangorn":[
     {
       "type":"compulsory",
@@ -96,6 +134,15 @@
       "warning":"A Fangorn Army must always contain Treebeard, who is always the Army's General."
     }
   ],
+  "Garrison of Dale":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[garrison-of-dale] girion-lord-of-dale"
+      ],
+      "warning":"A Garrison of Dale Army must include Girion, who is always the Army's General."
+    }
+  ],
   "Garrison of Ithilien":[
     {
       "type":"compulsory",
@@ -103,6 +150,15 @@
         "[garrison-of-ithilien] faramir"
       ],
       "warning":"A Garrison of Ithilien Army must include Faramir, Captain of Gondor, who is always the Army's General."
+    }
+  ],
+  "Goblin-town":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[goblin-town] the-goblin-king"
+      ],
+      "warning":"A Goblin-town Army must always contain the Goblin King, who is always the Army's General."
     }
   ],
   "Lindon":[
@@ -148,6 +204,34 @@
         "[muster-of-isengard] saruman"
       ],
       "warning":"A Muster of Isengard Army must always contain Saruman, who is always the Army's General."
+    }
+  ],
+  "Pits of Dol Guldur":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[pits-of-dol-guldur] azog-the-defiler"
+      ],
+      "warning":"A Pits of Dol Guldur Army must always contain Azog, who is always the Army's General."
+    }
+  ],
+  "Radagast's Alliance":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[radagast's-alliance] radagast-the-brown"
+      ],
+      "warning":"A Radagast's Alliance Army must include Radagast, who is always the Army's General."
+    }
+  ],
+  "Rangers of Mirkwood":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[rangers-of-mirkwood] legolas-greenleaf-prince-of-mirkwood",
+        "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood"
+      ],
+      "warning":"A Rangers of Mirkwood must include at least one Unique Elf Hero."
     }
   ],
   "Reclamation of Osgiliath":[
@@ -220,6 +304,15 @@
       "warning":"A Road to Rivendell Army must include Frodo."
     }
   ],
+  "Survivors of Lake-town":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[survivors-of-lake-town] bard-the-bowman"
+      ],
+      "warning":"A Survivors of Lake-town Army must include Bard the Bowman, who is always the Army's General."
+    }
+  ],
   "The Black Gate":[
     {
       "type":"compulsory",
@@ -245,6 +338,15 @@
       "warning":"A Black Riders Army must always contain the Witch-king of Angmar, who is always the Army's General."
     }
   ],
+  "The Iron Hills":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills"
+      ],
+      "warning":"An Iron Hills Army must include Dain Ironfoot, who is always the Army's General."
+    }
+  ],
   "The Last Alliance":[
     {
       "type":"requires_one",
@@ -261,6 +363,38 @@
         "[the-last-alliance] elrond"
       ],
       "warning":"A Last Alliance Army must include at least one Unique Rivendell Hero."
+    }
+  ],
+  "The Three Trolls":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-three-trolls] bill-the-troll"
+      ],
+      "warning":"The Three Trolls must always include Bill, who is always the Army's General."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-three-trolls] bert-the-troll"
+      ],
+      "warning":"The Three Trolls must always include Bert."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-three-trolls] tom-the-troll"
+      ],
+      "warning":"The Three Trolls must always include Tom."
+    }
+  ],
+  "Thorin's Company":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[thorin's-company] thorin-oakenshield"
+      ],
+      "warning":"A Thorin's Company Army must include Thorin Oakenshield, who is always the Army's General."
     }
   ],
   "Ugluk's Scouts":[
@@ -361,6 +495,24 @@
         "[realms-of-men] king-of-men-dale"
       ],
       "warning":"A Windlance may only be included if your army also contains a King of Men (Dale)"
+    }
+  ],
+  "[thorin's-company] great-eagle":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[thorin's-company] gandalf-the-grey"
+      ],
+      "warning":"You may only include Eagle models in your Army if it also includes Gandalf."
+    }
+  ],
+  "[thorin's-company] gwaihir":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[thorin's-company] gandalf-the-grey"
+      ],
+      "warning":"You may only include Eagle models in your Army if it also includes Gandalf."
     }
   ]
 }

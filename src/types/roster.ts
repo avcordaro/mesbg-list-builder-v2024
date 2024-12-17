@@ -53,5 +53,6 @@ export type Roster = {
     might: number;
     will: number;
     fate: number;
+    tttSpecialUpgrades?: string[];
   };
 };

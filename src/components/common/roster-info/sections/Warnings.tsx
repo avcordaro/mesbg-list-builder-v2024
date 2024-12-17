@@ -31,7 +31,10 @@ function checkCompulsory(rule: WarningRule, setOfModelIds: string[]): boolean {
 }
 
 function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
-  if (roster.armyList === "The Eagles") {
+  if (
+    roster.armyList === "The Eagles" ||
+    roster.armyList === "Radagast's Alliance"
+  ) {
     const units = roster.warbands
       .flatMap((wb) => [wb.hero, ...wb.units])
       .filter(isSelectedUnit)
@@ -50,12 +53,48 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
     if (diff > 0) {
       return [
         {
-          warning: `The Eagles may not include more Fledgeling Great Eagles than Great Eagles. There are currently ${diff} Fledgeling Great Eagle too many.`,
+          warning: `${roster.armyList} may not include more Fledgeling Great Eagles than Great Eagles. There are currently ${diff} Fledgeling Great Eagle too many.`,
           type: undefined,
           dependencies: [],
         },
       ];
     }
+  }
+
+  if (roster.armyList === "Rise of the Necromancer") {
+    const mustBeBrokenUp =
+      roster.warbands
+        .flatMap((wb) => [wb.hero, ...wb.units])
+        .filter(isSelectedUnit)
+        .filter((unit) =>
+          [
+            "Hunter Orc Captain",
+            "Hunter Orc Warrior",
+            "Hunter Orc Warg Rider",
+            "Fell Warg",
+            "Mirkwood Giant Spider",
+            "Mirkwood Hunting Spider",
+          ].includes(unit.name),
+        ).length > 0;
+
+    if (mustBeBrokenUp) {
+      const hasHeroesInWarband =
+        roster.warbands
+          .flatMap((wb) => wb.units)
+          .filter(isSelectedUnit)
+          .filter((unit) => unit.unit_type.includes("Hero")).length > 0;
+      if (hasHeroesInWarband) {
+        return [
+          {
+            warning: `Heroes cannot be followers in another hero's warband if your army includes any Warrior models or Hunter Orc Captains.`,
+            type: undefined,
+            dependencies: [],
+          },
+        ];
+      }
+    }
+
+    return [];
   }
   return [];
 }

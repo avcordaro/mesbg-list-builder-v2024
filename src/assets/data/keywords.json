@@ -402,7 +402,7 @@
     "description":"<b>Duration<\/b>: Exhaustion\n\nThis Magical Power targets one enemy model in range. The target immediately becomes Paralysed. A Paralysed model immediately becomes Prone and may do nothing until it recovers. This includes Activating, making Shooting Attacks, declaring Heroic Actions or using Active abilities. If a Paralysed model is Engaged in Combat, it may contribute no dice to the Duel Roll, and does not provide its Fight Value \u2013 it may also not make Strikes or stand up if it loses the duel. If a Paralysed model is the only model from its side involved in a Combat, then it automatically loses the Duel Roll \u2013 no dice are rolled.\n\nAt the end of the End Phase of each turn, a Paralysed model may roll a D6. On a 6, the model recovers (they may use Might to improve this roll). Additionally, after making this roll, any friendly model in base contact with a Paralysed model may roll a D6 one at a time. If any model rolls a 6, the Paralysed model immediately recovers (a Hero model may use their own Might to improve this roll).\n\nIf a Paralysed model is in water or feature at the end of the Move Phase, then it must take a Swim Test to see if it sinks."
   },
   {
-    "name":"Poisoned Attacks",
+    "name":"Poisoned Attacks (X)",
     "type":"special_rule",
     "active_passive":"Active",
     "description":"A model with this special rule must re-roll any To Wound Rolls of a natural 1 when making Shooting Attacks or making Strikes. Sometimes, a particular weapon will be described as benefiting from this special rule. When this is the case, only To Wound Rolls made for that weapon will be able to re-roll To Wound Rolls of a natural 1."

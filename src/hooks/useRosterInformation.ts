@@ -92,6 +92,9 @@ export const useRosterInformation = (): RosterInformationFunctions => {
     if (roster.armyList === "The Fellowship")
       // The Fellowship is always deployed as a single Warband. You cannot add more warbands!
       return roster.warbands.length < 1;
+    if (roster.armyList === "The White Council")
+      // The white council is always deployed as a single Warband. You cannot add more warbands!
+      return roster.warbands.length < 1;
     if (roster.armyList === "Wraiths on Wings")
       // The Wraiths on Wings any only ever be 9 wraiths big. You cannot add more warbands!
       return roster.warbands.length < 9;

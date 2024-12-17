@@ -88,6 +88,132 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[army-of-gundabad] azog-the-defiler": {
+    "valid_warband_units": [
+      "[army-of-gundabad] troll-brute",
+      "[army-of-gundabad] gundabad-catapult-troll",
+      "[army-of-gundabad] gundabad-orc-warrior",
+      "[army-of-gundabad] gundabad-berserker",
+      "[army-of-gundabad] goblin-mercenary",
+      "[army-of-gundabad] gundabad-troll",
+      "[army-of-gundabad] gundabad-ogre",
+      "[army-of-gundabad] war-bat"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gundabad] bolg-spawn-of-azog": {
+    "valid_warband_units": [
+      "[army-of-gundabad] troll-brute",
+      "[army-of-gundabad] gundabad-catapult-troll",
+      "[army-of-gundabad] gundabad-orc-warrior",
+      "[army-of-gundabad] gundabad-berserker",
+      "[army-of-gundabad] goblin-mercenary",
+      "[army-of-gundabad] gundabad-troll",
+      "[army-of-gundabad] gundabad-ogre",
+      "[army-of-gundabad] war-bat"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gundabad] goblin-mercenary-captain": {
+    "valid_warband_units": [
+      "[army-of-gundabad] troll-brute",
+      "[army-of-gundabad] gundabad-catapult-troll",
+      "[army-of-gundabad] gundabad-orc-warrior",
+      "[army-of-gundabad] gundabad-berserker",
+      "[army-of-gundabad] goblin-mercenary",
+      "[army-of-gundabad] gundabad-troll",
+      "[army-of-gundabad] gundabad-ogre",
+      "[army-of-gundabad] war-bat"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gundabad] gundabad-catapult-troll": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-gundabad] gundabad-orc-captain": {
+    "valid_warband_units": [
+      "[army-of-gundabad] troll-brute",
+      "[army-of-gundabad] gundabad-catapult-troll",
+      "[army-of-gundabad] gundabad-orc-warrior",
+      "[army-of-gundabad] gundabad-berserker",
+      "[army-of-gundabad] goblin-mercenary",
+      "[army-of-gundabad] gundabad-troll",
+      "[army-of-gundabad] gundabad-ogre",
+      "[army-of-gundabad] war-bat"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gundabad] troll-brute": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] alfrid-the-councillor": {
+    "valid_warband_units": [
+      "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] bard's-family": {
+    "valid_warband_units": [],
+    "extra_profiles": [
+      "Sigrid",
+      "Tilda"
+    ]
+  },
+  "[army-of-lake-town] bard-the-bowman": {
+    "valid_warband_units": [
+      "[army-of-lake-town] bard's-family",
+      "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": [
+      "Windlance"
+    ]
+  },
+  "[army-of-lake-town] bofur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] braga-captain-of-the-guard": {
+    "valid_warband_units": [
+      "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] fili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] kili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] lake-town-guard-captain": {
+    "valid_warband_units": [
+      "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] oin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] tauriel-ranger-of-mirkwood": {
+    "valid_warband_units": [
+      "[army-of-lake-town] bard's-family",
+      "[army-of-lake-town] kili-the-dwarf",
+      "[army-of-lake-town] fili-the-dwarf",
+      "[army-of-lake-town] bofur-the-dwarf",
+      "[army-of-lake-town] oin-the-dwarf"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-lake-town] the-master-of-lake-town": {
+    "valid_warband_units": [
+      "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-the-white-hand] grima": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -140,6 +266,98 @@
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
       "[army-of-the-white-hand] crebain"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] dwarf-king": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] erebor-dwarf-captain": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] grim-hammer-captain": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] thrain-son-of-thror": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] thror-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] young-balin-the-dwarf": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] young-dwalin-the-dwarf": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-thror] young-thorin-oakenshield": {
+    "valid_warband_units": [
+      "[army-of-thror] erebor-dwarf-warrior",
+      "[army-of-thror] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] bilbo-baggins-master-burglar": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] dwalin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] fili-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] kili-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] legolas-greenleaf-prince-of-mirkwood": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] tauriel-ranger-of-mirkwood": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain",
+      "[assault-on-ravenhill] kili-the-dwarf-champion-of-erebor",
+      "[assault-on-ravenhill] fili-the-dwarf-champion-of-erebor",
+      "[assault-on-ravenhill] dwalin-the-dwarf-champion-of-erebor",
+      "[assault-on-ravenhill] legolas-greenleaf-prince-of-mirkwood",
+      "[assault-on-ravenhill] tauriel-ranger-of-mirkwood",
+      "[assault-on-ravenhill] bilbo-baggins-master-burglar"
     ],
     "extra_profiles": []
   },
@@ -196,6 +414,56 @@
   },
   "[atop-the-walls] peregrin-took": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[azog's-hunters] azog-the-defiler": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
+    "extra_profiles": [
+      "The White Warg"
+    ]
+  },
+  "[azog's-hunters] bolg-spawn-of-azog": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[azog's-hunters] fimbul-hunter-orc-captain": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[azog's-hunters] hunter-orc-captain": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[azog's-hunters] narzug-hunter-orc-captain": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[azog's-hunters] yazneg-hunter-orc-captain": {
+    "valid_warband_units": [
+      "[azog's-hunters] hunter-orc-warrior",
+      "[azog's-hunters] hunter-orc-warg-rider",
+      "[azog's-hunters] fell-warg"
+    ],
     "extra_profiles": []
   },
   "[barad-dur] mordor-orc-captain": {
@@ -616,6 +884,161 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[desolator-of-the-north] smaug": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] captain-of-dale": {
+    "valid_warband_units": [
+      "[erebor-&-dale] warrior-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] erebor-dwarf-captain": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] girion-lord-of-dale": {
+    "valid_warband_units": [
+      "[erebor-&-dale] warrior-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] grim-hammer-captain": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] thrain-son-of-thror": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] thror-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] young-balin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] young-dwalin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-&-dale] young-thorin-oakenshield": {
+    "valid_warband_units": [
+      "[erebor-&-dale] erebor-dwarf-warrior",
+      "[erebor-&-dale] grim-hammer-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] balin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] bifur-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] bofur-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] bombur-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] dain-ironfoot-lord-of-the-iron-hills": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] dori-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] dwalin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] fili-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] gloin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] iron-hills-captain": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] kili-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] nori-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] oin-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] ori-the-dwarf": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[erebor-reclaimed] thorin-oakenshield-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[erebor-reclaimed] iron-hills-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[fangorn] beechbone": {
     "valid_warband_units": [
       "[fangorn] ent"
@@ -636,6 +1059,24 @@
       "Meriadoc Brandybuck",
       "Peregrin Took"
     ]
+  },
+  "[garrison-of-dale] captain-of-dale": {
+    "valid_warband_units": [
+      "[garrison-of-dale] warrior-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[garrison-of-dale] girion-lord-of-dale": {
+    "valid_warband_units": [
+      "[garrison-of-dale] warrior-of-dale"
+    ],
+    "extra_profiles": [
+      "Windlance"
+    ]
+  },
+  "[garrison-of-dale] windlance": {
+    "valid_warband_units": [],
+    "extra_profiles": []
   },
   "[garrison-of-ithilien] captain-of-minas-tirith": {
     "valid_warband_units": [
@@ -695,6 +1136,94 @@
   "[garrison-of-ithilien] smeagol": {
     "valid_warband_units": [],
     "extra_profiles": []
+  },
+  "[goblin-town] goblin-captain": {
+    "valid_warband_units": [
+      "[goblin-town] gollum",
+      "[goblin-town] goblin-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[goblin-town] gollum": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[goblin-town] grinnah-goblin-jailer": {
+    "valid_warband_units": [
+      "[goblin-town] gollum",
+      "[goblin-town] goblin-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[goblin-town] the-goblin-king": {
+    "valid_warband_units": [
+      "[goblin-town] gollum",
+      "[goblin-town] goblin-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[goblin-town] the-goblin-scribe": {
+    "valid_warband_units": [
+      "[goblin-town] gollum",
+      "[goblin-town] goblin-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] legolas-greenleaf-prince-of-mirkwood": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] mirkwood-elf-captain": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] mirkwood-ranger-captain": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] palace-guard-captain": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] tauriel-ranger-of-mirkwood": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[halls-of-thranduil] thranduil-king-of-the-woodland-realm": {
+    "valid_warband_units": [
+      "[halls-of-thranduil] mirkwood-elf-warrior",
+      "[halls-of-thranduil] mirkwood-elf-knight",
+      "[halls-of-thranduil] palace-guard",
+      "[halls-of-thranduil] mirkwood-ranger"
+    ],
+    "extra_profiles": [
+      "Great Elk"
+    ]
   },
   "[harad] haradrim-chieftain": {
     "valid_warband_units": [
@@ -1150,6 +1679,159 @@
     ],
     "extra_profiles": []
   },
+  "[pits-of-dol-guldur] azog-the-defiler": {
+    "valid_warband_units": [
+      "[pits-of-dol-guldur] gundabad-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warg-rider",
+      "[pits-of-dol-guldur] mirkwood-giant-spider",
+      "[pits-of-dol-guldur] mirkwood-hunting-spider",
+      "[pits-of-dol-guldur] thrain-the-broken",
+      "[pits-of-dol-guldur] fell-warg"
+    ],
+    "extra_profiles": [
+      "The White Warg"
+    ]
+  },
+  "[pits-of-dol-guldur] gundabad-orc-captain": {
+    "valid_warband_units": [
+      "[pits-of-dol-guldur] gundabad-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warg-rider",
+      "[pits-of-dol-guldur] mirkwood-giant-spider",
+      "[pits-of-dol-guldur] mirkwood-hunting-spider",
+      "[pits-of-dol-guldur] thrain-the-broken",
+      "[pits-of-dol-guldur] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[pits-of-dol-guldur] hunter-orc-captain": {
+    "valid_warband_units": [
+      "[pits-of-dol-guldur] gundabad-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warg-rider",
+      "[pits-of-dol-guldur] mirkwood-giant-spider",
+      "[pits-of-dol-guldur] mirkwood-hunting-spider",
+      "[pits-of-dol-guldur] thrain-the-broken",
+      "[pits-of-dol-guldur] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[pits-of-dol-guldur] the-keeper-of-the-dungeons": {
+    "valid_warband_units": [
+      "[pits-of-dol-guldur] gundabad-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warrior",
+      "[pits-of-dol-guldur] hunter-orc-warg-rider",
+      "[pits-of-dol-guldur] mirkwood-giant-spider",
+      "[pits-of-dol-guldur] mirkwood-hunting-spider",
+      "[pits-of-dol-guldur] thrain-the-broken",
+      "[pits-of-dol-guldur] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[pits-of-dol-guldur] thrain-the-broken": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[radagast's-alliance] beorn": {
+    "valid_warband_units": [
+      "[radagast's-alliance] great-eagle",
+      "[radagast's-alliance] fledgeling-great-eagle"
+    ],
+    "extra_profiles": [
+      "Beorn the Bear"
+    ]
+  },
+  "[radagast's-alliance] gwaihir": {
+    "valid_warband_units": [
+      "[radagast's-alliance] great-eagle",
+      "[radagast's-alliance] fledgeling-great-eagle"
+    ],
+    "extra_profiles": []
+  },
+  "[radagast's-alliance] radagast-the-brown": {
+    "valid_warband_units": [
+      "[radagast's-alliance] great-eagle",
+      "[radagast's-alliance] fledgeling-great-eagle"
+    ],
+    "extra_profiles": [
+      "Radagast's Mounts"
+    ]
+  },
+  "[rangers-of-mirkwood] balin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] bifur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] bilbo-baggins": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] bofur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] bombur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] dori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] dwalin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] fili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] gloin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] kili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] legolas-greenleaf-prince-of-mirkwood": {
+    "valid_warband_units": [
+      "[rangers-of-mirkwood] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] mirkwood-ranger-captain": {
+    "valid_warband_units": [
+      "[rangers-of-mirkwood] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] nori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] oin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] ori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood": {
+    "valid_warband_units": [
+      "[rangers-of-mirkwood] mirkwood-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[rangers-of-mirkwood] thorin-oakenshield": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[realms-of-men] captain-of-arnor": {
     "valid_warband_units": [
       "[realms-of-men] knight-of-arnor",
@@ -1385,6 +2067,247 @@
     ],
     "extra_profiles": []
   },
+  "[rise-of-the-necromancer] hunter-orc-captain": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] khamul-the-easterling": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] sauron-the-necromancer": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-abyssal-knight-1": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-abyssal-knight-2": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-dark-headsman": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-forsaken": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-keeper-of-the-dungeons": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-lingering-shadow": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-slayer-of-men-1": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-slayer-of-men-2": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[rise-of-the-necromancer] the-witch-king-of-angmar": {
+    "valid_warband_units": [
+      "[rise-of-the-necromancer] sauron-the-necromancer",
+      "[rise-of-the-necromancer] the-witch-king-of-angmar",
+      "[rise-of-the-necromancer] khamul-the-easterling",
+      "[rise-of-the-necromancer] the-abyssal-knight-1",
+      "[rise-of-the-necromancer] the-abyssal-knight-2",
+      "[rise-of-the-necromancer] the-dark-headsman",
+      "[rise-of-the-necromancer] the-forsaken",
+      "[rise-of-the-necromancer] the-lingering-shadow",
+      "[rise-of-the-necromancer] the-slayer-of-men-1",
+      "[rise-of-the-necromancer] the-slayer-of-men-2",
+      "[rise-of-the-necromancer] the-keeper-of-the-dungeons",
+      "[rise-of-the-necromancer] hunter-orc-warrior",
+      "[rise-of-the-necromancer] hunter-orc-warg-rider",
+      "[rise-of-the-necromancer] fell-warg",
+      "[rise-of-the-necromancer] mirkwood-giant-spider",
+      "[rise-of-the-necromancer] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
   "[rivendell] arwen": {
     "valid_warband_units": [
       "[rivendell] bilbo-baggins-ageing-hobbit",
@@ -1550,6 +2473,274 @@
   },
   "[road-to-rivendell] the-gatekeeper-of-bree": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] alfrid-the-councillor": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] bard's-family": {
+    "valid_warband_units": [],
+    "extra_profiles": [
+      "Sigrid",
+      "Tilda"
+    ]
+  },
+  "[survivors-of-lake-town] bard-the-bowman": {
+    "valid_warband_units": [
+      "[survivors-of-lake-town] bard's-family",
+      "[survivors-of-lake-town] alfrid-the-councillor",
+      "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+      "[survivors-of-lake-town] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] bilbo-baggins-master-burglar": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] gandalf-the-grey": {
+    "valid_warband_units": [
+      "[survivors-of-lake-town] alfrid-the-councillor",
+      "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+      "[survivors-of-lake-town] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] hilda-bianca": {
+    "valid_warband_units": [
+      "[survivors-of-lake-town] alfrid-the-councillor",
+      "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+      "[survivors-of-lake-town] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] lake-town-militia-captain": {
+    "valid_warband_units": [
+      "[survivors-of-lake-town] alfrid-the-councillor",
+      "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+      "[survivors-of-lake-town] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[survivors-of-lake-town] percy-lake-town-archer": {
+    "valid_warband_units": [
+      "[survivors-of-lake-town] alfrid-the-councillor",
+      "[survivors-of-lake-town] bilbo-baggins-master-burglar",
+      "[survivors-of-lake-town] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] alfrid-the-councillor": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] balin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] bard's-family": {
+    "valid_warband_units": [],
+    "extra_profiles": [
+      "Sigrid",
+      "Tilda"
+    ]
+  },
+  "[the-battle-of-five-armies] bard-the-bowman": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] bard's-family",
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] beorn": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] great-eagle",
+      "[the-battle-of-five-armies] fledgeling-great-eagle"
+    ],
+    "extra_profiles": [
+      "Beorn the Bear"
+    ]
+  },
+  "[the-battle-of-five-armies] bifur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] bilbo-baggins-master-burglar": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] bofur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] bombur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] dain-ironfoot-lord-of-the-iron-hills": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] dori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] dwalin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] fili-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] gandalf-the-grey": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] gloin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] gwaihir": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] great-eagle",
+      "[the-battle-of-five-armies] fledgeling-great-eagle"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] hilda-bianca": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] iron-hills-captain": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] kili-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] lake-town-militia-captain": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] legolas-greenleaf-prince-of-mirkwood": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] mirkwood-elf-warrior",
+      "[the-battle-of-five-armies] mirkwood-elf-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] mirkwood-elf-captain": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] mirkwood-elf-warrior",
+      "[the-battle-of-five-armies] mirkwood-elf-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] nori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] oin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] ori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] percy-lake-town-archer": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] alfrid-the-councillor",
+      "[the-battle-of-five-armies] lake-town-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] radagast-the-brown": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] great-eagle",
+      "[the-battle-of-five-armies] fledgeling-great-eagle"
+    ],
+    "extra_profiles": [
+      "Radagast's Mounts"
+    ]
+  },
+  "[the-battle-of-five-armies] tauriel-ranger-of-mirkwood": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] mirkwood-elf-warrior",
+      "[the-battle-of-five-armies] mirkwood-elf-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] thorin-oakenshield-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] iron-hills-warrior",
+      "[the-battle-of-five-armies] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-battle-of-five-armies] thranduil-king-of-the-woodland-realm": {
+    "valid_warband_units": [
+      "[the-battle-of-five-armies] mirkwood-elf-warrior",
+      "[the-battle-of-five-armies] mirkwood-elf-knight"
+    ],
     "extra_profiles": []
   },
   "[the-black-gate] morannon-orc-captain": {
@@ -1730,6 +2921,36 @@
     ],
     "extra_profiles": []
   },
+  "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills": {
+    "valid_warband_units": [
+      "[the-iron-hills] iron-hills-warrior",
+      "[the-iron-hills] iron-hills-goat-rider",
+      "[the-iron-hills] iron-hills-chariot"
+    ],
+    "extra_profiles": []
+  },
+  "[the-iron-hills] dwarf-king": {
+    "valid_warband_units": [
+      "[the-iron-hills] iron-hills-warrior",
+      "[the-iron-hills] iron-hills-goat-rider",
+      "[the-iron-hills] iron-hills-chariot"
+    ],
+    "extra_profiles": []
+  },
+  "[the-iron-hills] iron-hills-ballista": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[the-iron-hills] iron-hills-captain": {
+    "valid_warband_units": [
+      "[the-iron-hills] iron-hills-warrior",
+      "[the-iron-hills] iron-hills-goat-rider",
+      "[the-iron-hills] iron-hills-chariot"
+    ],
+    "extra_profiles": [
+      "Iron Hills Chariot"
+    ]
+  },
   "[the-last-alliance] captain-of-numenor": {
     "valid_warband_units": [
       "[the-last-alliance] warrior-of-numenor"
@@ -1871,6 +3092,180 @@
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
       "[the-shire] lobelia-sackville-baggins"
+    ],
+    "extra_profiles": []
+  },
+  "[the-three-trolls] bert-the-troll": {
+    "valid_warband_units": [
+      "[the-three-trolls] bill-the-troll",
+      "[the-three-trolls] bert-the-troll",
+      "[the-three-trolls] tom-the-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[the-three-trolls] bill-the-troll": {
+    "valid_warband_units": [
+      "[the-three-trolls] bill-the-troll",
+      "[the-three-trolls] bert-the-troll",
+      "[the-three-trolls] tom-the-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[the-three-trolls] tom-the-troll": {
+    "valid_warband_units": [
+      "[the-three-trolls] bill-the-troll",
+      "[the-three-trolls] bert-the-troll",
+      "[the-three-trolls] tom-the-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[the-white-council] elrond": {
+    "valid_warband_units": [
+      "[the-white-council] saruman",
+      "[the-white-council] gandalf-the-grey",
+      "[the-white-council] galadriel-lady-of-light",
+      "[the-white-council] radagast-the-brown",
+      "[the-white-council] thrain-the-broken",
+      "[the-white-council] elrond"
+    ],
+    "extra_profiles": []
+  },
+  "[the-white-council] galadriel-lady-of-light": {
+    "valid_warband_units": [
+      "[the-white-council] saruman",
+      "[the-white-council] gandalf-the-grey",
+      "[the-white-council] galadriel-lady-of-light",
+      "[the-white-council] radagast-the-brown",
+      "[the-white-council] thrain-the-broken",
+      "[the-white-council] elrond"
+    ],
+    "extra_profiles": []
+  },
+  "[the-white-council] gandalf-the-grey": {
+    "valid_warband_units": [
+      "[the-white-council] saruman",
+      "[the-white-council] gandalf-the-grey",
+      "[the-white-council] galadriel-lady-of-light",
+      "[the-white-council] radagast-the-brown",
+      "[the-white-council] thrain-the-broken",
+      "[the-white-council] elrond"
+    ],
+    "extra_profiles": []
+  },
+  "[the-white-council] radagast-the-brown": {
+    "valid_warband_units": [
+      "[the-white-council] saruman",
+      "[the-white-council] gandalf-the-grey",
+      "[the-white-council] galadriel-lady-of-light",
+      "[the-white-council] radagast-the-brown",
+      "[the-white-council] thrain-the-broken",
+      "[the-white-council] elrond"
+    ],
+    "extra_profiles": [
+      "Radagast's Mounts"
+    ]
+  },
+  "[the-white-council] saruman": {
+    "valid_warband_units": [
+      "[the-white-council] saruman",
+      "[the-white-council] gandalf-the-grey",
+      "[the-white-council] galadriel-lady-of-light",
+      "[the-white-council] radagast-the-brown",
+      "[the-white-council] thrain-the-broken",
+      "[the-white-council] elrond"
+    ],
+    "extra_profiles": []
+  },
+  "[the-white-council] thrain-the-broken": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] balin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] bifur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] bilbo-baggins": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] bofur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] bombur-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] dori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] dwalin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] fili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] gandalf-the-grey": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] gloin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] gwaihir": {
+    "valid_warband_units": [
+      "[thorin's-company] great-eagle"
+    ],
+    "extra_profiles": []
+  },
+  "[thorin's-company] kili-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] nori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] oin-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] ori-the-dwarf": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[thorin's-company] radagast-the-brown": {
+    "valid_warband_units": [],
+    "extra_profiles": [
+      "Radagast's Mounts"
+    ]
+  },
+  "[thorin's-company] thorin-oakenshield": {
+    "valid_warband_units": [
+      "[thorin's-company] thorin-oakenshield",
+      "[thorin's-company] kili-the-dwarf",
+      "[thorin's-company] fili-the-dwarf",
+      "[thorin's-company] balin-the-dwarf",
+      "[thorin's-company] dwalin-the-dwarf",
+      "[thorin's-company] bifur-the-dwarf",
+      "[thorin's-company] bofur-the-dwarf",
+      "[thorin's-company] bombur-the-dwarf",
+      "[thorin's-company] ori-the-dwarf",
+      "[thorin's-company] nori-the-dwarf",
+      "[thorin's-company] dori-the-dwarf",
+      "[thorin's-company] oin-the-dwarf",
+      "[thorin's-company] gloin-the-dwarf",
+      "[thorin's-company] bilbo-baggins",
+      "[thorin's-company] gandalf-the-grey",
+      "[thorin's-company] radagast-the-brown"
     ],
     "extra_profiles": []
   },

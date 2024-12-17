@@ -9,8 +9,56 @@ export function handleBreakingOfTheFellowshipRestriction(unit: Unit) {
     : true; // defaults to true for non BotF units.
 }
 
+export function handleThorinsCompanyRestriction(unit: Unit) {
+  return unit.army_list === "Thorin's Company"
+    ? [
+        "[thorin's-company] gwaihir",
+        "[thorin's-company] thorin-oakenshield",
+      ].includes(unit.model_id)
+    : true;
+}
+
+export function handleGarrisonOfIthilien(unit: Unit) {
+  return unit.army_list === "Garrison of Ithilien"
+    ? ![
+        "[garrison-of-ithilien] samwise-gamgee",
+        "[garrison-of-ithilien] smeagol",
+      ].includes(unit.model_id)
+    : true;
+}
+
+export function handleArmyOfLakeTown(unit: Unit) {
+  return unit.army_list === "Army of Lake-town"
+    ? !["[army-of-lake-town] bard's-family"].includes(unit.model_id)
+    : true;
+}
+export function handleSurvivorsOfLakeTown(unit: Unit) {
+  return unit.army_list === "Survivors of Lake-town"
+    ? !["[survivors-of-lake-town] bard's-family"].includes(unit.model_id)
+    : true;
+}
+export function handleBattleOfTheFiveArmies(unit: Unit) {
+  return unit.army_list === "The Battle of Five Armies"
+    ? !["[the-battle-of-five-armies] bard's-family"].includes(unit.model_id)
+    : true;
+}
+
+export function handleAssaultOnRavenhill(unit: Unit) {
+  return unit.army_list === "Assault on Ravenhill"
+    ? [
+        "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain",
+      ].includes(unit.model_id)
+    : true;
+}
+
 export const handleSpecialRestriction = (unit: Unit) => {
-  return [handleBreakingOfTheFellowshipRestriction].every((restriction) =>
-    restriction(unit),
-  );
+  return [
+    handleBreakingOfTheFellowshipRestriction,
+    handleThorinsCompanyRestriction,
+    handleGarrisonOfIthilien,
+    handleArmyOfLakeTown,
+    handleSurvivorsOfLakeTown,
+    handleBattleOfTheFiveArmies,
+    handleAssaultOnRavenhill,
+  ].every((restriction) => restriction(unit));
 };

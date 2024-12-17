@@ -89,22 +89,28 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
           <Typography variant="h5" sx={{ mb: 1 }}>
             Army special rules
           </Typography>
-          {armyListRule.special_rules.map((rule, index) => (
-            <Box key={index}>
-              {isMovieQuote(rule.title) ? (
-                <Typography>
-                  <b>
-                    <i>{rule.title}</i>
-                  </b>
-                </Typography>
-              ) : (
-                <Typography>
-                  <b>{rule.title}</b>
-                </Typography>
-              )}
-              <Typography>{rule.description}</Typography>
-            </Box>
-          ))}
+          <Stack gap={1}>
+            {armyListRule.special_rules.map((rule, index) => (
+              <Box key={index}>
+                {isMovieQuote(rule.title) ? (
+                  <Typography>
+                    <b>
+                      <i>{rule.title}</i>
+                    </b>
+                  </Typography>
+                ) : (
+                  <Typography>
+                    <b>{rule.title}</b>
+                  </Typography>
+                )}
+                <Stack gap={0.5}>
+                  {rule.description.split("\n").map((paragraph, index) => (
+                    <Typography key={index}>{paragraph}</Typography>
+                  ))}
+                </Stack>
+              </Box>
+            ))}
+          </Stack>
         </Box>
 
         <Typography variant="h5">Special rules</Typography>

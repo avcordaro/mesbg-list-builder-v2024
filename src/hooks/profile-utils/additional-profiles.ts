@@ -37,6 +37,17 @@ function unusedAdditionalStats(
       }
     }
 
+    if (
+      [
+        "[garrison-of-dale] girion-lord-of-dale",
+        "[army-of-lake-town] bard-the-bowman",
+      ].includes(unit.model_id)
+    ) {
+      if (stats.name === "Windlance") {
+        return !!unit.options.find(selectedOptionWithName("Windlance"));
+      }
+    }
+
     return true;
   };
 }
@@ -63,9 +74,28 @@ function getAdditionalProfilesFromHeroConstraintsData(
       );
       if (extraProfileMWFW) {
         const [HM, HW, HF] = extraProfileMWFW[1].split(":");
-        return [{ ...profile, HM, HW, HF }];
+        return [
+          {
+            ...profile,
+            HM,
+            HW,
+            HF,
+          },
+        ];
       }
-      return [profile];
+      return [
+        {
+          ...profile,
+          type: profile.name === "Windlance" ? "Siege Engine" : profile.type,
+          additional_stats:
+            [
+              "[garrison-of-dale] girion-lord-of-dale",
+              "[army-of-lake-town] bard-the-bowman",
+            ].includes(unit.model_id) && profile.name === "Windlance"
+              ? []
+              : profile.additional_stats,
+        },
+      ];
     })
     .filter((v) => !!v);
 }
@@ -89,12 +119,8 @@ function getAdditionalProfilesFromMountOptions(
         ),
     )
     ?.map((mount) => {
-      const name = mount.name.includes("Great Eagle")
-        ? "Great Eagle"
-        : mount.name;
-
+      const name = mount.mount_name || mount.name;
       const actualName = name.replaceAll("Upgrade to", "").trim();
-
       const mountMwfw = unit.MWFW.find(([mwfName]) =>
         String(mwfName).includes(actualName),
       ) || ["", "-:-:-:-"];
@@ -142,7 +168,9 @@ function getAdditionalProfilesFromProfileData(
       ?.map((profile) => {
         if (
           unit.name.includes("War Mumak of ") ||
-          unit.name === "Great Beast of Gorgoroth"
+          unit.name === "Great Beast of Gorgoroth" ||
+          unit.name === "Troll Brute" ||
+          unit.name === "Bard's Family"
         ) {
           const riderMwf = unit.MWFW.find(([name]) =>
             String(name).includes(profile.name),

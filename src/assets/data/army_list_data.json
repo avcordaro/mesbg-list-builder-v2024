@@ -1108,5 +1108,606 @@
     "special_rules": [],
     "bow_limit": 0.33,
     "throw_limit": 0.33
+  },
+  "Army of Gundabad": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "Commander of Legions",
+        "description": "If your General is either Azog or Bolg, then your General gains the Master of Battle (5+) special rule."
+      },
+      {
+        "title": "\"Here ends your filthy bloodline!\"",
+        "description": "Azog may re-roll any failed To Wound Rolls when making Strikes against Erebor models."
+      },
+      {
+        "title": "The Horn of Gorgoroth",
+        "description": "Once per game, after Priority has been determined, as long as your General is alive and on the battlefield they can order the Horn of Gorgoroth to be blown. Until the End of the turn, all friendly Gundabad models gain a bonus of +2 to any Courage Tests they are required to take. Additionally, until the end of the turn, all enemy models on the battlefield suffer a -2 penalty to any Courage Tests they are required to take. Note that this is not cumulative with other rules that confer similar penalties."
+      },
+      {
+        "title": "Raise the Banners",
+        "description": "During the Priority Phase, after Priority has been determined, as long as your General is alive and on the battlefield they may command one of the banners on the signal tower to be raised. If they do, choose one of the banners below and apply its effects until the End Phase of the turn. You may not raise the same banner as the previous turn.\n\nThe Banner of Dol Guldur - All friendly Gundabad models on the battlefield count themselves as being in range of a banner.\n\nThe Banner of Gundabad - All friendly Gundabad Hero models on the battlefield may declare a Heroic March for free.\n\nThe Banner of Angmar - Whenever a friendly Gundabad model suffers a Wound, roll a D6. On the roll of a natural 6, the Wound is ignored. Gundabad Berserkers will instead pass their Oblivious to Pain roll on a natural 5+ instead of a natural 6."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Pits of Dol Guldur": {
+    "additional_rules": [
+      {
+        "description": "A Pits of Dol Guldur Army must always contain Azog, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Surprise Attack",
+        "description": "Once per game, at the beginning of the Priority Phase, Azog can use this special rule if he is alive and on the battlefield. If he does, Azog's controlling player will automatically count as having won the roll to choose who has Priority for that turn, though must choose to have Priority. If both sides have a special rule allowing them to do this and both wish to use it in the same turn, players roll off as normal and both special rules count as being used. Enemy models cannot declare Heroic Moves in the turn in which this special rule is used."
+      },
+      {
+        "title": "Magical Void",
+        "description": "Friendly models gain the Resistant to Magic special rule."
+      },
+      {
+        "title": "Thrain's Imprisonment",
+        "description": "Thrain the Broken is an Evil model in this Army. Additionally, if Thrain fails his Intelligence Test for his Shattered Spirit special rule whilst within 6\" of the Keeper of the Dungeons, then he will count as passing the test instead, though will not count as rolling a double."
+      },
+      {
+        "title": "Wizard Hunters",
+        "description": "Friendly Orc Warrior models gain a bonus of +1 To Wound when making Strikes against enemy models that can Cast Magical Powers."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Azog's Hunters": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "Morgul Arrows",
+        "description": "Any enemy model that suffers a Wound from a shooting attack made by a friendly model, and that Wound isn't prevented, must roll a D6 during the End Phase of every turn after suffering the Wound. On the roll of a 1, the model immediately suffers a Wound. A model that has suffered multiple Wounds in this manner still only rolls a single D6 during the End Phase."
+      },
+      {
+        "title": "\"They Strike in the wee small hours when everyone's asleep\"",
+        "description": "An Azog's Hunters Army has a Bow Limit of 50% rather than the usual 33%."
+      },
+      {
+        "title": "Relentless Hunters",
+        "description": "All models in this army list gain the Woodland Creature and Mountain Dweller special rules."
+      },
+      {
+        "title": "The Pale Orc's Demands",
+        "description": "Whilst within 6\" of a friendly Hero, friendly Orc Warrior models gain a bonus of +1 to any Courage Tests to Charge an enemy model with the Terror special rule."
+      }
+    ],
+    "bow_limit": 0.5,
+    "throw_limit": 0.33
+  },
+  "Rise of the Necromancer": {
+    "additional_rules": [
+      {
+        "description": "When writing a Rise of the Necromancer Army List that contains only Hero models (with the exception of Hunter Orc Captains), a player can either have all models in a single Warband or as multiple smaller warbands as normal."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Power of the Necromancer",
+        "description": "Friendly models gain the Resistant to Magic special rule. Additionally, the Necromancer can attempt to Cast two Magical Powers when he Activates rather than one; however, he may not attempt to Cast the same Magical Power twice, or target the same enemy model twice."
+      },
+      {
+        "title": "\"His spirit has lost none of its potency\"",
+        "description": "Each time the Necromancer attempts to Cast a Magical Power by expending one or more Will Points, he automatically adds an additional free Will Point to the Casting Test."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Goblin-town": {
+    "additional_rules": [
+      {
+        "description": "A Goblin-town Army must always contain the Goblin King, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"I Feel A Song Coming On\"",
+        "description": "During the Priority Phase, after Priority has been determined, the Goblin King may choose to sing one of his songs. If he does, choose one of the songs below and apply its effects until the end of the turn. The Goblin King may not sing the same song as he sung the previous turn.\n\n\"Batter and beat, make them stammer and squeak!\" - Other friendly Goblin models treat the Goblin King as a banner with a range of 6.\n\n\"You can yammer and yelp but there ain't no help!\" - Other friendly Goblin models within 6\" of the Goblin King cause Terror.\n\n\"Abominations, mutations, deviations\" - Whenever another friendly Goblin model within 6\" of the Goblin king suffers a Wound, roll a D6. On the roll of a natural 6, the Wound is ignored.\n\n\"Bones will be shattered, necks will be wrung\" - Other friendly Goblin models within 6\" of the Goblin King may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "Strength In Numbers",
+        "description": "Whilst your Army is not Broken, friendly Goblin models receive a bonus of +1 to any Courage Tests they take for Charging an enemy with the Terror special rule."
+      },
+      {
+        "title": "\"If they won't talk, we'll make them squawk!\"",
+        "description": "If the Goblin King or Grinnah would kill an enemy non-Monster Hero model in Combat, they can choose to take them prisoner instead. The Hero model will still be removed as a casualty, including for the purpose of any objectives or special rules. The Goblin King and Grinnah may only ever have a single prisoner each at any one time; if they would subsequently be able to take another prisoner whilst they already have one, they must choose which one counts as their prisoner. If the Goblin King or Grinnah are still alive at the end of the game, their controlling player will gain an additional 1 Victory Point for each enemy Hero that is a prisoner, so long as the model that took them prisoner is still alive. This can never take this Army's total number of Victory Points above 20."
+      },
+      {
+        "title": "\"Down down down in Goblin-town\"",
+        "description": "Each Goblin Hero model may increase their maximum Warband size by six models."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "The Three Trolls": {
+    "additional_rules": [
+      {
+        "description": "The Three Trolls must always include Bill, Bert and Tom. Bill is always the Army's General."
+      },
+      {
+        "description": "A Three Trolls Army may have Bill, Bert and Tom in the same Warband, with Bill as the Warband's Captain."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Campfire",
+        "description": "After both Armies have been deployed, you may place the Campfire anywhere on the battlefield outside of your opponent's deployment zone. The Campfire is on an 80mm base, and must be placed flat on the battlefield. Friendly Troll models treat the Campfire as a banner with a range of 6\", and gain the Resistant to Magic special rule and a bonus of +1 to any Courage Tests whilst within 6\" of it."
+      },
+      {
+        "title": "A Troll's Hoard",
+        "description": "The Three Trolls Army works in an unusual way in that they are allowed to purchase additional special rules. Each of the special rules listed below can be purchased for 50 points, allowing The Three Trolls to be taken at many different points values and not just at 400 points."
+      },
+      {
+        "title": "Full Bellies",
+        "troll_purchase": true,
+        "description": "Bill, Bert and Tom increase their starting Might, Will and Fate Points to 3."
+      },
+      {
+        "title": "Stone Troll Endurance",
+        "troll_purchase": true,
+        "description": "Each time Bill, Bert or Tom is wounded, roll a D6. On a natural 6, the Wound is ignored."
+      },
+      {
+        "title": "Nothing like a warm fire",
+        "troll_purchase": true,
+        "description": "The range of the Campfire's effects are increased from 6\" to 18\". Additionally, as long as there are no enemy models in base contact with the Campfire at the end of the game, the Campfire will count as a banner for the purpose of Victory Points in Scenarios that award Victory Points for having a banner left alive."
+      },
+      {
+        "title": "Rumbling Momentum",
+        "troll_purchase": true,
+        "description": "Bill, Bert and Tom increase their Attacks to 4 on a turn in which they Charge."
+      },
+      {
+        "title": "Bowl them over",
+        "troll_purchase": true,
+        "description": "Instead of using their Throw Stones special rule as normal, Bill, Bert and Tom may use stones in the same way as a Throwing Weapon. These have a Strength of 8 and a range of 12\". Additionally, Bill, Bert and Tom may re-roll the dice when determining the Hurl Distance when using the Hurl Brutal Power Attack."
+      },
+      {
+        "title": "Dominant presence",
+        "troll_purchase": true,
+        "description": "Whilst either Bill, Bert or Tom are within 3\" of an Objective Marker, they are automatically considered to be holding it and the opposition are considered to have no models within range of the Objective Marker. If models from both sides have a special rule that confers this effect, and the applicable models are within range of the same Objective Marker, then neither Army will get their corresponding special rule."
+      },
+      {
+        "title": "Savvy Fighters",
+        "troll_purchase": true,
+        "description": "Bill, Bert and Tom all gain Heroic Strike if they didn't already have it. Additionally, whenever an enemy model Engaged in Combat with Bill, Bert or Tom declares a Heroic Strike, roll a D6. On a 4+, the Troll in the same fight may declare a Heroic Strike for free."
+      },
+      {
+        "title": "Tasty Livestock",
+        "troll_purchase": true,
+        "description": "After both sides have deployed, but before the first turn begins, a player using The Three Trolls may place four 25mm Livestock Markers on the board. Livestock Markers cannot be set up within 3\" of an enemy model or Objective Marker, and cannot be set up within 6\" of the edge of the board or another Livestock Marker. If, during their Activation, Bill, Bert or Tom are within 3\" of a friendly Livestock Marker they can remove it from the battlefield and immediately regain 1 Wound lost earlier in the battle."
+      },
+      {
+        "title": "Cover of Darkness",
+        "troll_purchase": true,
+        "description": "At the start of each game using this Army List, you may choose for the Scenario to take place at night if you wish. Additionally, Bill, Bert and Tom gain the Cave Dweller special rule."
+      },
+      {
+        "title": "Troll Cunning",
+        "troll_purchase": true,
+        "description": "Bill, Bert and Tom can never be Trapped whilst still standing. Additionally, Bill, Bert and Tom may re-roll any failed To Wound Rolls when making Strikes against a Trapped model."
+      },
+      {
+        "title": "Kitchen Utensils",
+        "troll_purchase": true,
+        "description": "Bill, Bert and Tom may re-roll any To Wound Rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "\"That's Mine That Is!\"",
+        "troll_purchase": true,
+        "description": "At the start of their Activation, Bill, Bert or Tom may place a single 25mm Stash Marker in base contact with themself. Each Troll may only have a single Stash Marker on the board at a time. If a Stash Marker is within range of an Objective Marker, then it will count as a single friendly Warrior model for the purposes of working out how many models control that Objective Marker. An enemy model may remove a Stash Marker if they are in base contact with it during the End Phase of any turn, provided they have not Cast any Magical Powers, used a Missile Weapon, been Engaged in Combat, Supported a Combat, been rendered unable to Move that turn due to a special rule or result of a test (such as a Thrown Rider test) or been under the effects of an enemy Magical Power that turn."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Desolator of the North": {
+    "additional_rules": [
+      {
+        "description": "A Desolator of the North Army must always include Smaug, who is always the Army's General - otherwise, there wouldn't be any models in your Army!"
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Sheer Dominance",
+        "description": "Whilst Smaug is in range of an Objective Marker he is automatically considered to be holding it and the opposition are considered to have no models within range of the Objective Marker. If models from both sides have a special rule that confers this effect, then this special rule will override the opposing one, regardless of what the opposing special rule states."
+      },
+      {
+        "title": "Lust for Gold",
+        "description": "In Scenarios where models can carry Objective Markers then when Smaug Moves, he must always Charge an enemy model carrying an Objective Marker if possible. If there are multiple enemy models carrying an Objective Marker that he can Charge, Smaug may choose which one he Charges."
+      },
+      {
+        "title": "\"I will not part with a single coin!\"",
+        "description": "At the start of each game, after both sides have been deployed, Smaug's opposing player must select three of their models to each be given a stash of gold - these must be different models. These models are given a Gold Marker, which is a Light Object that can never be passed to another model, and are treated as Objective Markers for the purpose of the Lust for Gold special rule. If Smaug kills an enemy model with a Gold Marker in Combat, then he immediately regains the Gold Marker and it is removed from the game. If a model holding a Gold Marker is slain in any other manner, the Gold Marker drops like any other Light Object and may be picked up by another model; if this is Smaug, it will be removed from play. At the end of the game, if Smaug has reclaimed all three Gold Markers then he will score an additional 2 Victory Points. However, if any Gold Markers are in the possession of an enemy model, then Smaug's opposing player will score an additional 2 Victory Points. In either instance, this can never take an Army's total number of Victory Points above 20."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Thorin's Company": {
+    "additional_rules": [
+      {
+        "description": "A Thorin's Company Army must include Thorin Oakenshield, who is always the Army's General."
+      },
+      {
+        "description": "All Thorin's Company models must be included in Thorin's Warband."
+      },
+      {
+        "description": "You may only include Eagle models in your Army if it also includes Gandalf."
+      },
+      {
+        "description": "Great Eagles may only be included in Gwaihir's Warband."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "March to the Lonely Mountain",
+        "description": "If your Army contains only Thorin's Company models, then friendly Dwarf models may spend their Will Points to declare a Heroic March instead of using Might Points, even if they do not normally have the ability to declare a Heroic March."
+      },
+      {
+        "title": "\"We're making a long-term deposit\"",
+        "description": "At the beginning of the game, choose one Objective Marker on the board. Friendly Dwarf models within range of the chosen Objective Marker gain the Dominant (2) special rule."
+      },
+      {
+        "title": "Family Ties",
+        "description": "The Dwarves of Thorin's Company are divided into Family Groups, which are as follows:\nBalin and Dwalin.\nKili and Fili.\nBifur, Bofur and Bombur.\nOri, Nori and Dori.\nOin and Gloin.\n\nHero models from this Army that are within 3\" of another Hero from the same Family Group may spend that model's Might, Will and Fate points as if they were their own."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Army of Thror": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "Thror ruled with utter surety",
+        "description": "Friendly Erebor models treat Thror as a banner with a range of 6\"."
+      },
+      {
+        "title": "Erebor Treasure Hoard",
+        "description": "Friendly Erebor models gain a bonus of +1 To Wound when making Strikes against an enemy model that is in possession of an Objective Marker. Additionally, Friendly Erebor models that are within their deployment zone may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "The Iron Hills": {
+    "additional_rules": [
+      {
+        "description": "An Iron Hills Army must include Dain Ironfoot, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"Ironfoot has come!\"",
+        "description": "In Scenarios where you roll for Warbands to arrive, or ones where you roll to see which part of the board you deploy a Warband in (though not when rolling to choose deployment zones), you may modify the roll for Warbands from this Army by +1 or -1."
+      },
+      {
+        "title": "Yan\u00e2d Durinul",
+        "description": "Friendly Infantry models may re-roll To Wound Rolls of a natural 1 when making Strikes, so long as they are in base contact with 2 or more friendly Infantry models."
+      },
+      {
+        "title": "Long March from the Iron Hills",
+        "description": "Friendly models gain the Mountain Dweller special rule."
+      },
+      {
+        "title": "\"I've always found Thorin the more reasonable of the two...\"",
+        "description": "Dain gains the Master of Battle (5+) special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Erebor Reclaimed": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "\"The Dwarves, they're rallying\"",
+        "description": "Any Infantry Hero in this Army may declare a Heroic March, even if it is not listed as one of their Heroic Actions. Additionally, Infantry models in this Army list can still charge after participating in a Heroic March."
+      },
+      {
+        "title": "Family Ties",
+        "description": "The Dwarves of Thorin's Company are divided into Family Groups, which are as follows:\nBalin and Dwalin.\nKili and Fili.\nBifur, Bofur and Bombur.\nOri, Nori and Dori.\nOin and Gloin.\n\nHero models from this Army that are within 3\" of another Hero from the same Family Group may spend that model's Might, Will and Fate points as if they were their own."
+      },
+      {
+        "title": "\"To the King!\"",
+        "description": "If your Army contains only Hero models with the Infantry keyword at the beginning of the game, then friendly models may re-roll any To Wound Rolls of a natural 1 when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Army of Lake-town": {
+    "additional_rules": [
+      {
+        "description": "Bard's Family may be included in Tauriel's Warband rather than Bard's if you wish."
+      },
+      {
+        "description": "Lake-town Guard may only be included in the Warbands of Lake-town Hero models."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Master's Coin",
+        "description": "At the end of his Activation if he is within 3\" of Braga, the Master of Lake-town may spend a Will Point. If he does, Braga immediately regains a Will Point spent earlier in the battle."
+      },
+      {
+        "title": "Air of Self-importance",
+        "description": "The Master of Lake-town, Alfrid and Braga may not take part in any Heroic Action declared by Bard or a member of Bard's Family."
+      },
+      {
+        "title": "\"I Shall Protect You\"",
+        "description": "Tauriel may include Kili, Fili, Bofur and \u00d3in in her Warband. Additionally, if Tauriel is within 3\" of a friendly Dwarf model who is Engaged in Combat, she gains a bonus of +1 To Wound when making Strikes."
+      },
+      {
+        "title": "Stubborn to a Fault",
+        "description": "Friendly Dwarf models may re-roll failed To Wound Rolls either when making a shooting attack or when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Survivors of Lake-town": {
+    "additional_rules": [
+      {
+        "description": "A Survivors of Lake-town Army must include Bard the Bowman, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Saviour of Lake-town",
+        "description": "Other friendly Lake-town models within 6\" of Bard gain a bonus of +1 to their Fight Value. Additionally, other friendly Lake-town models treat Bard as a banner with a range of 6\". Alfrid does not benefit from this special rule."
+      },
+      {
+        "title": "Heir of Dale",
+        "description": "Bard the Bowman gains the Mighty Hero and Fearless special rules."
+      },
+      {
+        "title": "Hold the Streets",
+        "description": "Friendly Warrior models within range of an Objective Marker may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "Master Burglar",
+        "description": "Whilst Bilbo is holding an Objective Marker in Scenarios where this is relevant, he increases his Attacks to 2. Additionally, whilst Bilbo is wearing the One Ring and is Invisible, if he Moves through an enemy model that is holding an Objective Marker in Scenarios where this is relevant, Bilbo may roll a D6; on a 2+, Bilbo immediately gains control of the Objective Marker. Bilbo cannot use this ability if he cannot carry the Objective Marker in question for whatever reason."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Garrison of Dale": {
+    "additional_rules": [
+      {
+        "description": "A Garrison of Dale Army must include Girion, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"Girion, lord of the city, rallied his bowmen to fire upon the beast\"",
+        "description": "Friendly Dale models improve their Shoot Value to 3+."
+      },
+      {
+        "title": "Bring down the Dragon",
+        "description": "Friendly Dale models may apply their Hatred (Dragon) special rule to their shooting attacks. Additionally, friendly Dale models may re-roll failed To Hit Rolls when making a shooting attack targeting a Monster model."
+      },
+      {
+        "title": "Girion's Last Stand",
+        "description": "Girion gains the Fearless special rule. Additionally, friendly Dale models that can draw Line of Sight to Girion gain a bonus of +1 to any Courage Tests they are required to take."
+      },
+      {
+        "title": "Defenders of Dale",
+        "description": "Friendly Dale models that are within their deployment zone, and/or within 6\" of a friendly Windlance, gain a bonus of +1 To Wound when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Erebor & Dale": {
+    "additional_rules": [
+      {
+        "description": "An Erebor & Dale Army must include Girion and at least one Unique Erebor Hero."
+      },
+      {
+        "description": "Erebor Warrior models can only be included in the Warband of an Erebor Hero."
+      },
+      {
+        "description": "Dale Warrior models can only be included in the Warband of a Dale Hero."
+      },
+      {
+        "description": "Ignore the usual rules for Bow Limit and Throwing Weapon Limit in this Army List. Instead, a maximum of 50% of your Dale Warrior models can have a bow, and a maximum of 50% of your Erebor Warrior models can have throwing weapons."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Alliance of Men and Dwarves",
+        "description": "Friendly Dale models may re-roll To Wound Rolls of a natural 1 when making Strikes if there is a friendly Erebor model Engaged in the same Combat. Friendly Erebor models may re-roll To Wound Rolls of a natural 1 when making Strikes if there is a friendly Dale model Engaged in the same Combat."
+      },
+      {
+        "title": "Lords of the Kingdoms",
+        "description": "Friendly Dale models treat Girion as a banner. Friendly Erebor models treat Thr\u00f3r as a banner."
+      },
+      {
+        "title": "Great Prosperity",
+        "description": "Whenever a friendly Hero model spends a Might Point, roll a D6. On a natural 6, the Might Point was free and does not reduce the Hero model's store of Might."
+      }
+    ],
+    "bow_limit": 0.5,
+    "throw_limit": 0.5
+  },
+  "Halls of Thranduil": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "\"The Elves of Mirkwood are not like their kin. They are less wise, and more dangerous\"",
+        "description": "Friendly Mirkwood Warrior models within 3\" of Thranduil gain a bonus of +1 to Wound when making Strikes."
+      },
+      {
+        "title": "Stoic Command",
+        "description": "Friendly Warrior models treat your General as a banner."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Rangers of Mirkwood": {
+    "additional_rules": [
+      {
+        "description": "A Rangers of Mirkwood must include at least one Unique Elf Hero."
+      },
+      {
+        "description": "If your Army includes Legolas, then he must be your General. If your Army includes Tauriel, but does not include Legolas, then she must be your General."
+      },
+      {
+        "description": "Mirkwood Rangers may only be included in the Warbands of Mirkwood Hero models."
+      },
+      {
+        "description": "Mirkwood Rangers do not count towards this Army's Bow Limit."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Knife Mastery",
+        "description": "Friendly Elf models may re-roll To Wound Rolls of a natural 1 when making Strikes. Additionally, friendly Elf models may use the Shielding special rule, however, they cannot use their Knife Fighters or Blade Mistress special rules in a turn in which they elect to Shield."
+      },
+      {
+        "title": "The Prince of Mirkwood",
+        "description": "Legolas gains the Knife Fighters special rule - If Outnumbered in Combat, then before making his Duel roll, Legolas gains +1 Attack for each model he is Engaged in Combat with, after the first, up to the a maximum of 3 bonus Attacks. This bonus lasts until the end of the Combat."
+      },
+      {
+        "title": "Dwarven Resilience",
+        "description": "Friendly Dwarf models may re-roll failed Fate Rolls."
+      },
+      {
+        "title": "Clear the Nests",
+        "description": "Friendly models gain the Hatred (Spider) special rule."
+      },
+      {
+        "title": "\"If you think I'm giving you a weapon Dwarf, you are sorely mistaken\"",
+        "description": "Friendly Dwarf models cannot benefit from the Heroic Actions or Stand Fast of friendly Elf models and friendly Elf models cannot benefit from the Heroic Actions or Stand Fast of friendly Dwarf models. Additionally, Tauriel's Vengeful Fury special rule does not apply in this Army List."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "The Battle of Five Armies": {
+    "additional_rules": [
+      {
+        "description": "Elf Warrior models can only be included in the Warband of an Elf Hero."
+      },
+      {
+        "description": "Dwarf Warrior models can only be included in the Warband of a Dwarf Hero."
+      },
+      {
+        "description": "Lake-town Warrior models can only be included in the Warband of a Lake-town Hero, or in the Warband of Gandalf the Grey or Bilbo Baggins."
+      },
+      {
+        "description": "Eagle Warrior models can only be included in the Warband of an Eagle Hero, or in the Warband of Radagast the Brown or Beorn."
+      },
+      {
+        "description": "The Battle of Five Armies may not include more Fledgeling Great Eagles than Great Eagles."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "We stand together",
+        "description": "Friendly models may re-roll To Wound Rolls of a natural 1 when making Strikes if they are involved in a Combat with a friendly model that has a different racial Keyword to themselves."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Assault on Ravenhill": {
+    "additional_rules": [
+      {
+        "description": "An Assault on Ravenhill Army must include Thorin, who is always the Army's General."
+      },
+      {
+        "description": "An Assault on Ravenhill Army is always deployed as a single Warband with Thorin as the Warband's Captain."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Orcrist",
+        "description": "Legolas begins the game with Orcrist - no points are paid for Orcrist, it is free. Additionally, at the start of any Fight Phase, if Legolas is within 6\" of Thorin and Thorin is Engaged in Combat, then Legolas can throw Orcrist to Thorin. From that point on, Thorin carries Orcrist instead of Legolas."
+      },
+      {
+        "title": "The Line of Durin",
+        "description": "Friendly models treat Thorin as a banner with a range of 6\". So long as he is still alive, Thorin will count as a banner for the purpose of Victory Points in Scenarios that award Victory Points for having a banner left alive. Additionally, Kili and Fili increase their Attacks to 3 in this Army List"
+      },
+      {
+        "title": "The King's Protector",
+        "description": "If Thorin is Engaged in Combat within 6\" of Dwalin, then Dwalin may declare a Heroic Combat for free. If the Heroic Combat is successful then Dwalin must use the following Move to join Thorin's Combat. If this is not possible then Dwalin must Move as close as possible to Thorin."
+      },
+      {
+        "title": "Heroes of Mirkwood",
+        "description": "Legolas increases his Fight Value to 7 and his Attacks to 3. Additionally, Tauriel must re-roll all failed To Wound Rolls when making Strikes."
+      },
+      {
+        "title": "Throwing Stones",
+        "description": "Instead of using his Throw Stones special rule as normal, Bilbo may use stones in the same way as a Throwing Weapon. These have a Strength of 1 and a range of 8\", and Bilbo may re-roll any failed To Wound Rolls when using stones as a Throwing Weapon."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Radagast's Alliance": {
+    "additional_rules": [
+      {
+        "description": "A Radagast's Alliance Army must include Radagast, who is always the Army's General."
+      },
+      {
+        "description": "Radagast's Alliance may not include more Fledgeling Great Eagles than Great Eagles."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"The Eagles are Coming!\"",
+        "description": "Friendly Eagle models gain a bonus of +1 to their Strength on a turn in which they Charge."
+      },
+      {
+        "title": "Beorn's Fury",
+        "description": "If Beorn is involved in a Combat and kills every model he was Engaged in Combat with, then in the following turn he may declare a Heroic Move for free."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "The White Council": {
+    "additional_rules": [
+      {
+        "description": "A White Council Army is always deployed as a single Warband, with your General as the Warband's Captain."
+      },
+      {
+        "description": "Gandalf, Radagast and Elrond gain the White Council keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Council of the Wise",
+        "description": "Each friendly White Council model gains the special rule associated with them as listed below:\n\nSaruman - Friendly White Council models within 3\" of Saruman may re-roll any 1s in their rolls to Cast a Magical Power.\n\nGandalf - Friendly White Council models within 3\" of Gandalf may re-roll To Wound Rolls of a natural 1 when making Strikes.\n\nRadagast - Friendly White Council models that begin their Activation within 3\" of Radagast may Move through difficult terrain without penalty.\n\nElrond - Friendly White Council models treat Elrond as a banner.\n\nGaladriel - Friendly White Council models within 3\" of Galadriel gain the Resistant to Magic special rule."
+      },
+      {
+        "title": "Masters of Magic",
+        "description": "Friendly White Council models may still be Activated whilst Engaged in Combat (though they still may not Move), and therefore may attempt to Cast Magical Powers whilst Engaged in Combat, with the exception of the following Magical Powers: Nature's Wrath, Sorcerous Blast, Wrath of Bruinen."
+      },
+      {
+        "title": "\"Are you in need of assistance?\"",
+        "description": "Friendly White Council models gain a bonus of +1 to any Resist Tests whilst within 6\" of another friendly White Council model."
+      },
+      {
+        "title": "Last Stand of the Council",
+        "description": "Friendly White Council models gain the Dominant (3) special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
   }
 }

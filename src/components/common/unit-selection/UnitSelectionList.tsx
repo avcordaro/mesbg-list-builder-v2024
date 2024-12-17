@@ -1,12 +1,12 @@
 import { TextField } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import heroConstraints from "../../../assets/data/hero_constraint_data.json";
 import data from "../../../assets/data/mesbg_data.json";
+import { heroConstraintData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
-import { HeroConstraintsDataType } from "../../../types/hero-constraints-data.type.ts";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 import { UnitSelectionButton } from "./UnitSelectionButton.tsx";
+import { handleSpecialRestriction } from "./special-unit-selection-rules.ts";
 
 export type UnitSelectionListProps = {
   leadingHeroModelId: string;
@@ -21,11 +21,11 @@ export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
   const [filter, setFilter] = useState("");
 
   const unitIds =
-    (heroConstraints as HeroConstraintsDataType)[leadingHeroModelId]
-      ?.valid_warband_units || [];
+    heroConstraintData[leadingHeroModelId]?.valid_warband_units || [];
 
   const units = unitIds
     .map((modelId) => data[modelId])
+    .filter(handleSpecialRestriction(selectedModels))
     .filter(
       (unit: Unit) => !unit.unique || !selectedModels.includes(unit.model_id),
     );

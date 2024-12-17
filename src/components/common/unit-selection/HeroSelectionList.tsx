@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import data from "../../../assets/data/mesbg_data.json";
+import { mesbgData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 import { UnitSelectionButton } from "./UnitSelectionButton.tsx";
@@ -19,7 +19,7 @@ export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
   const selectedModels = useRosterInformation().getSetOfModelIds();
   const [filter, setFilter] = useState("");
 
-  const heroes: Unit[] = Object.values(data as Record<string, Unit>)
+  const heroes: Unit[] = Object.values(mesbgData)
     .filter(
       (unit) =>
         unit.unit_type.includes("Hero") || unit.unit_type === "Siege Engine",

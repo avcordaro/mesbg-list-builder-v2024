@@ -10,9 +10,6 @@
       "W": "2",
       "C": "7+",
       "I": "6+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [
@@ -37,9 +34,6 @@
       "W": "1",
       "C": "8+",
       "I": "7+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
@@ -64,9 +58,6 @@
       "W": "1",
       "C": "7+",
       "I": "7+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
@@ -89,9 +80,6 @@
       "W": "1",
       "C": "8+",
       "I": "7+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
@@ -117,18 +105,13 @@
       "W": "-",
       "C": "-",
       "I": "-",
-      "Might": null,
-      "Will": null,
-      "Fate": null,
       "active_or_passive_rules": [],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Strike"
       ],
       "special_rules": [],
       "wargear": [],
-      "point_cost": "60",
       "additional_stats": [
         {
           "name": "Bain, Son of Bard",
@@ -141,9 +124,6 @@
           "W": "1",
           "C": "7+",
           "I": "7+",
-          "Might": "0",
-          "Will": "1",
-          "Fate": "2",
           "active_or_passive_rules": [
             {
               "name": "Family Bond",
@@ -171,9 +151,6 @@
           "W": "1",
           "C": "7+",
           "I": "7+",
-          "Might": "0",
-          "Will": "1",
-          "Fate": "2",
           "active_or_passive_rules": [
             {
               "name": "Da! Down here!",
@@ -201,9 +178,6 @@
           "W": "1",
           "C": "8+",
           "I": "7+",
-          "Might": "0",
-          "Will": "1",
-          "Fate": "2",
           "active_or_passive_rules": [
             {
               "name": "Da! Down here!",
@@ -236,9 +210,6 @@
       "W": "2",
       "C": "6+",
       "I": "7+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [
@@ -262,9 +233,6 @@
       "W": "1",
       "C": "7+",
       "I": "8+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Onwards Men of Esgaroth",
@@ -328,6 +296,7 @@
         {
           "name": "The Black Arrow",
           "type": "Active",
+          "option_dependency": "Windlance",
           "description": "If Bard takes the Windlance, then once per game Bard can fire the Black Arrow. If he does, declare this before rolling To Hit. Bard may re-roll any failed To Hit and In The Way rolls. Furthermore, do not roll on the Scatter Table- a successful To Hit Roll against a Battlefield Target will always count as a Dead On result."
         },
         {
@@ -351,7 +320,8 @@
         "Sworn Protector (Tilda)"
       ],
       "wargear": [
-        "Hand weapon, great bow"
+        "Hand weapon",
+        "great bow"
       ]
     },
     "Bilbo Baggins, Master Burglar": {
@@ -1318,12 +1288,7 @@
           "name": "Master of the Nazgul",
           "type": "Passive",
           "description": "Any friendly Nazgul of Dol Guldur in your Army gains a +1 bonus to rolls for their Unholy Resurrection rule, depending on if they are in range of the Necromancer. If he has 20+ Will points remaining, the range of this rule is 18\". For between 10 and 19 Will points, the range is 12\". For 9 or less Will points, the range is 6\"."
-        },
-        "Dominant (5)",
-        "Harbinger of Evil (18\")",
-        "Spectral Walk",
-        "Terror",
-        "Will of Evil"
+        }
       ],
       "magic_powers": [
         {
@@ -1625,34 +1590,6 @@
         "two-handed weapon"
       ]
     },
-    "The White Warg": {
-      "Mv": "10\"",
-      "Fv": "5",
-      "Sv": "6+",
-      "S": "5",
-      "D": "5",
-      "A": "2",
-      "W": "2",
-      "C": "6+",
-      "I": "6+",
-      "active_or_passive_rules": [
-        {
-          "name": "Pack Master",
-          "type": "Passive",
-          "description": "Once separated from Azog, only Warg models may benefit from the White Warg's Stand Fast And benefit from its Heroic Actions."
-        }
-      ],
-      "magic_powers": [],
-      "heroic_actions": [],
-      "special_rules": [
-        "Fearless",
-        "Fell Sight",
-        "Terror"
-      ],
-      "wargear": [
-        "Claws and teeth (hand weapons)"
-      ]
-    },
     "The Witch-king of Angmar": {
       "Mv": "6\"",
       "Fv": "6",
@@ -1734,9 +1671,6 @@
           "W": "2",
           "C": "6+",
           "I": "7+",
-          "Might": "1",
-          "Will": "1",
-          "Fate": "1",
           "active_or_passive_rules": [],
           "heroic_actions": [
             "Heroic March"
@@ -1827,9 +1761,6 @@
       "W": "2",
       "C": "4+",
       "I": "4+",
-      "Might": "2",
-      "Will": "3",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Sting",
@@ -1868,9 +1799,6 @@
       "W": "3",
       "C": "3+",
       "I": "3+",
-      "Might": "3",
-      "Will": "6",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Glamdring",
@@ -2649,7 +2577,7 @@
         {
           "name": "Accurate",
           "type": "Active",
-          "description": "an Iron Hills Ballista will only Scatter 3\" rather than 6\""
+          "description": "An Iron Hills Ballista will only Scatter 3\" rather than 6\""
         },
         {
           "name": "The Old Twirly Whirlies",
@@ -3165,9 +3093,7 @@
         "Heroic March",
         "Heroic Defence"
       ],
-      "special_rules": [
-        "None."
-      ],
+      "special_rules": [],
       "wargear": [
         "Heavy armour",
         "hand weapon"
@@ -4936,6 +4862,29 @@
     }
   },
   "Mounts": {
+    "The White Warg": {
+      "Mv": "10\"",
+      "Fv": "5",
+      "Sv": "6+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pack Master",
+          "type": "Passive",
+          "description": "Once separated from Azog, only Warg models may benefit from the White Warg's Stand Fast And benefit from its Heroic Actions."
+        }
+      ],
+      "special_rules": [
+        "Fearless",
+        "Fell Sight",
+        "Terror"
+      ]
+    },
     "Troll Brute": {
       "Mv": "6\"",
       "Fv": "5",
@@ -5244,9 +5193,6 @@
       "W": "1",
       "C": "5+",
       "I": "5+",
-      "Might": "0",
-      "Will": "2",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Lord of the Mearas",
@@ -5315,9 +5261,6 @@
       "W": "2",
       "C": "6+",
       "I": "7+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Majestic Steed",
@@ -5339,9 +5282,6 @@
       "W": "3",
       "C": "4+",
       "I": "4+",
-      "Might": null,
-      "Will": null,
-      "Fate": null,
       "active_or_passive_rules": [],
       "special_rules": [
         "Dominant (3)",
@@ -5364,9 +5304,6 @@
       "W": "4",
       "C": "8+",
       "I": "8+",
-      "Might": null,
-      "Will": null,
-      "Fate": null,
       "active_or_passive_rules": [
         {
           "name": "Chariot Charge",
@@ -6307,9 +6244,6 @@
       "W": "3",
       "C": "3+",
       "I": "6+",
-      "Might": "*",
-      "Will": "*",
-      "Fate": "*",
       "active_or_passive_rules": [
         {
           "name": "Skin-changer",
@@ -6356,9 +6290,6 @@
       "W": "3",
       "C": "3+",
       "I": "4+",
-      "Might": "3",
-      "Will": "3",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Skin-changer",
@@ -6366,7 +6297,6 @@
           "description": "At the start of his Activation, Beorn can change his form from Man to Bear. If he does, place the Bear model in base contact with the Man model, and then remove the Man model from play. If there is no space to place the Bear model, then Beorn cannot transform. Once he has transformed, Beorn the Bear may continue his Activation as normal, including Charging in which case check the Line of Sight from the newly placed Bear model to determine whether Beorn can Charge. Once Beorn has transformed, he uses the Beorn the Bear profile - though his Wounds, Might, Will and Fate Points remain the same between both profiles."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Strength",
@@ -6382,8 +6312,7 @@
       ],
       "wargear": [
         "Two-handed weapon"
-      ],
-      "point_cost": "200"
+      ]
     },
     "Galadriel, Lady of Light": {
       "Mv": "6\"",
@@ -6395,9 +6324,6 @@
       "W": "3",
       "C": "3+",
       "I": "3+",
-      "Might": "3",
-      "Will": "6",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Nenya",
@@ -6425,7 +6351,6 @@
           "description": "Galadriel may target any enemy with Banishment as if it were a Spirit model, though non-Spirit models targeted will gain an extra free Will point to their Resist test. Once per game instead of casting a Magical Power, as long as she has at least 1 Will point, she may choose an enemy within 6\", who immediately suffers D3 Wounds. After doing this, her Will points becomes 0, she is placed Prone, and no longer benefits from her The Lady of Lorien or War Aspect special rules (and thus becomes Unarmed)."
         }
       ],
-      "options": [],
       "magic_powers": [
         {
           "name": "Fortify Spirit",
@@ -6454,8 +6379,7 @@
       "wargear": [
         "The Light of Earendil",
         "Nenya"
-      ],
-      "point_cost": "125"
+      ]
     },
     "Radagast the Brown": {
       "Mv": "6\"",
@@ -6467,9 +6391,6 @@
       "W": "3",
       "C": "3+",
       "I": "4+",
-      "Might": "3",
-      "Will": "6",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Sebastian",
@@ -6480,16 +6401,6 @@
           "name": "Master of Birds",
           "type": "Passive",
           "description": "Radagast always has Line of Sight to any point on the battlefield. Friendly Eagle models within 12\" of Radagast gain Resistant to Magic."
-        }
-      ],
-      "options": [
-        {
-          "name": "Exchange Staff for Great Eagle",
-          "points": "55"
-        },
-        {
-          "name": "Radagast's Sleigh",
-          "points": "35"
         }
       ],
       "magic_powers": [
@@ -6542,8 +6453,7 @@
         "Staff of Power",
         "hand weapon",
         "Sebastian"
-      ],
-      "point_cost": "145"
+      ]
     },
     "Saruman": {
       "Mv": "6\"",
@@ -6555,9 +6465,6 @@
       "W": "3",
       "C": "3+",
       "I": "3+",
-      "Might": "3",
-      "Will": "6",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "Voice of Curunir",
@@ -6575,7 +6482,6 @@
           "description": "At the start of each Move Phase, before the Declare Heroic Actions step, Saruman may choose an enemy within 6\" and Line of Sight, which must take an Intelligence test. If failed, that model cannot Activate this turn."
         }
       ],
-      "options": [],
       "magic_powers": [
         {
           "name": "Compel",
@@ -6620,8 +6526,7 @@
       "special_rules": [],
       "wargear": [
         "Staff of Power"
-      ],
-      "point_cost": "170"
+      ]
     },
     "Thrain the Broken": {
       "Mv": "6\"",
@@ -6633,9 +6538,6 @@
       "W": "2",
       "C": "6+",
       "I": "6+",
-      "Might": "0",
-      "Will": "0",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Shattered Spirit",
@@ -6648,14 +6550,12 @@
           "description": "If when Thrain takes his Intelligence Test for his Shattered Spirit special rule he is within 3\" of a friendly Gandalf the Grey, then he may alter a single dice rolled as part of his Intelligence Test by 1, either up or down. If after this alteration the score of the Intelligence Test is a double, then Thrain may gain the benefits of rolling a double as described in his Shattered Spirit special rule."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "10"
+      ]
     }
   },
   "Mordor": {
@@ -7605,28 +7505,7 @@
       "W": "2",
       "C": "4+",
       "I": "5+",
-      "Might": "2",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [],
-      "options": [
-        {
-          "name": "Horse",
-          "points": "20"
-        },
-        {
-          "name": "Exchange armour for heavy armour",
-          "points": "5"
-        },
-        {
-          "name": "Lance",
-          "points": "5"
-        },
-        {
-          "name": "Shield",
-          "points": "5"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March",
@@ -7639,8 +7518,7 @@
       "wargear": [
         "Armour",
         "hand weapon"
-      ],
-      "point_cost": "75"
+      ]
     },
     "King of Men (Dale)": {
       "Mv": "6\"",
@@ -7652,32 +7530,11 @@
       "W": "3",
       "C": "4+",
       "I": "5+",
-      "Might": "2",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [
         {
           "name": "Kingdoms of Men",
           "type": "Passive",
           "description": "A King off Dale's Stand Fast is 12\", and also affects Dale Hero models."
-        }
-      ],
-      "options": [
-        {
-          "name": "Horse",
-          "points": "20"
-        },
-        {
-          "name": "Exchange armour for heavy armour",
-          "points": "5"
-        },
-        {
-          "name": "Lance",
-          "points": "5"
-        },
-        {
-          "name": "Shield",
-          "points": "5"
         }
       ],
       "magic_powers": [],
@@ -7690,8 +7547,7 @@
       "wargear": [
         "Armour",
         "hand weapon"
-      ],
-      "point_cost": "75"
+      ]
     },
     "King of Men (Gondor)": {
       "Mv": "6\"",
@@ -7703,28 +7559,7 @@
       "W": "2",
       "C": "4+",
       "I": "5+",
-      "Might": "3",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [],
-      "options": [
-        {
-          "name": "Horse",
-          "points": "20"
-        },
-        {
-          "name": "Exchange armour for heavy armour",
-          "points": "5"
-        },
-        {
-          "name": "Lance",
-          "points": "5"
-        },
-        {
-          "name": "Shield",
-          "points": "5"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March",
@@ -7739,8 +7574,7 @@
       "wargear": [
         "Armour",
         "hand weapon"
-      ],
-      "point_cost": "75"
+      ]
     },
     "King of Men (Numenor)": {
       "Mv": "6\"",
@@ -7752,28 +7586,7 @@
       "W": "2",
       "C": "4+",
       "I": "5+",
-      "Might": "2",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [],
-      "options": [
-        {
-          "name": "Horse",
-          "points": "20"
-        },
-        {
-          "name": "Exchange armour for heavy armour",
-          "points": "5"
-        },
-        {
-          "name": "Lance",
-          "points": "5"
-        },
-        {
-          "name": "Shield",
-          "points": "5"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March",
@@ -7786,8 +7599,7 @@
       "wargear": [
         "Armour",
         "hand weapon"
-      ],
-      "point_cost": "75"
+      ]
     },
     "King of Men (Rohan)": {
       "Mv": "6\"",
@@ -7799,28 +7611,7 @@
       "W": "2",
       "C": "4+",
       "I": "5+",
-      "Might": "2",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [],
-      "options": [
-        {
-          "name": "Horse",
-          "points": "20"
-        },
-        {
-          "name": "Exchange armour for heavy armour",
-          "points": "5"
-        },
-        {
-          "name": "Lance",
-          "points": "5"
-        },
-        {
-          "name": "Shield",
-          "points": "5"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March",
@@ -7835,8 +7626,7 @@
       "wargear": [
         "Armour",
         "hand weapon"
-      ],
-      "point_cost": "75"
+      ]
     },
     "Aragorn, King Elessar": {
       "Mv": "6\"",
@@ -9743,11 +9533,7 @@
       "W": "-",
       "C": "-",
       "I": "-",
-      "Might": null,
-      "Will": null,
-      "Fate": null,
       "active_or_passive_rules": [],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [],
@@ -9765,9 +9551,6 @@
           "W": "2",
           "C": "7+",
           "I": "7+",
-          "Might": "2",
-          "Will": "3",
-          "Fate": "1",
           "active_or_passive_rules": [
             {
               "name": "Orcish Halberd",
@@ -9806,9 +9589,6 @@
           "W": "2",
           "C": "6+",
           "I": "9+",
-          "Might": "1",
-          "Will": "1",
-          "Fate": "1",
           "active_or_passive_rules": [
             {
               "name": "Tasty Fingers",
@@ -9842,9 +9622,6 @@
           "W": "3",
           "C": "5+",
           "I": "8+",
-          "Might": "",
-          "Will": "",
-          "Fate": "",
           "active_or_passive_rules": [
             {
               "name": "Horned Charge",
@@ -9909,9 +9686,6 @@
       "W": "3",
       "C": "6+",
       "I": "7+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Keep 'em for Later",
@@ -9924,7 +9698,6 @@
           "description": "Instead of making Strikes, if he is within 6\" of a Campfire, Bert may choose a single enemy model involved in the Combat. The chosen model is then placed in base contact with the Campfire and is immediately Set Ablaze."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Defence",
@@ -9938,8 +9711,7 @@
       ],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "130"
+      ]
     },
     "Bill the Troll": {
       "Mv": "6\"",
@@ -9951,9 +9723,6 @@
       "W": "3",
       "C": "6+",
       "I": "7+",
-      "Might": "3",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Keep 'em for Later",
@@ -9966,7 +9735,6 @@
           "description": "Instead of making Strikes, Bill may choose a single enemy model involved in the Combat. Bill and the chosen model both roll a D6 and add their respective Strength characteristics. If Bill scores higher after adding Strength characteristics, then the chosen model suffers a number of Wounds equal to the difference between the two scores."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Challenge",
@@ -9980,8 +9748,7 @@
       ],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "150"
+      ]
     },
     "Goblin Captain": {
       "Mv": "5\"",
@@ -9993,9 +9760,6 @@
       "W": "2",
       "C": "7+",
       "I": "7+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Chittering Hordes",
@@ -10003,7 +9767,6 @@
           "description": "This model may Support as if it had a spear, with the exception that they can only Support another model with this special rule. A model Supporting whilst using this special rule cannot also use a two-handed weapon in the same Combat."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March"
@@ -10013,8 +9776,7 @@
       ],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "40"
+      ]
     },
     "Goblin Warrior": {
       "Mv": "5\"",
@@ -10026,20 +9788,11 @@
       "W": "1",
       "C": "8+",
       "I": "8+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Chittering Hordes",
           "type": "Active",
           "description": "This model may Support as if it had a spear, with the exception that they can only Support another model with this special rule. A model Supporting whilst using this special rule cannot also use a two-handed weapon in the same Combat."
-        }
-      ],
-      "options": [
-        {
-          "name": "Two-handed weapon",
-          "points": "1"
         }
       ],
       "magic_powers": [],
@@ -10049,8 +9802,7 @@
       ],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "5"
+      ]
     },
     "Gollum": {
       "Mv": "5\"",
@@ -10062,9 +9814,6 @@
       "W": "2",
       "C": "6+",
       "I": "5+",
-      "Might": "1",
-      "Will": "0",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "The Precious",
@@ -10072,7 +9821,6 @@
           "description": "If your opponent's Army contains a Ringbearer, then when Gollum Moves, he must always Charge the enemy Ringbearer if possible. Additionally, if Gollum kills the enemy Ringbearer in Combat, then he will automatically regain the One Ring - from that point onwards he counts as having it as part of his Wargear."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [
@@ -10083,7 +9831,6 @@
       "wargear": [
         "Strangling fingers"
       ],
-      "point_cost": "40",
       "additional_text": [
         "Gollum has strong, strangling fingers and so is never considered to be Unarmed - ever! If your opponent does not have a Ringbearer in their Army, then Gollum carries the One Ring."
       ]
@@ -10098,9 +9845,6 @@
       "W": "2",
       "C": "7+",
       "I": "7+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Swap with Me",
@@ -10113,7 +9857,6 @@
           "description": "This model may Support as if it had a spear, with the exception that they can only Support another model with this special rule. A model Supporting whilst using this special rule cannot also use a two-handed weapon in the same Combat."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Challenge"
@@ -10124,8 +9867,7 @@
       "wargear": [
         "Hand weapon",
         "whip"
-      ],
-      "point_cost": "50"
+      ]
     },
     "The Goblin King": {
       "Mv": "6\"",
@@ -10137,9 +9879,6 @@
       "W": "3",
       "C": "6+",
       "I": "6+",
-      "Might": "3",
-      "Will": "2",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Relentless Advance",
@@ -10157,7 +9896,6 @@
           "description": "Each time the Goblin King suffers a Wound, roll a D6. On a 3+ the Wound is prevented. Wounds caused by Magical Powers or Elven weapons in Combat ignore this special rule. Wounds caused by Elven missile weapons will cause the Goblin King to suffer a -1 penalty to this roll."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Strength",
@@ -10172,8 +9910,7 @@
       ],
       "wargear": [
         "Two-handed weapon"
-      ],
-      "point_cost": "150"
+      ]
     },
     "The Goblin Scribe": {
       "Mv": "0\"",
@@ -10185,9 +9922,6 @@
       "W": "1",
       "C": "7+",
       "I": "7+",
-      "Might": "0",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Immobile",
@@ -10200,14 +9934,12 @@
           "description": "If the Goblin King declares a Heroic Move whilst within 6\" of the Goblin Scribe and chooses to call With Me, then it will affect all friendly models on the battlefield rather than just those within 6', and affected models do not have to finish their Activation within 6\" of the Goblin King. Additionally, any friendly Goblin Hero that begins their Activation within 3\" of the Goblin Scribe can choose to spend a Might Point. If they do, the Goblin King regains a Might Point spent earlier in the battle. This rule can only be used once per turn."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [],
       "wargear": [
         "Unarmed"
-      ],
-      "point_cost": "50"
+      ]
     },
     "Tom the Troll": {
       "Mv": "6\"",
@@ -10219,9 +9951,6 @@
       "W": "3",
       "C": "7+",
       "I": "8+",
-      "Might": "1",
-      "Will": "3",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Keep 'em for Later",
@@ -10239,7 +9968,6 @@
           "description": "Instead of making Strikes, Tom may use this Brutal Power Attack. Each enemy model that was Engaged in Combat with Tom immediately suffers a Strength 6 hit and, if they survive, will be knocked Prone."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Defence"
@@ -10252,8 +9980,7 @@
       ],
       "wargear": [
         "Hand weapon"
-      ],
-      "point_cost": "120"
+      ]
     },
     "Cave Troll": {
       "Mv": "6\"",
@@ -10782,9 +10509,6 @@
           "W": "2",
           "C": "6+",
           "I": "6+",
-          "Might": "2",
-          "Will": "1",
-          "Fate": "1",
           "active_or_passive_rules": [],
           "special_rules": [],
           "heroic_actions": [
@@ -10806,9 +10530,6 @@
           "W": "2",
           "C": "5+",
           "I": "6+",
-          "Might": "2",
-          "Will": "2",
-          "Fate": "1",
           "active_or_passive_rules": [
             {
               "name": "Mahud Beastmaster Chieftain",
@@ -10840,9 +10561,6 @@
       "W": "20",
       "C": "4+",
       "I": "4+",
-      "Might": "3",
-      "Will": "6",
-      "Fate": "0",
       "active_or_passive_rules": [
         {
           "name": "Breathe Fire",

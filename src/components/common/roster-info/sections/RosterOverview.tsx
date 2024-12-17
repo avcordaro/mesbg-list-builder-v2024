@@ -32,7 +32,7 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
   const rows = [
     {
       label: "Points",
-      value: metadata.points,
+      value: metadata.points + (metadata.tttSpecialUpgrades?.length * 50 || 0),
     },
     {
       label: "Units",

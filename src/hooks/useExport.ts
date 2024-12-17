@@ -21,6 +21,7 @@ export const useExport = () => {
       {
         metadata: {
           leader: roster.metadata.leader,
+          tttSpecialUpgrades: roster.metadata.tttSpecialUpgrades,
         },
         warbands: roster.warbands.map((warband) => ({
           id: warband.id,

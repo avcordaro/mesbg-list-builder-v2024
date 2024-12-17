@@ -88,7 +88,7 @@ function AdditionalRows({
   return (
     parentProfile.additional_stats
       // Hide mounts, which are in a separate table
-      ?.filter((stat) => stat.type !== "mount")
+      ?.filter((stat) => stat.type !== "mount" && stat.type !== "Siege Engine")
 
       // Hide additional profiles that are already displayed at top-level.
       ?.filter(
@@ -118,7 +118,15 @@ export const QuickReferenceTable = ({ profiles }: QuickReferenceTableProps) => {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const siegeEngines = profiles.filter((row) => row.type === "Siege Engine");
+  const siegeEngines = [
+    ...profiles.filter((row) => row.type === "Siege Engine"),
+    ...profiles.flatMap(
+      (profile) =>
+        profile.additional_stats?.filter(
+          (stat) => stat.type === "Siege Engine",
+        ) || [],
+    ),
+  ];
   const additionProfilesFormSiegeEngines = siegeEngines
     .flatMap((profile) => profile?.additional_stats || [])
     .filter((p, i, s) => s.findIndex((o) => o.name === p.name) === i);
@@ -154,6 +162,7 @@ export const QuickReferenceTable = ({ profiles }: QuickReferenceTableProps) => {
               const skippedParentRow = [
                 "Vault Warden Team",
                 "Uruk-Hai Demolition Team",
+                "Bard's Family",
               ].includes(row.name);
 
               return (

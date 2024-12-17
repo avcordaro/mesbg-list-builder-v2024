@@ -40,6 +40,7 @@ export type Option = {
   id: string;
   points: number;
   type?: OptionType;
+  mount_name?: string;
   passengers?: number;
   included?: boolean;
   dependencies?: OptionDependency[];

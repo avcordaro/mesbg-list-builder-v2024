@@ -7,6 +7,7 @@ export type ArmyListData = Record<
     special_rules: {
       title: string;
       description: string;
+      troll_purchase?: boolean;
     }[];
     bow_limit: number;
     throw_limit: number;
