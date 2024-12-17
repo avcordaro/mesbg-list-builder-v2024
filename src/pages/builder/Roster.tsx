@@ -8,6 +8,7 @@ import {
   SpeedDialIcon,
 } from "@mui/material";
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
@@ -20,6 +21,10 @@ import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { DrawerHeader } from "../../layout/Navigation.tsx";
 import { useAppState } from "../../state/app";
 import { useTemporalRosterBuildingState } from "../../state/roster-building";
+import {
+  MobileRosterInfoToolbar,
+  ROSTER_INFO_BAR_HEIGHT,
+} from "./MobileRosterInfoToolbar.tsx";
 
 const drawerWidth = 55;
 
@@ -118,142 +123,154 @@ export const Roster = () => {
 
   return (
     <>
-      <Box
+      <MobileRosterInfoToolbar />
+      <Container
+        maxWidth={false}
         sx={{
-          width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
+          p: 2,
+          pt: screen.isDesktop ? 2 : `calc(${ROSTER_INFO_BAR_HEIGHT}px + 1rem)`,
         }}
       >
-        <WarbandList warbands={roster.warbands} />
-      </Box>
-      <Drawer
-        variant={screen.getSize() === "desktop" ? "permanent" : "temporary"}
-        anchor="right"
-        sx={{
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: `${drawerWidth}ch`,
-          },
-        }}
-        open={infoOpen}
-      >
-        {screen.isDesktop && <DrawerHeader />}
-        <RosterInformation roster={roster} onClose={() => setInfoOpen(false)} />
-      </Drawer>
-      <Box ref={speedDialRef}>
-        <SpeedDial
-          ariaLabel="action-buttons"
+        <Box
           sx={{
-            position: "fixed",
-            bottom: 16,
-            right: screen.isDesktop ? `calc(${drawerWidth}ch + 16px)` : 16,
+            width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
           }}
-          icon={<SpeedDialIcon icon={<ShareIcon />} openIcon={<Close />} />}
-          open={fabOpen}
-          onClick={() => {
-            setFabOpen((x) => !x);
-            setRedoOpen(false);
-          }}
-          onClose={null}
         >
-          {actions.map((action) => (
+          <WarbandList warbands={roster.warbands} />
+        </Box>
+        <Drawer
+          variant={screen.getSize() === "desktop" ? "permanent" : "temporary"}
+          anchor="right"
+          sx={{
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: `${drawerWidth}ch`,
+            },
+          }}
+          open={infoOpen}
+        >
+          {screen.isDesktop && <DrawerHeader />}
+          <RosterInformation
+            roster={roster}
+            onClose={() => setInfoOpen(false)}
+          />
+        </Drawer>
+        <Box ref={speedDialRef}>
+          <SpeedDial
+            ariaLabel="action-buttons"
+            sx={{
+              position: "fixed",
+              bottom: 16,
+              right: screen.isDesktop ? `calc(${drawerWidth}ch + 16px)` : 16,
+            }}
+            icon={<SpeedDialIcon icon={<ShareIcon />} openIcon={<Close />} />}
+            open={fabOpen}
+            onClick={() => {
+              setFabOpen((x) => !x);
+              setRedoOpen(false);
+            }}
+            onClose={null}
+          >
+            {actions.map((action) => (
+              <SpeedDialAction
+                key={action.name}
+                icon={action.icon}
+                onClick={() => {
+                  if (!action.disabled) action.callback();
+                }}
+                FabProps={{ disabled: action.disabled }}
+                tooltipTitle={
+                  <span style={{ whiteSpace: "nowrap" }}> {action.name} </span>
+                }
+                tooltipOpen
+              />
+            ))}
+          </SpeedDial>
+
+          <SpeedDial
+            ariaLabel="action-buttons"
+            sx={{
+              position: "fixed",
+              bottom: 80,
+              right: { xl: `calc(${drawerWidth}ch + 16px)`, xs: 16 },
+            }}
+            icon={<SpeedDialIcon icon={<History />} openIcon={<Close />} />}
+            open={redoOpen}
+            onClick={() => setRedoOpen((x) => !x)}
+            hidden={
+              fabOpen || (pastStates.length === 0 && futureStates.length === 0)
+            }
+            FabProps={{
+              sx: {
+                color: "black",
+                bgcolor: "background.default",
+                "&:hover": {
+                  bgcolor: "background.default",
+                },
+              },
+            }}
+          >
             <SpeedDialAction
-              key={action.name}
-              icon={action.icon}
-              onClick={() => {
-                if (!action.disabled) action.callback();
+              icon={
+                <Badge
+                  badgeContent={pastStates.length}
+                  color="primary"
+                  sx={{
+                    p: 1,
+                  }}
+                >
+                  <Undo />
+                </Badge>
+              }
+              onClick={(e) => {
+                e.stopPropagation();
+                if (pastStates.length > 0) undo();
               }}
-              FabProps={{ disabled: action.disabled }}
+              FabProps={{ disabled: pastStates.length === 0 }}
               tooltipTitle={
-                <span style={{ whiteSpace: "nowrap" }}> {action.name} </span>
+                <span style={{ whiteSpace: "nowrap" }}>
+                  Undo{" "}
+                  {screen.isDesktop && (
+                    <small>
+                      <i>[Ctrl + Z]</i>
+                    </small>
+                  )}
+                </span>
               }
               tooltipOpen
             />
-          ))}
-        </SpeedDial>
-
-        <SpeedDial
-          ariaLabel="action-buttons"
-          sx={{
-            position: "fixed",
-            bottom: 80,
-            right: { xl: `calc(${drawerWidth}ch + 16px)`, xs: 16 },
-          }}
-          icon={<SpeedDialIcon icon={<History />} openIcon={<Close />} />}
-          open={redoOpen}
-          onClick={() => setRedoOpen((x) => !x)}
-          hidden={
-            fabOpen || (pastStates.length === 0 && futureStates.length === 0)
-          }
-          FabProps={{
-            sx: {
-              color: "black",
-              bgcolor: "background.default",
-              "&:hover": {
-                bgcolor: "background.default",
-              },
-            },
-          }}
-        >
-          <SpeedDialAction
-            icon={
-              <Badge
-                badgeContent={pastStates.length}
-                color="primary"
-                sx={{
-                  p: 1,
-                }}
-              >
-                <Undo />
-              </Badge>
-            }
-            onClick={(e) => {
-              e.stopPropagation();
-              if (pastStates.length > 0) undo();
-            }}
-            FabProps={{ disabled: pastStates.length === 0 }}
-            tooltipTitle={
-              <span style={{ whiteSpace: "nowrap" }}>
-                Undo{" "}
-                {screen.isDesktop && (
-                  <small>
-                    <i>[Ctrl + Z]</i>
-                  </small>
-                )}
-              </span>
-            }
-            tooltipOpen
-          />
-          <SpeedDialAction
-            icon={
-              <Badge
-                badgeContent={futureStates.length}
-                color="primary"
-                sx={{
-                  p: 1,
-                }}
-              >
-                <Redo />
-              </Badge>
-            }
-            onClick={(e) => {
-              e.stopPropagation();
-              if (futureStates.length > 0) redo();
-            }}
-            FabProps={{ disabled: futureStates.length === 0 }}
-            tooltipTitle={
-              <span style={{ whiteSpace: "nowrap" }}>
-                Redo{" "}
-                {screen.isDesktop && (
-                  <small>
-                    <i>[Ctrl + Y]</i>
-                  </small>
-                )}
-              </span>
-            }
-            tooltipOpen
-          />
-        </SpeedDial>
-      </Box>
+            <SpeedDialAction
+              icon={
+                <Badge
+                  badgeContent={futureStates.length}
+                  color="primary"
+                  sx={{
+                    p: 1,
+                  }}
+                >
+                  <Redo />
+                </Badge>
+              }
+              onClick={(e) => {
+                e.stopPropagation();
+                if (futureStates.length > 0) redo();
+              }}
+              FabProps={{ disabled: futureStates.length === 0 }}
+              tooltipTitle={
+                <span style={{ whiteSpace: "nowrap" }}>
+                  Redo{" "}
+                  {screen.isDesktop && (
+                    <small>
+                      <i>[Ctrl + Y]</i>
+                    </small>
+                  )}
+                </span>
+              }
+              tooltipOpen
+            />
+          </SpeedDial>
+        </Box>
+      </Container>
     </>
   );
 };

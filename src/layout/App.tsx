@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import { useEffect } from "react";
 import { Outlet as ReactRouterOutlet } from "react-router-dom";
 import { Alerts } from "../components/alerts/Alerts.tsx";
@@ -31,16 +30,14 @@ export const App = () => {
 
   return (
     <Navigation>
-      <Container maxWidth={false} sx={{ p: 2 }}>
-        <main>
-          <Alerts />
-          <ReactRouterOutlet />
-        </main>
-        <aside>
-          <DrawerContainer />
-          <ModalContainer />
-        </aside>
-      </Container>
+      <main style={{ position: "relative" }}>
+        <Alerts />
+        <ReactRouterOutlet />
+      </main>
+      <aside>
+        <DrawerContainer />
+        <ModalContainer />
+      </aside>
     </Navigation>
   );
 };

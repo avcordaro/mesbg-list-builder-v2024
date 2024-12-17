@@ -43,6 +43,7 @@ import { FactionLogo } from "../components/common/images/FactionLogo.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
 import { charts } from "../constants/charts.ts";
+import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
 import { useScreenSize } from "../hooks/useScreenSize.ts";
 import { useAppState } from "../state/app";
 import { useRosterBuildingState } from "../state/roster-building";
@@ -249,11 +250,15 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
 
-  const toggleMenuDrawer = () => setOpen(!open);
+  const toggleMenuDrawer = () => {
+    setOpen(!open);
+    window.dispatchEvent(new OpenNavigationDrawerEvent(!open));
+  };
 
   useEffect(() => {
     function openMenuDrawer() {
       setOpen(true);
+      window.dispatchEvent(new OpenNavigationDrawerEvent(true));
     }
 
     window.addEventListener(
@@ -453,7 +458,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
           )}
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" open={open} id="navigation-drawer">
         <DrawerHeader>
           <Typography
             variant="h6"
@@ -474,7 +479,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
           )}
         </List>
       </Drawer>
-      <Box sx={{ flexGrow: 1, p: 1, minWidth: "50ch" }}>
+      <Box sx={{ flexGrow: 1, minWidth: "50ch" }}>
         <DrawerHeader />
         {children}
       </Box>
