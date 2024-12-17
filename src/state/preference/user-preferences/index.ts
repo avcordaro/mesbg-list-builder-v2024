@@ -1,12 +1,23 @@
 import { Slice } from "../../Slice.ts";
 
+export type Preferences =
+  | "mobileRosterToolbar"
+  | "autoUpdateUnitData"
+  | "colorCodedRules"
+  | "splitActiveRules";
+
 export type PreferenceState = {
-  useDenseMode: boolean;
-  setDenseMode: (value: boolean) => void;
+  preferences: Record<Preferences, boolean>;
+  setPreference: (key: Preferences, value: boolean) => void;
 };
 
-const initialState = {
-  useDenseMode: false,
+const initialState: Pick<PreferenceState, "preferences"> = {
+  preferences: {
+    mobileRosterToolbar: true,
+    autoUpdateUnitData: false,
+    colorCodedRules: true,
+    splitActiveRules: false,
+  },
 };
 
 export const userPreferences: Slice<PreferenceState, PreferenceState> = (
@@ -14,6 +25,15 @@ export const userPreferences: Slice<PreferenceState, PreferenceState> = (
 ) => ({
   ...initialState,
 
-  setDenseMode: (value: boolean) =>
-    set(() => ({ useDenseMode: value }), undefined, "SET_DENSE_MODE"),
+  setPreference: (key: Preferences, value: boolean) =>
+    set(
+      ({ preferences }) => ({
+        preferences: {
+          ...preferences,
+          [key]: value,
+        },
+      }),
+      undefined,
+      "UPDATE_PREFERENCES",
+    ),
 });

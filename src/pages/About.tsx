@@ -4,9 +4,9 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 export const About = () => (
-  <Container maxWidth={false} sx={{ mt: 2 }}>
+  <Container maxWidth="md" sx={{ mt: 2, mb: 5 }}>
     <Stack direction="row" gap={5} flexWrap="wrap">
-      <Stack gap={2} sx={{ maxWidth: "78ch" }}>
+      <Stack gap={2}>
         <Typography variant="h4" className="middle-earth">
           About
         </Typography>
@@ -44,54 +44,24 @@ export const About = () => (
             support@mesbg-list-builder.com
           </a>
         </Typography>
-
-        <Typography variant="h4" className="middle-earth">
-          Roadmap
-        </Typography>
         <Typography variant="body1" sx={{ fontSize: "18px" }}>
-          Even though the app should already include everything you would need
-          to build your army lists, there is always work to be done. Think of
-          FAQ&apos;s and errata that need to be implemented or bugs on our side
-          that need be be squashed. Aside from those few things we have our own
-          list of things we still want to include.
+          A list of currently reported and open issues can be found in{" "}
+          <a
+            href="https://github.com/avcordaro/mesbg-list-builder-v2024/issues"
+            target="_blank"
+            rel="noreferrer"
+          >
+            the Github issues list
+          </a>
+          . Please refer to this list when reporting any issues to avoid
+          duplicates.
         </Typography>
-        <Stack component="ul" sx={{ listStyle: "none", pl: 0 }} gap={1}>
-          <Box component="li">
-            <Typography>
-              <strong>Accounts;</strong> Allowing users to login using their
-              favorite authentication provider, like Facebook, Google and maybe
-              others platform. Or let them create an custom email/password
-              account. This will allow users with an account to save their
-              rosters and match history on our servers and allows them to sync
-              more easily between their computer and mobile device while also
-              reducing the risk of losing their browser storage.
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography>
-              <strong>Customizations;</strong> We know that every user is
-              different and some of us want to have something slightly adjusted.
-              Making this possible though the means of user preferences in the{" "}
-              <u>App Settings</u> would (hopefully) create the perfect user
-              experience for each and everyone.
-            </Typography>
-          </Box>
-        </Stack>
-        <Typography>
-          <i>
-            If you have an feature idea don&apos;t hesitate to contact us at{" "}
-            <a href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Feature request">
-              support@mesbg-list-builder.com
-            </a>
-          </i>
-        </Typography>
-      </Stack>
-      <Stack sx={{ maxWidth: "64ch" }}>
+
         <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
           Features
         </Typography>
         <Typography variant="body1" sx={{ fontSize: "16px" }}>
-          <Stack component="ul" sx={{ listStyle: "none", pl: 0 }} gap={1}>
+          <Stack component="ul" sx={{ pl: 0 }} gap={1}>
             <Box component="li">
               A <strong>fully responsive</strong> web interface allowing you to
               build lists in the comfort of your own home as well as on the go.
@@ -148,6 +118,46 @@ export const About = () => (
               safe when clearing your browser history and data.
             </Box>
           </Stack>
+        </Typography>
+        <Typography variant="h4" className="middle-earth">
+          Roadmap
+        </Typography>
+        <Typography variant="body1" sx={{ fontSize: "18px" }}>
+          Even though the app should already include everything you would need
+          to build your army lists, there is always work to be done. Think of
+          FAQ&apos;s and errata that need to be implemented or bugs on our side
+          that need be be squashed. Aside from those few things we have our own
+          list of things we still want to include.
+        </Typography>
+        <Stack component="ul" sx={{ listStyle: "none", pl: 0 }} gap={1}>
+          <Box component="li">
+            <Typography>
+              <strong>Accounts;</strong> Allowing users to login using their
+              favorite authentication provider, like Facebook, Google and maybe
+              others platform. Or let them create an custom email/password
+              account. This will allow users with an account to save their
+              rosters and match history on our servers and allows them to sync
+              more easily between their computer and mobile device while also
+              reducing the risk of losing their browser storage.
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography>
+              <strong>Customizations;</strong> We know that every user is
+              different and some of us want to have something slightly adjusted.
+              Making this possible though the means of user preferences in the{" "}
+              <u>App Settings</u> would (hopefully) create the perfect user
+              experience for each and everyone.
+            </Typography>
+          </Box>
+        </Stack>
+        <Typography>
+          <i>
+            If you have an feature idea don&apos;t hesitate to contact us at{" "}
+            <a href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Feature request">
+              support@mesbg-list-builder.com
+            </a>
+          </i>
         </Typography>
       </Stack>
     </Stack>

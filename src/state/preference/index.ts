@@ -1,12 +1,8 @@
 import { create } from "zustand";
 import { createJSONStorage, devtools, persist } from "zustand/middleware";
-import {
-  storageNotification,
-  StorageNotificationState,
-} from "./storage-notification";
 import { PreferenceState, userPreferences } from "./user-preferences";
 
-export type UserPrefState = StorageNotificationState & PreferenceState;
+export type UserPrefState = PreferenceState;
 
 export const useUserPreferences = create<
   UserPrefState,
@@ -15,7 +11,6 @@ export const useUserPreferences = create<
   devtools(
     persist(
       (...args) => ({
-        ...storageNotification(...args),
         ...userPreferences(...args),
       }),
       {

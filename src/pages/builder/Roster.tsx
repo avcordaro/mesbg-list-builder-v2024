@@ -20,6 +20,7 @@ import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { DrawerHeader } from "../../layout/Navigation.tsx";
 import { useAppState } from "../../state/app";
+import { useUserPreferences } from "../../state/preference";
 import { useTemporalRosterBuildingState } from "../../state/roster-building";
 import {
   MobileRosterInfoToolbar,
@@ -35,6 +36,9 @@ export const Roster = () => {
   const { id } = useParams();
   const { roster } = useRosterInformation();
   const { setCurrentModal } = useAppState();
+  const displayMobileToolbar = useUserPreferences(
+    ({ preferences }) => preferences.mobileRosterToolbar,
+  );
 
   const speedDialRef = useRef<HTMLDivElement | null>(null);
   const [fabOpen, setFabOpen] = useState(false);
@@ -123,12 +127,15 @@ export const Roster = () => {
 
   return (
     <>
-      <MobileRosterInfoToolbar />
+      {displayMobileToolbar && <MobileRosterInfoToolbar />}
       <Container
         maxWidth={false}
         sx={{
           p: 2,
-          pt: screen.isDesktop ? 2 : `calc(${ROSTER_INFO_BAR_HEIGHT}px + 1rem)`,
+          pt:
+            !screen.isDesktop && displayMobileToolbar
+              ? `calc(${ROSTER_INFO_BAR_HEIGHT}px + 1rem)`
+              : 2,
         }}
       >
         <Box
