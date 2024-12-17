@@ -82,19 +82,27 @@ function getAdditionalProfilesFromMountOptions(
 ): Profile[] {
   const chosenMounts: Profile[] = unit.options
     ?.filter((option) => option.type === "mount" && option.quantity > 0)
+    .filter(
+      (option, _, options) =>
+        !options.find(
+          (other) => other.name === `Upgrade to Armoured ${option.name}`,
+        ),
+    )
     ?.map((mount) => {
       const name = mount.name.includes("Great Eagle")
         ? "Great Eagle"
         : mount.name;
 
+      const actualName = name.replaceAll("Upgrade to", "").trim();
+
       const mountMwfw = unit.MWFW.find(([mwfName]) =>
-        String(mwfName).includes(name),
+        String(mwfName).includes(actualName),
       ) || ["", "-:-:-:-"];
 
       const [HM, HW, HF] = mountMwfw[1].split(":");
       return {
-        ...profileData.Mounts[name],
-        name: name,
+        ...profileData.Mounts[actualName],
+        name: actualName,
         type: "mount",
         HM,
         HW,
