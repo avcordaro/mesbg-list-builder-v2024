@@ -1,4 +1,4 @@
-import { SelectedUnit } from "../../../../../types/roster.ts";
+import { SelectedUnit } from "../../types/roster.ts";
 
 export function getAdditionalSpecialRules(unit: SelectedUnit) {
   if (unit.name.includes("War Mumak of ")) {

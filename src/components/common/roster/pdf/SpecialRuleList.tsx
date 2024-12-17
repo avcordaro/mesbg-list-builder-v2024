@@ -4,10 +4,10 @@ import Typography from "@mui/material/Typography";
 import armyListRules from "../../../../assets/data/army_list_data.json";
 import keywords from "../../../../assets/data/keywords.json";
 
+import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { ArmyListData } from "../../../../types/army-list-data.types.ts";
 import { isMovieQuote } from "../../../../utils/string.ts";
-import { Profile } from "./profiles/profile.type.ts";
 
 interface SpecialRuleListProps {
   profiles: Profile[];

@@ -1,5 +1,5 @@
-import { UnitType } from "../../../../../types/mesbg-data.types.ts";
-import { SelectedUnit } from "../../../../../types/roster.ts";
+import { UnitType } from "../../types/mesbg-data.types.ts";
+import { SelectedUnit } from "../../types/roster.ts";
 
 export const unitSortOrder: Record<UnitType, number> = {
   "Hero of Legend": 1,

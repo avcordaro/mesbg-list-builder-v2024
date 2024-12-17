@@ -92,7 +92,7 @@ export const Settings = () => {
           label="Automatically update selected units when datafiles update"
           description={
             "Unit data is locked in when selecting a unit. Changes to the datafiles are not applied to " +
-            "already build rosters. Enabling this option will 'auto-update' your roster to the latest " +
+            "already built rosters. Enabling this option will 'auto-update' your roster to the latest " +
             "data file with a (small) risk of corruption."
           }
           value={preferences.autoUpdateUnitData}
@@ -109,7 +109,6 @@ export const Settings = () => {
           }
           value={preferences.colorCodedRules}
           onChange={updatePreference("colorCodedRules")}
-          disabled
         />
 
         <SettingsOption
@@ -121,7 +120,6 @@ export const Settings = () => {
           }
           value={preferences.splitActiveRules}
           onChange={updatePreference("splitActiveRules")}
-          disabled
         />
       </List>
 

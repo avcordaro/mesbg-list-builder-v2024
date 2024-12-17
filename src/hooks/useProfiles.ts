@@ -1,5 +1,5 @@
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
-import { convertRosterToProfiles } from "./profiles/profiles.ts";
+import { convertRosterToProfiles } from "./profile-utils/profiles.ts";
+import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useProfiles = () => {
   const { roster } = useRosterInformation();

@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
-import { Profile } from "./profiles/profile.type.ts";
+import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
 
 interface UnitListProps {
   units: Profile[];

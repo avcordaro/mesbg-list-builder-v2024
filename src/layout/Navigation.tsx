@@ -362,7 +362,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       action: () =>
         (window.location.href =
           "mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Bug/Correction"),
-      active: location.pathname === "/settings",
+      active: false,
     },
     {
       icon: <Settings />,

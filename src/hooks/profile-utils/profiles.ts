@@ -1,11 +1,11 @@
-import { profileData } from "../../../../../assets/data.ts";
+import { profileData } from "../../assets/data.ts";
 import {
   isSelectedUnit,
   Roster,
   SelectedUnit,
   Warband,
-} from "../../../../../types/roster.ts";
-import { selectedOptionWithName } from "../../../../../utils/options.ts";
+} from "../../types/roster.ts";
+import { selectedOptionWithName } from "../../utils/options.ts";
 import { getAdditionalStats } from "./additional-profiles.ts";
 import { combineProfiles, duplicateProfiles } from "./deduplication.ts";
 import { getMightWillAndFate } from "./might-will-fate.ts";

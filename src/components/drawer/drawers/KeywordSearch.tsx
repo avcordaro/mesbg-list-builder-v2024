@@ -10,12 +10,62 @@ import {
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Fragment, FunctionComponent, useState } from "react";
+import { useUserPreferences } from "../../../state/preference";
+
+const Keyword = ({
+  name,
+  active_passive,
+  description,
+  used,
+}: {
+  name: string;
+  active_passive?: string;
+  description: string;
+  used: boolean;
+}) => {
+  const { preferences } = useUserPreferences();
+
+  return (
+    <Accordion>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography
+          variant="body1"
+          component="div"
+          color={
+            !preferences.colorCodedRules
+              ? "inherit"
+              : used
+                ? "success.light"
+                : "textSecondary"
+          }
+          sx={{
+            textDecoration:
+              preferences.colorCodedRules && used ? "underline" : "normal",
+          }}
+        >
+          <b>{name}</b> {active_passive ? <i>({active_passive})</i> : ""}
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: description.replaceAll("\n", "<br />"),
+            }}
+          />
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  );
+};
 
 export const KeywordSearch: FunctionComponent<{
   keywords: { name: string; active_passive?: string; description: string }[];
-}> = ({ keywords }) => {
+  usedKeywords?: string[];
+}> = ({ keywords, usedKeywords = [] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [keywordList, setKeywordList] = useState(keywords);
+  const { preferences } = useUserPreferences();
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -45,27 +95,42 @@ export const KeywordSearch: FunctionComponent<{
           placeholder="Search..."
         />
       </Box>
-      {keywordList.map((kw) => (
-        <Fragment key={kw.name}>
-          <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body1" component="div">
-                <b>{kw.name}</b>{" "}
-                {kw.active_passive ? <i>({kw.active_passive})</i> : ""}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: kw.description.replaceAll("\n", "<br />"),
-                  }}
+      {preferences.splitActiveRules && usedKeywords.length > 0 && (
+        <Box>
+          <Typography sx={{ mb: 0.5 }} variant="h6">
+            Relevant keywords for selected roster:
+          </Typography>
+          {keywordList
+            .filter((rule) => usedKeywords.includes(rule.name))
+            .map((kw) => {
+              return (
+                <Keyword
+                  {...kw}
+                  key={kw.name}
+                  used={usedKeywords.includes(kw.name)}
                 />
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Fragment>
-      ))}
+              );
+            })}
+          <Typography sx={{ mt: 2.5, mb: 0.5 }} variant="h6">
+            Other keywords:
+          </Typography>
+        </Box>
+      )}
+
+      {keywordList
+        .filter(
+          (rule) =>
+            !preferences.splitActiveRules || !usedKeywords.includes(rule.name),
+        )
+        .map((kw) => {
+          return (
+            <Keyword
+              {...kw}
+              key={kw.name}
+              used={usedKeywords.includes(kw.name)}
+            />
+          );
+        })}
     </Fragment>
   );
 };

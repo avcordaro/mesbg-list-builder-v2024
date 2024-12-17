@@ -3,13 +3,13 @@ import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useProfiles } from "../../../hooks/useProfiles.ts";
 import { ArmyComposition } from "./pdf/ArmyComposition.tsx";
 import { MagicalPowerList } from "./pdf/MagicalPowers.tsx";
 import { QuickReferenceTable } from "./pdf/QuickReferenceTable.tsx";
 import { SpecialRuleList } from "./pdf/SpecialRuleList.tsx";
 import { StatTrackers } from "./pdf/StatTrackers.tsx";
 import { UnitProfileList } from "./pdf/UnitProfileList.tsx";
-import { useProfiles } from "./pdf/useProfiles.ts";
 
 export const PdfView = () => {
   const { profiles, missingProfiles } = useProfiles();
