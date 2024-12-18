@@ -56,8 +56,6 @@ export const CreateNewRosterModal = () => {
   const calculator = useCalculator();
   const { groupId } = useParams();
 
-  console.log(groupId);
-
   const existingRosterIds = rosters.map(({ id }) => id);
 
   const [armyList, setArmyList] = useState<{

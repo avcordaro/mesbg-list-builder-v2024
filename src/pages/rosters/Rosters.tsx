@@ -62,6 +62,7 @@ export const Rosters: FunctionComponent = () => {
   function onDragStart(start: DragStart) {
     setDraggingRoster(start.draggableId);
   }
+
   function onDragEnd(result: DropResult) {
     setDraggingRoster(null);
 
@@ -97,23 +98,20 @@ export const Rosters: FunctionComponent = () => {
           My Rosters
         </Typography>
         <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-          Note: You can group rosters by dragging and dropping 2 roster on top
-          of each other.
+          Note: You can create roster groups by simply dragging and dropping one
+          roster onto another, or onto an existing group.
         </Typography>
 
-        <Alert
-          severity="warning"
-          sx={{ maxWidth: "90ch", my: 2, display: "none" }}
-        >
+        <Alert severity="warning" sx={{ maxWidth: "98ch", my: 2, ml: 0.5 }}>
           <AlertTitle>
-            <Typography sx={{ maxWidth: "72ch" }}>
+            <Typography sx={{ maxWidth: "80ch" }}>
               <strong>
                 You are currently looking at a &quot;Work in Progress&quot;
                 build.
               </strong>
             </Typography>
           </AlertTitle>
-          <Stack sx={{ maxWidth: "72ch" }} gap={2}>
+          <Stack sx={{ maxWidth: "80ch" }} gap={2}>
             <Typography>
               The MESBG List Builder for the new &apos;24 edition of MESBG is
               still in a work in progress state. This means that there are still
@@ -129,7 +127,7 @@ export const Rosters: FunctionComponent = () => {
           </Stack>
         </Alert>
 
-        <Stack direction="row" gap={2} sx={{ my: 2 }} flexWrap="wrap" flex={1}>
+        <Stack direction="row" gap={2} sx={{ my: 0 }} flexWrap="wrap" flex={1}>
           <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
             {Object.entries(rosterGroups).map(([groupName, rosters], index) => (
               <Droppable key={index} droppableId={"group:" + groupName}>
