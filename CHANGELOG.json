@@ -3,7 +3,8 @@
     "added": [
       "Added missing keywords for Heroic Channelling, Combat, March, Move & Shoot",
       "Added toolbar with roster overview data when screensize dictates that the roster info collapses",
-      "Added application settings including enable/disable roster overview toolbar option"
+      "Added application settings including enable/disable roster overview toolbar option",
+      "Added drag & drop in the 'My Rosters' page to group and upgroup created rosters"
     ],
     "bugfixes": [
       "Updated the server configuration to allow deeplinking to nested routes like /rosters and /about",
