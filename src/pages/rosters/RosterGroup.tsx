@@ -67,7 +67,7 @@ export const RosterGroup: FunctionComponent = () => {
       <DragDropContext onDragEnd={onDragEnd}>
         <Stack>
           <Stack direction="row">
-            <Stack flexGrow={1}>
+            <Stack flexGrow={1} gap={1}>
               <Typography variant="h4" className="middle-earth">
                 My Rosters
               </Typography>

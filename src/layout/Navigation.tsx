@@ -1,6 +1,7 @@
 import {
   AutoAwesome,
   ChevronLeftOutlined,
+  FolderOutlined,
   Info,
   Segment,
   Settings,
@@ -206,7 +207,7 @@ export const NavItemLink = ({
               {
                 "& span": {
                   display: "inline-block",
-                  width: "22ch",
+                  width: "21ch",
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
@@ -250,6 +251,15 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
 
+  const groupedRosters = rosters.reduce(
+    (groups, roster) => {
+      const group = roster.group || "ungrouped";
+      groups[group] = [...(groups[group] || []), roster];
+      return groups;
+    },
+    { ungrouped: [] },
+  );
+
   const toggleMenuDrawer = () => {
     setOpen(!open);
     window.dispatchEvent(new OpenNavigationDrawerEvent(!open));
@@ -279,7 +289,27 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       action: () => navigate("/my-rosters"),
       active: location.pathname === "/my-rosters",
       children: [
-        ...rosters
+        ...Object.entries(groupedRosters)
+          .filter(([key]) => key !== "ungrouped")
+          .map(([group, groupRosters]) => ({
+            action: () => {},
+            active:
+              location.pathname === `/rosters/${encodeURIComponent(group)}`,
+            icon: <FolderOutlined />,
+            label: group,
+            children: [
+              ...groupRosters
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((roster) => ({
+                  action: () => navigate(`/roster/${roster.id}`),
+                  active: location.pathname === `/roster/${roster.id}`,
+                  icon: <FactionLogo faction={roster.armyList} />,
+                  label: roster.name,
+                })),
+            ],
+            showCaret: true,
+          })),
+        ...groupedRosters.ungrouped
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((roster) => ({
             action: () => navigate(`/roster/${roster.id}`),
