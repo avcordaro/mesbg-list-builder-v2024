@@ -93,9 +93,31 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
         ];
       }
     }
-
-    return [];
   }
+
+  if (roster.armyList === "Men of the West") {
+    const containsAnyMountedHero = !!roster.warbands.find(
+      ({ hero }) =>
+        isSelectedUnit(hero) &&
+        !!hero.options.find(
+          (option) => option.type === "mount" && option.quantity > 0,
+        ),
+    );
+    const hasGwaihir = !!roster.warbands.find(
+      ({ hero }) => isSelectedUnit(hero) && hero.name === "Gwaihir",
+    );
+
+    if (containsAnyMountedHero && hasGwaihir) {
+      return [
+        {
+          warning: `If your Army includes any Cavalry models then it cannot include any Eagle models, and vice versa.`,
+          type: undefined,
+          dependencies: [],
+        },
+      ];
+    }
+  }
+
   return [];
 }
 

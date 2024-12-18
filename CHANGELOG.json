@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "added": [
+      "The Men of the West army list now shows a warning when the roster includes cavalry and eagles"
+    ]
+  },
   "0.3": {
     "added": [
       "Add the armies listed in the 'The Hobbit' army book to the selectable armies"
