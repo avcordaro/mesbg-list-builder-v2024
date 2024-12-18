@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "added": [
+      "Add the armies listed in the 'The Hobbit' army book to the selectable armies"
+    ]
+  },
   "0.2": {
     "added": [
       "Added missing keywords for Heroic Channelling, Combat, March, Move & Shoot",
