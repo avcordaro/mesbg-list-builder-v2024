@@ -1,4 +1,4 @@
-import { DeleteForever, Download, Edit } from "@mui/icons-material";
+import { DeleteForever, Download, Edit, LibraryAdd } from "@mui/icons-material";
 import AddCircleOutline from "@mui/icons-material/AddCardOutlined";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SaveIcon from "@mui/icons-material/Save";
@@ -12,6 +12,7 @@ import { GiSwordsEmblem } from "react-icons/gi";
 import { ChartsModal } from "./modals/ChartsModal.tsx";
 import { ConfirmDeleteRosterModal } from "./modals/ConfirmDeleteRosterModal.tsx";
 import { CreateGameResultModal } from "./modals/CreateGameResultModal.tsx";
+import { CreateNewRosterGroupModal } from "./modals/CreateNewRosterGroupModal.tsx";
 import { CreateNewRosterModal } from "./modals/CreateNewRosterModal.tsx";
 import { DownloadPdfModal } from "./modals/DownloadPdfModal.tsx";
 import { DownloadProfileCardModal } from "./modals/DownloadProfileCardModal.tsx";
@@ -41,6 +42,7 @@ export enum ModalTypes {
 
   CONFIRM_DELETE_ROSTER = "CONFIRM_DELETE_ROSTER",
   EDIT_ROSTER_NAME = "EDIT_ROSTER_NAME",
+  CREATE_ROSTER_GROUP = "CREATE_ROSTER_GROUP",
 }
 
 export type ModalProps = {
@@ -170,6 +172,15 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <FaImage />,
       title: "Screenshot",
       children: <RosterSummaryScreenshotModal />,
+      maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.CREATE_ROSTER_GROUP,
+    {
+      icon: <LibraryAdd />,
+      title: "Create Group",
+      children: <CreateNewRosterGroupModal />,
       maxWidth: "md",
     },
   ],

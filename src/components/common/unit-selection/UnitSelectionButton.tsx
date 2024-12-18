@@ -61,24 +61,25 @@ export function UnitSelectionButton({
         <Stack direction="column" alignItems="start" flexGrow={1}>
           <Stack direction="row" alignItems="center" sx={{ width: "100%" }}>
             <Box flexGrow={1}>
-              <Typography sx={{ pl: 0.5 }} variant="h6" fontWeight="bolder">
-                {unit.name}
-              </Typography>
-              <Typography sx={{ pl: 0.5, pb: 0.5 }}>
+              <Typography sx={{ pl: 0.5 }} variant="body1">
+                <strong>{unit.name}</strong>
+                <br />
                 Points: {points}
               </Typography>
-              <Stack direction="row" gap={1}>
-                {unit.unit_type !== "Warrior" && (
-                  <Chip
-                    label={unit.unit_type}
-                    size="small"
-                    sx={{
-                      backgroundColor: "black",
-                      color: "white",
-                      fontWeight: "bold",
-                    }}
-                  />
-                )}
+              <Stack gap={0.5}>
+                <Box>
+                  {unit.unit_type !== "Warrior" && (
+                    <Chip
+                      label={unit.unit_type}
+                      size="small"
+                      sx={{
+                        backgroundColor: "black",
+                        color: "white",
+                        fontWeight: "bold",
+                      }}
+                    />
+                  )}
+                </Box>
                 <MwfBadge unit={unit} />
               </Stack>
             </Box>

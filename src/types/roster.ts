@@ -39,6 +39,7 @@ export type Roster = {
   name: string;
   armyList: string;
   warbands: Warband[];
+  group?: string;
   metadata: {
     leader: string | null;
     leaderCompulsory?: boolean;
