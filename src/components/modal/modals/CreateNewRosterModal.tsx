@@ -13,7 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { v4 as randomUuid } from "uuid";
 import data from "../../../assets/data/mesbg_data.json";
 import models from "../../../assets/data/mesbg_data.json";
@@ -54,6 +54,9 @@ export const CreateNewRosterModal = () => {
   const navigate = useNavigate();
   const { importJsonRoster } = useExport();
   const calculator = useCalculator();
+  const { groupId } = useParams();
+
+  console.log(groupId);
 
   const existingRosterIds = rosters.map(({ id }) => id);
 
@@ -132,6 +135,7 @@ export const CreateNewRosterModal = () => {
       const newRoster = validateAndAdjustForCompulsoryRules({
         ...emptyRoster,
         id: id,
+        group: groupId,
         name: rosterNameValue,
         armyList: armyList.title,
       });
