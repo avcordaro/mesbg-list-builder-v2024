@@ -79,7 +79,7 @@ export const useRosterInformation = (): RosterInformationFunctions => {
       return {
         ...roster.metadata,
         bows: roster.metadata.bows - knights,
-        bowLimit: roster.metadata.bows - knights,
+        bowLimit: roster.metadata.bowLimit - knights,
       };
     }
 

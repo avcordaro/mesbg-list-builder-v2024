@@ -1,5 +1,331 @@
 {
   "Arnor & Angmar": {
+    "Aldrac, Warlord of Carn Dum": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "5",
+      "D": "6",
+      "A": "3",
+      "W": "3",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Warlord of Carn Dum",
+          "type": "Passive",
+          "description": "Friendly Carn Dum models within 6\" of Aldrac must re-roll failed Courage Tests."
+        },
+        {
+          "name": "Battle Frenzy",
+          "type": "Active",
+          "description": "If Aldrac slays an enemy model that he was Engaged in Combat with, then in the following turn Aldrac may declare a Heroic Combat for free."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Mighty Blow"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Angmar Orc Captain": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "5+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Angmar Orc Shaman": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Wither",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "spear"
+      ]
+    },
+    "Angmar Orc Warrior": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Angmar Warg Rider": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "Warg"
+      ]
+    },
+    "Aranarth": {
+      "Mv": "6\"",
+      "Fv": "5/3+",
+      "Sv": "4",
+      "S": "5",
+      "D": "2",
+      "A": "2",
+      "W": "2",
+      "C": "5",
+      "I": "",
+      "active_or_passive_rules": [
+        {
+          "name": "Remnants of Arnor",
+          "type": "Passive",
+          "description": "Friendly Dunedain models treat Aranarth as a banner. Additionally, all Dunedain models in the same Army List as Aranarth gain the Arnor Keyword."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Expert Shot",
+        "Hatred (Angmar)",
+        "Sharpshooter"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Arathorn, Chieftain of the Dunedain": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Chieftain of the Dunedain",
+          "type": "Active",
+          "description": "Friendly Dunedain Hero models may benefit from Arathorn's Stand Fast."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Argadir": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Expert Rider",
+        "Hatred (Angmar)",
+        "Master of Battle (5+)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield",
+        "war spear",
+        "Horse"
+      ]
+    },
+    "Arvedui, Last King of Arnor": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "The King in the North",
+          "type": "Active",
+          "description": "The range of Arvedui's Stand Fast is 12\", rather than 6\""
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Strength",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Hatred (Angmar)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon"
+      ]
+    },
+    "Barrow-wight": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "7",
+      "A": "1",
+      "W": "2",
+      "C": "4+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Paralyse",
+          "range": "6\"",
+          "cast": "3+"
+        }
+      ],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror",
+        "Blades of the Dead",
+        "Spectral Walk"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon"
+      ]
+    },
+    "Buhrdur, Hill Troll Chieftain": {
+      "Mv": "6\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "7",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Lead by Example",
+          "type": "Active",
+          "description": "If Buhrdur slays an enemy Hero or Monster in Combat, then for the rest of the game other friendly Orc or Troll models treat Buhrdur as a banner. If Buhrdur has slain 3 or more enemy Hero or Monster models, then for the rest of the game other friendly Orc or Troll models treat Buhrdur as a banner with a range of 6\" instead."
+        },
+        {
+          "name": "Brutish Cunning",
+          "type": "Active",
+          "description": "This model may re-roll a single D6 in a Duel Roll when fighting solely against Infantry models (but not Monster models)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Strength",
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Dominant (4)",
+        "General Hunter",
+        "Terror",
+        "Throw Stones (range 12\", Strength 8)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
     "Captain of Arnor": {
       "Mv": "6\"",
       "Fv": "5",
@@ -22,6 +348,259 @@
         "Heavy armour",
         "hand weapon",
         "shield"
+      ]
+    },
+    "Captain of Carn Dum": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Glory Seekers",
+          "type": "Active",
+          "description": "If this model is Engaged in Combat with an enemy Hero, then this model gains a bonus of +1 To Wound that Hero when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Earnur, Last King of Gondor": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "4+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "A Fool's Challenge",
+          "type": "Active",
+          "description": "Earnur must always Charge an enemy Hero if he able to do so when he Activates. Additionally, he may never decline a Heroic Challenge under any circumstances."
+        },
+        {
+          "name": "Master Duellist",
+          "type": "Active",
+          "description": "At the start of a Combat involving Earnur, before Heroic Strikes are resolved, Earnur may increase his Fight value to match that of a single enemy he is Engaged in Combat with. Additionally, Earnur can never have his Fight Value modified by enemy special rules or Magical Powers."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike",
+        "Heroic Challenge"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Fraecht, Vassal of the Witch-king": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Incantations of Power",
+          "type": "Active",
+          "description": "After rolling for Priority, Fraecht can spend a point of Will to have one of the following incantations take effect for the rest of the turn.\nStrength - Friendly Carn Dum models within 6\" of Fraecht must re-roll To Wound rolls of a natural 1 when making Strikes.\nEndurance - Whenever a Friendly Carn Dum model within 6\" of Fraecht suffers a Wound, roll a D6. On a 5+, that Wound is ignored.\nSwiftness - Friendly Carn Dum models that start their move within 6\" of Fraecht are not slowed by difficult terrain (except for water features)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "hand-and-a-half weapon"
+      ]
+    },
+    "Glorfindel, Lord of the West": {
+      "Mv": "6\"",
+      "Fv": "8",
+      "Sv": "3+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "3+",
+      "I": "3+",
+      "active_or_passive_rules": [
+        {
+          "name": "Armour of Gondolin",
+          "type": "Active",
+          "description": "Whilst Glorfindel is wearing the Armour of Gondolin, enemy Monster models Engaged in Combat with him cannot use Brutal Power Attacks."
+        },
+        {
+          "name": "Hero of the Elves",
+          "type": "Active",
+          "description": "Glorfindel gains a bonus of +1 To Wound when making Strikes against Monster models."
+        },
+        {
+          "name": "Lord of the West",
+          "type": "Active",
+          "description": "This model may re-roll a single D6 when making a Duel Roll. Additionally, they may re-roll a single D6 when rolling To Wound when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Challenge",
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Elven hand-and-a-half weapon",
+        "Armour of Gondolin"
+      ]
+    },
+    "Gulavhar, The Terror of Arnor": {
+      "Mv": "6\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "8",
+      "D": "5",
+      "A": "*",
+      "W": "4",
+      "C": "6+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Strength of Body, Strength of Will",
+          "type": "Passive",
+          "description": "Gulavhar's Attacks are always equal to its remaining Wounds. Additionally, for each Wound Gulavhar has lost, worsen Gulavhar's Courage value by 1 (this will improve again should Gulavhar regain a lost Wound via the Immortal Hunger special rule below)."
+        },
+        {
+          "name": "Immortal Hunger",
+          "type": "Active",
+          "description": "Each time Gulavhar slays a model in Combat, it regains a single Wound lost earlier in the battle. These Wounds are regained at the end of the Combat. Gulavhar can only regain Wounds in this way by making Strikes, never by using a Brutal Power Attack."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Dominant (5)",
+        "Fly",
+        "Harbinger of Evil (12\")",
+        "Large Target",
+        "Monstrous Charge",
+        "Resistant to Magic",
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Halbarad": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Banner of Arwen Evenstar",
+          "type": "Passive",
+          "option_dependency": "Banner of Arwen Evenstar",
+          "description": "This is a banner with a range of 6\" rather than 3\", and Halbarad never suffers the -1 penalty to his Duel Rolls for carrying a banner. Additionally, friendly models within 6\" and Line of Sight of the Banner of Arwen Evenstar automatically pass any Courage Tests they are required to take."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Hill Troll": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "6",
+      "D": "6",
+      "A": "3",
+      "W": "3",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Brutish Cunning",
+          "type": "Active",
+          "description": "This model may re-roll a single D6 in a Duel Roll when fighting solely against Infantry models (but not Monster models)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (3)",
+        "Terror",
+        "Throw Stones (range 12\", Strength 8)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Hobbit Archer": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "short bow"
       ]
     },
     "Knight of Arnor": {
@@ -48,6 +627,64 @@
         "Horse"
       ]
     },
+    "Malbeth the Seer": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Gift of Foresight",
+          "type": "Active",
+          "description": "Every time a friendly Arnor model suffers a Wound within 6\" and Line of Sight of Malbeth, roll a D6. On a 5+, the Wound is prevented. If failed, Hero models may still use Fate points as normal."
+        },
+        {
+          "name": "Foresight of the Eldar",
+          "type": "Active",
+          "description": "At the start of the game, before either side deploys, roll a D6 and make a note of the result - this is the number of Foresight Points that Malbeth has for the battle. During the roll for Priority, so long as he is alive and on the battlefield, Malbeth can spend these Foresight Points to increase the roll on his controlling player's roll for Priority. For each Foresight Point spent, increase the dice roll by 1, to a maximum of 6."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Nazthak, Orc Captain": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "5+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Scavenge",
+          "type": "Active",
+          "description": "Whenever Nazthak slays an enemy model in Combat (with the exception of Monster models), he may choose to scavenge a single piece of wargear carried by that model, with the exception of a Mount, another type of armour, living creatures, the One Ring, or items of wargear that are integral to the model (such as claws and teeth). This will happen before any effects that allow the slain model to pass on that piece of wargear. Add the scavenged item to Nazthak's list of wargear. Nazthak will benefit from the scavenged wargear as if he was the original model. Nazthak may choose to discard any piece of scavenged wargear at any time, though if he does so then he cannot reclaim it - it is lost."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
     "Ranger of Arnor": {
       "Mv": "6\"",
       "Fv": "4",
@@ -68,6 +705,125 @@
         "Armour",
         "hand weapon",
         "bow"
+      ]
+    },
+    "Ranger of the North": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "bow"
+      ]
+    },
+    "Shade": {
+      "Mv": "6\"",
+      "Fv": "1",
+      "Sv": "6+",
+      "S": "1",
+      "D": "8",
+      "A": "2",
+      "W": "3",
+      "C": "5+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Conduit of Angmar",
+          "type": "Passive",
+          "description": "If a Ringwraith model is within 6\" of a friendly Shade, they may use the Shade to determine range and Line of Sight for a Magical Power. Additionally, after making a Casting Roll within 6\" of a friendly Shade, a Ringwraith can choose to deal a single Wound to the Shade to add 1 to the Casting Roll."
+        },
+        {
+          "name": "Swirling Mists",
+          "type": "Active",
+          "description": "At the start of the Shoot Phase, before the Declare Heroic Actions step, a Shade may spend a Will Point to use this ability. If it does, then for the remainder of the turn, enemy models will suffer a -1 penalty To Hit when making a shooting attack that targets a friendly model within 6\" of the Shade. If the enemy model making the shooting attack is also within 12\" of the Shade, they will suffer a -2 penalty To Hit instead"
+        },
+        {
+          "name": "Ghostly Resolve",
+          "type": "Passive",
+          "description": "Friendly Angmar Orc models within 12\" of one or more models with this special rule gain a bonus of +1 to any Courage Tests they are required to take."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (3)",
+        "Spectral Walk",
+        "Terror",
+        "Blades of the Dead"
+      ],
+      "wargear": [
+        "An amalgamation of grasping spectral hands (hand weapons)"
+      ]
+    },
+    "The Shadow of Rhudaur": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "3",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Herald of Doom",
+          "type": "Passive",
+          "description": "At the beginning of the game, after both sides have been deployed, choose one Hero model in your opponent's Army. Whilst the Shadow of Rhudaur is within 6\" of the chosen Hero, that Hero suffers a -1 penalty to their Fate Rolls and a -1 penalty to any Courage Tests they are required to take."
+        },
+        {
+          "name": "Powers of Angmar",
+          "type": "Active",
+          "description": "If the Shadow of Rhudaur rolls a natural 6 when making a Casting Roll, then the target model cannot spend Will Points to attempt to Resist the Magical Power."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Drain Courage",
+          "range": "6\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Fog of Disarray",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Curse",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Wither",
+          "range": "6\"",
+          "cast": "5+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Blades of the Dead",
+        "Terror",
+        "Spectral Walk"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon"
       ]
     },
     "Warrior of Arnor": {
@@ -91,6 +847,135 @@
         "hand weapon",
         "spear",
         "shield"
+      ]
+    },
+    "Warrior of Carn Dum": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Glory Seekers",
+          "type": "Active",
+          "description": "If this model is Engaged in Combat with an enemy Hero, then this model gains a bonus of +1 To Wound that Hero when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Werewolf": {
+      "Mv": "10\"",
+      "Fv": "5",
+      "Sv": "6+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Feral Charge",
+          "type": "Active",
+          "description": "When a Werewolf Charges an enemy Infantry model, they gain the Knock to the Ground bonus as if they were Cavalry. This bonus is lost if they are subsequently charged by an enemy Cavalry model."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Fell Sight",
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Wild Warg Chieftain (General)": {
+      "Mv": "10\"",
+      "Fv": "5",
+      "Sv": "5+",
+      "S": "6",
+      "D": "5",
+      "A": "3",
+      "W": "3",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Packlord",
+          "type": "Active",
+          "description": "Friendly models may not benefit from the Heroic Actions or Stand Fast of this model unless they have the Warg keyword."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Wild Warg Chieftain": {
+      "Mv": "10\"",
+      "Fv": "5",
+      "Sv": "5+",
+      "S": "6",
+      "D": "5",
+      "A": "3",
+      "W": "3",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Packlord",
+          "type": "Active",
+          "description": "Friendly models may not benefit from the Heroic Actions or Stand Fast of this model unless they have the Warg keyword."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Wild Warg": {
+      "Mv": "10\"",
+      "Fv": "3",
+      "Sv": "6+",
+      "S": "4",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
       ]
     }
   },
@@ -199,7 +1084,6 @@
         "If any member of Bard’s Family is slain, Bard must always Charge any enemy that killed one of his children if he able to do so for the rest of the game. If he is in range of multiple enemy targets that he must Charge, then the controlling player may choose one of them."
       ]
     },
-    
     "Lake-town Militia Captain": {
       "Mv": "6\"",
       "Fv": "3",
