@@ -58,7 +58,7 @@ export const StatTrackers = () => {
   };
 
   return (
-    <Box id="pdf-stat-trackers">
+    <Box id="pdf-stat-trackers" className="page-break">
       <Typography variant="h5">Might / Will / Fate trackers</Typography>
       <TableContainer component="div" sx={{ py: 1 }}>
         <Table>

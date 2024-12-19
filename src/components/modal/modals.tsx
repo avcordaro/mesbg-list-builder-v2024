@@ -14,7 +14,6 @@ import { ConfirmDeleteRosterModal } from "./modals/ConfirmDeleteRosterModal.tsx"
 import { CreateGameResultModal } from "./modals/CreateGameResultModal.tsx";
 import { CreateNewRosterGroupModal } from "./modals/CreateNewRosterGroupModal.tsx";
 import { CreateNewRosterModal } from "./modals/CreateNewRosterModal.tsx";
-import { DownloadPdfModal } from "./modals/DownloadPdfModal.tsx";
 import { DownloadProfileCardModal } from "./modals/DownloadProfileCardModal.tsx";
 import { EditRosterModal } from "./modals/EditRosterModal.tsx";
 import { ExportHistoryModal } from "./modals/ExportHistoryModal.tsx";
@@ -36,7 +35,6 @@ export enum ModalTypes {
   CREATE_GAME_RESULT = "CREATE_GAME_RESULT",
 
   DOWNLOAD_PROFILE_CARDS = "DOWNLOAD_PROFILE_CARDS",
-  DOWNLOAD_REFERENCE_PDF = "DOWNLOAD_REFERENCE_PDF",
   ROSTER_SUMMARY = "ROSTER_SUMMARY",
   ROSTER_SCREENSHOT = "ROSTER_SCREENSHOT",
 
@@ -116,15 +114,6 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <Download />,
       title: "Download all Profile Cards",
       children: <DownloadProfileCardModal />,
-      overflow: "none",
-    },
-  ],
-  [
-    ModalTypes.DOWNLOAD_REFERENCE_PDF,
-    {
-      icon: <Download />,
-      title: "Download PDF",
-      children: <DownloadPdfModal />,
       overflow: "none",
     },
   ],

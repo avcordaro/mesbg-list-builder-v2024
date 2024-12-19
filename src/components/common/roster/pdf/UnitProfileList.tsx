@@ -229,7 +229,7 @@ const ListItem = ({ profile }: { profile: Profile }) => {
 
 export const UnitProfileList = ({ units }: UnitListProps) => {
   return (
-    <Box id="pdf-profiles">
+    <Box id="pdf-profiles" className="page-break">
       <Typography variant="h5">Profiles</Typography>
       {units.map((unit, index) => (
         <Fragment key={index}>

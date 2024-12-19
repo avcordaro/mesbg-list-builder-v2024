@@ -37,7 +37,7 @@ export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
   return (
     <>
       {magicalPowers.length > 0 && (
-        <Box id="pdf-magic">
+        <Box id="pdf-magic" className="page-break">
           <Typography variant="h5">Magical Powers</Typography>
           <Stack gap={1} sx={{ py: 1 }}>
             {magicalPowers.map((rule) => (

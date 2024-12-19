@@ -30,7 +30,7 @@ export const App = () => {
 
   return (
     <Navigation>
-      <main style={{ position: "relative" }}>
+      <main>
         <Alerts />
         <ReactRouterOutlet />
       </main>

@@ -66,7 +66,7 @@ export const ArmyComposition = () => {
   const { break_point } = armyListData[roster.armyList];
 
   return (
-    <Box id="pdf-army">
+    <Box id="pdf-army" className="page-break">
       <Typography variant="h5" sx={{ mb: 2 }}>
         Army Composition
       </Typography>

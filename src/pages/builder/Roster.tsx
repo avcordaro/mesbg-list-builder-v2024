@@ -1,4 +1,11 @@
-import { Close, Download, History, Redo, Undo } from "@mui/icons-material";
+import {
+  Close,
+  Download,
+  History,
+  Print,
+  Redo,
+  Undo,
+} from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
 import ShareIcon from "@mui/icons-material/Share";
 import {
@@ -13,7 +20,7 @@ import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { RosterInformation } from "../../components/common/roster-info/RosterInformation.tsx";
 import { WarbandList } from "../../components/common/warbands/WarbandList.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
@@ -40,6 +47,7 @@ export const Roster = () => {
   const displayMobileToolbar = useUserPreferences(
     ({ preferences }) => preferences.mobileRosterToolbar,
   );
+  const navigate = useNavigate();
 
   const speedDialRef = useRef<HTMLDivElement | null>(null);
   const [fabOpen, setFabOpen] = useState(false);
@@ -113,9 +121,9 @@ export const Roster = () => {
       disabled: roster.metadata.units === 0,
     },
     {
-      icon: <Download />,
-      name: "Download Printable PDF",
-      callback: () => setCurrentModal(ModalTypes.DOWNLOAD_REFERENCE_PDF),
+      icon: <Print />,
+      name: "Open Printable PDF view",
+      callback: () => navigate(`/roster/${id}/pdf-printable`),
       disabled: roster.metadata.units === 0,
     },
     {

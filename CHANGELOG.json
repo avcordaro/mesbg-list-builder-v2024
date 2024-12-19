@@ -4,6 +4,9 @@
       "Added in red overlay on follower cards when a hero is reselected which would make the follower selection invalid",
       "Readded the drag and drop utilities in roster builder allowing you to sort your models and move them between warbands"
     ],
+    "changed": [
+      "Removed the old jspdf library used to generate the PDF export and make use of the browser print settings to ensure we get the best PDF layout"
+    ],
     "bugfixes": [
       "Fix the incorrect point display for The Three Trolls on the Mobile Toolbar, PDF and roster sharing tables",
       "Hide army list option for the The Three Trolls in the PDF if they are not selected",

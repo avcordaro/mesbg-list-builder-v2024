@@ -83,7 +83,7 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
 
   return (
     <>
-      <Box id="pdf-rules">
+      <Box id="pdf-rules" className="page-break">
         <Box sx={{ mb: 2 }}>
           <Typography variant="h5" sx={{ mb: 1 }}>
             Army special rules

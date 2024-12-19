@@ -1,4 +1,5 @@
 import { RouteObject } from "react-router-dom";
+import { PdfView } from "../components/common/roster/PdfView.tsx";
 import { AppFallback } from "../components/error-boundary/AppFallback.tsx";
 import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
@@ -34,6 +35,11 @@ export const routes: RouteObject[] = [
       {
         path: "roster/:id/gamemode",
         element: <Gamemode />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "roster/:id/pdf-printable",
+        element: <PdfView />,
         errorElement: <AppFallback />,
       },
       {

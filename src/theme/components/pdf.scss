@@ -1,0 +1,33 @@
+/* Hide all content except the specific sections AND fix the page margins */
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  @page {
+    margin: 0 10mm 10mm;
+  }
+  @page :first {
+    margin-top: 10mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+  .print-section {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .print-section * {
+    visibility: visible;
+    .page-break {
+      page-break-after: always;
+    }
+  }
+}

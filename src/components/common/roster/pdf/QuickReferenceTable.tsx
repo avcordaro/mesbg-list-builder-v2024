@@ -137,7 +137,7 @@ export const QuickReferenceTable = ({ profiles }: QuickReferenceTableProps) => {
 
   return (
     <>
-      <TableContainer id="pdf-quick-ref" component="div">
+      <TableContainer id="pdf-quick-ref" component="div" className="page-break">
         <Typography variant="h5">Quick reference sheet</Typography>
         <Table>
           <TableHead>
