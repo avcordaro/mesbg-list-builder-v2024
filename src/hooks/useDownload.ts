@@ -58,14 +58,10 @@ export const useDownload = () => {
 
     const zip = new JSZip();
     for (const card of finalProfileCards) {
-      const blob = await fetch(
-        "assets/images/profiles/" +
-          card.split("|")[0] +
-          /cards/ +
-          card.split("|")[1] +
-          ".jpg",
-      ).then((res) => res.blob());
-      zip.file(card.split("|")[1] + ".jpg", blob, { binary: true });
+      const [origin, profile] = card.split("|");
+      const cardUrl = `${RESOURCES_URL}/images/profiles/${encodeURIComponent(origin)}/cards/${encodeURIComponent(profile)}.jpg`;
+      const blob = await fetch(cardUrl).then((res) => res.blob());
+      zip.file(profile + ".jpg", blob, { binary: true });
     }
     zip.generateAsync({ type: "blob" }).then((blob) => {
       const ts = new Date();
