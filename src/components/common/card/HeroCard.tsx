@@ -19,6 +19,7 @@ import { MwfBadge } from "../might-will-fate/MwfBadge.tsx";
 import { OptionList } from "../option/OptionList.tsx";
 import { UnitTypeLabel } from "../unit-type/UnitTypeLabel.tsx";
 import { CardActionButtons } from "./CardActionButtons.tsx";
+import { invalidUnitSelectionBackgroundTint } from "./WarriorCard.tsx";
 
 export type HeroCardProps = {
   unit: SelectedUnit;
@@ -129,7 +130,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: "rgba(255, 0,0, 0.2)",
+                background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
               },
             }
@@ -238,7 +239,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: "rgba(255, 0,0, 0.2)",
+                background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
               },
             }
