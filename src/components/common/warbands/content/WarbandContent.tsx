@@ -1,5 +1,7 @@
+import { Draggable, Droppable } from "@hello-pangea/dnd";
 import AddIcon from "@mui/icons-material/Add";
-import Button from "@mui/material/Button";
+import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
@@ -92,52 +94,110 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
         />
       )}
 
-      {units.map((unit, index) => {
-        if (!isSelectedUnit(unit)) {
-          return (
-            <SelectUnitCardButton
-              key={unit.id}
-              title="Select a unit"
-              onClick={() => openUnitPicker(unit.id)}
-              warbandNum={warbandNum}
-              remove={() => mutations.removeUnit(unit.id)}
-              index={index + 1} // +1 offset for the warband captain.
-              collapsed={collapsed}
-            />
-          );
-        }
-
-        return unit.unit_type.includes("Hero") ? (
-          <HeroCard
-            key={unit.id}
-            unit={unit}
-            followerOf={hero?.model_id}
-            warbandId={warbandId}
-            warbandNum={warbandNum}
-            index={index + 1} // +1 offset for the warband captain.
-            updateUnit={mutations.updateUnit}
-            openProfileCard={() => openProfileCard(unit)}
-            reselect={() => openUnitPicker(unit.id)}
-            remove={() => mutations.removeUnit(unit.id)}
-            collapsed={collapsed}
-          />
-        ) : (
-          <WarriorCard
-            key={unit.id}
-            unit={unit}
-            followerOf={hero?.model_id}
-            warbandId={warbandId}
-            warbandNum={warbandNum}
-            index={index + 1} // +1 offset for the warband captain.
-            openProfileCard={() => openProfileCard(unit)}
-            updateUnit={(updatedUnit) => mutations.updateUnit(updatedUnit)}
-            duplicate={() => mutations.duplicateUnit(unit.id)}
-            remove={() => mutations.removeUnit(unit.id)}
-            reselect={() => openUnitPicker(unit.id)}
-            collapsed={collapsed}
-          />
-        );
-      })}
+      <Droppable
+        droppableId={warbandId}
+        isDropDisabled={!hero || !isHeroWhoLeads(hero)}
+      >
+        {(droppable, droppableSnapshot) => (
+          <Stack
+            ref={droppable.innerRef}
+            {...droppable.droppableProps}
+            spacing={1}
+            sx={
+              droppableSnapshot.isDraggingOver
+                ? {
+                    backgroundColor: "#FFFFFF33",
+                    border: "1px dashed white",
+                    p: 1,
+                    transition: "padding 0.3s ease",
+                  }
+                : {
+                    transition: "padding 0.3s ease",
+                  }
+            }
+          >
+            {units.map((unit, index) => (
+              <Draggable key={index} draggableId={unit.id} index={index}>
+                {(draggable, draggableSnapshot) => (
+                  <Box
+                    ref={draggable.innerRef}
+                    {...draggable.draggableProps}
+                    {...draggable.dragHandleProps}
+                    data-scroll-id={unit.id}
+                  >
+                    <Box
+                      sx={[
+                        { transition: "padding 0.3s ease" },
+                        draggableSnapshot.isDragging ? { p: 3 } : {},
+                      ]}
+                    >
+                      <Box
+                        sx={
+                          draggableSnapshot.isDragging
+                            ? {
+                                transform: "rotate(1.5deg)",
+                                boxShadow: "1rem 1rem 1rem #00000099",
+                                transition:
+                                  "transform 0.3s ease, boxShadow 0.3s ease",
+                              }
+                            : {
+                                transition:
+                                  "transform 0.3s ease, boxShadow 0.3s ease",
+                              }
+                        }
+                      >
+                        {!isSelectedUnit(unit) ? (
+                          <SelectUnitCardButton
+                            key={unit.id}
+                            title="Select a unit"
+                            onClick={() => openUnitPicker(unit.id)}
+                            warbandNum={warbandNum}
+                            remove={() => mutations.removeUnit(unit.id)}
+                            index={index + 1} // +1 offset for the warband captain.
+                            collapsed={collapsed}
+                          />
+                        ) : unit.unit_type.includes("Hero") ? (
+                          <HeroCard
+                            key={unit.id}
+                            unit={unit}
+                            followerOf={hero?.model_id}
+                            warbandId={warbandId}
+                            warbandNum={warbandNum}
+                            index={index + 1} // +1 offset for the warband captain.
+                            updateUnit={mutations.updateUnit}
+                            openProfileCard={() => openProfileCard(unit)}
+                            reselect={() => openUnitPicker(unit.id)}
+                            remove={() => mutations.removeUnit(unit.id)}
+                            collapsed={collapsed}
+                          />
+                        ) : (
+                          <WarriorCard
+                            key={unit.id}
+                            unit={unit}
+                            followerOf={hero?.model_id}
+                            warbandId={warbandId}
+                            warbandNum={warbandNum}
+                            index={index + 1} // +1 offset for the warband captain.
+                            openProfileCard={() => openProfileCard(unit)}
+                            updateUnit={(updatedUnit) =>
+                              mutations.updateUnit(updatedUnit)
+                            }
+                            duplicate={() => mutations.duplicateUnit(unit.id)}
+                            remove={() => mutations.removeUnit(unit.id)}
+                            reselect={() => openUnitPicker(unit.id)}
+                            collapsed={collapsed}
+                          />
+                        )}
+                      </Box>
+                    </Box>
+                  </Box>
+                )}
+              </Draggable>
+            ))}
+            {droppable.placeholder}
+          </Stack>
+        )}
+      </Droppable>
 
       {hero && isHeroWhoLeads(hero) && (
         <Button
