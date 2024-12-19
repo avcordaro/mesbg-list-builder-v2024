@@ -111,6 +111,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
           <HeroCard
             key={unit.id}
             unit={unit}
+            followerOf={hero?.model_id}
             warbandId={warbandId}
             warbandNum={warbandNum}
             index={index + 1} // +1 offset for the warband captain.
@@ -124,6 +125,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
           <WarriorCard
             key={unit.id}
             unit={unit}
+            followerOf={hero?.model_id}
             warbandId={warbandId}
             warbandNum={warbandNum}
             index={index + 1} // +1 offset for the warband captain.

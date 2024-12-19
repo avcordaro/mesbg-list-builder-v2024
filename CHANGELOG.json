@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added in red overlay on follower cards when a hero is reselected which would make the follower selection invalid."
+    ],
     "bugfixes": [
       "Fix the incorrect point display for The Three Trolls on the Mobile Toolbar, PDF and roster sharing tables",
       "Hide army list option for the The Three Trolls in the PDF if they are not selected",

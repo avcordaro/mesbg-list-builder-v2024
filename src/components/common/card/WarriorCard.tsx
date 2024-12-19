@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
+import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
@@ -80,6 +81,7 @@ const QuantityButtons: FunctionComponent<QuantityButtonsProps> = ({
 
 export type WarriorCardProps = {
   unit: SelectedUnit;
+  followerOf?: string;
   warbandId: string;
   warbandNum: number;
   index: number;
@@ -93,6 +95,7 @@ export type WarriorCardProps = {
 
 export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   unit,
+  followerOf,
   warbandId,
   warbandNum,
   index,
@@ -106,6 +109,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
+
+  console.log(followerOf);
+
+  const valid =
+    followerOf === null ||
+    heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
 
   function updateQuantity(value: number) {
     console.debug("Update warrior quantity.", { value });
@@ -152,9 +161,27 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
 
   return screen.isMobile ? (
     <Card
-      sx={{
-        p: 1.5,
-      }}
+      sx={[
+        {
+          p: 1.5,
+          position: "relative",
+          zIndex: 0,
+        },
+        !valid
+          ? {
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "rgba(255, 0,0, 0.2)",
+                zIndex: 1,
+              },
+            }
+          : {},
+      ]}
       elevation={2}
     >
       <Stack direction="row" gap={2} alignItems="center">
@@ -222,11 +249,29 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
     </Card>
   ) : (
     <Card
-      sx={{
-        p: collapsed ? 0.25 : 1.5,
-        pr: collapsed ? 1 : 1.5,
-        transition: "padding 0.5s",
-      }}
+      sx={[
+        {
+          p: collapsed ? 0.25 : 1.5,
+          pr: collapsed ? 1 : 1.5,
+          position: "relative",
+          zIndex: 0,
+          transition: "padding 0.5s",
+        },
+        !valid
+          ? {
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "rgba(255, 0,0, 0.2)",
+                zIndex: 1,
+              },
+            }
+          : {},
+      ]}
       elevation={2}
     >
       <Stack direction="row" gap={2}>

@@ -4,6 +4,7 @@ import Collapse from "@mui/material/Collapse";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
+import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
 import { useMwfMutations } from "../../../hooks/useMwfMutations.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
@@ -21,6 +22,7 @@ import { CardActionButtons } from "./CardActionButtons.tsx";
 
 export type HeroCardProps = {
   unit: SelectedUnit;
+  followerOf?: string;
   warbandId: string;
   warbandNum: number;
   index: number;
@@ -35,6 +37,7 @@ export type HeroCardProps = {
 
 export const HeroCard: FunctionComponent<HeroCardProps> = ({
   unit,
+  followerOf,
   warbandId,
   warbandNum,
   index,
@@ -51,6 +54,10 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { roster, getSetOfModelIds } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
+
+  const valid =
+    !followerOf ||
+    heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
 
   const selectedOptions = unit.options
     .filter((option) => option.included !== true)
@@ -111,7 +118,23 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
 
   return screen.isMobile ? (
     <Card
-      sx={{ p: 0.5 }}
+      sx={[
+        { p: 0.5, position: "relative", zIndex: 0 },
+        !valid
+          ? {
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "rgba(255, 0,0, 0.2)",
+                zIndex: 1,
+              },
+            }
+          : {},
+      ]}
       elevation={2}
       data-test-id={`unit-card--w${warbandNum}-i${index}`}
       data-test-unit-name={`unit-card--${slugify(unit.name)}`}
@@ -204,7 +227,23 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
     </Card>
   ) : (
     <Card
-      sx={{ p: 0.5 }}
+      sx={[
+        { p: 0.5, position: "relative", zIndex: 0 },
+        !valid
+          ? {
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "rgba(255, 0,0, 0.2)",
+                zIndex: 1,
+              },
+            }
+          : {},
+      ]}
       elevation={2}
       data-test-id={`unit-card--w${warbandNum}-i${index}`}
       data-test-unit-name={`unit-card--${slugify(unit.name)}`}

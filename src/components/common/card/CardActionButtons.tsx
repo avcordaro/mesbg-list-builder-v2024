@@ -28,7 +28,7 @@ export const CardActionButtons: FunctionComponent<CardActionButtonsProps> = ({
 }) => {
   const { palette } = useTheme();
   return (
-    <Box>
+    <Box sx={{ zIndex: 2 }}>
       <Stack direction="row" gap={2}>
         <SquareIconButton
           icon={<BsFillPersonVcardFill />}
