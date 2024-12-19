@@ -600,7 +600,7 @@
     "description":"<b>Duration<\/b>: Temporary\n\nThis Magical Power targets the caster. Place a 25mm Vine Marker wholly within 3\" of the caster. Enemy models entering the area within 3\" of the Vine Marker are treated as Difficult Terrain. Remove the Vine Marker during the End Phase."
   },
   {
-    "name":"Your Staff Is Broken",
+    "name":"Your Staff is Broken",
     "type":"magical_power",
     "active_passive":null,
     "description":"<b>Duration<\/b>: Instant\n\nThis Magical Power targets one enemy model that has a Staff of Power within range. The target's Staff of Power is immediately destroyed - remove it from their wargear."
