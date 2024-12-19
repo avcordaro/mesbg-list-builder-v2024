@@ -83,6 +83,15 @@ export const useRosterInformation = (): RosterInformationFunctions => {
       };
     }
 
+    if (roster.armyList === "The Three Trolls") {
+      return {
+        ...roster.metadata,
+        points:
+          roster.metadata.points +
+          (roster.metadata.tttSpecialUpgrades?.length * 50 || 0),
+      };
+    }
+
     return roster.metadata;
   }
 

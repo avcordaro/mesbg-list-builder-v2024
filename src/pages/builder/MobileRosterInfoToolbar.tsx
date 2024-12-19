@@ -46,7 +46,7 @@ export const MobileRosterInfoToolbar = () => {
             zIndex: "100",
           }}
         >
-          <Stack direction="row" gap={2} flexWrap="wrap" sx={{ m: "auto" }}>
+          <Stack direction="row" gap={1} flexWrap="wrap" sx={{ m: "auto" }}>
             <Typography>
               Points: <b>{metadata.points}</b>
             </Typography>
@@ -57,8 +57,8 @@ export const MobileRosterInfoToolbar = () => {
               color={metadata.bows > bowLimit ? "warning" : "inherit"}
             >
               Bows:{" "}
-              <b>
-                {metadata.bows} / {bowLimit}
+              <b style={{ display: "inline-flex", gap: "2px" }}>
+                <span>{metadata.bows}</span>/<span>{bowLimit}</span>{" "}
               </b>
             </Typography>
             <Typography
@@ -66,9 +66,10 @@ export const MobileRosterInfoToolbar = () => {
                 metadata.throwingWeapons > throwLimit ? "warning" : "inherit"
               }
             >
-              Throwing W:{" "}
-              <b>
-                {metadata.throwingWeapons} / {throwLimit}
+              Throw.:{" "}
+              <b style={{ display: "inline-flex", gap: "2px" }}>
+                <span>{metadata.throwingWeapons}</span>/
+                <span>{throwLimit}</span>
               </b>
             </Typography>
           </Stack>

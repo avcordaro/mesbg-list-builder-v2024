@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
+import { armyListData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import {
   FreshUnit,
@@ -53,34 +54,59 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
 }
 
 export const ArmyComposition = () => {
-  const { roster } = useRosterInformation();
+  const { roster, getAdjustedMetaData } = useRosterInformation();
 
   const warbands = roster.warbands.map((warband) => [
     warband.hero,
     ...warband.units.filter(isSelectedUnit),
   ]);
 
+  const { might, units, points, bows, throwingWeapons, will, fate } =
+    getAdjustedMetaData();
+  const { break_point } = armyListData[roster.armyList];
+
   return (
     <Box id="pdf-army">
       <Typography variant="h5" sx={{ mb: 2 }}>
         Army Composition
       </Typography>
-      <Stack direction="row" gap={2} sx={{ mb: 1 }}>
+      <Stack
+        direction="row"
+        gap={2}
+        sx={{ mb: 1 }}
+        justifyContent="space-between"
+      >
         <Typography>
-          Points: <b>{roster.metadata.points}</b>
+          Points: <b>{points}</b>
         </Typography>
         <Typography>
-          Units: <b>{roster.metadata.units}</b>
+          Units: <b>{units}</b>
         </Typography>
+        <Typography>
+          Bows: <b>{bows}</b>
+        </Typography>{" "}
+        <Typography>
+          Throwing weapons: <b>{throwingWeapons}</b>
+        </Typography>
+        <Typography>
+          Might / Will / Fate:{" "}
+          <b>
+            {might} / {will} / {fate}
+          </b>
+        </Typography>
+      </Stack>{" "}
+      <Stack
+        direction="row"
+        gap={2}
+        sx={{ mb: 1 }}
+        justifyContent="space-around"
+      >
         <Typography>
           Break Point:{" "}
-          <b>{Math.round(0.5 * roster.metadata.units * 100) / 100}</b>
+          <b>{Math.floor((break_point ?? 0.5) * units)} Remaining</b>
         </Typography>
         <Typography>
-          Bows: <b>{roster.metadata.bows}</b>
-        </Typography>
-        <Typography>
-          Might: <b>{roster.metadata.might}</b>
+          Quartered: <b>{Math.floor(0.25 * units)} Remaining</b>
         </Typography>
       </Stack>
       <TableContainer component="div">
