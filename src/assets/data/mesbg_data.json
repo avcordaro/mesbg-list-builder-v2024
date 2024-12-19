@@ -13896,7 +13896,6 @@
     "name": "Dwarf King",
     "unit_type": "Hero of Valour",
     "base_points": 85,
-    "unique": true,
     "siege_crew": 0,
     "MWFW": [
       [
@@ -13915,7 +13914,6 @@
     "name": "Iron Hills Captain",
     "unit_type": "Hero of Fortitude",
     "base_points": 80,
-    "unique": true,
     "siege_crew": 0,
     "MWFW": [
       [
@@ -14023,7 +14021,6 @@
     "name": "Iron Hills Ballista",
     "unit_type": "Siege Engine",
     "base_points": 130,
-    "unique": true,
     "siege_crew": 3,
     "MWFW": [
       [

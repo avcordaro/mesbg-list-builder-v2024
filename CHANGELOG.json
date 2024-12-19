@@ -8,7 +8,8 @@
       "Fixed issue with duplicating warbands causing an error.",
       "Fixed an issue where Uruk-hai Scout options were mandatory in Muster of Isengard.",
       "Fixed an issue where the downloaded profile cards would not open.",
-      "Fixed special rules not being highlighted if they have a (x) specification like Hatred."
+      "Fixed special rules not being highlighted if they have a (x) specification like Hatred.",
+      "Fixed issue in Iron Hills where captains and ballistas could only be added once."
     ]
   },
   "1.1": {
