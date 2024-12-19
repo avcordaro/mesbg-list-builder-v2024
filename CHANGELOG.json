@@ -1,5 +1,11 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fix the incorrect point display for The Three Trolls on the Mobile Toolbar, PDF and roster sharing tables",
+      "Hide army list option for the The Three Trolls in the PDF if they are not selected",
+      "Update the MWF trackers and badge if the Full Bellies option is selected for The Three Trolls"
+    ]
+  },
   "1.0": {
     "removed": ["Removed the Work in Progress banner from the my rosters page"]
   },
