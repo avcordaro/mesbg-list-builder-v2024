@@ -1,12 +1,11 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import armyListRules from "../../../../assets/data/army_list_data.json";
 import keywords from "../../../../assets/data/keywords.json";
 
+import { armyListData } from "../../../../assets/data.ts";
 import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
-import { ArmyListData } from "../../../../types/army-list-data.types.ts";
 import { isMovieQuote } from "../../../../utils/string.ts";
 
 interface SpecialRuleListProps {
@@ -66,9 +65,9 @@ function mapAopRule(rule: {
 
 export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
   const {
-    roster: { armyList },
+    roster: { armyList, metadata },
   } = useRosterInformation();
-  const armyListRule = (armyListRules as ArmyListData)[armyList];
+  const armyListRules = armyListData[armyList];
 
   const specialRules: SpecialRule[] = profiles
     .flatMap((profile) => [
@@ -90,26 +89,44 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
             Army special rules
           </Typography>
           <Stack gap={1}>
-            {armyListRule.special_rules.map((rule, index) => (
-              <Box key={index}>
-                {isMovieQuote(rule.title) ? (
-                  <Typography>
-                    <b>
-                      <i>{rule.title}</i>
-                    </b>
-                  </Typography>
-                ) : (
-                  <Typography>
-                    <b>{rule.title}</b>
-                  </Typography>
-                )}
-                <Stack gap={0.5}>
-                  {rule.description.split("\n").map((paragraph, index) => (
-                    <Typography key={index}>{paragraph}</Typography>
-                  ))}
-                </Stack>
-              </Box>
-            ))}
+            {armyListRules.special_rules
+              .filter((rule) => {
+                if (armyList === "The Three Trolls") {
+                  return (
+                    rule.troll_purchase !== true ||
+                    (metadata.tttSpecialUpgrades &&
+                      metadata.tttSpecialUpgrades.includes(rule.title))
+                  );
+                }
+                return true;
+              })
+              .map((rule, index) => (
+                <Box
+                  key={index}
+                  component={rule.troll_purchase === true ? "ul" : "div"}
+                >
+                  {isMovieQuote(rule.title) ? (
+                    <Typography
+                      component={rule.troll_purchase === true ? "li" : "p"}
+                    >
+                      <b>
+                        <i>{rule.title}</i>
+                      </b>
+                    </Typography>
+                  ) : (
+                    <Typography
+                      component={rule.troll_purchase === true ? "li" : "p"}
+                    >
+                      <b>{rule.title}</b>
+                    </Typography>
+                  )}
+                  <Stack gap={0.5}>
+                    {rule.description.split("\n").map((paragraph, index) => (
+                      <Typography key={index}>{paragraph}</Typography>
+                    ))}
+                  </Stack>
+                </Box>
+              ))}
           </Stack>
         </Box>
 
