@@ -1,7 +1,10 @@
 name: Deploy App
 
 on:
-  workflow_dispatch: # Enables manual trigger
+  push:
+    tags:
+      - "v*" # Matches tags starting with "v", e.g., "v1.0.0"
+  workflow_dispatch: # Allows manual trigger of the workflow
 
 jobs:
   build-and-deploy:
