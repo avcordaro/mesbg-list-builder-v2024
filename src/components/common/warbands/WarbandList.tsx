@@ -1,5 +1,6 @@
-import { DragDropContext } from "@hello-pangea/dnd";
+import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import AddIcon from "@mui/icons-material/Add";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { createRef, FunctionComponent, useEffect, useRef } from "react";
@@ -41,14 +42,74 @@ export const WarbandList: FunctionComponent<WarbandListProps> = ({
         onDragEnd={sorting.onUnitDropped}
         onDragStart={sorting.onUnitStartedDragging}
       >
-        {warbands.map((warband, index) => (
-          <Warband
-            key={warband.id}
-            warband={warband}
-            ref={refs.current[index]}
-            collapseAll={collapseAll}
-          />
-        ))}
+        <Droppable droppableId="warbands" type="warband">
+          {(droppable, droppableSnapshot) => (
+            <Stack
+              gap={1}
+              ref={droppable.innerRef}
+              {...droppable.droppableProps}
+              sx={
+                droppableSnapshot.isDraggingOver
+                  ? {
+                      backgroundColor: "#00000033",
+                      border: "1px dashed black",
+                      p: 1,
+                      transition: "padding 0.3s ease",
+                    }
+                  : {
+                      transition: "padding 0.3s ease",
+                    }
+              }
+            >
+              {warbands.map((warband, index) => (
+                <Draggable
+                  draggableId={warband.id}
+                  index={index}
+                  key={warband.id}
+                >
+                  {(draggable, snapshot) => (
+                    <Box
+                      ref={draggable.innerRef}
+                      {...draggable.draggableProps}
+                      {...draggable.dragHandleProps}
+                    >
+                      <Box
+                        sx={[
+                          { transition: "padding 0.3s ease" },
+                          snapshot.isDragging ? { p: 3 } : {},
+                        ]}
+                      >
+                        <Box
+                          sx={
+                            snapshot.isDragging
+                              ? {
+                                  transform: "rotate(1.5deg)",
+                                  boxShadow: "1rem 1rem 1rem #00000099",
+                                  transition:
+                                    "transform 0.3s ease, boxShadow 0.3s ease",
+                                }
+                              : {
+                                  transition:
+                                    "transform 0.3s ease, boxShadow 0.3s ease",
+                                }
+                          }
+                        >
+                          <Warband
+                            key={warband.id}
+                            warband={warband}
+                            ref={refs.current[index]}
+                            collapseAll={collapseAll}
+                          />
+                        </Box>
+                      </Box>
+                    </Box>
+                  )}
+                </Draggable>
+              ))}
+              {droppable.placeholder}
+            </Stack>
+          )}
+        </Droppable>
       </DragDropContext>
 
       {canSupportMoreWarbands() && (

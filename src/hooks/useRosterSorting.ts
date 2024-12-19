@@ -15,6 +15,21 @@ export const useRosterSorting = () => {
     console.debug("Drag and drop result:", result);
     if (!result.destination) return;
 
+    if (result.type === "warband") {
+      const reorderedWarbands = moveItem(
+        roster.warbands,
+        result.source.index,
+        result.destination.index,
+      );
+      updateRoster({
+        ...roster,
+        warbands: reorderedWarbands.map((warband, index) => ({
+          ...warband,
+          meta: { ...warband.meta, num: index + 1 },
+        })),
+      });
+    }
+
     const srcId = result.source.droppableId;
     const dstId = result.destination.droppableId;
 

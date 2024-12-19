@@ -96,6 +96,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
 
       <Droppable
         droppableId={warbandId}
+        type="unit"
         isDropDisabled={!hero || !isHeroWhoLeads(hero)}
       >
         {(droppable, droppableSnapshot) => (

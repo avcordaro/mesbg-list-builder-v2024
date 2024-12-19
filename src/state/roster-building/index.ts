@@ -4,10 +4,9 @@ import { create, StoreApi, useStore } from "zustand";
 
 import { createJSONStorage, devtools, persist } from "zustand/middleware";
 import { builderSlice, BuilderState } from "./builder-selection";
-import { dragAndDropSlice, DragAndDropState } from "./drag-and-drop";
 import { rosterSlice, RosterState } from "./roster";
 
-export type RosterBuildingState = RosterState & BuilderState & DragAndDropState;
+export type RosterBuildingState = RosterState & BuilderState;
 
 export const useRosterBuildingState = create<
   RosterBuildingState,
@@ -23,7 +22,6 @@ export const useRosterBuildingState = create<
         (...args) => ({
           ...rosterSlice(...args),
           ...builderSlice(...args),
-          ...dragAndDropSlice(...args),
         }),
         {
           partialize: (state) => ({
