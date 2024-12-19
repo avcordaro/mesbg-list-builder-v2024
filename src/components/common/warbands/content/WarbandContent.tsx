@@ -117,7 +117,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
             }
           >
             {units.map((unit, index) => (
-              <Draggable key={index} draggableId={unit.id} index={index}>
+              <Draggable key={unit.id} draggableId={unit.id} index={index}>
                 {(draggable, draggableSnapshot) => (
                   <Box
                     ref={draggable.innerRef}
@@ -148,7 +148,6 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                       >
                         {!isSelectedUnit(unit) ? (
                           <SelectUnitCardButton
-                            key={unit.id}
                             title="Select a unit"
                             onClick={() => openUnitPicker(unit.id)}
                             warbandNum={warbandNum}
@@ -158,7 +157,6 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                           />
                         ) : unit.unit_type.includes("Hero") ? (
                           <HeroCard
-                            key={unit.id}
                             unit={unit}
                             followerOf={hero?.model_id}
                             warbandId={warbandId}
@@ -172,7 +170,6 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                           />
                         ) : (
                           <WarriorCard
-                            key={unit.id}
                             unit={unit}
                             followerOf={hero?.model_id}
                             warbandId={warbandId}

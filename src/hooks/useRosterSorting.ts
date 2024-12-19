@@ -3,6 +3,10 @@ import { useRosterBuildingState } from "../state/roster-building";
 import { moveItem, moveItemBetweenLists } from "../utils/array.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
+function byId(id: string) {
+  return (warband) => warband.id === id;
+}
+
 export const useRosterSorting = () => {
   const { roster } = useRosterInformation();
   const { updateRoster } = useRosterBuildingState();
@@ -11,12 +15,13 @@ export const useRosterSorting = () => {
     console.debug("Drag and drop result:", result);
     if (!result.destination) return;
 
-    if (result.source.droppableId === result.destination.droppableId) {
+    const srcId = result.source.droppableId;
+    const dstId = result.destination.droppableId;
+
+    if (srcId === dstId) {
       if (result.source.index === result.destination.index) return;
 
-      const warband = roster.warbands.find(
-        (warband) => warband.id === result.source.droppableId,
-      );
+      const warband = roster.warbands.find(byId(srcId));
       if (warband) {
         const reorderedWarband = moveItem(
           warband.units,
@@ -38,29 +43,25 @@ export const useRosterSorting = () => {
       return;
     }
 
-    const sourceWarband = roster.warbands.find(
-      (warband) => warband.id === result.source.droppableId,
-    );
-    const destinationWarband = roster.warbands.find(
-      (warband) => warband.id === result.destination.droppableId,
-    );
-    if (sourceWarband && destinationWarband) {
+    const srcWarband = roster.warbands.find(byId(srcId));
+    const dstWarband = roster.warbands.find(byId(dstId));
+    if (srcWarband && dstWarband) {
       const [reorderedSource, reorderedDestination] = moveItemBetweenLists(
-        sourceWarband.units,
+        srcWarband.units,
         result.source.index,
-        destinationWarband.units,
+        dstWarband.units,
         result.destination.index,
       );
 
       updateRoster({
         ...roster,
         warbands: roster.warbands.map((wb) =>
-          wb.id === sourceWarband.id
+          wb.id === srcWarband.id
             ? {
                 ...wb,
                 units: reorderedSource,
               }
-            : wb.id === destinationWarband.id
+            : wb.id === dstWarband.id
               ? {
                   ...wb,
                   units: reorderedDestination,
@@ -72,7 +73,7 @@ export const useRosterSorting = () => {
   }
 
   function onUnitStartedDragging(start: DragStart) {
-    console.debug("Drag and drop started:", start);
+    console.info("Drag and drop started:", start);
   }
 
   return {

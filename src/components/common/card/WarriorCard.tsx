@@ -111,8 +111,6 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
 
-  console.log(followerOf);
-
   const valid =
     followerOf === null ||
     heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
@@ -309,7 +307,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           >
             <Stack direction="row" alignItems="center" gap={1}>
               <Typography variant="h6" fontWeight="bold">
-                {unit.quantity ?? 1}x {unit.name}{" "}
+                {unit.quantity ?? 1}x {unit.name}
                 {collapsed && (
                   <span
                     style={{ fontWeight: "normal" }}
