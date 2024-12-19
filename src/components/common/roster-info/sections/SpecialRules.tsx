@@ -3,8 +3,14 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import armyListData from "../../../../assets/data/army_list_data.json";
+import { mesbgData } from "../../../../assets/data.ts";
 import { useRosterBuildingState } from "../../../../state/roster-building";
 import { ArmyListData } from "../../../../types/army-list-data.types.ts";
+import {
+  isSelectedUnit,
+  SelectedUnit,
+  Warband,
+} from "../../../../types/roster.ts";
 import { isMovieQuote } from "../../../../utils/string.ts";
 import { CustomSwitch } from "../../switch/CustomSwitch.tsx";
 import { RosterInformationProps } from "../RosterInformation.tsx";
@@ -20,8 +26,32 @@ export const SpecialRules: FunctionComponent<
   if (!armyListMetadata || armyListMetadata.special_rules.length === 0)
     return <></>;
 
+  function updateUnitMwf(hero: SelectedUnit, enabled: boolean): SelectedUnit {
+    const rawStats = mesbgData[hero.model_id];
+    const rawMWFW = rawStats.MWFW;
+    return {
+      ...hero,
+      MWFW: [[hero.name, enabled ? "3:3:3:3" : rawMWFW[0][1]]],
+    };
+  }
+
+  function updateMwf(enabled: boolean) {
+    return (warband: Warband) => {
+      return {
+        ...warband,
+        hero: isSelectedUnit(warband.hero)
+          ? updateUnitMwf(warband.hero, enabled)
+          : warband.hero,
+        units: warband.units.map((unit) =>
+          isSelectedUnit(unit) ? updateUnitMwf(unit, enabled) : unit,
+        ),
+      };
+    };
+  }
+
   function changeRuleState(rule: string, enabled: boolean) {
     const currentUpgrades = [...trollUpgrades];
+    let warbands = [...roster.warbands];
     if (enabled) {
       // Add the rule to the array if it's not already present
       if (!currentUpgrades.includes(rule)) {
@@ -35,8 +65,13 @@ export const SpecialRules: FunctionComponent<
       }
     }
 
+    if (rule === "Full Bellies") {
+      warbands = warbands.map(updateMwf(enabled));
+    }
+
     updateRoster({
       ...roster,
+      warbands: warbands,
       metadata: {
         ...roster.metadata,
         tttSpecialUpgrades: currentUpgrades,
