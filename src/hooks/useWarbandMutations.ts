@@ -228,11 +228,17 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
         {
           ...warband,
           id: newWarbandId,
-          hero: warband.hero?.unique ? null : warband.hero,
+          hero: warband.hero?.unique
+            ? null
+            : { ...warband.hero, id: randomUuid() },
           units: [
             ...warband.units
               .filter(isSelectedUnit)
-              .map((unit) => (unit.unique ? { id: unit.id } : unit)),
+              .map((unit) =>
+                unit.unique
+                  ? { id: randomUuid() }
+                  : { ...unit, id: randomUuid() },
+              ),
           ],
           meta: {
             ...warband.meta,
