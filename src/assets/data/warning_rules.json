@@ -1,4 +1,22 @@
 {
+  "Arathorn's Stand":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[arathorn's-stand] arathorn-chieftain-of-the-dunedain"
+      ],
+      "warning":"An Arathorn's Stand Army must always contain Arathorn, who is always the Army's General."
+    }
+  ],
+  "Army of Carn Dum":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[army-of-carn-dum] aldrac-warlord-of-carn-dum"
+      ],
+      "warning":"An Army of Carn Dum must always contain Aldrac, who is always the Army's General."
+    }
+  ],
   "Army of Gothmog":[
     {
       "type":"compulsory",
@@ -6,6 +24,15 @@
         "[army-of-gothmog] gothmog"
       ],
       "warning":"The Army of Gothmog must always contain Gothmog, who is always the Army's General."
+    }
+  ],
+  "Arnor":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[arnor] arvedui-last-king-of-arnor"
+      ],
+      "warning":"An Arnor Army must always contain Arvedui, who is always the Army's General."
     }
   ],
   "Assault Upon Helm's Deep":[
@@ -44,6 +71,22 @@
       "warning":"A Barad-dur Army must always contain Sauron, who is always the Army's General."
     }
   ],
+  "Battle of Fornost":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-fornost] earnur-last-king-of-gondor"
+      ],
+      "warning":"A Battle of Fornost Army must always contain Earnur, who is always the Army's General."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-fornost] glorfindel-lord-of-the-west"
+      ],
+      "warning":"A Battle of Fornost Army must always contain Glorfindel."
+    }
+  ],
   "Beseigers of the Hornburg":[
     {
       "type":"compulsory",
@@ -60,6 +103,15 @@
         "[breaking-of-the-fellowship] aragorn-strider"
       ],
       "warning":"A Breaking of the Fellowship Army must include Aragorn, Strider who is always the Army's General."
+    }
+  ],
+  "Buhrdur's Horde":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[buhrdur's-horde] buhrdur-hill-troll-chieftain"
+      ],
+      "warning":"A Buhrdur's Horde Army must always contain Buhrdur, who is always the Army's General"
     }
   ],
   "Cirith Ungol":[
@@ -159,6 +211,15 @@
         "[goblin-town] the-goblin-king"
       ],
       "warning":"A Goblin-town Army must always contain the Goblin King, who is always the Army's General."
+    }
+  ],
+  "Host of the Witch-king":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[host-of-the-witch-king] the-witch-king-of-angmar"
+      ],
+      "warning":"A Host of the Witch-king Army must always contain the Witch-king of Angmar, who is always the Army's General."
     }
   ],
   "Lindon":[
@@ -404,6 +465,15 @@
         "[ugluk's-scouts] ugluk"
       ],
       "warning":"An Ugluk's Scouts Army must always contain Ugluk, who is always the Army's General."
+    }
+  ],
+  "Wolf Pack of Angmar":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[wolf-pack-of-angmar] wild-warg-chieftain-(general)"
+      ],
+      "warning":"A Wolf Pack of Angmar Army must always include the Wild Warg Chieftain (General), who is always the Army's General."
     }
   ],
   "Wolves of Isengard":[

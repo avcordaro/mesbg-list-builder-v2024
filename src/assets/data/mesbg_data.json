@@ -1,4 +1,265 @@
 {
+  "[arathorn's-stand] arathorn-chieftain-of-the-dunedain": {
+    "model_id": "[arathorn's-stand] arathorn-chieftain-of-the-dunedain",
+    "army_type": "Good",
+    "army_list": "Arathorn's Stand",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Arathorn, Chieftain of the Dunedain",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[arathorn's-stand] halbarad": {
+    "model_id": "[arathorn's-stand] halbarad",
+    "army_type": "Good",
+    "army_list": "Arathorn's Stand",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Halbarad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[arathorn's-stand] ranger-of-the-north": {
+    "model_id": "[arathorn's-stand] ranger-of-the-north",
+    "army_type": "Good",
+    "army_list": "Arathorn's Stand",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0821",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0822",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-carn-dum] aldrac-warlord-of-carn-dum": {
+    "model_id": "[army-of-carn-dum] aldrac-warlord-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Aldrac, Warlord of Carn Dum",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-carn-dum] fraecht-vassal-of-the-witch-king": {
+    "model_id": "[army-of-carn-dum] fraecht-vassal-of-the-witch-king",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Fraecht, Vassal of the Witch-king",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-carn-dum] captain-of-carn-dum": {
+    "model_id": "[army-of-carn-dum] captain-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Captain of Carn Dum",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-carn-dum] angmar-orc-captain": {
+    "model_id": "[army-of-carn-dum] angmar-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-carn-dum] hill-troll": {
+    "model_id": "[army-of-carn-dum] hill-troll",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Hill Troll",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-carn-dum] angmar-warg-rider": {
+    "model_id": "[army-of-carn-dum] angmar-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0868",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0869",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0870",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0871",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[army-of-carn-dum] warrior-of-carn-dum": {
+    "model_id": "[army-of-carn-dum] warrior-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Warrior of Carn Dum",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0861",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0862",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-carn-dum] angmar-orc-warrior": {
+    "model_id": "[army-of-carn-dum] angmar-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of Carn Dum",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0863",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0864",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0865",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0866",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT0867",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[army-of-edoras] helm-hammerhand-king-of-rohan": {
     "model_id": "[army-of-edoras] helm-hammerhand-king-of-rohan",
     "army_type": "Good",
@@ -1525,6 +1786,194 @@
       }
     ]
   },
+  "[arnor] arvedui-last-king-of-arnor": {
+    "model_id": "[arnor] arvedui-last-king-of-arnor",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Arvedui, Last King of Arnor",
+    "unit_type": "Hero of Legend",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[arnor] aranarth": {
+    "model_id": "[arnor] aranarth",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Aranarth",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[arnor] argadir": {
+    "model_id": "[arnor] argadir",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Argadir",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[arnor] malbeth-the-seer": {
+    "model_id": "[arnor] malbeth-the-seer",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Malbeth the Seer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[arnor] captain-of-arnor": {
+    "model_id": "[arnor] captain-of-arnor",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Captain of Arnor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[arnor] ranger-of-the-north": {
+    "model_id": "[arnor] ranger-of-the-north",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0823",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0824",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[arnor] knight-of-arnor": {
+    "model_id": "[arnor] knight-of-arnor",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Knight of Arnor",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[arnor] ranger-of-arnor": {
+    "model_id": "[arnor] ranger-of-arnor",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of Arnor",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "default_bow": true,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0826",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0827",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0828",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[arnor] warrior-of-arnor": {
+    "model_id": "[arnor] warrior-of-arnor",
+    "army_type": "Good",
+    "army_list": "Arnor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Warrior of Arnor",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0825",
+        "name": "Swap spear and shield for banner",
+        "points": 25
+      }
+    ]
+  },
   "[assault-upon-helm's-deep] uruk-hai-captain": {
     "model_id": "[assault-upon-helm's-deep] uruk-hai-captain",
     "army_type": "Evil",
@@ -2514,6 +2963,306 @@
       }
     ]
   },
+  "[battle-of-fornost] glorfindel-lord-of-the-west": {
+    "model_id": "[battle-of-fornost] glorfindel-lord-of-the-west",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Glorfindel, Lord of the West",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0806",
+        "name": "Asfaloth",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Asfaloth"
+      }
+    ]
+  },
+  "[battle-of-fornost] earnur-last-king-of-gondor": {
+    "model_id": "[battle-of-fornost] earnur-last-king-of-gondor",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Earnur, Last King of Gondor",
+    "unit_type": "Hero of Legend",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0805",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[battle-of-fornost] aranarth": {
+    "model_id": "[battle-of-fornost] aranarth",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Aranarth",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[battle-of-fornost] cirdan": {
+    "model_id": "[battle-of-fornost] cirdan",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Cirdan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-fornost] rivendell-captain": {
+    "model_id": "[battle-of-fornost] rivendell-captain",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Rivendell Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0816",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[battle-of-fornost] captain-of-minas-tirith": {
+    "model_id": "[battle-of-fornost] captain-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Gondor",
+    "name": "Captain of Minas Tirith",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-fornost] ranger-of-the-north": {
+    "model_id": "[battle-of-fornost] ranger-of-the-north",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Minor Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT0807",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0808",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[battle-of-fornost] ranger-of-the-north-ind": {
+    "model_id": "[battle-of-fornost] ranger-of-the-north-ind",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-fornost] knight-of-minas-tirith": {
+    "model_id": "[battle-of-fornost] knight-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Gondor",
+    "name": "Knight of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0815",
+        "name": "Exchange shield and lance for banner",
+        "points": 25
+      }
+    ]
+  },
+  "[battle-of-fornost] rivendell-warrior": {
+    "model_id": "[battle-of-fornost] rivendell-warrior",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Rivendell Warrior",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0817",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0818",
+        "name": "Elf bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0819",
+        "name": "Shield and Elven spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0820",
+        "name": "Shield",
+        "points": 1
+      }
+    ]
+  },
+  "[battle-of-fornost] warrior-of-minas-tirith": {
+    "model_id": "[battle-of-fornost] warrior-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Gondor",
+    "name": "Warrior of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0810",
+        "name": "War horn and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0811",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0812",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0813",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0814",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
+  },
+  "[battle-of-fornost] hobbit-archer": {
+    "model_id": "[battle-of-fornost] hobbit-archer",
+    "army_type": "Good",
+    "army_list": "Battle of Fornost",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Hobbit Archer",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "default_bow": true,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0809",
+        "name": "War horn",
+        "points": 25
+      }
+    ]
+  },
   "[beseigers-of-the-hornburg] wulf": {
     "model_id": "[beseigers-of-the-hornburg] wulf",
     "army_type": "Evil",
@@ -2915,6 +3664,188 @@
       {
         "id": "OPT0137",
         "name": "Wood Elf spear",
+        "points": 1
+      }
+    ]
+  },
+  "[buhrdur's-horde] buhrdur-hill-troll-chieftain": {
+    "model_id": "[buhrdur's-horde] buhrdur-hill-troll-chieftain",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Buhrdur, Hill Troll Chieftain",
+    "unit_type": "Hero of Valour",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[buhrdur's-horde] wild-warg-chieftain": {
+    "model_id": "[buhrdur's-horde] wild-warg-chieftain",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[buhrdur's-horde] angmar-orc-captain": {
+    "model_id": "[buhrdur's-horde] angmar-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[buhrdur's-horde] angmar-orc-shaman": {
+    "model_id": "[buhrdur's-horde] angmar-orc-shaman",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[buhrdur's-horde] hill-troll": {
+    "model_id": "[buhrdur's-horde] hill-troll",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Hill Troll",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[buhrdur's-horde] angmar-warg-rider": {
+    "model_id": "[buhrdur's-horde] angmar-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0857",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0858",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0859",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0860",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[buhrdur's-horde] wild-warg": {
+    "model_id": "[buhrdur's-horde] wild-warg",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[buhrdur's-horde] angmar-orc-warrior": {
+    "model_id": "[buhrdur's-horde] angmar-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Buhrdur's Horde",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0852",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0853",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0854",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0855",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT0856",
+        "name": "Two-handed weapon",
         "points": 1
       }
     ]
@@ -6222,6 +7153,345 @@
       {
         "id": "OPT0097",
         "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[host-of-the-witch-king] the-witch-king-of-angmar": {
+    "model_id": "[host-of-the-witch-king] the-witch-king-of-angmar",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Mordor",
+    "name": "The Witch-king of Angmar",
+    "unit_type": "Hero of Legend",
+    "base_points": 0,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:18:3:1"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0840",
+        "name": "3A / 3M / 18W / 3F",
+        "points": 150,
+        "included": true,
+        "quantity": 1
+      },
+      {
+        "id": "OPT0841",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0842",
+        "name": "Morgul Blade",
+        "points": 10
+      }
+    ]
+  },
+  "[host-of-the-witch-king] aldrac-warlord-of-carn-dum": {
+    "model_id": "[host-of-the-witch-king] aldrac-warlord-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Aldrac, Warlord of Carn Dum",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[host-of-the-witch-king] the-shadow-of-rhudaur": {
+    "model_id": "[host-of-the-witch-king] the-shadow-of-rhudaur",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "The Shadow of Rhudaur",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:5:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[host-of-the-witch-king] shade": {
+    "model_id": "[host-of-the-witch-king] shade",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Shade",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:4:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-witch-king] fraecht-vassal-of-the-witch-king": {
+    "model_id": "[host-of-the-witch-king] fraecht-vassal-of-the-witch-king",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Fraecht, Vassal of the Witch-king",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-witch-king] captain-of-carn-dum": {
+    "model_id": "[host-of-the-witch-king] captain-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Captain of Carn Dum",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-witch-king] nazthak-orc-captain": {
+    "model_id": "[host-of-the-witch-king] nazthak-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Nazthak, Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-witch-king] angmar-orc-captain": {
+    "model_id": "[host-of-the-witch-king] angmar-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-witch-king] angmar-orc-shaman": {
+    "model_id": "[host-of-the-witch-king] angmar-orc-shaman",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[host-of-the-witch-king] barrow-wight": {
+    "model_id": "[host-of-the-witch-king] barrow-wight",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Barrow-wight",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:5:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[host-of-the-witch-king] werewolf": {
+    "model_id": "[host-of-the-witch-king] werewolf",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Werewolf",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[host-of-the-witch-king] spectre": {
+    "model_id": "[host-of-the-witch-king] spectre",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Mordor",
+    "name": "Spectre",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[host-of-the-witch-king] angmar-warg-rider": {
+    "model_id": "[host-of-the-witch-king] angmar-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0834",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0835",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0836",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0837",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[host-of-the-witch-king] warrior-of-carn-dum": {
+    "model_id": "[host-of-the-witch-king] warrior-of-carn-dum",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Warrior of Carn Dum",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0838",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0839",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[host-of-the-witch-king] angmar-orc-warrior": {
+    "model_id": "[host-of-the-witch-king] angmar-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Host of the Witch-king",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0829",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0830",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0831",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0832",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT0833",
+        "name": "Two-handed weapon",
         "points": 1
       }
     ]
@@ -12258,6 +13528,276 @@
     "warband_size": 0,
     "options": []
   },
+  "[shadows-of-angmar] gulavhar-the-terror-of-arnor": {
+    "model_id": "[shadows-of-angmar] gulavhar-the-terror-of-arnor",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Gulavhar, The Terror of Arnor",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:0:4"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[shadows-of-angmar] the-shadow-of-rhudaur": {
+    "model_id": "[shadows-of-angmar] the-shadow-of-rhudaur",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "The Shadow of Rhudaur",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:5:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[shadows-of-angmar] wild-warg-chieftain": {
+    "model_id": "[shadows-of-angmar] wild-warg-chieftain",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[shadows-of-angmar] shade": {
+    "model_id": "[shadows-of-angmar] shade",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Shade",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:4:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[shadows-of-angmar] nazthak-orc-captain": {
+    "model_id": "[shadows-of-angmar] nazthak-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Nazthak, Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[shadows-of-angmar] angmar-orc-captain": {
+    "model_id": "[shadows-of-angmar] angmar-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[shadows-of-angmar] angmar-orc-shaman": {
+    "model_id": "[shadows-of-angmar] angmar-orc-shaman",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[shadows-of-angmar] barrow-wight": {
+    "model_id": "[shadows-of-angmar] barrow-wight",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Barrow-wight",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:5:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[shadows-of-angmar] werewolf": {
+    "model_id": "[shadows-of-angmar] werewolf",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Werewolf",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[shadows-of-angmar] spectre": {
+    "model_id": "[shadows-of-angmar] spectre",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Mordor",
+    "name": "Spectre",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[shadows-of-angmar] angmar-warg-rider": {
+    "model_id": "[shadows-of-angmar] angmar-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0848",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0849",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0850",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0851",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[shadows-of-angmar] wild-warg": {
+    "model_id": "[shadows-of-angmar] wild-warg",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[shadows-of-angmar] angmar-orc-warrior": {
+    "model_id": "[shadows-of-angmar] angmar-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Shadows of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Angmar Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0843",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0844",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0845",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0846",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT0847",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[survivors-of-lake-town] bard-the-bowman": {
     "model_id": "[survivors-of-lake-town] bard-the-bowman",
     "army_type": "Good",
@@ -15430,6 +16970,85 @@
         "points": 1
       }
     ]
+  },
+  "[wolf-pack-of-angmar] wild-warg-chieftain": {
+    "model_id": "[wolf-pack-of-angmar] wild-warg-chieftain",
+    "army_type": "Evil",
+    "army_list": "Wolf Pack of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg Chieftain",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[wolf-pack-of-angmar] wild-warg-chieftain-(general)": {
+    "model_id": "[wolf-pack-of-angmar] wild-warg-chieftain-(general)",
+    "army_type": "Evil",
+    "army_list": "Wolf Pack of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg Chieftain (General)",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:2:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[wolf-pack-of-angmar] werewolf": {
+    "model_id": "[wolf-pack-of-angmar] werewolf",
+    "army_type": "Evil",
+    "army_list": "Wolf Pack of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Werewolf",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[wolf-pack-of-angmar] fell-warg": {
+    "model_id": "[wolf-pack-of-angmar] fell-warg",
+    "army_type": "Evil",
+    "army_list": "Wolf Pack of Angmar",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[wolf-pack-of-angmar] wild-warg": {
+    "model_id": "[wolf-pack-of-angmar] wild-warg",
+    "army_type": "Evil",
+    "army_list": "Wolf Pack of Angmar",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "bow_limit": true,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
   },
   "[wolves-of-isengard] sharku": {
     "model_id": "[wolves-of-isengard] sharku",

@@ -51,6 +51,12 @@ export function handleAssaultOnRavenhill(unit: Unit) {
     : true;
 }
 
+export function handleBattleOfFornost(unit: Unit) {
+  return unit.army_list === "Battle of Fornost"
+    ? !["[battle-of-fornost] ranger-of-the-north-ind"].includes(unit.model_id)
+    : true;
+}
+
 export const handleSpecialRestriction = (unit: Unit) => {
   return [
     handleBreakingOfTheFellowshipRestriction,
@@ -60,5 +66,6 @@ export const handleSpecialRestriction = (unit: Unit) => {
     handleSurvivorsOfLakeTown,
     handleBattleOfTheFiveArmies,
     handleAssaultOnRavenhill,
+    handleBattleOfFornost,
   ].every((restriction) => restriction(unit));
 };

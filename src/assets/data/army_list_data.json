@@ -1709,5 +1709,210 @@
     ],
     "bow_limit": 0.33,
     "throw_limit": 0.33
+  },
+  "Battle of Fornost": {
+    "additional_rules": [
+      {
+        "description": "A Battle of Fornost Army must always contain Earnur and Glorfindel. Earnur must always be the Army's General."
+      },
+      {
+        "description": "Gondor Warrior models can only be included in the Warband of a Gondor Hero."
+      },
+      {
+        "description": "Rivendell Warrior models can only be included in the Warband of a Rivendell Hero."
+      },
+      {
+        "description": "Hobbit Warrior models can only be included in the Warband of a D\u00fanedain Hero."
+      },
+      {
+        "description": "Rangers of the North can instead be taken as Independent Heroes; however, if they are then the only Hero whose Warband they can be included in is Aranarth."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Charge of Gondor",
+        "description": "Friendly Gondor Cavalry models gain a bonus of +1 to their Fight Value on a turn in which they Charge."
+      },
+      {
+        "title": "Power of the Elves",
+        "description": "Friendly models gain the Resistant to Magic special rule."
+      },
+      {
+        "title": "Earnur's Defiance",
+        "description": "Earnur cannot have his Courage reduced by enemy special rules or Magical Powers."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Arathorn's Stand": {
+    "additional_rules": [
+      {
+        "description": "An Arathorn's Stand Army must always contain Arathorn, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"They\u2019re dangerous folk, wandering the wilds\"",
+        "description": "Rangers of the North increase their Attacks value to 2."
+      },
+      {
+        "title": "Heir of Isildur",
+        "description": "Whenever Arathorn spends a Might Point, roll a D6. On a 4+ the point of Might is free and does not reduce Arathorn's store of Might."
+      },
+      {
+        "title": "Silent Ambush",
+        "description": "In Scenarios where you roll for Warbands to arrive, or ones where you roll to see which part of the board you deploy a Warband in (though not when rolling to choose deployment zones), you may modify the roll for Warbands from this Army by +1 or -1."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Arnor": {
+    "additional_rules": [
+      {
+        "description": "An Arnor Army must always contain Arvedui, who is always the Army's General."
+      },
+      {
+        "description": "Friendly Rangers of the North gain the Arnor keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Defend the King",
+        "description": "Whilst within 6\" of Arvedui, friendly Arnor models automatically pass any Courage Tests they are required to take."
+      },
+      {
+        "title": "Power of the Seer",
+        "description": "Friendly Arnor Hero models receive a bonus of +1 when rolling for Malbeth's Gift of Foresight special rule."
+      },
+      {
+        "title": "Seeing Stones",
+        "description": "Once per game, during the Priority Phase but before the roll for Priority, Arvedui can use this special rule so long as he is alive and on the battlefield. If he does, Arvedui's controlling player automatically wins the roll to choose who has Priority for that turn. If both sides have a special rule allowing them to do this and both wish to use it in the same turn, players roll off as normal and both special rules count as being used."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Host of the Witch-king": {
+    "additional_rules": [
+      {
+        "description": "A Host of the Witch-king Army must always contain the Witch-king of Angmar, who is always the Army's General."
+      },
+      {
+        "description": "No more than 50% of your models may have the Carn D\u00fbm keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"If that fell Kingdom should rise again, Rivendell, L\u00f3rien, the Shire, even Gondor itself shall fall.\"",
+        "description": "Friendly Angmar Orc models within 3\" of a friendly Spirit Hero model gain the Terror special rule."
+      },
+      {
+        "title": "Lord of the Nazgul",
+        "description": "The Witch-king only loses a Will Point for having been in a Combat if he loses a Combat during the Fight phase (for example, if he doesn\u2019t win the Duel Roll to see which side may make Strikes)."
+      },
+      {
+        "title": "\"No Man can kill me!\"",
+        "description": "Whilst Engaged in Combat with an enemy Man model, the Witch-king gains a bonus of +1 to his Fight Value."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Shadows of Angmar": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "\"If that fell Kingdom should rise again, Rivendell, L\u00f3rien, the Shire, even Gondor itself shall fall.\"",
+        "description": "Friendly Angmar Orc models within 3\" of a friendly Spirit Hero model gain the Terror special rule."
+      },
+      {
+        "title": "Sense of Hopelessness",
+        "description": "If an enemy Hero model is slain in Combat, then for the duration of the following turn, all enemy models suffer a -1 penalty to any Courage Tests they are required to take."
+      },
+      {
+        "title": "The Shadows of Angmar",
+        "description": "Friendly Spirit models gain the Stalk Unseen special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Buhrdur's Horde": {
+    "additional_rules": [
+      {
+        "description": "A Buhrdur's Horde Army must always contain Buhrdur, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Ambush!",
+        "description": "At the start of the game, before either side has deployed, you may choose to have Buhrd\u00fbr's Warband ambushing and not arrive as normal (if your General must deploy at the start of the game, you cannot use this ability). Instead, at the end of the Move Phase on the third turn (after both sides have moved all their models), the ambushing Warband must choose one of the following:\n\nMove onto the board from any board edge via the rules for Reinforcements.\n\nDeploy in, or within 1\" of, a wood, building, rocky outcrop or other similar piece of terrain that the models could hide in. A degree of common sense is required when deciding which pieces of terrain the Warband can hide in \u2014 they shouldn't be leaping out of a river or from behind a single rock! You should always agree with your opponent at the beginning of the game which terrain pieces are eligible to ambush from. Models deployed in this way cannot be placed in base contact with, or within the Control Zones of, enemy models. Models that enter the board this way do not Activate as part of the Move Phase, and will count as having Moved half their Move Value for the purposes of shooting."
+      },
+      {
+        "title": "Masters of Terrain",
+        "description": "Friendly models gain the Woodland Creature and Mountain Dweller special rules."
+      },
+      {
+        "title": "A Fearsome Foe",
+        "description": "If Buhrdur kills an enemy Hero in Combat, he gains the Fearless special rule for the remainder of the game."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Wolf Pack of Angmar": {
+    "additional_rules": [
+      {
+        "description": "Werewolves may benefit from the Heroic Actions and Stand Fast of friendly Wild Warg Chieftains even though they do not have the Warg keyword."
+      },
+      {
+        "description": "Friendly models can still pick up Objective Markers even though they have the Beast keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Leader of the Pack",
+        "description": "The Wild Warg Chieftain that is your General gains an additional point each of Might, Will and Fate."
+      },
+      {
+        "title": "Feral Charge",
+        "description": "When a friendly Warg model Charges an enemy Infantry model, they gain the Knock to the Ground bonus as if they were Cavalry. This bonus is lost if they are subsequently Charged by an enemy Cavalry model."
+      },
+      {
+        "title": "Protect the Alpha",
+        "description": "If your General has suffered at least one Wound, then friendly models treat them as a banner with a range of 6\"."
+      },
+      {
+        "title": "Howl of the Wolf Pack",
+        "description": "Once per game, at the start of any Fight Phase, your General can declare they are using this ability. Until the End Phase of the turn, friendly models gain a bonus of +1 to their Fight Value and may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
+  },
+  "Army of Carn Dum": {
+    "additional_rules": [
+      {
+        "description": "An Army of Carn Dum must always contain Aldrac, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Show of Strength",
+        "description": "If a Carn Dum Hero slays one or more enemy models in Combat, then for the duration of the following turn they gain a bonus of +1 to their Fight Value."
+      },
+      {
+        "title": "Banners of Carn Dum",
+        "description": "Friendly banners have a range of 6\" rather than 3\"."
+      },
+      {
+        "title": "Fierce Charge",
+        "description": "Friendly Warrior models gain a bonus of +1 to their Fight Value in a turn in which they Charge."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33
   }
 }

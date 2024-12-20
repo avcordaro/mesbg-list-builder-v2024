@@ -1,4 +1,56 @@
 {
+  "[arathorn's-stand] arathorn-chieftain-of-the-dunedain": {
+    "valid_warband_units": [
+      "[arathorn's-stand] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[arathorn's-stand] halbarad": {
+    "valid_warband_units": [
+      "[arathorn's-stand] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[arathorn's-stand] ranger-of-the-north": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-carn-dum] aldrac-warlord-of-carn-dum": {
+    "valid_warband_units": [
+      "[army-of-carn-dum] warrior-of-carn-dum",
+      "[army-of-carn-dum] angmar-orc-warrior",
+      "[army-of-carn-dum] angmar-warg-rider",
+      "[army-of-carn-dum] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-carn-dum] angmar-orc-captain": {
+    "valid_warband_units": [
+      "[army-of-carn-dum] warrior-of-carn-dum",
+      "[army-of-carn-dum] angmar-orc-warrior",
+      "[army-of-carn-dum] angmar-warg-rider",
+      "[army-of-carn-dum] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-carn-dum] captain-of-carn-dum": {
+    "valid_warband_units": [
+      "[army-of-carn-dum] warrior-of-carn-dum",
+      "[army-of-carn-dum] angmar-orc-warrior",
+      "[army-of-carn-dum] angmar-warg-rider",
+      "[army-of-carn-dum] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-carn-dum] fraecht-vassal-of-the-witch-king": {
+    "valid_warband_units": [
+      "[army-of-carn-dum] warrior-of-carn-dum",
+      "[army-of-carn-dum] angmar-orc-warrior",
+      "[army-of-carn-dum] angmar-warg-rider",
+      "[army-of-carn-dum] hill-troll"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-edoras] captain-of-rohan": {
     "valid_warband_units": [
       "[army-of-edoras] warrior-of-rohan",
@@ -325,6 +377,55 @@
     ],
     "extra_profiles": []
   },
+  "[arnor] aranarth": {
+    "valid_warband_units": [
+      "[arnor] ranger-of-the-north",
+      "[arnor] warrior-of-arnor",
+      "[arnor] knight-of-arnor",
+      "[arnor] ranger-of-arnor"
+    ],
+    "extra_profiles": []
+  },
+  "[arnor] argadir": {
+    "valid_warband_units": [
+      "[arnor] ranger-of-the-north",
+      "[arnor] warrior-of-arnor",
+      "[arnor] knight-of-arnor",
+      "[arnor] ranger-of-arnor"
+    ],
+    "extra_profiles": []
+  },
+  "[arnor] arvedui-last-king-of-arnor": {
+    "valid_warband_units": [
+      "[arnor] ranger-of-the-north",
+      "[arnor] warrior-of-arnor",
+      "[arnor] knight-of-arnor",
+      "[arnor] ranger-of-arnor"
+    ],
+    "extra_profiles": []
+  },
+  "[arnor] captain-of-arnor": {
+    "valid_warband_units": [
+      "[arnor] ranger-of-the-north",
+      "[arnor] warrior-of-arnor",
+      "[arnor] knight-of-arnor",
+      "[arnor] ranger-of-arnor"
+    ],
+    "extra_profiles": []
+  },
+  "[arnor] malbeth-the-seer": {
+    "valid_warband_units": [
+      "[arnor] ranger-of-the-north",
+      "[arnor] warrior-of-arnor",
+      "[arnor] knight-of-arnor",
+      "[arnor] ranger-of-arnor"
+    ],
+    "extra_profiles": []
+  },
+  "[arnor] ranger-of-the-north": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[assault-on-ravenhill] bilbo-baggins-master-burglar": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -519,6 +620,51 @@
     ],
     "extra_profiles": []
   },
+  "[battle-of-fornost] aranarth": {
+    "valid_warband_units": [
+      "[battle-of-fornost] hobbit-archer",
+      "[battle-of-fornost] ranger-of-the-north-ind"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] captain-of-minas-tirith": {
+    "valid_warband_units": [
+      "[battle-of-fornost] warrior-of-minas-tirith",
+      "[battle-of-fornost] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] cirdan": {
+    "valid_warband_units": [
+      "[battle-of-fornost] rivendell-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] earnur-last-king-of-gondor": {
+    "valid_warband_units": [
+      "[battle-of-fornost] warrior-of-minas-tirith",
+      "[battle-of-fornost] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] glorfindel-lord-of-the-west": {
+    "valid_warband_units": [
+      "[battle-of-fornost] rivendell-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] ranger-of-the-north": {
+    "valid_warband_units": [
+      "[battle-of-fornost] hobbit-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-fornost] rivendell-captain": {
+    "valid_warband_units": [
+      "[battle-of-fornost] rivendell-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[beseigers-of-the-hornburg] general-targg": {
     "valid_warband_units": [
       "[beseigers-of-the-hornburg] hill-tribesman",
@@ -592,6 +738,42 @@
   },
   "[breaking-of-the-fellowship] samwise-gamgee": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[buhrdur's-horde] angmar-orc-captain": {
+    "valid_warband_units": [
+      "[buhrdur's-horde] angmar-orc-warrior",
+      "[buhrdur's-horde] angmar-warg-rider",
+      "[buhrdur's-horde] wild-warg",
+      "[buhrdur's-horde] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[buhrdur's-horde] angmar-orc-shaman": {
+    "valid_warband_units": [
+      "[buhrdur's-horde] angmar-orc-warrior",
+      "[buhrdur's-horde] angmar-warg-rider",
+      "[buhrdur's-horde] wild-warg",
+      "[buhrdur's-horde] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[buhrdur's-horde] buhrdur-hill-troll-chieftain": {
+    "valid_warband_units": [
+      "[buhrdur's-horde] angmar-orc-warrior",
+      "[buhrdur's-horde] angmar-warg-rider",
+      "[buhrdur's-horde] wild-warg",
+      "[buhrdur's-horde] hill-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[buhrdur's-horde] wild-warg-chieftain": {
+    "valid_warband_units": [
+      "[buhrdur's-horde] angmar-orc-warrior",
+      "[buhrdur's-horde] angmar-warg-rider",
+      "[buhrdur's-horde] wild-warg",
+      "[buhrdur's-horde] hill-troll"
+    ],
     "extra_profiles": []
   },
   "[cirith-ungol] gorbag": {
@@ -1246,6 +1428,106 @@
     "extra_profiles": [
       "War Mumak of Harad (Options)"
     ]
+  },
+  "[host-of-the-witch-king] aldrac-warlord-of-carn-dum": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] angmar-orc-captain": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] angmar-orc-shaman": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] barrow-wight": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] captain-of-carn-dum": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] fraecht-vassal-of-the-witch-king": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] nazthak-orc-captain": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] shade": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] the-shadow-of-rhudaur": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-witch-king] the-witch-king-of-angmar": {
+    "valid_warband_units": [
+      "[host-of-the-witch-king] angmar-orc-warrior",
+      "[host-of-the-witch-king] angmar-warg-rider",
+      "[host-of-the-witch-king] warrior-of-carn-dum",
+      "[host-of-the-witch-king] werewolf",
+      "[host-of-the-witch-king] spectre"
+    ],
+    "extra_profiles": []
   },
   "[kingdom-of-rohan] captain-of-rohan": {
     "valid_warband_units": [
@@ -2475,6 +2757,86 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[shadows-of-angmar] angmar-orc-captain": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] angmar-orc-shaman": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] barrow-wight": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] gulavhar-the-terror-of-arnor": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] nazthak-orc-captain": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] shade": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] the-shadow-of-rhudaur": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
+  "[shadows-of-angmar] wild-warg-chieftain": {
+    "valid_warband_units": [
+      "[shadows-of-angmar] angmar-orc-warrior",
+      "[shadows-of-angmar] angmar-warg-rider",
+      "[shadows-of-angmar] wild-warg",
+      "[shadows-of-angmar] werewolf",
+      "[shadows-of-angmar] spectre"
+    ],
+    "extra_profiles": []
+  },
   "[survivors-of-lake-town] alfrid-the-councillor": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -3336,6 +3698,22 @@
     "valid_warband_units": [
       "[usurpers-of-edoras] hill-tribesman",
       "[usurpers-of-edoras] crebain"
+    ],
+    "extra_profiles": []
+  },
+  "[wolf-pack-of-angmar] wild-warg-chieftain": {
+    "valid_warband_units": [
+      "[wolf-pack-of-angmar] wild-warg",
+      "[wolf-pack-of-angmar] werewolf",
+      "[wolf-pack-of-angmar] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[wolf-pack-of-angmar] wild-warg-chieftain-(general)": {
+    "valid_warband_units": [
+      "[wolf-pack-of-angmar] wild-warg",
+      "[wolf-pack-of-angmar] werewolf",
+      "[wolf-pack-of-angmar] fell-warg"
     ],
     "extra_profiles": []
   },

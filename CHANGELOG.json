@@ -6,6 +6,9 @@
       "Fixed Rivendell Captains who could only be added once to your Rivendell roster",
       "Corrected a typo in Arwen's full name on her profile card.",
       "Fixed an issue for options that consist of multiple types, such as mount & throwing weapon for Horse and throwing spears"
+    ],
+    "added": [
+      "All armies from the Armies of Arnor and Angmar supplement PDF have been added to the builder."
     ]
   },
   "1.2": {
