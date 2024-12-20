@@ -1,6 +1,8 @@
 import { DragStart, DropResult } from "@hello-pangea/dnd";
 import { useRosterBuildingState } from "../state/roster-building";
+import { FreshUnit, SelectedUnit, Warband } from "../types/roster.ts";
 import { moveItem, moveItemBetweenLists } from "../utils/array.ts";
+import { useCalculator } from "./useCalculator.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 function byId(id: string) {
@@ -9,7 +11,17 @@ function byId(id: string) {
 
 export const useRosterSorting = () => {
   const { roster } = useRosterInformation();
+  const calculator = useCalculator();
   const { updateRoster } = useRosterBuildingState();
+
+  const getResortedWarband = (
+    wb: Warband,
+    reorderedSource: (FreshUnit | SelectedUnit)[],
+  ) =>
+    calculator.recalculateWarband({
+      ...wb,
+      units: reorderedSource,
+    });
 
   function onUnitDropped(result: DropResult) {
     console.debug("Drag and drop result:", result);
@@ -47,10 +59,7 @@ export const useRosterSorting = () => {
           ...roster,
           warbands: roster.warbands.map((wb) =>
             wb.id === warband.id
-              ? {
-                  ...wb,
-                  units: reorderedWarband,
-                }
+              ? getResortedWarband(wb, reorderedWarband)
               : wb,
           ),
         });
@@ -68,22 +77,18 @@ export const useRosterSorting = () => {
         result.destination.index,
       );
 
-      updateRoster({
-        ...roster,
-        warbands: roster.warbands.map((wb) =>
-          wb.id === srcWarband.id
-            ? {
-                ...wb,
-                units: reorderedSource,
-              }
-            : wb.id === dstWarband.id
-              ? {
-                  ...wb,
-                  units: reorderedDestination,
-                }
-              : wb,
-        ),
-      });
+      updateRoster(
+        calculator.recalculateRoster({
+          ...roster,
+          warbands: roster.warbands.map((wb) =>
+            wb.id === srcWarband.id
+              ? getResortedWarband(wb, reorderedSource)
+              : wb.id === dstWarband.id
+                ? getResortedWarband(wb, reorderedDestination)
+                : wb,
+          ),
+        }),
+      );
     }
   }
 
