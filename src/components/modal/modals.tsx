@@ -1,4 +1,10 @@
-import { DeleteForever, Download, Edit, LibraryAdd } from "@mui/icons-material";
+import {
+  Delete,
+  DeleteForever,
+  Download,
+  Edit,
+  LibraryAdd,
+} from "@mui/icons-material";
 import AddCircleOutline from "@mui/icons-material/AddCardOutlined";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SaveIcon from "@mui/icons-material/Save";
@@ -10,7 +16,9 @@ import { FaFileImport } from "react-icons/fa";
 import { FaImage } from "react-icons/fa6";
 import { GiSwordsEmblem } from "react-icons/gi";
 import { ChartsModal } from "./modals/ChartsModal.tsx";
+import { ConfirmDeleteGroupModal } from "./modals/ConfirmDeleteGroupModal.tsx";
 import { ConfirmDeleteRosterModal } from "./modals/ConfirmDeleteRosterModal.tsx";
+import { ConfirmDisbandGroupModal } from "./modals/ConfirmDisbandGroupModal.tsx";
 import { CreateGameResultModal } from "./modals/CreateGameResultModal.tsx";
 import { CreateNewRosterGroupModal } from "./modals/CreateNewRosterGroupModal.tsx";
 import { CreateNewRosterModal } from "./modals/CreateNewRosterModal.tsx";
@@ -22,6 +30,7 @@ import { ImportGameHistoryModal } from "./modals/ImportHistoryModal.tsx";
 import { ProfileCardModal } from "./modals/ProfileCardModal.tsx";
 import { RosterSummaryModal } from "./modals/RosterSummaryModal.tsx";
 import { RosterSummaryScreenshotModal } from "./modals/RosterSummaryScreenshotModal.tsx";
+import { UpdateGroupModal } from "./modals/UpdateGroupModal.tsx";
 
 export enum ModalTypes {
   CREATE_NEW_ROSTER = "CREATE_NEW_ROSTER",
@@ -41,6 +50,10 @@ export enum ModalTypes {
   CONFIRM_DELETE_ROSTER = "CONFIRM_DELETE_ROSTER",
   EDIT_ROSTER_NAME = "EDIT_ROSTER_NAME",
   CREATE_ROSTER_GROUP = "CREATE_ROSTER_GROUP",
+
+  UPDATE_ROSTER_GROUP = "UPDATE_ROSTER_GROUP",
+  DELETE_ROSTER_GROUP = "DELETE_ROSTER_GROUP",
+  DISBAND_ROSTER_GROUP = "DISBAND_ROSTER_GROUP",
 }
 
 export type ModalProps = {
@@ -170,6 +183,33 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <LibraryAdd />,
       title: "Create Group",
       children: <CreateNewRosterGroupModal />,
+      maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.UPDATE_ROSTER_GROUP,
+    {
+      icon: <Edit />,
+      title: "Update Group",
+      children: <UpdateGroupModal />,
+      maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.DISBAND_ROSTER_GROUP,
+    {
+      icon: <Delete />,
+      title: "Disband Group",
+      children: <ConfirmDisbandGroupModal />,
+      maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.DELETE_ROSTER_GROUP,
+    {
+      icon: <DeleteForever />,
+      title: "Delete Group",
+      children: <ConfirmDeleteGroupModal />,
       maxWidth: "md",
     },
   ],

@@ -7,6 +7,7 @@ import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import fallbackLogo from "../../../assets/images/default.png";
 import { Roster } from "../../../types/roster.ts";
+import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
 
 export type RosterSummaryCardProps = {
   name: string;
@@ -112,6 +113,15 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
             </Typography>
           </Stack>
         </Card>
+        <Box
+          sx={{
+            position: "absolute",
+            right: 32,
+            top: 24,
+          }}
+        >
+          <GroupOptionsPopoverMenu groupId={name} />
+        </Box>
       </Box>
     </Link>
   );

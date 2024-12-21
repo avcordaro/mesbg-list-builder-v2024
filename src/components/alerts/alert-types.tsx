@@ -18,6 +18,10 @@ export enum AlertTypes {
 
   DUPLICATE_UNIT_SUCCESS = "DUPLICATE_UNIT_SUCCESS",
   DUPLICATE_WARBAND_SUCCESS = "DUPLICATE_WARBAND_SUCCESS",
+
+  UPDATE_GROUP_SUCCES = "UPDATE_GROUP_SUCCES",
+  DISBAND_GROUP_SUCCES = "DISBAND_GROUP_SUCCES",
+  DELETE_GROUP_SUCCES = "DELETE_GROUP_SUCCES",
 }
 
 type AlertOptions = {
@@ -158,6 +162,51 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
         <Fragment>
           <b>Successfully deleted</b>
           <p>Your roster was successfully deleted.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.DELETE_GROUP_SUCCES,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Successfully deleted</b>
+          <p>Your group was successfully deleted.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.DISBAND_GROUP_SUCCES,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Successfully disbanded</b>
+          <p>Your group was successfully disbanded.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.UPDATE_GROUP_SUCCES,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Successfully updated</b>
+          <p>Your group was successfully updated.</p>
         </Fragment>
       ),
       options: {

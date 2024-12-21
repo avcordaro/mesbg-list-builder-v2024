@@ -6,23 +6,30 @@ import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
 
-export const ConfirmDeleteRosterModal = () => {
+export const ConfirmDisbandGroupModal = () => {
   const {
     closeModal,
-    modalContext: { roster, manualRedirect },
+    modalContext: { groupId, redirect },
     triggerAlert,
   } = useAppState();
-  const { deleteRoster } = useRosterBuildingState();
+  const { updateRoster, rosters } = useRosterBuildingState();
   const navigate = useNavigate();
 
-  const handleConfirmDelete = (e) => {
+  const handleConfirmDisband = (e) => {
     e.preventDefault();
 
-    deleteRoster(roster);
-    if (manualRedirect !== true) {
+    rosters
+      .filter((roster) => roster.group === groupId)
+      .forEach((roster) => {
+        updateRoster({
+          ...roster,
+          group: null,
+        });
+      });
+    if (redirect !== true) {
       navigate("/rosters");
     }
-    triggerAlert(AlertTypes.DELETE_ARMY_LIST_SUCCESS);
+    triggerAlert(AlertTypes.DISBAND_GROUP_SUCCES);
     closeModal();
   };
 
@@ -30,10 +37,14 @@ export const ConfirmDeleteRosterModal = () => {
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
         <Alert severity="warning">
+          <Typography>Your are about to disband your roster group!</Typography>
+        </Alert>
+
+        <Alert severity="info">
           <Typography>
-            Your are about to delete your roster!{" "}
-            <b>This action is irreversible.</b> You will have to recreate the
-            roster from scratch!
+            Disbanding a roster group means the rosters will be moved to the top
+            of your &apos;My Rosters&apos; page.{" "}
+            <strong>They will not be deleted!</strong>
           </Typography>
         </Alert>
       </DialogContent>
@@ -47,11 +58,11 @@ export const ConfirmDeleteRosterModal = () => {
         </Button>
         <Button
           variant="contained"
-          onClick={handleConfirmDelete}
+          onClick={handleConfirmDisband}
           color="error"
           data-test-id="dialog--submit-button"
         >
-          Delete roster
+          Disband group
         </Button>
       </DialogActions>
     </>

@@ -14,6 +14,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
+import { GroupOptionsPopoverMenu } from "./components/RosterGroupPopoverMenu.tsx";
 import {
   RosterSummaryCard,
   RosterSummaryCardProps,
@@ -30,17 +31,7 @@ export const RosterGroup: FunctionComponent = () => {
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((roster) => {
       const metadata = getAdjustedMetaData(roster);
-      return {
-        id: roster.id,
-        name: roster.name,
-        armyList: roster.armyList,
-        points: metadata.points,
-        units: metadata.units,
-        warbands: roster.warbands.length,
-        bows: metadata.bows,
-        throwing_weapons: metadata.throwingWeapons,
-        might: metadata.might,
-      };
+      return { roster: { ...roster, metadata } };
     });
 
   const removeFromGroup = "remove-from-group";
@@ -66,25 +57,34 @@ export const RosterGroup: FunctionComponent = () => {
     <Container maxWidth={false} sx={{ mt: 2 }}>
       <DragDropContext onDragEnd={onDragEnd}>
         <Stack>
-          <Stack direction="row">
-            <Stack flexGrow={1} gap={1}>
-              <Typography variant="h4" className="middle-earth">
-                My Rosters
+          <Stack flexGrow={1} gap={1}>
+            <Typography variant="h4" className="middle-earth">
+              My Rosters
+            </Typography>
+            <Stack direction="row" alignItems="center" sx={{ mt: -2 }}>
+              <Typography
+                variant="h6"
+                className="middle-earth"
+                color="textSecondary"
+              >
+                {groupId}
               </Typography>
-              <Breadcrumbs>
-                <Link
-                  to="/rosters"
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
-                  Rosters
-                </Link>
-                <Typography sx={{ color: "text.secondary" }}>
-                  {groupId}
-                </Typography>
-              </Breadcrumbs>
+              <GroupOptionsPopoverMenu groupId={groupId} redirect={true} />
             </Stack>
+
+            <Breadcrumbs>
+              <Link
+                to="/rosters"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                Rosters
+              </Link>
+              <Typography sx={{ color: "text.secondary" }}>
+                {groupId}
+              </Typography>
+            </Breadcrumbs>
           </Stack>
 
           <Stack
@@ -136,12 +136,16 @@ export const RosterGroup: FunctionComponent = () => {
                 </Stack>
               )}
             </Droppable>
-            {rosterLinks.map((roster, index) => (
-              <Droppable droppableId={roster.id} key={index} isDropDisabled>
+            {rosterLinks.map((card, index) => (
+              <Droppable
+                droppableId={card.roster.id}
+                key={index}
+                isDropDisabled
+              >
                 {(provided) => (
                   <Box ref={provided.innerRef} {...provided.droppableProps}>
                     <Draggable
-                      draggableId={roster.id}
+                      draggableId={card.roster.id}
                       index={index}
                       key={index}
                     >
@@ -151,7 +155,7 @@ export const RosterGroup: FunctionComponent = () => {
                           {...provided.dragHandleProps}
                           {...provided.draggableProps}
                         >
-                          <RosterSummaryCard key={index} {...roster} />
+                          <RosterSummaryCard key={index} roster={card.roster} />
                         </Box>
                       )}
                     </Draggable>
