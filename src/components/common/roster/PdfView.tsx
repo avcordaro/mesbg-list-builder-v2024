@@ -18,6 +18,24 @@ export const PdfView = () => {
   const { profiles, missingProfiles } = useProfiles();
   const { roster } = useRosterInformation();
 
+  if (!roster) {
+    return (
+      <>
+        <Typography variant="h4" className="middle-earth">
+          Roster not found!
+        </Typography>
+        <Typography sx={{ mb: 2 }}>
+          One does not simply navigate to a roster that does not exist.
+        </Typography>
+
+        <Typography>
+          Please navigate back to the roster overview and select a roster from
+          there.
+        </Typography>
+      </>
+    );
+  }
+
   return (
     <>
       <Container sx={{ mb: 8, py: 2 }}>
