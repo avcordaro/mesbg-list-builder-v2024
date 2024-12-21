@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "changed": [
+      "Navigating to a PDF printable link for a roster that doesn't exist will now inform you of such and let you go back to the My Rosters page."
+    ]
+  },
   "1.3": {
     "bugfixes": [
       "Change the breakpoint calculation so that it reflects 'more than 50%' rather than just 50%",
