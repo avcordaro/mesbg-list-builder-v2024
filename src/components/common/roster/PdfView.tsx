@@ -15,7 +15,6 @@ import { StatTrackers } from "./pdf/StatTrackers.tsx";
 import { UnitProfileList } from "./pdf/UnitProfileList.tsx";
 
 export const PdfView = () => {
-  const { profiles, missingProfiles } = useProfiles();
   const { roster } = useRosterInformation();
 
   if (!roster) {
@@ -36,6 +35,12 @@ export const PdfView = () => {
     );
   }
 
+
+  return <PrintablePdf />;
+}
+
+const PrintablePdf = () => {
+  const { profiles, missingProfiles } = useProfiles();
   return (
     <>
       <Container sx={{ mb: 8, py: 2 }}>
