@@ -91,19 +91,18 @@ export const Roster = () => {
 
   if (!roster) {
     return (
-      <>
+      <Box sx={{ m: 2 }}>
         <Typography variant="h4" className="middle-earth">
           Roster not found!
         </Typography>
         <Typography sx={{ mb: 2 }}>
           One does not simply navigate to a roster that does not exist.
         </Typography>
-
         <Typography>
-          Please navigate back to the roster overview and select a roster from
-          there.
+          Please navigate back to <Link to="/rosters">My Rosters</Link> and
+          select a roster from there.
         </Typography>
-      </>
+      </Box>
     );
   }
 

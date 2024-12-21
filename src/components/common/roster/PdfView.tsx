@@ -19,28 +19,27 @@ export const PdfView = () => {
 
   if (!roster) {
     return (
-      <>
+      <Box sx={{ m: 2 }}>
         <Typography variant="h4" className="middle-earth">
           Roster not found!
         </Typography>
         <Typography sx={{ mb: 2 }}>
           One does not simply navigate to a roster that does not exist.
         </Typography>
-
         <Typography>
-          Please navigate back to the roster overview and select a roster from
-          there.
+          Please navigate back to <Link to="/rosters">My Rosters</Link> and
+          select a roster from there.
         </Typography>
-      </>
+      </Box>
     );
   }
 
-
   return <PrintablePdf />;
-}
+};
 
 const PrintablePdf = () => {
   const { profiles, missingProfiles } = useProfiles();
+  const { roster } = useRosterInformation();
   return (
     <>
       <Container sx={{ mb: 8, py: 2 }}>
