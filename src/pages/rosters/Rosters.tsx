@@ -34,15 +34,7 @@ export const Rosters: FunctionComponent = () => {
     .map((roster) => {
       const metadata = getAdjustedMetaData(roster);
       return {
-        id: roster.id,
-        name: roster.name,
-        armyList: roster.armyList,
-        points: metadata.points,
-        units: metadata.units,
-        warbands: roster.warbands.length,
-        bows: metadata.bows,
-        throwing_weapons: metadata.throwingWeapons,
-        might: metadata.might,
+        roster: { ...roster, metadata },
       };
     });
 
@@ -131,8 +123,8 @@ export const Rosters: FunctionComponent = () => {
               </Droppable>
             ))}
 
-            {rosterLinks.map((roster, index) => (
-              <Droppable key={index} droppableId={"roster:" + roster.id}>
+            {rosterLinks.map((card, index) => (
+              <Droppable key={index} droppableId={"roster:" + card.roster.id}>
                 {(provided, snapshot) => {
                   return (
                     <Box
@@ -151,7 +143,7 @@ export const Rosters: FunctionComponent = () => {
                             }
                       }
                     >
-                      <Draggable draggableId={roster.id} index={index}>
+                      <Draggable draggableId={card.roster.id} index={index}>
                         {(draggableProvided, draggableSnapshot) => {
                           const { style, ...props } =
                             draggableProvided.draggableProps;
@@ -160,7 +152,9 @@ export const Rosters: FunctionComponent = () => {
                               ref={draggableProvided.innerRef}
                               {...draggableProvided.dragHandleProps}
                               {...props}
-                              style={draggingRoster === roster.id ? style : {}}
+                              style={
+                                draggingRoster === card.roster.id ? style : {}
+                              }
                             >
                               <Box
                                 sx={
@@ -177,7 +171,7 @@ export const Rosters: FunctionComponent = () => {
                                       }
                                 }
                               >
-                                <RosterSummaryCard {...roster} />
+                                <RosterSummaryCard roster={card.roster} />
                               </Box>
                             </Box>
                           );
