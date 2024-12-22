@@ -92,6 +92,21 @@ export const useRosterInformation = (): RosterInformationFunctions => {
       };
     }
 
+    if (roster.armyList === "Erebor & Dale") {
+      const units = roster.warbands
+        .flatMap((w) => w.units)
+        .filter(isSelectedUnit);
+      return {
+        ...roster.metadata,
+        bowLimit: units
+          .filter((u) => u.profile_origin === "Kingdoms of Men")
+          .reduce((s, u) => s + u.quantity, 0),
+        throwLimit: units
+          .filter((u) => u.profile_origin === "Dwarven Holds")
+          .reduce((s, u) => s + u.quantity, 0),
+      };
+    }
+
     return roster.metadata;
   }
 
