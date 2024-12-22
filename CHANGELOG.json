@@ -2,6 +2,13 @@
   "main": {
     "changed": [
       "Navigating to a PDF printable link for a roster that doesn't exist will now inform you of such and let you go back to the My Rosters page."
+    ],
+    "added": [
+      "Rosters can now be renamed and deleted from the My Rosters page.",
+      "Roster groups can now be renamed, disbanded or deleted, either from the My Rosters page or within the roster group."
+    ],
+    "bugfixes": [
+      "Corrected profile data errors for Grima Wormtongue, Uruk-hai Scout, Uruk-hai Captain, and Nazgul of Dol Guldur."
     ]
   },
   "1.3": {
