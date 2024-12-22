@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.4": {
     "changed": [
       "Navigating to a PDF printable link for a roster that doesn't exist will now inform you of such and let you go back to the My Rosters page."
     ],
