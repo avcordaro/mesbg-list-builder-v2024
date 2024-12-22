@@ -1,4 +1,5 @@
 import {
+  Announcement,
   AutoAwesome,
   ChevronLeftOutlined,
   FolderOutlined,
@@ -407,6 +408,18 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "v2018 edition",
       action: () =>
         window.open("https://v2018.mesbg-list-builder.com/", "_blank").focus(),
+      active: false,
+    },
+    {
+      icon: <Announcement />,
+      label: "FAQs and Errata",
+      action: () =>
+        window
+          .open(
+            "https://www.warhammer-community.com/en-gb/downloads/middle-earth-strategy-battle-game/",
+            "_blank",
+          )
+          .focus(),
       active: false,
     },
   ];
