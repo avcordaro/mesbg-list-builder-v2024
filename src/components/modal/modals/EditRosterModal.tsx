@@ -41,7 +41,7 @@ export const EditRosterModal = () => {
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
         <Alert severity="warning" sx={{ mb: 2 }}>
           <Typography>
-            You can change the name of your roster. The ID, and thus the url to
+            You can change the name of your roster. The ID, and thus the URL to
             your roster, will remain unchanged!
           </Typography>
         </Alert>

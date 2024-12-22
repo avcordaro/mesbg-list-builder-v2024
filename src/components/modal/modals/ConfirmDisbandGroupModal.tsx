@@ -42,8 +42,8 @@ export const ConfirmDisbandGroupModal = () => {
 
         <Alert severity="info">
           <Typography>
-            Disbanding a roster group means the rosters will be moved to the top
-            of your &apos;My Rosters&apos; page.{" "}
+            Disbanding a roster group means the rosters will be moved back to
+            your &apos;My Rosters&apos; page.{" "}
             <strong>They will not be deleted!</strong>
           </Typography>
         </Alert>

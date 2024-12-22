@@ -43,11 +43,11 @@ export const ConfirmDeleteGroupModal = () => {
         {affectedRosters.length > 0 && (
           <Alert severity="error">
             <Typography>
-              Deleting this roster group will also delete the
+              Deleting this roster group will also delete the{" "}
               {affectedRosters.length === 1
                 ? "roster"
                 : `${affectedRosters.length} rosters`}{" "}
-              inside it
+              inside of it.
             </Typography>
           </Alert>
         )}
@@ -61,6 +61,7 @@ export const ConfirmDeleteGroupModal = () => {
           label="Confirm Group name"
           value={rosterGroupName}
           onChange={(e) => setRosterGroupName(e.target.value)}
+          sx={{ mt: 1 }}
         />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
