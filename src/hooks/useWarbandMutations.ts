@@ -211,7 +211,15 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
     console.debug(`Remove warband ${warbandId}`);
     const updatedRoster: Roster = {
       ...roster,
-      warbands: roster.warbands.filter(({ id }) => id !== warbandId),
+      warbands: roster.warbands
+        .filter(({ id }) => id !== warbandId)
+        .map((warband, index) => ({
+          ...warband,
+          meta: {
+            ...warband.meta,
+            num: index + 1,
+          },
+        })),
     };
     updateRoster(updatedRoster);
     triggerAlert(AlertTypes.DELETE_WARBAND_SUCCESS);
