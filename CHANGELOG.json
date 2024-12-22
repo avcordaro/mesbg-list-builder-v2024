@@ -4,7 +4,8 @@
       "Navigating to a PDF printable link for a roster that doesn't exist will now inform you of such and let you go back to the My Rosters page."
     ],
     "bugfixes": [
-      "Handle the bow and throw limits for Erebor & Dale using their army special rules"
+      "Handle the bow and throw limits for Erebor & Dale using their army special rules",
+      "Fixed typos on the profiles for Faramir and Iron Hills Ballista"
     ]
   },
   "1.3": {
