@@ -2042,7 +2042,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2261,7 +2261,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2302,7 +2302,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2338,7 +2338,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2416,7 +2416,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2457,7 +2457,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -2498,7 +2498,7 @@
         {
           "name": "Unholy Resurrection",
           "type": "Passive",
-          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Nazgul can use their Will points to improve this roll, as long as they are in range of the Necromancer's Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated models will be counted as casualties."
+          "description": "When slain, place a marker where this model was killed. Models may not overlap these markers for any reason. During the Priority phase of each turn, after Priority has been determined, roll a D6. On a 3+, remove the marker and immediately place this model anywhere within 3\" of the marker, but not in base contact with it. If this is not possible, place the model where the marker was. On a 1-2, the model is slain and the marker is removed. The Necromancer can use his Will points to improve this roll, as long as the Nazgul are in range of the Necromancer’s Master of the Nazgul special rule. Whilst the marker is in play, this model counts as being on the board for the purpose of determining if your army is Broken or reduced to 25%. However, a marker cannot hold objectives, and this model still counts as being slain for any special rules that come into effect when a model is slain, such as a Heroic Combat. If this model is slain by a Magical Power or an Elven weapon, they suffer a -1 penalty to their roll. When the game ends, any markers still on the board are removed and the associated   models will be counted as casualties."
         }
       ],
       "magic_powers": [],
@@ -5022,7 +5022,7 @@
         {
           "name": "A Traitor Within",
           "type": "Passive",
-          "description": "Grima can be deployed in two ways. He can be part of Saruman's warband whilst not taking up a space. In this case, he can move through enemy Control Zones and move through enemy models freely, however he cannot end his move overlapping with an enemy. He may also Charge as normal. Alternatively, Grima can be part of an enemy warband. He will still Active like a model in the controlling player's army. However he is considered a friendly model in the enemy army, and they may ignore his control zone, but they cannot shoot, Charge, Strike or target Grima with special rules. They also cannot shoot if Grima is In The Way, but he can still be target-ed by magical powers. These restrictions immediately end if Saruman is slain, Grima Charges an enemy, Grima destroys an enemy Siege Engine, or Grima interacts with an objective marker. Grima is then treated as a normal enemy model again, and can be Charged, shot at or slain like any other model."
+          "description": "Grima can be deployed in one of two ways, though his controlling player must decide which before either Army is deployed. Grima can either be deployed as part of Saruman’s Warband (in which case he will not take up a space in the Warband), or as part of the enemy Army.\n\nIf Grima chooses to be deployed as part of the enemy Army, he must select an enemy Hero. Once that Hero and their Warband has been deployed, Grima’s controlling player can deploy Grima as if he was also part of that Warband, following all the usual deployment rules. Grima is still part of his controlling player’s Army, and will Activate like any other model in his controlling player’s Army.\n\nIf Grima is deployed as part of the enemy Army, then enemy models treat him as a friendly model, and therefore cannot shoot him, Charge him, make Strikes against him, target him with special rules, or make a shooting attack in which Grima would be In The Way. They may also ignore his Control Zone. They can, however, target him with Magical Powers like any other enemy model.\n\nWhilst Grima is considered a friendly model, Grima may ignore the Control Zones of enemy models and may Move through enemy models as if they weren’t there. When Grima Moves this way, he cannot end his Move overlapping or in base contact with an enemy model. Grima can choose to Charge an enemy model as normal if he wishes.\n\nThese restrictions immediately end if Saruman is slain, if Grima Charges an enemy model, if Grima destroys an enemy Siege Engine, or if Grima interacts with an Objective Marker (such as destroying a Supply Marker or picking up an objective), at which point Grima is treated as a normal enemy model and can be Charged, shot at and slain like any other model."
         }
       ],
       "magic_powers": [],
@@ -5393,14 +5393,14 @@
     },
     "Uruk-Hai Captain": {
       "Mv": "6\"",
-      "Fv": "4",
-      "Sv": "5+",
-      "S": "4",
-      "D": "6",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "7",
       "A": "2",
       "W": "2",
-      "C": "7+",
-      "I": "7+",
+      "C": "6+",
+      "I": "6+",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [
@@ -5417,14 +5417,14 @@
     },
     "Uruk-Hai Captain (General)": {
       "Mv": "6\"",
-      "Fv": "4",
-      "Sv": "5+",
-      "S": "4",
-      "D": "6",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "7",
       "A": "3",
       "W": "3",
-      "C": "7+",
-      "I": "7+",
+      "C": "6+",
+      "I": "6+",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [
@@ -5482,14 +5482,14 @@
     },
     "Uruk-Hai Scout": {
       "Mv": "6\"",
-      "Fv": "3",
-      "Sv": "5+",
-      "S": "3",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
       "D": "4",
       "A": "1",
       "W": "1",
-      "C": "8+",
-      "I": "8+",
+      "C": "7+",
+      "I": "7+",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
