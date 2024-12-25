@@ -7,7 +7,7 @@ import { emptyWarband } from "../state/roster-building/roster";
 import { Roster } from "../types/roster.ts";
 
 export const useRosterMutations = () => {
-  const { id: rosterId } = useParams();
+  const { rosterId } = useParams();
   const openSidebar = useAppState((state) => state.openSidebar);
   const updateBuilderSidebar = useRosterBuildingState(
     (state) => state.updateBuilderSidebar,

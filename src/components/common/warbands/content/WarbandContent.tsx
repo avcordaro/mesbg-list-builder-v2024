@@ -31,7 +31,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
   },
   collapsed,
 }) => {
-  const { id: armyId } = useParams();
+  const { rosterId: armyId } = useParams();
   const mutations = useWarbandMutations(armyId, warbandId);
   const { openSidebar, setCurrentModal } = useAppState();
   const { updateBuilderSidebar } = useRosterBuildingState();

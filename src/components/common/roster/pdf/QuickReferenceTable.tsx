@@ -12,6 +12,7 @@ import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
 
 interface QuickReferenceTableProps {
   profiles: Profile[];
+  noCaption?: boolean;
 }
 
 const ReferenceRow = ({
@@ -107,7 +108,10 @@ function AdditionalRows({
   );
 }
 
-export const QuickReferenceTable = ({ profiles }: QuickReferenceTableProps) => {
+export const QuickReferenceTable = ({
+  profiles,
+  noCaption,
+}: QuickReferenceTableProps) => {
   const mounts = profiles
     .flatMap(
       (profile) =>
@@ -138,7 +142,9 @@ export const QuickReferenceTable = ({ profiles }: QuickReferenceTableProps) => {
   return (
     <>
       <TableContainer id="pdf-quick-ref" component="div" className="page-break">
-        <Typography variant="h5">Quick reference sheet</Typography>
+        {noCaption !== true && (
+          <Typography variant="h5">Quick reference sheet</Typography>
+        )}
         <Table>
           <TableHead>
             <TableRow>

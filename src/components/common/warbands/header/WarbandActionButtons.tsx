@@ -34,7 +34,7 @@ export const WarbandActionButtons: FunctionComponent<
   collapseAll,
 }) => {
   const { palette } = useTheme();
-  const { id: armyId } = useParams();
+  const { rosterId: armyId } = useParams();
   const mutations = useWarbandMutations(armyId, warbandId);
   const { getAdjustedMetaData } = useRosterInformation();
   const { leaderCompulsory, leader } = getAdjustedMetaData();

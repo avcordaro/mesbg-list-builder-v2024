@@ -16,7 +16,7 @@ export type RosterInformationFunctions = {
 };
 
 export const useRosterInformation = (): RosterInformationFunctions => {
-  const { id: rosterId } = useParams();
+  const { rosterId } = useParams();
   const currentRoster = useRosterBuildingState(
     (state): Roster => state.rosters.find(({ id }) => id === rosterId),
   );

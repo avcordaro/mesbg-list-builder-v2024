@@ -39,7 +39,7 @@ import { AiFillTrophy } from "react-icons/ai";
 import { FaChessRook } from "react-icons/fa";
 import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
 import { FactionLogo } from "../components/common/images/FactionLogo.tsx";
@@ -250,6 +250,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const screen = useScreenSize();
+  const { rosterId } = useParams();
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
 
@@ -327,10 +328,13 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       icon: <FaChessRook style={{ fontSize: "1.5rem" }} />,
       label: "Game Mode",
       action: () => {
-        console.log("Not implemented yet.");
+        if (rosterId) {
+          navigate(`/gamemode/-/${rosterId}`);
+        } else {
+          navigate("/gamemode/start");
+        }
       },
-      active: location.pathname.endsWith("/gamemode"),
-      disabled: true,
+      active: location.pathname.startsWith("/gamemode"),
     },
     {
       icon: <AiFillTrophy style={{ fontSize: "1.5rem" }} />,

@@ -3,9 +3,10 @@ import { PdfView } from "../components/common/roster/PdfView.tsx";
 import { AppFallback } from "../components/error-boundary/AppFallback.tsx";
 import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
-import { Gamemode } from "../pages/Gamemode.tsx";
 import { Settings } from "../pages/Settings.tsx";
 import { Roster } from "../pages/builder/Roster.tsx";
+import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
+import { SelectRoster } from "../pages/gamemode/SelectRoster.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
 import { RosterGroup } from "../pages/rosters/RosterGroup.tsx";
 import { Rosters } from "../pages/rosters/Rosters.tsx";
@@ -28,17 +29,22 @@ export const routes: RouteObject[] = [
         errorElement: <AppFallback />,
       },
       {
-        path: "roster/:id",
+        path: "roster/:rosterId",
         element: <Roster />,
         errorElement: <AppFallback />,
       },
       {
-        path: "roster/:id/gamemode",
+        path: "gamemode/start",
+        element: <SelectRoster />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "gamemode/-/:rosterId",
         element: <Gamemode />,
         errorElement: <AppFallback />,
       },
       {
-        path: "roster/:id/pdf-printable",
+        path: "roster/:rosterId/pdf-printable",
         element: <PdfView />,
         errorElement: <AppFallback />,
       },
