@@ -254,7 +254,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const { rosterId } = useParams();
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
-  const { startNewGame } = useGameModeState();
+  const { startNewGame, gameState } = useGameModeState();
 
   const groupedRosters = rosters.reduce(
     (groups, roster) => {
@@ -333,7 +333,8 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
         if (rosterId) {
           const roster = rosters.find((roster) => roster.id === rosterId);
           if (roster) {
-            startNewGame(roster);
+            const ongoingGame = gameState[roster.id];
+            if (!ongoingGame) startNewGame(roster);
             navigate(`/gamemode/-/${rosterId}`);
             return;
           }
