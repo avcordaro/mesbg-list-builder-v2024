@@ -103,7 +103,7 @@ export const StatTrackers = () => {
           <Paper
             key={index}
             sx={[{ p: 1 }, alive ? {} : { backgroundColor: "#EFEFEF" }]}
-            elevation={5}
+            elevation={alive ? 5 : 0}
           >
             <Stack direction="row">
               <Stack alignItems="center" sx={{ position: "relative" }}>
