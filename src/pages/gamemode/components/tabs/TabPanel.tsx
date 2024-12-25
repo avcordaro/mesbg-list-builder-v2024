@@ -15,7 +15,7 @@ export const TabPanel: FunctionComponent<
       id={slugify(tabName)}
       aria-labelledby={slugify(tabName)}
     >
-      {visible && <Box sx={{ p: 3 }}>{children}</Box>}
+      <Box sx={{ p: 3, display: "block" }}>{children}</Box>
     </div>
   );
 };

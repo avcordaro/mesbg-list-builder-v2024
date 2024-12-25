@@ -49,6 +49,7 @@ import { charts } from "../constants/charts.ts";
 import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
 import { useScreenSize } from "../hooks/useScreenSize.ts";
 import { useAppState } from "../state/app";
+import { useGameModeState } from "../state/gamemode";
 import { useRosterBuildingState } from "../state/roster-building";
 import { slugify } from "../utils/string.ts";
 
@@ -253,6 +254,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const { rosterId } = useParams();
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
+  const { startNewGame } = useGameModeState();
 
   const groupedRosters = rosters.reduce(
     (groups, roster) => {
@@ -329,10 +331,14 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "Game Mode",
       action: () => {
         if (rosterId) {
-          navigate(`/gamemode/-/${rosterId}`);
-        } else {
-          navigate("/gamemode/start");
+          const roster = rosters.find((roster) => roster.id === rosterId);
+          if (roster) {
+            startNewGame(roster);
+            navigate(`/gamemode/-/${rosterId}`);
+            return;
+          }
         }
+        navigate("/gamemode/start");
       },
       active: location.pathname.startsWith("/gamemode"),
     },
