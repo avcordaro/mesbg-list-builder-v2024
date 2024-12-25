@@ -17,16 +17,13 @@ import {
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { RosterInformation } from "../../components/common/roster-info/RosterInformation.tsx";
 import { WarbandList } from "../../components/common/warbands/WarbandList.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
-import { DrawerHeader } from "../../layout/Navigation.tsx";
 import { useAppState } from "../../state/app";
 import { useUserPreferences } from "../../state/preference";
 import { useTemporalRosterBuildingState } from "../../state/roster-building";
@@ -34,14 +31,13 @@ import {
   MobileRosterInfoToolbar,
   ROSTER_INFO_BAR_HEIGHT,
 } from "./MobileRosterInfoToolbar.tsx";
-
-const drawerWidth = 55;
+import { RosterInfoDrawer, drawerWidth } from "./RosterInfoDrawer.tsx";
 
 export const Roster = () => {
   const screen = useScreenSize();
   const { undo, redo, pastStates, futureStates, clear } =
     useTemporalRosterBuildingState((state) => state);
-  const { id } = useParams();
+  const { rosterId } = useParams();
   const { roster } = useRosterInformation();
   const { setCurrentModal } = useAppState();
   const displayMobileToolbar = useUserPreferences(
@@ -52,11 +48,10 @@ export const Roster = () => {
   const speedDialRef = useRef<HTMLDivElement | null>(null);
   const [fabOpen, setFabOpen] = useState(false);
   const [redoOpen, setRedoOpen] = useState(false);
-  const [infoOpen, setInfoOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => clear());
-  }, [id, clear]);
+  }, [rosterId, clear]);
 
   useEffect(() => {
     if (!roster) return () => {};
@@ -70,23 +65,6 @@ export const Roster = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [undo, redo, roster]);
-
-  useEffect(() => {
-    if (!roster) return () => {};
-    const handleOpenRosterInfo = () => {
-      setInfoOpen(true);
-    };
-
-    window.addEventListener(
-      "mlb-event--open-roster-info",
-      handleOpenRosterInfo,
-    );
-    return () =>
-      window.removeEventListener(
-        "mlb-event--open-roster-info",
-        handleOpenRosterInfo,
-      );
   }, [undo, redo, roster]);
 
   if (!roster) {
@@ -122,7 +100,7 @@ export const Roster = () => {
     {
       icon: <Print />,
       name: "Open Printable PDF view",
-      callback: () => navigate(`/roster/${id}/pdf-printable`),
+      callback: () => navigate(`/roster/${rosterId}/pdf-printable`),
       disabled: roster.metadata.units === 0,
     },
     {
@@ -177,23 +155,7 @@ export const Roster = () => {
 
           <WarbandList warbands={roster.warbands} />
         </Box>
-        <Drawer
-          variant={screen.getSize() === "desktop" ? "permanent" : "temporary"}
-          anchor="right"
-          sx={{
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: `${drawerWidth}ch`,
-            },
-          }}
-          open={infoOpen}
-        >
-          {screen.isDesktop && <DrawerHeader />}
-          <RosterInformation
-            roster={roster}
-            onClose={() => setInfoOpen(false)}
-          />
-        </Drawer>
+        <RosterInfoDrawer roster={roster} editable={true} />
         <Box ref={speedDialRef}>
           <SpeedDial
             ariaLabel="action-buttons"

@@ -16,6 +16,7 @@ import { Warnings } from "./sections/Warnings.tsx";
 export type RosterInformationProps = {
   roster: Roster;
   onClose: () => void;
+  editable?: boolean;
 };
 
 export const RosterInformation: FunctionComponent<RosterInformationProps> = (
@@ -58,38 +59,40 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
         </Typography>
       </Box>
 
-      <ButtonGroup fullWidth size="small">
-        <Button
-          endIcon={<BiPencil />}
-          sx={{ flexGrow: 1 }}
-          onClick={() =>
-            setCurrentModal(ModalTypes.EDIT_ROSTER_NAME, {
-              roster: props.roster,
-            })
-          }
-          data-test-id="edit-roster-name"
-        >
-          Edit name
-        </Button>
-        <Tooltip title="delete roster">
+      {props.editable && (
+        <ButtonGroup fullWidth size="small">
           <Button
-            color="error"
-            sx={{
-              width: "auto",
-              py: 1,
-              px: 2,
-            }}
+            endIcon={<BiPencil />}
+            sx={{ flexGrow: 1 }}
             onClick={() =>
-              setCurrentModal(ModalTypes.CONFIRM_DELETE_ROSTER, {
+              setCurrentModal(ModalTypes.EDIT_ROSTER_NAME, {
                 roster: props.roster,
               })
             }
-            data-test-id="delete-roster"
+            data-test-id="edit-roster-name"
           >
-            <Delete />
+            Edit name
           </Button>
-        </Tooltip>
-      </ButtonGroup>
+          <Tooltip title="delete roster">
+            <Button
+              color="error"
+              sx={{
+                width: "auto",
+                py: 1,
+                px: 2,
+              }}
+              onClick={() =>
+                setCurrentModal(ModalTypes.CONFIRM_DELETE_ROSTER, {
+                  roster: props.roster,
+                })
+              }
+              data-test-id="delete-roster"
+            >
+              <Delete />
+            </Button>
+          </Tooltip>
+        </ButtonGroup>
+      )}
 
       <Warnings {...props} />
       <RosterOverview {...props} />
