@@ -12,7 +12,7 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
+import { Badge, Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -327,7 +327,19 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
     },
     { divider: true },
     {
-      icon: <FaChessRook style={{ fontSize: "1.5rem" }} />,
+      icon: (
+        <Badge
+          variant="dot"
+          color="info"
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+          badgeContent={gameState[rosterId] ? 1 : 0}
+        >
+          <FaChessRook style={{ fontSize: "1.5rem" }} />
+        </Badge>
+      ),
       label: "Game Mode",
       action: () => {
         if (rosterId) {
