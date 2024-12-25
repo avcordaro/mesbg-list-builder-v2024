@@ -69,7 +69,6 @@ export const ProfileCards = () => {
       return [heroProfile, ...extraProfiles, ...unitProfiles];
     });
 
-  // TODO: sort the profiles...
   const uniqueProfiles = allProfiles.filter(
     (item, index, self) =>
       index === self.findIndex((t) => t.profile === item.profile),

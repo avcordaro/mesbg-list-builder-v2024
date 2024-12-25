@@ -34,20 +34,18 @@ const CheckboxList = ({ amount }: { amount: string }) => {
 
 export const StatTrackers = () => {
   const { roster } = useRosterInformation();
-  const { heroes } = createGameState(roster);
+  const { trackables } = createGameState(roster);
 
-  const rows = Object.entries(heroes)
-    .flatMap(([, hero]) => hero)
-    .map((hero) => {
-      const [might, will, fate, wounds] = hero.MWFW.split(":");
-      return {
-        name: hero.name,
-        might,
-        will,
-        fate,
-        wounds,
-      };
-    });
+  const rows = trackables.map((hero) => {
+    const [might, will, fate, wounds] = hero.MWFW.split(":");
+    return {
+      name: hero.name,
+      might,
+      will,
+      fate,
+      wounds,
+    };
+  });
 
   const cellStyling: SxProps<Theme> = {
     border: 0,

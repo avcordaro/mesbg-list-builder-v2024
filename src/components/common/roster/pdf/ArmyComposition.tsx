@@ -53,7 +53,7 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
   );
 }
 
-export const ArmyComposition = () => {
+export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
   const { roster, getAdjustedMetaData } = useRosterInformation();
 
   const warbands = roster.warbands.map((warband) => [
@@ -67,48 +67,52 @@ export const ArmyComposition = () => {
 
   return (
     <Box id="pdf-army" className="page-break">
-      <Typography variant="h5" sx={{ mb: 2 }}>
-        Army Composition
-      </Typography>
-      <Stack
-        direction="row"
-        gap={2}
-        sx={{ mb: 1 }}
-        justifyContent="space-between"
-      >
-        <Typography>
-          Points: <b>{points}</b>
-        </Typography>
-        <Typography>
-          Units: <b>{units}</b>
-        </Typography>
-        <Typography>
-          Bows: <b>{bows}</b>
-        </Typography>{" "}
-        <Typography>
-          Throwing weapons: <b>{throwingWeapons}</b>
-        </Typography>
-        <Typography>
-          Might / Will / Fate:{" "}
-          <b>
-            {might} / {will} / {fate}
-          </b>
-        </Typography>
-      </Stack>{" "}
-      <Stack
-        direction="row"
-        gap={2}
-        sx={{ mb: 1 }}
-        justifyContent="space-around"
-      >
-        <Typography>
-          Break Point:{" "}
-          <b>{Math.floor((break_point ?? 0.49) * units)} Remaining</b>
-        </Typography>
-        <Typography>
-          Quartered: <b>{Math.floor(0.25 * units)} Remaining</b>
-        </Typography>
-      </Stack>
+      {noCaption !== true && (
+        <>
+          <Typography variant="h5" sx={{ mb: 2 }}>
+            Army Composition
+          </Typography>
+          <Stack
+            direction="row"
+            gap={2}
+            sx={{ mb: 1 }}
+            justifyContent="space-between"
+          >
+            <Typography>
+              Points: <b>{points}</b>
+            </Typography>
+            <Typography>
+              Units: <b>{units}</b>
+            </Typography>
+            <Typography>
+              Bows: <b>{bows}</b>
+            </Typography>{" "}
+            <Typography>
+              Throwing weapons: <b>{throwingWeapons}</b>
+            </Typography>
+            <Typography>
+              Might / Will / Fate:{" "}
+              <b>
+                {might} / {will} / {fate}
+              </b>
+            </Typography>
+          </Stack>{" "}
+          <Stack
+            direction="row"
+            gap={2}
+            sx={{ mb: 1 }}
+            justifyContent="space-around"
+          >
+            <Typography>
+              Break Point:{" "}
+              <b>{Math.floor((break_point ?? 0.49) * units)} Remaining</b>
+            </Typography>
+            <Typography>
+              Quartered: <b>{Math.floor(0.25 * units)} Remaining</b>
+            </Typography>
+          </Stack>
+        </>
+      )}
       <TableContainer component="div">
         <Table>
           <TableBody>
