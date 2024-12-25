@@ -1,10 +1,10 @@
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { Button, Stack, Tab, Tabs } from "@mui/material";
+import { Button, ButtonGroup, Stack, Tab, Tabs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { useState, SyntheticEvent } from "react";
+import { SyntheticEvent, useState } from "react";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { GiCrackedShield } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ export const Gamemode = () => {
   const screen = useScreenSize();
   const { roster, getAdjustedMetaData } = useRosterInformation();
   const [value, setValue] = useState(0);
-  const { gameState, updateGameState } = useGameModeState();
+  const { gameState, updateGameState, endGame } = useGameModeState();
   const navigate = useNavigate();
 
   if (!roster) {
@@ -84,18 +84,30 @@ export const Gamemode = () => {
             justifyContent: "space-between",
           }}
         >
-          <Button
-            startIcon={<ChevronLeft />}
-            onClick={() => {
-              if (window.history.state && window.history.state.idx > 0) {
-                navigate(-1);
-              } else {
-                navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
-              }
-            }}
-          >
-            Back
-          </Button>
+          <Box>
+            <ButtonGroup>
+              <Button
+                startIcon={<ChevronLeft />}
+                onClick={() => {
+                  if (window.history.state && window.history.state.idx > 0) {
+                    navigate(-1);
+                  } else {
+                    navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
+                  }
+                }}
+              >
+                Back
+              </Button>
+              <Button
+                onClick={() => {
+                  endGame(roster.id);
+                  navigate("/gamemode/start");
+                }}
+              >
+                End game
+              </Button>
+            </ButtonGroup>
+          </Box>
           <Stack direction="row" gap={2}>
             <Typography variant="h6" className="middle-earth">
               Casualties:
