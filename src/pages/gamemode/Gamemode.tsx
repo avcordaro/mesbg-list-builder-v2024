@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { useState, SyntheticEvent } from "react";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { GiCrackedShield } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { armyListData } from "../../assets/data.ts";
 import { SquareIconButton } from "../../components/common/icon-button/SquareIconButton.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
@@ -25,6 +25,7 @@ export const Gamemode = () => {
   const { roster, getAdjustedMetaData } = useRosterInformation();
   const [value, setValue] = useState(0);
   const { gameState, updateGameState } = useGameModeState();
+  const navigate = useNavigate();
 
   if (!roster) {
     return (
@@ -83,7 +84,18 @@ export const Gamemode = () => {
             justifyContent: "space-between",
           }}
         >
-          <Button startIcon={<ChevronLeft />}>Back</Button>
+          <Button
+            startIcon={<ChevronLeft />}
+            onClick={() => {
+              if (window.history.state && window.history.state.idx > 0) {
+                navigate(-1);
+              } else {
+                navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
+              }
+            }}
+          >
+            Back
+          </Button>
           <Stack direction="row" gap={2}>
             <Typography variant="h6" className="middle-earth">
               Casualties:
