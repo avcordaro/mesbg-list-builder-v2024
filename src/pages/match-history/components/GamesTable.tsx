@@ -150,22 +150,34 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
 
                 <TableHead>
                   <TableRow
-                    sx={{ "& > *": { borderBottom: "unset !important" } }}
+                    sx={{
+                      "& > *": {
+                        borderBottom: "unset !important",
+                        textAlign: "center",
+                      },
+                    }}
                   >
                     <TableCell>Game duration</TableCell>
                     <TableCell>Bows</TableCell>
+                    <TableCell>Throwing weapons</TableCell>
                     <TableCell>Scenario</TableCell>
                     <TableCell>Opponents armies</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow
-                    sx={{ "& > *": { borderBottom: "unset !important" } }}
+                    sx={{
+                      "& > *": {
+                        borderBottom: "unset !important",
+                        textAlign: "center",
+                      },
+                    }}
                   >
                     <TableCell>
                       {row.duration && <>{row.duration} minutes</>}
                     </TableCell>
                     <TableCell>{row.bows || "0"}</TableCell>
+                    <TableCell>{row.throwingWeapons || "0"}</TableCell>
                     <TableCell>{row.scenarioPlayed}</TableCell>
                     <TableCell>
                       {row.opponentArmies || (
