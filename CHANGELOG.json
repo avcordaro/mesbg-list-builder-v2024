@@ -1,5 +1,6 @@
 {
   "main": {
+    "added": ["Reimplemented and enabled the fan favorite 'gamemode' feature."],
     "bugfixes": [
       "Fixed an issue for the King's Guard upgrade for Rivendell Warriors in the Last Alliance",
       "Fixed the missing option for upgrading Grim Hammer Warriors to Guardians of the King in Thror's warband.",
