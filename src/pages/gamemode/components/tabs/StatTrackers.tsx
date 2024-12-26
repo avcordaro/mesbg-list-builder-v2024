@@ -99,6 +99,16 @@ export const StatTrackers = () => {
 
   return (
     <Stack gap={1}>
+      <Typography
+        variant="body2"
+        color="textSecondary"
+        sx={{
+          textAlign: "center",
+        }}
+      >
+        Note: Heroes and warbeast are automatically added as casualty when their
+        wounds reach 0.
+      </Typography>
       {trackers.map((tracker, index) => {
         const alive = isAlive(tracker);
         return (
