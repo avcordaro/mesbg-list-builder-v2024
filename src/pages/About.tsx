@@ -132,14 +132,12 @@ export const About = () => (
         <Stack component="ul" sx={{ listStyle: "none", pl: 0 }} gap={1}>
           <Box component="li">
             <Typography>
-              <strong>Restoring old goods;</strong> With the transition to new
-              edition of MESBG we redeveloped quite a lot of the building blocks
-              of the list builder. This gave us a lot of freedom to do
-              improvements as well as allowed us to develop at a higher
-              velocity. There are some features that are currently not yet
-              reimplemented. This includes the digital MWFW trackers (Gamemode)
-              and the match history breakdown. Our first focus is bringing back
-              old features.
+              <strong>Internationalization;</strong> We are committed to support
+              the many different MESBG communities all around the world. With
+              accessibility being one of our top priorities, we would also like
+              to make it linguistically available for everyone. Staring with
+              Spanish as our first focus, we&apos;d like to open our gates for
+              those willing to help translate the many rules and profiles.
             </Typography>
           </Box>
           <Box component="li">
@@ -163,16 +161,6 @@ export const About = () => (
               can provide more fancy stuff like that. Such as creating a link to
               a readonly roster and allowing users to import it into their own
               accounts.
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography>
-              <strong>Internationalization;</strong> We are committed to support
-              the many different MESBG communities all around the world. With
-              accessibility being one of our top priorities, we would also like
-              to make it linguistically available for everyone. Staring with
-              Spanish as our first focus, we&apos;d like to open our gates for
-              those willing to help translate the many rules and profiles.
             </Typography>
           </Box>
         </Stack>
