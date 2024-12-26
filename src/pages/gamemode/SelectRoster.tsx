@@ -79,25 +79,29 @@ export const SelectRoster = () => {
   const { rosters } = useRosterBuildingState();
   const navigate = useNavigate();
 
-  const groupedRosters = Object.entries(
-    rosters.reduce(
-      (acc, currentValue) => {
-        const groupKey = currentValue.group || "ungrouped";
-
-        if (!acc[groupKey]) acc[groupKey] = [];
-
-        acc[groupKey].push(currentValue);
-
-        return acc;
-      },
-      {} as Record<string, Roster[]>,
-    ),
-  );
-
+  const gameIds = Object.keys(gameState);
   const games = Object.entries(gameState).filter(([gameId]) => {
     const roster = rosters.find((roster) => roster.id === gameId);
     return !!roster;
-  }).length;
+  });
+  const gameCount = games.length;
+
+  const groupedRosters = Object.entries(
+    rosters
+      .filter((roster) => !gameIds.includes(roster.id))
+      .reduce(
+        (acc, currentValue) => {
+          const groupKey = currentValue.group || "ungrouped";
+
+          if (!acc[groupKey]) acc[groupKey] = [];
+
+          acc[groupKey].push(currentValue);
+
+          return acc;
+        },
+        {} as Record<string, Roster[]>,
+      ),
+  );
 
   return (
     <Container
@@ -110,14 +114,14 @@ export const SelectRoster = () => {
         Gamemode
       </Typography>
 
-      {games > 0 && (
+      {gameCount > 0 && (
         <Divider sx={{ by: 2 }}>
           <Typography variant="h6">Continue an existing game</Typography>
         </Divider>
       )}
 
       <List sx={{ width: "100%", bgcolor: "background.paper" }} dense>
-        {Object.entries(gameState)
+        {games
           .sort((a, b) => b[1].started - a[1].started)
           .map(([key, value], index) => {
             const roster = rosters.find((roster) => roster.id === key);
@@ -144,10 +148,10 @@ export const SelectRoster = () => {
           })}
       </List>
 
-      {games > 0 ? (
+      {gameCount > 0 ? (
         <Divider sx={{ my: 2 }}>
           <Typography variant="h6">
-            Or start a new game for one of your rosters
+            Or start a game for one of your other rosters
           </Typography>
         </Divider>
       ) : (
@@ -165,6 +169,7 @@ export const SelectRoster = () => {
       <List sx={{ width: "100%", bgcolor: "background.paper" }} dense>
         {rosters
           .filter((roster) => !roster.group)
+          .filter((roster) => !gameIds.includes(roster.id))
           .map((roster, index) => (
             <RosterListItem roster={roster} key={index} />
           ))}

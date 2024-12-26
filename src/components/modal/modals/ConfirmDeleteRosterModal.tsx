@@ -3,6 +3,7 @@ import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
+import { useGameModeState } from "../../../state/gamemode";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
 
@@ -13,12 +14,14 @@ export const ConfirmDeleteRosterModal = () => {
     triggerAlert,
   } = useAppState();
   const { deleteRoster } = useRosterBuildingState();
+  const { endGame } = useGameModeState();
   const navigate = useNavigate();
 
   const handleConfirmDelete = (e) => {
     e.preventDefault();
 
     deleteRoster(roster);
+    endGame(roster.id);
     if (manualRedirect !== true) {
       navigate("/rosters");
     }
