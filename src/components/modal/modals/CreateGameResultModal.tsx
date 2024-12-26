@@ -1,6 +1,7 @@
 import { Button, DialogActions, DialogContent } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import {
@@ -11,22 +12,25 @@ import {
 export const CreateGameResultModal = () => {
   const { closeModal, modalContext } = useAppState();
   const { endGame } = useGameModeState();
+  const navigate = useNavigate();
   const childRef = useRef<GameResultsFormHandlers>(null);
 
-  const saveGameToState = () => {
+  const saveGameToState = async () => {
     if (childRef.current) {
       if (childRef.current.saveToState()) {
+        if (modalContext.gameId) {
+          await navigate("/gamemode/start");
+          endGame(modalContext.gameId);
+        }
+
         closeModal();
       }
     }
-
-    if (modalContext.gameId) {
-      endGame(modalContext.gameId);
-    }
   };
 
-  const closeModalAndGame = () => {
+  const closeModalAndGame = async () => {
     if (modalContext.gameId) {
+      await navigate("/gamemode/start");
       endGame(modalContext.gameId);
       closeModal();
     }

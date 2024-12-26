@@ -171,7 +171,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
   }));
 
   return (
-    <Box sx={{ py: 3 }}>
+    <Box>
       {missingRequiredFields.length > 0 && (
         <Alert severity="error" sx={{ mb: 3 }}>
           Please fill in the following required fields:{" "}
