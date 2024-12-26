@@ -153,7 +153,6 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
                     sx={{ "& > *": { borderBottom: "unset !important" } }}
                   >
                     <TableCell>Game duration</TableCell>
-                    <TableCell>Alliance level</TableCell>
                     <TableCell>Bows</TableCell>
                     <TableCell>Scenario</TableCell>
                     <TableCell>Opponents armies</TableCell>
@@ -166,7 +165,6 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
                     <TableCell>
                       {row.duration && <>{row.duration} minutes</>}
                     </TableCell>
-                    <TableCell>{row.alliance}</TableCell>
                     <TableCell>{row.bows || "0"}</TableCell>
                     <TableCell>{row.scenarioPlayed}</TableCell>
                     <TableCell>

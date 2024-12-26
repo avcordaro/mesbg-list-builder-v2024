@@ -12,7 +12,6 @@ import {
   Tooltip,
 } from "chart.js";
 import { PastGame } from "../../../state/recent-games/history";
-import { AllianceLevelsPieChart } from "./charts/AllianceLevelsPieChart.tsx";
 import { ArmiesPlayedAgainstBarChart } from "./charts/ArmiesPlayedAgainstBarChart.tsx";
 import { ArmiesPlayedBarChart } from "./charts/ArmiesPlayedBarChart.tsx";
 import { MatchesOverTimeMixedChart } from "./charts/MatchesOverTimeMixedChart.tsx";
@@ -42,31 +41,31 @@ interface ChartsProps {
 export const Charts = ({ games }: ChartsProps) => {
   return (
     <Grid2 container spacing={6} alignItems="center" justifyContent="center">
-      <Grid2 size={12}>
+      <Grid2 size={{ sm: 12, md: 9.1 }}>
         <MatchesOverTimeMixedChart data={games} />
       </Grid2>
+
       <Grid2 size={{ sm: 12, md: 4 }}>
         <ResultsPieChart data={games} />
       </Grid2>
       <Grid2 size={{ sm: 12, md: 4 }}>
-        <VictoryPointsSpreadPieChart data={games} />
-      </Grid2>
-      <Grid2 size={{ sm: 12, md: 4 }}>
-        <AllianceLevelsPieChart data={games} />
-      </Grid2>
-      <Grid2 size={{ xs: 12, lg: 6 }}>
-        <ScenariosPlayedBarChart data={games} />
-      </Grid2>
-      <Grid2 size={{ xs: 12, lg: 6 }}>
-        <ArmiesPlayedBarChart data={games} />
-      </Grid2>
-      <Grid2 size={{ xs: 12, lg: 4 }}>
         <OpponentsPlayedBarChart data={games} />
       </Grid2>
-      <Grid2 size={{ xs: 12, lg: 4 }}>
+      <Grid2 size={{ sm: 12, md: 4 }}>
+        <ScenariosPlayedBarChart data={games} />
+      </Grid2>
+
+      <Grid2 size={{ sm: 12, md: 4 }}>
+        <VictoryPointsSpreadPieChart data={games} />
+      </Grid2>
+      <Grid2 size={{ sm: 12, md: 5 }}>
         <OpponentsVictoryPointsBarChart data={games} />
       </Grid2>
-      <Grid2 size={{ xs: 12, lg: 4 }}>
+
+      <Grid2 size={{ sm: 12, md: 6 }}>
+        <ArmiesPlayedBarChart data={games} />
+      </Grid2>
+      <Grid2 size={{ sm: 12, md: 6 }}>
         <ArmiesPlayedAgainstBarChart data={games} />
       </Grid2>
     </Grid2>

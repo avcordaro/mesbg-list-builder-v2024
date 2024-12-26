@@ -97,7 +97,7 @@ export const ArmyPicker: FunctionComponent<ArmyPickerProps> = (props) => {
         return (
           <ListItem {...props}>
             <ListItemIcon>
-              <FactionLogo faction={option.faction} />
+              <FactionLogo faction={option.army} />
             </ListItemIcon>
             <ListItemText>
               <Typography>{option.army}</Typography>
