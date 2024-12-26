@@ -15,6 +15,7 @@ export type PastGame = {
   // Player/User data
   armies: string;
   bows: number;
+  throwingWeapons: number;
   victoryPoints: number;
 
   // Opponent data

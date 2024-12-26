@@ -67,9 +67,9 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     }
 
     const resultList: Record<Result, boolean> = {
-      Won: vp > ovp,
-      Draw: vp === ovp,
-      Lost: vp < ovp,
+      Won: Number(vp) > Number(ovp),
+      Draw: Number(vp) === Number(ovp),
+      Lost: Number(vp) < Number(ovp),
     };
     return Object.entries(resultList).find(([, value]) => value)[0] as Result;
   };
@@ -117,6 +117,8 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     if (!hasValue(formValues.victoryPoints))
       missingFields.push("Victory points");
     if (!hasValue(formValues.bows)) missingFields.push("Bows");
+    if (!hasValue(formValues.throwingWeapons))
+      missingFields.push("throwingWeapons");
     if (
       hasValue(formValues.opponentName) ||
       hasValue(formValues.opponentVictoryPoints)
@@ -137,6 +139,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
       case "edit":
         editGame({ ...formValues });
         break;
+      case "record":
       case "create":
         addGame({ ...formValues });
         break;
@@ -154,6 +157,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
       armies: "",
       points: 0,
       bows: 0,
+      throwingWeapons: 0,
       victoryPoints: 0,
       opponentArmies: "",
       opponentName: "",
@@ -318,7 +322,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
                 .map((o) => o.trim())}
             />
           </Grid2>
-          <Grid2 size={isMobile ? 12 : 6}>
+          <Grid2 size={isMobile ? 12 : 3}>
             <TextField
               required
               error={missingRequiredFields.includes("Bows")}
@@ -328,6 +332,20 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
               type="number"
               slotProps={{ htmlInput: { min: 0 } }}
               value={formValues.bows}
+              onChange={handleChangeByEvent}
+              size="small"
+            />
+          </Grid2>
+          <Grid2 size={isMobile ? 12 : 3}>
+            <TextField
+              required
+              error={missingRequiredFields.includes("throwingWeapons")}
+              fullWidth
+              label="Throwing Weapons"
+              name="throwingWeapons"
+              type="number"
+              slotProps={{ htmlInput: { min: 0 } }}
+              value={formValues.throwingWeapons}
               onChange={handleChangeByEvent}
               size="small"
             />
