@@ -491,46 +491,48 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             />
           </Button>
           <Box flexGrow={1} />
-          {!screen.isDesktop && location.pathname.startsWith("/roster/") && (
-            <>
-              {screen.isMobile || open ? (
-                <IconButton
-                  aria-label="open drawer"
-                  onClick={() =>
-                    window.dispatchEvent(
-                      new Event("mlb-event--open-roster-info"),
-                    )
-                  }
-                  sx={{
-                    backgroundColor: (theme) => theme.palette.primary.main,
-                    color: (theme) => theme.palette.primary.contrastText,
-                    "&:hover": {
-                      backgroundColor: (theme) => theme.palette.primary.light,
-                    },
-                  }}
-                >
-                  <Info />
-                </IconButton>
-              ) : (
-                <Button
-                  color="primary"
-                  variant="contained"
-                  aria-label="open drawer"
-                  onClick={() =>
-                    window.dispatchEvent(
-                      new Event("mlb-event--open-roster-info"),
-                    )
-                  }
-                  startIcon={<Info />}
-                  sx={{
-                    whiteSpace: "nowrap", // Prevent text from wrapping
-                  }}
-                >
-                  Roster information
-                </Button>
-              )}
-            </>
-          )}
+          {!screen.isDesktop &&
+            (location.pathname.startsWith("/roster/") ||
+              location.pathname.startsWith("/gamemode/-/")) && (
+              <>
+                {screen.isMobile || open ? (
+                  <IconButton
+                    aria-label="open drawer"
+                    onClick={() =>
+                      window.dispatchEvent(
+                        new Event("mlb-event--open-roster-info"),
+                      )
+                    }
+                    sx={{
+                      backgroundColor: (theme) => theme.palette.primary.main,
+                      color: (theme) => theme.palette.primary.contrastText,
+                      "&:hover": {
+                        backgroundColor: (theme) => theme.palette.primary.light,
+                      },
+                    }}
+                  >
+                    <Info />
+                  </IconButton>
+                ) : (
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    aria-label="open drawer"
+                    onClick={() =>
+                      window.dispatchEvent(
+                        new Event("mlb-event--open-roster-info"),
+                      )
+                    }
+                    startIcon={<Info />}
+                    sx={{
+                      whiteSpace: "nowrap", // Prevent text from wrapping
+                    }}
+                  >
+                    Roster information
+                  </Button>
+                )}
+              </>
+            )}
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} id="navigation-drawer">

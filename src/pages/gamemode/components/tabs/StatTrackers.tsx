@@ -7,6 +7,7 @@ import { FaSkullCrossbones } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { SquareIconButton } from "../../../../components/common/icon-button/SquareIconButton.tsx";
 import { UnitProfilePicture } from "../../../../components/common/images/UnitProfilePicture.tsx";
+import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
 import { useGameModeState } from "../../../../state/gamemode";
 import { Trackable } from "../../../../state/gamemode/gamestate";
 
@@ -61,6 +62,7 @@ const Counter: FunctionComponent<{
 export const StatTrackers = () => {
   const { rosterId } = useParams();
   const { gameState, updateGameState } = useGameModeState();
+  const screen = useScreenSize();
 
   const trackers = gameState[rosterId]?.trackables || [];
 
@@ -105,7 +107,7 @@ export const StatTrackers = () => {
             sx={[{ p: 1 }, alive ? {} : { backgroundColor: "#EFEFEF" }]}
             elevation={alive ? 5 : 0}
           >
-            <Stack direction="row">
+            <Stack direction={screen.isMobile ? "column" : "row"}>
               <Stack alignItems="center" sx={{ position: "relative" }}>
                 <UnitProfilePicture
                   army={tracker.profile_origin}
@@ -117,7 +119,7 @@ export const StatTrackers = () => {
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
-                    width: "14ch",
+                    width: screen.isMobile ? "28ch" : "14ch",
                     textOverflow: "ellipsis",
                     textAlign: "center",
                     opacity: alive ? 1 : 0.45,
@@ -136,13 +138,24 @@ export const StatTrackers = () => {
                   {!alive && <FaSkullCrossbones fontSize="4rem" />}
                 </Box>
               </Stack>
-              <Stack direction="row" justifyContent="space-around" flexGrow={1}>
+              <Stack
+                direction={screen.isMobile ? "column" : "row"}
+                gap={screen.isMobile ? 1 : 0}
+                sx={{
+                  ml: screen.isMobile ? 2 : 0,
+                }}
+                justifyContent="space-around"
+                flexGrow={1}
+              >
                 {tracker.xMWFW.split(":").map((value, statIndex) => {
                   const initialValue = tracker.MWFW.split(":")[statIndex];
                   return (
                     <Stack
-                      justifyContent="center"
+                      justifyContent={
+                        screen.isMobile ? "space-between" : "center"
+                      }
                       alignItems="center"
+                      direction={screen.isMobile ? "row" : "column"}
                       key={statIndex}
                       sx={{ opacity: alive ? 1 : 0.45 }}
                     >
