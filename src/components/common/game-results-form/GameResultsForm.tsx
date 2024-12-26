@@ -1,7 +1,6 @@
 import {
   Autocomplete,
   Box,
-  FormHelperText,
   Grid2,
   InputAdornment,
   TextField,
@@ -9,10 +8,9 @@ import {
 } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { ChangeEvent, forwardRef, useImperativeHandle, useState } from "react";
 import { v4 } from "uuid";
+import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
@@ -23,39 +21,13 @@ type Result = "Won" | "Lost" | "Draw";
 
 const results: Result[] = ["Won", "Lost", "Draw"];
 
-const allianceLevels: string[] = [
-  "Pure",
-  "Historical",
-  "Convenient",
-  "Impossible",
-  "Legendary Legion",
-];
-
 const scenarios = [
   "Domination",
   "To the death!",
   "Hold ground",
-  "Lords of battle",
   "Reconnoitre",
-  "A clash by moonlight",
-  "Seize the price",
-  "Contest of champions",
-  "Capture and control",
-  "Heirloom of ages past",
-  "Fog of war",
-  "Storm the camp",
-  "Command the battlefield",
-  "Retrieval",
-  "Breakthrough",
   "Destroy the supplies",
-  "Divide & Conquer",
-  "Assassination",
-  "No escape",
-  "Total conquest",
-  "Take and hold",
-  "Clash of champions",
-  "Cornered",
-  "Duel of wits",
+  "Fog of war",
 ].map((s) => s.replace(/(^\w)|(\s+\w)/g, (letter) => letter.toUpperCase()));
 
 export type GameResultsFormHandlers = {
@@ -66,10 +38,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
   const { modalContext } = useAppState();
   const { addGame, editGame } = useRecentGamesState();
 
-  const theme = useTheme();
-  const isSmallDesktop = useMediaQuery(theme.breakpoints.down("lg"));
-  const isTablet = useMediaQuery(theme.breakpoints.down("md"));
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { isMobile, isTablet } = useScreenSize();
 
   const [formValues, setFormValues] = useState<PastGame>({
     id: v4(),
@@ -145,7 +114,6 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     if (!isAboveZero(formValues.points)) missingFields.push("Points");
     if (!hasValue(formValues.result)) missingFields.push("Match result");
     if (!hasValue(formValues.armies)) missingFields.push("Armies");
-    if (!hasValue(formValues.alliance)) missingFields.push("Alliance level");
     if (!hasValue(formValues.victoryPoints))
       missingFields.push("Victory points");
     if (!hasValue(formValues.bows)) missingFields.push("Bows");
@@ -184,7 +152,6 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
       result: "Won",
       scenarioPlayed: null,
       armies: "",
-      alliance: "",
       points: 0,
       bows: 0,
       victoryPoints: 0,
@@ -330,7 +297,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
             />
           </Grid2>
         </Grid2>
-        <Grid2 container component="fieldset">
+        <Grid2 container component="fieldset" size={isMobile ? 12 : 6}>
           <Typography component="legend" sx={{ mb: 1 }}>
             Your army information
           </Typography>
@@ -345,65 +312,13 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
                   "armies",
                   values.map((v) => v.army).join(", "),
                 );
-
-                if (values.length === 1 && values[0].type.includes("LL"))
-                  // Single army roster in LL format are always considered a Legendary Legion
-                  handleChangeField("alliance", "Legendary Legion");
-                else if (values.length === 1)
-                  // Single army roster in outside the LL format are always considered Pure
-                  handleChangeField("alliance", "Pure");
-                else if (
-                  values.length > 1 &&
-                  ["Pure", "Legendary Legion"].includes(formValues.alliance)
-                )
-                  // Multi army rosters cannot be considered pure or Legendary Legion, and should be set to something else.
-                  handleChangeField("alliance", "Historical");
               }}
               defaultSelection={formValues.armies
                 .split(",")
                 .map((o) => o.trim())}
             />
           </Grid2>
-          <Grid2 size={isSmallDesktop ? 12 : 8}>
-            <Tooltip
-              title={
-                {
-                  Pure: "Your alliance is fixed on Pure as you have only 1 army selected.",
-                  "Legendary Legion":
-                    "Your alliance is fixed on Legendary Legion as you have selected an LL.",
-                }[formValues.alliance]
-              }
-            >
-              <Autocomplete
-                options={allianceLevels}
-                value={formValues.alliance}
-                onChange={(_, newValue) =>
-                  handleChangeField("alliance", newValue)
-                }
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    label="Alliance level"
-                    required
-                    error={missingRequiredFields.includes("Alliance level")}
-                    size="small"
-                  />
-                )}
-                getOptionDisabled={(option) =>
-                  ["Pure", "Legendary Legion"].includes(option)
-                }
-                disabled={["Pure", "Legendary Legion"].includes(
-                  formValues.alliance,
-                )}
-                fullWidth
-              />
-            </Tooltip>
-            <FormHelperText sx={{ px: 1 }}>
-              The level of alliance your armies are. Forces consisting of only
-              one faction could be considered pure.
-            </FormHelperText>
-          </Grid2>
-          <Grid2 size={isSmallDesktop ? (isTablet ? 12 : 6) : 2}>
+          <Grid2 size={isMobile ? 12 : 6}>
             <TextField
               required
               error={missingRequiredFields.includes("Bows")}
@@ -417,7 +332,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
               size="small"
             />
           </Grid2>
-          <Grid2 size={isSmallDesktop ? (isTablet ? 12 : 6) : 2}>
+          <Grid2 size={isMobile ? 12 : 6}>
             <TextField
               required
               error={missingRequiredFields.includes("Victory points")}
@@ -432,38 +347,10 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
             />
           </Grid2>
         </Grid2>
-        <Grid2 container component="fieldset" size={12}>
+        <Grid2 container component="fieldset" size={isMobile ? 12 : 6}>
           <Typography component="legend" sx={{ mb: 1 }}>
             Your opponents information
           </Typography>
-          <Grid2 size={isTablet ? 12 : 8}>
-            <TextField
-              fullWidth
-              label="Opponent Name"
-              name="opponentName"
-              value={formValues.opponentName}
-              onChange={handleChangeByEvent}
-              required={
-                !!formValues.opponentName || !!formValues.opponentVictoryPoints
-              }
-              size="small"
-            />
-          </Grid2>
-          <Grid2 size={isTablet ? 12 : 4}>
-            <TextField
-              fullWidth
-              label="Opponent's Victory Points"
-              name="opponentVictoryPoints"
-              value={formValues.opponentVictoryPoints}
-              type="number"
-              slotProps={{ htmlInput: { min: 0 } }}
-              onChange={handleChangeVictoryPoints}
-              size="small"
-              required={
-                !!formValues.opponentName || !!formValues.opponentVictoryPoints
-              }
-            />
-          </Grid2>
           <Grid2 size={12}>
             <ArmyPicker
               label="Opponent Armies"
@@ -477,6 +364,34 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
               defaultSelection={formValues.opponentArmies
                 .split(",")
                 .map((o) => o.trim())}
+            />
+          </Grid2>
+          <Grid2 size={isMobile ? 12 : 6}>
+            <TextField
+              fullWidth
+              label="Opponent Name"
+              name="opponentName"
+              value={formValues.opponentName}
+              onChange={handleChangeByEvent}
+              required={
+                !!formValues.opponentName || !!formValues.opponentVictoryPoints
+              }
+              size="small"
+            />
+          </Grid2>
+          <Grid2 size={isMobile ? 12 : 6}>
+            <TextField
+              fullWidth
+              label="Victory Points"
+              name="opponentVictoryPoints"
+              value={formValues.opponentVictoryPoints}
+              type="number"
+              slotProps={{ htmlInput: { min: 0 } }}
+              onChange={handleChangeVictoryPoints}
+              size="small"
+              required={
+                !!formValues.opponentName || !!formValues.opponentVictoryPoints
+              }
             />
           </Grid2>
         </Grid2>

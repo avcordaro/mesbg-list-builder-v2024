@@ -33,7 +33,7 @@ export const SavedGameResults = () => {
   const actions = [
     {
       icon: <Add />,
-      name: "Add game manually",
+      name: "Record a game",
       callback: () =>
         setCurrentModal(ModalTypes.CREATE_GAME_RESULT, {
           mode: "create",
@@ -45,7 +45,6 @@ export const SavedGameResults = () => {
             scenarioPlayed: null,
             tags: [],
             armies: "",
-            alliance: "",
             bows: "" as unknown as number,
             victoryPoints: "" as unknown as number,
             opponentArmies: "",

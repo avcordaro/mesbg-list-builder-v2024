@@ -360,7 +360,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "Match history",
       action: () => navigate("/match-history"),
       active: location.pathname === "/match-history",
-      disabled: true,
     },
     { divider: true },
     {
