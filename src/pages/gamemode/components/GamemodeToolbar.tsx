@@ -8,17 +8,45 @@ import { GiCrackedShield } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import { armyListData } from "../../../assets/data.ts";
 import { SquareIconButton } from "../../../components/common/icon-button/SquareIconButton.tsx";
+import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 
 export const GamemodeToolbar = () => {
   const navigate = useNavigate();
   const screen = useScreenSize();
-  const { gameState, updateGameState, endGame } = useGameModeState();
+  const { setCurrentModal } = useAppState();
+  const { gameState, updateGameState } = useGameModeState();
   const { roster, getAdjustedMetaData } = useRosterInformation();
 
   const game = gameState[roster.id];
+
+  const openEndGameDialog = () => {
+    const gameStartTime = new Date(game.started);
+    const gameEndTime = new Date();
+    const gameDuration = gameEndTime.getTime() - gameStartTime.getTime();
+    setCurrentModal(ModalTypes.CREATE_GAME_RESULT, {
+      mode: "record",
+      gameId: roster.id,
+      formValues: {
+        gameDate: new Date().toISOString().slice(0, 10),
+        duration: Math.ceil(gameDuration / 60000),
+        points: Math.ceil(roster.metadata.points / 50) * 50, // rounds to the nearest full 50.
+        result: "Won",
+        scenarioPlayed: null,
+        tags: [],
+        armies: roster.armyList,
+        bows: roster.metadata.bows as unknown as number,
+        throwingWeapons: roster.metadata.throwingWeapons as unknown as number,
+        victoryPoints: "" as unknown as number,
+        opponentArmies: "",
+        opponentName: "",
+        opponentVictoryPoints: "" as unknown as number,
+      },
+    });
+  };
 
   const updateCasualties = (update: 1 | -1) => {
     updateGameState(roster.id, {
@@ -51,13 +79,7 @@ export const GamemodeToolbar = () => {
         >
           Back
         </Button>
-        <Button
-          variant="outlined"
-          onClick={() => {
-            endGame(roster.id);
-            navigate("/gamemode/start");
-          }}
-        >
+        <Button variant="outlined" onClick={() => openEndGameDialog()}>
           End game
         </Button>
       </Stack>
@@ -129,14 +151,7 @@ export const GamemodeToolbar = () => {
           >
             Back
           </Button>
-          <Button
-            onClick={() => {
-              endGame(roster.id);
-              navigate("/gamemode/start");
-            }}
-          >
-            End game
-          </Button>
+          <Button onClick={() => openEndGameDialog()}>End game</Button>
         </ButtonGroup>
       </Box>
       <Stack direction="row" gap={2}>
