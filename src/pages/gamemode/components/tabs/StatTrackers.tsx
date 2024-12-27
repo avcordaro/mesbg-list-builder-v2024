@@ -106,8 +106,8 @@ export const StatTrackers = () => {
           textAlign: "center",
         }}
       >
-        Note: Heroes and warbeast are automatically added as casualty when their
-        wounds reach 0.
+        Note: Heroes and War Beasts are automatically added as a casualty when
+        their wounds reach 0.
       </Typography>
       {trackers.map((tracker, index) => {
         const alive = isAlive(tracker);
@@ -133,6 +133,7 @@ export const StatTrackers = () => {
                     textOverflow: "ellipsis",
                     textAlign: "center",
                     opacity: alive ? 1 : 0.45,
+                    mb: screen.isMobile ? 2 : 0,
                   }}
                 >
                   {tracker.name}

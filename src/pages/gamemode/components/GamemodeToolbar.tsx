@@ -64,7 +64,7 @@ export const GamemodeToolbar = () => {
 
   return screen.isMobile ? (
     <>
-      <Stack direction="row" justifyContent="space-between" sx={{ my: 1 }}>
+      <Stack direction="row" justifyContent="space-between" sx={{ my: 2 }}>
         <Button
           variant="outlined"
           color="inherit"
@@ -117,7 +117,10 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography variant="h6" className="middle-earth" sx={{ mx: 1 }}>
+        <Typography
+          variant="h6"
+          sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
+        >
           {casualties}
         </Typography>
         <SquareIconButton
@@ -166,7 +169,10 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography variant="h6" className="middle-earth" sx={{ mx: 1 }}>
+        <Typography
+          variant="h6"
+          sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
+        >
           {casualties}
         </Typography>
         <SquareIconButton

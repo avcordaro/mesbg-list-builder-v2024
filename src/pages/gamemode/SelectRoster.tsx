@@ -111,7 +111,7 @@ export const SelectRoster = () => {
       }}
     >
       <Typography variant="h4" className="middle-earth">
-        Gamemode
+        Game Mode
       </Typography>
 
       {gameCount > 0 && (
