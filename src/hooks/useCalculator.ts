@@ -178,7 +178,15 @@ export const useCalculator = () => {
         const mwfUnits = [warband.hero, ...warband.units]
           .filter(isNotNull)
           .filter(isSelectedUnit)
-          .filter((unit) => unit.MWFW.length > 0);
+          .filter((unit) => unit.MWFW.length > 0)
+          .flatMap((unit) => unit.MWFW)
+          .map((mwfw) => mwfw[1].split(":").map(Number))
+          .map(([might, will, fate]) => ({ might, will, fate }))
+          .reduce((total, current) => ({
+            might: current.might + (total.might || 0),
+            will: current.will + (total.will || 0),
+            fate: current.fate + (total.fate || 0),
+          }));
         return {
           points: warband.meta.points,
           units: warband.meta.units + warband.meta.heroes,
@@ -186,15 +194,9 @@ export const useCalculator = () => {
           throwingWeapons: warband.meta.throwingWeapons,
           bowLimit: warband.meta.bowLimit,
           throwLimit: warband.meta.throwLimit,
-          might: mwfUnits
-            .map((unit) => Number(unit.MWFW[0][1].split(":")[0]))
-            .reduce((a, b) => a + b, 0),
-          will: mwfUnits
-            .map((unit) => Number(unit.MWFW[0][1].split(":")[1]))
-            .reduce((a, b) => a + b, 0),
-          fate: mwfUnits
-            .map((unit) => Number(unit.MWFW[0][1].split(":")[2]))
-            .reduce((a, b) => a + b, 0),
+          might: mwfUnits.might,
+          will: mwfUnits.will,
+          fate: mwfUnits.fate,
         };
       })
       .reduce(
