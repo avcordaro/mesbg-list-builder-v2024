@@ -367,12 +367,12 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
         </Grid2>
         <Grid2 container component="fieldset" size={isMobile ? 12 : 6}>
           <Typography component="legend" sx={{ mb: 1 }}>
-            Your opponents information
+            Your opponent&apos;s information
           </Typography>
           <Grid2 size={12}>
             <ArmyPicker
               label="Opponent Armies"
-              placeholder="Your opponents armies"
+              placeholder="Your opponent's armies"
               onChange={(values) =>
                 handleChangeField(
                   "opponentArmies",

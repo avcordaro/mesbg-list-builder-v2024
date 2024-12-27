@@ -19,7 +19,7 @@ export const CreateGameResultModal = () => {
     if (childRef.current) {
       if (childRef.current.saveToState()) {
         if (modalContext.gameId) {
-          await navigate("/gamemode/start");
+          await navigate("match-history");
           endGame(modalContext.gameId);
         }
 

@@ -25,7 +25,7 @@ export const VictoryPointsSpreadPieChart = ({
     );
 
   const victoryPointData = {
-    labels: ["Earned by you", "Lost to Opponents"],
+    labels: ["Earned by you", "Lost to opponents"],
     datasets: [
       {
         data: victoryPoints,

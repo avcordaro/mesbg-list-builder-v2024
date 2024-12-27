@@ -34,7 +34,7 @@ export const ScenariosPlayedBarChart = ({ data }: ScenariosPlayedProps) => {
 
   const dataset = {
     labels: Object.keys(scenariosPlayed),
-    datasets: ["won", "draw", "lost"].map((key, index) => ({
+    datasets: ["won", "drawn", "lost"].map((key, index) => ({
       label: "Matches " + key,
       data: Object.values(scenariosPlayed).map((wld) => wld[key]),
       yAxisID: "y1",

@@ -1,6 +1,11 @@
 import { Add, UploadFile } from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
-import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
+import {
+  SpeedDial,
+  SpeedDialAction,
+  SpeedDialIcon,
+  Typography,
+} from "@mui/material";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -102,6 +107,9 @@ export const SavedGameResults = () => {
 
   return (
     <Container sx={{ mt: 2 }}>
+      <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
+        Match History
+      </Typography>
       <Stack sx={{ py: 1 }} gap={3}>
         <FilterForm onChange={onFilterChanged} />
         {recentGames.length > 0 ? (

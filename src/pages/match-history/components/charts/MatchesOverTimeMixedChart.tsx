@@ -121,7 +121,7 @@ export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
     labels: Object.keys(wldRatiosPerDay),
     datasets: [
       {
-        label: "Matches played",
+        label: "Matches Played",
         data: matchesPerDay,
         backgroundColor: palette.info.light,
         borderColor: palette.info.main,
@@ -129,7 +129,7 @@ export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
         pointRadius: 5,
         pointBorderWidth: 2,
       },
-      ...["won", "draw", "lost"].map((key, index) => {
+      ...["won", "drawn", "lost"].map((key, index) => {
         return {
           type: "bar",
           label: "Matches " + key,
@@ -151,7 +151,7 @@ export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
           legend: { position: "top" },
           title: {
             display: true,
-            text: "Matches played over time",
+            text: "Matches Played Over Time",
           },
         },
         scales: {

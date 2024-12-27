@@ -47,7 +47,7 @@ export const OpponentsVictoryPointsBarChart = ({
           legend: { position: "top" },
           title: {
             display: true,
-            text: "Victory Point spread per Opponent",
+            text: "Victory Point Spread per Opponent",
           },
         },
         scales: {
