@@ -36,7 +36,7 @@ export const ArmiesPlayedAgainstBarChart = ({ data }: ArmiesPlayedProps) => {
 
   const victoryPointsData = {
     labels: Object.keys(armiesPlayed),
-    datasets: ["won", "draw", "lost"].map((key, index) => ({
+    datasets: ["won", "drawn", "lost"].map((key, index) => ({
       label: "Matches " + key,
       data: Object.values(armiesPlayed).map((wld) => wld[key]),
       yAxisID: "y1",
@@ -53,7 +53,7 @@ export const ArmiesPlayedAgainstBarChart = ({ data }: ArmiesPlayedProps) => {
           legend: { position: "top" },
           title: {
             display: true,
-            text: "Armies played against (with WLD)",
+            text: "Armies Played Against (with WLD)",
           },
         },
         scales: {
