@@ -31,6 +31,8 @@ function checkCompulsory(rule: WarningRule, setOfModelIds: string[]): boolean {
 }
 
 function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
+  const warnings = [];
+
   if (
     roster.armyList === "The Eagles" ||
     roster.armyList === "Radagast's Alliance"
@@ -51,13 +53,11 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
       );
     const diff = units["Fledgeling Great Eagle"] - units["Great Eagle"];
     if (diff > 0) {
-      return [
-        {
-          warning: `${roster.armyList} may not include more Fledgeling Great Eagles than Great Eagles. There are currently ${diff} Fledgeling Great Eagle too many.`,
-          type: undefined,
-          dependencies: [],
-        },
-      ];
+      warnings.push({
+        warning: `${roster.armyList} may not include more Fledgeling Great Eagles than Great Eagles. There are currently ${diff} Fledgeling Great Eagle too many.`,
+        type: undefined,
+        dependencies: [],
+      });
     }
   }
 
@@ -84,13 +84,11 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
           .filter(isSelectedUnit)
           .filter((unit) => unit.unit_type.includes("Hero")).length > 0;
       if (hasHeroesInWarband) {
-        return [
-          {
-            warning: `Heroes cannot be followers in another hero's warband if your army includes any Warrior models or Hunter Orc Captains.`,
-            type: undefined,
-            dependencies: [],
-          },
-        ];
+        warnings.push({
+          warning: `Heroes cannot be followers in another hero's warband if your army includes any Warrior models or Hunter Orc Captains.`,
+          type: undefined,
+          dependencies: [],
+        });
       }
     }
   }
@@ -108,17 +106,31 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
     );
 
     if (containsAnyMountedHero && hasGwaihir) {
-      return [
-        {
-          warning: `If your Army includes any Cavalry models then it cannot include any Eagle models, and vice versa.`,
-          type: undefined,
-          dependencies: [],
-        },
-      ];
+      warnings.push({
+        warning: `If your Army includes any Cavalry models then it cannot include any Eagle models, and vice versa.`,
+        type: undefined,
+        dependencies: [],
+      });
     }
   }
 
-  return [];
+  const siegeEngines = roster.warbands.filter(
+    ({ hero }) => hero?.unit_type === "Siege Engine",
+  );
+  const heroesOfFort = roster.warbands.filter(({ hero }) =>
+    ["Hero of Legend", "Hero of Valour", "Hero of Fortitude"].includes(
+      hero?.unit_type,
+    ),
+  );
+  if (siegeEngines > heroesOfFort) {
+    warnings.push({
+      warning: `An army may only include one Siege Engine for each Hero with a Heroic Tier of Hero of Fortitude or above.`,
+      type: undefined,
+      dependencies: [],
+    });
+  }
+
+  return warnings;
 }
 
 function isActiveRule(setOfModelIds: string[]) {
