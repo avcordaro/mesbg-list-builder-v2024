@@ -22,13 +22,40 @@ export const useRosterInformation = (): RosterInformationFunctions => {
   );
 
   function getModelIdsFromOptions(unit: Unit): string[] {
+    const armyList = slugify(unit.army_list);
     if (unit.name === "Gandalf the White") {
       const hasPippinPassenger = !!unit.options.find(
         ({ name, quantity }) => name === "Pippin" && quantity > 0,
       );
       if (hasPippinPassenger) {
-        const armyList = slugify(unit.army_list);
         return [`[${armyList}] peregrin-took`];
+      }
+    }
+    if (unit.name === "Arwen") {
+      const hasFrodoPassenger = !!unit.options.find(
+        ({ name, quantity }) => name === "Frodo Baggins" && quantity > 0,
+      );
+      if (hasFrodoPassenger) {
+        return [`[${armyList}] frodo-baggins`];
+      }
+    }
+    if (unit.name === "Eowyn") {
+      const hasMerryPassenger = !!unit.options.find(
+        ({ name, quantity }) => name === "Merry" && quantity > 0,
+      );
+      if (hasMerryPassenger) {
+        return [`[${armyList}] meriadoc-brandybuck`];
+      }
+    }
+    if (unit.name === "Treebeard") {
+      const hasMerryPassenger = !!unit.options.find(
+        ({ name, quantity }) => name === "Merry & Pippin" && quantity > 0,
+      );
+      if (hasMerryPassenger) {
+        return [
+          `[${armyList}] peregrin-took`,
+          `[${armyList}] meriadoc-brandybuck`,
+        ];
       }
     }
     return [];
@@ -124,6 +151,7 @@ export const useRosterInformation = (): RosterInformationFunctions => {
       return roster.warbands.length < 9;
 
     const setOfModelIds = getSetOfModelIds(roster);
+    console.log(setOfModelIds);
     const stillAvailableWarbandLeaders = Object.values(mesbgData)
       .filter(
         ({ unit_type }) =>

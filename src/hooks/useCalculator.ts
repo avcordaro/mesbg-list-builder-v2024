@@ -182,11 +182,14 @@ export const useCalculator = () => {
           .flatMap((unit) => unit.MWFW)
           .map((mwfw) => mwfw[1].split(":").map(Number))
           .map(([might, will, fate]) => ({ might, will, fate }))
-          .reduce((total, current) => ({
-            might: current.might + (total.might || 0),
-            will: current.will + (total.will || 0),
-            fate: current.fate + (total.fate || 0),
-          }));
+          .reduce(
+            (total, current) => ({
+              might: current.might + total.might,
+              will: current.will + total.will,
+              fate: current.fate + total.fate,
+            }),
+            { might: 0, will: 0, fate: 0 },
+          );
         return {
           points: warband.meta.points,
           units: warband.meta.units + warband.meta.heroes,
