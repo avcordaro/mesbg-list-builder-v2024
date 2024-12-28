@@ -4,11 +4,11 @@ import { SelectedUnit } from "../../types/roster.ts";
 import { selectedOptionWithName } from "../../utils/options.ts";
 import { MwfwUpdater } from "../useMwfMutations.ts";
 
-export const handledModels = "[fangorn] treebeard";
+export const handledModels = ["[fangorn] treebeard"];
 
 export const handler: MwfwUpdater = {
   isMatchingUnit(unitId: string): boolean {
-    return [handledModels].includes(unitId);
+    return handledModels.includes(unitId);
   },
   update(unit: SelectedUnit, options: Option[]): SelectedUnit["MWFW"] {
     const hasMerryAndPippin = !!options.find(
