@@ -22,5 +22,17 @@ export function getAdditionalSpecialRules(unit: SelectedUnit) {
       .map(({ name }) => name);
   }
 
+  if (
+    ["Gandalf the White", "Eowyn", "Treebeard", "Arwen"].includes(unit.name)
+  ) {
+    if (
+      unit.options.find(
+        (option) => option.type === "passenger" && option.quantity > 0,
+      )
+    ) {
+      return ["Resistant to Magic"];
+    }
+  }
+
   return [];
 }
