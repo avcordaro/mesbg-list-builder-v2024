@@ -4,7 +4,8 @@ export type Preferences =
   | "mobileRosterToolbar"
   | "autoUpdateUnitData"
   | "colorCodedRules"
-  | "splitActiveRules";
+  | "splitActiveRules"
+  | "oldShareScreen";
 
 export type PreferenceState = {
   preferences: Record<Preferences, boolean>;
@@ -17,6 +18,7 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     autoUpdateUnitData: false,
     colorCodedRules: true,
     splitActiveRules: false,
+    oldShareScreen: false,
   },
 };
 

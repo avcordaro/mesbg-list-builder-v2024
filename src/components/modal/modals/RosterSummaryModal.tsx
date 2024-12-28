@@ -15,6 +15,11 @@ import Typography from "@mui/material/Typography";
 import { useRef, useState } from "react";
 import { FaClipboard, FaImage } from "react-icons/fa6";
 import { useAppState } from "../../../state/app";
+import { useUserPreferences } from "../../../state/preference";
+import {
+  ImageView,
+  ImageViewViewHandlers,
+} from "../../common/roster/ImageView.tsx";
 import {
   RosterTableView,
   RosterTableViewHandlers,
@@ -27,8 +32,10 @@ import { CustomSwitch as Switch } from "../../common/switch/CustomSwitch.tsx";
 
 export const RosterSummaryModal = () => {
   const { closeModal } = useAppState();
+  const { preferences } = useUserPreferences();
   const rosterTextRef = useRef<RosterTextViewHandlers>();
   const rosterTableRef = useRef<RosterTableViewHandlers>();
+  const rosterImageViewRef = useRef<ImageViewViewHandlers>();
 
   const [plainTextView, setPlainTextView] = useState(false);
   const [showArmyBonus, setShowArmyBonus] = useState(false);
@@ -67,7 +74,7 @@ export const RosterSummaryModal = () => {
               >
                 Copy to clipboard
               </Button>
-            ) : (
+            ) : preferences.oldShareScreen ? (
               <Button
                 variant="contained"
                 startIcon={<FaImage />}
@@ -76,6 +83,16 @@ export const RosterSummaryModal = () => {
                 }}
               >
                 Create pretty image
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                startIcon={<FaImage />}
+                onClick={() => {
+                  rosterImageViewRef.current.createScreenshot();
+                }}
+              >
+                Convert to image
               </Button>
             )}
           </Box>
@@ -97,12 +114,19 @@ export const RosterSummaryModal = () => {
             showUnitTotals={showUnitTotals}
             ref={rosterTextRef}
           />
-        ) : (
+        ) : preferences.oldShareScreen ? (
           <RosterTableView
             showArmyBonus={showArmyBonus}
             showUnitTotals={showUnitTotals}
             includeRosterName={includeRosterName}
             ref={rosterTableRef}
+          />
+        ) : (
+          <ImageView
+            showArmyBonus={showArmyBonus}
+            showUnitTotals={showUnitTotals}
+            includeRosterName={includeRosterName}
+            ref={rosterImageViewRef}
           />
         )}
       </DialogContent>

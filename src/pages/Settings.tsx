@@ -1,9 +1,11 @@
 import {
   AutoAwesome,
   ChecklistRtl,
+  PhotoCameraOutlined,
   SwitchAccessShortcut,
   Update,
 } from "@mui/icons-material";
+
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import List from "@mui/material/List";
@@ -120,6 +122,17 @@ export const Settings = () => {
           }
           value={preferences.splitActiveRules}
           onChange={updatePreference("splitActiveRules")}
+        />
+
+        <SettingsOption
+          icon={<PhotoCameraOutlined />}
+          label="Use the old roster summary table"
+          description={
+            "Split the list of special rules and magical powers in their respective drawers into a list of rules " +
+            "that are applicable to the selected roster."
+          }
+          value={preferences.oldShareScreen || false}
+          onChange={updatePreference("oldShareScreen")}
         />
       </List>
 
