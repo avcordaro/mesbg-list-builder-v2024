@@ -6388,6 +6388,7 @@
     "name": "Windlance",
     "unit_type": "Siege Engine",
     "base_points": 70,
+    "bow_limit": true,
     "siege_crew": 1,
     "MWFW": [
       [
@@ -15592,6 +15593,7 @@
     "name": "Iron Hills Ballista",
     "unit_type": "Siege Engine",
     "base_points": 130,
+    "bow_limit": true,
     "siege_crew": 3,
     "MWFW": [
       [
