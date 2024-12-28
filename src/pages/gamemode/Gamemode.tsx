@@ -55,7 +55,14 @@ export const Gamemode = () => {
       >
         <GamemodeToolbar />
         <Box sx={{ width: "100%", bgcolor: "background.paper", mt: 2 }}>
-          <Tabs value={value} onChange={handleChange} centered>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            centered
+            variant="scrollable"
+            scrollButtons
+            allowScrollButtonsMobile
+          >
             <Tab label="Trackers" />
             <Tab label="Army overview" />
             <Tab label="Profiles" />
