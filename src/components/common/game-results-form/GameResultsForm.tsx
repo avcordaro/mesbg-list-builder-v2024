@@ -38,7 +38,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
   const { modalContext } = useAppState();
   const { addGame, editGame } = useRecentGamesState();
 
-  const { isMobile, isTablet } = useScreenSize();
+  const { isMobile } = useScreenSize();
 
   const [formValues, setFormValues] = useState<PastGame>({
     id: v4(),
@@ -184,7 +184,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
           <Typography component="legend" sx={{ mb: 1 }}>
             General game information
           </Typography>
-          <Grid2 size={isTablet ? 12 : 7}>
+          <Grid2 size={12}>
             <TextField
               fullWidth
               label="Date of the game"
@@ -197,7 +197,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
               size="small"
             />
           </Grid2>
-          <Grid2 size={isTablet ? (isMobile ? 12 : 6) : 3}>
+          <Grid2 size={6}>
             <TextField
               fullWidth
               label="Duration"
@@ -215,7 +215,7 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
               size="small"
             />
           </Grid2>
-          <Grid2 size={isTablet ? (isMobile ? 12 : 6) : 2}>
+          <Grid2 size={6}>
             <TextField
               required
               error={missingRequiredFields.includes("Points")}
