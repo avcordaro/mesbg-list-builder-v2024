@@ -13400,12 +13400,6 @@
     "warband_size": 12,
     "options": [
       {
-        "id": "OPT0874",
-        "name": "Frodo Baggins",
-        "points": 55,
-        "type": "passenger"
-      },
-      {
         "id": "OPT0310",
         "name": "Asfaloth",
         "points": 20,
