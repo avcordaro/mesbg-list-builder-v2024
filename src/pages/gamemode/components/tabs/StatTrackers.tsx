@@ -124,20 +124,6 @@ export const StatTrackers = () => {
                   profile={tracker.name}
                   opacity={alive ? 100 : 45}
                 />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    width: screen.isMobile ? "28ch" : "14ch",
-                    textOverflow: "ellipsis",
-                    textAlign: "center",
-                    opacity: alive ? 1 : 0.45,
-                    mb: screen.isMobile ? 2 : 0,
-                  }}
-                >
-                  {tracker.name}
-                </Typography>
                 <Box
                   sx={{
                     position: "absolute",
@@ -149,44 +135,60 @@ export const StatTrackers = () => {
                   {!alive && <FaSkullCrossbones fontSize="4rem" />}
                 </Box>
               </Stack>
-              <Stack
-                direction={screen.isMobile ? "column" : "row"}
-                gap={screen.isMobile ? 1 : 0}
-                sx={{
-                  ml: screen.isMobile ? 2 : 0,
-                }}
-                justifyContent="space-around"
-                flexGrow={1}
-              >
-                {tracker.xMWFW.split(":").map((value, statIndex) => {
-                  const initialValue = tracker.MWFW.split(":")[statIndex];
-                  return (
-                    <Stack
-                      justifyContent={
-                        screen.isMobile ? "space-between" : "center"
-                      }
-                      alignItems="center"
-                      direction={screen.isMobile ? "row" : "column"}
-                      key={statIndex}
-                      sx={{ opacity: alive ? 1 : 0.45 }}
-                    >
-                      <Typography
-                        sx={{ fontSize: "1.1rem", mb: 1 }}
-                        className="middle-earth"
-                      >
-                        {TRACKABLE[statIndex]}
-                      </Typography>
-                      <Counter
-                        value={Number(value)}
-                        maxValue={Number(initialValue)}
-                        alive={alive || statIndex === 3}
-                        update={(newValue) =>
-                          updateMwfw(newValue, index, statIndex)
+              <Stack flexGrow={1}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    width: "100%",
+                    textOverflow: "ellipsis",
+                    textAlign: screen.isMobile ? "center" : "start",
+                    opacity: alive ? 1 : 0.45,
+                    mb: screen.isMobile ? 2 : 0,
+                    px: 2,
+                  }}
+                >
+                  {tracker.name}
+                </Typography>
+                <Stack
+                  direction={screen.isMobile ? "column" : "row"}
+                  gap={screen.isMobile ? 1 : 0}
+                  sx={{
+                    ml: screen.isMobile ? 2 : 0,
+                  }}
+                  justifyContent="space-around"
+                >
+                  {tracker.xMWFW.split(":").map((value, statIndex) => {
+                    const initialValue = tracker.MWFW.split(":")[statIndex];
+                    return (
+                      <Stack
+                        justifyContent={
+                          screen.isMobile ? "space-between" : "center"
                         }
-                      />
-                    </Stack>
-                  );
-                })}
+                        alignItems="center"
+                        direction={screen.isMobile ? "row" : "column"}
+                        key={statIndex}
+                        sx={{ opacity: alive ? 1 : 0.45 }}
+                      >
+                        <Typography
+                          sx={{ fontSize: "1.1rem", mt: 0.5 }}
+                          className="middle-earth"
+                        >
+                          {TRACKABLE[statIndex]}
+                        </Typography>
+                        <Counter
+                          value={Number(value)}
+                          maxValue={Number(initialValue)}
+                          alive={alive || statIndex === 3}
+                          update={(newValue) =>
+                            updateMwfw(newValue, index, statIndex)
+                          }
+                        />
+                      </Stack>
+                    );
+                  })}
+                </Stack>
               </Stack>
             </Stack>
           </Paper>
