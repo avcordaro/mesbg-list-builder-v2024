@@ -12,7 +12,8 @@
       "Fixed Theoden's point cost in the Ride Out army list, and a typo on Legolas' profile card.",
       "Corrected a typo for the Trample special rule found on the War Mumak of Harad's profile card.",
       "Added the missing Resistance to Magic highlight when selecting a hobbit passenger",
-      "Added an missing warning for whenever to many siege engines are selected"
+      "Added an missing warning for whenever to many siege engines are selected",
+      "Fixed a couple of siege engines that were not counting their crew towards the bow limit."
     ]
   },
   "1.4": {
