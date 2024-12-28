@@ -2713,7 +2713,9 @@
       "[road-to-rivendell] the-gatekeeper-of-bree",
       "[road-to-rivendell] arwen"
     ],
-    "extra_profiles": []
+    "extra_profiles": [
+      "Frodo Baggins"
+    ]
   },
   "[road-to-rivendell] barliman-butterbur": {
     "valid_warband_units": [
