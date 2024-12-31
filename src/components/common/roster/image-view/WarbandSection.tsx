@@ -4,6 +4,7 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { isSelectedUnit, Warband } from "../../../../types/roster.ts";
+import { UnitRow } from "./UnitRow.tsx";
 
 export const WarbandSection = ({
   warband,
@@ -33,6 +34,7 @@ export const WarbandSection = ({
       .join(", "),
     quantity: unit.unit_type === "Warrior" ? unit.quantity : "",
     points: unit.pointsTotal,
+    unique: unit.unique,
   }));
   const problem = false;
 
@@ -70,23 +72,15 @@ export const WarbandSection = ({
           </Typography>
         </Stack>
 
-        {units.map(({ name, options, quantity, points }, index) => (
-          <Stack
+        {units.map(({ name, options, quantity, points, unique }, index) => (
+          <UnitRow
             key={index}
-            direction="row"
-            gap={1}
-            justifyContent="space-between"
-          >
-            <Typography>
-              <strong>
-                {quantity} {name}
-              </strong>{" "}
-              {options && <>with {options}</>}
-            </Typography>
-            <Typography sx={{ minWidth: "7ch", textAlign: "end" }}>
-              <b>{points} pts</b>
-            </Typography>
-          </Stack>
+            name={name}
+            options={options}
+            quantity={quantity}
+            points={points}
+            unique={unique}
+          />
         ))}
       </Stack>
       <Divider sx={{ height: 2, bgcolor: "#800000" }} />

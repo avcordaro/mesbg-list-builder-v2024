@@ -11,7 +11,9 @@ import { isSelectedUnit } from "../../../types/roster.ts";
 import { ModalTypes } from "../../modal/modals.tsx";
 import { ArmyBonuses } from "./image-view/ArmyBonuses.tsx";
 import { HeaderBlock } from "./image-view/HeaderBlock.tsx";
+import { UnitRow } from "./image-view/UnitRow.tsx";
 import { WarbandSection } from "./image-view/WarbandSection.tsx";
+import { getSumOfUnits } from "./totalUnits.ts";
 
 export type ImageViewViewHandlers = { createScreenshot: () => void };
 export type ImageViewViewProps = {
@@ -21,9 +23,10 @@ export type ImageViewViewProps = {
 };
 
 export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
-  ({ includeRosterName, showArmyBonus }, ref) => {
+  ({ includeRosterName, showArmyBonus, showUnitTotals }, ref) => {
     const { roster } = useRosterInformation();
     const { setCurrentModal } = useAppState();
+    const unitTotals = getSumOfUnits(roster);
 
     const createScreenshot = () => {
       const rosterList = document.getElementById("rosterImageView");
@@ -65,15 +68,34 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
           <HeaderBlock includeRosterName={includeRosterName} />
           <Divider sx={{ height: 2, bgcolor: "#800000" }} />
           <Stack gap={2} sx={{ py: 2 }}>
-            {roster.warbands
-              .filter((wb) => isSelectedUnit(wb.hero))
-              .map((warband, index) => (
-                <WarbandSection
-                  warband={warband}
-                  key={index}
-                  index={index + 1}
-                />
-              ))}
+            {!showUnitTotals &&
+              roster.warbands
+                .filter((wb) => isSelectedUnit(wb.hero))
+                .map((warband, index) => (
+                  <WarbandSection
+                    warband={warband}
+                    key={index}
+                    index={index + 1}
+                  />
+                ))}
+            {showUnitTotals && (
+              <Stack gap={0.5}>
+                {unitTotals.map((unit, index) => (
+                  <UnitRow
+                    key={index}
+                    name={unit.name}
+                    options={unit.options
+                      .filter((option) => option.quantity > 0)
+                      .map((option) => option.name)
+                      .join(", ")}
+                    quantity={unit.quantity}
+                    points={unit.pointsTotal}
+                    unique={unit.unique}
+                  />
+                ))}
+                <Divider sx={{ height: 2, bgcolor: "#800000" }} />
+              </Stack>
+            )}
           </Stack>
           {showArmyBonus && <ArmyBonuses />}
           <Typography
