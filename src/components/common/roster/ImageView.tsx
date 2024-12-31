@@ -93,7 +93,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
                     unique={unit.unique}
                   />
                 ))}
-                <Divider sx={{ height: 2, bgcolor: "#800000" }} />
+                <Divider sx={{ mt: 2, height: 2, bgcolor: "#800000" }} />
               </Stack>
             )}
           </Stack>
@@ -101,7 +101,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
           <Typography
             id="admission"
             sx={{
-              mt: 2,
+              mt: 0,
               display: "none",
               textAlign: "center",
               width: "100%",

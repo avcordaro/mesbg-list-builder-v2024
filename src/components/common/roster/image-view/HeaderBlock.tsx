@@ -32,18 +32,21 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
   return (
     <>
       {includeRosterName && (
-        <Typography
-          variant="body1"
-          textAlign="center"
-          textTransform="uppercase"
-          fontWeight="bold"
-          color="#800000"
-          sx={{
-            textDecoration: "underline",
-          }}
-        >
-          {roster.name}
-        </Typography>
+        <>
+          <Typography
+            variant="body1"
+            textAlign="center"
+            fontWeight="bold"
+            color="#800000"
+            sx={{
+              textDecoration: "underline",
+              "text-decoration-thickness": "0.5px",
+              mb: 1,
+            }}
+          >
+            {roster.name}
+          </Typography>
+        </>
       )}
       <Typography
         variant="h5"

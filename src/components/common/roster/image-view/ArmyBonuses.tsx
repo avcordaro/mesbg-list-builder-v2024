@@ -22,8 +22,8 @@ export const ArmyBonuses = () => {
         Additional Rules
       </Typography>
       {armyListMetadata?.additional_rules?.map((rule, index) => (
-        <Typography component="li" key={index}>
-          {rule.description}
+        <Typography key={index}>
+          &#9679;&nbsp;&nbsp;{rule.description}
         </Typography>
       ))}
 
@@ -32,10 +32,11 @@ export const ArmyBonuses = () => {
         color="#800000"
         fontWeight="bold"
         textAlign="center"
+        sx={{ mt: 2 }}
       >
         Special Rules
       </Typography>
-      <Box component="ul" sx={{ listStyle: "none", pl: 0 }}>
+      <Box component="ul" sx={{ listStyle: "none", pl: 0, mb: 1 }}>
         {armyListMetadata.special_rules
           .filter((rule) => {
             if (!rule.troll_purchase) return true;
@@ -67,7 +68,7 @@ export const ArmyBonuses = () => {
             </Box>
           ))}
       </Box>
-      <Divider sx={{ height: 2, bgcolor: "#800000" }} />
+      <Divider sx={{ mb: 2, height: 2, bgcolor: "#800000" }} />
     </Stack>
   );
 };
