@@ -24,7 +24,8 @@
       "Added the missing Resistance to Magic highlight when selecting a hobbit passenger",
       "Added an missing warning for whenever too many siege engines are selected",
       "Fixed a couple of siege engines that were not counting their crew towards the bow limit.",
-      "Fixed an issue where passenger options would not increase the total MWF shown in the roster information drawer (such as with Pippin riding with Gandalf)."
+      "Fixed an issue where passenger options would not increase the total MWF shown in the roster information drawer (such as with Pippin riding with Gandalf).",
+      "Fixed issue with break point calculation in Game Mode and Roster Summary/Plain text view."
     ]
   },
   "1.4": {
