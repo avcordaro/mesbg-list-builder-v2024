@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import html2canvas from "html2canvas";
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 import backgroundCover from "../../../assets/images/roster-summary/background.jpg";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
@@ -27,6 +27,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
     const { roster } = useRosterInformation();
     const { setCurrentModal } = useAppState();
     const unitTotals = getSumOfUnits(roster);
+    const [screenshotting, setScreenshotting] = useState(false);
 
     const createScreenshot = () => {
       const rosterList = document.getElementById("rosterImageView");
@@ -35,6 +36,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
         admission.style.display = "inline-block";
       }
 
+      setScreenshotting(true);
       setTimeout(() => {
         html2canvas(rosterList).then(function (data) {
           setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
@@ -42,6 +44,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
             rawScreenshot: data,
             onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
           });
+          setScreenshotting(false);
         });
 
         if (admission) {
@@ -55,7 +58,10 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
     }));
 
     return (
-      <Box id="rosterImageView" sx={{ p: 0.2 }}>
+      <Box
+        id="rosterImageView"
+        sx={screenshotting ? { width: "700px", p: 0.2 } : { p: 0.2 }}
+      >
         <Stack
           sx={{
             px: 4,

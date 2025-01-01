@@ -33,4 +33,3 @@ A very special thank you to [@mhollink](https://github.com/mhollink) for his hug
 ### Game Mode
 
 ![1](https://github.com/user-attachments/assets/98dc2c99-2192-42d4-b97b-9a6e96e0893a)
-
