@@ -8267,7 +8267,6 @@
     "base_points": 8,
     "bow_limit": true,
     "siege_crew": 0,
-    "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -9491,7 +9490,6 @@
     "base_points": 8,
     "bow_limit": true,
     "siege_crew": 0,
-    "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -15056,7 +15054,6 @@
     "base_points": 8,
     "bow_limit": true,
     "siege_crew": 0,
-    "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
