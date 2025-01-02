@@ -151,7 +151,6 @@ export const useRosterInformation = (): RosterInformationFunctions => {
       return roster.warbands.length < 9;
 
     const setOfModelIds = getSetOfModelIds(roster);
-    console.log(setOfModelIds);
     const stillAvailableWarbandLeaders = Object.values(mesbgData)
       .filter(
         ({ unit_type }) =>

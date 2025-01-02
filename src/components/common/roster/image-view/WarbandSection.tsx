@@ -2,6 +2,7 @@ import ReportProblemRoundedIcon from "@mui/icons-material/ReportProblemRounded";
 import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
+import { heroConstraintData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { isSelectedUnit, Warband } from "../../../../types/roster.ts";
 import { UnitRow } from "./UnitRow.tsx";
@@ -26,17 +27,59 @@ export const WarbandSection = ({
         .map((option) => option.name)
         .join(", ")) ||
     "";
-  const units = warband.units.filter(isSelectedUnit).map((unit) => ({
-    name: unit.name,
-    options: unit.options
-      .filter((option) => option.quantity > 0)
-      .map((option) => option.name)
-      .join(", "),
-    quantity: unit.unit_type === "Warrior" ? unit.quantity : "",
-    points: unit.pointsTotal,
-    unique: unit.unique,
-  }));
-  const problem = false;
+  const units = Object.values(
+    warband.units
+      .filter(isSelectedUnit)
+      .map((unit) => ({
+        name: unit.name,
+        options: unit.options
+          .filter((option) => option.quantity > 0)
+          .map((option) => option.name)
+          .join(", "),
+        quantity: unit.quantity,
+        points: unit.pointsTotal,
+        unique: unit.unique,
+      }))
+      .reduce(
+        (acc, item) => {
+          // Create a unique key based on name and options
+          const key = `${item.name}_${item.options}`;
+
+          // If the key already exists, update quantity and points
+          if (acc[key]) {
+            acc[key].quantity += Number(item.quantity);
+            acc[key].points += item.points;
+          } else {
+            // Otherwise, initialize the key with the item data
+            acc[key] = item;
+          }
+          return acc;
+        },
+        {} as {
+          [key: string]: {
+            name: string;
+            options: string;
+            quantity: number;
+            points: number;
+            unique: boolean;
+          };
+        },
+      ),
+  );
+
+  const overExceededWarbandSize =
+    warband.meta.maxUnits !== "-" && warband.meta.units > warband.meta.maxUnits;
+  const improperUnits =
+    !!hero &&
+    warband.units
+      .filter(isSelectedUnit)
+      .some(
+        (unit) =>
+          !heroConstraintData[hero.model_id].valid_warband_units.includes(
+            unit.model_id,
+          ),
+      );
+  const problem = overExceededWarbandSize || improperUnits;
 
   return (
     <>
