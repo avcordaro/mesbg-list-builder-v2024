@@ -1,0 +1,79 @@
+import { profileData } from "../../../assets/data.ts";
+import { Unit } from "../../../types/mesbg-data.types.ts";
+
+export function convertBardsFamilyToSingleRows(dataPoint: Unit[]) {
+  const base = {
+    army_type: dataPoint[0].army_type,
+    profile_origin: dataPoint[0].profile_origin,
+    unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
+    army_list: dataPoint.map((p) => p.army_list),
+    options: [
+      ...new Set(dataPoint.flatMap((p) => p.options).map((o) => o.name)),
+    ],
+  };
+  return [
+    {
+      ...base,
+      name: `Bain, Son of Bard`,
+      MWFW: dataPoint.flatMap((p) => p.MWFW),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Bain, Son of Bard"),
+    },
+    {
+      ...base,
+      name: `Sigrid`,
+      MWFW: dataPoint.flatMap((p) => p.MWFW),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Sigrid"),
+    },
+    {
+      ...base,
+      name: `Tilda`,
+      MWFW: dataPoint.flatMap((p) => p.MWFW),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Tilda"),
+    },
+  ];
+}
+
+export function convertShankAndWrotToSingleRows(dataPoint: Unit[]) {
+  const base = {
+    army_type: dataPoint[0].army_type,
+    profile_origin: dataPoint[0].profile_origin,
+    unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
+    army_list: dataPoint.map((p) => p.army_list),
+    options: [
+      ...new Set(dataPoint.flatMap((p) => p.options).map((o) => o.name)),
+    ],
+  };
+
+  return [
+    {
+      ...base,
+      name: `Shank`,
+      MWFW: [dataPoint.flatMap((p) => p.MWFW)[0]],
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Shank"),
+    },
+    {
+      ...base,
+      name: `Wrot`,
+      MWFW: [dataPoint.flatMap((p) => p.MWFW)[1]],
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Wrot"),
+    },
+    {
+      ...base,
+      name: `Snow Troll`,
+      MWFW: [],
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Snow Troll"),
+    },
+  ];
+}

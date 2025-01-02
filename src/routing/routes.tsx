@@ -5,6 +5,7 @@ import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
 import { Settings } from "../pages/Settings.tsx";
 import { Roster } from "../pages/builder/Roster.tsx";
+import { Database } from "../pages/database/Database.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
 import { SelectRoster } from "../pages/gamemode/SelectRoster.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
@@ -61,6 +62,11 @@ export const routes: RouteObject[] = [
       {
         path: "settings",
         element: <Settings />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "database",
+        element: <Database />,
         errorElement: <AppFallback />,
       },
       {

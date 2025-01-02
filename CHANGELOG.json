@@ -1,12 +1,13 @@
 {
   "main": {
+    "added": [
+      "Added a option to the roster popover menu which allows duplicating a roster so you can make small edits and keep the original roster intact",
+      "Added a table containing all the selectable units and their profiles including the profile cards"
+    ],
     "changed": [
       "All roster summary views now use 'X dead' for broken, and 'X alive' for 25%/quartered.",
       "Troll Brutes can no longer be added as a follower in another hero's warband for Army of Gundabad.",
       "Improved the form validation for recording a new game in Match History."
-    ],
-    "added": [
-      "Added a option to the roster popover menu which allows duplicating a roster so you can make small edits and keep the original roster intact"
     ],
     "bugfixes": [
       "Fixed the Morannon Orc Warrior options to no longer require a mandatory choice.",
