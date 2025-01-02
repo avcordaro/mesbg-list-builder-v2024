@@ -200,10 +200,9 @@ export const RosterTableView = forwardRef<
           },
           {
             "Break point":
-              (units > 0
-                ? units - (Math.floor(units * (break_point ?? 0.5)) + 1)
-                : 0) + " Remaining",
-            Quartered: Math.floor(0.25 * units) + " Remaining",
+              (units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0) +
+              " dead",
+            Quartered: Math.floor(0.25 * units) + " alive",
             "Might / Will / Fate": `${might} / ${will} / ${fate}`,
           },
         ].map((row, index) => (

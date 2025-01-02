@@ -123,7 +123,8 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
             }}
           />
           <Typography fontWeight="bold">
-            {Math.floor((break_point ?? 0.499) * units)} left
+            {(units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0) +
+              " dead"}
           </Typography>
         </Grid2>
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>

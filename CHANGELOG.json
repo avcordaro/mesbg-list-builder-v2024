@@ -1,5 +1,8 @@
 {
   "main": {
+    "changed": [
+      "All roster summary views now use 'X dead' for broken, and 'X alive' for 25%/quartered."
+    ],
     "added": [
       "Added a option to the roster popover menu which allows duplicating a roster so you can make small edits and keep the original roster intact"
     ],
