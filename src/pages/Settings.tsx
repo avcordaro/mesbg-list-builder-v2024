@@ -128,8 +128,7 @@ export const Settings = () => {
           icon={<PhotoCameraOutlined />}
           label="Use the old roster summary table"
           description={
-            "Split the list of special rules and magical powers in their respective drawers into a list of rules " +
-            "that are applicable to the selected roster."
+            "If you dislike the new Roster Summary screen you can go back to the old v2018 'black and white' table layout."
           }
           value={preferences.oldShareScreen || false}
           onChange={updatePreference("oldShareScreen")}

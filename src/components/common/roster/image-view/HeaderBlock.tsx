@@ -29,7 +29,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
   const maxBows = Math.ceil(bowLimit * bow_limit);
   const maxThrows = Math.ceil(throwLimit * throw_limit);
 
-  let iconHeight = "35px";
+  const iconHeight = "35px";
   return (
     <>
       {includeRosterName && (
@@ -129,7 +129,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
               pt: "7px",
               mb: "5px",
             }}
-            fontSize={"1rem"}
+            fontSize="1rem"
             variant="h6"
             color="#800000"
             fontWeight="bold"
