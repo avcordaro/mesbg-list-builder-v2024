@@ -3,6 +3,7 @@ import { PdfView } from "../components/common/roster/PdfView.tsx";
 import { AppFallback } from "../components/error-boundary/AppFallback.tsx";
 import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
+import { Database } from "../pages/Database.tsx";
 import { Settings } from "../pages/Settings.tsx";
 import { Roster } from "../pages/builder/Roster.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
@@ -61,6 +62,11 @@ export const routes: RouteObject[] = [
       {
         path: "settings",
         element: <Settings />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "database",
+        element: <Database />,
         errorElement: <AppFallback />,
       },
       {
