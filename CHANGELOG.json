@@ -1,5 +1,8 @@
 {
   "main": {
+    "changed": [
+      "Updated the look and feel on the roster summary and pretty share image. The old table can still be used by changing the user preferences."
+    ],
     "bugfixes": [
       "Fixed issue with break point calculation in Game Mode and Roster Summary/Plain text view.",
       "Fixed an issue with the roster/warband unit counts for Fangorn.",
