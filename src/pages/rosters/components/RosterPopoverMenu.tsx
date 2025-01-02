@@ -88,7 +88,7 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
           <ListItemIcon>
             <FaClone />
           </ListItemIcon>
-          <ListItemText> Clone roster</ListItemText>
+          <ListItemText> Duplicate roster</ListItemText>
         </MenuItem>
         <Divider />
         <MenuItem onClick={deleteRoster}>
