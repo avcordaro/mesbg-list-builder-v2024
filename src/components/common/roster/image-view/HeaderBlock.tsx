@@ -29,6 +29,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
   const maxBows = Math.ceil(bowLimit * bow_limit);
   const maxThrows = Math.ceil(throwLimit * throw_limit);
 
+  let iconHeight = "35px";
   return (
     <>
       {includeRosterName && (
@@ -77,7 +78,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
             alt="total bows icon"
             src={bowIcon}
             style={{
-              height: "40px",
+              height: iconHeight,
             }}
           />
           <Typography fontWeight="bold">
@@ -89,7 +90,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
             alt="total throwing weapons icon"
             src={throwIcon}
             style={{
-              height: "40px",
+              height: iconHeight,
             }}
           />
           <Typography fontWeight="bold">
@@ -102,7 +103,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
             alt="break point icon"
             src={brokenIcon}
             style={{
-              height: "40px",
+              height: iconHeight,
             }}
           />
           <Typography fontWeight="bold">
@@ -114,7 +115,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
             alt="quartered icon"
             src={defeatedIcon}
             style={{
-              height: "40px",
+              height: iconHeight,
             }}
           />
           <Typography fontWeight="bold">
@@ -124,9 +125,11 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>
           <Typography
             sx={{
-              height: "40px",
-              pb: "15px",
+              height: iconHeight,
+              pt: "7px",
+              mb: "5px",
             }}
+            fontSize={"1rem"}
             variant="h6"
             color="#800000"
             fontWeight="bold"
