@@ -40,7 +40,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
       setTimeout(() => {
         html2canvas(rosterList).then(function (data) {
           setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
-            screenshot: data.toDataURL(),
+            screenshot: data.toDataURL("image/png"),
             rawScreenshot: data,
             onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
           });

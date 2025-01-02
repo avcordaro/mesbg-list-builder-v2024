@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Added a 'save image' button the pretty image to allow to be stored to the device more easily"
+    ]
+  },
   "1.6": {
     "changed": [
       "Updated the look and feel on the roster summary and pretty share image. The old table can still be used by changing the user preferences."
