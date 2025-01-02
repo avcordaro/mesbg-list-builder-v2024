@@ -1,4 +1,5 @@
-import { Grid2 } from "@mui/material";
+import ReportProblemRoundedIcon from "@mui/icons-material/ReportProblemRounded";
+import { Grid2, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { armyListData } from "../../../../assets/data.ts";
 import bowIcon from "../../../../assets/images/roster-summary/bow.png";
@@ -6,6 +7,7 @@ import brokenIcon from "../../../../assets/images/roster-summary/broken.png";
 import defeatedIcon from "../../../../assets/images/roster-summary/defeated.png";
 import throwIcon from "../../../../assets/images/roster-summary/throw-weapon.png";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useRosterWarnings } from "../../../../hooks/useRosterWarnings.ts";
 
 interface HeaderBlockProps {
   includeRosterName: boolean;
@@ -25,6 +27,7 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
     throwLimit,
     throwingWeapons,
   } = getAdjustedMetaData();
+  const warnings = useRosterWarnings();
 
   const maxBows = Math.ceil(bowLimit * bow_limit);
   const maxThrows = Math.ceil(throwLimit * throw_limit);
@@ -49,15 +52,28 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
           </Typography>
         </>
       )}
-      <Typography
-        variant="h5"
-        textAlign="center"
-        textTransform="uppercase"
-        fontWeight="bold"
-        color="#800000"
+      <Stack
+        direction="row"
+        gap={1}
+        justifyContent="center"
+        alignItems="center"
       >
-        {roster.armyList}
-      </Typography>
+        <Typography
+          variant="h5"
+          textAlign="center"
+          textTransform="uppercase"
+          fontWeight="bold"
+          color="#800000"
+        >
+          {roster.armyList}
+        </Typography>
+        {warnings.length > 0 && (
+          <ReportProblemRoundedIcon
+            sx={{ color: (theme) => theme.palette.warning.main }}
+          />
+        )}
+      </Stack>
+
       <Typography
         variant="h6"
         textAlign="center"

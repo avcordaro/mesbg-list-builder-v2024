@@ -94,7 +94,7 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
         </ButtonGroup>
       )}
 
-      <Warnings {...props} />
+      <Warnings />
       <RosterOverview {...props} />
       <AdditionalRules {...props} />
       <SpecialRules {...props} />
