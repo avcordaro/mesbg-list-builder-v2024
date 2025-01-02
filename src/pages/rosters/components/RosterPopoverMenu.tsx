@@ -49,7 +49,7 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
     createRoster({
       ...props.roster,
       id: id,
-      name: "Clone of '" + props.roster.name + "'",
+      name: "Copy of '" + props.roster.name + "'",
     });
 
     handleClose(event);
