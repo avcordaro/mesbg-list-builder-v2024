@@ -25,7 +25,7 @@ import { useRosterBuildingState } from "../../../state/roster-building";
 import { emptyRoster } from "../../../state/roster-building/roster";
 import { Roster } from "../../../types/roster.ts";
 import { WarningRules } from "../../../types/warning-rules.types.ts";
-import { generateRandomHash, slugify } from "../../../utils/string.ts";
+import { slugify, withSuffix } from "../../../utils/string.ts";
 import { FactionLogo } from "../../common/images/FactionLogo.tsx";
 
 const armyLists = Object.values(data)
@@ -39,14 +39,6 @@ const armyLists = Object.values(data)
       array.findIndex((other) => other.title === value.title) === index,
   )
   .sort((a, b) => b.type.localeCompare(a.type));
-
-function withSuffix(id: string, existingIds: string[]) {
-  const hashedId = id + "-" + generateRandomHash(6);
-  if (existingIds.includes(hashedId)) {
-    return withSuffix(id, existingIds);
-  }
-  return hashedId;
-}
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();
