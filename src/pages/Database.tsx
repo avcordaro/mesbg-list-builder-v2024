@@ -135,7 +135,7 @@ const DatabaseTableRow = ({
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={16}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Stack sx={{ p: 2 }} gap={1}>
-              <ExtraInfoRow title={`Available Army Lists`}>
+              <ExtraInfoRow title="Available Army Lists">
                 <Typography>{row.army_list.join(", ")}</Typography>
               </ExtraInfoRow>
               <ExtraInfoRow title="Wargear">
