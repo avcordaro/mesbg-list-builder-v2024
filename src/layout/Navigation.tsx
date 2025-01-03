@@ -36,7 +36,7 @@ import {
   useState,
 } from "react";
 import { AiFillTrophy } from "react-icons/ai";
-import { FaChessRook } from "react-icons/fa";
+import { FaChessRook, FaDatabase } from "react-icons/fa";
 import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -423,6 +423,12 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "App Settings",
       action: () => navigate("/settings"),
       active: location.pathname === "/settings",
+    },
+    {
+      icon: <FaDatabase style={{ fontSize: "1.25rem", margin: "0 auto" }} />,
+      label: "Profile database",
+      action: () => navigate("/database"),
+      active: location.pathname === "/database",
     },
     { divider: true },
     {
