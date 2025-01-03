@@ -1,7 +1,13 @@
 import { BookmarkAdd } from "@mui/icons-material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { Collapse, Stack, Tooltip } from "@mui/material";
+import {
+  Collapse,
+  FormHelperText,
+  Stack,
+  TextField,
+  Tooltip,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
@@ -15,6 +21,7 @@ import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import {
+  ChangeEvent,
   Fragment,
   FunctionComponent,
   PropsWithChildren,
@@ -128,9 +135,7 @@ const DatabaseTableRow = ({
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={16}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Stack sx={{ p: 2 }} gap={1}>
-              <ExtraInfoRow
-                title={`${row.name} is available in the following army lists`}
-              >
+              <ExtraInfoRow title={`Available Army Lists`}>
                 <Typography>{row.army_list.join(", ")}</Typography>
               </ExtraInfoRow>
               <ExtraInfoRow title="Wargear">
@@ -153,7 +158,7 @@ const DatabaseTableRow = ({
                           }}
                           onClick={() => {
                             openSidebar(DrawerTypes.SPECIAL_RULE_SEARCH, {
-                              searchKeyword: rule,
+                              searchKeyword: rule.replace(/\(.*?\)/g, ""),
                             });
                           }}
                         >
@@ -260,6 +265,7 @@ const DatabaseTableRow = ({
 };
 
 export const Database = () => {
+  const [filter, setFilter] = useState("");
   const rows = Object.values(
     Object.values(mesbgData).reduce((acc, currentValue) => {
       const name = currentValue.name;
@@ -270,8 +276,8 @@ export const Database = () => {
 
       return acc;
     }, {}),
-  ).flatMap((dataPoint: Unit[]) => {
-    return {
+  )
+    .flatMap((dataPoint: Unit[]) => ({
       name: dataPoint[0].name,
       army_type: dataPoint[0].army_type,
       profile_origin: dataPoint[0].profile_origin,
@@ -282,20 +288,82 @@ export const Database = () => {
       ],
       MWFW: dataPoint.flatMap((p) => p.MWFW),
       profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name],
-    };
-  });
+    }))
+    .filter((row) => {
+      if (filter.trim().length === 0) return true;
+      return filter
+        .split(";")
+        .map((criteria) => criteria.trim())
+        .every((criteria) => {
+          return (
+            row.name.includes(criteria) ||
+            row.profile_origin.includes(criteria) ||
+            row.army_list.filter((item) => item.includes(criteria)).length >
+              0 ||
+            row.profile.special_rules.filter((item) => item.includes(criteria))
+              .length > 0 ||
+            row.profile.active_or_passive_rules.filter((item) =>
+              item.name.includes(criteria),
+            ).length > 0 ||
+            row.profile.wargear.filter((item) => item.includes(criteria))
+              .length > 0 ||
+            row.profile.heroic_actions.filter((item) => item.includes(criteria))
+              .length > 0 ||
+            row.profile.magic_powers.filter((item) =>
+              item.name.includes(criteria),
+            ).length > 0
+          );
+        });
+    });
 
   return (
     <Container maxWidth={false} sx={{ p: 2 }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         Profile database
       </Typography>
+
+      <Stack
+        direction="row"
+        gap={1}
+        sx={{ mt: 1, mr: 2 }}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <TextField
+          id="database-filter-input"
+          label="Filter"
+          placeholder="Start typing to filter"
+          size="small"
+          value={filter}
+          sx={{
+            maxWidth: "80ch",
+          }}
+          fullWidth
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+            setFilter(event.target.value);
+          }}
+        />
+        <Typography>
+          <strong>{rows.length} Profiles</strong>
+        </Typography>
+      </Stack>
+      <FormHelperText sx={{ mb: 2 }}>
+        Try combining filters using the ; symbol, for example: &quot;Gondor;
+        Strike&quot; or &quot;The Free Peoples; Resistant to Magic&quot;
+      </FormHelperText>
+
       <TableContainer
         component={Paper}
         sx={{ maxHeight: "calc(100vh - 200px)" }}
       >
         <Table sx={{ minWidth: 650 }} stickyHeader size="small">
-          <TableHead>
+          <TableHead
+            sx={{
+              "& > tr > th": {
+                backgroundColor: (theme) => theme.palette.grey.A200,
+              },
+            }}
+          >
             <TableRow>
               <TableCell align="center" colSpan={4}>
                 Profile
