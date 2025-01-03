@@ -293,24 +293,28 @@ export const Database = () => {
       if (filter.trim().length === 0) return true;
       return filter
         .split(";")
-        .map((criteria) => criteria.trim())
+        .map((criteria) => criteria.toLowerCase().trim())
         .every((criteria) => {
           return (
-            row.name.includes(criteria) ||
-            row.profile_origin.includes(criteria) ||
-            row.army_list.filter((item) => item.includes(criteria)).length >
-              0 ||
-            row.profile.special_rules.filter((item) => item.includes(criteria))
-              .length > 0 ||
-            row.profile.active_or_passive_rules.filter((item) =>
-              item.name.includes(criteria),
+            row.name.toLowerCase().includes(criteria) ||
+            row.profile_origin.toLowerCase().includes(criteria) ||
+            row.army_list.filter((item) =>
+              item.toLowerCase().includes(criteria),
             ).length > 0 ||
-            row.profile.wargear.filter((item) => item.includes(criteria))
-              .length > 0 ||
-            row.profile.heroic_actions.filter((item) => item.includes(criteria))
-              .length > 0 ||
+            row.profile.special_rules.filter((item) =>
+              item.toLowerCase().includes(criteria),
+            ).length > 0 ||
+            row.profile.active_or_passive_rules.filter((item) =>
+              item.name.toLowerCase().includes(criteria),
+            ).length > 0 ||
+            row.profile.wargear.filter((item) =>
+              item.toLowerCase().includes(criteria),
+            ).length > 0 ||
+            row.profile.heroic_actions.filter((item) =>
+              item.toLowerCase().includes(criteria),
+            ).length > 0 ||
             row.profile.magic_powers.filter((item) =>
-              item.name.includes(criteria),
+              item.name.toLowerCase().includes(criteria),
             ).length > 0
           );
         });
