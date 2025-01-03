@@ -10,6 +10,7 @@ import {
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Fragment, FunctionComponent, useState } from "react";
+import { useAppState } from "../../../state/app";
 import { useUserPreferences } from "../../../state/preference";
 
 const Keyword = ({
@@ -17,16 +18,19 @@ const Keyword = ({
   active_passive,
   description,
   used,
+  expanded: expandedProp,
 }: {
   name: string;
   active_passive?: string;
   description: string;
   used: boolean;
+  expanded?: boolean;
 }) => {
   const { preferences } = useUserPreferences();
+  const [expanded, setExpanded] = useState(expandedProp || false);
 
   return (
-    <Accordion>
+    <Accordion expanded={expanded} onClick={() => setExpanded(!expanded)}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography
           variant="body1"
@@ -63,8 +67,15 @@ export const KeywordSearch: FunctionComponent<{
   keywords: { name: string; active_passive?: string; description: string }[];
   usedKeywords?: string[];
 }> = ({ keywords, usedKeywords = [] }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [keywordList, setKeywordList] = useState(keywords);
+  const { openSidebarContext } = useAppState();
+  const [searchTerm, setSearchTerm] = useState(
+    openSidebarContext?.searchKeyword || "",
+  );
+  const [keywordList, setKeywordList] = useState(
+    keywords.filter((kw) =>
+      kw.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    ),
+  );
   const { preferences } = useUserPreferences();
 
   const handleSearch = (e) => {
@@ -108,6 +119,7 @@ export const KeywordSearch: FunctionComponent<{
                   {...kw}
                   key={kw.name}
                   used={usedKeywords.includes(kw.name)}
+                  expanded={keywordList.length === 1}
                 />
               );
             })}
@@ -128,6 +140,7 @@ export const KeywordSearch: FunctionComponent<{
               {...kw}
               key={kw.name}
               used={usedKeywords.includes(kw.name)}
+              expanded={keywordList.length === 1}
             />
           );
         })}
