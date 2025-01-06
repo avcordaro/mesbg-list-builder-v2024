@@ -1,4 +1,4 @@
-import { BookmarkAdd } from "@mui/icons-material";
+import { BookmarkAdd, Edit } from "@mui/icons-material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Collapse, Stack } from "@mui/material";
@@ -19,29 +19,20 @@ import { DrawerTypes } from "../../../components/drawer/drawers.tsx";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
-import { Profile } from "../../../types/profile-data.types.ts";
+import { useCollectionState } from "../../../state/collection";
+import { DatabaseRowData } from "./DatabaseTable.tsx";
 import { ExtraInfoRow } from "./ExtraInformationSection.tsx";
 
-export const DatabaseTableRow = ({
-  row,
-}: {
-  row: {
-    name: string;
-    profile_origin: string;
-    profile: Profile;
-    army_list: string[];
-    MWFW: unknown;
-    options: string[];
-    M: string;
-    W: string;
-    F: string;
-    Mv: number;
-  };
-}) => {
+export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
   const { palette } = useTheme();
+  const { inventory } = useCollectionState();
   const screen = useScreenSize();
   const { setCurrentModal, openSidebar } = useAppState();
   const [open, setOpen] = useState(false);
+
+  const existsInInv =
+    !!inventory[row.profile_origin] &&
+    !!inventory[row.profile_origin][row.name];
 
   const [might, will, fate] = [row.M, row.W, row.F];
 
@@ -96,13 +87,27 @@ export const DatabaseTableRow = ({
         )}
         <TableCell align="center">
           <SquareIconButton
-            icon={<BookmarkAdd />}
+            icon={existsInInv ? <Edit /> : <BookmarkAdd />}
             iconColor={palette.primary.contrastText}
-            backgroundColor={palette.grey.A700}
+            backgroundColor={
+              existsInInv ? palette.primary.dark : palette.grey.A700
+            }
             backgroundColorHover={palette.grey["900"]}
             iconPadding="0.5rem"
-            onClick={() => {}}
-            disabled
+            onClick={() =>
+              setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
+                unit: {
+                  name: row.name,
+                  profile_origin: row.profile_origin,
+                  options: row.options,
+                  option_mandatory: row.option_mandatory,
+                  unit_type: row.unit_type,
+                },
+                title: existsInInv
+                  ? `Edit collection`
+                  : `Add to your collection`,
+              })
+            }
           />
         </TableCell>
       </TableRow>
@@ -281,7 +286,7 @@ export const DatabaseTableRow = ({
               {row.options.length > 0 && (
                 <ExtraInfoRow title="Possible options">
                   <Typography>
-                    &quot;{row.options.join('", "')}&quot;
+                    &quot;{row.options.map((o) => o.name).join('", "')}&quot;
                   </Typography>
                 </ExtraInfoRow>
               )}

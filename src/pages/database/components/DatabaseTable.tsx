@@ -8,33 +8,25 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { MouseEvent } from "react";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { ArmyType, Option, UnitType } from "../../../types/mesbg-data.types.ts";
 import { Profile } from "../../../types/profile-data.types.ts";
 import { Order } from "../utils/sorting.ts";
 import { DatabaseTableRow } from "./DatabaseTableRow.tsx";
 
-type DatabaseRowData = {
+export type DatabaseRowData = {
   army_list: string[];
   F: string;
   profile: Profile;
   Mv: number;
-  unit_type: (
-    | "Warrior"
-    | "Hero of Legend"
-    | "Hero of Valour"
-    | "Hero of Fortitude"
-    | "Minor Hero"
-    | "Independent Hero"
-    | "Independent Hero*"
-    | "Siege Engine"
-    | string
-  )[];
+  unit_type: UnitType[];
   M: string;
   profile_origin: string;
   searchString: string;
   W: string;
   name: string;
-  options: string[];
-  army_type: "Good" | "Evil";
+  option_mandatory: boolean;
+  options: Option[];
+  army_type: ArmyType;
   MWFW: string[][];
 };
 

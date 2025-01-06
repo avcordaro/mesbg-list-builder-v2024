@@ -5,6 +5,7 @@ import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
 import { Settings } from "../pages/Settings.tsx";
 import { Roster } from "../pages/builder/Roster.tsx";
+import { Collection } from "../pages/collection/Collection.tsx";
 import { Database } from "../pages/database/Database.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
 import { SelectRoster } from "../pages/gamemode/SelectRoster.tsx";
@@ -67,6 +68,11 @@ export const routes: RouteObject[] = [
       {
         path: "database",
         element: <Database />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "collection",
+        element: <Collection />,
         errorElement: <AppFallback />,
       },
       {

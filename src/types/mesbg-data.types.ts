@@ -24,6 +24,7 @@ type OptionType =
   | "passenger"
   | "mount, throw"
   | "special_warband_upgrade"
+  | "ringwraith_amwf"
   | null;
 
 export type OptionDependency = {

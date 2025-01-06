@@ -1,4 +1,5 @@
 import {
+  BookmarkAdd,
   Delete,
   DeleteForever,
   Download,
@@ -15,6 +16,7 @@ import { BsFillPersonVcardFill } from "react-icons/bs";
 import { FaFileImport } from "react-icons/fa";
 import { FaImage } from "react-icons/fa6";
 import { GiSwordsEmblem } from "react-icons/gi";
+import { AddToCollection } from "./modals/AddToCollection.tsx";
 import { ChartsModal } from "./modals/ChartsModal.tsx";
 import { ConfirmDeleteGroupModal } from "./modals/ConfirmDeleteGroupModal.tsx";
 import { ConfirmDeleteRosterModal } from "./modals/ConfirmDeleteRosterModal.tsx";
@@ -54,6 +56,8 @@ export enum ModalTypes {
   UPDATE_ROSTER_GROUP = "UPDATE_ROSTER_GROUP",
   DELETE_ROSTER_GROUP = "DELETE_ROSTER_GROUP",
   DISBAND_ROSTER_GROUP = "DISBAND_ROSTER_GROUP",
+
+  ADD_TO_COLLECTION = "ADD_TO_COLLECTION",
 }
 
 export type ModalProps = {
@@ -211,6 +215,14 @@ export const modals = new Map<ModalTypes, ModalProps>([
       title: "Delete Group",
       children: <ConfirmDeleteGroupModal />,
       maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.ADD_TO_COLLECTION,
+    {
+      icon: <BookmarkAdd />,
+      children: <AddToCollection />,
+      maxWidth: "lg",
     },
   ],
 ]);

@@ -10,75 +10,9 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, MouseEvent, useMemo, useState } from "react";
-import { mesbgData, profileData } from "../../assets/data.ts";
-import { Unit } from "../../types/mesbg-data.types.ts";
 import { DatabaseTable } from "./components/DatabaseTable.tsx";
+import { rows } from "./data.ts";
 import { getComparator, Order } from "./utils/sorting.ts";
-import {
-  convertBardsFamilyToSingleRows,
-  convertShankAndWrotToSingleRows,
-} from "./utils/special-rows.ts";
-
-const rows = Object.values(
-  Object.values(mesbgData).reduce((acc, currentValue) => {
-    const name = currentValue.name;
-    if (!acc[name]) {
-      acc[name] = [];
-    }
-    acc[name].push(currentValue);
-
-    return acc;
-  }, {}),
-)
-  .flatMap((dataPoint: Unit[]) => {
-    if (dataPoint[0].name === "Bard's Family") {
-      return convertBardsFamilyToSingleRows(dataPoint);
-    }
-    if (dataPoint[0].name === "Shank & Wrot") {
-      return convertShankAndWrotToSingleRows(dataPoint);
-    }
-    return {
-      name: dataPoint[0].name,
-      army_type: dataPoint[0].army_type,
-      profile_origin: dataPoint[0].profile_origin,
-      unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
-      army_list: dataPoint.map((p) => p.army_list),
-      options: [
-        ...new Set(dataPoint.flatMap((p) => p.options).map((o) => o.name)),
-      ],
-      MWFW: dataPoint.flatMap((p) => p.MWFW),
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name],
-    };
-  })
-  .map((row) => {
-    const [M, W, F] =
-      row.name === "The Witch-king of Angmar" || row.name === "Ringwraith"
-        ? ["*", "*", "*"]
-        : row.MWFW[0]
-          ? row.MWFW[0][1].split(":")
-          : ["-", "-", "-"];
-    return {
-      ...row,
-      Mv: !Number.isNaN(parseInt(row.profile.Mv))
-        ? parseInt(row.profile.Mv)
-        : -1,
-      M,
-      W,
-      F,
-      searchString: [
-        row.name,
-        row.profile_origin,
-        row.army_list.join(","),
-        row.profile.special_rules.join(","),
-        row.profile.heroic_actions.join(","),
-        row.profile.wargear.join(","),
-        row.profile.active_or_passive_rules.map(({ name }) => name).join(","),
-        row.profile.magic_powers.map(({ name }) => name).join(","),
-      ]
-        .join(",")
-        .toLowerCase(),
-    };
-  });
 
 export const Database = () => {
   const [filter, setFilter] = useState("");

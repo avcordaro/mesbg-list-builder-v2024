@@ -1,6 +1,7 @@
 import {
   Announcement,
   AutoAwesome,
+  CategoryOutlined,
   ChevronLeftOutlined,
   FolderOutlined,
   Info,
@@ -429,6 +430,12 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "Profile database",
       action: () => navigate("/database"),
       active: location.pathname === "/database",
+    },
+    {
+      icon: <CategoryOutlined />,
+      label: "You collection",
+      action: () => navigate("/collection"),
+      active: location.pathname === "/collection",
     },
     { divider: true },
     {

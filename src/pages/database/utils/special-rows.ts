@@ -7,9 +7,10 @@ export function convertBardsFamilyToSingleRows(dataPoint: Unit[]) {
     profile_origin: dataPoint[0].profile_origin,
     unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
     army_list: dataPoint.map((p) => p.army_list),
-    options: [
-      ...new Set(dataPoint.flatMap((p) => p.options).map((o) => o.name)),
-    ],
+    option_mandatory: dataPoint[0].opt_mandatory,
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
   };
   return [
     {
@@ -45,9 +46,10 @@ export function convertShankAndWrotToSingleRows(dataPoint: Unit[]) {
     profile_origin: dataPoint[0].profile_origin,
     unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
     army_list: dataPoint.map((p) => p.army_list),
-    options: [
-      ...new Set(dataPoint.flatMap((p) => p.options).map((o) => o.name)),
-    ],
+    option_mandatory: dataPoint[0].opt_mandatory,
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
   };
 
   return [
