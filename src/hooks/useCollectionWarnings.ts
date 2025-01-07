@@ -32,26 +32,45 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
       .reduce((acc, item) => {
         const key = JSON.stringify(item.options); // Serialize the options array as a key
         if (!acc[key]) {
-          acc[key] = { options: item.options, quantity: 0 };
+          acc[key] = item;
+        } else {
+          acc[key].quantity += item.quantity;
         }
-        acc[key].quantity += item.quantity;
         return acc;
       }, {}),
-  );
+  ).map((unit: { options: string[]; quantity: number }) => {
+    const collectionUsed =
+      Number(
+        collection.find((c) => {
+          if (typeof c.options === "string") {
+            return unit.options.includes(c.options);
+          } else {
+            return false;
+          }
+        })?.amount || "",
+      ) - unit.quantity;
+
+    return {
+      ...unit,
+      genericsUsed: collectionUsed > 0 ? 0 : -collectionUsed,
+    };
+  });
 
   const options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
 
-  console.log(
-    JSON.stringify(
-      {
-        collection,
-        totalSelected,
-        options,
-      },
-      null,
-      2,
-    ),
-  );
+  if (unit.name === "Cave Troll") {
+    console.log(
+      JSON.stringify(
+        {
+          collection,
+          totalSelected,
+          options,
+        },
+        null,
+        1,
+      ),
+    );
+  }
 
   return {
     warnings: "on",
