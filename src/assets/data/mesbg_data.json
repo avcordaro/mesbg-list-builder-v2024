@@ -2739,6 +2739,7 @@
         "id": "OPT0232",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -2813,6 +2814,7 @@
         "id": "OPT0235",
         "name": "2A / 1M / 10W / 1F",
         "points": 90,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -7213,6 +7215,7 @@
         "id": "OPT0840",
         "name": "3A / 3M / 18W / 3F",
         "points": 150,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -7908,6 +7911,7 @@
         "id": "OPT0267",
         "name": "3A / 3M / 18W / 3F",
         "points": 150,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -8015,6 +8019,7 @@
         "id": "OPT0272",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -9278,6 +9283,7 @@
         "id": "OPT0188",
         "name": "3A / 3M / 18W / 3F",
         "points": 150,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -9340,6 +9346,7 @@
         "id": "OPT0195",
         "name": "2A / 1M / 10W / 1F",
         "points": 90,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -15008,6 +15015,7 @@
         "id": "OPT0257",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -15105,6 +15113,7 @@
         "id": "OPT0336",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -15146,6 +15155,7 @@
         "id": "OPT0339",
         "name": "2A / 1M / 10W / 1F",
         "points": 90,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -17216,6 +17226,7 @@
         "id": "OPT0039",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
@@ -17269,6 +17280,7 @@
         "id": "OPT0044",
         "name": "2A / 2M / 14W / 2F",
         "points": 120,
+        "type": "ringwraith_amwf",
         "included": true,
         "quantity": 1
       },
