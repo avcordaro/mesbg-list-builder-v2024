@@ -1,3 +1,4 @@
+import { Category, CategoryOutlined } from "@mui/icons-material";
 import { Chip, Paper } from "@mui/material";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -5,8 +6,12 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { BsFillPersonVcardFill } from "react-icons/bs";
+import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
+import { useCollectionState } from "../../../state/collection";
+import { useUserPreferences } from "../../../state/preference";
 import { Unit } from "../../../types/mesbg-data.types.ts";
+import { isSelectedUnit } from "../../../types/roster.ts";
 import { ModalTypes } from "../../modal/modals.tsx";
 import { UnitProfilePicture } from "../images/UnitProfilePicture.tsx";
 import { MwfBadge } from "../might-will-fate/MwfBadge.tsx";
@@ -31,6 +36,25 @@ export function UnitSelectionButton({
 }: UnitSelectionButtonProps) {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
+  const { inventory } = useCollectionState();
+  const { preferences } = useUserPreferences();
+  const { roster } = useRosterInformation();
+
+  const totalCollection =
+    inventory[unit.profile_origin] && inventory[unit.profile_origin][unit.name]
+      ? inventory[unit.profile_origin][unit.name].collection.reduce(
+          (a, b) => a + Number(b.amount),
+          0,
+        )
+      : 0;
+  const totalSelected = roster.warbands
+    .flatMap((wb) => [wb.hero, ...wb.units])
+    .filter(isSelectedUnit)
+    .filter(
+      (ru) =>
+        ru.name === unit.name && ru.profile_origin === unit.profile_origin,
+    )
+    .reduce((a, b) => a + Number(b.quantity), 0);
 
   const points = unit.options
     .filter((o) => o.included)
@@ -82,6 +106,49 @@ export function UnitSelectionButton({
                 </Box>
                 <MwfBadge unit={unit} />
               </Stack>
+              {!!preferences.collectionWarnings && (
+                <Stack
+                  component="span"
+                  gap={0.5}
+                  sx={{ pt: unit.unit_type !== "Warrior" ? 0.5 : 0 }}
+                  direction="row"
+                  alignItems="center"
+                >
+                  {totalCollection - totalSelected <= 0 ? (
+                    <Category
+                      sx={{ fontSize: "1rem" }}
+                      color={
+                        totalCollection - totalSelected < 0
+                          ? "error"
+                          : "warning"
+                      }
+                    />
+                  ) : (
+                    <CategoryOutlined
+                      sx={{ fontSize: "1rem" }}
+                      color={
+                        totalCollection - totalSelected < 0
+                          ? "error"
+                          : totalCollection - totalSelected === 0
+                            ? "warning"
+                            : "inherit"
+                      }
+                    />
+                  )}
+                  <Typography
+                    variant="body2"
+                    color={
+                      totalCollection - totalSelected < 0
+                        ? "error"
+                        : totalCollection - totalSelected === 0
+                          ? "warning"
+                          : "inherit"
+                    }
+                  >
+                    Collection: {totalCollection - totalSelected} left.
+                  </Typography>
+                </Stack>
+              )}
             </Box>
             <Box sx={{ minWidth: "50px" }}>
               <IconButton
@@ -100,8 +167,6 @@ export function UnitSelectionButton({
               </IconButton>
             </Box>
           </Stack>
-
-          <Stack gap={1} direction="row" flexWrap="wrap" sx={{ mt: 1 }}></Stack>
         </Stack>
       </Stack>
     </Paper>
