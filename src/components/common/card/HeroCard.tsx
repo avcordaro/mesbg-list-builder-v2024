@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
+import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useMwfMutations } from "../../../hooks/useMwfMutations.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
@@ -55,6 +56,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { roster, getSetOfModelIds } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
+  const { warnings } = useCollectionWarnings(unit);
 
   const valid =
     !followerOf ||

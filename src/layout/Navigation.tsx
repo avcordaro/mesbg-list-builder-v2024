@@ -356,11 +356,18 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       },
       active: location.pathname.startsWith("/gamemode"),
     },
+
     {
       icon: <AiFillTrophy style={{ fontSize: "1.5rem" }} />,
       label: "Match history",
       action: () => navigate("/match-history"),
       active: location.pathname === "/match-history",
+    },
+    {
+      icon: <CategoryOutlined />,
+      label: "Your collection",
+      action: () => navigate("/collection"),
+      active: location.pathname === "/collection",
     },
     { divider: true },
     {
@@ -430,12 +437,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       label: "Profile database",
       action: () => navigate("/database"),
       active: location.pathname === "/database",
-    },
-    {
-      icon: <CategoryOutlined />,
-      label: "You collection",
-      action: () => navigate("/collection"),
-      active: location.pathname === "/collection",
     },
     { divider: true },
     {

@@ -8,6 +8,7 @@ import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
 import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
+import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { Option } from "../../../types/mesbg-data.types.ts";
@@ -110,6 +111,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
+  const { warnings } = useCollectionWarnings(unit);
 
   const valid =
     followerOf === undefined ||
