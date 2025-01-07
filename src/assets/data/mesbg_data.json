@@ -12516,6 +12516,7 @@
         "id": "OPT0443",
         "name": "Horse",
         "points": 5,
+        "type": "mount",
         "included": true,
         "quantity": 1
       },
@@ -13880,7 +13881,8 @@
       {
         "id": "OPT0743",
         "name": "Horse",
-        "points": 20
+        "points": 20,
+        "type": "mount"
       }
     ]
   },
