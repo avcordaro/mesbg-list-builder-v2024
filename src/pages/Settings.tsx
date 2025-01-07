@@ -1,5 +1,6 @@
 import {
   AutoAwesome,
+  CategoryOutlined,
   ChecklistRtl,
   PhotoCameraOutlined,
   SwitchAccessShortcut,
@@ -122,6 +123,16 @@ export const Settings = () => {
           }
           value={preferences.splitActiveRules}
           onChange={updatePreference("splitActiveRules")}
+        />
+
+        <SettingsOption
+          icon={<CategoryOutlined />}
+          label={"Collection based warnings"}
+          description={
+            "Get a warning/notification if you are building an army list where you included models that are not part of your collection."
+          }
+          value={preferences.collectionWarnings || false}
+          onChange={updatePreference("collectionWarnings")}
         />
 
         <SettingsOption

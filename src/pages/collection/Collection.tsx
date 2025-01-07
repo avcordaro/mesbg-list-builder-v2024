@@ -57,8 +57,11 @@ export const Collection = () => {
       <Typography>
         Managing a collection of the miniatures that you have allows this
         builder to indicate possible problems you might have when packing for
-        matches. You can add more models using the &apos;add to collection&apos;
-        button on the <Link to="/database">database</Link> page.
+        matches. These warnings can be enabled/disabled in the app settings.
+      </Typography>
+      <Typography>
+        You can add more models using the &apos;add to collection&apos; button
+        on the <Link to="/database">database</Link> page.
       </Typography>
 
       <TableContainer sx={{ mt: 2 }}>

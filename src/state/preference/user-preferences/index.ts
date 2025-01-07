@@ -5,6 +5,7 @@ export type Preferences =
   | "autoUpdateUnitData"
   | "colorCodedRules"
   | "splitActiveRules"
+  | "collectionWarnings"
   | "oldShareScreen";
 
 export type PreferenceState = {
@@ -19,6 +20,7 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     colorCodedRules: true,
     splitActiveRules: false,
     oldShareScreen: false,
+    collectionWarnings: false,
   },
 };
 
