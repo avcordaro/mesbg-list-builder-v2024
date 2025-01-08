@@ -111,7 +111,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
-  const { warnings } = useCollectionWarnings(unit);
+  const { warnings, overexceededCollections } = useCollectionWarnings(unit);
 
   const valid =
     followerOf === undefined ||
@@ -193,7 +193,13 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           size="smaller"
         />
         <Stack direction="column" justifyContent="center" flexGrow={1}>
-          <Typography variant="h6" fontWeight="bold">
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            color={
+              warnings === "on" && overexceededCollections ? "error" : "inherit"
+            }
+          >
             {unit.quantity ?? 1}x {unit.name}
           </Typography>
           <Typography
@@ -309,7 +315,15 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             }}
           >
             <Stack direction="row" alignItems="center" gap={1}>
-              <Typography variant="h6" fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                color={
+                  warnings === "on" && overexceededCollections
+                    ? "error"
+                    : "inherit"
+                }
+              >
                 {unit.quantity ?? 1}x {unit.name}
                 {collapsed && (
                   <span

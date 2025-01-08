@@ -16,6 +16,13 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
 
   const { collection } = (inventory[unit.profile_origin] &&
     inventory[unit.profile_origin][unit.name]) || { collection: [] };
+  const generics = Number(
+    collection.find((c) =>
+      typeof c.options === "string"
+        ? c.options === "Generic"
+        : c.options.includes("Generic"),
+    )?.amount || "0",
+  );
 
   const totalSelected = Object.values(
     roster.warbands
@@ -56,23 +63,19 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
     };
   });
 
-  const options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
+  const totalGenericsUsed = totalSelected
+    .map((ts) => ts.genericsUsed)
+    .reduce((a, b) => a + b, 0);
 
-  if (unit.name === "Cave Troll") {
-    console.log(
-      JSON.stringify(
-        {
-          collection,
-          totalSelected,
-          options,
-        },
-        null,
-        1,
-      ),
-    );
-  }
+  const options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
 
   return {
     warnings: "on",
+    overexceededCollections:
+      totalGenericsUsed > generics &&
+      totalSelected.find(
+        (ts) =>
+          ts.genericsUsed > 0 && ts.options.every((x) => options.includes(x)),
+      ),
   };
 };
