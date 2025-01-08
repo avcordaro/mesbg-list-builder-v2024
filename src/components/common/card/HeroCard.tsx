@@ -56,7 +56,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { roster, getSetOfModelIds } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
-  const { warnings } = useCollectionWarnings(unit);
+  const { warnings, overexceededCollections } = useCollectionWarnings(unit);
 
   const valid =
     !followerOf ||
@@ -172,7 +172,15 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           </Stack>
 
           <Stack direction="column" justifyContent="center" flexGrow={1}>
-            <Typography variant="h6" fontWeight="bold">
+            <Typography
+              variant="h6"
+              fontWeight="bold"
+              color={
+                warnings === "on" && overexceededCollections
+                  ? "error"
+                  : "inherit"
+              }
+            >
               {unit.name}
             </Typography>
             <Typography
@@ -278,7 +286,15 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
         >
           <Stack direction="column" flexGrow={1} justifyContent="center">
             <Stack direction="row" gap={2} alignItems="center">
-              <Typography variant="h6" fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                color={
+                  warnings === "on" && overexceededCollections
+                    ? "error"
+                    : "inherit"
+                }
+              >
                 {unit.name}{" "}
                 {collapsed && (
                   <span

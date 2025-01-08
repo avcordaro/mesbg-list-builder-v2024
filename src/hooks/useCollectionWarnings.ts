@@ -50,9 +50,15 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
       Number(
         collection.find((c) => {
           if (typeof c.options === "string") {
+            if (c.options === "None") {
+              return unit.options.length === 0;
+            }
             return unit.options.includes(c.options);
           } else {
-            return false;
+            if (c.options[0] === "None") {
+              return unit.options.length === 0;
+            }
+            return c.options.every((co) => unit.options.includes(co));
           }
         })?.amount || "",
       ) - unit.quantity;
@@ -68,6 +74,16 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
     .reduce((a, b) => a + b, 0);
 
   const options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
+
+  if (unit.name === "Moria Goblin Captain") {
+    console.log(
+      JSON.stringify(
+        { totalGenericsUsed, generics, options, collection, totalSelected },
+        null,
+        2,
+      ),
+    );
+  }
 
   return {
     warnings: "on",
