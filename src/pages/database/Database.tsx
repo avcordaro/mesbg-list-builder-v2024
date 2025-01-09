@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, MouseEvent, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { DatabaseTable } from "./components/DatabaseTable.tsx";
 import { rows } from "./data.ts";
 import { getComparator, Order } from "./utils/sorting.ts";
@@ -61,6 +62,12 @@ export const Database = () => {
     <Container maxWidth={false} sx={{ p: 2 }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         Profile database
+      </Typography>
+
+      <Typography>
+        You can add models from the database to you{" "}
+        <Link to="/collection">collection</Link> and aid yourself while writing
+        your army lists.
       </Typography>
 
       <Stack
