@@ -202,8 +202,25 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                   <UnitTypeLabel unitType={unit.unit_type} />
                 </Box>
                 <MwfBadge unit={unit} />
+                {warnings === "on" && (
+                  <Typography
+                    data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
+                    data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 0.5,
+                      my: -0.4,
+                    }}
+                    color={overExceededCollection ? "error.dark" : "inherit"}
+                  >
+                    <CategoryOutlined sx={{ fontSize: "1rem" }} />
+                    Available: {available - selected}
+                  </Typography>
+                )}
               </Stack>
             </Collapse>
+
             <Collapse in={collapsed}>
               <Typography variant="body2">
                 <i>{selectedOptions}</i>

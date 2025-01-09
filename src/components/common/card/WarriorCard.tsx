@@ -215,6 +215,24 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           >
             Points: <b>{unit.pointsTotal}</b> (per unit: {unit.pointsPerUnit})
           </Typography>
+          {warnings === "on" && (
+            <Collapse in={!collapsed}>
+              <Typography
+                data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
+                data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 0.5,
+                  my: -0.2,
+                }}
+                color={overExceededCollection ? "error.dark" : "inherit"}
+              >
+                <CategoryOutlined sx={{ fontSize: "1rem" }} />
+                Available: {available - selected}
+              </Typography>
+            </Collapse>
+          )}
           <Collapse in={collapsed}>
             {unit.opt_mandatory && !selectedOptions && (
               <Typography color="error" variant="body2">
@@ -226,7 +244,6 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             </Typography>
           </Collapse>
         </Stack>
-        <Stack></Stack>
       </Stack>
       <Collapse in={!collapsed}>
         {!!unit.options.length && (
