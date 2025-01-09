@@ -1,6 +1,8 @@
 {
   "main": {
     "added": [
+      "Added the ability to manage your collection of miniatures in the list builder",
+      "Added a user preference setting to enable/disable warnings during roster builder based on your collection",
       "Added a warning when you reopen Game Mode after your roster was changed, allowing you to reload the Game Mode session with the updated roster."
     ],
     "bugfixes": [
