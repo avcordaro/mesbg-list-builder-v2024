@@ -147,7 +147,7 @@ export function UnitSelectionButton({
                   >
                     {totalCollection === 0
                       ? "Not in collection"
-                      : `Collection: ${totalCollection - totalSelected} left.`}
+                      : `Collection: ${totalCollection - totalSelected} left`}
                   </Typography>
                 </Stack>
               )}

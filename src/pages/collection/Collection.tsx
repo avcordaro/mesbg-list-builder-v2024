@@ -55,18 +55,19 @@ export const Collection = () => {
   return (
     <Container maxWidth={false} sx={{ p: 2 }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
-        Your collection
+        My Collection
       </Typography>
 
       <Typography>
-        Managing a collection of the miniatures that you have allows this
-        builder to indicate possible problems you might have when packing for
-        matches. These warnings can be enabled/disabled in the app settings.
+        Easily manage your personal collection of miniatures, which allows the
+        list builder to provide helpful warnings if you exceed the models
+        available in your collection. These warnings can be enabled/disabled in
+        the app settings.
       </Typography>
       {!preferences.collectionWarnings && (
         <Alert severity="warning" icon={false} sx={{ my: 1 }}>
-          <Typography sx={{ display: "flex", alignItems: "center", gap: 0.4 }}>
-            Collection warnings are currently turned off,
+          <Typography sx={{ gap: 0.4 }}>
+            Collection warnings in the list builder are currently turned off.
             <Button onClick={() => setPreference("collectionWarnings", true)}>
               Click here
             </Button>
@@ -74,11 +75,13 @@ export const Collection = () => {
           </Typography>
         </Alert>
       )}
-      <Typography>
-        You can add more models using the &apos;add to collection&apos; button
-        on the <Link to="/database">database</Link> page.
-      </Typography>
-
+      <Stack direction="row" gap={0.5} sx={{ my: 2 }}>
+        <Typography>
+          You can add models to your collection using the{" "}
+          <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
+          <Link to="/database">Profile Database</Link> page.
+        </Typography>
+      </Stack>
       <TableContainer sx={{ mt: 2 }}>
         <Table>
           <TableHead
@@ -167,11 +170,14 @@ export const Collection = () => {
                   <Alert severity="info">
                     <Stack direction="row" gap={0.5}>
                       <Typography>
-                        Your collection is still empty. Start adding models via
-                        the
+                        Your collection is currently empty. You can start adding
+                        models to your collection using the
                       </Typography>
                       <BookmarkAdd />
-                      <Typography>button on the database view.</Typography>
+                      <Typography>
+                        button on the{" "}
+                        <Link to="/database">Profile Database</Link> page.
+                      </Typography>
                     </Stack>
                   </Alert>
                 </TableCell>

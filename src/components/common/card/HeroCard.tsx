@@ -210,7 +210,6 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                       display: "flex",
                       alignItems: "center",
                       gap: 0.5,
-                      my: -0.4,
                     }}
                     color={overExceededCollection ? "error.dark" : "inherit"}
                   >

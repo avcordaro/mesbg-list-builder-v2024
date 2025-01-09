@@ -1,4 +1,4 @@
-import { CancelRounded } from "@mui/icons-material";
+import { BookmarkAdd, CancelRounded } from "@mui/icons-material";
 import {
   FormHelperText,
   InputAdornment,
@@ -61,15 +61,17 @@ export const Database = () => {
   return (
     <Container maxWidth={false} sx={{ p: 2 }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
-        Profile database
+        Profile Database
       </Typography>
-
-      <Typography>
-        You can add models from the database to you{" "}
-        <Link to="/collection">collection</Link> and aid yourself while writing
-        your army lists.
-      </Typography>
-
+      <Stack direction="row" gap={0.5} sx={{ mb: 2 }}>
+        <Typography>
+          You can add models from this database to your personal{" "}
+          <Link to="/collection">collection</Link> of miniatures using the{" "}
+          <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button, and choose to
+          receive helpful warnings from the list builder if you exceed the
+          models available in your collection.
+        </Typography>
+      </Stack>
       <Stack
         direction="row"
         gap={1}

@@ -128,7 +128,7 @@ export const Settings = () => {
         <SettingsOption
           icon={<CategoryOutlined />}
           label="Collection based warnings"
-          description="Get a warning/notification if you are building an army list where you included models that are not part of your collection."
+          description="Receive warnings/notifications if your army list includes models outside your collection or exceeds the quantity you own, ensuring your lists stay within the limits of your personal inventory."
           value={preferences.collectionWarnings || false}
           onChange={updatePreference("collectionWarnings")}
         />

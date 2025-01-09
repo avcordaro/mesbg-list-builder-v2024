@@ -224,14 +224,13 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                   display: "flex",
                   alignItems: "center",
                   gap: 0.5,
-                  my: -0.2,
                 }}
                 color={overExceededCollection ? "error.dark" : "inherit"}
               >
                 <CategoryOutlined sx={{ fontSize: "1rem" }} />
                 {available === 0
                   ? "Not in collection"
-                  : `Available: ${available - selected}`}
+                  : `Available: ${available - selected} left`}
               </Typography>
             </Collapse>
           )}
@@ -421,7 +420,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                   <CategoryOutlined sx={{ fontSize: "1rem" }} />
                   {available === 0
                     ? "Not in collection"
-                    : `Available: ${available - selected}`}
+                    : `Available: ${available - selected} left`}
                 </Typography>
               )}
             </Collapse>

@@ -359,32 +359,32 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
 
     {
       icon: <AiFillTrophy style={{ fontSize: "1.5rem" }} />,
-      label: "Match history",
+      label: "Match History",
       action: () => navigate("/match-history"),
       active: location.pathname === "/match-history",
     },
     {
       icon: <CategoryOutlined />,
-      label: "Your collection",
+      label: "My Collection",
       action: () => navigate("/collection"),
       active: location.pathname === "/collection",
     },
     { divider: true },
     {
       icon: <AutoAwesome />,
-      label: "Special rules",
+      label: "Special Rules",
       action: () => openSidebar(DrawerTypes.SPECIAL_RULE_SEARCH),
       active: false,
     },
     {
       icon: <HiFire style={{ fontSize: "1.5rem" }} />,
-      label: "Magical powers",
+      label: "Magical Powers",
       action: () => openSidebar(DrawerTypes.MAGICAL_POWER_SEARCH),
       active: false,
     },
     {
       icon: <GiMightyForce style={{ fontSize: "1.5rem" }} />,
-      label: "Heroic actions",
+      label: "Heroic Actions",
       action: () => openSidebar(DrawerTypes.HEROIC_ACTION_SEARCH),
       active: false,
     },
@@ -414,7 +414,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
     { divider: true },
     {
       icon: <Info />,
-      label: "About us",
+      label: "About Us",
       action: () => navigate("/about"),
       active: location.pathname === "/about",
     },
@@ -434,14 +434,14 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
     },
     {
       icon: <FaDatabase style={{ fontSize: "1.25rem", margin: "0 auto" }} />,
-      label: "Profile database",
+      label: "Profile Database",
       action: () => navigate("/database"),
       active: location.pathname === "/database",
     },
     { divider: true },
     {
       icon: <OpenInNew />,
-      label: "v2018 edition",
+      label: "v2018 Edition",
       action: () =>
         window.open("https://v2018.mesbg-list-builder.com/", "_blank").focus(),
       active: false,
