@@ -1,5 +1,6 @@
 import { BookmarkAdd, Cancel, Edit } from "@mui/icons-material";
 import {
+  Button,
   Stack,
   Table,
   TableBody,
@@ -17,12 +18,14 @@ import { SquareIconButton } from "../../components/common/icon-button/SquareIcon
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useAppState } from "../../state/app";
 import { useCollectionState } from "../../state/collection";
+import { useUserPreferences } from "../../state/preference";
 import { rows as databaseRows } from "../database/data.ts";
 
 export const Collection = () => {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
   const { inventory, deleteEntry } = useCollectionState();
+  const { preferences, setPreference } = useUserPreferences();
 
   const collection = Object.entries(inventory)
     .flatMap(([origin, model]) =>
@@ -59,6 +62,17 @@ export const Collection = () => {
         builder to indicate possible problems you might have when packing for
         matches. These warnings can be enabled/disabled in the app settings.
       </Typography>
+      {!preferences.collectionWarnings && (
+        <Alert severity="warning" icon={false} sx={{ my: 1 }}>
+          <Typography sx={{ display: "flex", alignItems: "center", gap: 0.4 }}>
+            Collection warnings are currently turned off,
+            <Button onClick={() => setPreference("collectionWarnings", true)}>
+              Click here
+            </Button>
+            to enable them.
+          </Typography>
+        </Alert>
+      )}
       <Typography>
         You can add more models using the &apos;add to collection&apos; button
         on the <Link to="/database">database</Link> page.

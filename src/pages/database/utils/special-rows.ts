@@ -1,6 +1,15 @@
 import { profileData } from "../../../assets/data.ts";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 
+export const COMPOSED_UNIT_MAP = {
+  "Bain, Son of Bard": "Bard's Family",
+  Tilda: "Bard's Family",
+  Sigrid: "Bard's Family",
+  Shank: "Shank & Wrot",
+  Wrot: "Shank & Wrot",
+  "Snow Troll": "Shank & Wrot",
+};
+
 export function convertBardsFamilyToSingleRows(dataPoint: Unit[]) {
   const base = {
     army_type: dataPoint[0].army_type,

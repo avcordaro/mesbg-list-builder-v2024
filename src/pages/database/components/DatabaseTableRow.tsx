@@ -20,6 +20,7 @@ import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
+import { COMPOSED_UNIT_MAP } from "../utils/special-rows.ts";
 import { DatabaseRowData } from "./DatabaseTable.tsx";
 import { ExtraInfoRow } from "./ExtraInformationSection.tsx";
 
@@ -32,7 +33,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
 
   const existsInInv =
     !!inventory[row.profile_origin] &&
-    !!inventory[row.profile_origin][row.name];
+    !!inventory[row.profile_origin][COMPOSED_UNIT_MAP[row.name] || row.name];
 
   const [might, will, fate] = [row.M, row.W, row.F];
 
@@ -94,10 +95,10 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
             }
             backgroundColorHover={palette.grey["900"]}
             iconPadding="0.5rem"
-            onClick={() =>
+            onClick={() => {
               setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
                 unit: {
-                  name: row.name,
+                  name: COMPOSED_UNIT_MAP[row.name] || row.name,
                   profile_origin: row.profile_origin,
                   options: row.options,
                   option_mandatory: row.option_mandatory,
@@ -106,8 +107,8 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
                 title: existsInInv
                   ? `Edit collection`
                   : `Add to your collection`,
-              })
-            }
+              });
+            }}
           />
         </TableCell>
       </TableRow>
