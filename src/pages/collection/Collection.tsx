@@ -20,6 +20,7 @@ import { useAppState } from "../../state/app";
 import { useCollectionState } from "../../state/collection";
 import { useUserPreferences } from "../../state/preference";
 import { rows as databaseRows } from "../database/data.ts";
+import { COMPOSED_UNIT_MAP } from "../database/utils/special-rows.ts";
 
 export const Collection = () => {
   const { palette } = useTheme();
@@ -123,16 +124,24 @@ export const Collection = () => {
                         iconColor={palette.primary.contrastText}
                         backgroundColor={palette.primary.main}
                         backgroundColorHover={palette.primary.dark}
-                        disabled={!dbRow}
+                        disabled={
+                          !dbRow &&
+                          !["Shank & Wrot", "Bard's Family"].includes(
+                            row.modelName,
+                          )
+                        }
                         iconPadding="1"
                         onClick={() => {
                           setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
                             unit: {
-                              name: dbRow.name,
-                              profile_origin: dbRow.profile_origin,
-                              options: dbRow.options,
-                              option_mandatory: dbRow.option_mandatory,
-                              unit_type: dbRow.unit_type,
+                              name:
+                                COMPOSED_UNIT_MAP[row.modelName] ||
+                                row.modelName,
+                              profile_origin: row.origin,
+                              options: dbRow?.options ?? [],
+                              option_mandatory:
+                                dbRow?.option_mandatory ?? false,
+                              unit_type: dbRow?.unit_type || ["Hero"],
                             },
                             title: `Edit collection`,
                           });
