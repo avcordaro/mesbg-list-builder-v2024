@@ -157,6 +157,7 @@ export const CreateNewRosterModal = () => {
       id: existingRosterIds.includes(id)
         ? withSuffix(id, existingRosterIds)
         : id,
+      group: groupId,
     };
     createRoster(importedRoster);
     navigate(`/roster/${importedRoster.id}`, { viewTransition: true });

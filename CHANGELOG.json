@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Updated the import roster function so it respects the group which was opened when importing it."
+    ]
+  },
   "1.7": {
     "added": [
       "Added a option to the roster popover menu which allows duplicating a roster so you can make small edits and keep the original roster intact",
