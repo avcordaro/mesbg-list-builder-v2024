@@ -75,13 +75,11 @@ export const Collection = () => {
           </Typography>
         </Alert>
       )}
-      <Stack direction="row" gap={0.5} sx={{ my: 2 }}>
-        <Typography>
-          You can add models to your collection using the{" "}
-          <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
-          <Link to="/database">Profile Database</Link> page.
-        </Typography>
-      </Stack>
+      <Typography sx={{ my: 2 }}>
+        You can add models to your collection using the{" "}
+        <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
+        <Link to="/database">Profile Database</Link> page.
+      </Typography>
       <TableContainer sx={{ mt: 2 }}>
         <Table>
           <TableHead
@@ -174,17 +172,12 @@ export const Collection = () => {
               <TableRow>
                 <TableCell colSpan={4}>
                   <Alert severity="info">
-                    <Stack direction="row" gap={0.5}>
-                      <Typography>
-                        Your collection is currently empty. You can start adding
-                        models to your collection using the
-                      </Typography>
-                      <BookmarkAdd />
-                      <Typography>
-                        button on the{" "}
-                        <Link to="/database">Profile Database</Link> page.
-                      </Typography>
-                    </Stack>
+                    <Typography>
+                      Your collection is currently empty! You can add models to
+                      your collection using the{" "}
+                      <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on
+                      the <Link to="/database">Profile Database</Link> page.
+                    </Typography>
                   </Alert>
                 </TableCell>
               </TableRow>

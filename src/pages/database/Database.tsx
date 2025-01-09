@@ -60,7 +60,7 @@ export const Database = () => {
 
   return (
     <Container maxWidth={false} sx={{ p: 2 }}>
-      <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
+      <Typography variant="h4" className="middle-earth" sx={{ mb: 2, mt: 1 }}>
         Profile Database
       </Typography>
       <Stack direction="row" gap={0.5} sx={{ mb: 2 }}>
@@ -111,12 +111,12 @@ export const Database = () => {
             },
           }}
         />
-        <Typography sx={{ whiteSpace: "nowrap" }}>
-          <strong>{filteredRows.length} Profiles</strong>
+        <Typography sx={{ whiteSpace: "nowrap", ml: 1 }}>
+          <strong>{filteredRows.length} profiles</strong>
         </Typography>
       </Stack>
       <FormHelperText sx={{ mb: 2 }}>
-        Try combining filters using the ; symbol, for example: &quot;Gondor;
+        You can combine filters using semicolons - for example: &quot;Gondor;
         Strike&quot; or &quot;The Free Peoples; Resistant to Magic&quot;
       </FormHelperText>
 
