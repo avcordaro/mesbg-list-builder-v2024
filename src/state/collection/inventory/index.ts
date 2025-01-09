@@ -1,12 +1,12 @@
 import { Slice } from "../../Slice.ts";
 import { CollectionState } from "../index.ts";
 
-type Collection = {
+export type Collection = {
   options: string[] | string;
   mount: string;
   amount: string;
 };
-type ModelInventory = {
+export type ModelInventory = {
   collection: Collection[];
 };
 /**

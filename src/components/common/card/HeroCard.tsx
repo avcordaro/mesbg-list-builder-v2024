@@ -1,3 +1,4 @@
+import { CategoryOutlined } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
@@ -56,7 +57,8 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { roster, getSetOfModelIds } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
-  const { warnings, overexceededCollections } = useCollectionWarnings(unit);
+  const { warnings, available, selected, overExceededCollection } =
+    useCollectionWarnings(unit);
 
   const valid =
     !followerOf ||
@@ -176,8 +178,8 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               variant="h6"
               fontWeight="bold"
               color={
-                warnings === "on" && overexceededCollections
-                  ? "error"
+                warnings === "on" && overExceededCollection
+                  ? "warning.dark"
                   : "inherit"
               }
             >
@@ -290,8 +292,8 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 variant="h6"
                 fontWeight="bold"
                 color={
-                  warnings === "on" && overexceededCollections
-                    ? "error"
+                  warnings === "on" && overExceededCollection
+                    ? "warning.dark"
                     : "inherit"
                 }
               >
@@ -357,9 +359,31 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               <Typography
                 data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
                 data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "end",
+                  gap: 0.5,
+                }}
               >
                 Points: <b>{unit.pointsTotal}</b>
               </Typography>
+              {warnings === "on" && (
+                <Typography
+                  data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
+                  data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "end",
+                    gap: 0.5,
+                  }}
+                  color={overExceededCollection ? "error.dark" : "inherit"}
+                >
+                  <CategoryOutlined sx={{ fontSize: "1rem" }} />
+                  Available: {available - selected}
+                </Typography>
+              )}
             </Collapse>
             <CardActionButtons
               remove={unit.compulsory === true ? null : remove}

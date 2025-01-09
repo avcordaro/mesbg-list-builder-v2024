@@ -1,4 +1,8 @@
-import { AddOutlined, RemoveOutlined } from "@mui/icons-material";
+import {
+  AddOutlined,
+  CategoryOutlined,
+  RemoveOutlined,
+} from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
@@ -111,7 +115,8 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
-  const { warnings, overexceededCollections } = useCollectionWarnings(unit);
+  const { warnings, available, selected, overExceededCollection } =
+    useCollectionWarnings(unit);
 
   const valid =
     followerOf === undefined ||
@@ -197,7 +202,9 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             variant="h6"
             fontWeight="bold"
             color={
-              warnings === "on" && overexceededCollections ? "error" : "inherit"
+              warnings === "on" && overExceededCollection
+                ? "warning.dark"
+                : "inherit"
             }
           >
             {unit.quantity ?? 1}x {unit.name}
@@ -319,12 +326,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                 variant="h6"
                 fontWeight="bold"
                 color={
-                  warnings === "on" && overexceededCollections
-                    ? "error"
+                  warnings === "on" && overExceededCollection
+                    ? "warning.dark"
                     : "inherit"
                 }
               >
-                {unit.quantity ?? 1}x {unit.name}
+                {unit.quantity ?? 1}x {unit.name}{" "}
                 {collapsed && (
                   <span
                     style={{ fontWeight: "normal" }}
@@ -370,10 +377,32 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
               <Typography
                 data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
                 data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "end",
+                  gap: 0.5,
+                }}
               >
                 Points: <b>{unit.pointsTotal}</b> (per unit:{" "}
                 {unit.pointsPerUnit})
               </Typography>
+              {warnings === "on" && (
+                <Typography
+                  data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
+                  data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "end",
+                    gap: 0.5,
+                  }}
+                  color={overExceededCollection ? "error.dark" : "inherit"}
+                >
+                  <CategoryOutlined sx={{ fontSize: "1rem" }} />
+                  Available: {available - selected}
+                </Typography>
+              )}
             </Collapse>
 
             <CardActionButtons
