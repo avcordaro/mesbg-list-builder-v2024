@@ -1,4 +1,3 @@
-import { CategoryOutlined } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
@@ -204,19 +203,11 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 <MwfBadge unit={unit} />
                 {warnings === "on" && (
                   <Typography
-                    data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
-                    data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 0.5,
-                    }}
                     color={overExceededCollection ? "error.dark" : "inherit"}
                   >
-                    <CategoryOutlined sx={{ fontSize: "1rem" }} />
                     {available === 0
                       ? "Not in collection"
-                      : `Available: ${available - selected}`}
+                      : `Left in collection: ${available - selected}`}
                   </Typography>
                 )}
               </Stack>
@@ -388,20 +379,11 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               </Typography>
               {warnings === "on" && (
                 <Typography
-                  data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
-                  data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "end",
-                    gap: 0.5,
-                  }}
                   color={overExceededCollection ? "error.dark" : "inherit"}
                 >
-                  <CategoryOutlined sx={{ fontSize: "1rem" }} />
                   {available === 0
                     ? "Not in collection"
-                    : `Available: ${available - selected}`}
+                    : `Left in collection: ${available - selected}`}
                 </Typography>
               )}
             </Collapse>

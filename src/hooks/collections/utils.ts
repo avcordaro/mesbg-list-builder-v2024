@@ -131,6 +131,7 @@ export function getAmountOfAvailableUnitsIncludingGenerics(
   options: string[],
   mount: string,
   amountOfGenericsForGivenMount: number,
+  totalGenericsUsedElseWhere: number,
 ) {
   return (
     Number(
@@ -143,7 +144,7 @@ export function getAmountOfAvailableUnitsIncludingGenerics(
               : options.filter((o) => o !== mount),
           ) && mount === ts.mount,
       )?.amount || "0",
-    ) + amountOfGenericsForGivenMount
+    ) + Math.max(amountOfGenericsForGivenMount - totalGenericsUsedElseWhere, 0)
   );
 }
 

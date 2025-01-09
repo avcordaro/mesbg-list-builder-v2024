@@ -1,8 +1,4 @@
-import {
-  AddOutlined,
-  CategoryOutlined,
-  RemoveOutlined,
-} from "@mui/icons-material";
+import { AddOutlined, RemoveOutlined } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
@@ -218,19 +214,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           {warnings === "on" && (
             <Collapse in={!collapsed}>
               <Typography
-                data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
-                data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 0.5,
-                }}
+                sx={{ textAlign: "end" }}
                 color={overExceededCollection ? "error.dark" : "inherit"}
               >
-                <CategoryOutlined sx={{ fontSize: "1rem" }} />
                 {available === 0
                   ? "Not in collection"
-                  : `Available: ${available - selected} left`}
+                  : `Left in collection: ${available - selected}`}
               </Typography>
             </Collapse>
           )}
@@ -407,20 +396,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
               </Typography>
               {warnings === "on" && (
                 <Typography
-                  data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
-                  data-test-unit-name={`unit-card--points--${slugify(unit.name)}`}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "end",
-                    gap: 0.5,
-                  }}
+                  sx={{ textAlign: "end" }}
                   color={overExceededCollection ? "error.dark" : "inherit"}
                 >
-                  <CategoryOutlined sx={{ fontSize: "1rem" }} />
                   {available === 0
                     ? "Not in collection"
-                    : `Available: ${available - selected} left`}
+                    : `Left in collection: ${available - selected}`}
                 </Typography>
               )}
             </Collapse>

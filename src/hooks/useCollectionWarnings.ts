@@ -44,6 +44,10 @@ export const useCollectionWarnings = (
     collection,
   );
 
+  // A list of selected options and selected mount
+  const mount = getMountName(unit);
+  const options = getListOfOptionsForGivenUnit(unit);
+
   // The total amount of generic models used,
   // used to check if there are enough models in the collection.
   // if (genericsUsed > genericsAvailable) then there is a problem.
@@ -51,9 +55,10 @@ export const useCollectionWarnings = (
     .map((ts) => ts.genericsUsed)
     .reduce((a, b) => a + b, 0);
 
-  // A list of selected options and selected mount
-  const mount = getMountName(unit);
-  const options = getListOfOptionsForGivenUnit(unit);
+  const totalGenericsUsedElseWhere = totalSelected
+    .filter((ts) => !arraysMatch(ts.options, options))
+    .map((ts) => ts.genericsUsed)
+    .reduce((a, b) => a + b, 0);
 
   // Get the amount of generic models used for the chosen selection. This is based on the selected mount.
   const bestMatchingMount = findBestMatch(mount, generics);
@@ -65,6 +70,7 @@ export const useCollectionWarnings = (
     options,
     mount,
     amountOfGenericsForGivenMount,
+    totalGenericsUsedElseWhere,
   );
   // The total amount of selected units given the current selection of options
   const selected = getAmountOfSelectedUnitsWithGivenOptions(
@@ -72,23 +78,23 @@ export const useCollectionWarnings = (
     options,
   );
 
-  // // Debug line given a specific profile name,
-  // // ~ Keep commented until needed!! ~
-  // if (unit.name.includes("Boromir")) {
-  //   console.dir({
-  //     name: unit.name,
-  //     generics,
-  //     mount,
-  //     bestMatchingMount,
-  //     amountOfGenericsForGivenMount,
-  //     totalGenericsUsed,
-  //     collection,
-  //     options,
-  //     totalSelected,
-  //     available,
-  //     selected,
-  //   });
-  // }
+  // Debug line given a specific profile name,
+  // ~ Keep commented until needed!! ~
+  if (unit.name.includes("Cave Troll")) {
+    console.dir({
+      name: unit.name,
+      generics,
+      mount,
+      bestMatchingMount,
+      amountOfGenericsForGivenMount,
+      totalGenericsUsed,
+      collection,
+      options,
+      totalSelected,
+      available,
+      selected,
+    });
+  }
 
   return {
     warnings: "on",
