@@ -92,10 +92,16 @@ export const Collection = () => {
             }}
           >
             <TableRow>
-              <TableCell size="small">Model</TableCell>
-              <TableCell size="small">Origin</TableCell>
-              <TableCell size="small">Collection</TableCell>
-              <TableCell size="small" />
+              <TableCell size="small" sx={{ minWidth: 240 }}>
+                Model
+              </TableCell>
+              <TableCell size="small" sx={{ minWidth: 170 }}>
+                Origin
+              </TableCell>
+              <TableCell size="small" sx={{ minWidth: 240 }}>
+                Collection
+              </TableCell>
+              <TableCell size="small" sx={{ minWidth: 170 }} />
             </TableRow>
           </TableHead>
           <TableBody>
