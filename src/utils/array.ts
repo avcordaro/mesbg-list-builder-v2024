@@ -32,3 +32,20 @@ export function moveItemBetweenLists<ITEM_TYPE>(
 
   return [newArray1, newArray2];
 }
+
+export function groupBy<ITEM_TYPE>(
+  array: ITEM_TYPE[],
+  key: string,
+): Record<string, ITEM_TYPE[]> {
+  return array.reduce((result, currentItem) => {
+    // Create a new group if it doesn't exist
+    (result[currentItem[key]] = result[currentItem[key]] || []).push(
+      currentItem,
+    );
+    return result;
+  }, {});
+}
+
+export function arraysMatch<ITEM_TYPE>(a: ITEM_TYPE[], c: ITEM_TYPE[]) {
+  return a.length === c.length && a.every((o) => c.includes(o));
+}

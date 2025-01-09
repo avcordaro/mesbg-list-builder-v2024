@@ -1,6 +1,8 @@
 import { useCollectionState } from "../state/collection";
 import { useUserPreferences } from "../state/preference";
 import { isSelectedUnit, SelectedUnit } from "../types/roster.ts";
+import { arraysMatch, groupBy } from "../utils/array.ts";
+import { findBestMatch } from "../utils/string.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useCollectionWarnings = (unit: SelectedUnit) => {
@@ -16,12 +18,20 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
 
   const { collection } = (inventory[unit.profile_origin] &&
     inventory[unit.profile_origin][unit.name]) || { collection: [] };
-  const generics = Number(
-    collection.find((c) =>
-      typeof c.options === "string"
-        ? c.options === "Generic"
-        : c.options.includes("Generic"),
-    )?.amount || "0",
+
+  const generics = Object.fromEntries(
+    Object.entries(groupBy(collection, "mount")).map(([key, value]) => {
+      return [
+        key,
+        Number(
+          value.find((c) =>
+            typeof c.options === "string"
+              ? c.options === "Generic"
+              : c.options.includes("Generic"),
+          )?.amount || "0",
+        ),
+      ];
+    }),
   );
 
   const totalSelected = Object.values(
@@ -34,6 +44,10 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
       )
       .map(({ options, quantity }) => ({
         options: options.filter((o) => o.quantity > 0).map((o) => o.name),
+        mount:
+          options.find(
+            (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
+          )?.name || "",
         quantity,
       }))
       .reduce((acc, item) => {
@@ -45,20 +59,28 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
         }
         return acc;
       }, {}),
-  ).map((unit: { options: string[]; quantity: number }) => {
+  ).map((unit: { options: string[]; quantity: number; mount: string }) => {
     const collectionUsed =
       Number(
         collection.find((c) => {
           if (typeof c.options === "string") {
+            // warriors
             if (c.options === "None") {
               return unit.options.length === 0;
             }
-            return unit.options.includes(c.options);
+            return arraysMatch(unit.options, [c.options]);
           } else {
+            // heroes
             if (c.options[0] === "None") {
-              return unit.options.length === 0;
+              return unit.options.length === 0 && unit.mount === c.mount;
             }
-            return c.options.every((co) => unit.options.includes(co));
+            return (
+              c.mount === unit.mount &&
+              arraysMatch(
+                unit.options.filter((o) => o !== unit.mount),
+                c.options,
+              )
+            );
           }
         })?.amount || "",
       ) - unit.quantity;
@@ -74,11 +96,27 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
     .reduce((a, b) => a + b, 0);
 
   const options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
+  const mount =
+    unit.options.find(
+      (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
+    )?.name || "";
 
-  if (unit.name === "Moria Goblin Captain") {
+  const bestMatchingMount = findBestMatch(mount, generics);
+  const amountOfGenericsForGivenMount = generics[bestMatchingMount] ?? 0;
+
+  if (unit.name.includes("Madril")) {
     console.log(
       JSON.stringify(
-        { totalGenericsUsed, generics, options, collection, totalSelected },
+        {
+          generics,
+          mount,
+          bestMatchingMount,
+          amountOfGenericsForGivenMount,
+          totalGenericsUsed,
+          collection,
+          options,
+          totalSelected,
+        },
         null,
         2,
       ),
@@ -88,10 +126,9 @@ export const useCollectionWarnings = (unit: SelectedUnit) => {
   return {
     warnings: "on",
     overexceededCollections:
-      totalGenericsUsed > generics &&
+      totalGenericsUsed > amountOfGenericsForGivenMount &&
       totalSelected.find(
-        (ts) =>
-          ts.genericsUsed > 0 && ts.options.every((x) => options.includes(x)),
+        (ts) => ts.genericsUsed > 0 && arraysMatch(ts.options, options),
       ),
   };
 };

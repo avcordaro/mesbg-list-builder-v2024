@@ -43,3 +43,19 @@ export function withSuffix(id: string, existingIds: string[]) {
   }
   return hashedId;
 }
+
+// Function to find the best matching key
+export function findBestMatch(str: string, obj: Record<string, unknown>) {
+  if (str === "") return "";
+
+  // Get all keys from the object
+  const keys = Object.keys(obj);
+
+  // Find the key that the string includes, excluding empty keys
+  for (const key of keys) {
+    if (key && str.includes(key)) {
+      return key;
+    }
+  }
+  return null;
+}
