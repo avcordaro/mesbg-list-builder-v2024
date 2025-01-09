@@ -215,7 +215,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                     color={overExceededCollection ? "error.dark" : "inherit"}
                   >
                     <CategoryOutlined sx={{ fontSize: "1rem" }} />
-                    Available: {available - selected}
+                    {available === 0
+                      ? "Not in collection"
+                      : `Available: ${available - selected}`}
                   </Typography>
                 )}
               </Stack>
@@ -398,7 +400,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                   color={overExceededCollection ? "error.dark" : "inherit"}
                 >
                   <CategoryOutlined sx={{ fontSize: "1rem" }} />
-                  Available: {available - selected}
+                  {available === 0
+                    ? "Not in collection"
+                    : `Available: ${available - selected}`}
                 </Typography>
               )}
             </Collapse>

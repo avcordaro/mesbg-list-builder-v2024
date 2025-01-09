@@ -145,7 +145,9 @@ export function UnitSelectionButton({
                           : "inherit"
                     }
                   >
-                    Collection: {totalCollection - totalSelected} left.
+                    {totalCollection === 0
+                      ? "Not in collection"
+                      : `Collection: ${totalCollection - totalSelected} left.`}
                   </Typography>
                 </Stack>
               )}
