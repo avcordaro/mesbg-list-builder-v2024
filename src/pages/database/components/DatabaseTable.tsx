@@ -192,7 +192,10 @@ export const DatabaseTable = ({
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <DatabaseTableRow key={row.name} row={row} />
+            <DatabaseTableRow
+              key={`${row.name}-${row.profile_origin}`}
+              row={row}
+            />
           ))}
         </TableBody>
       </Table>

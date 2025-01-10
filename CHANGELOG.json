@@ -1,5 +1,10 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fixed an issue where existing Game Mode sessions from before v1.8.0 were raising an error page.",
+      "Fixed an issue where the alert for resetting your Game Mode session due to a roster change would constantly appear."
+    ]
+  },
   "1.8": {
     "added": [
       "Added the ability to manage your collection of miniatures in the list builder",

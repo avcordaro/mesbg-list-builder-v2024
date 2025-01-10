@@ -7,7 +7,7 @@ import {
 
 export const rows = Object.values(
   Object.values(mesbgData).reduce((acc, currentValue) => {
-    const name = currentValue.name;
+    const name = `${currentValue.name}-${currentValue.profile_origin}`;
     if (!acc[name]) {
       acc[name] = [];
     }

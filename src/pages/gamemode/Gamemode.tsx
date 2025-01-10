@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useGameModeState } from "../../state/gamemode";
+import { deepEqual } from "../../utils/objects.ts";
 import { drawerWidth, RosterInfoDrawer } from "../builder/RosterInfoDrawer.tsx";
 import { GamemodeToolbar } from "./components/GamemodeToolbar.tsx";
 import { DeploymentHelper } from "./components/tabs/DeploymentHelperTable.tsx";
@@ -51,7 +52,8 @@ export const Gamemode = () => {
   };
 
   const changedSinceStart =
-    roster.metadata !== gameState[roster.id].rosterMetadata;
+    gameState[roster.id].rosterMetadata &&
+    !deepEqual(roster.metadata, gameState[roster.id].rosterMetadata);
 
   return (
     <Container

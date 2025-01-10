@@ -19,10 +19,10 @@ export const GamemodeToolbar = () => {
   const screen = useScreenSize();
   const { setCurrentModal } = useAppState();
   const { gameState, updateGameState } = useGameModeState();
-  const { roster } = useRosterInformation();
+  const { roster, getAdjustedMetaData } = useRosterInformation();
 
   const game = gameState[roster.id];
-  const metadata = game.rosterMetadata;
+  const metadata = game.rosterMetadata || getAdjustedMetaData(roster);
 
   const openEndGameDialog = () => {
     const gameStartTime = new Date(game.started);
