@@ -14,6 +14,7 @@ import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { Option } from "../../../types/mesbg-data.types.ts";
@@ -25,6 +26,7 @@ export const AddToCollection = () => {
     modalContext: { unit },
   } = useAppState();
   const { inventory, upsertInventory } = useCollectionState();
+  const { isMobile } = useScreenSize();
 
   const isHero = unit.unit_type.every((v: string) => v.includes("Hero"));
   const loadoutOptions = [
@@ -194,13 +196,13 @@ export const AddToCollection = () => {
           </Alert>
         )}
 
-        <Stack sx={{ my: 2 }} gap={1}>
+        <Stack sx={{ my: 2 }} gap={isMobile ? 4 : 1}>
           {loadOuts.map((loadOut, index) => (
             <FormGroup key={index}>
               <Grid2 container spacing={1}>
                 {isHero && mountOptions.length > 0 && (
                   <Grid2
-                    size={{md: 12, lg: 3}}
+                    size={isMobile ? 12 : 3}
                     sx={{
                       justifyContent: "center",
                       alignItems: "center",
@@ -221,7 +223,7 @@ export const AddToCollection = () => {
                             variant="outlined"
                             label="Mount"
                             placeholder="Select a mount, or leave empty"
-                            helperText=" "
+                            helperText=""
                           />
                         )}
                       />
@@ -249,11 +251,20 @@ export const AddToCollection = () => {
                   </Grid2>
                 )}
                 {loadoutOptions.length > 2 && (
-                  <Grid2 size={{md: 12, lg: !isHero || mountOptions.length === 0 ? 9 : 6}}>
+                  <Grid2
+                    size={
+                      isMobile
+                        ? 12
+                        : !isHero || mountOptions.length === 0
+                          ? 9
+                          : 6
+                    }
+                  >
                     <Autocomplete
                       multiple={isHero}
                       options={loadoutOptions}
                       value={loadOut.options}
+                      disableClearable={!isHero}
                       disabled={loadoutOptions.length <= 2}
                       onChange={(_, value: string | string[]) =>
                         handleInputChange(index, "options", value)
@@ -275,14 +286,15 @@ export const AddToCollection = () => {
                   </Grid2>
                 )}
                 <Grid2
-                  size={{
-                    md: 12, 
-                    lg: loadoutOptions.length <= 2
-                      ? isHero && mountOptions.length > 0
-                        ? 8
-                        : 11
-                      : 2
-                  }}
+                  size={
+                    isMobile
+                      ? 9
+                      : loadoutOptions.length <= 2
+                        ? isHero && mountOptions.length > 0
+                          ? 8
+                          : 10
+                        : 2
+                  }
                 >
                   <TextField
                     value={loadOut.amount}
@@ -299,7 +311,7 @@ export const AddToCollection = () => {
                   />
                 </Grid2>
                 <Grid2
-                  size={{md: 12, lg: 1}}
+                  size={isMobile ? 3 : 1}
                   sx={{
                     justifyContent: "end",
                     alignItems: "center",
