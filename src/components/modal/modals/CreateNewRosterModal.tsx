@@ -57,7 +57,6 @@ export const CreateNewRosterModal = () => {
   }>();
 
   const [rosterName, setRosterName] = useState("");
-  const [rosterNameValid, setRosterNameValid] = useState(true);
   const [JSONImport, setJSONImport] = useState("");
   const [JSONImportError, setJSONImportError] = useState("");
 
@@ -112,12 +111,26 @@ export const CreateNewRosterModal = () => {
   function handleCreateNewRoster(e) {
     e.preventDefault();
 
-    const rosterNameValue = rosterName.trim();
-    const nameValid = !!rosterNameValue;
+    let rosterNameValue = rosterName.trim();
 
-    setRosterNameValid(nameValid);
+    if (!rosterNameValue) {
+      const regex = new RegExp(`^${armyList.title} (\\(\\d+\\))?$`);
+      const matchingRosterNames = rosters
+        .filter((roster) => regex.test(roster.name))
+        .map((r) => r.name);
+      if (matchingRosterNames.length === 0) {
+        rosterNameValue = `${armyList.title} (1)`;
+      } else {
+        const maxNameIndex = Math.max(
+          ...matchingRosterNames.map((name) => {
+            return parseInt(name.match(/\((\d+)\)/)[1]);
+          }),
+        );
+        rosterNameValue = `${armyList.title} (${maxNameIndex + 1})`;
+      }
+    }
 
-    if (nameValid && !!armyList) {
+    if (armyList) {
       let id = slugify(rosterNameValue);
       if (existingRosterIds.includes(id)) {
         id = withSuffix(id, existingRosterIds);
@@ -166,7 +179,6 @@ export const CreateNewRosterModal = () => {
 
   function updateRosterName(value: string) {
     setRosterName(value);
-    setRosterNameValid(true);
   }
 
   // Handler for file selection
@@ -249,9 +261,7 @@ export const CreateNewRosterModal = () => {
         />
         <TextField
           fullWidth
-          label="Roster name"
-          error={!rosterNameValid}
-          helperText={!rosterNameValid ? "Roster name cannot be empty." : ""}
+          label="Roster name (Optional)"
           value={rosterName}
           onChange={(e) => updateRosterName(e.target.value)}
         />
@@ -304,7 +314,7 @@ export const CreateNewRosterModal = () => {
           onClick={
             JSONImport.length > 0 ? handleImportRoster : handleCreateNewRoster
           }
-          disabled={JSONImport.length === 0 && (!rosterNameValid || !armyList)}
+          disabled={JSONImport.length === 0 && !armyList}
           data-test-id="dialog--submit-button"
         >
           {JSONImport.length > 0 ? "Import" : "Create"} roster
