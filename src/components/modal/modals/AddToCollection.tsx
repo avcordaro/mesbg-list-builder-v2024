@@ -200,7 +200,7 @@ export const AddToCollection = () => {
               <Grid2 container spacing={1}>
                 {isHero && mountOptions.length > 0 && (
                   <Grid2
-                    size={3}
+                    size={{md: 12, lg: 3}}
                     sx={{
                       justifyContent: "center",
                       alignItems: "center",
@@ -249,7 +249,7 @@ export const AddToCollection = () => {
                   </Grid2>
                 )}
                 {loadoutOptions.length > 2 && (
-                  <Grid2 size={!isHero || mountOptions.length === 0 ? 9 : 6}>
+                  <Grid2 size={{md: 12, lg: !isHero || mountOptions.length === 0 ? 9 : 6}}>
                     <Autocomplete
                       multiple={isHero}
                       options={loadoutOptions}
@@ -275,13 +275,14 @@ export const AddToCollection = () => {
                   </Grid2>
                 )}
                 <Grid2
-                  size={
-                    loadoutOptions.length <= 2
+                  size={{
+                    md: 12, 
+                    lg: loadoutOptions.length <= 2
                       ? isHero && mountOptions.length > 0
                         ? 8
                         : 11
                       : 2
-                  }
+                  }}
                 >
                   <TextField
                     value={loadOut.amount}
@@ -298,7 +299,7 @@ export const AddToCollection = () => {
                   />
                 </Grid2>
                 <Grid2
-                  size={1}
+                  size={{md: 12, lg: 1}}
                   sx={{
                     justifyContent: "end",
                     alignItems: "center",
