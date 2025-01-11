@@ -21,7 +21,9 @@ export function getTotalSelectedModelsGroupedPerChosenOptions(
       .filter(isSelectedUnit)
       .filter(
         ({ name, profile_origin }) =>
-          name === unit.name && profile_origin === unit.profile_origin,
+          name.replace(" (General)", "") ===
+            unit.name.replace(" (General)", "") &&
+          profile_origin === unit.profile_origin,
       )
       .map(({ name, unit_type, options, quantity }) => {
         let selectedOptions = options

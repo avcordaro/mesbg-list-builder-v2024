@@ -33,7 +33,9 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
 
   const existsInInv =
     !!inventory[row.profile_origin] &&
-    !!inventory[row.profile_origin][COMPOSED_UNIT_MAP[row.name] || row.name];
+    !!inventory[row.profile_origin][
+      COMPOSED_UNIT_MAP[row.name] || row.name.replaceAll(" (General)", "")
+    ];
 
   const [might, will, fate] = [row.M, row.W, row.F];
 
@@ -98,7 +100,9 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
             onClick={() => {
               setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
                 unit: {
-                  name: COMPOSED_UNIT_MAP[row.name] || row.name,
+                  name:
+                    COMPOSED_UNIT_MAP[row.name] ||
+                    row.name.replaceAll(" (General)", ""),
                   profile_origin: row.profile_origin,
                   options: row.options,
                   option_mandatory: row.option_mandatory,

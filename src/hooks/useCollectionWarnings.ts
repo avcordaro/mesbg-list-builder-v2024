@@ -33,7 +33,9 @@ export const useCollectionWarnings = (
 
   // The full collection for a given miniature
   const { collection } = (inventory[unit.profile_origin] &&
-    inventory[unit.profile_origin][unit.name]) || { collection: [] };
+    inventory[unit.profile_origin][unit.name.replace(" (General)", "")]) || {
+    collection: [],
+  };
 
   // The amount of miniatures marked as 'Generic' grouped by their mount.
   const generics = calculateGenericModels(collection);
@@ -80,21 +82,21 @@ export const useCollectionWarnings = (
 
   // // Debug line given a specific profile name,
   // // ~ Keep commented until needed!! ~
-  // if (unit.name.includes("Cave Troll")) {
-  //   console.dir({
-  //     name: unit.name,
-  //     generics,
-  //     mount,
-  //     bestMatchingMount,
-  //     amountOfGenericsForGivenMount,
-  //     totalGenericsUsed,
-  //     collection,
-  //     options,
-  //     totalSelected,
-  //     available,
-  //     selected,
-  //   });
-  // }
+  if (unit.name.includes("Uruk-Hai")) {
+    console.dir({
+      name: unit.name,
+      generics,
+      mount,
+      bestMatchingMount,
+      amountOfGenericsForGivenMount,
+      totalGenericsUsed,
+      collection,
+      options,
+      totalSelected,
+      available,
+      selected,
+    });
+  }
 
   return {
     warnings: "on",

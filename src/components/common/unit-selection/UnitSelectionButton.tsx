@@ -41,18 +41,20 @@ export function UnitSelectionButton({
   const { roster } = useRosterInformation();
 
   const totalCollection =
-    inventory[unit.profile_origin] && inventory[unit.profile_origin][unit.name]
-      ? inventory[unit.profile_origin][unit.name].collection.reduce(
-          (a, b) => a + Number(b.amount),
-          0,
-        )
+    inventory[unit.profile_origin] &&
+    inventory[unit.profile_origin][unit.name.replace(" (General)", "")]
+      ? inventory[unit.profile_origin][
+          unit.name.replace(" (General)", "")
+        ].collection.reduce((a, b) => a + Number(b.amount), 0)
       : 0;
   const totalSelected = roster.warbands
     .flatMap((wb) => [wb.hero, ...wb.units])
     .filter(isSelectedUnit)
     .filter(
       (ru) =>
-        ru.name === unit.name && ru.profile_origin === unit.profile_origin,
+        ru.name.replace(" (General)", "") ===
+          unit.name.replace(" (General)", "") &&
+        ru.profile_origin === unit.profile_origin,
     )
     .reduce((a, b) => a + Number(b.quantity), 0);
 
