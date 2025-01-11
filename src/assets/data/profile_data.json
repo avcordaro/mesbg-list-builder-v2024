@@ -11537,5 +11537,100 @@
         "Razor-sharp teeth, massive talons (hand weapons)"
       ]
     }
+  },
+  "Siege Equipment": {
+    "Siege Ladder": {
+      "active_or_passive_rules": [
+        {
+          "name": "Siege Ladder",
+          "type": "Siege Equipment",
+          "description": "A Siege Ladder is a Heavy Object, however, it is not mounted on a 25mm base and will simply use the template of the model when carried. If it is not being carried, a Siege Ladder can be shot at and attacked as normal; it counts as having a Defence of 8 and 2 Wounds. If any model that is carrying a Siege Ladder Moves into base contact with the walls of the fortress, the Siege Ladder is immediately raised; place it in position against the wall. Models may Move up a Siege Ladder in the same way as a normal ladder."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Siege Tower": {
+      "active_or_passive_rules": [
+        {
+          "name": "Siege Tower",
+          "type": "Siege Equipment",
+          "description": "A Siege Tower should be tall enough for the ramp to reach the battlements of the fortress when lowered and should be no more than 4\" wide across the ramp. Infantry models may be deployed within or on top of a Siege Tower, with the exception of Monster models. A Siege Tower can be pushed by friendly models, and will Move 6\" when they do so. It requires six Infantry models to push a Siege Tower, with an additional Infantry model required for each model in or on the Siege Tower. Monster models count as six models for the purpose of pushing a Siege Tower. To count as pushing a Siege Tower, a model must be in base contact with either the rear or side of the Siege Tower, or in base contact with another model that is pushing from the rear.\n\n\n\nIf a Siege Tower moves into base contact with the fortress in the Move Phase, then the ramp is immediately lowered. Models in the Siege Tower do not count as Moving whilst the Siege Tower is being pushed, unless they specifically Move within it.\n\n\n\nA Siege Tower can be shot at or attacked normally, has a Defence of 10 and 4 Wounds, and is a Battlefield Target. If a siege tower would be destroyed, all models in or on it will suffer Falling Damage."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Battering Ram": {
+      "active_or_passive_rules": [
+        {
+          "name": "Battering Ram",
+          "type": "Siege Equipment",
+          "description": "A Battering Ram is a Heavy Object, however, it is not mounted on a 25mm base and will simply use the template of the model when carried. If it is not being carried, a Battering Ram can be shot and attacked as normal; it counts as having a Defence of 8 and 3 Wounds. A Battering Ram must always have a minimum of two models carrying it, otherwise it cannot be carried."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Rallying Point": {
+      "active_or_passive_rules": [
+        {
+          "name": "Rallying Point",
+          "type": "Siege Equipment",
+          "description": "A Rallying Point is represented by a 25mm base. Models may Move over a Rallying Point but cannot finish their Move overlapping it. Defending models treat a Rallying Point as a Banner. Additionally, defending models within 6\" of a Rallying Point apply a -1 modifier to any Courage Tests they are required to take. If, during the End phase of a turn, an enemy model is in base contact with a Rallying Point, that model hasn't done anything during that turn except Move (i.e. has not made a Shooting Attack, Cast a Magical Power, been Engaged in Combat), and that model was not affected by a Magical Power that turn, then it can destroy the Rallying Point - remove it from play."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Rocks": {
+      "active_or_passive_rules": [
+        {
+          "name": "Rocks",
+          "type": "Siege Equipment",
+          "description": "A pile of Rocks is represented by a 25mm base and is a Light Object. A defending model in base contact with the Rocks and in base contact with the battlements can make a Shooting Attack with them during the Shoot Phase. This Shooting Attack can only target enemy models within 1\" of the walls or climbing a Siege Ladder, and has a range of 8\". A model making a Shooting attack with a rock treats their Shoot value as 4+ regardless of its actual value. Any model hit by a rock suffers one Strength 6 hit. A model climbing a Siege Ladder that is hit must roll a D6, and on a 1-3 they will fall off and suffer Falling Damage."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Boiling Oil": {
+      "active_or_passive_rules": [
+        {
+          "name": "Boiling Oil",
+          "type": "Siege Equipment",
+          "description": "A vat of Boiling Oil is a Heavy Object and is represented by a 40mm base. If two defending models are in base contact with the Boiling Oil, and are not Engaged in combat, they can pour it on an attacker as a Shooting Attack. This Shooting Attack can only target enemy models within 1\" of the walls, or climbing a Siege Ladder, and has a range of 4\". Models making a shooting attack with Boiling Oil treat their Shoot value as 2+ regardless of its actual value. Any model hit by Boiling Oil suffers one Strength 8 hit, and any model (friend or foe) within 2\" of the target suffers one Strength 4 hit. A model climbing a Siege Ladder that is hit must roll a D6, and on a 1-4 they will fall off and suffer Falling Damage.\n\n\n\nAfter making a Shooting Attack with Boiling Oil, the defender rolls a D6. On a 1, the supply of oil has run dry and that vat of Boiling Oil cannot be used for the remainder of the game."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Barricade": {
+      "active_or_passive_rules": [
+        {
+          "name": "Barricade",
+          "type": "Siege Equipment",
+          "description": "A Barricade should be no more than 3\" in length, 1\" in width and 1\" in height. A Barricade can be defended in the same way as a Barrier (see page 54), and can be jumped over in the same way as an Obstacle. A Barricade has a Defence of 7 and 2 Wounds."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    },
+    "Spiked Barricade": {
+      "active_or_passive_rules": [
+        {
+          "name": "Barricade",
+          "type": "Siege Equipment",
+          "description": "A Barricade should be no more than 3\" in length, 1\" in width and 1\" in height. A Barricade can be defended in the same way as a Barrier (see page 54), and can be jumped over in the same way as an Obstacle. A Barricade has a Defence of 7 and 2 Wounds."
+        },
+        {
+          "name": "Spiked Barricade",
+          "type": "Siege Equipment",
+          "description": "A Spiked Barricade follows all the rules for a regular Barricade, with the following additions:\n\n- Any model that attempts to jump over a Spiked Barricade will suffer one Strength 3 hit after resolving their jump test, unless they rolled a 6.\n\n- Any model that is fighting across a Spiked Barricade and accidentally Strikes it instead of their opponent immediately suffers one Strength 3 hit."
+        }
+      ],
+      "special_rules": [],
+      "magic_powers": []
+    }
   }
 }

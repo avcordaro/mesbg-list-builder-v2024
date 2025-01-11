@@ -231,12 +231,14 @@ export const UnitProfileList = ({ units }: UnitListProps) => {
   return (
     <Box id="pdf-profiles" className="page-break">
       <Typography variant="h5">Profiles</Typography>
-      {units.map((unit, index) => (
-        <Fragment key={index}>
-          <ListItem profile={unit} />
-          {units.length !== index && <Divider variant="fullWidth" />}
-        </Fragment>
-      ))}
+      {units
+        .filter((unit) => unit.type !== "Siege Equipment")
+        .map((unit, index) => (
+          <Fragment key={index}>
+            <ListItem profile={unit} />
+            {units.length !== index && <Divider variant="fullWidth" />}
+          </Fragment>
+        ))}
     </Box>
   );
 };

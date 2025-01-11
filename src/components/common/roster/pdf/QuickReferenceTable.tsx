@@ -169,6 +169,14 @@ export const QuickReferenceTable = ({
                 "Vault Warden Team",
                 "Uruk-Hai Demolition Team",
                 "Bard's Family",
+                "Barricade",
+                "Spiked Barricade",
+                "Boiling Oil",
+                "Rallying Point",
+                "Rocks",
+                "Siege Ladder",
+                "Battering Ram",
+                "Siege Tower",
               ].includes(row.name);
 
               return (

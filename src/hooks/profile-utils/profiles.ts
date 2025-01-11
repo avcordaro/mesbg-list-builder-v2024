@@ -1,7 +1,6 @@
 import { profileData } from "../../assets/data.ts";
 import {
   isSelectedUnit,
-  isSiegeEquipment,
   Roster,
   SelectedUnit,
   Warband,
@@ -111,7 +110,6 @@ function convertWarbandToUnits(warband: Warband): SelectedUnit[] {
 export function convertRosterToProfiles(roster: Roster): ProfileList {
   const allUnits = roster.warbands
     .flatMap(convertWarbandToUnits)
-    .filter((unit) => !isSiegeEquipment(unit))
     .sort(byHeroicTier);
 
   const { profiles, missing } = allUnits
