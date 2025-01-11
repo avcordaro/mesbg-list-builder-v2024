@@ -1,5 +1,6 @@
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { siegeEquipmentData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
@@ -33,6 +34,13 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
 
   return (
     <Stack gap={1.5}>
+      <Typography color="textSecondary">
+        <small>
+          Equipment to be used for siege games. The full details can be found in
+          the &apos;Sieges&apos; section of the main rulebook (pages 146 to
+          148).
+        </small>
+      </Typography>
       {equipment.map((item) => (
         <SiegeSelectionButton
           key={item.model_id}
