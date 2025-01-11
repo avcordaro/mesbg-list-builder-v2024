@@ -12,7 +12,7 @@ import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { Option } from "../../../types/mesbg-data.types.ts";
-import { SelectedUnit } from "../../../types/roster.ts";
+import { isSiegeEquipment, SelectedUnit } from "../../../types/roster.ts";
 import { slugify } from "../../../utils/string.ts";
 import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 import { UnitProfilePicture } from "../images/UnitProfilePicture.tsx";
@@ -117,7 +117,10 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const valid =
     followerOf === undefined ||
     followerOf === null ||
-    heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
+    heroConstraintData[followerOf].valid_warband_units.includes(
+      unit.model_id,
+    ) ||
+    isSiegeEquipment(unit);
 
   function updateQuantity(value: number) {
     console.debug("Update warrior quantity.", { value });

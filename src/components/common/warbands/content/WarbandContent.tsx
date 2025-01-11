@@ -1,10 +1,11 @@
 import { Draggable, Droppable } from "@hello-pangea/dnd";
 import AddIcon from "@mui/icons-material/Add";
-import { Button } from "@mui/material";
+import { Button, ButtonGroup } from "@mui/material";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
+import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { useWarbandMutations } from "../../../../hooks/useWarbandMutations.ts";
 import { useAppState } from "../../../../state/app";
 import { useRosterBuildingState } from "../../../../state/roster-building";
@@ -40,6 +41,8 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
       ({ id, metadata: { leader } }) => id === armyId && leader === warbandId,
     ),
   );
+  const { getAdjustedMetaData } = useRosterInformation();
+  const { siegeRoster } = getAdjustedMetaData();
 
   function openHeroPicker() {
     console.debug("Open Hero Picker");
@@ -198,16 +201,43 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
       </Droppable>
 
       {hero && isHeroWhoLeads(hero) && (
-        <Button
-          onClick={() => mutations.addEmptyUnit()}
-          variant="contained"
-          color="primary"
-          fullWidth
-          endIcon={<AddIcon />}
-          data-test-id={`warband-${warbandNum}--add-unit`}
-        >
-          Add Unit
-        </Button>
+        <>
+          {siegeRoster ? (
+            <ButtonGroup>
+              <Button
+                onClick={() => mutations.addEmptyUnit()}
+                variant="contained"
+                color="primary"
+                fullWidth
+                endIcon={<AddIcon />}
+                data-test-id={`warband-${warbandNum}--add-unit`}
+              >
+                Add Unit
+              </Button>
+              <Button
+                onClick={() => mutations.addSiegeEquipment()}
+                variant="contained"
+                color="inherit"
+                fullWidth
+                endIcon={<AddIcon />}
+                data-test-id={`warband-${warbandNum}--add-siege-equipment`}
+              >
+                Add Siege Equipment
+              </Button>
+            </ButtonGroup>
+          ) : (
+            <Button
+              onClick={() => mutations.addEmptyUnit()}
+              variant="contained"
+              color="primary"
+              fullWidth
+              endIcon={<AddIcon />}
+              data-test-id={`warband-${warbandNum}--add-unit`}
+            >
+              Add Unit
+            </Button>
+          )}
+        </>
       )}
     </Stack>
   );

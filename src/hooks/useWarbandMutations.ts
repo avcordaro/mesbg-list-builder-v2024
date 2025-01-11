@@ -3,7 +3,7 @@ import { AlertTypes } from "../components/alerts/alert-types.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { useAppState } from "../state/app";
 import { useRosterBuildingState } from "../state/roster-building";
-import { Unit } from "../types/mesbg-data.types.ts";
+import { SiegeEquipment, Unit } from "../types/mesbg-data.types.ts";
 import {
   FreshUnit,
   isSelectedUnit,
@@ -109,6 +109,43 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
       selectionFocus: [warbandId, newUnitId],
     });
     openSidebar(DrawerTypes.UNIT_SELECTOR);
+  }
+
+  function addSiegeEquipment() {
+    console.debug(`Add new siege equipment to warband ${warbandId}`);
+    updateBuilderSidebar({
+      armyList: rosterId,
+      selectionType: "siege",
+      selectionFocus: [warbandId, ""],
+    });
+    openSidebar(DrawerTypes.UNIT_SELECTOR);
+  }
+
+  function handleSiegeSelection(equipment: SiegeEquipment) {
+    console.debug(`Select siege equipment for ${warbandId}: ${equipment.name}`);
+    const updatedRoster: Roster = {
+      ...roster,
+      warbands: roster.warbands.map((wb) => {
+        return wb.id === warbandId
+          ? {
+              ...wb,
+              units: [
+                ...wb.units,
+                {
+                  id: randomUuid(),
+                  ...equipment,
+                  pointsPerUnit: equipment.base_points,
+                  pointsTotal: equipment.base_points,
+                  options: [],
+                  MWFW: [],
+                  quantity: 1,
+                },
+              ],
+            }
+          : wb;
+      }),
+    };
+    updateRoster(updatedRoster);
   }
 
   function toggleArmyGeneral(value: boolean) {
@@ -269,6 +306,9 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
     updateUnit,
     duplicateUnit,
     removeUnit,
+
+    addSiegeEquipment,
+    handleSiegeSelection,
 
     removeWarband,
     emptyWarband,

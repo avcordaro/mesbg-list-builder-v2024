@@ -12,6 +12,7 @@ export type UnitType =
   | "Independent Hero"
   | "Independent Hero*"
   | "Siege Engine"
+  | "Siege Equipment"
   | string;
 
 /**
@@ -67,3 +68,8 @@ export type Unit = {
   inc_bow_count?: boolean;
   no_followers?: boolean;
 };
+
+export type SiegeEquipment = Pick<
+  Unit,
+  "name" | "unit_type" | "base_points" | "model_id" | "profile_origin"
+> & { siege_role: "Attacker" | "Defender" };

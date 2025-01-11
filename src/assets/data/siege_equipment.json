@@ -1,0 +1,67 @@
+{
+  "[siege] barricade": {
+    "model_id": "[siege] barricade",
+    "profile_origin": "Siege Equipment",
+    "name": "Barricade",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Defender",
+    "base_points": 5
+  },
+  "[siege] spiked_barricade": {
+    "model_id": "[siege] spiked_barricade",
+    "profile_origin": "Siege Equipment",
+    "name": "Spiked Barricade",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Defender",
+    "base_points": 10
+  },
+  "[siege] rallying_point": {
+    "model_id": "[siege] rallying_point",
+    "profile_origin": "Siege Equipment",
+    "name": "Rallying Point",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Defender",
+    "base_points": 25
+  },
+  "[siege] rocks": {
+    "model_id": "[siege] rocks",
+    "profile_origin": "Siege Equipment",
+    "name": "Rocks",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Defender",
+    "base_points": 5
+  },
+  "[siege] boiling_oil": {
+    "model_id": "[siege] boiling_oil",
+    "profile_origin": "Siege Equipment",
+    "name": "Boiling Oil",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Defender",
+    "base_points": 25
+  },
+
+  "[siege] siege_ladder": {
+    "model_id": "[siege] siege_ladder",
+    "profile_origin": "Siege Equipment",
+    "name": "Siege Ladder",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Attacker",
+    "base_points": 5
+  },
+  "[siege] battering_ram": {
+    "model_id": "[siege] battering_ram",
+    "profile_origin": "Siege Equipment",
+    "name": "Battering Ram",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Attacker",
+    "base_points": 15
+  },
+  "[siege] siege_tower": {
+    "model_id": "[siege] siege_tower",
+    "profile_origin": "Siege Equipment",
+    "name": "Siege Tower",
+    "unit_type": "Siege Equipment",
+    "siege_role": "Attacker",
+    "base_points": 40
+  }
+}

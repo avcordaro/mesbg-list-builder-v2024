@@ -2,8 +2,9 @@ import Stack from "@mui/material/Stack";
 import { useWarbandMutations } from "../../../hooks/useWarbandMutations.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
-import { Unit } from "../../../types/mesbg-data.types.ts";
+import { SiegeEquipment, Unit } from "../../../types/mesbg-data.types.ts";
 import { HeroSelectionList } from "../../common/unit-selection/HeroSelectionList.tsx";
+import { SiegeSelectionList } from "../../common/unit-selection/SiegeSelectionList.tsx";
 import { UnitSelectionList } from "../../common/unit-selection/UnitSelectionList.tsx";
 
 export const UnitSelector = () => {
@@ -17,10 +18,8 @@ export const UnitSelector = () => {
     rosters.find(({ id }) => id === armyList),
   );
 
-  const { handleHeroSelection, handleUnitSelection } = useWarbandMutations(
-    roster.id,
-    warbandId,
-  );
+  const { handleHeroSelection, handleUnitSelection, handleSiegeSelection } =
+    useWarbandMutations(roster.id, warbandId);
 
   function selectUnit(unit: Unit) {
     console.debug(
@@ -34,6 +33,16 @@ export const UnitSelector = () => {
         handleUnitSelection(unitId, unit);
         break;
     }
+
+    closeSidebar();
+  }
+
+  function selectEquipment(equipment: SiegeEquipment) {
+    console.debug(
+      `select ${selectionType} for wb ${warbandId} in ${roster.name}; ${equipment.name}`,
+    );
+
+    handleSiegeSelection(equipment);
 
     closeSidebar();
   }
@@ -57,6 +66,9 @@ export const UnitSelector = () => {
           }
           selectUnit={selectUnit}
         />
+      )}
+      {selectionType === "siege" && (
+        <SiegeSelectionList selectEquipment={selectEquipment} />
       )}
     </Stack>
   );

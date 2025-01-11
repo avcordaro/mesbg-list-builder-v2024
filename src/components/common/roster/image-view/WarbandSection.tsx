@@ -4,7 +4,11 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { heroConstraintData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
-import { isSelectedUnit, Warband } from "../../../../types/roster.ts";
+import {
+  isSelectedUnit,
+  isSiegeEquipment,
+  Warband,
+} from "../../../../types/roster.ts";
 import { UnitRow } from "./UnitRow.tsx";
 
 export const WarbandSection = ({
@@ -73,6 +77,7 @@ export const WarbandSection = ({
     !!hero &&
     warband.units
       .filter(isSelectedUnit)
+      .filter((unit) => !isSiegeEquipment(unit))
       .some(
         (unit) =>
           !heroConstraintData[hero.model_id].valid_warband_units.includes(
