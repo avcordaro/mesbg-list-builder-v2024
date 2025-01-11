@@ -82,7 +82,7 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
           <ListItemIcon>
             <Edit fontSize="small" />
           </ListItemIcon>
-          <ListItemText> Rename roster</ListItemText>
+          <ListItemText> Edit roster</ListItemText>
         </MenuItem>
         <MenuItem onClick={cloneRoster}>
           <ListItemIcon>

@@ -71,7 +71,7 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
             }
             data-test-id="edit-roster-name"
           >
-            Edit name
+            Edit Roster
           </Button>
           <Tooltip title="delete roster">
             <Button

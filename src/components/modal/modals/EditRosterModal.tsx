@@ -15,6 +15,11 @@ export const EditRosterModal = () => {
   const [rosterName, setRosterName] = useState(roster?.name || "");
   const [rosterNameValid, setRosterNameValid] = useState(true);
 
+  const [rosterPointsLimit, setRosterPointsLimit] = useState(
+    roster?.metadata.maxPoints ? String(roster.metadata.maxPoints) : "",
+  );
+  const [rosterPointsLimitValid, setRosterPointsLimitValid] = useState(true);
+
   const handleUpdateRoster = (e) => {
     e.preventDefault();
 
@@ -22,10 +27,18 @@ export const EditRosterModal = () => {
     const nameValid = !!rosterNameValue;
     setRosterNameValid(nameValid);
 
-    if (nameValid) {
+    const pointLimit = rosterPointsLimit.trim();
+    const pointLimitValid = !pointLimit || Number(pointLimit) > 0;
+    setRosterPointsLimitValid(pointLimitValid);
+
+    if (nameValid && pointLimitValid) {
       updateRoster({
         ...roster,
         name: rosterNameValue,
+        metadata: {
+          ...roster.metadata,
+          maxPoints: Number(pointLimit),
+        },
       });
       closeModal();
     }
@@ -34,6 +47,11 @@ export const EditRosterModal = () => {
   function updateRosterName(value: string) {
     setRosterName(value);
     setRosterNameValid(true);
+  }
+
+  function updateRosterPointsLimit(value: string) {
+    setRosterPointsLimit(value);
+    setRosterPointsLimitValid(true);
   }
 
   return (
@@ -58,6 +76,18 @@ export const EditRosterModal = () => {
           }
           value={rosterName}
           onChange={(e) => updateRosterName(e.target.value)}
+        />
+        <TextField
+          fullWidth
+          label="Points limit (optional)"
+          error={!rosterPointsLimitValid}
+          helperText={
+            !rosterPointsLimitValid
+              ? "The roster points limit needs to be above 0"
+              : ""
+          }
+          value={rosterPointsLimit}
+          onChange={(e) => updateRosterPointsLimit(e.target.value)}
         />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>

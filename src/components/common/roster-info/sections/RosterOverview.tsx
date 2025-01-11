@@ -34,6 +34,7 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
     {
       label: "Points",
       value: metadata.points,
+      valid: !metadata.maxPoints || metadata.points <= metadata.maxPoints,
     },
     {
       label: "Units",

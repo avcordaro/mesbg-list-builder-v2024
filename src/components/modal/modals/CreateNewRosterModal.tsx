@@ -2,13 +2,16 @@ import { AttachFileOutlined } from "@mui/icons-material";
 import {
   Autocomplete,
   Button,
+  Collapse,
   DialogActions,
   DialogContent,
   ListItemIcon,
+  Stack,
   TextField,
 } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import Divider from "@mui/material/Divider";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
@@ -27,6 +30,7 @@ import { Roster } from "../../../types/roster.ts";
 import { WarningRules } from "../../../types/warning-rules.types.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
 import { FactionLogo } from "../../common/images/FactionLogo.tsx";
+import { CustomSwitch } from "../../common/switch/CustomSwitch.tsx";
 
 const armyLists = Object.values(data)
   .map((item) => ({
@@ -61,6 +65,12 @@ export const CreateNewRosterModal = () => {
   });
 
   const [rosterName, setRosterName] = useState("");
+  const [maxRosterPoints, setMaxRosterPoints] = useState("");
+  const [enableSiege, setEnableSiege] = useState(false);
+  const [rosterSiegeRole, setRosterSiegeRole] = useState<
+    "Attacker" | "Defender"
+  >("Attacker");
+
   const [JSONImport, setJSONImport] = useState("");
   const [JSONImportError, setJSONImportError] = useState("");
 
@@ -108,6 +118,9 @@ export const CreateNewRosterModal = () => {
         ...roster.metadata,
         leader: warband.id,
         leaderCompulsory: true,
+        maxPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
+        siegeRoster: enableSiege,
+        siegeRole: enableSiege ? rosterSiegeRole : undefined,
       },
     });
   }
@@ -142,6 +155,8 @@ export const CreateNewRosterModal = () => {
 
   function handleCreateNewRoster(e) {
     e.preventDefault();
+
+    if (maxRosterPoints !== "" && Number(maxRosterPoints) <= 0) return;
 
     const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
 
@@ -190,6 +205,10 @@ export const CreateNewRosterModal = () => {
 
   function updateRosterName(value: string) {
     setRosterName(value);
+  }
+
+  function updateMaxRosterPoints(value: string) {
+    setMaxRosterPoints(value);
   }
 
   // Handler for file selection
@@ -276,6 +295,83 @@ export const CreateNewRosterModal = () => {
           value={rosterName}
           onChange={(e) => updateRosterName(e.target.value)}
         />
+
+        <TextField
+          fullWidth
+          label="Points (Optional)"
+          value={maxRosterPoints}
+          helperText={
+            maxRosterPoints !== "" && Number(maxRosterPoints) <= 0
+              ? "Please enter a value above 0"
+              : ""
+          }
+          error={maxRosterPoints !== "" && Number(maxRosterPoints) <= 0}
+          onChange={(e) => updateMaxRosterPoints(e.target.value)}
+          slotProps={{
+            input: { type: "number" },
+          }}
+        />
+
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{ justifyContent: "center", mb: -2 }}
+        >
+          <FormControlLabel
+            sx={{
+              display: "flex",
+              py: 0.2,
+              "& .MuiFormControlLabel-asterisk": { display: "none" },
+              "&:hover": {
+                textDecoration: "underline",
+              },
+            }}
+            control={
+              <CustomSwitch
+                checked={enableSiege}
+                onChange={(_, checked) => setEnableSiege(checked)}
+                name="enable siege"
+              />
+            }
+            label="Enable siege upgrades"
+          />
+        </Stack>
+
+        <Collapse in={enableSiege}>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{ alignItems: "center", justifyContent: "center" }}
+          >
+            <Typography
+              sx={
+                rosterSiegeRole === "Defender"
+                  ? { textDecoration: "underline", fontWeight: "bold" }
+                  : { cursor: "pointer" }
+              }
+              onClick={() => setRosterSiegeRole("Defender")}
+            >
+              Defender
+            </Typography>
+            <CustomSwitch
+              checked={rosterSiegeRole === "Attacker"}
+              onChange={(_, checked) =>
+                setRosterSiegeRole(checked ? "Attacker" : "Defender")
+              }
+              name="siege role"
+            />
+            <Typography
+              sx={
+                rosterSiegeRole === "Attacker"
+                  ? { textDecoration: "underline", fontWeight: "bold" }
+                  : { cursor: "pointer" }
+              }
+              onClick={() => setRosterSiegeRole("Attacker")}
+            >
+              Attacker
+            </Typography>
+          </Stack>
+        </Collapse>
 
         <Divider>
           <Typography className="middle-earth">

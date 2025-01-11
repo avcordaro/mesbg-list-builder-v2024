@@ -47,7 +47,13 @@ export const MobileRosterInfoToolbar = () => {
           }}
         >
           <Stack direction="row" gap={1} flexWrap="wrap" sx={{ m: "auto" }}>
-            <Typography>
+            <Typography
+              color={
+                !!metadata.maxPoints && metadata.points >= metadata.maxPoints
+                  ? "warning"
+                  : "inherit"
+              }
+            >
               Points: <b>{metadata.points}</b>
             </Typography>
             <Typography>

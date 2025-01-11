@@ -54,5 +54,8 @@ export type Roster = {
     will: number;
     fate: number;
     tttSpecialUpgrades?: string[];
+    maxPoints?: number;
+    siegeRoster: boolean;
+    siegeRole?: "Attacker" | "Defender";
   };
 };
