@@ -54,7 +54,11 @@ export const CreateNewRosterModal = () => {
     title: string;
     type: string;
     army: string;
-  }>();
+  }>({
+    title: "",
+    type: "",
+    army: "",
+  });
 
   const [rosterName, setRosterName] = useState("");
   const [JSONImport, setJSONImport] = useState("");
@@ -108,36 +112,43 @@ export const CreateNewRosterModal = () => {
     });
   }
 
+  function fillRosterNameIfEmpty(rosterNameValue: string) {
+    if (rosterNameValue) {
+      return rosterNameValue;
+    }
+    const regex = new RegExp(`^${armyList.title} ?(\\(\\d+\\))?$`);
+    const matchingRosterNames = rosters
+      .filter((roster) => regex.test(roster.name))
+      .map((r) => r.name);
+
+    if (matchingRosterNames.length === 0) return `${armyList.title}`;
+    const maxNameIndex = Math.max(
+      ...matchingRosterNames.map((name) => {
+        const matches = name.match(/\((\d+)\)/);
+        const index = matches ? matches[1] : "0";
+        return parseInt(index);
+      }),
+    );
+    return `${armyList.title} (${maxNameIndex + 1})`;
+  }
+
+  function getRosterId(rosterNameValue: string) {
+    let id = slugify(rosterNameValue);
+    if (existingRosterIds.includes(id)) {
+      id = withSuffix(id, existingRosterIds);
+    }
+    return id;
+  }
+
   function handleCreateNewRoster(e) {
     e.preventDefault();
 
-    let rosterNameValue = rosterName.trim();
+    const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
 
-    if (!rosterNameValue) {
-      const regex = new RegExp(`^${armyList.title} (\\(\\d+\\))?$`);
-      const matchingRosterNames = rosters
-        .filter((roster) => regex.test(roster.name))
-        .map((r) => r.name);
-      if (matchingRosterNames.length === 0) {
-        rosterNameValue = `${armyList.title} (1)`;
-      } else {
-        const maxNameIndex = Math.max(
-          ...matchingRosterNames.map((name) => {
-            return parseInt(name.match(/\((\d+)\)/)[1]);
-          }),
-        );
-        rosterNameValue = `${armyList.title} (${maxNameIndex + 1})`;
-      }
-    }
-
-    if (armyList) {
-      let id = slugify(rosterNameValue);
-      if (existingRosterIds.includes(id)) {
-        id = withSuffix(id, existingRosterIds);
-      }
+    if (armyList.army) {
       const newRoster = validateAndAdjustForCompulsoryRules({
         ...emptyRoster,
-        id: id,
+        id: getRosterId(rosterNameValue),
         group: groupId,
         name: rosterNameValue,
         armyList: armyList.title,
