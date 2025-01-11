@@ -333,7 +333,7 @@ export const CreateNewRosterModal = () => {
                 name="enable siege"
               />
             }
-            label="Enable siege upgrades"
+            label="Enable siege equipment options"
           />
         </Stack>
 
