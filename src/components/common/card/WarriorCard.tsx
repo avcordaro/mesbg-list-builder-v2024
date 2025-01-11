@@ -262,10 +262,10 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           collapsed={collapsed}
         />
         <CardActionButtons
-          duplicate={duplicate}
+          duplicate={!isSiegeEquipment(unit) ? duplicate : null}
           remove={remove}
-          reselect={reselect}
-          openProfileCard={openProfileCard}
+          reselect={!isSiegeEquipment(unit) ? reselect : null}
+          openProfileCard={!isSiegeEquipment(unit) ? openProfileCard : null}
           warbandNum={warbandNum}
           index={index}
           unitName={unit.name}
@@ -410,10 +410,10 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             </Collapse>
 
             <CardActionButtons
-              duplicate={duplicate}
+              duplicate={!isSiegeEquipment(unit) ? duplicate : null}
               remove={remove}
-              reselect={reselect}
-              openProfileCard={openProfileCard}
+              reselect={!isSiegeEquipment(unit) ? reselect : null}
+              openProfileCard={!isSiegeEquipment(unit) ? openProfileCard : null}
               warbandNum={warbandNum}
               index={index}
               unitName={unit.name}

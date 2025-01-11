@@ -11,7 +11,7 @@ type CardActionButtonsProps = {
   duplicate?: () => void;
   remove?: () => void;
   reselect?: () => void;
-  openProfileCard: () => void;
+  openProfileCard?: () => void;
   warbandNum: number;
   index: number;
   unitName: string;
@@ -30,15 +30,17 @@ export const CardActionButtons: FunctionComponent<CardActionButtonsProps> = ({
   return (
     <Box sx={{ zIndex: 2 }}>
       <Stack direction="row" gap={2}>
-        <SquareIconButton
-          icon={<BsFillPersonVcardFill />}
-          iconColor={palette.primary.contrastText}
-          backgroundColor={palette.grey.A700}
-          backgroundColorHover={palette.grey["900"]}
-          onClick={openProfileCard}
-          testId={`open-profile-card--w${warbandNum}-i${index}`}
-          testName={`open-profile-card--${slugify(unitName)}`}
-        />
+        {!!openProfileCard && (
+          <SquareIconButton
+            icon={<BsFillPersonVcardFill />}
+            iconColor={palette.primary.contrastText}
+            backgroundColor={palette.grey.A700}
+            backgroundColorHover={palette.grey["900"]}
+            onClick={openProfileCard}
+            testId={`open-profile-card--w${warbandNum}-i${index}`}
+            testName={`open-profile-card--${slugify(unitName)}`}
+          />
+        )}
         {!!duplicate && (
           <SquareIconButton
             icon={<ContentCopyOutlined sx={{ fontSize: "1.5rem" }} />}
