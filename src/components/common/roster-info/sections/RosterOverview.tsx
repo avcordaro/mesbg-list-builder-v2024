@@ -33,7 +33,9 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
   const rows = [
     {
       label: "Points",
-      value: metadata.points,
+      value: metadata.maxPoints
+        ? `${metadata.points} / ${metadata.maxPoints}`
+        : metadata.points,
       valid: !metadata.maxPoints || metadata.points <= metadata.maxPoints,
     },
     {

@@ -54,7 +54,8 @@ export const MobileRosterInfoToolbar = () => {
                   : "inherit"
               }
             >
-              Points: <b>{metadata.points}</b>
+              Points: <b>{metadata.points}</b>{" "}
+              {metadata.maxPoints ? `/ ${metadata.maxPoints}` : ""}
             </Typography>
             <Typography>
               Units: <b>{metadata.units}</b>
