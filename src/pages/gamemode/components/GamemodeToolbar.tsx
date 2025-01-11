@@ -63,6 +63,9 @@ export const GamemodeToolbar = () => {
   const quarter = metadata.units - Math.floor(metadata.units * 0.25);
   const casualties = game.casualties + game.heroCasualties;
 
+  const totalMight = game.trackables
+    .map((t) => Number(t.xMWFW.split(":")[0]))
+    .reduce((a, b) => a + b, 0);
   return screen.isMobile ? (
     <>
       <Stack direction="row" justifyContent="space-between" sx={{ my: 2 }}>
@@ -106,6 +109,9 @@ export const GamemodeToolbar = () => {
               <FaSkullCrossbones />
             )}
           </b>
+        </Typography>
+        <Typography color={totalMight <= 0 ? "error" : "inherit"}>
+          Might: <b>{totalMight}</b>
         </Typography>
       </Stack>
       <Stack direction="row" gap={2} justifyContent="center">
@@ -186,7 +192,7 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
         />
       </Stack>
-      <Box>
+      <Box sx={{ py: 1 }}>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           color={breakPointDead - casualties <= 0 ? "error" : "inherit"}
@@ -212,6 +218,12 @@ export const GamemodeToolbar = () => {
               <FaSkullCrossbones />
             )}
           </b>
+        </Typography>
+        <Typography
+          sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
+          color={totalMight <= 0 ? "error" : "inherit"}
+        >
+          Total Might Left: <b>{totalMight}</b>
         </Typography>
       </Box>
     </Toolbar>
