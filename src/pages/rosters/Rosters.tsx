@@ -5,11 +5,14 @@ import {
   Droppable,
   DropResult,
 } from "@hello-pangea/dnd";
+import { CancelRounded } from "@mui/icons-material";
+import { InputAdornment, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { FunctionComponent, useState } from "react";
+import { ChangeEvent, FunctionComponent, useState } from "react";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../state/app";
@@ -27,6 +30,7 @@ export const Rosters: FunctionComponent = () => {
   const { getAdjustedMetaData } = useRosterInformation();
   const [draggingRoster, setDraggingRoster] = useState<string>();
   const { setCurrentModal } = useAppState();
+  const [filter, setFilter] = useState("");
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
     .filter((roster) => !roster.group)
@@ -92,105 +96,165 @@ export const Rosters: FunctionComponent = () => {
           roster onto another, or onto an existing group.
         </Typography>
 
-        <Stack direction="row" gap={2} sx={{ my: 0 }} flexWrap="wrap" flex={1}>
-          <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
-            {Object.entries(rosterGroups).map(([groupName, rosters], index) => (
-              <Droppable key={index} droppableId={"group:" + groupName}>
-                {(provided, snapshot) => (
-                  <Box
-                    ref={provided.innerRef}
-                    {...provided.droppableProps}
-                    sx={
-                      snapshot.isDraggingOver
-                        ? {
-                            backgroundColor: "#FFFFFF33",
-                            border: "1px dashed white",
-                            p: 1,
-                            transition: "padding 0.3s ease",
-                          }
-                        : {
-                            p: 1,
-                            transition: "padding 0.3s ease",
-                          }
-                    }
-                  >
-                    <RosterGroupCard name={groupName} rosters={rosters} />
-                    <Box sx={{ "&>*": { height: "0px !important" } }}>
-                      {provided.placeholder}
-                    </Box>
-                  </Box>
-                )}
-              </Droppable>
-            ))}
-
-            {rosterLinks.map((card, index) => (
-              <Droppable key={index} droppableId={"roster:" + card.roster.id}>
-                {(provided, snapshot) => {
-                  return (
-                    <Box
-                      ref={provided.innerRef}
-                      sx={
-                        snapshot.isDraggingOver
-                          ? {
-                              backgroundColor: "#FFFFFF33",
-                              border: "1px dashed black",
-                              p: "calc(0.5rem - 2px)",
-                              transition: "padding 0.3s ease",
-                            }
-                          : {
-                              p: "0.5rem",
-                              transition: "padding 0.3s ease",
-                            }
-                      }
+        <Stack sx={{ py: 2 }}>
+          <TextField
+            id="database-filter-input"
+            label="Filter"
+            placeholder="Start typing to filter"
+            size="small"
+            value={filter}
+            sx={{
+              maxWidth: "80ch",
+            }}
+            fullWidth
+            onChange={(event: ChangeEvent<HTMLInputElement>) => {
+              setFilter(event.target.value);
+            }}
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="clear filters"
+                      onClick={() => setFilter("")}
+                      edge="end"
+                      sx={{
+                        display: filter.length > 0 ? "inherit" : "none",
+                      }}
                     >
-                      <Draggable draggableId={card.roster.id} index={index}>
-                        {(draggableProvided, draggableSnapshot) => {
-                          const { style, ...props } =
-                            draggableProvided.draggableProps;
-                          return (
-                            <Box
-                              ref={draggableProvided.innerRef}
-                              {...draggableProvided.dragHandleProps}
-                              {...props}
-                              style={
-                                draggingRoster === card.roster.id ? style : {}
+                      <CancelRounded />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+        </Stack>
+
+        {filter ? (
+          <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
+            {rosters
+              .filter((roster) => {
+                const f = filter.toLowerCase();
+                return (
+                  roster.name.toLowerCase().includes(f) ||
+                  roster.armyList.toLowerCase().includes(f) ||
+                  roster.group?.toLowerCase().includes(f)
+                );
+              })
+              .map((roster) => (
+                <RosterSummaryCard key={roster.id} roster={roster} />
+              ))}
+          </Stack>
+        ) : (
+          <Stack
+            direction="row"
+            gap={2}
+            sx={{ my: 0 }}
+            flexWrap="wrap"
+            flex={1}
+          >
+            <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
+              {Object.entries(rosterGroups).map(
+                ([groupName, rosters], index) => (
+                  <Droppable key={index} droppableId={"group:" + groupName}>
+                    {(provided, snapshot) => (
+                      <Box
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}
+                        sx={
+                          snapshot.isDraggingOver
+                            ? {
+                                backgroundColor: "#FFFFFF33",
+                                border: "1px dashed white",
+                                p: 1,
+                                transition: "padding 0.3s ease",
                               }
-                            >
+                            : {
+                                p: 1,
+                                transition: "padding 0.3s ease",
+                              }
+                        }
+                      >
+                        <RosterGroupCard name={groupName} rosters={rosters} />
+                        <Box sx={{ "&>*": { height: "0px !important" } }}>
+                          {provided.placeholder}
+                        </Box>
+                      </Box>
+                    )}
+                  </Droppable>
+                ),
+              )}
+
+              {rosterLinks.map((card, index) => (
+                <Droppable key={index} droppableId={"roster:" + card.roster.id}>
+                  {(provided, snapshot) => {
+                    return (
+                      <Box
+                        ref={provided.innerRef}
+                        sx={
+                          snapshot.isDraggingOver
+                            ? {
+                                backgroundColor: "#FFFFFF33",
+                                border: "1px dashed black",
+                                p: "calc(0.5rem - 2px)",
+                                transition: "padding 0.3s ease",
+                              }
+                            : {
+                                p: "0.5rem",
+                                transition: "padding 0.3s ease",
+                              }
+                        }
+                      >
+                        <Draggable draggableId={card.roster.id} index={index}>
+                          {(draggableProvided, draggableSnapshot) => {
+                            const { style, ...props } =
+                              draggableProvided.draggableProps;
+                            return (
                               <Box
-                                sx={
-                                  draggableSnapshot.isDragging
-                                    ? {
-                                        transform: "rotate(1.5deg)",
-                                        boxShadow: "1rem 1rem 1rem #00000099",
-                                        transition:
-                                          "transform 0.3s ease, boxShadow 0.3s ease",
-                                      }
-                                    : {
-                                        transition:
-                                          "transform 0.3s ease, boxShadow 0.3s ease",
-                                      }
+                                ref={draggableProvided.innerRef}
+                                {...draggableProvided.dragHandleProps}
+                                {...props}
+                                style={
+                                  draggingRoster === card.roster.id ? style : {}
                                 }
                               >
-                                <RosterSummaryCard roster={card.roster} />
+                                <Box
+                                  sx={
+                                    draggableSnapshot.isDragging
+                                      ? {
+                                          transform: "rotate(1.5deg)",
+                                          boxShadow: "1rem 1rem 1rem #00000099",
+                                          transition:
+                                            "transform 0.3s ease, boxShadow 0.3s ease",
+                                        }
+                                      : {
+                                          transition:
+                                            "transform 0.3s ease, boxShadow 0.3s ease",
+                                        }
+                                  }
+                                >
+                                  <RosterSummaryCard roster={card.roster} />
+                                </Box>
                               </Box>
-                            </Box>
-                          );
-                        }}
-                      </Draggable>
-                      <Box sx={{ "&>*": { height: "0px !important" } }}>
-                        {provided.placeholder}
+                            );
+                          }}
+                        </Draggable>
+                        <Box sx={{ "&>*": { height: "0px !important" } }}>
+                          {provided.placeholder}
+                        </Box>
                       </Box>
-                    </Box>
-                  );
-                }}
-              </Droppable>
-            ))}
-          </DragDropContext>
+                    );
+                  }}
+                </Droppable>
+              ))}
+            </DragDropContext>
 
-          <Box sx={{ p: 1 }}>
-            <CreateRosterCardButton />
-          </Box>
-        </Stack>
+            <Box sx={{ p: 1 }}>
+              <CreateRosterCardButton />
+            </Box>
+          </Stack>
+        )}
       </Stack>
     </Container>
   );

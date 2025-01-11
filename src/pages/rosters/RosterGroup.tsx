@@ -4,12 +4,14 @@ import {
   Droppable,
   DropResult,
 } from "@hello-pangea/dnd";
-import { Breadcrumbs } from "@mui/material";
+import { CancelRounded } from "@mui/icons-material";
+import { Breadcrumbs, InputAdornment, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { FunctionComponent } from "react";
+import { ChangeEvent, FunctionComponent, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
@@ -25,9 +27,15 @@ export const RosterGroup: FunctionComponent = () => {
   const { getAdjustedMetaData } = useRosterInformation();
   const { groupId } = useParams();
   const navigate = useNavigate();
+  const [filter, setFilter] = useState("");
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
-    .filter((roster) => roster.group === groupId)
+    .filter(
+      (roster) =>
+        roster.group === groupId &&
+        (roster.name.toLowerCase().includes(filter.toLowerCase()) ||
+          roster.armyList.toLowerCase().includes(filter.toLowerCase())),
+    )
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((roster) => {
       const metadata = getAdjustedMetaData(roster);
@@ -85,6 +93,41 @@ export const RosterGroup: FunctionComponent = () => {
                 {groupId}
               </Typography>
             </Breadcrumbs>
+          </Stack>
+
+          <Stack sx={{ py: 2 }}>
+            <TextField
+              id="database-filter-input"
+              label="Filter"
+              placeholder="Start typing to filter"
+              size="small"
+              value={filter}
+              sx={{
+                maxWidth: "80ch",
+              }}
+              fullWidth
+              onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                setFilter(event.target.value);
+              }}
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="clear filters"
+                        onClick={() => setFilter("")}
+                        edge="end"
+                        sx={{
+                          display: filter.length > 0 ? "inherit" : "none",
+                        }}
+                      >
+                        <CancelRounded />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
           </Stack>
 
           <Stack
