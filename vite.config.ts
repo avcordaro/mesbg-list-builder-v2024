@@ -18,7 +18,7 @@ export default defineConfig(({ command }) => ({
     BUILD_DATE: JSON.stringify(currentDate),
     RESOURCES_URL: JSON.stringify(
       command === "serve"
-        ? "../static-resources"
+        ? "/static-resources"
         : "https://resources.mesbg-list-builder.com/v2024",
     ),
   },
