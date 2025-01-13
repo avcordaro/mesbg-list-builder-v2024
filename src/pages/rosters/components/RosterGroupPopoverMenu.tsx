@@ -9,6 +9,7 @@ import { useState, MouseEvent } from "react";
 import { SquareIconButton } from "../../../components/common/icon-button/SquareIconButton.tsx";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useAppState } from "../../../state/app";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 
 export const GroupOptionsPopoverMenu = ({
   groupId,
@@ -17,6 +18,7 @@ export const GroupOptionsPopoverMenu = ({
   groupId: string;
   redirect?: boolean;
 }) => {
+  const { mode } = useThemeContext();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { setCurrentModal } = useAppState();
   const open = Boolean(anchorEl);
@@ -53,7 +55,7 @@ export const GroupOptionsPopoverMenu = ({
         aria-haspopup="true"
         onClick={handleClick}
         icon={<MoreVertIcon />}
-        iconColor="inherit"
+        iconColor={mode === "dark" ? "white" : "black"}
         backgroundColor="inherit"
         backgroundColorHover="inherit"
       />
