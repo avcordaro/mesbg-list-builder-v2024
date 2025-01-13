@@ -29,6 +29,7 @@ import { ModalTypes } from "../../modal/modals.tsx";
 import { AdditionalRules } from "../roster-info/sections/AdditionalRules.tsx";
 import { SpecialRules } from "../roster-info/sections/SpecialRules.tsx";
 import { getSumOfUnits } from "./totalUnits.ts";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 
 const UnitRow = ({
   unit,
@@ -70,6 +71,7 @@ const UnitRow = ({
 
 const RosterTotalRows = ({ roster }: { roster: Roster }) => {
   const units = getSumOfUnits(roster);
+  const { mode } = useThemeContext();
   return (
     <>
       {units.map((unit) => (
@@ -77,7 +79,7 @@ const RosterTotalRows = ({ roster }: { roster: Roster }) => {
           key={unit.id}
           unit={unit}
           rowStyle={{
-            backgroundColor: "white",
+            backgroundColor: mode === "dark" ? "inherit" : "white",
           }}
           forceQuantity={unit.unit_type.includes("Hero") && unit.quantity > 1}
         />
@@ -88,9 +90,17 @@ const RosterTotalRows = ({ roster }: { roster: Roster }) => {
 
 const WarbandRows = ({ warband }: { warband: Warband }) => {
   const { roster } = useRosterInformation();
+  const { mode } = useThemeContext();
 
   const rowStyle: SxProps = {
-    backgroundColor: warband.meta.num % 2 === 0 ? "lightgrey" : "white",
+    backgroundColor:
+      mode === "dark"
+        ? warband.meta.num % 2 === 0
+          ? "#333333"
+          : "#3F3F3F"
+        : warband.meta.num % 2 === 0
+          ? "lightgrey"
+          : "white",
   };
 
   return (
@@ -127,9 +137,11 @@ export const RosterTableView = forwardRef<
   RosterTableViewHandlers,
   RosterTableViewProps
 >(({ showArmyBonus, showUnitTotals, includeRosterName }, ref) => {
+  const { mode } = useThemeContext();
   const { setCurrentModal } = useAppState();
   const { roster, getAdjustedMetaData } = useRosterInformation();
   const { break_point } = armyListData[roster.armyList];
+
   const { might, will, fate, units, points, bows, throwingWeapons } =
     getAdjustedMetaData();
 
@@ -164,7 +176,18 @@ export const RosterTableView = forwardRef<
   }));
 
   return (
-    <Box id="rosterTable" sx={screenshotting ? { width: "1200px", p: 2 } : {}}>
+    <Box
+      id="rosterTable"
+      sx={
+        screenshotting
+          ? {
+              width: "1200px",
+              p: 2,
+              backgroundColor: mode === "dark" ? "#2F2F2F" : "inherit",
+            }
+          : {}
+      }
+    >
       {includeRosterName && (
         <Divider variant="middle">
           <Typography
@@ -228,7 +251,7 @@ export const RosterTableView = forwardRef<
           sx={{
             width: "100%",
             border: 1,
-            borderColor: "#AEAEAE",
+            borderColor: mode === "dark" ? "#3E3E3E" : "#AEAEAE",
             "& *": screenshotting ? { fontSize: "1.5rem !important" } : {},
             "& th": screenshotting
               ? { fontSize: "1.5rem !important", fontWeight: "bolder" }
@@ -237,7 +260,9 @@ export const RosterTableView = forwardRef<
           size="small"
         >
           <TableHead>
-            <TableRow sx={{ backgroundColor: "white" }}>
+            <TableRow
+              sx={{ backgroundColor: mode === "dark" ? "#3E3E3E" : "white" }}
+            >
               <TableCell>Name</TableCell>
               <TableCell>Options</TableCell>
               <TableCell align="center">Points</TableCell>
@@ -275,7 +300,13 @@ export const RosterTableView = forwardRef<
         variant="caption"
       >
         Created with MESBG List Builder (
-        <a href="#" style={{ textDecoration: "none" }}>
+        <a
+          href="#"
+          style={{
+            textDecoration: "none",
+            color: mode === "dark" ? "lightblue" : "inherit",
+          }}
+        >
           https://mesbg-list-builder.com/
         </a>
         )
