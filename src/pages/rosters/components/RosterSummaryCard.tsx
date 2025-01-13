@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { FactionLogo } from "../../../components/common/images/FactionLogo.tsx";
 import { Link } from "../../../components/common/link/Link.tsx";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Roster } from "../../../types/roster.ts";
 import { RosterPopoverMenu } from "./RosterPopoverMenu.tsx";
 
@@ -25,6 +26,7 @@ const KeyValue = ({ label, value }) => {
 export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
   roster,
 }) => {
+  const { mode } = useThemeContext();
   return (
     <Link
       to={`/roster/${roster.id}`}
@@ -54,7 +56,8 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
               variant="body2"
               sx={{
                 textDecoration: "underline",
-                color: ({ palette }) => palette.grey.A700,
+                color: ({ palette }) =>
+                  mode === "dark" ? palette.grey.A400 : palette.grey.A700,
               }}
             >
               <i>{roster.armyList}</i>
