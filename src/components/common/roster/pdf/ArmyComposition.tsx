@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { armyListData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 import {
   FreshUnit,
   isSelectedUnit,
@@ -55,6 +56,7 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
 
 export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
   const { roster, getAdjustedMetaData } = useRosterInformation();
+  const { mode } = useThemeContext();
 
   const warbands = roster.warbands.map((warband) => [
     warband.hero,
@@ -125,7 +127,10 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
                   <TableCell
                     size="small"
                     colSpan={2}
-                    sx={{ textAlign: "center", backgroundColor: "#F3F3F3" }}
+                    sx={{
+                      textAlign: "center",
+                      backgroundColor: mode === "dark" ? "#3F3F3F" : "#F3F3F3",
+                    }}
                   >
                     Warband {index + 1}
                   </TableCell>

@@ -1,11 +1,11 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const ConfirmDeleteGroupModal = () => {
   const {
@@ -36,12 +36,12 @@ export const ConfirmDeleteGroupModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="warning">
+        <CustomAlert severity="warning" title="">
           <Typography>Your are about to delete your roster group!</Typography>
-        </Alert>
+        </CustomAlert>
 
         {affectedRosters.length > 0 && (
-          <Alert severity="error">
+          <CustomAlert severity="error" title="">
             <Typography>
               Deleting this roster group will also delete the{" "}
               {affectedRosters.length === 1
@@ -49,7 +49,7 @@ export const ConfirmDeleteGroupModal = () => {
                 : `${affectedRosters.length} rosters`}{" "}
               inside of it.
             </Typography>
-          </Alert>
+          </CustomAlert>
         )}
 
         <Typography>

@@ -6,6 +6,7 @@ export type Preferences =
   | "colorCodedRules"
   | "splitActiveRules"
   | "collectionWarnings"
+  | "darkMode"
   | "oldShareScreen";
 
 export type PreferenceState = {
@@ -21,6 +22,7 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     splitActiveRules: false,
     oldShareScreen: false,
     collectionWarnings: false,
+    darkMode: false,
   },
 };
 

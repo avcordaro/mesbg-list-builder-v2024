@@ -1,11 +1,11 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const UpdateGroupModal = () => {
   const {
@@ -51,17 +51,18 @@ export const UpdateGroupModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="info" sx={{ mb: 2 }}>
+        <CustomAlert severity="info" title="">
           <Typography>You can change the name of your group here.</Typography>
-        </Alert>
-        <Alert severity="warning" sx={{ mb: 2 }}>
+        </CustomAlert>
+        <CustomAlert severity="warning" title="">
           <Typography>
             Keep in mind that changing the name to the name of an other existing
             group will merge the 2 groups together!
           </Typography>
-        </Alert>
+        </CustomAlert>
 
         <TextField
+          sx={{ mt: 2 }}
           fullWidth
           label="New group name"
           error={!rosterGroupNameValid}

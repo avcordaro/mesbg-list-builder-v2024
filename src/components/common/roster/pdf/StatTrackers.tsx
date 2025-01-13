@@ -13,8 +13,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { createGameState } from "../../../../state/gamemode/gamestate/create-game-state.ts";
+import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 
 const CheckboxList = ({ amount }: { amount: string }) => {
+  const { mode } = useThemeContext();
   return (
     <Stack direction="row" gap={1} flexWrap="wrap" justifyContent="center">
       {Array.from({ length: Number(amount) }).map((_, index) => (
@@ -23,7 +25,7 @@ const CheckboxList = ({ amount }: { amount: string }) => {
           style={{
             width: "20px",
             height: "20px",
-            border: "1px solid black",
+            border: mode === "dark" ? "1px solid white" : "1px solid black",
             borderRadius: "20px",
           }}
         ></div>

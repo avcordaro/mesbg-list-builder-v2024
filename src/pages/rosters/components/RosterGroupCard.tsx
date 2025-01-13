@@ -4,8 +4,8 @@ import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
 import fallbackLogo from "../../../assets/images/default.png";
+import { Link } from "../../../components/common/link/Link.tsx";
 import { Roster } from "../../../types/roster.ts";
 import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
 

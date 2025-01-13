@@ -10,6 +10,7 @@ import { UnitProfilePicture } from "../../../../components/common/images/UnitPro
 import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
 import { useGameModeState } from "../../../../state/gamemode";
 import { Trackable } from "../../../../state/gamemode/gamestate";
+import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 
 const TRACKABLE = ["Might", "Will", "Fate", "Wounds"];
 
@@ -63,6 +64,7 @@ export const StatTrackers = () => {
   const { rosterId } = useParams();
   const { gameState, updateGameState } = useGameModeState();
   const screen = useScreenSize();
+  const { mode } = useThemeContext();
 
   const trackers = gameState[rosterId]?.trackables || [];
 
@@ -114,7 +116,12 @@ export const StatTrackers = () => {
         return (
           <Paper
             key={index}
-            sx={[{ p: 1 }, alive ? {} : { backgroundColor: "#EFEFEF" }]}
+            sx={[
+              { p: 1 },
+              alive
+                ? {}
+                : { backgroundColor: mode === "dark" ? "#000000" : "#EFEFEF" },
+            ]}
             elevation={alive ? 5 : 0}
           >
             <Stack direction={screen.isMobile ? "column" : "row"}>

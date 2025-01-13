@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import useTheme from "@mui/material/styles/useTheme";
 import { FunctionComponent } from "react";
 import fallbackLogo from "../../../assets/images/default.png";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 
 export type SelectUnitCardButtonProps = {
@@ -20,6 +21,7 @@ export type SelectUnitCardButtonProps = {
 export const SelectUnitCardButton: FunctionComponent<
   SelectUnitCardButtonProps
 > = ({ title, warbandNum, index, onClick, remove, collapsed }) => {
+  const { mode } = useThemeContext();
   const { palette } = useTheme();
   return (
     <Paper
@@ -33,6 +35,8 @@ export const SelectUnitCardButton: FunctionComponent<
         "&:hover": {
           filter: "brightness(75%)",
         },
+        backgroundColor: ({ palette }) =>
+          mode === "dark" ? palette.grey["800"] : "",
       }}
       data-test-id={`select-unit--w${warbandNum}-i${index}`}
     >
@@ -44,6 +48,9 @@ export const SelectUnitCardButton: FunctionComponent<
             width: !collapsed ? 60 : 20,
             height: !collapsed ? 60 : 20,
             transition: "width .5s, height .5s",
+            "& .MuiAvatar-img": {
+              filter: mode === "dark" ? "invert(1)" : "",
+            },
           }}
         />
         <Typography

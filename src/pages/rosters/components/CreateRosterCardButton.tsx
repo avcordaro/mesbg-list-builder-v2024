@@ -6,9 +6,11 @@ import { FunctionComponent } from "react";
 import fallbackLogo from "../../../assets/images/default.png";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useAppState } from "../../../state/app";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 
 export const CreateRosterCardButton: FunctionComponent = () => {
   const { setCurrentModal } = useAppState();
+  const { mode } = useThemeContext();
 
   function openCreateRosterModal() {
     console.debug("Open create roster modal.");
@@ -37,6 +39,9 @@ export const CreateRosterCardButton: FunctionComponent = () => {
             mb: 2,
             display: "inline-block",
             backgroundColor: "transparent",
+            "& .MuiAvatar-img": {
+              filter: mode === "dark" ? "brightness(0) invert(1)" : "",
+            },
           }}
         />
         <Typography

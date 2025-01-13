@@ -494,7 +494,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
           <Button
             aria-label="logo"
             sx={{ mr: 2 }}
-            href="https://v2024.mesbg-list-builder.com/"
+            href="https://mesbg-list-builder.com/"
           >
             <img src={logo} alt="Logo" style={{ height: "50px" }} />
             <img

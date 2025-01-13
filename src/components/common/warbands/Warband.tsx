@@ -1,6 +1,7 @@
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import { forwardRef, useImperativeHandle, useState } from "react";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Warband as WarbandType } from "../../../types/roster.ts";
 import { WarbandContent } from "./content/WarbandContent.tsx";
 import { WarbandHeader } from "./header/WarbandHeader.tsx";
@@ -16,6 +17,7 @@ export type WarbandActions = {
 
 export const Warband = forwardRef<WarbandActions, WarbandProps>(
   ({ warband, collapseAll }, ref) => {
+    const { mode } = useThemeContext();
     const [collapsed, setCollapsed] = useState(false);
 
     function collapseWarband() {
@@ -35,7 +37,8 @@ export const Warband = forwardRef<WarbandActions, WarbandProps>(
         elevation={3}
         data-scroll-id={warband.id}
         sx={{
-          backgroundColor: ({ palette }) => palette.grey.A700,
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["900"] : palette.grey.A700,
           p: 1,
         }}
       >

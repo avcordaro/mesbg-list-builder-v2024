@@ -276,7 +276,7 @@ export const RosterTableView = forwardRef<
       >
         Created with MESBG List Builder (
         <a href="#" style={{ textDecoration: "none" }}>
-          https://v2024.mesbg-list-builder.com/
+          https://mesbg-list-builder.com/
         </a>
         )
       </Typography>

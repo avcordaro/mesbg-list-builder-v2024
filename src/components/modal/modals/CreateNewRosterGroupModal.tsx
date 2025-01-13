@@ -1,8 +1,8 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import { useState } from "react";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const CreateNewRosterGroupModal = () => {
   const {
@@ -41,11 +41,11 @@ export const CreateNewRosterGroupModal = () => {
 
   return (
     <>
-      <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="info" icon={false}>
+      <DialogContent sx={{ display: "flex", gap: 2, flexDirection: "column" }}>
+        <CustomAlert severity="info" title="Create Group">
           Choose a name for your roster group. Keep in mind that reusing an
           existing name will add the rosters to that group instead!
-        </Alert>
+        </CustomAlert>
 
         <TextField
           fullWidth

@@ -11,6 +11,7 @@ import { useMwfMutations } from "../../../hooks/useMwfMutations.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Option } from "../../../types/mesbg-data.types.ts";
 import { SelectedUnit } from "../../../types/roster.ts";
 import { slugify } from "../../../utils/string.ts";
@@ -51,6 +52,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   remove,
   collapsed,
 }) => {
+  const { mode } = useThemeContext();
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const { roster, getSetOfModelIds } = useRosterInformation();
@@ -123,7 +125,13 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   return screen.isMobile ? (
     <Card
       sx={[
-        { p: 0.5, position: "relative", zIndex: 0 },
+        {
+          p: 0.5,
+          position: "relative",
+          zIndex: 0,
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["800"] : "",
+        },
         !valid
           ? {
               "&::before": {
@@ -203,7 +211,13 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 <MwfBadge unit={unit} />
                 {warnings === "on" && (
                   <Typography
-                    color={overExceededCollection ? "error.dark" : "inherit"}
+                    color={
+                      overExceededCollection
+                        ? mode === "dark"
+                          ? "error.light"
+                          : "error.dark"
+                        : "inherit"
+                    }
                   >
                     {available === 0
                       ? "Not in collection"
@@ -250,7 +264,13 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   ) : (
     <Card
       sx={[
-        { p: 0.5, position: "relative", zIndex: 0 },
+        {
+          p: 0.5,
+          position: "relative",
+          zIndex: 0,
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["800"] : "",
+        },
         !valid
           ? {
               "&::before": {
@@ -379,7 +399,13 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               </Typography>
               {warnings === "on" && (
                 <Typography
-                  color={overExceededCollection ? "error.dark" : "inherit"}
+                  color={
+                    overExceededCollection
+                      ? mode === "dark"
+                        ? "error.light"
+                        : "error.dark"
+                      : "inherit"
+                  }
                 >
                   {available === 0
                     ? "Not in collection"

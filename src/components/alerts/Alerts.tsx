@@ -3,11 +3,13 @@ import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import { useEffect } from "react";
 import { useAppState } from "../../state/app";
+import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { slugify } from "../../utils/string.ts";
 import { alertMap, AlertTypes } from "./alert-types.tsx";
 
 const ListBuilderAlert = ({ id, type }: { id: string; type: AlertTypes }) => {
   const { dismissAlert } = useAppState();
+  const { mode } = useThemeContext();
 
   const { variant, content, options } = alertMap.get(type);
 
@@ -26,8 +28,9 @@ const ListBuilderAlert = ({ id, type }: { id: string; type: AlertTypes }) => {
     <Slide direction="right" in={true}>
       <Alert
         onClose={() => dismissAlert(id)}
-        variant="standard"
+        variant={mode === "dark" ? "filled" : "standard"}
         sx={{ width: "100%" }}
+        icon={false}
         severity={variant as AlertColor}
         data-test-id={`global-alert--${slugify(type)}`}
       >

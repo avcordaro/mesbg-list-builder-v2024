@@ -11,6 +11,7 @@ import { useCalculator } from "../../../hooks/useCalculator.ts";
 import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Option } from "../../../types/mesbg-data.types.ts";
 import { isSiegeEquipment, SelectedUnit } from "../../../types/roster.ts";
 import { slugify } from "../../../utils/string.ts";
@@ -108,6 +109,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   remove,
   collapsed,
 }) => {
+  const { mode } = useThemeContext();
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
@@ -172,6 +174,8 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           p: 1.5,
           position: "relative",
           zIndex: 0,
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["800"] : "",
         },
         !valid
           ? {
@@ -218,7 +222,13 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             <Collapse in={!collapsed}>
               <Typography
                 sx={{ textAlign: "end" }}
-                color={overExceededCollection ? "error.dark" : "inherit"}
+                color={
+                  overExceededCollection
+                    ? mode === "dark"
+                      ? "error.light"
+                      : "error.dark"
+                    : "inherit"
+                }
               >
                 {available === 0
                   ? "Not in collection"
@@ -281,6 +291,8 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           position: "relative",
           zIndex: 0,
           transition: "padding 0.5s",
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["800"] : "",
         },
         !valid
           ? {
@@ -400,7 +412,13 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
               {warnings === "on" && (
                 <Typography
                   sx={{ textAlign: "end" }}
-                  color={overExceededCollection ? "error.dark" : "inherit"}
+                  color={
+                    overExceededCollection
+                      ? mode === "dark"
+                        ? "error.light"
+                        : "error.dark"
+                      : "inherit"
+                  }
                 >
                   {available === 0
                     ? "Not in collection"

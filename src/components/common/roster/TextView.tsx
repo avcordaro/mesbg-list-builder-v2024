@@ -85,7 +85,7 @@ export const RosterTextView = forwardRef<
     return `
     ----------------------------------------
     Created with MESBG List Builder 
-    https://v2024.mesbg-list-builder.com/
+    https://mesbg-list-builder.com/
     `;
   };
 

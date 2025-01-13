@@ -5,7 +5,6 @@ import {
   ImageList,
   ImageListItem,
 } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useState } from "react";
@@ -15,6 +14,7 @@ import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 import { isSelectedUnit } from "../../../types/roster.ts";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 import { UnitProfileCard } from "../../common/images/UnitProfileCard.tsx";
 
 export const DownloadProfileCardModal = () => {
@@ -68,9 +68,9 @@ export const DownloadProfileCardModal = () => {
   return (
     <>
       <DialogContent>
-        <Alert severity="info">
+        <CustomAlert severity="info" title="">
           The following profile cards will be downloaded (in high resolution).
-        </Alert>
+        </CustomAlert>
         <ImageList cols={isMobile ? 1 : isTablet ? 2 : isDesktop ? 3 : 4}>
           {profileCards
             .map((profile) => profile.split("|"))

@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { MouseEvent } from "react";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { ArmyType, Option, UnitType } from "../../../types/mesbg-data.types.ts";
 import { Profile } from "../../../types/profile-data.types.ts";
 import { Order } from "../utils/sorting.ts";
@@ -44,13 +45,18 @@ export const DatabaseTable = ({
   rows,
 }: DatabaseTableProps) => {
   const screen = useScreenSize();
+  const { mode } = useThemeContext();
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} stickyHeader size="small">
         <TableHead
           sx={{
             "& > tr > th": {
-              backgroundColor: (theme) => theme.palette.grey.A200,
+              backgroundColor: (theme) =>
+                mode === "dark"
+                  ? theme.palette.grey.A700
+                  : theme.palette.grey.A200,
             },
           }}
         >

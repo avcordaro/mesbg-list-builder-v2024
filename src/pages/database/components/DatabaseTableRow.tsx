@@ -20,6 +20,7 @@ import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { COMPOSED_UNIT_MAP } from "../utils/special-rows.ts";
 import { DatabaseRowData } from "./DatabaseTable.tsx";
 import { ExtraInfoRow } from "./ExtraInformationSection.tsx";
@@ -27,6 +28,8 @@ import { ExtraInfoRow } from "./ExtraInformationSection.tsx";
 export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
   const { palette } = useTheme();
   const { inventory } = useCollectionState();
+  const { mode } = useThemeContext();
+
   const screen = useScreenSize();
   const { setCurrentModal, openSidebar } = useAppState();
   const [open, setOpen] = useState(false);
@@ -57,8 +60,12 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
           <SquareIconButton
             icon={<BsFillPersonVcardFill />}
             iconColor={palette.primary.contrastText}
-            backgroundColor={palette.grey.A700}
-            backgroundColorHover={palette.grey["900"]}
+            backgroundColor={
+              mode === "dark" ? palette.grey.A400 : palette.grey.A700
+            }
+            backgroundColorHover={
+              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
+            }
             onClick={() => {
               setCurrentModal(ModalTypes.PROFILE_CARD, {
                 unit: {
@@ -93,9 +100,15 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
             icon={existsInInv ? <Edit /> : <BookmarkAdd />}
             iconColor={palette.primary.contrastText}
             backgroundColor={
-              existsInInv ? palette.primary.dark : palette.grey.A700
+              existsInInv
+                ? palette.primary.dark
+                : mode === "dark"
+                  ? palette.grey.A400
+                  : palette.grey.A700
             }
-            backgroundColorHover={palette.grey["900"]}
+            backgroundColorHover={
+              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
+            }
             iconPadding="0.5rem"
             onClick={() => {
               setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {

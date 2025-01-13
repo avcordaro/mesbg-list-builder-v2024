@@ -1,11 +1,11 @@
 import { Button, DialogActions, DialogContent } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const ConfirmDeleteRosterModal = () => {
   const {
@@ -32,13 +32,13 @@ export const ConfirmDeleteRosterModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="warning">
+        <CustomAlert severity="warning" title="">
           <Typography>
             Your are about to delete your roster!{" "}
             <b>This action is irreversible.</b> You will have to recreate the
             roster from scratch!
           </Typography>
-        </Alert>
+        </CustomAlert>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button

@@ -11,10 +11,13 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "../../components/common/link/Link.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
+import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
 import { GroupOptionsPopoverMenu } from "./components/RosterGroupPopoverMenu.tsx";
 import {
@@ -28,6 +31,8 @@ export const RosterGroup: FunctionComponent = () => {
   const { groupId } = useParams();
   const navigate = useNavigate();
   const [filter, setFilter] = useState("");
+  const { palette } = useTheme();
+  const { mode } = useThemeContext();
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
     .filter(
@@ -85,6 +90,8 @@ export const RosterGroup: FunctionComponent = () => {
                 to="/rosters"
                 style={{
                   textDecoration: "none",
+                  color:
+                    mode === "dark" ? palette.info.light : palette.info.main,
                 }}
               >
                 Rosters

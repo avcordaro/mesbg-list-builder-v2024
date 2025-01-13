@@ -18,6 +18,7 @@ import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { Option } from "../../../types/mesbg-data.types.ts";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 import { CustomSwitch } from "../../common/switch/CustomSwitch.tsx";
 
 export const AddToCollection = () => {
@@ -147,7 +148,7 @@ export const AddToCollection = () => {
   return (
     <>
       <DialogContent>
-        <Alert severity="info" icon={false}>
+        <CustomAlert severity="info" title="">
           <AlertTitle>
             Add <strong>{unit.name}</strong> to you collection of miniatures.
           </AlertTitle>
@@ -156,7 +157,7 @@ export const AddToCollection = () => {
             you to ensure your rosters only include models that you own,
             providing a seamless way to plan and optimise your army lists.
           </Typography>
-        </Alert>
+        </CustomAlert>
 
         {loadoutOptions.length > 2 && (
           <Alert severity="info" icon={false} sx={{ my: 1 }}>

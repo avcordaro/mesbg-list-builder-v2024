@@ -1,10 +1,10 @@
 import { Button, DialogActions, DialogContent } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const ConfirmDisbandGroupModal = () => {
   const {
@@ -36,17 +36,17 @@ export const ConfirmDisbandGroupModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="warning">
+        <CustomAlert severity="warning" title="">
           <Typography>Your are about to disband your roster group!</Typography>
-        </Alert>
+        </CustomAlert>
 
-        <Alert severity="info">
+        <CustomAlert severity="info" title="">
           <Typography>
             Disbanding a roster group means the rosters will be moved back to
             your &apos;My Rosters&apos; page.{" "}
             <strong>They will not be deleted!</strong>
           </Typography>
-        </Alert>
+        </CustomAlert>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button

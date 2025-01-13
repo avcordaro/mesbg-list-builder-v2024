@@ -1,10 +1,12 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 
 type MwfBadgeProps = { unit: Pick<Unit, "MWFW"> };
 
 export const MwfBadge = ({ unit }: MwfBadgeProps) => {
+  const { mode } = useThemeContext();
   if (!unit.MWFW || unit.MWFW.length === 0) {
     return null;
   }
@@ -40,7 +42,7 @@ export const MwfBadge = ({ unit }: MwfBadgeProps) => {
         variant="body2"
         component="span"
         sx={{
-          color: "black",
+          color: mode === "dark" ? "white" : "black",
           borderRadius: "0 5px 5px 0",
           pl: "8px",
           pr: "8px",

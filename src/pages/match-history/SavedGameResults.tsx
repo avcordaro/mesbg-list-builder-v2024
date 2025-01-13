@@ -15,6 +15,7 @@ import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useAppState } from "../../state/app";
 import { useRecentGamesState } from "../../state/recent-games";
 import { PastGame } from "../../state/recent-games/history";
+import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { Charts } from "./components/Charts.tsx";
 import { FilterForm, Filters } from "./components/FilterForm.tsx";
 import { GamesTable } from "./components/GamesTable.tsx";
@@ -22,6 +23,7 @@ import { GamesTable } from "./components/GamesTable.tsx";
 export const SavedGameResults = () => {
   const { recentGames } = useRecentGamesState();
   const { setCurrentModal } = useAppState();
+  const { mode } = useThemeContext();
   const [filteredGames, setFilteredGames] = useState(recentGames);
   const [fabOpen, setFabOpen] = useState(false);
   const [filters, setFilters] = useState<Filters>({
@@ -153,7 +155,14 @@ export const SavedGameResults = () => {
                 }}
                 FabProps={{ disabled: action.disabled }}
                 tooltipTitle={
-                  <span style={{ whiteSpace: "nowrap" }}> {action.name} </span>
+                  <span
+                    style={{
+                      whiteSpace: "nowrap",
+                      color: mode === "dark" ? "white" : "inherit",
+                    }}
+                  >
+                    {action.name}
+                  </span>
                 }
                 tooltipOpen
               />

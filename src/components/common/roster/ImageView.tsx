@@ -69,6 +69,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
             border: "2px solid #800000",
             backgroundImage: `url(${backgroundCover})`,
             backgroundSize: "cover",
+            color: "#363636",
           }}
         >
           <HeaderBlock includeRosterName={includeRosterName} />

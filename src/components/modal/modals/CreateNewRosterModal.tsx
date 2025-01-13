@@ -9,7 +9,6 @@ import {
   Stack,
   TextField,
 } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Divider from "@mui/material/Divider";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import ListItem from "@mui/material/ListItem";
@@ -29,6 +28,7 @@ import { emptyRoster } from "../../../state/roster-building/roster";
 import { Roster } from "../../../types/roster.ts";
 import { WarningRules } from "../../../types/warning-rules.types.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 import { FactionLogo } from "../../common/images/FactionLogo.tsx";
 import { CustomSwitch } from "../../common/switch/CustomSwitch.tsx";
 
@@ -252,12 +252,12 @@ export const CreateNewRosterModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="info" icon={false}>
+        <CustomAlert severity="info" title="Create or import roster">
           You can create a <u>new roster from scratch</u> <b>or</b>{" "}
           <u>
             import your existing roster<sup>*</sup>
           </u>
-        </Alert>
+        </CustomAlert>
 
         <Divider>
           <Typography className="middle-earth">Create a Roster</Typography>

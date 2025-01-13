@@ -13,12 +13,13 @@ import Alert from "@mui/material/Alert";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
-import { Link } from "react-router-dom";
 import { SquareIconButton } from "../../components/common/icon-button/SquareIconButton.tsx";
+import { Link } from "../../components/common/link/Link.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useAppState } from "../../state/app";
 import { useCollectionState } from "../../state/collection";
 import { useUserPreferences } from "../../state/preference";
+import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { rows as databaseRows } from "../database/data.ts";
 import { COMPOSED_UNIT_MAP } from "../database/utils/special-rows.ts";
 
@@ -27,6 +28,7 @@ export const Collection = () => {
   const { setCurrentModal } = useAppState();
   const { inventory, deleteEntry } = useCollectionState();
   const { preferences, setPreference } = useUserPreferences();
+  const { mode } = useThemeContext();
 
   const collection = Object.entries(inventory)
     .flatMap(([origin, model]) =>
@@ -85,7 +87,10 @@ export const Collection = () => {
           <TableHead
             sx={{
               "& > tr > th": {
-                backgroundColor: (theme) => theme.palette.grey.A200,
+                backgroundColor: (theme) =>
+                  mode === "dark"
+                    ? theme.palette.grey.A700
+                    : theme.palette.grey.A200,
               },
             }}
           >

@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, MouseEvent, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../components/common/link/Link.tsx";
 import { DatabaseTable } from "./components/DatabaseTable.tsx";
 import { rows } from "./data.ts";
 import { getComparator, Order } from "./utils/sorting.ts";

@@ -2,6 +2,7 @@ import {
   AutoAwesome,
   CategoryOutlined,
   ChecklistRtl,
+  DarkMode,
   PhotoCameraOutlined,
   SwitchAccessShortcut,
   Update,
@@ -22,6 +23,7 @@ import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { useAppState } from "../state/app";
 import { useUserPreferences } from "../state/preference";
 import { Preferences } from "../state/preference/user-preferences";
+import { useThemeContext } from "../theme/ThemeContext.tsx";
 import { slugify } from "../utils/string.ts";
 
 export type SettingsOptionProps = {
@@ -61,6 +63,7 @@ const SettingsOption: FunctionComponent<SettingsOptionProps> = (props) => {
 };
 
 export const Settings = () => {
+  const { toggleTheme, mode } = useThemeContext();
   const { preferences, setPreference } = useUserPreferences();
   const { openSidebar } = useAppState();
 
@@ -78,6 +81,15 @@ export const Settings = () => {
           width: "100%",
         }}
       >
+        <SettingsOption
+          icon={<DarkMode />}
+          label="Darkmode"
+          description={
+            "Switch between light and dark themes to adjust the app's appearance for better readability and comfort in different lighting conditions."
+          }
+          value={mode === "dark"}
+          onChange={toggleTheme}
+        />
         <SettingsOption
           icon={<ChecklistRtl />}
           label="Display roster summary toolbar when overview sidebar collapses"

@@ -1,9 +1,9 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const EditRosterModal = () => {
   const {
@@ -57,14 +57,19 @@ export const EditRosterModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <Alert severity="warning" sx={{ mb: 2 }}>
+        <CustomAlert severity="warning" title="">
           <Typography>
             You can change the name of your roster. The ID, and thus the URL to
             your roster, will remain unchanged!
           </Typography>
-        </Alert>
+        </CustomAlert>
 
-        <TextField value={roster.armyList} label="Army" disabled />
+        <TextField
+          value={roster.armyList}
+          label="Army"
+          disabled
+          sx={{ mt: 2 }}
+        />
         <TextField
           fullWidth
           label="Roster name"

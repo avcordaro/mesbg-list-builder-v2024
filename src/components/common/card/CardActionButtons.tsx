@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
 import { BsFillPersonVcardFill } from "react-icons/bs";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { slugify } from "../../../utils/string.ts";
 import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 
@@ -26,6 +27,7 @@ export const CardActionButtons: FunctionComponent<CardActionButtonsProps> = ({
   index,
   unitName,
 }) => {
+  const { mode } = useThemeContext();
   const { palette } = useTheme();
   return (
     <Box sx={{ zIndex: 2 }}>
@@ -34,8 +36,12 @@ export const CardActionButtons: FunctionComponent<CardActionButtonsProps> = ({
           <SquareIconButton
             icon={<BsFillPersonVcardFill />}
             iconColor={palette.primary.contrastText}
-            backgroundColor={palette.grey.A700}
-            backgroundColorHover={palette.grey["900"]}
+            backgroundColor={
+              mode === "dark" ? palette.grey.A400 : palette.grey.A700
+            }
+            backgroundColorHover={
+              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
+            }
             onClick={openProfileCard}
             testId={`open-profile-card--w${warbandNum}-i${index}`}
             testName={`open-profile-card--${slugify(unitName)}`}

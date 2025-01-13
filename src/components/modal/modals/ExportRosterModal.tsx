@@ -7,12 +7,12 @@ import {
   Input,
   InputLabel,
 } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import { useState } from "react";
 import { useExport } from "../../../hooks/useExport.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 import { slugify } from "../../../utils/string.ts";
+import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 
 export const ExportRosterModal = () => {
   const { closeModal } = useAppState();
@@ -41,12 +41,17 @@ export const ExportRosterModal = () => {
   return (
     <>
       <DialogContent>
-        <Alert severity="info" sx={{ mb: 2 }} icon={false}>
+        <CustomAlert severity="info" title="">
           You can export your roster to a <i>.json</i> (or to your clipboard).
           This allows you to reimport your roster on another device or when you
           lose your browser data.
-        </Alert>
-        <FormControl error={!filenameValid} variant="standard" fullWidth>
+        </CustomAlert>
+        <FormControl
+          error={!filenameValid}
+          variant="standard"
+          fullWidth
+          sx={{ mt: 2 }}
+        >
           <InputLabel htmlFor="component-error">Roster filename</InputLabel>
           <Input
             value={filename}

@@ -19,7 +19,8 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "../../components/common/link/Link.tsx";
 import { WarbandList } from "../../components/common/warbands/WarbandList.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
@@ -27,6 +28,7 @@ import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useAppState } from "../../state/app";
 import { useUserPreferences } from "../../state/preference";
 import { useTemporalRosterBuildingState } from "../../state/roster-building";
+import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import {
   MobileRosterInfoToolbar,
   ROSTER_INFO_BAR_HEIGHT,
@@ -35,6 +37,7 @@ import { RosterInfoDrawer, drawerWidth } from "./RosterInfoDrawer.tsx";
 
 export const Roster = () => {
   const screen = useScreenSize();
+  const { mode } = useThemeContext();
   const { undo, redo, pastStates, futureStates, clear } =
     useTemporalRosterBuildingState((state) => state);
   const { rosterId } = useParams();
@@ -181,7 +184,15 @@ export const Roster = () => {
                 }}
                 FabProps={{ disabled: action.disabled }}
                 tooltipTitle={
-                  <span style={{ whiteSpace: "nowrap" }}> {action.name} </span>
+                  <span
+                    style={{
+                      whiteSpace: "nowrap",
+                      color: mode === "dark" ? "white" : "inherit",
+                    }}
+                  >
+                    {" "}
+                    {action.name}{" "}
+                  </span>
                 }
                 tooltipOpen
               />
@@ -204,10 +215,7 @@ export const Roster = () => {
             FabProps={{
               sx: {
                 color: "black",
-                bgcolor: "background.default",
-                "&:hover": {
-                  bgcolor: "background.default",
-                },
+                bgcolor: "whitesmoke",
               },
             }}
           >
@@ -229,7 +237,12 @@ export const Roster = () => {
               }}
               FabProps={{ disabled: pastStates.length === 0 }}
               tooltipTitle={
-                <span style={{ whiteSpace: "nowrap" }}>
+                <span
+                  style={{
+                    whiteSpace: "nowrap",
+                    color: mode === "dark" ? "white" : "inherit",
+                  }}
+                >
                   Undo{" "}
                   {screen.isDesktop && (
                     <small>
@@ -258,7 +271,12 @@ export const Roster = () => {
               }}
               FabProps={{ disabled: futureStates.length === 0 }}
               tooltipTitle={
-                <span style={{ whiteSpace: "nowrap" }}>
+                <span
+                  style={{
+                    whiteSpace: "nowrap",
+                    color: mode === "dark" ? "white" : "inherit",
+                  }}
+                >
                   Redo{" "}
                   {screen.isDesktop && (
                     <small>
