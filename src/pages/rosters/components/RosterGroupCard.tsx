@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import fallbackLogo from "../../../assets/images/default.png";
 import { Link } from "../../../components/common/link/Link.tsx";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Roster } from "../../../types/roster.ts";
 import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
 
@@ -18,6 +19,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
   name,
   rosters,
 }) => {
+  const { mode } = useThemeContext();
   const cardStyle = {
     width: "34ch",
     left: "3ch",
@@ -85,6 +87,9 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 mb: 2,
                 display: "inline-block",
                 backgroundColor: "transparent",
+                "& .MuiAvatar-img": {
+                  filter: mode === "dark" ? "brightness(0) invert(1)" : "",
+                },
               }}
             />
             <Typography
