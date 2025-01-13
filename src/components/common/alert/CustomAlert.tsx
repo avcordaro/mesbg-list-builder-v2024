@@ -17,13 +17,13 @@ export const CustomAlert: FunctionComponent<
   return (
     <Alert
       severity={severity}
-      variant={mode === "dark" ? "filled" : "standard"}
+      variant={mode === "dark" ? "outlined" : "standard"}
       onClose={onClose}
       icon={false}
     >
       {title && (
         <AlertTitle>
-          <Typography>{title}</Typography>
+          <Typography fontWeight="bold">{title}</Typography>
         </AlertTitle>
       )}
       {children}

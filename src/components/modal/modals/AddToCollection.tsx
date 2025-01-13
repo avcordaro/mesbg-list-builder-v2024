@@ -160,16 +160,13 @@ export const AddToCollection = () => {
         </CustomAlert>
 
         {loadoutOptions.length > 2 && (
-          <Alert severity="info" icon={false} sx={{ my: 1 }}>
-            <AlertTitle>
-              <strong>Generic profiles</strong>
-            </AlertTitle>
+          <CustomAlert severity="info" title="Generic profiles">
             <Typography>
               Select the &apos;Generic&apos; option to indicate that the model
               can be counted as any model under the same name, regardless of
               options (with the exception of being mounted/on-foot).
             </Typography>
-          </Alert>
+          </CustomAlert>
         )}
 
         {showErrors && errors.some((error) => error.invalid) && (

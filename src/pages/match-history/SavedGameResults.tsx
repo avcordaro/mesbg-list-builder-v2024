@@ -6,11 +6,11 @@ import {
   SpeedDialIcon,
   Typography,
 } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import { useEffect, useRef, useState } from "react";
+import { CustomAlert } from "../../components/common/alert/CustomAlert.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useAppState } from "../../state/app";
 import { useRecentGamesState } from "../../state/recent-games";
@@ -122,19 +122,19 @@ export const SavedGameResults = () => {
                 <Charts games={filteredGames} />
               </>
             ) : (
-              <Alert severity="warning">
+              <CustomAlert severity="warning" title="">
                 Your current filter combination resulted in 0 games. Please
                 adjust the filters.
-              </Alert>
+              </CustomAlert>
             )}
           </>
         ) : (
-          <Alert severity="info">
+          <CustomAlert severity="info" title="">
             You have 0 games on record. Play a match using the{" "}
             <em>&quot;Game Mode&quot;</em> from the roster builder or{" "}
             <em>create/import</em> games using the Floating button in the bottom
             right.
-          </Alert>
+          </CustomAlert>
         )}
 
         <Box ref={speedDialRef}>

@@ -1,10 +1,10 @@
-import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { siegeEquipmentData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { SiegeEquipment } from "../../../types/mesbg-data.types.ts";
+import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { SiegeSelectionButton } from "./SiegeSelectionButton.tsx";
 
 export type UnitSelectionListProps = {
@@ -20,10 +20,10 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
   if (!siegeRoster) {
     return (
       <Stack gap={1.5}>
-        <Alert severity="error" icon={false}>
+        <CustomAlert severity="error" title="">
           The current roster is not eligible for siege equipment. Create a new
           roster and mark it as a siege roster.
-        </Alert>
+        </CustomAlert>
       </Stack>
     );
   }

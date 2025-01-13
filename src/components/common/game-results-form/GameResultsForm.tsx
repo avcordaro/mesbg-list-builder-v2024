@@ -6,7 +6,6 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material";
-import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, forwardRef, useImperativeHandle, useState } from "react";
 import { v4 } from "uuid";
@@ -14,6 +13,7 @@ import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
+import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { ArmyPicker } from "./ArmyPicker.tsx";
 import { AdditionalTagsInput } from "./TagsInput.tsx";
 
@@ -184,13 +184,13 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
   return (
     <Box>
       {missingRequiredFields.length > 0 && (
-        <Alert severity="error" sx={{ mb: 3 }}>
+        <CustomAlert severity="error" title="Some fields are incorrect">
           Please fill in the following required fields:{" "}
           {missingRequiredFields.join(", ").replace(/,([^,]*)$/, " & $1")}
-        </Alert>
+        </CustomAlert>
       )}
 
-      <Grid2 container spacing={2}>
+      <Grid2 container spacing={2} sx={{ mt: 2 }}>
         <Grid2 container component="fieldset">
           <Typography component="legend" sx={{ mb: 1 }}>
             General game information
