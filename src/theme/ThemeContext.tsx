@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { createContext, useContext, ReactNode } from "react";
