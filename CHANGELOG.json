@@ -1,5 +1,9 @@
 {
   "main": {
+    "added": ["Darkmode."],
+    "changed": [
+      "Removed the custom page margin on the PDF printout, which hopefully resolve some printing errors."
+    ],
     "bugfixes": [
       "Make sure all rosters can benifit from the Siege Equipment and points limit",
       "Add the new metadata fields to the roster export allowing a correct reimport at a later moment or on another device.",
