@@ -7,7 +7,8 @@
     "bugfixes": [
       "Make sure all rosters can benifit from the Siege Equipment and points limit",
       "Add the new metadata fields to the roster export allowing a correct reimport at a later moment or on another device.",
-      "Fixed the incorrect break point value shown on the PDF view."
+      "Fixed the incorrect break point value shown on the PDF view.",
+      "Remove siege equipment from the list of profile cards"
     ]
   },
   "1.10": {

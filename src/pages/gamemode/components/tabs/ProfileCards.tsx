@@ -5,7 +5,11 @@ import hero_constraint_data from "../../../../assets/data/hero_constraint_data.j
 import { UnitProfileCard } from "../../../../components/common/images/UnitProfileCard.tsx";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
-import { isSelectedUnit, SelectedUnit } from "../../../../types/roster.ts";
+import {
+  isSelectedUnit,
+  isSiegeEquipment,
+  SelectedUnit,
+} from "../../../../types/roster.ts";
 
 export const ProfileCards = () => {
   const { roster } = useRosterInformation();
@@ -60,7 +64,7 @@ export const ProfileCards = () => {
       const heroProfile = { profile: hero.name, army: hero.profile_origin };
       const extraProfiles = getExtraProfilesForHero(hero);
       const unitProfiles = units
-        .filter((unit) => isSelectedUnit(unit) && unit.unit_type !== "Siege")
+        .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
         .map((unit: SelectedUnit) => ({
           profile: unit.name,
           army: unit.profile_origin,

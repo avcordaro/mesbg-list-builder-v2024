@@ -46,7 +46,7 @@ export const useDownload = () => {
         }
       }
       _warband.units.filter(isSelectedUnit).map((_unit) => {
-        if (_unit.name != null && _unit.unit_type !== "Siege") {
+        if (_unit.name != null && _unit.unit_type !== "Siege Equipment") {
           profileCards.push([_unit.profile_origin, _unit.name].join("|"));
         }
         return null;

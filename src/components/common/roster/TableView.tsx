@@ -19,6 +19,7 @@ import { GiQueenCrown } from "react-icons/gi";
 import { armyListData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
+import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import {
   isSelectedUnit,
   Roster,
@@ -29,7 +30,6 @@ import { ModalTypes } from "../../modal/modals.tsx";
 import { AdditionalRules } from "../roster-info/sections/AdditionalRules.tsx";
 import { SpecialRules } from "../roster-info/sections/SpecialRules.tsx";
 import { getSumOfUnits } from "./totalUnits.ts";
-import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 
 const UnitRow = ({
   unit,

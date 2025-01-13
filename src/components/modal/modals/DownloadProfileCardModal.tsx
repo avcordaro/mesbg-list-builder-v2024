@@ -50,7 +50,7 @@ export const DownloadProfileCardModal = () => {
         }
       }
       warband.units.filter(isSelectedUnit).forEach((unit) => {
-        if (unit.unit_type !== "Siege") {
+        if (unit.unit_type !== "Siege Equipment") {
           profileCards.push([unit.profile_origin, unit.name].join("|"));
         }
       });
