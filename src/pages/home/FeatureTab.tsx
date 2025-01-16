@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { Fragment } from "react";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize";
 
 type FeatureTabProps = {
   image: string;

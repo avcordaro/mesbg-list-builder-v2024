@@ -7,6 +7,8 @@ import { Changelog } from "../pages/Changelog.tsx";
 import { Collection } from "../pages/Collection.tsx";
 import { Roster } from "../pages/Roster.tsx";
 import { Settings } from "../pages/Settings.tsx";
+import { SignIn } from "../pages/account/SignIn.tsx";
+import { SignUp } from "../pages/account/SignUp.tsx";
 import { Database } from "../pages/database/Database.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
 import { StartGamemode } from "../pages/gamemode/StartGamemode.tsx";
@@ -85,6 +87,16 @@ export const routes: RouteObject[] = [
       {
         path: "changelog",
         element: <Changelog />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-in",
+        element: <SignIn />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />,
         errorElement: <AppFallback />,
       },
       {

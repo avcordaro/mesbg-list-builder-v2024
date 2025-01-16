@@ -23,8 +23,8 @@ import {
   RosterSummaryCardProps,
 } from "../../components/common/roster-card/RosterSummaryCard.tsx";
 import { GroupOptionsPopoverMenu } from "../../components/common/roster-group-card/RosterGroupPopoverMenu.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { PATREON_LINK } from "../home/Home.tsx";
