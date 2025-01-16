@@ -1,7 +1,7 @@
 import { Button, Stack } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { v4 } from "uuid";
-import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useGameModeState } from "../../../../state/gamemode";
 import { CustomTracker } from "./CustomTracker.tsx";
 

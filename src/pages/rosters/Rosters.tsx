@@ -22,8 +22,8 @@ import {
 } from "../../components/common/roster-card/RosterSummaryCard.tsx";
 import { RosterGroupCard } from "../../components/common/roster-group-card/RosterGroupCard.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
 import {

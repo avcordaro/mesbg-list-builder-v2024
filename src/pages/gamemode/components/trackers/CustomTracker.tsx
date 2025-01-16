@@ -1,7 +1,7 @@
 import { Paper, Stack } from "@mui/material";
 import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
-import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useGameModeState } from "../../../../state/gamemode";
 import { CustomTracker as CustomTrackerType } from "../../../../state/gamemode/gamestate";
 import { Counter } from "./Counter.tsx";
