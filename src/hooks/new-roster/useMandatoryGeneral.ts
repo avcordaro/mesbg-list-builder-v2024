@@ -3,7 +3,7 @@ import models from "../../assets/data/mesbg_data.json";
 import warningRules from "../../assets/data/warning_rules.json";
 import { Roster } from "../../types/roster.ts";
 import { WarningRules } from "../../types/warning-rules.types.ts";
-import { useCalculator } from "../useCalculator.ts";
+import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 
 export const useMandatoryGeneral = () => {
   const calculator = useCalculator();

@@ -1,9 +1,7 @@
-import { Button, DialogActions, DialogContent, Tab, Tabs } from "@mui/material";
-import Stack from "@mui/material/Stack";
 import {
-  MouseEvent,
   PropsWithChildren,
   SyntheticEvent,
+  MouseEvent,
   useRef,
   useState,
 } from "react";
@@ -24,6 +22,12 @@ import {
   ImportRoster,
   ImportRosterHandlers,
 } from "../../common/create-roster/ImportRoster.tsx";
+import DialogContent from "@mui/material/DialogContent";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import DialogActions from "@mui/material/DialogActions";
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();

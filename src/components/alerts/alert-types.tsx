@@ -29,6 +29,8 @@ export enum AlertTypes {
   IMPORT_COLLECTION_COMPLETED = "IMPORT_COLLECTION_COMPLETED",
   IMPORT_COLLECTION_ERROR = "IMPORT_COLLECTION_ERROR",
   TTS_TEXT_COPIED_SUCCESS = "TTS_TEXT_COPIED_SUCCESS",
+
+  PASSWORD_RESET_REQUEST_SEND = "PASSWORD_RESET_REQUEST_SEND",
 }
 
 type AlertOptions = {
@@ -278,6 +280,24 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
         <Fragment>
           <b>Successfully updated</b>
           <p>Your group was successfully updated.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.PASSWORD_RESET_REQUEST_SEND,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Request sent</b>
+          <p>
+            If the provided email has an account it should receive a password
+            reset link within a few minutes.
+          </p>
         </Fragment>
       ),
       options: {

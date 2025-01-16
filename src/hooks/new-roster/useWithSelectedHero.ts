@@ -3,7 +3,7 @@ import { mesbgData } from "../../assets/data.ts";
 import { emptyWarband } from "../../state/roster-building/roster";
 import { Unit } from "../../types/mesbg-data.types.ts";
 import { isSelectedUnit, Roster } from "../../types/roster.ts";
-import { useCalculator } from "../useCalculator.ts";
+import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 
 export const useWithSelectedHero = () => {
   const calculator = useCalculator();

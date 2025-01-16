@@ -1,4 +1,4 @@
-import { unitSortOrder } from "../../../../hooks/profile-utils/sorting.ts";
+import { unitSortOrder } from "../../../../hooks/profiles/profile-utils/sorting.ts";
 import { Unit } from "../../../../types/mesbg-data.types.ts";
 
 export const useMergedUnitData = () => {
