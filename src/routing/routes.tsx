@@ -5,6 +5,8 @@ import { App } from "../layout/App.tsx";
 import { About } from "../pages/About.tsx";
 import { Changelog } from "../pages/Changelog.tsx";
 import { Settings } from "../pages/Settings.tsx";
+import { SignIn } from "../pages/account/SignIn.tsx";
+import { SignUp } from "../pages/account/SignUp.tsx";
 import { Roster } from "../pages/builder/Roster.tsx";
 import { Collection } from "../pages/collection/Collection.tsx";
 import { Database } from "../pages/database/Database.tsx";
@@ -79,6 +81,16 @@ export const routes: RouteObject[] = [
       {
         path: "changelog",
         element: <Changelog />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-in",
+        element: <SignIn />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />,
         errorElement: <AppFallback />,
       },
       {
