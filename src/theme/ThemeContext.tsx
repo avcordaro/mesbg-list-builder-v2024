@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-import { createContext, useContext, ReactNode } from "react";
+import { createContext, useContext, ReactNode, useEffect } from "react";
 import { useUserPreferences } from "../state/preference"; // Import your themes
 import { lightTheme, darkTheme } from "./themes";
 
@@ -27,6 +27,13 @@ export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const theme = preferences.darkMode ? darkTheme : lightTheme;
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      preferences.darkMode ? "dark" : "light",
+    );
+  }, [preferences.darkMode]);
 
   return (
     <ThemeContext.Provider
