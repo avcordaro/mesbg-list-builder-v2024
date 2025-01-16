@@ -2,9 +2,11 @@ import {
   Close,
   Download,
   History,
+  Info,
   Print,
   Redo,
   Undo,
+  WarningRounded,
 } from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
 import ShareIcon from "@mui/icons-material/Share";
@@ -14,9 +16,12 @@ import {
   SpeedDial,
   SpeedDialAction,
   SpeedDialIcon,
+  Stack,
 } from "@mui/material";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -24,6 +29,7 @@ import { Link } from "../../components/common/link/Link.tsx";
 import { WarbandList } from "../../components/common/warbands/WarbandList.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
+import { useRosterWarnings } from "../../hooks/useRosterWarnings.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useAppState } from "../../state/app";
 import { useUserPreferences } from "../../state/preference";
@@ -47,6 +53,7 @@ export const Roster = () => {
     ({ preferences }) => preferences.mobileRosterToolbar,
   );
   const navigate = useNavigate();
+  const warnings = useRosterWarnings();
 
   const speedDialRef = useRef<HTMLDivElement | null>(null);
   const [fabOpen, setFabOpen] = useState(false);
@@ -132,29 +139,80 @@ export const Roster = () => {
             width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
           }}
         >
-          <Breadcrumbs sx={{ mb: 1 }}>
-            <Link
-              to="/rosters"
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              My Rosters
-            </Link>
-            {roster.group && (
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            sx={{ mb: 2 }}
+          >
+            <Breadcrumbs sx={{ mb: 1 }}>
               <Link
-                to={`/rosters/${roster.group}`}
+                to="/rosters"
                 style={{
                   textDecoration: "none",
                 }}
               >
-                {roster.group}
+                My Rosters
               </Link>
-            )}
-            <Typography sx={{ color: "text.secondary" }}>
-              {roster.name}
-            </Typography>
-          </Breadcrumbs>
+              {roster.group && (
+                <Link
+                  to={`/rosters/${roster.group}`}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  {roster.group}
+                </Link>
+              )}
+              <Typography sx={{ color: "text.secondary" }}>
+                {roster.name}
+              </Typography>
+            </Breadcrumbs>
+
+            {screen.isMobile ? (
+              <IconButton
+                aria-label="open drawer"
+                onClick={() =>
+                  window.dispatchEvent(new Event("mlb-event--open-roster-info"))
+                }
+                sx={
+                  warnings.length > 0
+                    ? {
+                        backgroundColor: (theme) => theme.palette.error.main,
+                        color: (theme) => theme.palette.error.contrastText,
+                        "&:hover": {
+                          backgroundColor: (theme) => theme.palette.error.light,
+                        },
+                      }
+                    : {
+                        backgroundColor: (theme) => theme.palette.success.main,
+                        color: (theme) => theme.palette.success.contrastText,
+                        "&:hover": {
+                          backgroundColor: (theme) =>
+                            theme.palette.success.light,
+                        },
+                      }
+                }
+              >
+                {warnings.length > 0 ? <WarningRounded /> : <Info />}
+              </IconButton>
+            ) : !screen.isDesktop ? (
+              <Button
+                color={warnings.length > 0 ? "error" : "success"}
+                variant="contained"
+                aria-label="open drawer"
+                onClick={() =>
+                  window.dispatchEvent(new Event("mlb-event--open-roster-info"))
+                }
+                startIcon={warnings.length > 0 ? <WarningRounded /> : <Info />}
+                sx={{
+                  whiteSpace: "nowrap", // Prevent text from wrapping
+                }}
+              >
+                Roster information
+              </Button>
+            ) : null}
+          </Stack>
 
           <WarbandList warbands={roster.warbands} />
         </Box>

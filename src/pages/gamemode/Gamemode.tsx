@@ -13,6 +13,7 @@ import { drawerWidth, RosterInfoDrawer } from "../builder/RosterInfoDrawer.tsx";
 import { GamemodeToolbar } from "./components/GamemodeToolbar.tsx";
 import { DeploymentHelper } from "./components/tabs/DeploymentHelperTable.tsx";
 import { ProfileCards } from "./components/tabs/ProfileCards.tsx";
+import { RosterInfoTab } from "./components/tabs/RosterInfoTab.tsx";
 import { StatTrackers } from "./components/tabs/StatTrackers.tsx";
 import { StatsTable } from "./components/tabs/StatsTable.tsx";
 import { TabPanel } from "./components/tabs/TabPanel.tsx";
@@ -94,6 +95,7 @@ export const Gamemode = () => {
             <Tab label="Army overview" />
             <Tab label="Profiles" />
             <Tab label="Stats table" />
+            {!screen.isDesktop && <Tab label="Roster Info" />}
           </Tabs>
         </Box>
         <TabPanel tabName="trackers" visible={value === 0}>
@@ -107,6 +109,9 @@ export const Gamemode = () => {
         </TabPanel>
         <TabPanel tabName="stats" visible={value === 3}>
           <StatsTable />
+        </TabPanel>
+        <TabPanel tabName="info" visible={value === 4}>
+          <RosterInfoTab />
         </TabPanel>
       </Box>
       <RosterInfoDrawer roster={roster} />

@@ -48,7 +48,6 @@ import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
 import { charts } from "../constants/charts.ts";
 import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
-import { useScreenSize } from "../hooks/useScreenSize.ts";
 import { useAppState } from "../state/app";
 import { useGameModeState } from "../state/gamemode";
 import { useRosterBuildingState } from "../state/roster-building";
@@ -251,7 +250,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const screen = useScreenSize();
   const { rosterId } = useParams();
   const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
@@ -504,48 +502,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             />
           </Button>
           <Box flexGrow={1} />
-          {!screen.isDesktop &&
-            (location.pathname.startsWith("/roster/") ||
-              location.pathname.startsWith("/gamemode/-/")) && (
-              <>
-                {screen.isMobile || open ? (
-                  <IconButton
-                    aria-label="open drawer"
-                    onClick={() =>
-                      window.dispatchEvent(
-                        new Event("mlb-event--open-roster-info"),
-                      )
-                    }
-                    sx={{
-                      backgroundColor: (theme) => theme.palette.primary.main,
-                      color: (theme) => theme.palette.primary.contrastText,
-                      "&:hover": {
-                        backgroundColor: (theme) => theme.palette.primary.light,
-                      },
-                    }}
-                  >
-                    <Info />
-                  </IconButton>
-                ) : (
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    aria-label="open drawer"
-                    onClick={() =>
-                      window.dispatchEvent(
-                        new Event("mlb-event--open-roster-info"),
-                      )
-                    }
-                    startIcon={<Info />}
-                    sx={{
-                      whiteSpace: "nowrap", // Prevent text from wrapping
-                    }}
-                  >
-                    Roster information
-                  </Button>
-                )}
-              </>
-            )}
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} id="navigation-drawer">

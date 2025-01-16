@@ -1,5 +1,8 @@
 {
   "main": {
+    "changed": [
+      "Moved the roster info drawer button from the main header to just above to warbands to make space for an account indicator"
+    ],
     "bugfixes": [
       "Make sure that the PDF print out is always black on white, even in darkmode.",
       "Profile typo corrections for Smaug, the Kings of Men, and Riders of Rohan now correctly count towards the Bow Limit in Realms of Men.",
