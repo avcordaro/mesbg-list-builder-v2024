@@ -3,7 +3,7 @@ import { mesbgData, warningRulesData } from "../../assets/data.ts";
 import { emptyWarband } from "../../state/roster-building/roster";
 import { Unit } from "../../types/mesbg-data.types.ts";
 import { Roster, SelectedUnit, Warband } from "../../types/roster.ts";
-import { useCalculator } from "../useCalculator.ts";
+import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 import { useMandatoryGeneral } from "./useMandatoryGeneral.ts";
 
 export const useMandatoryUnits = () => {

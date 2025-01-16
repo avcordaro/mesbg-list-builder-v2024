@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { armyListData } from "../../../../assets/data.ts";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useUserPreferences } from "../../../../state/preference";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 import {

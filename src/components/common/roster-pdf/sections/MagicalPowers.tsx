@@ -6,7 +6,7 @@ import keywords from "../../../../assets/data/keywords.json";
 import {
   MagicalPower as Caster,
   Profile,
-} from "../../../../hooks/profile-utils/profile.type.ts";
+} from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 
 interface MagicalPowerListProps {
