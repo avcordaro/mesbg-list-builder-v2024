@@ -9,7 +9,8 @@ import {
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, forwardRef, useImperativeHandle, useState } from "react";
 import { v4 } from "uuid";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
@@ -28,6 +29,7 @@ export type GameResultsFormHandlers = {
 export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
   const { modalContext } = useAppState();
   const { addGame, editGame } = useRecentGamesState();
+  const { createGame, updateGame } = useApi();
 
   const { isMobile } = useScreenSize();
 
@@ -80,10 +82,12 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     switch (modalContext.mode) {
       case "edit":
         editGame({ ...formValues });
+        updateGame({ ...formValues });
         break;
       case "record":
       case "create":
         addGame({ ...formValues });
+        createGame({ ...formValues });
         break;
       default:
         console.error("Unknown mode ", modalContext.mode);

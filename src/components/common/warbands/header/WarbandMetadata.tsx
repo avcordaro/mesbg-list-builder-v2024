@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
-import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { Warband } from "../../../../types/roster.ts";
 
 export type WarbandMetadataProps = {

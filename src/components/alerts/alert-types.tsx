@@ -1,5 +1,6 @@
 import { AlertColor } from "@mui/material";
 import { Fragment, ReactNode } from "react";
+import { ApiErrorAlert } from "./alerts/ApiErrorAlert.tsx";
 import { DownloadFailed } from "./alerts/DownloadFailed.tsx";
 import { ExportAlert } from "./alerts/ExportAlert.tsx";
 import { ExportHistoryAlert } from "./alerts/ExportHistoryAlert.tsx";
@@ -29,6 +30,9 @@ export enum AlertTypes {
   IMPORT_COLLECTION_COMPLETED = "IMPORT_COLLECTION_COMPLETED",
   IMPORT_COLLECTION_ERROR = "IMPORT_COLLECTION_ERROR",
   TTS_TEXT_COPIED_SUCCESS = "TTS_TEXT_COPIED_SUCCESS",
+
+  PASSWORD_RESET_REQUEST_SEND = "PASSWORD_RESET_REQUEST_SEND",
+  API_REQUEST_FAILED = "API_REQUEST_FAILED",
 }
 
 type AlertOptions = {
@@ -286,6 +290,24 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
     },
   ],
   [
+    AlertTypes.PASSWORD_RESET_REQUEST_SEND,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Request sent</b>
+          <p>
+            If the provided email has an account it should receive a password
+            reset link within a few minutes.
+          </p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
     AlertTypes.IMPORT_COLLECTION_COMPLETED,
     {
       variant: "success",
@@ -313,6 +335,16 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
           </p>
         </Fragment>
       ),
+    },
+  ],
+  [
+    AlertTypes.API_REQUEST_FAILED,
+    {
+      variant: "error",
+      content: <ApiErrorAlert />,
+      options: {
+        autoHideAfter: 12000,
+      },
     },
   ],
 ]);

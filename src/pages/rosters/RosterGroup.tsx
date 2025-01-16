@@ -23,8 +23,9 @@ import {
   RosterSummaryCardProps,
 } from "../../components/common/roster-card/RosterSummaryCard.tsx";
 import { GroupOptionsPopoverMenu } from "../../components/common/roster-group-card/RosterGroupPopoverMenu.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useApi } from "../../hooks/cloud-sync/useApi.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { PATREON_LINK } from "../home/Home.tsx";
@@ -47,6 +48,7 @@ export const RosterGroup: FunctionComponent = () => {
   const { mode } = useThemeContext();
   const [searchParams, setSearchParams] = useSearchParams();
   const group = groups.find((group) => group.slug === slug);
+  const api = useApi();
 
   if (!group) {
     return (
@@ -94,6 +96,7 @@ export const RosterGroup: FunctionComponent = () => {
           (roster) => roster !== result.draggableId,
         ),
       });
+      api.removeRosterFromGroup(group.slug, result.draggableId);
 
       if (rosterLinks.length === 1) {
         // just removed the last roster from the group;

@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { Fragment } from "react";
 import { heroConstraintData } from "../../../assets/data.ts";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 import { UnitProfileCard } from "../../common/images/UnitProfileCard.tsx";

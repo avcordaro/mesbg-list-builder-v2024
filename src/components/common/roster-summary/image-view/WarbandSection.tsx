@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { heroConstraintData } from "../../../../assets/data.ts";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import {
   isSelectedUnit,
   isSiegeEquipment,

@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
 import { Virtuoso } from "react-virtuoso";
 import { mesbgData } from "../../../../assets/data";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { Unit } from "../../../../types/mesbg-data.types";
 import { VirtualUnitRow } from "./VirtualUnitRow.tsx";
 import { removeArmyListSection } from "./removeArmyListSection.ts";

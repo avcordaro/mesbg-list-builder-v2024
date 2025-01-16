@@ -17,7 +17,7 @@ import { BsFillPersonVcardFill } from "react-icons/bs";
 import { SquareIconButton } from "../../../components/common/icon-button/SquareIconButton.tsx";
 import { DrawerTypes } from "../../../components/drawer/drawers.tsx";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";

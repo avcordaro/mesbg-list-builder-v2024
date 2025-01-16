@@ -6,8 +6,8 @@ import bowIcon from "../../../../assets/images/roster-summary/bow.png";
 import brokenIcon from "../../../../assets/images/roster-summary/broken.png";
 import defeatedIcon from "../../../../assets/images/roster-summary/defeated.png";
 import throwIcon from "../../../../assets/images/roster-summary/throw-weapon.png";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
-import { useRosterWarnings } from "../../../../hooks/useRosterWarnings.ts";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useRosterWarnings } from "../../../../hooks/calculations-and-displays/useRosterWarnings.ts";
 
 interface HeaderBlockProps {
   includeRosterName: boolean;

@@ -22,8 +22,8 @@ export const useRosterBuildingState = create<
     persist(
       temporal(
         (...args) => ({
-          ...rosterSlice(...args),
           ...builderSlice(...args),
+          ...rosterSlice(...args),
           ...groupSlice(...args),
         }),
         {

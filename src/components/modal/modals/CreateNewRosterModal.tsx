@@ -1,9 +1,13 @@
-import { Button, DialogActions, DialogContent, Tab, Tabs } from "@mui/material";
+import Button from "@mui/material/Button";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
 import Stack from "@mui/material/Stack";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import {
-  MouseEvent,
   PropsWithChildren,
   SyntheticEvent,
+  MouseEvent,
   useRef,
   useState,
 } from "react";

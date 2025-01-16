@@ -1,5 +1,5 @@
 import { Button, DialogContent } from "@mui/material";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 
 export const RosterSummaryScreenshotModal = () => {

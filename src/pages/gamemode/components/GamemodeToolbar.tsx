@@ -9,8 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { armyListData } from "../../../assets/data.ts";
 import { SquareIconButton } from "../../../components/common/icon-button/SquareIconButton.tsx";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 
@@ -79,11 +79,7 @@ export const GamemodeToolbar = () => {
           color="inherit"
           startIcon={<ChevronLeft />}
           onClick={() => {
-            if (window.history.state && window.history.state.idx > 0) {
-              navigate(-1);
-            } else {
-              navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
-            }
+            navigate(`/roster/${roster.id}`);
           }}
         >
           Back
@@ -159,11 +155,7 @@ export const GamemodeToolbar = () => {
           <Button
             startIcon={<ChevronLeft />}
             onClick={() => {
-              if (window.history.state && window.history.state.idx > 0) {
-                navigate(-1);
-              } else {
-                navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
-              }
+              navigate(`/roster/${roster.id}`);
             }}
           >
             Back

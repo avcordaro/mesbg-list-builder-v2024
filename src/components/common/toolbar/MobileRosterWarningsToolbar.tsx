@@ -1,7 +1,7 @@
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { useRosterWarnings } from "../../../hooks/useRosterWarnings.ts";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useRosterWarnings } from "../../../hooks/calculations-and-displays/useRosterWarnings.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { ROSTER_INFO_BAR_HEIGHT } from "./MobileRosterInfoToolbar.tsx";
 
 export const MobileRosterWarningsToolbar = () => {

@@ -17,7 +17,7 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 import { GiQueenCrown } from "react-icons/gi";
 
 import { armyListData } from "../../../assets/data.ts";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import {

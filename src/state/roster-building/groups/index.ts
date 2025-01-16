@@ -64,22 +64,32 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
 
   disbandGroup: (id) =>
     set(
-      ({ groups }) => ({
-        groups: groups.filter((group) => group.id !== id),
-        rosters: get().rosters.map((roster) =>
-          roster.group === id ? { ...roster, group: null } : roster,
-        ),
-      }),
+      ({ groups }) => {
+        const group = groups.find((group) => group.id === id);
+        return {
+          groups: groups.filter((group) => group.id !== id),
+          rosters: get().rosters.map((roster) =>
+            group.rosters.includes(roster.id)
+              ? { ...roster, group: null }
+              : roster,
+          ),
+        };
+      },
       undefined,
       "DISBAND_ROSTER_GROUP",
     ),
 
   deleteGroup: (id) =>
     set(
-      ({ groups }) => ({
-        groups: groups.filter((group) => group.id !== id),
-        rosters: get().rosters.filter((roster) => roster.group !== id),
-      }),
+      ({ groups }) => {
+        const group = groups.find((group) => group.id === id);
+        return {
+          groups: groups.filter((group) => group.id !== id),
+          rosters: get().rosters.filter(
+            (roster) => !group.rosters.includes(roster.id),
+          ),
+        };
+      },
       undefined,
       "DELETE_ROSTER_GROUP",
     ),

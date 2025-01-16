@@ -1,17 +1,29 @@
 import { AlertColor, Portal, Slide, Snackbar, Stack } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
-import { useEffect } from "react";
+import { useEffect, isValidElement, cloneElement } from "react";
 import { useAppState } from "../../state/app";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { slugify } from "../../utils/string.ts";
 import { alertMap, AlertTypes } from "./alert-types.tsx";
 
-const ListBuilderAlert = ({ id, type }: { id: string; type: AlertTypes }) => {
+const ListBuilderAlert = ({
+  id,
+  type,
+  context,
+}: {
+  id: string;
+  type: AlertTypes;
+  context: Record<string, unknown>;
+}) => {
   const { dismissAlert } = useAppState();
   const { mode } = useThemeContext();
 
   const { variant, content, options } = alertMap.get(type);
+
+  const contentWithProps = isValidElement(content)
+    ? cloneElement(content, { context } as unknown)
+    : content;
 
   // Auto hide of alert, if configured
   useEffect(() => {
@@ -34,7 +46,7 @@ const ListBuilderAlert = ({ id, type }: { id: string; type: AlertTypes }) => {
         severity={variant as AlertColor}
         data-test-id={`global-alert--${slugify(type)}`}
       >
-        <Box sx={{ maxWidth: "72ch" }}>{content}</Box>
+        <Box sx={{ maxWidth: "72ch" }}>{contentWithProps}</Box>
       </Alert>
     </Slide>
   );
@@ -52,7 +64,12 @@ export const Alerts = () => {
       >
         <Stack gap={1}>
           {activeAlerts.map((alert) => (
-            <ListBuilderAlert id={alert.id} key={alert.id} type={alert.type} />
+            <ListBuilderAlert
+              id={alert.id}
+              key={alert.id}
+              type={alert.type}
+              context={alert.context}
+            />
           ))}
         </Stack>
       </Snackbar>

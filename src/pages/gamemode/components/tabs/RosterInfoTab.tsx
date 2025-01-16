@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import { AdditionalRules } from "../../../../components/common/roster-info/sections/AdditionalRules.tsx";
 import { SpecialRules } from "../../../../components/common/roster-info/sections/SpecialRules.tsx";
 import { Warnings } from "../../../../components/common/roster-info/sections/Warnings.tsx";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 
 export const RosterInfoTab = () => {
   const { roster } = useRosterInformation();

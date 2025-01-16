@@ -6,7 +6,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 
 export const Stats = ({ profile }: { profile: Profile }) => {
   const skippedParentRow = [

@@ -1,5 +1,6 @@
 import { useState, MouseEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuilder.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -11,6 +12,7 @@ export const useCreateRoster = () => {
   const { groupId: groupSlug } = useParams();
   const { closeModal } = useAppState();
   const { createRoster, rosters, groups } = useRosterBuildingState();
+  const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const buildNewRoster = useNewRosterBuilder();
   const { id: groupId } =
     groups.find((group) => group.slug === groupSlug) || {};
@@ -82,6 +84,8 @@ export const useCreateRoster = () => {
       });
 
       createRoster(newRoster);
+      remoteCreate(newRoster);
+      if (groupSlug) addRosterToGroup(groupSlug, newRoster.id);
       navigate(`/roster/${newRoster.id}`, { viewTransition: true });
       closeModal();
     }

@@ -14,7 +14,8 @@ import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { Option } from "../../../types/mesbg-data.types.ts";
@@ -27,6 +28,7 @@ export const AddToCollection = () => {
     modalContext: { unit },
   } = useAppState();
   const { inventory, upsertInventory } = useCollectionState();
+  const { upsertCollection } = useApi();
   const { isMobile } = useScreenSize();
 
   const isHero = unit.unit_type.every((v: string) => v.includes("Hero"));
@@ -140,6 +142,9 @@ export const AddToCollection = () => {
     }
 
     upsertInventory(unit.profile_origin, unit.name, {
+      collection: loadOuts,
+    });
+    upsertCollection(unit.profile_origin, unit.name, {
       collection: loadOuts,
     });
     closeModal();

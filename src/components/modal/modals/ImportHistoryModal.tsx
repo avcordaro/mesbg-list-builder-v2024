@@ -14,7 +14,7 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { ChangeEvent, useState } from "react";
-import { useJsonValidation } from "../../../hooks/useJsonValidation.ts";
+import { useJsonValidation } from "../../../hooks/export/useJsonValidation.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
@@ -85,7 +85,6 @@ export const ImportGameHistoryModal = () => {
     }
 
     for (const game of history) {
-      console.log(game);
       const validGame = validateKeys(game, requiredKeys);
       if (!validGame) {
         displayImportAlert();

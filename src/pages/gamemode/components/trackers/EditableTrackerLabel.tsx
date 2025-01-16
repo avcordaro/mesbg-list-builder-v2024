@@ -1,6 +1,5 @@
 import { DeleteForever, Edit, MoreVert, Save } from "@mui/icons-material";
 import { InputAdornment, ListItemIcon, Stack, TextField } from "@mui/material";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
@@ -91,15 +90,12 @@ const TrackerLabel = ({
           <ListItemText> Rename tracker</ListItemText>
         </MenuItem>
         {removeTracker && (
-          <>
-            <Divider />
-            <MenuItem onClick={removeTracker}>
-              <ListItemIcon>
-                <DeleteForever fontSize="small" />
-              </ListItemIcon>
-              <ListItemText> Remove tracker</ListItemText>
-            </MenuItem>
-          </>
+          <MenuItem onClick={removeTracker}>
+            <ListItemIcon>
+              <DeleteForever fontSize="small" />
+            </ListItemIcon>
+            <ListItemText> Remove tracker</ListItemText>
+          </MenuItem>
         )}
       </Menu>
     </Stack>

@@ -4,8 +4,12 @@ import { Slice } from "../../Slice.ts";
 import { ApplicationState } from "../index.ts";
 
 export type AlertState = {
-  activeAlerts: { type: AlertTypes; id: string }[];
-  triggerAlert: (type: AlertTypes) => void;
+  activeAlerts: {
+    type: AlertTypes;
+    id: string;
+    context?: Record<string, unknown>;
+  }[];
+  triggerAlert: (type: AlertTypes, context?: Record<string, unknown>) => void;
   dismissAlert: (id: string) => void;
 };
 
@@ -16,10 +20,10 @@ const initialState = {
 export const alertSlice: Slice<ApplicationState, AlertState> = (set) => ({
   ...initialState,
 
-  triggerAlert: (type) =>
+  triggerAlert: (type, context) =>
     set(
       ({ activeAlerts }) => ({
-        activeAlerts: [...activeAlerts, { type, id: v4() }],
+        activeAlerts: [...activeAlerts, { type, id: v4(), context }],
       }),
       undefined,
       "TRIGGER_ALERT",

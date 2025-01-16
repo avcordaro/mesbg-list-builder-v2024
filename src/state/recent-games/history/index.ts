@@ -25,9 +25,6 @@ export type PastGame = {
 };
 
 export type GameHistoryState = {
-  showHistory: boolean;
-  setShowHistory: (value: boolean) => void;
-
   recentGames: PastGame[];
   addGame: (game: PastGame) => void;
   importGames: (
@@ -36,10 +33,11 @@ export type GameHistoryState = {
   ) => void;
   editGame: (game: PastGame) => void;
   deleteGame: (gameId: string) => void;
+
+  reset: (games?: PastGame[]) => void;
 };
 
 const initialState = {
-  showHistory: false,
   recentGames: [],
 };
 
@@ -86,9 +84,6 @@ export const historySlice: Slice<RecentGamesState, GameHistoryState> = (
 ) => ({
   ...initialState,
 
-  setShowHistory: (value: boolean) =>
-    set(() => ({ showHistory: value }), undefined, "SHOW_HISTORY"),
-
   addGame: (game) =>
     set(
       ({ recentGames }) => ({ recentGames: [...recentGames, game] }),
@@ -129,4 +124,14 @@ export const historySlice: Slice<RecentGamesState, GameHistoryState> = (
       undefined,
       "DELETE_GAME_RESULTS",
     ),
+
+  reset: (recentGames: PastGame[] = []) => {
+    set(
+      {
+        recentGames,
+      },
+      undefined,
+      "CLEAR_STATE",
+    );
+  },
 });

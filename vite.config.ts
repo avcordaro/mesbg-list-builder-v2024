@@ -21,6 +21,7 @@ export default defineConfig(({ command }) => ({
         ? "/static-resources"
         : "https://resources.mesbg-list-builder.com/v2024",
     ),
+    API_URL: JSON.stringify("https://api.mesbg-list-builder.com/v2024"),
   },
   build: {
     outDir: "./build",

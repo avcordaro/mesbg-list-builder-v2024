@@ -1,5 +1,5 @@
 import keywords from "../../../assets/data/keywords.json";
-import { useUsedSpecialRules } from "../../../hooks/useUsedSpecialRules.ts";
+import { useUsedSpecialRules } from "../../../hooks/calculations-and-displays/useUsedSpecialRules.ts";
 import { KeywordSearch } from "./KeywordSearch.tsx";
 
 export const SpecialRulesSearch = () => {

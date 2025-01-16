@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle } from "react";
 import { armyListData } from "../../../assets/data.ts";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import {
   FreshUnit,
   isSelectedUnit,

@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
-import { useRosterWarnings } from "../../../../hooks/useRosterWarnings.ts";
+import { useRosterWarnings } from "../../../../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { CustomAlert } from "../../alert/CustomAlert.tsx";
 import { RosterInformationSection } from "../RosterInformationSection.tsx";
 
