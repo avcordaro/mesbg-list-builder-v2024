@@ -8,13 +8,14 @@ import {
   useState,
 } from "react";
 import { auth } from "./config";
+import { FirebaseAuthFunctions, useFirebaseAuth } from "./useFirebaseAuth.ts";
 
 // Define types for the AuthContext
-interface AuthContextProps {
+type AuthContextProps = {
   user: User | null;
   idToken: string | null;
   loading: boolean;
-}
+} & FirebaseAuthFunctions;
 
 // Define the default state of AuthContext
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
@@ -34,6 +35,7 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
   const [user, setUser] = useState<User | null>(null);
   const [idToken, setIdToken] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const authFunctions = useFirebaseAuth();
 
   useEffect(() => {
     // Listen to user authentication state changes
@@ -53,7 +55,7 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, idToken, loading }}>
+    <AuthContext.Provider value={{ user, idToken, loading, ...authFunctions }}>
       {children}
     </AuthContext.Provider>
   );
