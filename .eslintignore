@@ -8,3 +8,6 @@ static-resources/
 public/
 data/
 index.html
+
+# Misc
+README.md
