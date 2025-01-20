@@ -1,3 +1,5 @@
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
 import { getIdToken, onAuthStateChanged, User } from "firebase/auth";
 import {
   createContext,
@@ -56,7 +58,21 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
 
   return (
     <AuthContext.Provider value={{ user, idToken, loading, ...authFunctions }}>
-      {children}
+      {loading ? (
+        <Box
+          sx={{
+            display: "flex",
+            width: "100svw",
+            height: "100svh",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress color="inherit" size={100} thickness={2} />
+        </Box>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 };

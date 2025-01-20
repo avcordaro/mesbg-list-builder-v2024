@@ -12,13 +12,13 @@ import { ThemeContextProvider } from "./theme/ThemeContext.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ErrorBoundary inCaseOfError={<RootFallback />}>
-      <AuthProvider>
-        <ThemeContextProvider>
+      <ThemeContextProvider>
+        <AuthProvider>
           <HelmetProvider>
             <RouterProvider router={createBrowserRouter(routes)} />
           </HelmetProvider>
-        </ThemeContextProvider>
-      </AuthProvider>
+        </AuthProvider>
+      </ThemeContextProvider>
     </ErrorBoundary>
   </StrictMode>,
 );
