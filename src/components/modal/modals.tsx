@@ -30,6 +30,7 @@ import { ExportHistoryModal } from "./modals/ExportHistoryModal.tsx";
 import { ExportRosterModal } from "./modals/ExportRosterModal.tsx";
 import { ImportGameHistoryModal } from "./modals/ImportHistoryModal.tsx";
 import { ProfileCardModal } from "./modals/ProfileCardModal.tsx";
+import { ResetPassword } from "./modals/ResetPassword.tsx";
 import { RosterSummaryModal } from "./modals/RosterSummaryModal.tsx";
 import { RosterSummaryScreenshotModal } from "./modals/RosterSummaryScreenshotModal.tsx";
 import { UpdateGroupModal } from "./modals/UpdateGroupModal.tsx";
@@ -58,6 +59,8 @@ export enum ModalTypes {
   DISBAND_ROSTER_GROUP = "DISBAND_ROSTER_GROUP",
 
   ADD_TO_COLLECTION = "ADD_TO_COLLECTION",
+
+  RESET_PASSWORD = "RESET_PASSWORD",
 }
 
 export type ModalProps = {
@@ -223,6 +226,15 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <BookmarkAdd />,
       children: <AddToCollection />,
       maxWidth: "lg",
+    },
+  ],
+  [
+    ModalTypes.RESET_PASSWORD,
+    {
+      icon: <BookmarkAdd />,
+      title: "Reset password",
+      children: <ResetPassword />,
+      maxWidth: "md",
     },
   ],
 ]);
