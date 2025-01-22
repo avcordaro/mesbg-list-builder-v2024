@@ -5,6 +5,7 @@ namespace MLB\core\middleware;
 use Kreait\Firebase\Contract\Auth as FirebaseAuth;
 use Kreait\Firebase\Exception\Auth\FailedToVerifyToken;
 use Kreait\Firebase\Exception\Auth\RevokedIdToken;
+use MLB\core\FireAuth;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\MiddlewareInterface;
@@ -13,16 +14,16 @@ use Slim\Psr7\Response as SlimResponse;
 
 class TokenMiddleware implements MiddlewareInterface
 {
-    private FirebaseAuth $auth;
+    private FireAuth $auth;
 
-    public function __construct(FirebaseAuth $auth)
+    public function __construct(FireAuth $auth)
     {
         $this->auth = $auth;
     }
 
     private function verifyFirebaseAuthenticationToken(
         string         $authHeader,
-        FirebaseAuth   $firebase,
+        FireAuth   $firebase,
         Request        $request,
         RequestHandler $handler,
         SlimResponse   $response
@@ -31,7 +32,7 @@ class TokenMiddleware implements MiddlewareInterface
         try {
             // Verify the Firebase token and add the
             $idToken = str_replace('Bearer ', '', $authHeader);
-            $verifiedIdToken = $firebase->verifyIdToken($idToken);
+            $verifiedIdToken = $firebase->getAuth()->verifyIdToken($idToken);
 
             $request = $request->withAttribute('user', $verifiedIdToken->claims()->get('sub'));
             $request = $request->withAttribute('name', $verifiedIdToken->claims()->get('name'));

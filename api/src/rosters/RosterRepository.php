@@ -2,14 +2,15 @@
 
 namespace MLB\rosters;
 
+use MLB\core\Database;
 use PDO;
 
 class RosterRepository
 {
     private PDO $pdo;
 
-    public function __construct($pdo)
+    public function __construct(Database $database)
     {
-        $this->pdo = $pdo;
+        $this->pdo = $database->getPDO();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace MLB\users;
 
+use MLB\core\Database;
 use MLB\domain\User;
 use PDO;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -10,9 +11,9 @@ class UserService {
 
     private PDO $pdo;
 
-    public function __construct($pdo)
+    public function __construct(Database $database)
     {
-        $this->pdo = $pdo;
+        $this->pdo = $database->getPDO();
     }
 
     public function upsertUserInteraction(Request $request): void
