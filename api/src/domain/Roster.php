@@ -18,6 +18,8 @@ class Roster
     private ?int $meta_max_points;
     private ?string $meta_ttt_special_upgrades;
 
+    private array $warbands = [];
+
     public function __construct(
         ?int     $id,
         ?string  $user_id,
@@ -113,4 +115,12 @@ class Roster
     {
         return $this->meta_ttt_special_upgrades;
     }
+
+
+    // Warbands getter database to DTO linking.
+    public function &getWarbands(): array
+    {
+        return $this->warbands;
+    }
+
 }

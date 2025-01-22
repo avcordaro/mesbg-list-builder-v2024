@@ -2,6 +2,7 @@
 
 namespace MLB\rosters;
 
+use Exception;
 use MLB\users\UserService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -22,24 +23,26 @@ class RosterController
 
     public function create(Request $request, Response $response): Response
     {
-        $user = $this->userService->upsertUserInteraction($request);
+        try {
+            $user = $this->userService->upsertUserInteraction($request);
+            $created = $this->rosterService->createRoster($user, $request->getBody());
 
-        $this->rosterService->createRoster($user, $request->getBody());
+            return $response
+                ->withStatus(($created) ? 204 : 500);
+        } catch (Exception $e) {
+            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            return $response->withStatus(500);
+        }
 
-        $responseData = array("Hello" => "World!", "user" => $user);
-        $responsePayload = json_encode($responseData);
-        $response->getBody()->write($responsePayload);
 
-        return $response;
     }
 
     public function findAll(Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
+        $rosters = $this->rosterService->getAllRosters($user);
 
-        $responseData = array("Hello" => "World!", "user" => $user);
-        $responsePayload = json_encode($responseData);
-        $response->getBody()->write($responsePayload);
+        $response->getBody()->write($rosters);
 
         return $response;
     }

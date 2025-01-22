@@ -12,12 +12,17 @@ use PDO;
 class RosterRepository
 {
     private PDO $pdo;
+    private RosterMapper $mapper;
 
-    public function __construct(Database $database)
+    public function __construct(Database $database, RosterMapper $mapper)
     {
         $this->pdo = $database->getPDO();
+        $this->mapper = $mapper;
     }
 
+    /**
+     * @throws Exception
+     */
     public function createRoster(User $user, Roster $roster, array $warbands): bool
     {
         try {
@@ -35,18 +40,28 @@ class RosterRepository
         } catch (Exception $e) {
             // Rollback the transaction if something went wrong
             $this->pdo->rollBack();
-            return false;
+            throw $e;
         }
 
         return true;
     }
 
-    /**
-     * @param User $user
-     * @param Roster $roster
-     * @return false|string
-     */
-    public function insertRoster(User $user, Roster $roster): string|false
+    public function findAllRosters(User $user): array
+    {
+        $sql = "
+            SELECT r.*, w.*
+            FROM rosters r
+            JOIN warbands w ON r.id = w.roster_id
+            WHERE r.user_id = :user_id;
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':user_id' => $user->getFirebaseId()]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $this->mapper->assocArrayToDomain($result);
+    }
+
+    private function insertRoster(User $user, Roster $roster): string|false
     {
         $insertRosterSql = "
             INSERT INTO `rosters` (`id`, `user_id`, `slug`, `version`, `roster_group`, `name`, `army_list`, `edition`, `meta_leader`, `meta_siege_roster`, `meta_siege_role`, `meta_max_points`, `meta_ttt_special_upgrades`) 
@@ -70,16 +85,11 @@ class RosterRepository
         return $this->pdo->lastInsertId();
     }
 
-    /**
-     * @param string $rosterId
-     * @param Warband $warband
-     * @return void
-     */
-    public function insertWarband(string $rosterId, Warband $warband): void
+    private function insertWarband(string $rosterId, Warband $warband): void
     {
         $insertWarbandSql = "
-            INSERT INTO `warbands` (`roster_id`, `id`, `hero_id`, `hero_model_id`, `hero_mwfw`, `hero_options`, `hero_compulsory`, `meta_num`, `meta_points`, `meta_units`, `meta_heroes`, `meta_bows`, `meta_throwing_weapons`, `meta_bow_limit`, `meta_throw_limit`, `meta_max_units`, `units`) 
-            VALUES (:roster_id, :warband_id, :hero_id, :hero_model_id, :hero_mwfw, :hero_options, :hero_compulsory, :meta_num, :meta_points, :meta_units, :meta_heroes, :meta_bows, :meta_throwing_weapons, :meta_bow_limit, :meta_throw_limit, :meta_max_units, :units)
+            INSERT INTO `warbands` (`roster_id`, `id`, `warband_id`, `hero_id`, `hero_model_id`, `hero_mwfw`, `hero_options`, `hero_compulsory`, `meta_num`, `meta_points`, `meta_units`, `meta_heroes`, `meta_bows`, `meta_throwing_weapons`, `meta_bow_limit`, `meta_throw_limit`, `meta_max_units`, `units`) 
+            VALUES (:roster_id, NULL, :warband_id, :hero_id, :hero_model_id, :hero_mwfw, :hero_options, :hero_compulsory, :meta_num, :meta_points, :meta_units, :meta_heroes, :meta_bows, :meta_throwing_weapons, :meta_bow_limit, :meta_throw_limit, :meta_max_units, :units)
         ";
         $insertWarbandStmt = $this->pdo->prepare($insertWarbandSql);
         $insertWarbandStmt->execute([

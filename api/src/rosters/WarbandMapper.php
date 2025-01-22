@@ -2,13 +2,11 @@
 
 namespace MLB\rosters;
 
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
-use MLB\domain\builders\RosterBuilder;
 use MLB\domain\builders\WarbandBuilder;
-use MLB\domain\Roster;
-use MLB\rosters\dto\RosterDTO;
+use MLB\domain\Warband;
+use MLB\rosters\dto\HeroDTO;
 use MLB\rosters\dto\WarbandDTO;
+use MLB\rosters\dto\WarbandMetaDTO;
 
 class WarbandMapper
 {
@@ -40,5 +38,38 @@ class WarbandMapper
 
             return $builder->build();
         }, $dto);
+    }
+
+    public function domainToDto(array $warbands): array
+    {
+        return array_map(function (Warband $warband) {
+            $dto = new WarbandDTO();
+            $dto->id = $warband->getId();
+            $dto->units = json_decode($warband->getUnits());
+
+            $metadata = new WarbandMetaDTO();
+            $metadata->num = $warband->getMetaNum();
+            $metadata->points = $warband->getMetaPoints();
+            $metadata->maxUnits = $warband->getMetaMaxUnits();
+            $metadata->units = $warband->getMetaUnits();
+            $metadata->heroes = $warband->getMetaHeroes();
+            $metadata->bows = $warband->getMetaBows();
+            $metadata->bowLimit = $warband->getMetaBowLimit();
+            $metadata->throwingWeapons = $warband->getMetaThrowingWeapons();
+            $metadata->throwLimit = $warband->getMetaThrowLimit();
+            $dto->meta = $metadata;
+
+            if (!is_null($warband->getHeroId())) {
+                $hero = new HeroDTO();
+                $hero->id = $warband->getHeroId();
+                $hero->modelId = $warband->getHeroModelId();
+                $hero->options = json_decode($warband->getHeroOptions());
+                $hero->MWFW = json_decode($warband->getHeroMwfw());
+                $hero->compulsory = $warband->getHeroCompulsory();
+                $dto->hero = $hero;
+            }
+
+            return $dto;
+        }, $warbands);
     }
 }
