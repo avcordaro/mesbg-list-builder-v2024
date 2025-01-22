@@ -20,7 +20,7 @@ class MetadataDTO
 
     #[Serializer\SkipWhenEmpty]
     #[Serializer\SerializedName("siegeRoster")]
-    public ?bool $siegeRoster = null;
+    public ?bool $siegeRoster = false;
 
     #[Serializer\SkipWhenEmpty]
     #[Serializer\SerializedName("siegeRole")]
@@ -31,7 +31,7 @@ class MetadataDTO
     public ?int $maxPoints = null;
 
     #[Serializer\SkipWhenEmpty]
-    #[Serializer\SerializedName("tttSpecialRules")]
+    #[Serializer\SerializedName("tttSpecialUpgrades")]
     #[Serializer\Type("array<string>")]
-    public ?array $tttSpecialRules = null;
+    public ?array $tttSpecialUpgrades = null;
 }

@@ -32,5 +32,5 @@ class OptionDTO
     public ?bool $selectable = null;
 
     #[Serializer\SerializedName("quantity")]
-    public int $quantity;
+    public int $quantity = 0;
 }

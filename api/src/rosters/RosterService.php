@@ -2,6 +2,8 @@
 
 namespace MLB\rosters;
 
+use Exception;
+use MLB\domain\Roster;
 use MLB\domain\User;
 
 class RosterService
@@ -17,12 +19,28 @@ class RosterService
         $this->warbandMapper = $warbandMapper;
     }
 
-    public function createRoster(User $user, object $payload): void
+    /**
+     * @throws Exception
+     */
+    public function createRoster(User $user, object $payload): bool
     {
-        $dto = $this->mapper->convertPayloadToDTO($payload);
+        $dto = $this->mapper->convertPayloadToDto($payload);
         $roster = $this->mapper->dtoToDomain($dto);
         $warbands = $this->warbandMapper->dtoToDomain($dto->warbands);
 
-        $this->repository->createRoster($user, $roster, $warbands);
+        return $this->repository->createRoster($user, $roster, $warbands);
+    }
+
+    public function getAllRosters(User $user): string
+    {
+        $rosters = $this->repository->findAllRosters($user);
+
+        $dto = array_map(function ($roster) {
+            /* @var Roster $roster */
+            $warbands = $this->warbandMapper->domainToDto($roster->getWarbands());
+            return $this->mapper->domainToDto($roster, $warbands);
+        }, $rosters);
+
+        return $this->mapper->convertDtoToJson($dto);
     }
 }
