@@ -4,7 +4,7 @@ namespace MLB\domain;
 
 class Warband
 {
-    private int $roster_id;
+    private ?int $roster_id;
     private string $id;
     private ?string $hero_id;
     private ?string $hero_model_id;
@@ -23,7 +23,7 @@ class Warband
     private string $units;
 
     public function __construct(
-        int     $roster_id,
+        ?int     $roster_id,
         string  $id,
         ?string $hero_id,
         ?string $hero_model_id,
@@ -61,7 +61,7 @@ class Warband
         $this->units = $units;
     }
 
-    public function getRosterId(): int
+    public function getRosterId(): ?int
     {
         return $this->roster_id;
     }

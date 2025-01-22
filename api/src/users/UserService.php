@@ -16,7 +16,7 @@ class UserService {
         $this->pdo = $database->getPDO();
     }
 
-    public function upsertUserInteraction(Request $request): void
+    public function upsertUserInteraction(Request $request): User
     {
         $user = $this->getUser($request);
         $stmt = $this->pdo->prepare("
@@ -35,9 +35,11 @@ class UserService {
         $stmt->bindParam(':auth_provider', $provider, PDO::PARAM_INT);
 
         $stmt->execute();
+
+        return $user;
     }
 
-    public function getUser(Request $request): User
+    private function getUser(Request $request): User
     {
         $userId = $request->getAttribute('user');
         $name = $request->getAttribute('name');

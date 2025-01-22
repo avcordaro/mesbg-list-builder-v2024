@@ -22,14 +22,58 @@ class RosterController
 
     public function create(Request $request, Response $response): Response
     {
-        $this->userService->upsertUserInteraction($request);
+        $user = $this->userService->upsertUserInteraction($request);
 
-        $responseData = array("Hello" => "World!");
+        $this->rosterService->createRoster($user, $request->getBody());
+
+        $responseData = array("Hello" => "World!", "user" => $user);
         $responsePayload = json_encode($responseData);
         $response->getBody()->write($responsePayload);
 
         return $response;
     }
 
+    public function findAll(Request $request, Response $response): Response
+    {
+        $user = $this->userService->upsertUserInteraction($request);
 
+        $responseData = array("Hello" => "World!", "user" => $user);
+        $responsePayload = json_encode($responseData);
+        $response->getBody()->write($responsePayload);
+
+        return $response;
+    }
+
+    public function find($rosterId, Request $request, Response $response): Response
+    {
+        $user = $this->userService->upsertUserInteraction($request);
+
+        $responseData = array("Hello" => "World!", "roster" => $rosterId, "user" => $user->getFirebaseId());
+        $responsePayload = json_encode($responseData);
+        $response->getBody()->write($responsePayload);
+
+        return $response;
+    }
+
+    public function update(Request $request, Response $response): Response
+    {
+        $user = $this->userService->upsertUserInteraction($request);
+
+        $responseData = array("Hello" => "World!", "user" => $user);
+        $responsePayload = json_encode($responseData);
+        $response->getBody()->write($responsePayload);
+
+        return $response;
+    }
+
+    public function delete(Request $request, Response $response): Response
+    {
+        $user = $this->userService->upsertUserInteraction($request);
+
+        $responseData = array("Hello" => "World!", "user" => $user);
+        $responsePayload = json_encode($responseData);
+        $response->getBody()->write($responsePayload);
+
+        return $response;
+    }
 }

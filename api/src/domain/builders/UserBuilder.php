@@ -10,19 +10,19 @@ class UserBuilder
     private string $name;
     private string $provider;
 
-    public function setFirebaseId(string $firebase_id): UserBuilder
+    public function setFirebaseId(string $firebase_id): self
     {
         $this->firebase_id = $firebase_id;
         return $this;
     }
 
-    public function setName(string $name): UserBuilder
+    public function setName(string $name): self
     {
         $this->name = $name;
         return $this;
     }
 
-    public function setProvider(string $provider): UserBuilder
+    public function setProvider(string $provider): self
     {
         $this->provider = $provider;
         return $this;
