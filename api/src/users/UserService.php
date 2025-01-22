@@ -2,37 +2,46 @@
 
 namespace MLB\users;
 
+use MLB\domain\User;
 use PDO;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserService {
 
     private PDO $pdo;
 
-    /**
-     * @param $pdo
-     */
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
 
-    public function upsertUser(User $user): void
+    public function upsertUserInteraction(Request $request): void
     {
-        $firebaseId = $user->getFirebaseId();
-        $displayName = $user->getName();
-        $provider = $user->getProvider();
-
-        $sql = "
+        $user = $this->getUser($request);
+        $stmt = $this->pdo->prepare("
             INSERT INTO `users` (`firebase_id`, `name`, `provider`, `created`, `last_activity`)
-            VALUES (:firebase_id, :display_name, :auth_provider, CURRENT_TIME(), CURRENT_TIME())
-            ON DUPLICATE KEY UPDATE `last_activity` = CURRENT_TIME();
-        ";
+            VALUES (:firebase_id, :display_name, :auth_provider, CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP())
+            ON DUPLICATE KEY UPDATE `last_activity` = CURRENT_TIMESTAMP();
+        ");
 
-        $stmt = $this->pdo->prepare($sql);
+        $firebaseId = $user->getFirebaseId();
         $stmt->bindParam(':firebase_id', $firebaseId, PDO::PARAM_INT);
+
+        $displayName = $user->getName();
         $stmt->bindParam(':display_name', $displayName, PDO::PARAM_INT);
+
+        $provider = $user->getProvider();
         $stmt->bindParam(':auth_provider', $provider, PDO::PARAM_INT);
 
         $stmt->execute();
+    }
+
+    public function getUser(Request $request): User
+    {
+        $userId = $request->getAttribute('user');
+        $name = $request->getAttribute('name');
+        $provider = $request->getAttribute('provider');
+
+        return new User($userId, $name, $provider);
     }
 }

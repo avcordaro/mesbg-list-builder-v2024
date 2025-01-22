@@ -3,6 +3,9 @@
 global $app;
 
 use MLB\core\middleware\TokenMiddleware;
-use MLB\users\UserController;
+use MLB\rosters\RosterController;
 
-$app->post('/v2024/test', [UserController::class, 'test'])->add(TokenMiddleware::class);
+$app->group("/v2024", function () use ($app) {
+    $app->post('/test', [RosterController::class, 'create'])->add(TokenMiddleware::class);
+});
+
