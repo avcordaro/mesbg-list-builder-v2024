@@ -1,6 +1,6 @@
 <?php
 
-namespace App\users;
+namespace MLB\users;
 
 use PDO;
 

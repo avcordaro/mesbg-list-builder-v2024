@@ -1,7 +1,6 @@
 <?php
 
-namespace App\users;
-
+namespace MLB\users;
 
 class User
 {
@@ -36,5 +35,5 @@ class User
     {
         return $this->provider;
     }
-
 }
+
