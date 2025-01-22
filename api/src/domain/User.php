@@ -1,6 +1,6 @@
 <?php
 
-namespace MLB\users;
+namespace MLB\domain;
 
 class User
 {
@@ -9,12 +9,11 @@ class User
     private string $name;
     private string $provider;
 
-    /**
-     * @param string $firebase_id
-     * @param string $name
-     * @param string $provider
-     */
-    public function __construct(string $firebase_id, string $name, string $provider)
+    public function __construct(
+        string $firebase_id,
+        string $name,
+        string $provider
+    )
     {
         $this->firebase_id = $firebase_id;
         $this->name = $name;
