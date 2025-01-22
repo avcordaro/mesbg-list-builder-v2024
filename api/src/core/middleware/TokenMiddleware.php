@@ -2,17 +2,16 @@
 
 namespace MLB\core\middleware;
 
-use Kreait\Firebase\Contract\Auth as FirebaseAuth;
 use Kreait\Firebase\Exception\Auth\FailedToVerifyToken;
 use Kreait\Firebase\Exception\Auth\RevokedIdToken;
 use MLB\core\FireAuth;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\MiddlewareInterface as Middleware;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 use Slim\Psr7\Response as SlimResponse;
 
-class TokenMiddleware implements MiddlewareInterface
+class TokenMiddleware implements Middleware
 {
     private FireAuth $auth;
 
@@ -23,7 +22,7 @@ class TokenMiddleware implements MiddlewareInterface
 
     private function verifyFirebaseAuthenticationToken(
         string         $authHeader,
-        FireAuth   $firebase,
+        FireAuth       $firebase,
         Request        $request,
         RequestHandler $handler,
         SlimResponse   $response

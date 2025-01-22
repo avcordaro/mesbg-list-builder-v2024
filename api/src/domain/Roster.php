@@ -4,8 +4,8 @@ namespace MLB\domain;
 
 class Roster
 {
-    private int $id;
-    private string $user_id;
+    private ?int $id;
+    private ?string $user_id;
     private string $slug;
     private string $version;
     private ?string $roster_group;
@@ -19,8 +19,8 @@ class Roster
     private ?string $meta_ttt_special_upgrades;
 
     public function __construct(
-        int     $id,
-        string  $user_id,
+        ?int     $id,
+        ?string  $user_id,
         string  $slug,
         string  $version,
         ?string $roster_group,
@@ -49,12 +49,12 @@ class Roster
         $this->meta_ttt_special_upgrades = $meta_ttt_special_upgrades;
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUserId(): string
+    public function getUserId(): ?string
     {
         return $this->user_id;
     }

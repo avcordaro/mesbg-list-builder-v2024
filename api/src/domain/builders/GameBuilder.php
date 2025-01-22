@@ -9,18 +9,18 @@ class GameBuilder
     private string $id;
     private string $user_id;
     private string $game_date;
-    private ?int $duration;
+    private ?int $duration = null;
     private int $points;
     private string $match_result;
-    private ?string $scenario_played;
+    private ?string $scenario_played = null;
     private mixed $tags;
     private string $armies;
     private int $bows;
     private int $throwing_weapons;
     private string $victory_points;
-    private ?string $opponent_armies;
-    private ?string $opponent_name;
-    private ?string $opponent_victory_points;
+    private ?string $opponent_armies = null;
+    private ?string $opponent_name = null;
+    private ?string $opponent_victory_points = null;
 
     public function setId(string $id): self
     {

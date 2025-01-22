@@ -3,7 +3,7 @@
 namespace MLB\core\error;
 
 use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ServerRequestInterface;
 use Slim\Interfaces\ErrorHandlerInterface;
 use Slim\Psr7\Response;
 use Throwable;
@@ -11,11 +11,11 @@ use Throwable;
 class MlbErrorHandler implements ErrorHandlerInterface
 {
     public function __invoke(
-        Request   $request,
-        Throwable $exception,
-        bool      $displayErrorDetails,
-        bool      $logErrors,
-        bool      $logErrorDetails
+        ServerRequestInterface $request,
+        Throwable              $exception,
+        bool                   $displayErrorDetails,
+        bool                   $logErrors,
+        bool                   $logErrorDetails
     ): ResponseInterface
     {
         $payload = ['message' => $exception->getMessage()];
