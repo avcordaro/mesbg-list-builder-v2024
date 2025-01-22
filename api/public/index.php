@@ -2,9 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-global $container, $customErrorHandler;
-
 use Dotenv\Dotenv;
+use DI\Container;
 use DI\Bridge\Slim\Bridge;
 use MLB\core\error\MlbErrorHandler;
 use MLB\core\middleware\CorsMiddleware;
@@ -13,14 +12,11 @@ use MLB\core\middleware\CorsMiddleware;
 $dotenv = Dotenv::createImmutable(__DIR__ . '../../');
 $dotenv->load();
 
-require __DIR__ . "/../src/config/Container.php";
-
-$app = Bridge::create($container);
-
+$app = Bridge::create(new Container());
 $app->add(new CorsMiddleware());
 $errorHandler = $app->addErrorMiddleware(true, true, true);
 $errorHandler->setDefaultErrorHandler(new MlbErrorHandler());
 
-require __DIR__ . "/../src/route-mapping/routes.php";
+require __DIR__ . "/../src/config/routes.php";
 
 $app->run();
