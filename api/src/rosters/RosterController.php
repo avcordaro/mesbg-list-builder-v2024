@@ -34,8 +34,6 @@ class RosterController
             $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
             return $response->withStatus(500);
         }
-
-
     }
 
     public function findAll(Request $request, Response $response): Response
@@ -61,6 +59,19 @@ class RosterController
         return $response;
     }
 
+    public function findShared($userId, $rosterId, Response $response): Response
+    {
+        $user = new User($userId, "shared", "shared");
+        $roster = $this->rosterService->findRosterBySlug($user, $rosterId);
+
+        if (is_null($roster)) {
+            return $response->withStatus(404);
+        }
+
+        $response->getBody()->write($roster);
+        return $response;
+    }
+
     public function update(Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
@@ -72,14 +83,15 @@ class RosterController
         return $response;
     }
 
-    public function delete(Request $request, Response $response): Response
+    public function delete($rosterId, Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
+        $deleted = $this->rosterService->deleteRoster($user, $rosterId);
 
-        $responseData = array("Hello" => "World!", "user" => $user);
-        $responsePayload = json_encode($responseData);
-        $response->getBody()->write($responsePayload);
-
-        return $response;
+        if ($deleted) {
+            return $response->withStatus(204);
+        } else {
+            return $response->withStatus(500);
+        }
     }
 }
