@@ -24,7 +24,7 @@ class RosterMapper
         return $this->serializer->deserialize($payload, RosterDTO::class, 'json');
     }
 
-    public function convertDtoToJson(array $dto): string
+    public function convertDtoToJson(mixed $dto): string
     {
         return $this->serializer->serialize($dto, "json");
     }

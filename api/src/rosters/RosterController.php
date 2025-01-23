@@ -3,6 +3,7 @@
 namespace MLB\rosters;
 
 use Exception;
+use MLB\domain\User;
 use MLB\users\UserService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -50,11 +51,13 @@ class RosterController
     public function find($rosterId, Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
+        $roster = $this->rosterService->findRosterBySlug($user, $rosterId);
 
-        $responseData = array("Hello" => "World!", "roster" => $rosterId, "user" => $user->getFirebaseId());
-        $responsePayload = json_encode($responseData);
-        $response->getBody()->write($responsePayload);
+        if (is_null($roster)) {
+            return $response->withStatus(404);
+        }
 
+        $response->getBody()->write($roster);
         return $response;
     }
 

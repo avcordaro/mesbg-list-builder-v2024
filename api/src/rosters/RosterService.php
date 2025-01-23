@@ -43,4 +43,17 @@ class RosterService
 
         return $this->mapper->convertDtoToJson($dto);
     }
+
+    public function findRosterBySlug(User $user, string $slug): ?string
+    {
+        $roster = $this->repository->findRoster($user, $slug);
+
+        if (is_null($roster))
+            return null;
+
+        $warbands = $this->warbandMapper->domainToDto($roster->getWarbands());
+        $dto = $this->mapper->domainToDto($roster, $warbands);
+
+        return $this->mapper->convertDtoToJson($dto);
+    }
 }
