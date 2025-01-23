@@ -4,15 +4,15 @@ namespace MLB\domain;
 
 class Collection
 {
-    private int $id;
-    private string $user_id;
+    private ?int $id;
+    private ?string $user_id;
     private string $origin;
     private string $model;
-    private mixed $collection;
+    private string $collection;
 
     public function __construct(
-        int    $id,
-        string $user_id,
+        ?int    $id,
+        ?string $user_id,
         string $origin,
         string $model,
         mixed  $collection
@@ -25,12 +25,12 @@ class Collection
         $this->collection = $collection;
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUserId(): string
+    public function getUserId(): ?string
     {
         return $this->user_id;
     }
