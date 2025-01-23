@@ -7,13 +7,13 @@ use MLB\domain\Game;
 class GameBuilder
 {
     private string $id;
-    private string $user_id;
+    private ?string $user_id = null;
     private string $game_date;
     private ?int $duration = null;
     private int $points;
     private string $match_result;
     private ?string $scenario_played = null;
-    private mixed $tags;
+    private string $tags;
     private string $armies;
     private int $bows;
     private int $throwing_weapons;
@@ -28,7 +28,7 @@ class GameBuilder
         return $this;
     }
 
-    public function setUserId(string $user_id): self
+    public function setUserId(?string $user_id): self
     {
         $this->user_id = $user_id;
         return $this;
@@ -64,7 +64,7 @@ class GameBuilder
         return $this;
     }
 
-    public function setTags(mixed $tags): self
+    public function setTags(string $tags): self
     {
         $this->tags = $tags;
         return $this;
