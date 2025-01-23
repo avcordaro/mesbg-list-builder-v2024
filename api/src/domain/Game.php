@@ -5,13 +5,13 @@ namespace MLB\domain;
 class Game
 {
     private string $id;
-    private string $user_id;
+    private ?string $user_id;
     private string $game_date;
     private ?int $duration;
     private int $points;
     private string $match_result;
     private ?string $scenario_played;
-    private mixed $tags;
+    private string $tags;
     private string $armies;
     private int $bows;
     private int $throwing_weapons;
@@ -22,13 +22,13 @@ class Game
 
     public function __construct(
         string $id,
-        string $user_id,
+        ?string $user_id,
         string $game_date,
         ?int    $duration,
         int    $points,
         string $match_result,
         ?string $scenario_played,
-        mixed  $tags,
+        string  $tags,
         string $armies,
         int    $bows,
         int    $throwing_weapons,
@@ -60,7 +60,7 @@ class Game
         return $this->id;
     }
 
-    public function getUserId(): string
+    public function getUserId(): ?string
     {
         return $this->user_id;
     }
@@ -90,7 +90,7 @@ class Game
         return $this->scenario_played;
     }
 
-    public function getTags(): mixed
+    public function getTags(): string
     {
         return $this->tags;
     }
