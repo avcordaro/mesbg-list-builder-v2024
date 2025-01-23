@@ -56,4 +56,9 @@ class RosterService
 
         return $this->mapper->convertDtoToJson($dto);
     }
+
+    public function deleteRoster(User $user, string $slug): bool
+    {
+        return $this->repository->deleteRoster($user, $slug);
+    }
 }

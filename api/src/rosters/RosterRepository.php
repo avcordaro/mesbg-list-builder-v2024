@@ -81,6 +81,19 @@ class RosterRepository
         return count($rosters) !== 0 ? $rosters[0] : null;
     }
 
+    public function deleteRoster(User $user, string $rosterSlug): bool
+    {
+        $sql = "
+            DELETE FROM `rosters`
+            WHERE `user_id` = :user_id AND `slug` = :roster_slug;
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([
+            ':user_id' => $user->getFirebaseId(),
+            ':roster_slug' => $rosterSlug
+        ]);
+    }
+
     private function insertRoster(User $user, Roster $roster): string|false
     {
         $insertRosterSql = "

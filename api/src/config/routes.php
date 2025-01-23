@@ -19,5 +19,11 @@ $app->group("/v2024", function (RouteCollectorProxy $v2024) {
 
     });
 
+    $v2024->group("/s/{userId}", function (RouteCollectorProxy $shared) {
+
+        $shared->get("/rosters/{rosterId}", [RosterController::class, 'findShared']);
+
+    });
+
 });
 
