@@ -2,6 +2,7 @@
 
 global $app;
 
+use MLB\collection\CollectionController;
 use MLB\core\middleware\TokenMiddleware;
 use MLB\matches\GameController;
 use MLB\rosters\RosterController;
@@ -26,6 +27,14 @@ $app->group("/v2024", function (RouteCollectorProxy $v2024) {
         $games->get("", [GameController::class, 'read'])->add(TokenMiddleware::class);
         $games->put("/{gameId}", [GameController::class, 'update'])->add(TokenMiddleware::class);
         $games->delete("/{gameId}", [GameController::class, 'delete'])->add(TokenMiddleware::class);
+
+    });
+
+    $v2024->group("/collection", function (RouteCollectorProxy $collection) {
+
+        $collection->get("", [CollectionController::class, 'get'])->add(TokenMiddleware::class);
+        $collection->put("/{origin}/{model}", [CollectionController::class, 'upsert'])->add(TokenMiddleware::class);
+        $collection->delete("/{origin}/{model}", [CollectionController::class, 'remove'])->add(TokenMiddleware::class);
 
     });
 
