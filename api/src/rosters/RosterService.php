@@ -61,4 +61,17 @@ class RosterService
     {
         return $this->repository->deleteRoster($user, $slug);
     }
+
+    public function updateRoster(User $user, string $rosterId, object $payload)
+    {
+        $dto = $this->mapper->convertPayloadToDto($payload);
+        $roster = $this->mapper->dtoToDomain($dto);
+        $warbands = $this->warbandMapper->dtoToDomain($dto->warbands);
+
+        if ($rosterId != $roster->getSlug()) {
+            return false;
+        }
+
+        return $this->repository->updateRoster($user, $roster, $warbands);
+    }
 }

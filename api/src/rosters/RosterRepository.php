@@ -27,11 +27,11 @@ class RosterRepository
     {
         try {
             $this->pdo->beginTransaction();
-            $rosterId = $this->insertRoster($user, $roster);
+            $rosterId = $this->upsertRoster($user, $roster);
 
             if ($rosterId) {
                 foreach ($warbands as $warband) {
-                    $this->insertWarband($rosterId, $warband);
+                    $this->upsertWarband($rosterId, $warband);
                 }
                 $this->pdo->commit();
             } else {
@@ -44,21 +44,6 @@ class RosterRepository
         }
 
         return true;
-    }
-
-    public function findAllRosters(User $user): array
-    {
-        $sql = "
-            SELECT r.*, w.*
-            FROM rosters r
-            JOIN warbands w ON r.id = w.roster_id
-            WHERE r.user_id = :user_id;
-        ";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([':user_id' => $user->getFirebaseId()]);
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        return $this->mapper->assocArrayToDomain($result);
     }
 
     public function findRoster(User $user, string $rosterSlug): ?Roster
@@ -81,6 +66,50 @@ class RosterRepository
         return count($rosters) !== 0 ? $rosters[0] : null;
     }
 
+    public function findAllRosters(User $user): array
+    {
+        $sql = "
+            SELECT r.*, w.*
+            FROM rosters r
+            JOIN warbands w ON r.id = w.roster_id
+            WHERE r.user_id = :user_id;
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':user_id' => $user->getFirebaseId()]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $this->mapper->assocArrayToDomain($result);
+    }
+
+
+    /**
+     * @throws Exception
+     */
+    public function updateRoster(User $user, Roster $roster, array $warbands): bool
+    {
+        try {
+            $this->pdo->beginTransaction();
+            $this->upsertRoster($user, $roster, "update");
+
+            foreach ($warbands as $warband) {
+                $this->upsertWarband($roster->getId(), $warband, "update");
+            }
+
+            $this->deleteRemovedWarbands(
+                $roster->getId(),
+                array_map(fn(Warband $warband) => $warband->getId(), $warbands)
+            );
+
+            $this->pdo->commit();
+        } catch (Exception $e) {
+            // Rollback the transaction if something went wrong
+            $this->pdo->rollBack();
+            throw $e;
+        }
+
+        return true;
+    }
+
     public function deleteRoster(User $user, string $rosterSlug): bool
     {
         $sql = "
@@ -94,14 +123,28 @@ class RosterRepository
         ]);
     }
 
-    private function insertRoster(User $user, Roster $roster): string|false
+    private function upsertRoster(User $user, Roster $roster, string $mode = "insert"): string|false
     {
-        $insertRosterSql = "
+        $updateSql = "
+            UPDATE `rosters` 
+            SET `version`= :version,
+                `roster_group`= :roster_group,
+                `name`= :roster_name,
+                `army_list`= :army_list,
+                `edition`= :edition,
+                `meta_leader`= :meta_leader,
+                `meta_siege_roster`= :meta_siege_roster,
+                `meta_siege_role`= :meta_siege_role,
+                `meta_max_points`= :meta_max_points,
+                `meta_ttt_special_upgrades`= :meta_ttt_special_upgrades
+            WHERE `user_id`= :user_id AND `slug`= :slug
+        ";
+        $insertSql = "
             INSERT INTO `rosters` (`id`, `user_id`, `slug`, `version`, `roster_group`, `name`, `army_list`, `edition`, `meta_leader`, `meta_siege_roster`, `meta_siege_role`, `meta_max_points`, `meta_ttt_special_upgrades`) 
             VALUES (NULL, :user_id, :slug, :version, :roster_group, :roster_name, :army_list, :edition, :meta_leader, :meta_siege_roster, :meta_siege_role, :meta_max_points, :meta_ttt_special_upgrades)
         ";
-        $insertRosterStmt = $this->pdo->prepare($insertRosterSql);
-        $insertRosterStmt->execute([
+        $stmt = $this->pdo->prepare(($mode == "insert") ? $insertSql : $updateSql);
+        $stmt->execute([
             ':user_id' => $user->getFirebaseId(),
             ':slug' => $roster->getSlug(),
             ':version' => $roster->getVersion(),
@@ -118,14 +161,33 @@ class RosterRepository
         return $this->pdo->lastInsertId();
     }
 
-    private function insertWarband(string $rosterId, Warband $warband): void
+    private function upsertWarband(string $rosterId, Warband $warband, string $mode = "insert"): void
     {
-        $insertWarbandSql = "
+        $updateSql = "
+            UPDATE `warbands` 
+            SET `hero_id`= :hero_id,
+                `hero_model_id`= :hero_model_id,
+                `hero_mwfw`= :hero_mwfw,
+                `hero_options`= :hero_options,
+                `hero_compulsory`= :hero_compulsory,
+                `meta_num`= :meta_num,
+                `meta_points`= :meta_points,
+                `meta_units`= :meta_units,
+                `meta_heroes`= :meta_heroes,
+                `meta_bows`= :meta_bows,
+                `meta_throwing_weapons`= :meta_throwing_weapons,
+                `meta_bow_limit`= :meta_bow_limit,
+                `meta_throw_limit`= :meta_throw_limit,
+                `meta_max_units`= :meta_max_units,
+                `units`= :units 
+            WHERE `roster_id` = :roster_id AND `warband_id` = :warband_id
+       ";
+        $insertSql = "
             INSERT INTO `warbands` (`roster_id`, `id`, `warband_id`, `hero_id`, `hero_model_id`, `hero_mwfw`, `hero_options`, `hero_compulsory`, `meta_num`, `meta_points`, `meta_units`, `meta_heroes`, `meta_bows`, `meta_throwing_weapons`, `meta_bow_limit`, `meta_throw_limit`, `meta_max_units`, `units`) 
             VALUES (:roster_id, NULL, :warband_id, :hero_id, :hero_model_id, :hero_mwfw, :hero_options, :hero_compulsory, :meta_num, :meta_points, :meta_units, :meta_heroes, :meta_bows, :meta_throwing_weapons, :meta_bow_limit, :meta_throw_limit, :meta_max_units, :units)
         ";
-        $insertWarbandStmt = $this->pdo->prepare($insertWarbandSql);
-        $insertWarbandStmt->execute([
+        $stmt = $this->pdo->prepare(($mode == "insert") ? $insertSql : $updateSql);
+        $stmt->execute([
             ':roster_id' => $rosterId,
             ':warband_id' => $warband->getId(),
             ':hero_id' => $warband->getHeroId(),
@@ -144,5 +206,18 @@ class RosterRepository
             ':meta_max_units' => $warband->getMetaMaxUnits(),
             ':units' => $warband->getUnits(),
         ]);
+    }
+
+    private function deleteRemovedWarbands(int $rosterId, array $warbandIds): void
+    {
+        $placeholders = rtrim(str_repeat('?,', count($warbandIds)), ',');
+
+        $sql = "
+            DELETE FROM warbands 
+            WHERE roster_id = ? AND warband_id NOT IN ($placeholders)
+        ";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(array_merge([$rosterId], $warbandIds));
     }
 }

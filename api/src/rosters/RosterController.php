@@ -72,13 +72,12 @@ class RosterController
         return $response;
     }
 
-    public function update(Request $request, Response $response): Response
+    public function update($rosterId, Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
+        $updated = $this->rosterService->updateRoster($user, $rosterId, $request->getBody());
 
-        $responseData = array("Hello" => "World!", "user" => $user);
-        $responsePayload = json_encode($responseData);
-        $response->getBody()->write($responsePayload);
+
 
         return $response;
     }
