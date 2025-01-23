@@ -26,7 +26,7 @@ class GameController
 
             return $response->withStatus(($created) ? 201 : 500);
         } catch (Exception $e) {
-            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            $response->getBody()->write(json_encode(array("message" => $e->getMessage())));
             return $response->withStatus(500);
         }
     }
@@ -49,7 +49,7 @@ class GameController
 
             return $response->withStatus(($updated) ? 204 : 500);
         } catch (Exception $e) {
-            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            $response->getBody()->write(json_encode(array("message" => $e->getMessage())));
             return $response->withStatus(500);
         }
     }

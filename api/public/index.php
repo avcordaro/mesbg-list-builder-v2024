@@ -14,7 +14,7 @@ $dotenv->load();
 
 $app = Bridge::create(new Container());
 $app->add(new CorsMiddleware());
-$errorHandler = $app->addErrorMiddleware(true, true, true);
+$errorHandler = $app->addErrorMiddleware($_ENV["PROFILE"] == "development", true, true);
 $errorHandler->setDefaultErrorHandler(new MlbErrorHandler());
 
 require __DIR__ . "/../src/config/routes.php";

@@ -38,7 +38,7 @@ class TokenMiddleware implements Middleware
             $request = $request->withAttribute('provider', $verifiedIdToken->claims()->get('firebase')["sign_in_provider"]);
             return $handler->handle($request);
         } catch (FailedToVerifyToken|RevokedIdToken $e) {
-            $response->getBody()->write(json_encode(['error' => $e->getMessage()]));
+            $response->getBody()->write(json_encode(['message' => $e->getMessage()]));
             return $response->withStatus(401);
         }
     }
@@ -50,7 +50,7 @@ class TokenMiddleware implements Middleware
         // Get token from Authorization header
         $authHeader = $request->getHeader('Authorization');
         if (!$authHeader || !isset($authHeader[0])) {
-            $response->getBody()->write(json_encode(['error' => 'Authorization header missing']));
+            $response->getBody()->write(json_encode(['message' => 'Authorization header missing']));
             return $response->withStatus(401);
         }
 
