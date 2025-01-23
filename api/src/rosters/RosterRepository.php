@@ -61,6 +61,26 @@ class RosterRepository
         return $this->mapper->assocArrayToDomain($result);
     }
 
+    public function findRoster(User $user, string $rosterSlug): ?Roster
+    {
+        $sql = "
+            SELECT r.*, w.*
+            FROM rosters r
+            JOIN warbands w ON r.id = w.roster_id
+            WHERE r.user_id = :user_id AND r.slug = :roster_slug;
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':user_id' => $user->getFirebaseId(),
+            ':roster_slug' => $rosterSlug
+        ]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $rosters = $this->mapper->assocArrayToDomain($result);
+
+        return count($rosters) !== 0 ? $rosters[0] : null;
+    }
+
     private function insertRoster(User $user, Roster $roster): string|false
     {
         $insertRosterSql = "
