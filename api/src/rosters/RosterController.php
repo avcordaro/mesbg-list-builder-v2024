@@ -36,16 +36,6 @@ class RosterController
         }
     }
 
-    public function findAll(Request $request, Response $response): Response
-    {
-        $user = $this->userService->upsertUserInteraction($request);
-        $rosters = $this->rosterService->getAllRosters($user);
-
-        $response->getBody()->write($rosters);
-
-        return $response;
-    }
-
     public function find($rosterId, Request $request, Response $response): Response
     {
         $user = $this->userService->upsertUserInteraction($request);
@@ -56,6 +46,16 @@ class RosterController
         }
 
         $response->getBody()->write($roster);
+        return $response;
+    }
+
+    public function findAll(Request $request, Response $response): Response
+    {
+        $user = $this->userService->upsertUserInteraction($request);
+        $rosters = $this->rosterService->getAllRosters($user);
+
+        $response->getBody()->write($rosters);
+
         return $response;
     }
 
