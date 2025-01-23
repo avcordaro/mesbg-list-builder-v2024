@@ -29,7 +29,7 @@ class RosterController
             $created = $this->rosterService->createRoster($user, $request->getBody());
             return $response->withStatus(($created) ? 204 : 500);
         } catch (Exception $e) {
-            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            $response->getBody()->write(json_encode(array("message" => $e->getMessage())));
             return $response->withStatus(500);
         }
     }
@@ -77,7 +77,7 @@ class RosterController
             $updated = $this->rosterService->updateRoster($user, $rosterId, $request->getBody());
             return $response->withStatus(($updated) ? 204 : 500);
         } catch (Exception $e) {
-            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            $response->getBody()->write(json_encode(array("message" => $e->getMessage())));
             return $response->withStatus(500);
         }
     }
