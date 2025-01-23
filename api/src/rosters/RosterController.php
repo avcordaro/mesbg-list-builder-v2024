@@ -27,9 +27,7 @@ class RosterController
         try {
             $user = $this->userService->upsertUserInteraction($request);
             $created = $this->rosterService->createRoster($user, $request->getBody());
-
-            return $response
-                ->withStatus(($created) ? 204 : 500);
+            return $response->withStatus(($created) ? 204 : 500);
         } catch (Exception $e) {
             $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
             return $response->withStatus(500);
@@ -74,12 +72,14 @@ class RosterController
 
     public function update($rosterId, Request $request, Response $response): Response
     {
-        $user = $this->userService->upsertUserInteraction($request);
-        $updated = $this->rosterService->updateRoster($user, $rosterId, $request->getBody());
-
-
-
-        return $response;
+        try {
+            $user = $this->userService->upsertUserInteraction($request);
+            $updated = $this->rosterService->updateRoster($user, $rosterId, $request->getBody());
+            return $response->withStatus(($updated) ? 204 : 500);
+        } catch (Exception $e) {
+            $response->getBody()->write(json_encode(array("error" => $e->getMessage())));
+            return $response->withStatus(500);
+        }
     }
 
     public function delete($rosterId, Request $request, Response $response): Response

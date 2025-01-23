@@ -62,7 +62,10 @@ class RosterService
         return $this->repository->deleteRoster($user, $slug);
     }
 
-    public function updateRoster(User $user, string $rosterId, object $payload)
+    /**
+     * @throws Exception
+     */
+    public function updateRoster(User $user, string $rosterId, object $payload): bool
     {
         $dto = $this->mapper->convertPayloadToDto($payload);
         $roster = $this->mapper->dtoToDomain($dto);
