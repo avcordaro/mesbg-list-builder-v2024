@@ -24,6 +24,6 @@ export const handler: MwfwUpdater = {
       return untouchedMWFW;
     }
 
-    return [["Mahud Beastmaster Chieftain", "2:2:1:1"], untouchedMWFW[1]];
+    return [["Mahud Beastmaster Chieftain", "2:2:1:2"], untouchedMWFW[1]];
   },
 };
