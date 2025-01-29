@@ -22,6 +22,7 @@ export enum AlertTypes {
   UPDATE_GROUP_SUCCES = "UPDATE_GROUP_SUCCES",
   DISBAND_GROUP_SUCCES = "DISBAND_GROUP_SUCCES",
   DELETE_GROUP_SUCCES = "DELETE_GROUP_SUCCES",
+  PASSWORD_RESET_REQUEST_SEND = "PASSWORD_RESET_REQUEST_SEND",
 }
 
 type AlertOptions = {
@@ -207,6 +208,24 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
         <Fragment>
           <b>Successfully updated</b>
           <p>Your group was successfully updated.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.PASSWORD_RESET_REQUEST_SEND,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Request sent</b>
+          <p>
+            If the provided email has an account it should receive a password
+            reset link within a few minutes.
+          </p>
         </Fragment>
       ),
       options: {

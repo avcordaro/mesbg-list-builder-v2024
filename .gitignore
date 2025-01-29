@@ -25,3 +25,6 @@ yarn-debug.log*
 yarn-error.log*
 
 *storybook.log
+.env
+/api/vendor/
+/api/firebase_sa.json
