@@ -1,7 +1,10 @@
 {
   "main": {
+    "added": [
+      "Added increment quantity buttons for non-unique heroes that are following another hero."
+    ],
     "changed": [
-      "Moved the roster info drawer button from the main header to just above to warbands to make space for an account indicator"
+      "Moved the roster info drawer button from the main header to just above to warbands to make space for an account indicator."
     ],
     "bugfixes": [
       "Make sure that the PDF print out is always black on white, even in darkmode.",

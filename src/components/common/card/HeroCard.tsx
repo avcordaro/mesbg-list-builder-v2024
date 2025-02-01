@@ -21,6 +21,7 @@ import { MwfBadge } from "../might-will-fate/MwfBadge.tsx";
 import { OptionList } from "../option/OptionList.tsx";
 import { UnitTypeLabel } from "../unit-type/UnitTypeLabel.tsx";
 import { CardActionButtons } from "./CardActionButtons.tsx";
+import { QuantityButtons } from "./QuantityButtons.tsx";
 import { invalidUnitSelectionBackgroundTint } from "./WarriorCard.tsx";
 
 export type HeroCardProps = {
@@ -81,6 +82,16 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           ? mwf.handleSpecialMwfForUnit(unit, options)
           : unit.MWFW,
         options: options,
+      }),
+    );
+  }
+
+  function updateQuantity(value: number) {
+    console.debug("Update warrior quantity.", { value });
+    updateUnit(
+      calculator.recalculatePointsForUnit({
+        ...unit,
+        quantity: value,
       }),
     );
   }
@@ -190,7 +201,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                   : "inherit"
               }
             >
-              {unit.name}
+              {!unit.unique && followerOf
+                ? `${unit.quantity}x ${unit.name}`
+                : unit.name}
             </Typography>
             <Typography
               data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
@@ -249,7 +262,17 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             </Box>
           )}
         </Collapse>
-        <Stack direction="row" justifyContent="end" sx={{ mt: 2 }}>
+        <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
+          {!unit.unique && followerOf && (
+            <QuantityButtons
+              quantity={unit.quantity}
+              updateQuantity={updateQuantity}
+              warbandNum={warbandNum}
+              index={index}
+              unitName={unit.name}
+              collapsed={collapsed}
+            />
+          )}
           <CardActionButtons
             remove={unit.compulsory === true ? null : remove}
             reselect={unit.compulsory === true ? null : reselect}
@@ -302,12 +325,31 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
         }}
       >
         <Stack direction="column" gap={1}>
-          <Collapse in={!collapsed}>
-            <UnitProfilePicture
-              army={unit.profile_origin}
-              profile={unit.name}
-            />
-          </Collapse>
+          <Stack
+            direction="column"
+            gap={1}
+            sx={{
+              p: 0.5,
+              width: 105,
+            }}
+          >
+            <Collapse in={!collapsed} unmountOnExit={true}>
+              <UnitProfilePicture
+                army={unit.profile_origin}
+                profile={unit.name}
+              />
+            </Collapse>
+            {!unit.unique && followerOf && (
+              <QuantityButtons
+                quantity={unit.quantity}
+                updateQuantity={updateQuantity}
+                warbandNum={warbandNum}
+                index={index}
+                unitName={unit.name}
+                collapsed={collapsed}
+              />
+            )}
+          </Stack>
         </Stack>
         <Stack
           flexGrow={1}
@@ -315,7 +357,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           direction="row"
           justifyContent="center"
         >
-          <Stack direction="column" flexGrow={1} justifyContent="center">
+          <Stack direction="column" flexGrow={1} justifyContent="start">
             <Stack direction="row" gap={2} alignItems="center">
               <Typography
                 variant="h6"
@@ -326,7 +368,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                     : "inherit"
                 }
               >
-                {unit.name}{" "}
+                {!unit.unique && followerOf
+                  ? `${unit.quantity}x ${unit.name}`
+                  : unit.name}{" "}
                 {collapsed && (
                   <span
                     style={{ fontWeight: "normal" }}

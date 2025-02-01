@@ -1,10 +1,8 @@
-import { AddOutlined, RemoveOutlined } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Collapse from "@mui/material/Collapse";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
 import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
@@ -15,71 +13,10 @@ import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Option } from "../../../types/mesbg-data.types.ts";
 import { isSiegeEquipment, SelectedUnit } from "../../../types/roster.ts";
 import { slugify } from "../../../utils/string.ts";
-import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 import { UnitProfilePicture } from "../images/UnitProfilePicture.tsx";
 import { OptionList } from "../option/OptionList.tsx";
 import { CardActionButtons } from "./CardActionButtons.tsx";
-
-type QuantityButtonsProps = {
-  quantity: number;
-  updateQuantity: (value: number) => void;
-  unitName: string;
-  warbandNum: number;
-  index: number;
-  collapsed?: boolean;
-};
-const QuantityButtons: FunctionComponent<QuantityButtonsProps> = ({
-  quantity,
-  updateQuantity,
-  warbandNum,
-  index,
-  unitName,
-  collapsed,
-}) => {
-  const { palette } = useTheme();
-
-  function handleIncrement() {
-    updateQuantity(quantity + 1);
-  }
-
-  function handleDecrement() {
-    updateQuantity(Math.max(quantity - 1, 1));
-  }
-
-  return (
-    <Stack
-      direction="row"
-      sx={{
-        alignItems: collapsed ? "center" : "space-between",
-        justifyContent: "space-between",
-        transition: "align-items 0.3s",
-      }}
-      gap={2}
-    >
-      <SquareIconButton
-        icon={<RemoveOutlined sx={{ fontSize: "1.5rem" }} />}
-        iconColor={palette.primary.contrastText}
-        backgroundColor={palette.primary.main}
-        backgroundColorHover={palette.primary.dark}
-        iconPadding="1"
-        onClick={handleDecrement}
-        disabled={quantity === 1}
-        testId={`quantity--decrement--w${warbandNum}-i${index}`}
-        testName={`quantity--decrement--${slugify(unitName)}`}
-      />
-      <SquareIconButton
-        icon={<AddOutlined sx={{ fontSize: "1.5rem" }} />}
-        iconColor={palette.primary.contrastText}
-        backgroundColor={palette.primary.main}
-        backgroundColorHover={palette.primary.dark}
-        iconPadding="1"
-        onClick={handleIncrement}
-        testId={`quantity--increment--w${warbandNum}-i${index}`}
-        testName={`quantity--increment--${slugify(unitName)}`}
-      />
-    </Stack>
-  );
-};
+import { QuantityButtons } from "./QuantityButtons.tsx";
 
 export type WarriorCardProps = {
   unit: SelectedUnit;
