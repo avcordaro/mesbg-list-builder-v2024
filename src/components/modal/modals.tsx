@@ -5,6 +5,7 @@ import {
   Download,
   Edit,
   LibraryAdd,
+  UploadFile,
 } from "@mui/icons-material";
 import AddCircleOutline from "@mui/icons-material/AddCardOutlined";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
@@ -26,8 +27,10 @@ import { CreateNewRosterGroupModal } from "./modals/CreateNewRosterGroupModal.ts
 import { CreateNewRosterModal } from "./modals/CreateNewRosterModal.tsx";
 import { DownloadProfileCardModal } from "./modals/DownloadProfileCardModal.tsx";
 import { EditRosterModal } from "./modals/EditRosterModal.tsx";
+import { ExportCollection } from "./modals/ExportCollection.tsx";
 import { ExportHistoryModal } from "./modals/ExportHistoryModal.tsx";
 import { ExportRosterModal } from "./modals/ExportRosterModal.tsx";
+import { ImportCollection } from "./modals/ImportCollection.tsx";
 import { ImportGameHistoryModal } from "./modals/ImportHistoryModal.tsx";
 import { ProfileCardModal } from "./modals/ProfileCardModal.tsx";
 import { RosterSummaryModal } from "./modals/RosterSummaryModal.tsx";
@@ -58,6 +61,8 @@ export enum ModalTypes {
   DISBAND_ROSTER_GROUP = "DISBAND_ROSTER_GROUP",
 
   ADD_TO_COLLECTION = "ADD_TO_COLLECTION",
+  EXPORT_COLLECTION = "EXPORT_COLLECTION",
+  IMPORT_COLLECTION = "IMPORT_COLLECTION",
 }
 
 export type ModalProps = {
@@ -223,6 +228,24 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <BookmarkAdd />,
       children: <AddToCollection />,
       maxWidth: "lg",
+    },
+  ],
+  [
+    ModalTypes.EXPORT_COLLECTION,
+    {
+      icon: <SaveIcon />,
+      title: "Export Collection",
+      children: <ExportCollection />,
+      maxWidth: "sm",
+    },
+  ],
+  [
+    ModalTypes.IMPORT_COLLECTION,
+    {
+      icon: <UploadFile />,
+      title: "Import Collection",
+      children: <ImportCollection />,
+      maxWidth: "md",
     },
   ],
 ]);

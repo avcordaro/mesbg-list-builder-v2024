@@ -22,6 +22,9 @@ export enum AlertTypes {
   UPDATE_GROUP_SUCCES = "UPDATE_GROUP_SUCCES",
   DISBAND_GROUP_SUCCES = "DISBAND_GROUP_SUCCES",
   DELETE_GROUP_SUCCES = "DELETE_GROUP_SUCCES",
+
+  IMPORT_COLLECTION_COMPLETED = "IMPORT_COLLECTION_COMPLETED",
+  IMPORT_COLLECTION_ERROR = "IMPORT_COLLECTION_ERROR",
 }
 
 type AlertOptions = {
@@ -212,6 +215,36 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       options: {
         autoHideAfter: 2400,
       },
+    },
+  ],
+  [
+    AlertTypes.IMPORT_COLLECTION_COMPLETED,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Successfully imported</b>
+          <p>The JSON-data was successfully imported into your collection.</p>
+        </Fragment>
+      ),
+      options: {
+        autoHideAfter: 2400,
+      },
+    },
+  ],
+  [
+    AlertTypes.IMPORT_COLLECTION_ERROR,
+    {
+      variant: "error",
+      content: (
+        <Fragment>
+          <b>Import incorrect</b>
+          <p>
+            The imported JSON was incorrectly formatted. Please reexport the
+            data and try again.
+          </p>
+        </Fragment>
+      ),
     },
   ],
 ]);

@@ -1,6 +1,9 @@
-import { BookmarkAdd, Cancel, Edit } from "@mui/icons-material";
+import { BookmarkAdd, Cancel, Edit, UploadFile } from "@mui/icons-material";
+import SaveIcon from "@mui/icons-material/Save";
 import {
   Button,
+  SpeedDial,
+  SpeedDialAction,
   Stack,
   Table,
   TableBody,
@@ -10,9 +13,11 @@ import {
   TableRow,
 } from "@mui/material";
 import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
+import { useRef, useState } from "react";
 import { SquareIconButton } from "../../components/common/icon-button/SquareIconButton.tsx";
 import { Link } from "../../components/common/link/Link.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
@@ -29,6 +34,8 @@ export const Collection = () => {
   const { inventory, deleteEntry } = useCollectionState();
   const { preferences, setPreference } = useUserPreferences();
   const { mode } = useThemeContext();
+  const speedDialRef = useRef<HTMLDivElement | null>(null);
+  const [fabOpen, setFabOpen] = useState(false);
 
   const collection = Object.entries(inventory)
     .flatMap(([origin, model]) =>
@@ -55,7 +62,7 @@ export const Collection = () => {
   };
 
   return (
-    <Container maxWidth={false} sx={{ p: 2 }}>
+    <Container maxWidth={false} sx={{ p: 2, mb: 12 }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         My Collection
       </Typography>
@@ -190,6 +197,48 @@ export const Collection = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <Box ref={speedDialRef}>
+        <SpeedDial
+          ariaLabel="action-buttons"
+          sx={{ position: "fixed", bottom: 32, right: 32 }}
+          icon={<SaveIcon />}
+          open={fabOpen}
+          onClick={() => setFabOpen((x) => !x)}
+          onClose={null}
+        >
+          <SpeedDialAction
+            icon={<SaveIcon />}
+            onClick={() => setCurrentModal(ModalTypes.EXPORT_COLLECTION)}
+            tooltipTitle={
+              <span
+                style={{
+                  whiteSpace: "nowrap",
+                  color: mode === "dark" ? "white" : "inherit",
+                }}
+              >
+                Export Collection
+              </span>
+            }
+            tooltipOpen
+          />
+          <SpeedDialAction
+            icon={<UploadFile />}
+            onClick={() => setCurrentModal(ModalTypes.IMPORT_COLLECTION)}
+            tooltipTitle={
+              <span
+                style={{
+                  whiteSpace: "nowrap",
+                  color: mode === "dark" ? "white" : "inherit",
+                }}
+              >
+                Import Collection
+              </span>
+            }
+            tooltipOpen
+          />
+        </SpeedDial>
+      </Box>
     </Container>
   );
 };

@@ -1,7 +1,8 @@
 {
   "main": {
     "added": [
-      "Added increment quantity buttons for non-unique heroes that are following another hero."
+      "Added increment quantity buttons for non-unique heroes that are following another hero.",
+      "Added Export/Import options for the user created collection data."
     ],
     "changed": [
       "Moved the roster info drawer button from the main header to just above to warbands to make space for an account indicator."
