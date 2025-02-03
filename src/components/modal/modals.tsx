@@ -27,6 +27,7 @@ import { CreateNewRosterGroupModal } from "./modals/CreateNewRosterGroupModal.ts
 import { CreateNewRosterModal } from "./modals/CreateNewRosterModal.tsx";
 import { DownloadProfileCardModal } from "./modals/DownloadProfileCardModal.tsx";
 import { EditRosterModal } from "./modals/EditRosterModal.tsx";
+import { EndGameStepperDialog } from "./modals/EndGameStepperDialog.tsx";
 import { ExportCollection } from "./modals/ExportCollection.tsx";
 import { ExportHistoryModal } from "./modals/ExportHistoryModal.tsx";
 import { ExportRosterModal } from "./modals/ExportRosterModal.tsx";
@@ -47,6 +48,7 @@ export enum ModalTypes {
   EXPORT_GAMES = "EXPORT_GAMES",
   IMPORT_GAMES = "IMPORT_GAMES",
   CREATE_GAME_RESULT = "CREATE_GAME_RESULT",
+  END_GAME_DIALOG = "END_GAME_DIALOG",
 
   DOWNLOAD_PROFILE_CARDS = "DOWNLOAD_PROFILE_CARDS",
   ROSTER_SUMMARY = "ROSTER_SUMMARY",
@@ -101,6 +103,14 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <EmojiEventsIcon />,
       title: "Game results",
       children: <CreateGameResultModal />,
+    },
+  ],
+  [
+    ModalTypes.END_GAME_DIALOG,
+    {
+      icon: <EmojiEventsIcon />,
+      title: "End game",
+      children: <EndGameStepperDialog />,
     },
   ],
   [

@@ -1,5 +1,8 @@
 {
   "main": {
+    "changed": [
+      "Replace the initial game result form with a stepper guiding you through the victory conditions."
+    ],
     "bugfixes": [
       "Amend comparator for sorting numerical table columns in the profile database for values that are unknown (- or *)",
       "Corrected the wording of the Spectre's special rule on their profile card.",

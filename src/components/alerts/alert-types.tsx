@@ -8,6 +8,7 @@ import { ScreenshotCopiedAlert } from "./alerts/ScreenshotCopiedAlert.tsx";
 export enum AlertTypes {
   EXPORT_ALERT = "EXPORT_ALERT",
   EXPORT_HISTORY_ALERT = "EXPORT_HISTORY_ALERT",
+  RECORD_MATCH_SUCCESS = "RECORD_MATCH_SUCCESS",
   SCREENSHOT_COPIED_ALERT = "SCREENSHOT_COPIED_ALERT",
   DOWNLOAD_FAILED = "DOWNLOAD_FAILED",
 
@@ -53,6 +54,24 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
     {
       variant: "success",
       content: <ExportHistoryAlert />,
+      options: {
+        autoHideAfter: 5000,
+      },
+    },
+  ],
+  [
+    AlertTypes.EXPORT_HISTORY_ALERT,
+    {
+      variant: "success",
+      content: (
+        <Fragment>
+          <b>Success!</b>
+          <p>
+            The match was successfully saved and can now be viewed & edited via
+            the Match History page.
+          </p>
+        </Fragment>
+      ),
       options: {
         autoHideAfter: 5000,
       },

@@ -13,22 +13,13 @@ import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
+import { hasValue } from "../../../utils/objects.ts";
 import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { ArmyPicker } from "./ArmyPicker.tsx";
 import { AdditionalTagsInput } from "./TagsInput.tsx";
-
-type Result = "Won" | "Lost" | "Draw";
-
-const results: Result[] = ["Won", "Lost", "Draw"];
-
-const scenarios = [
-  "Domination",
-  "To the death!",
-  "Hold ground",
-  "Reconnoitre",
-  "Destroy the supplies",
-  "Fog of war",
-].map((s) => s.replace(/(^\w)|(\s+\w)/g, (letter) => letter.toUpperCase()));
+import { calculateResult, results } from "./result.ts";
+import { scenarios } from "./scenarios.ts";
+import { validateFormInput } from "./validateInput.ts";
 
 export type GameResultsFormHandlers = {
   saveToState: () => boolean;
@@ -57,23 +48,6 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     });
   };
 
-  const calculateResult = (
-    vp: string | number,
-    ovp: string | number,
-    originalResult: Result,
-  ): Result => {
-    if (!hasValue(vp) || !hasValue(ovp)) {
-      return originalResult;
-    }
-
-    const resultList: Record<Result, boolean> = {
-      Won: Number(vp) > Number(ovp),
-      Draw: Number(vp) === Number(ovp),
-      Lost: Number(vp) < Number(ovp),
-    };
-    return Object.entries(resultList).find(([, value]) => value)[0] as Result;
-  };
-
   const handleChangeVictoryPoints = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues((formValues) => ({
@@ -96,51 +70,8 @@ export const GameResultsForm = forwardRef<GameResultsFormHandlers>((_, ref) => {
     }));
   };
 
-  function hasValue(value: string | number | unknown) {
-    return (
-      (typeof value === "string" && value.trim() !== "") ||
-      typeof value === "number"
-    );
-  }
-
-  function isAboveZero(value: number) {
-    return hasValue(value) && value > 0;
-  }
-
-  function isPositiveInteger(value: number) {
-    return hasValue(value) && value >= 0 && value % 1 == 0;
-  }
-
   const saveToState = (): boolean => {
-    const missingFields = [];
-
-    if (!hasValue(formValues.gameDate)) missingFields.push("Date of the Game");
-    if (!isAboveZero(formValues.points)) missingFields.push("Points");
-    if (!hasValue(formValues.result)) missingFields.push("Match Results");
-    if (!hasValue(formValues.armies)) missingFields.push("Armies");
-    if (!hasValue(formValues.victoryPoints))
-      missingFields.push("Victory Points");
-    if (!hasValue(formValues.bows) || !isPositiveInteger(formValues.bows))
-      missingFields.push("Bows");
-    if (
-      !hasValue(formValues.throwingWeapons) ||
-      !isPositiveInteger(formValues.throwingWeapons)
-    )
-      missingFields.push("Throwing Weapons");
-    if (hasValue(formValues.duration)) {
-      if (!isAboveZero(formValues.duration)) missingFields.push("Duration");
-    }
-    if (
-      hasValue(formValues.opponentName) ||
-      hasValue(formValues.opponentVictoryPoints)
-    ) {
-      if (!hasValue(formValues.opponentName))
-        missingFields.push("Opponent Name");
-      if (!hasValue(formValues.opponentVictoryPoints)) {
-        missingFields.push("Opponent's Victory Points");
-      }
-    }
-
+    const missingFields = validateFormInput(formValues);
     setMissingRequiredFields(missingFields);
     if (missingFields.length > 0) {
       return false;
