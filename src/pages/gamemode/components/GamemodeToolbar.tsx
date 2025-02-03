@@ -17,7 +17,7 @@ import { useGameModeState } from "../../../state/gamemode";
 export const GamemodeToolbar = () => {
   const navigate = useNavigate();
   const screen = useScreenSize();
-  const { setCurrentModal } = useAppState();
+  const { setCurrentModal, closeModal } = useAppState();
   const { gameState, updateGameState } = useGameModeState();
   const { roster, getAdjustedMetaData } = useRosterInformation();
 
@@ -28,14 +28,14 @@ export const GamemodeToolbar = () => {
     const gameStartTime = new Date(game.started);
     const gameEndTime = new Date();
     const gameDuration = gameEndTime.getTime() - gameStartTime.getTime();
-    setCurrentModal(ModalTypes.CREATE_GAME_RESULT, {
+    setCurrentModal(ModalTypes.END_GAME_DIALOG, {
       mode: "record",
       gameId: roster.id,
       formValues: {
-        gameDate: new Date().toISOString().slice(0, 10),
+        gameDate: gameStartTime.toISOString().slice(0, 10),
         duration: Math.ceil(gameDuration / 60000),
         points: Math.ceil(roster.metadata.points / 50) * 50, // rounds to the nearest full 50.
-        result: "Won",
+        result: "Draw",
         scenarioPlayed: null,
         tags: [],
         armies: roster.armyList,
@@ -45,6 +45,11 @@ export const GamemodeToolbar = () => {
         opponentArmies: "",
         opponentName: "",
         opponentVictoryPoints: "" as unknown as number,
+      },
+      onClose: (_, reason) => {
+        if (reason !== "backdropClick") {
+          closeModal();
+        }
       },
     });
   };
