@@ -1,7 +1,10 @@
+# Generated files
 node_modules/
 build/
-public/
-api/
+api/vendor/
+
+# Static files
 static-resources/
-src/assets
-v2018-archive
+public/
+data/
+index.html

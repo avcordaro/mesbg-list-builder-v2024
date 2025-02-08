@@ -20,7 +20,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:data": "cd data && python3 ./json_convert.py"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

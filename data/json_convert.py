@@ -2,6 +2,8 @@ import pandas as pd
 import json
 import re
 
+data_files_base_path = '../src/assets/data'
+
 warband_sizes = {
   "Hero of Legend": 18,
   "Hero of Valour": 15,
@@ -92,7 +94,7 @@ for d in json_dict:
 
 json_dict = {d['model_id']: d for d in json_dict}
 
-with open('mesbg_data.json', "w") as file:
+with open(data_files_base_path + '/mesbg_data.json', "w") as file:
     file.write(json.dumps(json_dict, indent=2))
 
 df_faction = pd.read_excel("mesbg_data.xlsx", sheet_name="army_lists")
@@ -105,7 +107,7 @@ df_faction = df_faction[['additional_rules', 'special_rules', 'bow_limit', 'thro
 json_dict = df_faction.to_dict(orient='index')
 json_dict = {f:{k:v for k,v in json_dict[f].items() if v != ""} for f in json_dict.keys()}
 
-with open('army_list_data.json', "w") as file:
+with open(data_files_base_path + '/army_list_data.json', "w") as file:
     file.write(json.dumps(json_dict, indent=2))
     
 df_hero_constraints = pd.read_excel("mesbg_data.xlsx", sheet_name="hero_constraints")
@@ -113,17 +115,17 @@ df_hero_constraints['valid_warband_units'] = df_hero_constraints['valid_warband_
 df_hero_constraints['extra_profiles'] = df_hero_constraints['extra_profiles'].apply(eval)
 df_hero_constraints = df_hero_constraints.groupby('model_id').apply(lambda x: x[['valid_warband_units', 'extra_profiles']].to_dict(orient='records')[0])
 
-with open('hero_constraint_data.json', "w") as file:
+with open(data_files_base_path + '/hero_constraint_data.json', "w") as file:
     file.write(json.dumps(df_hero_constraints.to_dict(), indent=2))
 
 df_warning_rules = pd.read_excel("mesbg_data.xlsx", sheet_name="warning_rules")
 df_warning_rules['dependencies'] = df_warning_rules['dependencies'].apply(eval)
 df_warning_rules = df_warning_rules.groupby('subject').apply(lambda x: x[['type', 'dependencies', 'warning']].to_dict(orient='records'))
 
-with open('warning_rules.json', 'w') as f:
+with open(data_files_base_path + '/warning_rules.json', 'w') as f:
     f.write(df_warning_rules.to_json(orient='index', indent=2))
 
 df_keywords = pd.read_excel("mesbg_data.xlsx", sheet_name="keywords")
 
-with open('keywords.json', 'w') as f:
+with open(data_files_base_path + '/keywords.json', 'w') as f:
     f.write(df_keywords.to_json(orient='records', indent=2))

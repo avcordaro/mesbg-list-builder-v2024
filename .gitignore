@@ -1,9 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# secrets
+.env
+/api/firebase_sa.json
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+/api/vendor/
 
 # testing
 /coverage
@@ -20,11 +25,8 @@
 .idea
 CHANGELOG.json.bak
 
+# log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
 *storybook.log
-.env
-/api/vendor/
-/api/firebase_sa.json
