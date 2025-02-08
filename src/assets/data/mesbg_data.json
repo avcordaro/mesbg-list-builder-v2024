@@ -3160,7 +3160,18 @@
       ]
     ],
     "warband_size": 0,
-    "options": []
+    "options": [
+      {
+        "id": "OPT0877",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0878",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
   },
   "[battle-of-fornost] knight-of-minas-tirith": {
     "model_id": "[battle-of-fornost] knight-of-minas-tirith",
