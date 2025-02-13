@@ -2,6 +2,9 @@
   "main": {
     "changed": [
       "Applied the February 2025 FAQ changes to the list builder data."
+    ],
+    "bugfixes": [
+      "Added Asfaloth the the list of heroic mounts which has Might Will Fate trackers."
     ]
   },
   "1.13": {
