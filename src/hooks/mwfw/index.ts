@@ -1,3 +1,4 @@
+import * as Asfaloth from "./asfaloth.ts";
 import * as Azog from "./azog-white-warg.ts";
 import * as GandalfTheWhite from "./gandalf-the-white.ts";
 import * as Treebeard from "./treebeard.ts";
@@ -8,6 +9,7 @@ export default [
   Treebeard.handler,
   WarMumakCommanders.handler,
   Azog.handler,
+  Asfaloth.handler,
 ];
 
 export const handledModels = [
@@ -15,4 +17,5 @@ export const handledModels = [
   ...Treebeard.handledModels,
   ...WarMumakCommanders.handledModels,
   ...Azog.handledModels,
+  ...Asfaloth.handledModels,
 ];
