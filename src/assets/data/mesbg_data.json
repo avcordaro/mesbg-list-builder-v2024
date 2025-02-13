@@ -13472,8 +13472,12 @@
     "siege_crew": 0,
     "MWFW": [
       [
-        "",
+        "Arwen",
         "2:4:2:2"
+      ],
+      [
+        "Asfaloth",
+        "0:1:1:1"
       ]
     ],
     "warband_size": 12,
