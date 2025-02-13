@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "changed": [
+      "Applied the February 2025 FAQ changes to the list builder data."
+    ]
+  },
   "1.13": {
     "changed": [
       "Replace the initial game result form with a stepper guiding you through the victory conditions."

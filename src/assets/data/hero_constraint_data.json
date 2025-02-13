@@ -1935,7 +1935,8 @@
       "[muster-of-isengard] uruk-hai-warrior",
       "[muster-of-isengard] uruk-hai-berserker",
       "[muster-of-isengard] uruk-hai-scout",
-      "[muster-of-isengard] grima"
+      "[muster-of-isengard] grima",
+      "[muster-of-isengard] uruk-hai-drummer"
     ],
     "extra_profiles": []
   },
@@ -1943,15 +1944,21 @@
     "valid_warband_units": [
       "[muster-of-isengard] uruk-hai-warrior",
       "[muster-of-isengard] uruk-hai-berserker",
-      "[muster-of-isengard] uruk-hai-scout"
+      "[muster-of-isengard] uruk-hai-scout",
+      "[muster-of-isengard] uruk-hai-drummer"
     ],
+    "extra_profiles": []
+  },
+  "[muster-of-isengard] uruk-hai-drummer": {
+    "valid_warband_units": [],
     "extra_profiles": []
   },
   "[muster-of-isengard] uruk-hai-scout-captain": {
     "valid_warband_units": [
       "[muster-of-isengard] uruk-hai-warrior",
       "[muster-of-isengard] uruk-hai-berserker",
-      "[muster-of-isengard] uruk-hai-scout"
+      "[muster-of-isengard] uruk-hai-scout",
+      "[muster-of-isengard] uruk-hai-drummer"
     ],
     "extra_profiles": []
   },

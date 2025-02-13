@@ -531,6 +531,13 @@
     "warband_size": 0,
     "options": [
       {
+        "id": "OPT0879",
+        "name": "Horse and throwing spears",
+        "points": 7,
+        "type": "mount, throw",
+        "mount_name": "Horse"
+      },
+      {
         "id": "OPT0181",
         "name": "Horse",
         "points": 5,
@@ -9867,6 +9874,24 @@
       ]
     ],
     "warband_size": 12,
+    "options": []
+  },
+  "[muster-of-isengard] uruk-hai-drummer": {
+    "model_id": "[muster-of-isengard] uruk-hai-drummer",
+    "army_type": "Evil",
+    "army_list": "Muster of Isengard",
+    "profile_origin": "Isengard",
+    "name": "Uruk-Hai Drummer",
+    "unit_type": "Independent Hero",
+    "base_points": 35,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:1:1"
+      ]
+    ],
+    "warband_size": 0,
     "options": []
   },
   "[muster-of-isengard] grima": {
