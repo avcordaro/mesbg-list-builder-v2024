@@ -6,7 +6,8 @@
     "bugfixes": [
       "Added Asfaloth the the list of heroic mounts which has Might Will Fate trackers.",
       "Corrected the wording of Boromir's Horn of Gondor special rule.",
-      "Added Fortify Spirit to Gandalf the White's profile, which was missing from his magical powers."
+      "Added Fortify Spirit to Gandalf the White's profile, which was missing from his magical powers.",
+      "Fix the To The Death general wound VP's that were inverted"
     ]
   },
   "1.13": {

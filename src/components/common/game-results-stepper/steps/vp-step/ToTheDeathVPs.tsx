@@ -84,8 +84,6 @@ export const ToTheDeathVPs: FunctionComponent<QuestionListProps> = (props) => {
       heroKillVPs[1],
     ].reduce((a, b) => a - b, 0);
 
-    console.log({ playerVPs, opponentVPs });
-
     props.updateFormValues({
       victoryPoints: playerVPs,
       opponentVictoryPoints: opponentVPs,
@@ -159,45 +157,16 @@ export const ToTheDeathGeneralWoundVPs: FunctionComponent<
 > = ({ value, setValue }) => {
   const vpSpread = { killed: 5, oneWound: 3, wounded: 1, unharmed: 0 };
   const handleOnChange = (_: ChangeEvent, v: string) => {
-    setValue([vpSpread[v], value[1]]);
+    setValue([value[0], -vpSpread[v]]);
   };
   const handleOnChangeEnemy = (_: ChangeEvent, v: string) => {
-    setValue([value[0], -vpSpread[v]]);
+    setValue([vpSpread[v], value[1]]);
   };
   return (
     <Stack>
       <FormControl>
         <FormLabel>Your General</FormLabel>
         <RadioGroup row name="hero" onChange={handleOnChange}>
-          <FormControlLabel
-            value="unharmed"
-            checked={value[0] === 0}
-            control={<Radio />}
-            label="Unharmed"
-          />
-          <FormControlLabel
-            value="wounded"
-            checked={value[0] === 1}
-            control={<Radio />}
-            label="Wounded"
-          />
-          <FormControlLabel
-            value="oneWound"
-            checked={value[0] === 3}
-            control={<Radio />}
-            label="One wound left"
-          />
-          <FormControlLabel
-            value="killed"
-            checked={value[0] === 5}
-            control={<Radio />}
-            label="Killed"
-          />
-        </RadioGroup>
-      </FormControl>
-      <FormControl>
-        <FormLabel>Enemy General</FormLabel>
-        <RadioGroup row name="hero" onChange={handleOnChangeEnemy}>
           <FormControlLabel
             value="unharmed"
             checked={value[1] === 0}
@@ -219,6 +188,35 @@ export const ToTheDeathGeneralWoundVPs: FunctionComponent<
           <FormControlLabel
             value="killed"
             checked={value[1] === -5}
+            control={<Radio />}
+            label="Killed"
+          />
+        </RadioGroup>
+      </FormControl>
+      <FormControl>
+        <FormLabel>Enemy General</FormLabel>
+        <RadioGroup row name="hero" onChange={handleOnChangeEnemy}>
+          <FormControlLabel
+            value="unharmed"
+            checked={value[0] === 0}
+            control={<Radio />}
+            label="Unharmed"
+          />
+          <FormControlLabel
+            value="wounded"
+            checked={value[0] === 1}
+            control={<Radio />}
+            label="Wounded"
+          />
+          <FormControlLabel
+            value="oneWound"
+            checked={value[0] === 3}
+            control={<Radio />}
+            label="One wound left"
+          />
+          <FormControlLabel
+            value="killed"
+            checked={value[0] === 5}
             control={<Radio />}
             label="Killed"
           />
