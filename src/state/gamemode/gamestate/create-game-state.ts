@@ -1,3 +1,7 @@
+import { v4 } from "uuid";
+import { getSumOfUnits } from "../../../components/common/roster/totalUnits.ts";
+import { convertRosterToProfiles } from "../../../hooks/profile-utils/profiles.ts";
+import { Profile } from "../../../types/profile-data.types.ts";
 import {
   FreshUnit,
   isSelectedUnit,
@@ -49,6 +53,110 @@ const getHeroes = (roster: Roster): Trackable[] => {
     .filter((v) => !!v);
 };
 
+const mapListToTrackers = (
+  list: {
+    additional_stats: Profile["additional_stats"];
+    W?: number;
+    name?: string;
+  }[],
+  units: { amount: number; name: string }[],
+  includeSelf: boolean = true,
+) => {
+  return list
+    .map((unit) => ({
+      ...unit,
+      amount: units.find((profile) => profile.name === unit.name)?.amount || 1,
+    }))
+    .flatMap(({ amount, name, ...unit }) =>
+      Array.from({ length: amount }, (_, index) => ({
+        ...unit,
+        name: amount > 1 ? `${name} (${index + 1})` : name,
+      })),
+    )
+    .flatMap((tracker) => {
+      return includeSelf
+        ? [
+            { name: tracker.name, W: tracker.W },
+            ...tracker.additional_stats
+              .filter((additionalTracker) => Number(additionalTracker.W) >= 2)
+              .map(({ name, W }) => ({
+                name: name,
+                W: Number(W),
+              })),
+          ]
+        : tracker.additional_stats
+            .filter((additionalTracker) => Number(additionalTracker.W) >= 2)
+            .map(({ name, W }) => ({
+              name: name,
+              W: Number(W),
+            }));
+    })
+    .map((tracker) => ({
+      id: v4(),
+      name: tracker.name,
+      value: tracker.W,
+      maxValue: tracker.W,
+      permanent: true,
+    }));
+};
+
+const getListOfMultiWoundModels = (roster: Roster): CustomTracker[] => {
+  const units = getSumOfUnits(roster, { ignoreOptions: true }).map((unit) => ({
+    name: unit.name,
+    amount: unit.quantity,
+  }));
+
+  const { profiles } = convertRosterToProfiles(roster);
+
+  const trackers = mapListToTrackers(
+    profiles
+      .filter(({ type, W }) => !type?.includes("Hero") && Number(W) >= 2)
+      .map(({ name, W, additional_stats }) => ({
+        name,
+        W: Number(W),
+        additional_stats,
+      })),
+    units,
+  );
+
+  const specialCases = [
+    "Iron Hills Captain",
+    "War Mumak of Harad", // Howdah
+    "Mumak War Leader", // Howdah
+    "Gandalf the Grey", // His Cart
+    "Radagast the Brown", // Sleigh or Eagle
+    "Girion, Lord of Dale", // Windlance
+    "Bard the Bowman", // Windlance
+  ];
+  const excludedCases = [
+    "Haradrim Commander",
+    "Mahud Beastmaster Chieftain",
+    "Royal War Mumak",
+  ];
+  const additionalTrackers = mapListToTrackers(
+    profiles
+      .filter(
+        ({ type, name }) =>
+          type?.includes("Hero") && specialCases.includes(name),
+      )
+      .map(({ name, additional_stats }) => {
+        return {
+          name,
+          additional_stats: additional_stats
+            .filter(({ name }) => !excludedCases.includes(name))
+            .map((stat) => ({
+              ...stat,
+              name: `${name} - ${stat.name}`,
+            })),
+        };
+      }),
+    units,
+    false,
+  );
+
+  return [...trackers, ...additionalTrackers];
+};
+
 export const createGameState = (
   roster: Roster,
 ): {
@@ -58,7 +166,7 @@ export const createGameState = (
   heroCasualties: number;
 } => ({
   trackables: getHeroes(roster),
-  customTrackers: [],
+  customTrackers: getListOfMultiWoundModels(roster),
   casualties: 0,
   heroCasualties: 0,
 });

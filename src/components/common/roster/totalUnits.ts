@@ -1,7 +1,14 @@
 import { UnitType } from "../../../types/mesbg-data.types.ts";
 import { isSelectedUnit, Roster, SelectedUnit } from "../../../types/roster.ts";
 
-export const getSumOfUnits = (roster: Roster) => {
+const defaultOptions = {
+  ignoreOptions: true,
+};
+
+export const getSumOfUnits = (
+  roster: Roster,
+  options: { ignoreOptions: boolean } = defaultOptions,
+) => {
   const units = roster.warbands.flatMap((warband) => [
     warband.hero,
     ...warband.units,
@@ -13,11 +20,13 @@ export const getSumOfUnits = (roster: Roster) => {
       // clone the unit so not to update its 'quantity' by object reference in state.
       .map(Object.create)
       .map((unit: SelectedUnit) => {
-        const options = unit.options
+        if (options.ignoreOptions) return { key: unit.name, unit };
+
+        const unitOptions = unit.options
           .filter((o) => o.quantity)
           .map((o) => o.name + o.quantity)
           .join(",");
-        const key = unit.name + " [" + options + "]";
+        const key = unit.name + " [" + unitOptions + "]";
 
         return { key, unit };
       })
