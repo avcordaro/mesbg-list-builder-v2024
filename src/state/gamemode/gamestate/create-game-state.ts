@@ -1,3 +1,6 @@
+import { v4 } from "uuid";
+import { getSumOfUnits } from "../../../components/common/roster/totalUnits.ts";
+import { convertRosterToProfiles } from "../../../hooks/profile-utils/profiles.ts";
 import {
   FreshUnit,
   isSelectedUnit,
@@ -49,6 +52,34 @@ const getHeroes = (roster: Roster): Trackable[] => {
     .filter((v) => !!v);
 };
 
+const getListOfMultiWoundModels = (roster: Roster): CustomTracker[] => {
+  const units = getSumOfUnits(roster, { ignoreOptions: true }).map((unit) => ({
+    name: unit.name,
+    amount: unit.quantity,
+  }));
+
+  return convertRosterToProfiles(roster)
+    .profiles.filter(({ type, W }) => !type?.includes("Hero") && Number(W) >= 2)
+    .map(({ name, W, type }) => ({ name, W: Number(W), type }))
+    .map((unit) => ({
+      ...unit,
+      amount: units.find((profile) => profile.name === unit.name)?.amount || 1,
+    }))
+    .flatMap(({ amount, name, ...unit }) =>
+      Array.from({ length: amount }, (_, index) => ({
+        ...unit,
+        name: amount > 1 ? `${name} (${index + 1})` : name,
+      })),
+    )
+    .map((tracker) => ({
+      id: v4(),
+      name: tracker.name,
+      value: tracker.W,
+      maxValue: tracker.W,
+      permanent: true,
+    }));
+};
+
 export const createGameState = (
   roster: Roster,
 ): {
@@ -58,7 +89,7 @@ export const createGameState = (
   heroCasualties: number;
 } => ({
   trackables: getHeroes(roster),
-  customTrackers: [],
+  customTrackers: getListOfMultiWoundModels(roster),
   casualties: 0,
   heroCasualties: 0,
 });

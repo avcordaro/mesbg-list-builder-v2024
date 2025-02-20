@@ -46,9 +46,18 @@ function transformUnitToListOfProfiles(
   if (unit.name.includes("&") || unit.name === "Sharkey and Worm") {
     return profile.additional_stats.map((stats) => {
       const MWFW = unit.MWFW.find(([hName]) => hName === stats.name);
-      if (!MWFW) return { ...stats, HM: "-", HW: "-", HF: "-" };
+      if (!MWFW)
+        return {
+          ...stats,
+          HM: "-",
+          HW: "-",
+          HF: "-",
+          type: ["Snow Troll"].includes(stats.name)
+            ? "Warrior"
+            : unit.unit_type,
+        };
       const [HM, HW, HF] = MWFW[1].split(":");
-      return { ...stats, HM, HW, HF };
+      return { ...stats, HM, HW, HF, type: unit.unit_type };
     });
   }
 

@@ -1,7 +1,8 @@
 {
   "main": {
     "added": [
-      "Add the ability to add custom trackers to your games while using the Game Mode"
+      "Add the ability to add custom trackers to your games while using the Game Mode",
+      "Add trackers for most, if not all, of the multi-wound models"
     ],
     "changed": [
       "Applied the February 2025 FAQ changes to the list builder data."
