@@ -4,7 +4,7 @@ import {
   Roster,
   SelectedUnit,
 } from "../../../types/roster.ts";
-import { Trackable } from "./index.ts";
+import { CustomTracker, Trackable } from "./index.ts";
 
 const convertToStats = (
   name: string | number,
@@ -53,10 +53,12 @@ export const createGameState = (
   roster: Roster,
 ): {
   trackables: Trackable[];
+  customTrackers: CustomTracker[];
   casualties: number;
   heroCasualties: number;
 } => ({
   trackables: getHeroes(roster),
+  customTrackers: [],
   casualties: 0,
   heroCasualties: 0,
 });

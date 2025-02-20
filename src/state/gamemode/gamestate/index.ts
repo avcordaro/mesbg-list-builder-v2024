@@ -11,8 +11,15 @@ export type Trackable = {
   leader: boolean;
 };
 
+export type CustomTracker = {
+  id: string;
+  name: string;
+  value: number;
+};
+
 export type Game = {
   trackables: Trackable[];
+  customTrackers: CustomTracker[];
   casualties: number;
   heroCasualties: number;
   started: number;
