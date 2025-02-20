@@ -8,15 +8,15 @@ type MwfwUpdateCallback = (newValue: number) => void;
 
 export const Counter: FunctionComponent<{
   value: number;
-  maxValue: number;
+  maxValue?: number;
   update: MwfwUpdateCallback;
-  alive: boolean;
-}> = (props) => {
+  alive?: boolean;
+}> = ({ alive = true, maxValue, update, value }) => {
   const increment = () => {
-    props.update(props.value + 1);
+    update(value + 1);
   };
   const decrement = () => {
-    props.update(props.value - 1);
+    update(value - 1);
   };
 
   return (
@@ -27,15 +27,15 @@ export const Counter: FunctionComponent<{
         iconColor="white"
         backgroundColor="lightgrey"
         iconPadding=".4rem"
-        disabled={props.value <= 0 || !props.alive}
+        disabled={value <= 0 || !alive}
       />
 
       <Typography
         variant="body1"
         sx={{ fontSize: "1.4rem", fontWeight: "bolder" }}
-        color={props.value === 0 ? "error" : "inherit"}
+        color={value === 0 ? "error" : "inherit"}
       >
-        {props.value}
+        {value}
       </Typography>
 
       <SquareIconButton
@@ -44,7 +44,7 @@ export const Counter: FunctionComponent<{
         iconColor="white"
         backgroundColor="lightgrey"
         iconPadding=".4rem"
-        disabled={props.value >= props.maxValue || !props.alive}
+        disabled={(!!maxValue && value >= maxValue) || !alive}
       />
     </Stack>
   );
