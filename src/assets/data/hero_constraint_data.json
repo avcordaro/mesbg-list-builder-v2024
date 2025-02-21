@@ -1643,7 +1643,9 @@
     "valid_warband_units": [
       "[legions-of-mordor] haradrim-warrior"
     ],
-    "extra_profiles": []
+    "extra_profiles": [
+      "Royal War Mumak"
+    ]
   },
   "[legions-of-mordor] ringwraith": {
     "valid_warband_units": [
