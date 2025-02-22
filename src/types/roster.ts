@@ -15,7 +15,7 @@ export type FreshUnit = {
 export type Warband = {
   id: string;
   hero: SelectedUnit | null;
-  units: (FreshUnit | SelectedUnit)[];
+  units: (FreshUnit | SelectedUnit | SiegeEquipment)[];
   meta: {
     num: number;
     points: number;

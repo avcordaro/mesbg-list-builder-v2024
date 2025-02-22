@@ -1,10 +1,12 @@
-import { Close, Delete } from "@mui/icons-material";
-import { Button, IconButton, ButtonGroup, Stack, Tooltip } from "@mui/material";
+import { Close, Delete, Refresh } from "@mui/icons-material";
+import { Button, ButtonGroup, IconButton, Stack, Tooltip } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
 import { BiPencil } from "react-icons/bi";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useUpdateRoster } from "../../../hooks/useUpdateRoster.ts";
 import { useAppState } from "../../../state/app";
 import { Roster } from "../../../types/roster.ts";
 import { ModalTypes } from "../../modal/modals.tsx";
@@ -22,7 +24,9 @@ export type RosterInformationProps = {
 export const RosterInformation: FunctionComponent<RosterInformationProps> = (
   props,
 ) => {
+  const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
+  const { isOutdatedRoster, updateRoster } = useUpdateRoster();
   const screen = useScreenSize();
   return (
     <Stack gap={2} sx={{ p: 2 }}>
@@ -45,7 +49,6 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
             </Typography>
           </Box>
         </Stack>
-
         <Typography
           variant="subtitle1"
           className="middle-earth"
@@ -53,8 +56,48 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
             color: ({ palette }) => palette.text.secondary,
           }}
         >
+          <small>{props.roster.armyList}</small>
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          sx={{
+            mt: -0.5,
+            color: ({ palette }) => palette.text.secondary,
+            visibility: isOutdatedRoster() ? "visible" : "hidden",
+          }}
+        >
           <small>
-            <i>{props.roster.armyList}</i>
+            <sub>
+              Built in v{props.roster.version}, current version {BUILD_VERSION}{" "}
+              <span
+                style={{
+                  marginLeft: "8px",
+                  display: "inline-flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                (
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    updateRoster();
+                  }}
+                  style={{
+                    display: "inline-flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    color: palette.primary.main,
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                  }}
+                >
+                  <Refresh sx={{ fontSize: "12px" }} />
+                  Update
+                </a>
+                )
+              </span>
+            </sub>
           </small>
         </Typography>
       </Box>

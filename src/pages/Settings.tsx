@@ -133,7 +133,6 @@ export const Settings = () => {
           }
           value={preferences.autoUpdateUnitData}
           onChange={updatePreference("autoUpdateUnitData")}
-          disabled
         />
 
         <SettingsOption
