@@ -48,6 +48,14 @@ function unusedAdditionalStats(
       }
     }
 
+    if (unit.name === "Iron Hills Captain") {
+      if (stats.name === "Iron Hills Chariot") {
+        return !!unit.options.find(
+          selectedOptionWithName("Iron Hills Chariot"),
+        );
+      }
+    }
+
     return true;
   };
 }

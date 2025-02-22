@@ -42,14 +42,6 @@ export const VictoryPointsStep: FunctionComponent<StepProps> = ({
     const [additionalVPs, additionalOpponentVPs] = additionalVictoryPoints;
     const tpvs = victoryPoints + additionalVPs;
     const tovs = opponentVictoryPoints + additionalOpponentVPs;
-    console.log({
-      victoryPoints,
-      opponentVictoryPoints,
-      tpvs,
-      tovs,
-      additionalVPs,
-      additionalOpponentVPs,
-    });
     updateFormValues({
       victoryPoints: tpvs,
       opponentVictoryPoints: tovs,
