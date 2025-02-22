@@ -37,7 +37,7 @@ const CheckboxList = ({ amount }: { amount: string }) => {
 
 export const StatTrackers = () => {
   const { roster } = useRosterInformation();
-  const { trackables } = createGameState(roster);
+  const { trackables, customTrackers } = createGameState(roster);
 
   const rows = trackables.map((hero) => {
     const [might, will, fate, wounds] = hero.MWFW.split(":");
@@ -47,6 +47,13 @@ export const StatTrackers = () => {
       will,
       fate,
       wounds,
+    };
+  });
+
+  const additionalWoundTrackers = customTrackers.map((extraTracker) => {
+    return {
+      name: extraTracker.name,
+      wounds: extraTracker.value,
     };
   });
 
@@ -83,12 +90,7 @@ export const StatTrackers = () => {
           <TableBody>
             {rows.map((row, index) => (
               <TableRow key={index}>
-                <TableCell sx={cellStyling}>
-                  {row.name === "Azog's Lieutenant"
-                    ? row.name +
-                      ` ( ${index + 1 - rows.findIndex(({ name }) => name === row.name)} )`
-                    : row.name}
-                </TableCell>
+                <TableCell sx={cellStyling}>{row.name}</TableCell>
                 <TableCell sx={cellStyling}>
                   <CheckboxList amount={row.might} />
                 </TableCell>
@@ -100,6 +102,17 @@ export const StatTrackers = () => {
                 </TableCell>
                 <TableCell sx={cellStyling}>
                   <CheckboxList amount={row.wounds} />
+                </TableCell>
+              </TableRow>
+            ))}
+            {additionalWoundTrackers.map((row, index) => (
+              <TableRow key={index}>
+                <TableCell sx={cellStyling}>{row.name}</TableCell>
+                <TableCell sx={cellStyling} />
+                <TableCell sx={cellStyling} />
+                <TableCell sx={cellStyling} />
+                <TableCell sx={cellStyling}>
+                  <CheckboxList amount={row.wounds.toString()} />
                 </TableCell>
               </TableRow>
             ))}

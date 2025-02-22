@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added the additional multi-wound trackers to the PDF stat trackers"
+    ],
     "bugfixes": [
       "Corrected the wording for the Mercenary Ambush special rule for Goblin Mercenaries."
     ]
