@@ -11,6 +11,7 @@ import { useMwfMutations } from "../../../hooks/useMwfMutations.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useUserPreferences } from "../../../state/preference";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Option } from "../../../types/mesbg-data.types.ts";
 import { SelectedUnit } from "../../../types/roster.ts";
@@ -61,6 +62,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const mwf = useMwfMutations();
   const { warnings, available, selected, overExceededCollection } =
     useCollectionWarnings(unit);
+  const { preferences } = useUserPreferences();
 
   const valid =
     !followerOf ||
@@ -274,8 +276,18 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             />
           )}
           <CardActionButtons
-            remove={unit.compulsory === true ? null : remove}
-            reselect={unit.compulsory === true ? null : reselect}
+            remove={
+              unit.compulsory === true &&
+              !preferences.allowCompulsoryGeneralDelete
+                ? null
+                : remove
+            }
+            reselect={
+              unit.compulsory === true &&
+              !preferences.allowCompulsoryGeneralDelete
+                ? null
+                : reselect
+            }
             openProfileCard={openProfileCard}
             warbandNum={warbandNum}
             index={index}
@@ -458,8 +470,18 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               )}
             </Collapse>
             <CardActionButtons
-              remove={unit.compulsory === true ? null : remove}
-              reselect={unit.compulsory === true ? null : reselect}
+              remove={
+                unit.compulsory === true &&
+                !preferences.allowCompulsoryGeneralDelete
+                  ? null
+                  : remove
+              }
+              reselect={
+                unit.compulsory === true &&
+                !preferences.allowCompulsoryGeneralDelete
+                  ? null
+                  : reselect
+              }
               openProfileCard={openProfileCard}
               warbandNum={warbandNum}
               index={index}

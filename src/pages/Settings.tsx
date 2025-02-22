@@ -3,6 +3,7 @@ import {
   CategoryOutlined,
   ChecklistRtl,
   DarkMode,
+  PersonRemove,
   PhotoCameraOutlined,
   SwitchAccessShortcut,
   Update,
@@ -90,6 +91,7 @@ export const Settings = () => {
           value={mode === "dark"}
           onChange={toggleTheme}
         />
+
         <SettingsOption
           icon={<ChecklistRtl />}
           label="Display roster summary toolbar when overview sidebar collapses"
@@ -100,6 +102,25 @@ export const Settings = () => {
           }
           value={preferences.mobileRosterToolbar}
           onChange={updatePreference("mobileRosterToolbar")}
+        />
+        <SettingsOption
+          icon={<PhotoCameraOutlined />}
+          label="Use the old roster summary table"
+          description={
+            "If you dislike the new Roster Summary screen you can go back to the old v2018 'black and white' table layout."
+          }
+          value={preferences.oldShareScreen || false}
+          onChange={updatePreference("oldShareScreen")}
+        />
+
+        <SettingsOption
+          icon={<PersonRemove />}
+          label="Enable removing mandatory army generals"
+          description={
+            'Certain tournaments allow you to remove mandatory army generals in favor of smaller list. Enabling this allows you to remove the "who is always the Army\'s General" unit from your rosters.'
+          }
+          value={preferences.allowCompulsoryGeneralDelete || false}
+          onChange={updatePreference("allowCompulsoryGeneralDelete")}
         />
 
         <SettingsOption
@@ -125,7 +146,6 @@ export const Settings = () => {
           value={preferences.colorCodedRules}
           onChange={updatePreference("colorCodedRules")}
         />
-
         <SettingsOption
           icon={<SwitchAccessShortcut />}
           label={"Move 'active' special rules and magical powers to the top"}
@@ -143,16 +163,6 @@ export const Settings = () => {
           description="Receive warnings/notifications if your army list includes models outside your collection or exceeds the quantity you own, ensuring your lists stay within the limits of your personal inventory."
           value={preferences.collectionWarnings || false}
           onChange={updatePreference("collectionWarnings")}
-        />
-
-        <SettingsOption
-          icon={<PhotoCameraOutlined />}
-          label="Use the old roster summary table"
-          description={
-            "If you dislike the new Roster Summary screen you can go back to the old v2018 'black and white' table layout."
-          }
-          value={preferences.oldShareScreen || false}
-          onChange={updatePreference("oldShareScreen")}
         />
       </List>
 

@@ -2,6 +2,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { GiQueenCrown } from "react-icons/gi";
+import { useUserPreferences } from "../../../state/preference";
 import { CustomSwitch as Switch } from "../../common/switch/CustomSwitch.tsx";
 
 export type HeroLeaderToggleProps = {
@@ -19,7 +20,14 @@ export const LeaderToggle: FunctionComponent<HeroLeaderToggleProps> = ({
   testId,
   testName,
 }) => {
-  if (!isLeader && isLeaderCompulsory) return <></>;
+  const { preferences } = useUserPreferences();
+
+  if (
+    !isLeader &&
+    isLeaderCompulsory &&
+    !preferences.allowCompulsoryGeneralDelete
+  )
+    return <></>;
 
   const textColor = isLeader ? "success" : "default";
   return (
@@ -36,7 +44,9 @@ export const LeaderToggle: FunctionComponent<HeroLeaderToggleProps> = ({
         name="leader-toggle"
         checked={isLeader}
         color={textColor}
-        disabled={isLeaderCompulsory}
+        disabled={
+          isLeaderCompulsory && !preferences.allowCompulsoryGeneralDelete
+        }
         onChange={(_, checked) => handleToggle(checked)}
         data-test-id={testId}
         data-test-unit-name={testName}

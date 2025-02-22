@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "added": [
+      "Added user preference option to enable removing mandatory army generals from rosters"
+    ]
+  },
   "1.14": {
     "added": [
       "Add the ability to add custom trackers to your games while using the Game Mode",

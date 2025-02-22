@@ -13,6 +13,7 @@ import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
 import { useWarbandMutations } from "../../../../hooks/useWarbandMutations.ts";
+import { useUserPreferences } from "../../../../state/preference";
 import { Warband } from "../../../../types/roster.ts";
 import { SquareIconButton } from "../../icon-button/SquareIconButton.tsx";
 
@@ -38,7 +39,11 @@ export const WarbandActionButtons: FunctionComponent<
   const mutations = useWarbandMutations(armyId, warbandId);
   const { getAdjustedMetaData } = useRosterInformation();
   const { leaderCompulsory, leader } = getAdjustedMetaData();
-  const hasCompulsoryLeader = leaderCompulsory && leader === warbandId;
+  const { preferences } = useUserPreferences();
+  const hasCompulsoryLeader =
+    leaderCompulsory &&
+    leader === warbandId &&
+    !preferences.allowCompulsoryGeneralDelete;
   const iconStyle = { fontSize: "1.5rem" };
   const iconPadding = ".5rem";
   return (

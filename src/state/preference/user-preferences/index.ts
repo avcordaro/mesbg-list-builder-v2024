@@ -7,7 +7,8 @@ export type Preferences =
   | "splitActiveRules"
   | "collectionWarnings"
   | "darkMode"
-  | "oldShareScreen";
+  | "oldShareScreen"
+  | "allowCompulsoryGeneralDelete";
 
 export type PreferenceState = {
   preferences: Record<Preferences, boolean>;
@@ -23,6 +24,7 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     oldShareScreen: false,
     collectionWarnings: false,
     darkMode: false,
+    allowCompulsoryGeneralDelete: false,
   },
 };
 
