@@ -1,6 +1,8 @@
 import data from "../assets/data/warning_rules.json";
+import { useUserPreferences } from "../state/preference";
 import { isSelectedUnit, Roster } from "../types/roster.ts";
 import { WarningRule, WarningRules } from "../types/warning-rules.types.ts";
+import { byHeroicTier } from "./profile-utils/sorting.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 function checkRequiresOne(rule: WarningRule, setOfModelIds: string[]): boolean {
@@ -21,7 +23,10 @@ function checkCompulsory(rule: WarningRule, setOfModelIds: string[]): boolean {
   );
 }
 
-function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
+function extraScriptedRosterWarnings(
+  roster: Roster,
+  ignoreCompulsoryArmyGeneral: boolean,
+): WarningRule[] {
   const warnings = [];
 
   if (
@@ -121,6 +126,51 @@ function extraScriptedRosterWarnings(roster: Roster): WarningRule[] {
     });
   }
 
+  if (!roster.metadata.leader) {
+    warnings.push({
+      warning: `An army list should always have an army general.`,
+      type: undefined,
+      dependencies: [],
+    });
+  }
+
+  if (
+    roster.metadata.leader &&
+    (!roster.metadata.leaderCompulsory || ignoreCompulsoryArmyGeneral)
+  ) {
+    const heroicTiers = roster.warbands
+      .filter(
+        ({ hero }) => isSelectedUnit(hero) && hero.unit_type.includes("Hero"),
+      )
+      .map(({ hero }) => hero)
+      .sort(byHeroicTier)
+      .map(({ unit_type }) => unit_type)
+      .filter((t, i, s) => s.findIndex((o) => o === t) === i);
+
+    const leaderTier = roster.warbands.find(
+      (wb) => wb.id === roster.metadata.leader,
+    )?.hero?.unit_type;
+    const leaderTierIndex = heroicTiers.findIndex(
+      (tier) => tier === leaderTier,
+    );
+
+    if (leaderTierIndex === -1) {
+      // warband was deleted... so there actually isn't a leader...
+      warnings.push({
+        warning: `An army list should always have an army general.`,
+        type: undefined,
+        dependencies: [],
+      });
+    } else if (leaderTierIndex !== 0) {
+      // leader is not the highest available heroic tier...
+      warnings.push({
+        warning: `The army general should always be the hero with the highest tier available. You should select a ${heroicTiers[0]} to be your army general.`,
+        type: undefined,
+        dependencies: [],
+      });
+    }
+  }
+
   return warnings;
 }
 
@@ -141,13 +191,17 @@ function isActiveRule(setOfModelIds: string[]) {
 
 export const useRosterWarnings = (): WarningRule[] => {
   const rosterInformation = useRosterInformation();
+  const { preferences } = useUserPreferences();
   const setOfModelIds = rosterInformation.getSetOfModelIds();
   const allWarnings = data as WarningRules;
 
   const possibleWarnings = [
     ...(allWarnings[rosterInformation.roster.armyList] || []),
     ...setOfModelIds.flatMap((model) => allWarnings[model]),
-    ...extraScriptedRosterWarnings(rosterInformation.roster),
+    ...extraScriptedRosterWarnings(
+      rosterInformation.roster,
+      preferences.allowCompulsoryGeneralDelete,
+    ),
   ].filter((v) => !!v);
 
   if (!possibleWarnings || possibleWarnings.length === 0) return [];
