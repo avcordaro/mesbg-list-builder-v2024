@@ -13,7 +13,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { Link } from "../../components/common/link/Link.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
@@ -21,9 +21,15 @@ import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
 import { GroupOptionsPopoverMenu } from "./components/RosterGroupPopoverMenu.tsx";
 import {
+  RosterSortButton,
+  SortField,
+  SortOrder,
+} from "./components/RosterSortButton.tsx";
+import {
   RosterSummaryCard,
   RosterSummaryCardProps,
 } from "./components/RosterSummaryCard.tsx";
+import { getComparator } from "./utils/sorting.ts";
 
 export const RosterGroup: FunctionComponent = () => {
   const { rosters, updateRoster } = useRosterBuildingState();
@@ -33,6 +39,7 @@ export const RosterGroup: FunctionComponent = () => {
   const [filter, setFilter] = useState("");
   const { palette } = useTheme();
   const { mode } = useThemeContext();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
     .filter(
@@ -41,11 +48,11 @@ export const RosterGroup: FunctionComponent = () => {
         (roster.name.toLowerCase().includes(filter.toLowerCase()) ||
           roster.armyList.toLowerCase().includes(filter.toLowerCase())),
     )
-    .sort((a, b) => a.name.localeCompare(b.name))
     .map((roster) => {
       const metadata = getAdjustedMetaData(roster);
       return { roster: { ...roster, metadata } };
-    });
+    })
+    .sort(getComparator(searchParams));
 
   const removeFromGroup = "remove-from-group";
 
@@ -65,6 +72,13 @@ export const RosterGroup: FunctionComponent = () => {
       }
     }
   }
+
+  const setSortParams = (field: SortField, order: SortOrder) => {
+    const params = new URLSearchParams();
+    params.set("sortBy", field);
+    params.set("direction", order);
+    setSearchParams(params, { preventScrollReset: true });
+  };
 
   return (
     <Container maxWidth={false} sx={{ mt: 2 }}>
@@ -102,12 +116,11 @@ export const RosterGroup: FunctionComponent = () => {
             </Breadcrumbs>
           </Stack>
 
-          <Stack sx={{ py: 2 }}>
+          <Stack direction="row" gap={2} sx={{ py: 2, width: "90%" }}>
             <TextField
               id="database-filter-input"
               label="Filter"
               placeholder="Start typing to filter"
-              size="small"
               value={filter}
               sx={{
                 maxWidth: "80ch",
@@ -134,6 +147,11 @@ export const RosterGroup: FunctionComponent = () => {
                   ),
                 },
               }}
+            />
+            <RosterSortButton
+              setOrdering={setSortParams}
+              order={searchParams.get("direction") as SortOrder}
+              field={searchParams.get("sortBy") as SortField}
             />
           </Stack>
 

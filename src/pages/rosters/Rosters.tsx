@@ -13,6 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../state/app";
@@ -21,9 +22,15 @@ import { Roster } from "../../types/roster.ts";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
 import { RosterGroupCard } from "./components/RosterGroupCard.tsx";
 import {
+  RosterSortButton,
+  SortField,
+  SortOrder,
+} from "./components/RosterSortButton.tsx";
+import {
   RosterSummaryCard,
   RosterSummaryCardProps,
 } from "./components/RosterSummaryCard.tsx";
+import { getComparator } from "./utils/sorting.ts";
 
 export const Rosters: FunctionComponent = () => {
   const { rosters, updateRoster } = useRosterBuildingState();
@@ -31,6 +38,7 @@ export const Rosters: FunctionComponent = () => {
   const [draggingRoster, setDraggingRoster] = useState<string>();
   const { setCurrentModal } = useAppState();
   const [filter, setFilter] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
     .filter((roster) => !roster.group)
@@ -85,6 +93,13 @@ export const Rosters: FunctionComponent = () => {
     });
   }
 
+  const setSortParams = (field: SortField, order: SortOrder) => {
+    const params = new URLSearchParams();
+    params.set("sortBy", field);
+    params.set("direction", order);
+    setSearchParams(params, { preventScrollReset: true });
+  };
+
   return (
     <Container maxWidth={false} sx={{ mt: 2 }}>
       <Stack>
@@ -96,12 +111,11 @@ export const Rosters: FunctionComponent = () => {
           roster onto another, or onto an existing group.
         </Typography>
 
-        <Stack sx={{ py: 2 }}>
+        <Stack direction="row" gap={2} sx={{ py: 2, width: "90%" }}>
           <TextField
             id="database-filter-input"
             label="Filter"
             placeholder="Start typing to filter"
-            size="small"
             value={filter}
             sx={{
               maxWidth: "80ch",
@@ -129,6 +143,11 @@ export const Rosters: FunctionComponent = () => {
               },
             }}
           />
+          <RosterSortButton
+            setOrdering={setSortParams}
+            order={searchParams.get("direction") as SortOrder}
+            field={searchParams.get("sortBy") as SortField}
+          />
         </Stack>
 
         {filter ? (
@@ -142,7 +161,9 @@ export const Rosters: FunctionComponent = () => {
                   roster.group?.toLowerCase().includes(f)
                 );
               })
-              .map((roster) => (
+              .map((roster) => ({ roster }))
+              .sort(getComparator(searchParams))
+              .map(({ roster }) => (
                 <RosterSummaryCard key={roster.id} roster={roster} />
               ))}
           </Stack>
@@ -186,68 +207,76 @@ export const Rosters: FunctionComponent = () => {
                 ),
               )}
 
-              {rosterLinks.map((card, index) => (
-                <Droppable key={index} droppableId={"roster:" + card.roster.id}>
-                  {(provided, snapshot) => {
-                    return (
-                      <Box
-                        ref={provided.innerRef}
-                        sx={
-                          snapshot.isDraggingOver
-                            ? {
-                                backgroundColor: "#FFFFFF33",
-                                border: "1px dashed black",
-                                p: "calc(0.5rem - 2px)",
-                                transition: "padding 0.3s ease",
-                              }
-                            : {
-                                p: "0.5rem",
-                                transition: "padding 0.3s ease",
-                              }
-                        }
-                      >
-                        <Draggable draggableId={card.roster.id} index={index}>
-                          {(draggableProvided, draggableSnapshot) => {
-                            const { style, ...props } =
-                              draggableProvided.draggableProps;
-                            return (
-                              <Box
-                                ref={draggableProvided.innerRef}
-                                {...draggableProvided.dragHandleProps}
-                                {...props}
-                                style={
-                                  draggingRoster === card.roster.id ? style : {}
+              {rosterLinks
+                .sort(getComparator(searchParams))
+                .map((card, index) => (
+                  <Droppable
+                    key={index}
+                    droppableId={"roster:" + card.roster.id}
+                  >
+                    {(provided, snapshot) => {
+                      return (
+                        <Box
+                          ref={provided.innerRef}
+                          sx={
+                            snapshot.isDraggingOver
+                              ? {
+                                  backgroundColor: "#FFFFFF33",
+                                  border: "1px dashed black",
+                                  p: "calc(0.5rem - 2px)",
+                                  transition: "padding 0.3s ease",
                                 }
-                              >
+                              : {
+                                  p: "0.5rem",
+                                  transition: "padding 0.3s ease",
+                                }
+                          }
+                        >
+                          <Draggable draggableId={card.roster.id} index={index}>
+                            {(draggableProvided, draggableSnapshot) => {
+                              const { style, ...props } =
+                                draggableProvided.draggableProps;
+                              return (
                                 <Box
-                                  sx={
-                                    draggableSnapshot.isDragging
-                                      ? {
-                                          transform: "rotate(1.5deg)",
-                                          boxShadow: "1rem 1rem 1rem #00000099",
-                                          transition:
-                                            "transform 0.3s ease, boxShadow 0.3s ease",
-                                        }
-                                      : {
-                                          transition:
-                                            "transform 0.3s ease, boxShadow 0.3s ease",
-                                        }
+                                  ref={draggableProvided.innerRef}
+                                  {...draggableProvided.dragHandleProps}
+                                  {...props}
+                                  style={
+                                    draggingRoster === card.roster.id
+                                      ? style
+                                      : {}
                                   }
                                 >
-                                  <RosterSummaryCard roster={card.roster} />
+                                  <Box
+                                    sx={
+                                      draggableSnapshot.isDragging
+                                        ? {
+                                            transform: "rotate(1.5deg)",
+                                            boxShadow:
+                                              "1rem 1rem 1rem #00000099",
+                                            transition:
+                                              "transform 0.3s ease, boxShadow 0.3s ease",
+                                          }
+                                        : {
+                                            transition:
+                                              "transform 0.3s ease, boxShadow 0.3s ease",
+                                          }
+                                    }
+                                  >
+                                    <RosterSummaryCard roster={card.roster} />
+                                  </Box>
                                 </Box>
-                              </Box>
-                            );
-                          }}
-                        </Draggable>
-                        <Box sx={{ "&>*": { height: "0px !important" } }}>
-                          {provided.placeholder}
+                              );
+                            }}
+                          </Draggable>
+                          <Box sx={{ "&>*": { height: "0px !important" } }}>
+                            {provided.placeholder}
+                          </Box>
                         </Box>
-                      </Box>
-                    );
-                  }}
-                </Droppable>
-              ))}
+                      );
+                    }}
+                  </Droppable>
+                ))}
             </DragDropContext>
 
             <Box sx={{ p: 1 }}>

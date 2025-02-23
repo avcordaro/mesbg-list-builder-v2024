@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "added": [
+      "Enabled sorting rosters based on their name, army list, points and total units."
+    ]
+  },
   "1.16": {
     "added": [
       "Added the additional multi-wound trackers to the PDF stat trackers"
