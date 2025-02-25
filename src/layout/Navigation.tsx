@@ -43,6 +43,7 @@ import { HiFire } from "react-icons/hi";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
+import { icons as groupIcons } from "../components/common/group-icon/icons.tsx";
 import { FactionLogo } from "../components/common/images/FactionLogo.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
@@ -251,9 +252,10 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { rosterId } = useParams();
-  const { rosters } = useRosterBuildingState();
+  const { rosters, groups } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
   const { startNewGame, gameState } = useGameModeState();
+  const groupMap = Object.fromEntries(groups.map((group) => [group.id, group]));
 
   const groupedRosters = rosters.reduce(
     (groups, roster) => {
@@ -299,8 +301,8 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             action: () => {},
             active:
               location.pathname === `/rosters/${encodeURIComponent(group)}`,
-            icon: <FolderOutlined />,
-            label: group,
+            icon: groupIcons[groupMap[group]?.icon] || <FolderOutlined />,
+            label: groupMap[group]?.name || "Unknown name",
             children: [
               ...groupRosters
                 .sort((a, b) => a.name.localeCompare(b.name))

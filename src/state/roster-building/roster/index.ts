@@ -56,13 +56,21 @@ const initialState = {
   rosters: [],
 };
 
-export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set) => ({
+export const rosterSlice: Slice<RosterBuildingState, RosterState> = (
+  set,
+  get,
+) => ({
   ...initialState,
 
   createRoster: (roster) => {
     set(
       (state) => ({
         rosters: [...state.rosters, roster],
+        groups: get().groups.map((group) =>
+          roster.group && roster.group === group.id
+            ? { ...group, rosters: [...group.rosters, roster.id] }
+            : group,
+        ),
       }),
       undefined,
       "CREATE_ROSTER",
@@ -85,6 +93,16 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set) => ({
     set(
       (state) => ({
         rosters: state.rosters.filter(({ id }) => roster.id !== id),
+        groups: get().groups.map((group) =>
+          roster.group && roster.group === group.id
+            ? {
+                ...group,
+                rosters: group.rosters.filter(
+                  (rosterId) => rosterId !== roster.id,
+                ),
+              }
+            : group,
+        ),
       }),
       undefined,
       "DELETE_ROSTER",

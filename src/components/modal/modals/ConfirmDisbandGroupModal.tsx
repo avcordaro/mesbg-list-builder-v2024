@@ -12,24 +12,25 @@ export const ConfirmDisbandGroupModal = () => {
     modalContext: { groupId, redirect },
     triggerAlert,
   } = useAppState();
-  const { updateRoster, rosters } = useRosterBuildingState();
+  const { disbandGroup, groups } = useRosterBuildingState();
+  const id = groups.find((group) => group.slug === groupId)?.id;
   const navigate = useNavigate();
 
   const handleConfirmDisband = (e) => {
     e.preventDefault();
 
-    rosters
-      .filter((roster) => roster.group === groupId)
-      .forEach((roster) => {
-        updateRoster({
-          ...roster,
-          group: null,
-        });
-      });
-    if (redirect !== true) {
-      navigate("/rosters");
+    console.log(id);
+
+    if (id) {
+      disbandGroup(id);
+      if (redirect === true) {
+        navigate("/rosters");
+      }
+      triggerAlert(AlertTypes.DISBAND_GROUP_SUCCES);
+    } else {
+      triggerAlert(AlertTypes.DISBAND_GROUP_FAILED);
     }
-    triggerAlert(AlertTypes.DISBAND_GROUP_SUCCES);
+
     closeModal();
   };
 

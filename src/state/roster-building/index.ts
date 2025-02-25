@@ -4,9 +4,11 @@ import { create, StoreApi, useStore } from "zustand";
 
 import { createJSONStorage, devtools, persist } from "zustand/middleware";
 import { builderSlice, BuilderState } from "./builder-selection";
+import { groupSlice, RosterGroupState } from "./groups";
+import { migrations } from "./migrations.ts";
 import { rosterSlice, RosterState } from "./roster";
 
-export type RosterBuildingState = RosterState & BuilderState;
+export type RosterBuildingState = RosterState & BuilderState & RosterGroupState;
 
 export const useRosterBuildingState = create<
   RosterBuildingState,
@@ -22,6 +24,7 @@ export const useRosterBuildingState = create<
         (...args) => ({
           ...rosterSlice(...args),
           ...builderSlice(...args),
+          ...groupSlice(...args),
         }),
         {
           partialize: (state) => ({
@@ -35,9 +38,12 @@ export const useRosterBuildingState = create<
       {
         name: "mlb-rosters",
         storage: createJSONStorage(() => localStorage),
+        version: 1,
         partialize: (state) => ({
           rosters: state.rosters,
+          groups: state.groups,
         }),
+        migrate: (state, version) => migrations(state, version),
       },
     ),
   ),

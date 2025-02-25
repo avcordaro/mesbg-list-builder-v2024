@@ -2,17 +2,25 @@ import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
 import { useState } from "react";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
-import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
+import { Roster } from "../../../types/roster.ts";
+import { slugify, withSuffix } from "../../../utils/string.ts";
+import {
+  GroupIconSelector,
+  Option as IconOption,
+} from "../../common/group-icon/GroupIconSelector.tsx";
 
 export const CreateNewRosterGroupModal = () => {
   const {
     closeModal,
     modalContext: { rosters = [] },
   } = useAppState();
-  const { updateRoster } = useRosterBuildingState();
+  const { createGroup } = useRosterBuildingState();
 
   const [rosterGroupName, setRosterGroupName] = useState("");
   const [rosterGroupNameValid, setRosterGroupNameValid] = useState(true);
+  const [rosterGroupIcon, setRosterGroupIcon] = useState<IconOption>({
+    name: "",
+  } as IconOption);
 
   function updateRosterName(name: string) {
     setRosterGroupName(name);
@@ -28,11 +36,11 @@ export const CreateNewRosterGroupModal = () => {
     setRosterGroupNameValid(nameValid);
 
     if (nameValid) {
-      rosters.forEach((roster) => {
-        updateRoster({
-          ...roster,
-          group: rosterGroupNameValue,
-        });
+      createGroup({
+        name: rosterGroupNameValue,
+        slug: withSuffix(slugify(rosterGroupNameValue)),
+        rosters: rosters.map((roster: Roster) => roster.id),
+        icon: rosterGroupIcon?.name,
       });
 
       closeModal();
@@ -42,11 +50,6 @@ export const CreateNewRosterGroupModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 2, flexDirection: "column" }}>
-        <CustomAlert severity="info" title="Create Group">
-          Choose a name for your roster group. Keep in mind that reusing an
-          existing name will add the rosters to that group instead!
-        </CustomAlert>
-
         <TextField
           fullWidth
           label="Group name"
@@ -56,6 +59,10 @@ export const CreateNewRosterGroupModal = () => {
           }
           value={rosterGroupName}
           onChange={(e) => updateRosterName(e.target.value)}
+        />
+        <GroupIconSelector
+          selectedIcon={rosterGroupIcon}
+          setSelectedIcon={setRosterGroupIcon}
         />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>

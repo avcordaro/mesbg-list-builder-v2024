@@ -64,7 +64,7 @@ export const GroupOptionsPopoverMenu = ({
           <ListItemIcon>
             <Edit fontSize="small" />
           </ListItemIcon>
-          <ListItemText> Rename group</ListItemText>
+          <ListItemText> Update group</ListItemText>
         </MenuItem>
         <MenuItem onClick={handleDisband}>
           <ListItemIcon>

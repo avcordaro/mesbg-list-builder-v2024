@@ -1,11 +1,14 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
-import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
+import { slugify, withSuffix } from "../../../utils/string.ts";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
-import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
+import {
+  GroupIconSelector,
+  Option as IconOption,
+} from "../../common/group-icon/GroupIconSelector.tsx";
 
 export const UpdateGroupModal = () => {
   const {
@@ -13,11 +16,17 @@ export const UpdateGroupModal = () => {
     modalContext: { groupId, redirect },
     triggerAlert,
   } = useAppState();
-  const { updateRoster, rosters } = useRosterBuildingState();
+  const { updateGroup, groups } = useRosterBuildingState();
+  const { id, name, icon } =
+    groups.find((group) => group.slug === groupId) || {};
+
   const navigate = useNavigate();
 
-  const [rosterGroupName, setRosterGroupName] = useState(groupId);
+  const [rosterGroupName, setRosterGroupName] = useState(name);
   const [rosterGroupNameValid, setRosterGroupNameValid] = useState(true);
+  const [rosterGroupIcon, setRosterGroupIcon] = useState<IconOption>({
+    name: icon || "",
+  } as IconOption);
 
   const handleUpdateRosterGroup = (e) => {
     e.preventDefault();
@@ -27,16 +36,14 @@ export const UpdateGroupModal = () => {
     setRosterGroupNameValid(nameValid);
 
     if (nameValid) {
-      rosters
-        .filter((roster) => roster.group === groupId)
-        .forEach((roster) => {
-          updateRoster({
-            ...roster,
-            group: rosterGroupNameValue,
-          });
-        });
+      const slug = withSuffix(slugify(rosterGroupNameValue));
+      updateGroup(id, {
+        name: rosterGroupNameValue,
+        slug: slug,
+        icon: rosterGroupIcon?.name,
+      });
       if (redirect === true) {
-        navigate(`/rosters/${rosterGroupNameValue}`);
+        navigate(`/rosters/${slug}`);
       }
       triggerAlert(AlertTypes.UPDATE_GROUP_SUCCES);
       closeModal();
@@ -51,16 +58,6 @@ export const UpdateGroupModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <CustomAlert severity="info" title="">
-          <Typography>You can change the name of your group here.</Typography>
-        </CustomAlert>
-        <CustomAlert severity="warning" title="">
-          <Typography>
-            Please note that if the new name matches an existing group&apos;s
-            name, the two groups will be merged into one!
-          </Typography>
-        </CustomAlert>
-
         <TextField
           sx={{ mt: 2 }}
           fullWidth
@@ -71,6 +68,10 @@ export const UpdateGroupModal = () => {
           }
           value={rosterGroupName}
           onChange={(e) => updateRosterGroupName(e.target.value)}
+        />
+        <GroupIconSelector
+          selectedIcon={rosterGroupIcon}
+          setSelectedIcon={setRosterGroupIcon}
         />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>

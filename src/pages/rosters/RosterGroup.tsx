@@ -32,19 +32,38 @@ import {
 import { getComparator } from "./utils/sorting.ts";
 
 export const RosterGroup: FunctionComponent = () => {
-  const { rosters, updateRoster } = useRosterBuildingState();
+  const { rosters, groups, updateRoster, updateGroup } =
+    useRosterBuildingState();
   const { getAdjustedMetaData } = useRosterInformation();
-  const { groupId } = useParams();
+  const { groupId: slug } = useParams();
   const navigate = useNavigate();
   const [filter, setFilter] = useState("");
   const { palette } = useTheme();
   const { mode } = useThemeContext();
   const [searchParams, setSearchParams] = useSearchParams();
+  const group = groups.find((group) => group.slug === slug);
+
+  if (!group) {
+    return (
+      <Box sx={{ m: 2 }}>
+        <Typography variant="h4" className="middle-earth">
+          Roster group not found!
+        </Typography>
+        <Typography sx={{ mb: 2 }}>
+          One does not simply navigate to a group that does not exist.
+        </Typography>
+        <Typography>
+          Please navigate back to <Link to="/rosters">My Rosters</Link> and
+          select the group from there.
+        </Typography>
+      </Box>
+    );
+  }
 
   const rosterLinks: RosterSummaryCardProps[] = rosters
     .filter(
       (roster) =>
-        roster.group === groupId &&
+        group.rosters.includes(roster.id) &&
         (roster.name.toLowerCase().includes(filter.toLowerCase()) ||
           roster.armyList.toLowerCase().includes(filter.toLowerCase())),
     )
@@ -65,6 +84,11 @@ export const RosterGroup: FunctionComponent = () => {
         ...rosters.find(({ id }) => id === result.draggableId),
         group: null,
       });
+      updateGroup(group.id, {
+        rosters: group.rosters.filter(
+          (roster) => roster !== result.draggableId,
+        ),
+      });
 
       if (rosterLinks.length === 1) {
         // just removed the last roster from the group;
@@ -81,7 +105,7 @@ export const RosterGroup: FunctionComponent = () => {
   };
 
   return (
-    <Container maxWidth={false} sx={{ mt: 2 }}>
+    <Container maxWidth={false} sx={{ my: 2 }}>
       <DragDropContext onDragEnd={onDragEnd}>
         <Stack>
           <Stack flexGrow={1} gap={1}>
@@ -94,9 +118,9 @@ export const RosterGroup: FunctionComponent = () => {
                 className="middle-earth"
                 color="textSecondary"
               >
-                {groupId}
+                {group.name}
               </Typography>
-              <GroupOptionsPopoverMenu groupId={groupId} redirect={true} />
+              <GroupOptionsPopoverMenu groupId={slug} redirect={true} />
             </Stack>
 
             <Breadcrumbs>
@@ -111,7 +135,7 @@ export const RosterGroup: FunctionComponent = () => {
                 Rosters
               </Link>
               <Typography sx={{ color: "text.secondary" }}>
-                {groupId}
+                {group.name}
               </Typography>
             </Breadcrumbs>
           </Stack>
@@ -207,15 +231,15 @@ export const RosterGroup: FunctionComponent = () => {
             {rosterLinks.map((card, index) => (
               <Droppable
                 droppableId={card.roster.id}
-                key={index}
+                key={card.roster.id}
                 isDropDisabled
               >
                 {(provided) => (
                   <Box ref={provided.innerRef} {...provided.droppableProps}>
                     <Draggable
                       draggableId={card.roster.id}
+                      key={card.roster.id}
                       index={index}
-                      key={index}
                     >
                       {(provided) => (
                         <Box

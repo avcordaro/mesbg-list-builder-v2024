@@ -36,7 +36,7 @@ export function isMovieQuote(str: string): boolean {
   return regex.test(str);
 }
 
-export function withSuffix(id: string, existingIds: string[]) {
+export function withSuffix(id: string, existingIds: string[] = []) {
   const hashedId = id + "-" + generateRandomHash(6);
   if (existingIds.includes(hashedId)) {
     return withSuffix(id, existingIds);

@@ -18,7 +18,6 @@ import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
-import { Roster } from "../../types/roster.ts";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
 import { RosterGroupCard } from "./components/RosterGroupCard.tsx";
 import {
@@ -33,7 +32,7 @@ import {
 import { getComparator } from "./utils/sorting.ts";
 
 export const Rosters: FunctionComponent = () => {
-  const { rosters, updateRoster } = useRosterBuildingState();
+  const { rosters, groups, updateGroup } = useRosterBuildingState();
   const { getAdjustedMetaData } = useRosterInformation();
   const [draggingRoster, setDraggingRoster] = useState<string>();
   const { setCurrentModal } = useAppState();
@@ -50,19 +49,20 @@ export const Rosters: FunctionComponent = () => {
       };
     });
 
-  const rosterGroups = rosters
-    .filter((roster) => !!roster.group)
-    .sort((a, b) => a.group.localeCompare(b.group))
-    .reduce(
-      (groups, roster) => {
-        groups[roster.group] = [...(groups[roster.group] || []), roster];
-        return groups;
-      },
-      {} as Record<string, Roster[]>,
-    );
+  const rosterGroups = groups.sort((a, b) => a.name.localeCompare(b.name));
 
   function onDragStart(start: DragStart) {
     setDraggingRoster(start.draggableId);
+  }
+
+  function addRosterToGroup(groupId: string, rosterId: string) {
+    console.debug(`Add roster ${rosterId} to group ${groupId}`);
+    updateGroup(groupId, {
+      rosters: [
+        ...groups.find((group) => group.id === groupId).rosters,
+        rosterId,
+      ],
+    });
   }
 
   function onDragEnd(result: DropResult) {
@@ -75,13 +75,7 @@ export const Rosters: FunctionComponent = () => {
     const [type, destinationId] = result.destination.droppableId.split(":");
 
     if (type === "group") {
-      console.debug(
-        `Add roster ${result.draggableId} to group ${destinationId}`,
-      );
-      updateRoster({
-        ...rosters.find(({ id }) => id === result.draggableId),
-        group: destinationId,
-      });
+      addRosterToGroup(destinationId, result.draggableId);
       return;
     }
 
@@ -101,7 +95,7 @@ export const Rosters: FunctionComponent = () => {
   };
 
   return (
-    <Container maxWidth={false} sx={{ mt: 2 }}>
+    <Container maxWidth={false} sx={{ my: 2 }}>
       <Stack>
         <Typography variant="h4" className="middle-earth">
           My Rosters
@@ -176,36 +170,39 @@ export const Rosters: FunctionComponent = () => {
             flex={1}
           >
             <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
-              {Object.entries(rosterGroups).map(
-                ([groupName, rosters], index) => (
-                  <Droppable key={index} droppableId={"group:" + groupName}>
-                    {(provided, snapshot) => (
-                      <Box
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                        sx={
-                          snapshot.isDraggingOver
-                            ? {
-                                backgroundColor: "#FFFFFF33",
-                                border: "1px dashed white",
-                                p: 1,
-                                transition: "padding 0.3s ease",
-                              }
-                            : {
-                                p: 1,
-                                transition: "padding 0.3s ease",
-                              }
-                        }
-                      >
-                        <RosterGroupCard name={groupName} rosters={rosters} />
-                        <Box sx={{ "&>*": { height: "0px !important" } }}>
-                          {provided.placeholder}
-                        </Box>
+              {rosterGroups.map((group) => (
+                <Droppable key={group.id} droppableId={"group:" + group.id}>
+                  {(provided, snapshot) => (
+                    <Box
+                      ref={provided.innerRef}
+                      {...provided.droppableProps}
+                      sx={
+                        snapshot.isDraggingOver
+                          ? {
+                              backgroundColor: "#FFFFFF33",
+                              border: "1px dashed white",
+                              p: 1,
+                              transition: "padding 0.3s ease",
+                            }
+                          : {
+                              p: 1,
+                              transition: "padding 0.3s ease",
+                            }
+                      }
+                    >
+                      <RosterGroupCard
+                        name={group.name}
+                        slug={group.slug}
+                        icon={group.icon}
+                        rosters={group.rosters.length}
+                      />
+                      <Box sx={{ "&>*": { height: "0px !important" } }}>
+                        {provided.placeholder}
                       </Box>
-                    )}
-                  </Droppable>
-                ),
-              )}
+                    </Box>
+                  )}
+                </Droppable>
+              ))}
 
               {rosterLinks
                 .sort(getComparator(searchParams))

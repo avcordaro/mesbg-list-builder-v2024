@@ -22,7 +22,9 @@ export enum AlertTypes {
 
   UPDATE_GROUP_SUCCES = "UPDATE_GROUP_SUCCES",
   DISBAND_GROUP_SUCCES = "DISBAND_GROUP_SUCCES",
+  DISBAND_GROUP_FAILED = "DISBAND_GROUP_FAILED",
   DELETE_GROUP_SUCCES = "DELETE_GROUP_SUCCES",
+  DELETE_GROUP_FAILED = "DELETE_GROUP_FAILED",
 
   IMPORT_COLLECTION_COMPLETED = "IMPORT_COLLECTION_COMPLETED",
   IMPORT_COLLECTION_ERROR = "IMPORT_COLLECTION_ERROR",
@@ -207,6 +209,21 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
     },
   ],
   [
+    AlertTypes.DELETE_GROUP_FAILED,
+    {
+      variant: "error",
+      content: (
+        <Fragment>
+          <b>Failed to delete</b>
+          <p>
+            The group could not be deleted, please refresh the page and try
+            again.
+          </p>
+        </Fragment>
+      ),
+    },
+  ],
+  [
     AlertTypes.DISBAND_GROUP_SUCCES,
     {
       variant: "success",
@@ -219,6 +236,21 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       options: {
         autoHideAfter: 2400,
       },
+    },
+  ],
+  [
+    AlertTypes.DISBAND_GROUP_FAILED,
+    {
+      variant: "error",
+      content: (
+        <Fragment>
+          <b>Failed to disbanded</b>
+          <p>
+            The group could not be disbanded, please refresh the page and try
+            again.
+          </p>
+        </Fragment>
+      ),
     },
   ],
   [

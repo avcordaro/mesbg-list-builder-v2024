@@ -1,25 +1,25 @@
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
-import fallbackLogo from "../../../assets/images/default.png";
+import { GroupIcon } from "../../../components/common/group-icon/GroupIcon.tsx";
 import { Link } from "../../../components/common/link/Link.tsx";
-import { useThemeContext } from "../../../theme/ThemeContext.tsx";
-import { Roster } from "../../../types/roster.ts";
 import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
 
 export type RosterSummaryCardProps = {
   name: string;
-  rosters: Roster[];
+  slug: string;
+  rosters: number;
+  icon?: string;
 };
 
 export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
   name,
+  slug,
   rosters,
+  icon,
 }) => {
-  const { mode } = useThemeContext();
   const cardStyle = {
     width: "34ch",
     left: "3ch",
@@ -33,10 +33,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
   const minStackSize = 3;
   const rotation = 1.5;
 
-  const stackSize = Math.min(
-    maxStackSize,
-    Math.max(minStackSize, rosters.length),
-  );
+  const stackSize = Math.min(maxStackSize, Math.max(minStackSize, rosters));
 
   const stack = new Array(stackSize)
     .fill(Number)
@@ -49,9 +46,9 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
 
   return (
     <Link
-      to={`/rosters/${name}`}
+      to={`/rosters/${slug}`}
       style={{ textDecoration: "none", color: "inherit" }}
-      data-test-id={"rosters--" + name + "--group-link"}
+      data-test-id={"rosters--" + slug + "--group-link"}
     >
       <Box sx={{ position: "relative", width: "40ch", height: "350px" }}>
         {stack.map((rot, i) => (
@@ -78,20 +75,16 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
             alignItems="center"
             textAlign="center"
           >
-            <Avatar
-              alt="default faction logo"
-              src={fallbackLogo}
+            <Box
               sx={{
-                width: 150,
-                height: 150,
-                mb: 2,
-                display: "inline-block",
-                backgroundColor: "transparent",
-                "& .MuiAvatar-img": {
-                  filter: mode === "dark" ? "brightness(0) invert(1)" : "",
+                "& .MuiAvatar-root, svg": {
+                  width: 100,
+                  height: 100,
                 },
               }}
-            />
+            >
+              <GroupIcon icon={icon} />
+            </Box>
             <Typography
               variant="h6"
               className="middle-earth"
@@ -114,7 +107,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 width: "240px", // Set a fixed width or max-width for overflow
               }}
             >
-              {rosters.length} Rosters
+              {rosters} Rosters
             </Typography>
           </Stack>
         </Card>
@@ -125,7 +118,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
             top: 24,
           }}
         >
-          <GroupOptionsPopoverMenu groupId={name} />
+          <GroupOptionsPopoverMenu groupId={slug} />
         </Box>
       </Box>
     </Link>

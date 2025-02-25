@@ -33,7 +33,10 @@ import { useRosterWarnings } from "../../hooks/useRosterWarnings.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useAppState } from "../../state/app";
 import { useUserPreferences } from "../../state/preference";
-import { useTemporalRosterBuildingState } from "../../state/roster-building";
+import {
+  useRosterBuildingState,
+  useTemporalRosterBuildingState,
+} from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import {
   MobileRosterInfoToolbar,
@@ -48,6 +51,8 @@ export const Roster = () => {
     useTemporalRosterBuildingState((state) => state);
   const { rosterId } = useParams();
   const { roster } = useRosterInformation();
+  const { groups } = useRosterBuildingState();
+  const group = roster.group && groups.find(({ id }) => roster.group === id);
   const { setCurrentModal } = useAppState();
   const displayMobileToolbar = useUserPreferences(
     ({ preferences }) => preferences.mobileRosterToolbar,
@@ -154,14 +159,14 @@ export const Roster = () => {
               >
                 My Rosters
               </Link>
-              {roster.group && (
+              {group && (
                 <Link
-                  to={`/rosters/${roster.group}`}
+                  to={`/rosters/${group.slug}`}
                   style={{
                     textDecoration: "none",
                   }}
                 >
-                  {roster.group}
+                  {group.name}
                 </Link>
               )}
               <Typography sx={{ color: "text.secondary" }}>

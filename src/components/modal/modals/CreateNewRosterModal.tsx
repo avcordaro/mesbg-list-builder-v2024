@@ -46,11 +46,13 @@ const armyLists = Object.values(data)
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();
-  const { createRoster, rosters } = useRosterBuildingState();
+  const { createRoster, rosters, groups } = useRosterBuildingState();
   const navigate = useNavigate();
   const { importJsonRoster } = useExport();
   const calculator = useCalculator();
-  const { groupId } = useParams();
+  const { groupId: groupSlug } = useParams();
+  const { id: groupId } =
+    groups.find((group) => group.slug === groupSlug) || {};
 
   const existingRosterIds = rosters.map(({ id }) => id);
 

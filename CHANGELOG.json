@@ -1,5 +1,12 @@
 {
   "main": {
+    "changed": [
+      "Made roster groups their own distinct entity allowing more data such as icons to be added to them.",
+      "You can now include multiple roster groups with the same name."
+    ],
+    "added": [
+      "Added an icon selection dropdown on the create and update screens for roster groups."
+    ],
     "bugfixes": [
       "Corrected the General VP calculation for the Domination scenario."
     ]

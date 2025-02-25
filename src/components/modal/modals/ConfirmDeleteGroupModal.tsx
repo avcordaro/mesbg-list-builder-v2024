@@ -13,23 +13,26 @@ export const ConfirmDeleteGroupModal = () => {
     modalContext: { groupId, redirect },
     triggerAlert,
   } = useAppState();
-  const { deleteRoster, rosters } = useRosterBuildingState();
+  const { deleteGroup, groups, rosters } = useRosterBuildingState();
   const navigate = useNavigate();
-
-  const affectedRosters = rosters.filter((roster) => roster.group === groupId);
+  const { id, name } = groups.find((group) => group.slug === groupId) || {};
+  const affectedRosters = rosters.filter((roster) => roster.group === id);
 
   const [rosterGroupName, setRosterGroupName] = useState("");
 
   const handleConfirmDisband = (e) => {
     e.preventDefault();
 
-    affectedRosters.forEach((roster) => {
-      deleteRoster(roster);
-    });
-    if (redirect !== true) {
-      navigate("/rosters");
+    if (id) {
+      deleteGroup(id);
+      if (redirect === true) {
+        navigate("/rosters");
+      }
+      triggerAlert(AlertTypes.DELETE_GROUP_SUCCES);
+    } else {
+      triggerAlert(AlertTypes.DELETE_GROUP_FAILED);
     }
-    triggerAlert(AlertTypes.DELETE_GROUP_SUCCES);
+
     closeModal();
   };
 
@@ -54,7 +57,7 @@ export const ConfirmDeleteGroupModal = () => {
 
         <Typography>
           Confirm the group name to confirm: <br />
-          <b>{groupId}</b>
+          <b>{name}</b>
         </Typography>
         <TextField
           fullWidth
@@ -76,7 +79,7 @@ export const ConfirmDeleteGroupModal = () => {
           variant="contained"
           onClick={handleConfirmDisband}
           color="error"
-          disabled={groupId !== rosterGroupName}
+          disabled={name !== rosterGroupName}
           data-test-id="dialog--submit-button"
         >
           Delete group
