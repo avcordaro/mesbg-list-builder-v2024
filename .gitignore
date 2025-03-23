@@ -24,6 +24,7 @@
 .env.production.local
 .idea
 CHANGELOG.json.bak
+__pycache__
 
 # log files
 npm-debug.log*
