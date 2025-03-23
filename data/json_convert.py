@@ -53,23 +53,22 @@ df_merged_options = df_merged.groupby([
   'default_bow', 
   'default_throw',
   'unique', 
-  'bow_limit', 
-  'siege_crew', 
+  'siege_crew',
+  'bow_limit',
   'opt_mandatory',
   'MWFW',
-  'warband_size',
-  'no_followers'
+  'no_followers',
+  'warband_size'
 ]).apply(lambda x: x[[
   'id', 
   'name', 
   'points', 
   'type',
   'included',
-  'quantity',
   'dependencies',
+  'mount_name',
   'passengers',
-  'mount_name'
-
+  'quantity'
 ]].to_dict(orient='records')).reset_index(name='options')
 df_merged_options = df_merged_options.sort_values(['army_list', 'unit_type', 'base_points', 'model'], ascending=[True, True, False, True])
 df_merged_options['MWFW'] = df_merged_options['MWFW'].apply(eval)
