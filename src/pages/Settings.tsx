@@ -3,6 +3,8 @@ import {
   CategoryOutlined,
   ChecklistRtl,
   DarkMode,
+  InsertPageBreak,
+  ManageAccounts,
   PersonRemove,
   PhotoCameraOutlined,
   SwitchAccessShortcut,
@@ -11,6 +13,7 @@ import {
 
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
@@ -80,8 +83,12 @@ export const Settings = () => {
       <List
         sx={{
           width: "100%",
+          mt: 2,
         }}
       >
+        <Divider textAlign="left">
+          <Typography variant="h6">General preferences</Typography>
+        </Divider>
         <SettingsOption
           icon={<DarkMode />}
           label="Darkmode"
@@ -91,7 +98,6 @@ export const Settings = () => {
           value={mode === "dark"}
           onChange={toggleTheme}
         />
-
         <SettingsOption
           icon={<ChecklistRtl />}
           label="Display roster summary toolbar when overview sidebar collapses"
@@ -112,17 +118,6 @@ export const Settings = () => {
           value={preferences.oldShareScreen || false}
           onChange={updatePreference("oldShareScreen")}
         />
-
-        <SettingsOption
-          icon={<PersonRemove />}
-          label="Enable removing mandatory army generals"
-          description={
-            'Certain tournaments allow you to remove mandatory army generals in favor of smaller list. Enabling this allows you to remove the "who is always the Army\'s General" unit from your rosters.'
-          }
-          value={preferences.allowCompulsoryGeneralDelete || false}
-          onChange={updatePreference("allowCompulsoryGeneralDelete")}
-        />
-
         <SettingsOption
           icon={<Update />}
           label="Automatically update selected units when datafiles update"
@@ -135,6 +130,9 @@ export const Settings = () => {
           onChange={updatePreference("autoUpdateUnitData")}
         />
 
+        <Divider textAlign="left">
+          <Typography variant="h6">Drawer preferences</Typography>
+        </Divider>
         <SettingsOption
           icon={<AutoAwesome />}
           label="Highlight special rules and magical powers based on selected roster"
@@ -155,13 +153,46 @@ export const Settings = () => {
           value={preferences.splitActiveRules}
           onChange={updatePreference("splitActiveRules")}
         />
+        <Divider textAlign="left">
+          <Typography variant="h6">PDF preferences</Typography>
+        </Divider>
+        <SettingsOption
+          icon={<ManageAccounts />}
+          label="Unit special rule descriptions"
+          description="Include special rules per unit rather than having them on a separate page."
+          value={preferences.includePdfSpecialRuleDescriptions || false}
+          onChange={updatePreference("includePdfSpecialRuleDescriptions")}
+        />
+        <SettingsOption
+          icon={<InsertPageBreak />}
+          label="Disable page breaks"
+          description="Remove all the page breaks on the PDF and create one fluid document."
+          value={preferences.removePdfPageBreak || false}
+          onChange={updatePreference("removePdfPageBreak")}
+        />
 
+        <Divider textAlign="left">
+          <Typography variant="h6">Collection preferences</Typography>
+        </Divider>
         <SettingsOption
           icon={<CategoryOutlined />}
           label="Collection based warnings"
           description="Receive warnings/notifications if your army list includes models outside your collection or exceeds the quantity you own, ensuring your lists stay within the limits of your personal inventory."
           value={preferences.collectionWarnings || false}
           onChange={updatePreference("collectionWarnings")}
+        />
+
+        <Divider textAlign="left">
+          <Typography variant="h6">Builder restrictions preferences</Typography>
+        </Divider>
+        <SettingsOption
+          icon={<PersonRemove />}
+          label="Enable removing mandatory army generals"
+          description={
+            'Certain tournaments allow you to remove mandatory army generals in favor of smaller list. Enabling this allows you to remove the "who is always the Army\'s General" unit from your rosters.'
+          }
+          value={preferences.allowCompulsoryGeneralDelete || false}
+          onChange={updatePreference("allowCompulsoryGeneralDelete")}
         />
       </List>
 
