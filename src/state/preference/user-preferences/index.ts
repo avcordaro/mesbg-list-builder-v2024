@@ -1,14 +1,22 @@
 import { Slice } from "../../Slice.ts";
 
 export type Preferences =
-  | "mobileRosterToolbar"
-  | "autoUpdateUnitData"
-  | "colorCodedRules"
-  | "splitActiveRules"
-  | "collectionWarnings"
+  //   General UI preferences
   | "darkMode"
+  | "mobileRosterToolbar"
   | "oldShareScreen"
-  | "allowCompulsoryGeneralDelete";
+  //   Builder restriction preferences
+  | "allowCompulsoryGeneralDelete"
+  //   Collection preferences
+  | "collectionWarnings"
+  //   Auto update preferences
+  | "autoUpdateUnitData"
+  // Pdf Preferences
+  | "removePdfPageBreak"
+  | "includePdfSpecialRuleDescriptions"
+  //   Special rule drawer preferences
+  | "colorCodedRules"
+  | "splitActiveRules";
 
 export type PreferenceState = {
   preferences: Record<Preferences, boolean>;
@@ -25,6 +33,8 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     collectionWarnings: false,
     darkMode: false,
     allowCompulsoryGeneralDelete: false,
+    removePdfPageBreak: false,
+    includePdfSpecialRuleDescriptions: false,
   },
 };
 
