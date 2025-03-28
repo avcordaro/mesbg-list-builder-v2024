@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import keywords from "../../../../assets/data/keywords.json";
 
 import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { useUserPreferences } from "../../../../state/preference";
 
 interface MagicalPowerListProps {
   profiles: Profile[];
@@ -19,6 +20,10 @@ function duplicates(item: MagicalPower, index: number, self: MagicalPower[]) {
 }
 
 export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
+  const {
+    preferences: { removePdfPageBreak },
+  } = useUserPreferences();
+
   const magicalPowers: MagicalPower[] = profiles
     .flatMap((profile) =>
       profile.magic_powers
@@ -37,7 +42,7 @@ export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
   return (
     <>
       {magicalPowers.length > 0 && (
-        <Box id="pdf-magic" className="page-break">
+        <Box id="pdf-magic" className={removePdfPageBreak ? "" : "page-break"}>
           <Typography variant="h5">Magical Powers</Typography>
           <Stack gap={1} sx={{ py: 1 }}>
             {magicalPowers.map((rule) => (

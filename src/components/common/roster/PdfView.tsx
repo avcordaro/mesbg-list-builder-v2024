@@ -6,10 +6,12 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { useProfiles } from "../../../hooks/useProfiles.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useUserPreferences } from "../../../state/preference";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { Link } from "../link/Link.tsx";
 import { ArmyComposition } from "./pdf/ArmyComposition.tsx";
+import { HeroicActionList } from "./pdf/HeroicActionList.tsx";
 import { MagicalPowerList } from "./pdf/MagicalPowers.tsx";
 import { QuickReferenceTable } from "./pdf/QuickReferenceTable.tsx";
 import { SpecialRuleList } from "./pdf/SpecialRuleList.tsx";
@@ -44,6 +46,7 @@ const PrintablePdf = () => {
   const { roster } = useRosterInformation();
   const theme = useTheme();
   const themeContext = useThemeContext();
+  const { preferences } = useUserPreferences();
 
   return (
     <>
@@ -129,12 +132,31 @@ const PrintablePdf = () => {
 
         <Box className="print-section">
           <Stack gap={4}>
-            <QuickReferenceTable profiles={profiles} />
-            <ArmyComposition />
-            <UnitProfileList units={profiles} />
-            <SpecialRuleList profiles={profiles} />
-            <MagicalPowerList profiles={profiles} />
-            <StatTrackers />
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfQuickRefTable) && (
+              <QuickReferenceTable profiles={profiles} />
+            )}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfArmyComposition) && <ArmyComposition />}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfProfiles) && (
+              <UnitProfileList units={profiles} />
+            )}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfSpecialRules ||
+              !preferences.hidePdfArmyRules) && (
+              <SpecialRuleList profiles={profiles} />
+            )}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfHeroicActions) && (
+              <HeroicActionList profiles={profiles} />
+            )}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfMagicPowers) && (
+              <MagicalPowerList profiles={profiles} />
+            )}
+            {(!preferences.enableHidePdfSections ||
+              !preferences.hidePdfStatTrackers) && <StatTrackers />}
           </Stack>
         </Box>
       </Container>

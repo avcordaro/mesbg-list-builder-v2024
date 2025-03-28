@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { armyListData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useUserPreferences } from "../../../../state/preference";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 import {
   FreshUnit,
@@ -57,6 +58,9 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
 export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
   const { roster, getAdjustedMetaData } = useRosterInformation();
   const { mode } = useThemeContext();
+  const {
+    preferences: { removePdfPageBreak },
+  } = useUserPreferences();
 
   const warbands = roster.warbands.map((warband) => [
     warband.hero,
@@ -68,7 +72,7 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
   const { break_point } = armyListData[roster.armyList];
 
   return (
-    <Box id="pdf-army" className="page-break">
+    <Box id="pdf-army" className={removePdfPageBreak ? "" : "page-break"}>
       {noCaption !== true && (
         <>
           <Typography variant="h5" sx={{ mb: 2 }}>
