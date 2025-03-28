@@ -1,5 +1,10 @@
 {
   "main": {
+    "added": [
+      "Added a new settings option which allows the removal of certain sections of the PDF based on user preference.",
+      "Added a new settings option which allows the removal of the included page breaks in the PDF to (slightly) reduce the amount of pages.",
+      "Added a new settings option which includes the special rule description on each profile in the profile section of the PDF."
+    ],
     "bugfixes": [
       "Corrected the sorting of roster groups in the navigation sidebar.",
       "Sum of all units in roster summary now correctly accounts for selected options.",
