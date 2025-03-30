@@ -148,8 +148,8 @@
     "name": "Hill Troll",
     "unit_type": "Warrior",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -162,8 +162,8 @@
     "name": "Angmar Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -201,8 +201,8 @@
     "name": "Warrior of Carn Dum",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -226,8 +226,8 @@
     "name": "Angmar Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -525,8 +525,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -560,8 +560,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -703,8 +703,8 @@
     "name": "Mordor Troll",
     "unit_type": "Warrior",
     "base_points": 90,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -723,8 +723,8 @@
     "name": "Morannon Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -759,8 +759,8 @@
     "name": "Mordor War Catapult",
     "unit_type": "Siege Engine",
     "base_points": 150,
-    "bow_limit": true,
     "siege_crew": 3,
+    "bow_limit": true,
     "MWFW": [
       [
         "Mordor War Catapult - Siege Veteran",
@@ -930,8 +930,8 @@
     "name": "Gundabad Troll",
     "unit_type": "Warrior",
     "base_points": 120,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -950,8 +950,8 @@
     "name": "Gundabad Ogre",
     "unit_type": "Warrior",
     "base_points": 60,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -964,8 +964,8 @@
     "name": "War Bat",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -978,8 +978,8 @@
     "name": "Gundabad Berserker",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -998,8 +998,8 @@
     "name": "Gundabad Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -1034,8 +1034,8 @@
     "name": "Goblin Mercenary",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -1278,8 +1278,8 @@
     "name": "Lake-town Guard",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -1454,8 +1454,8 @@
     "unit_type": "Warrior",
     "base_points": 11,
     "default_throw": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -1484,8 +1484,8 @@
     "name": "Erebor Dwarf Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -1645,8 +1645,8 @@
     "name": "Crebain",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -1659,8 +1659,8 @@
     "name": "Isengard Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -1698,8 +1698,8 @@
     "name": "Uruk-Hai Scout",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -1729,8 +1729,8 @@
     "name": "Isengard Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -1771,8 +1771,8 @@
     "name": "Wild Man of Dunland",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -1940,8 +1940,8 @@
     "name": "Knight of Arnor",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -1955,8 +1955,8 @@
     "unit_type": "Warrior",
     "base_points": 8,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -1985,8 +1985,8 @@
     "name": "Warrior of Arnor",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -2042,8 +2042,8 @@
     "name": "Uruk-Hai Demolition Team",
     "unit_type": "Warrior",
     "base_points": 80,
-    "bow_limit": true,
     "siege_crew": 3,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -2056,8 +2056,8 @@
     "name": "Uruk-Hai Berserker",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -2070,8 +2070,8 @@
     "name": "Uruk-Hai Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -2107,8 +2107,8 @@
     "name": "Isengard Assault Ballista",
     "unit_type": "Siege Engine",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [
       [
         "Isengard Assault Ballista - Siege Veteran",
@@ -2363,8 +2363,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -2383,8 +2383,8 @@
     "name": "Citadel Guard",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -2410,8 +2410,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -2452,8 +2452,8 @@
     "name": "Gondor Battlecry Trebuchet",
     "unit_type": "Siege Engine",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [
       [
         "Gondor Battlecry Trebuchet - Siege Veteran",
@@ -2647,8 +2647,8 @@
     "name": "Hunter Orc Warg Rider",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -2673,8 +2673,8 @@
     "name": "Fell Warg",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -2687,8 +2687,8 @@
     "name": "Hunter Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -2721,7 +2721,7 @@
         "3:6:0:5"
       ]
     ],
-    "warband_size": 24,
+    "warband_size": 18,
     "options": []
   },
   "[barad-dur] the-witch-king-of-angmar": {
@@ -2865,8 +2865,8 @@
     "name": "Mordor Troll",
     "unit_type": "Warrior",
     "base_points": 90,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -2885,8 +2885,8 @@
     "name": "Mordor Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -2924,8 +2924,8 @@
     "name": "Mordor Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -2966,8 +2966,8 @@
     "name": "Mordor War Catapult",
     "unit_type": "Siege Engine",
     "base_points": 150,
-    "bow_limit": true,
     "siege_crew": 3,
+    "bow_limit": true,
     "MWFW": [
       [
         "Mordor War Catapult - Siege Veteran",
@@ -3188,8 +3188,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -3208,8 +3208,8 @@
     "name": "Rivendell Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -3244,8 +3244,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -3287,8 +3287,8 @@
     "unit_type": "Warrior",
     "base_points": 5,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -3413,8 +3413,8 @@
     "name": "Crebain",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -3427,8 +3427,8 @@
     "name": "Hill Tribesman",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -3675,8 +3675,8 @@
     "name": "Lothlorien Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -3785,8 +3785,8 @@
     "name": "Hill Troll",
     "unit_type": "Warrior",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -3799,8 +3799,8 @@
     "name": "Angmar Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -3838,8 +3838,8 @@
     "name": "Wild Warg",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -3852,8 +3852,8 @@
     "name": "Angmar Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -4000,8 +4000,8 @@
         "0:6:0:6"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 0,
-    "no_followers": true,
     "options": []
   },
   "[cirith-ungol] mordor-orc-drummer": {
@@ -4030,8 +4030,8 @@
     "name": "Mordor Uruk-Hai",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -4050,8 +4050,8 @@
     "name": "Mordor Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -4168,8 +4168,8 @@
     "name": "Corsair of Umbar",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -4201,8 +4201,8 @@
     "name": "Corsair Ballista",
     "unit_type": "Siege Engine",
     "base_points": 70,
-    "bow_limit": true,
     "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [
       [
         "Corsair Ballista - Siege Veteran",
@@ -4491,8 +4491,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -4512,8 +4512,8 @@
     "name": "Galadhrim Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -4559,8 +4559,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -4611,8 +4611,8 @@
         "3:3:1:3"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 18,
-    "no_followers": true,
     "options": []
   },
   "[defenders-of-the-hornburg] hera-the-bride-of-death": {
@@ -4739,8 +4739,8 @@
     "unit_type": "Warrior",
     "base_points": 14,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -4765,8 +4765,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -4889,8 +4889,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Snowmane with armour"
+        "mount_name": "Snowmane with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0545",
@@ -4932,8 +4932,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Firefoot with armour"
+        "mount_name": "Firefoot with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0548",
@@ -5107,8 +5107,8 @@
         "points": 25,
         "type": "passenger",
         "included": true,
-        "quantity": 1,
-        "passengers": 1
+        "passengers": 1,
+        "quantity": 1
       },
       {
         "id": "OPT0551",
@@ -5116,8 +5116,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0552",
@@ -5168,8 +5168,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -5196,8 +5196,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0558",
@@ -5244,8 +5244,8 @@
     "name": "Rider of the Dead",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -5258,8 +5258,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -5279,8 +5279,8 @@
     "unit_type": "Warrior",
     "base_points": 14,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -5305,8 +5305,8 @@
     "name": "Warrior of the Dead",
     "unit_type": "Warrior",
     "base_points": 14,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -5340,8 +5340,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -5351,8 +5351,8 @@
         "points": 5,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0563",
@@ -5370,8 +5370,8 @@
     "name": "Citadel Guard",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -5397,8 +5397,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -5439,8 +5439,8 @@
     "name": "Gondor Battlecry Trebuchet",
     "unit_type": "Siege Engine",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [
       [
         "Gondor Battlecry Trebuchet - Siege Veteran",
@@ -5528,8 +5528,8 @@
     "unit_type": "Warrior",
     "base_points": 75,
     "default_throw": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -5554,8 +5554,8 @@
     "name": "Moria Goblin Warrior",
     "unit_type": "Warrior",
     "base_points": 4,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -5774,8 +5774,8 @@
     "unit_type": "Warrior",
     "base_points": 11,
     "default_throw": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -5804,8 +5804,8 @@
     "name": "Erebor Dwarf Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -5835,8 +5835,8 @@
     "name": "Warrior of Dale",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -6181,8 +6181,8 @@
     "name": "Iron Hills Warrior",
     "unit_type": "Warrior",
     "base_points": 10,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -6288,8 +6288,8 @@
     "name": "Ent",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -6367,8 +6367,8 @@
     "name": "Warrior of Dale",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -6409,8 +6409,8 @@
     "name": "Windlance",
     "unit_type": "Siege Engine",
     "base_points": 70,
-    "bow_limit": true,
     "siege_crew": 1,
+    "bow_limit": true,
     "MWFW": [
       [
         "Windlance - Siege Veteran",
@@ -6590,8 +6590,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -6610,8 +6610,8 @@
     "name": "Osgiliath Veteran",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -6643,8 +6643,8 @@
     "unit_type": "Warrior",
     "base_points": 8,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -6673,8 +6673,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -6723,7 +6723,7 @@
         "3:2:1:3"
       ]
     ],
-    "warband_size": 24,
+    "warband_size": 18,
     "options": []
   },
   "[goblin-town] grinnah-goblin-jailer": {
@@ -6742,7 +6742,7 @@
         "2:1:1:2"
       ]
     ],
-    "warband_size": 18,
+    "warband_size": 12,
     "options": []
   },
   "[goblin-town] the-goblin-scribe": {
@@ -6761,7 +6761,7 @@
         "0:1:1:1"
       ]
     ],
-    "warband_size": 18,
+    "warband_size": 12,
     "options": []
   },
   "[goblin-town] goblin-captain": {
@@ -6779,7 +6779,7 @@
         "2:1:1:2"
       ]
     ],
-    "warband_size": 18,
+    "warband_size": 12,
     "options": []
   },
   "[goblin-town] gollum": {
@@ -6809,8 +6809,8 @@
     "name": "Goblin Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -6984,8 +6984,8 @@
     "name": "Mirkwood Elf Knight",
     "unit_type": "Warrior",
     "base_points": 16,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -6999,8 +6999,8 @@
     "unit_type": "Warrior",
     "base_points": 14,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -7013,8 +7013,8 @@
     "name": "Palace Guard",
     "unit_type": "Warrior",
     "base_points": 12,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7044,8 +7044,8 @@
     "name": "Mirkwood Elf Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7182,8 +7182,8 @@
     "name": "Haradrim Warrior",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7425,8 +7425,8 @@
     "name": "Werewolf",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -7439,8 +7439,8 @@
     "name": "Spectre",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -7453,8 +7453,8 @@
     "name": "Angmar Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7492,8 +7492,8 @@
     "name": "Warrior of Carn Dum",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -7517,8 +7517,8 @@
     "name": "Angmar Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7836,8 +7836,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -7871,8 +7871,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -7939,8 +7939,8 @@
         "points": 70,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Armoured Fell Beast"
+        "mount_name": "Armoured Fell Beast",
+        "quantity": 1
       },
       {
         "id": "OPT0269",
@@ -8047,8 +8047,8 @@
         "points": 50,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Fell Beast"
+        "mount_name": "Fell Beast",
+        "quantity": 1
       },
       {
         "id": "OPT0274",
@@ -8233,8 +8233,8 @@
     "name": "Mordor Troll",
     "unit_type": "Warrior",
     "base_points": 90,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8253,8 +8253,8 @@
     "name": "Easterling Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8289,8 +8289,8 @@
     "name": "Morannon Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8324,8 +8324,8 @@
     "name": "Haradrim Warrior",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -8361,8 +8361,8 @@
     "name": "Mordor War Catapult",
     "unit_type": "Siege Engine",
     "base_points": 150,
-    "bow_limit": true,
     "siege_crew": 3,
+    "bow_limit": true,
     "MWFW": [
       [
         "Mordor War Catapult - Siege Veteran",
@@ -8488,8 +8488,8 @@
     "unit_type": "Warrior",
     "base_points": 20,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8513,8 +8513,8 @@
     "name": "Rivendell Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8687,8 +8687,8 @@
     "name": "Galadhrim Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8750,8 +8750,8 @@
     "name": "Lothlorien Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -8867,8 +8867,8 @@
     "name": "Uruk-Hai Scout",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -9187,8 +9187,8 @@
     "name": "Great Eagle",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -9201,8 +9201,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9243,8 +9243,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9480,8 +9480,8 @@
     "name": "Mordor Troll",
     "unit_type": "Warrior",
     "base_points": 90,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -9500,8 +9500,8 @@
     "name": "Spectre",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -9514,8 +9514,8 @@
     "name": "Morannon Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -9549,8 +9549,8 @@
     "name": "Mordor Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9718,8 +9718,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -9738,8 +9738,8 @@
     "name": "Guard of the Fountain Court",
     "unit_type": "Warrior",
     "base_points": 10,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -9752,8 +9752,8 @@
     "name": "Citadel Guard",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9779,8 +9779,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9921,8 +9921,8 @@
     "name": "Uruk-Hai Berserker",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -9935,8 +9935,8 @@
     "name": "Uruk-Hai Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -9972,8 +9972,8 @@
     "name": "Uruk-Hai Scout",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -10081,8 +10081,8 @@
     "name": "Warrior of Numenor",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -10233,8 +10233,8 @@
     "name": "Mirkwood Giant Spider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -10247,8 +10247,8 @@
     "name": "Mirkwood Hunting Spider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -10261,8 +10261,8 @@
     "name": "Hunter Orc Warg Rider",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -10287,8 +10287,8 @@
     "name": "Gundabad Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -10323,8 +10323,8 @@
     "name": "Fell Warg",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -10337,8 +10337,8 @@
     "name": "Hunter Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -10379,8 +10379,8 @@
         "points": 55,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Great Eagle"
+        "mount_name": "Great Eagle",
+        "quantity": 1
       }
     ]
   },
@@ -10430,8 +10430,8 @@
     "name": "Great Eagle",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -10444,8 +10444,8 @@
     "name": "Fledgeling Great Eagle",
     "unit_type": "Warrior",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -11153,8 +11153,8 @@
     "name": "Knight of Arnor",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -11167,8 +11167,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -11182,8 +11182,8 @@
     "unit_type": "Warrior",
     "base_points": 14,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11208,8 +11208,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11243,8 +11243,8 @@
     "name": "Guard of the Fountain Court",
     "unit_type": "Warrior",
     "base_points": 10,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -11257,8 +11257,8 @@
     "name": "Warrior of Numenor",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11289,8 +11289,8 @@
     "name": "Citadel Guard",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11317,8 +11317,8 @@
     "unit_type": "Warrior",
     "base_points": 8,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11348,8 +11348,8 @@
     "unit_type": "Warrior",
     "base_points": 8,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11378,8 +11378,8 @@
     "name": "Warrior of Arnor",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11398,8 +11398,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11440,8 +11440,8 @@
     "name": "Warrior of Dale",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11482,8 +11482,8 @@
     "name": "Warrior of Rohan",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11526,8 +11526,8 @@
     "name": "Gondor Battlecry Trebuchet",
     "unit_type": "Siege Engine",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [
       [
         "Gondor Battlecry Trebuchet - Siege Veteran",
@@ -11551,8 +11551,8 @@
     "name": "Windlance",
     "unit_type": "Siege Engine",
     "base_points": 70,
-    "bow_limit": true,
     "siege_crew": 1,
+    "bow_limit": true,
     "MWFW": [
       [
         "Windlance - Siege Veteran",
@@ -11663,8 +11663,8 @@
     "name": "Knight of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11683,8 +11683,8 @@
     "name": "Osgiliath Veteran",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11716,8 +11716,8 @@
     "unit_type": "Warrior",
     "base_points": 8,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11746,8 +11746,8 @@
     "name": "Warrior of Minas Tirith",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -11912,8 +11912,8 @@
     "name": "Rider of the Dead",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -11926,8 +11926,8 @@
     "name": "Warrior of the Dead",
     "unit_type": "Warrior",
     "base_points": 14,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -11977,8 +11977,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Snowmane with armour"
+        "mount_name": "Snowmane with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0313",
@@ -12020,8 +12020,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Brego"
+        "mount_name": "Brego",
+        "quantity": 1
       },
       {
         "id": "OPT0325",
@@ -12056,8 +12056,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0327",
@@ -12097,8 +12097,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -12125,8 +12125,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0318",
@@ -12174,8 +12174,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -12185,8 +12185,8 @@
         "points": 5,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0323",
@@ -12220,8 +12220,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Firefoot with armour"
+        "mount_name": "Firefoot with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0417",
@@ -12266,8 +12266,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Shadowfax"
+        "mount_name": "Shadowfax",
+        "quantity": 1
       }
     ]
   },
@@ -12294,8 +12294,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0420",
@@ -12359,8 +12359,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Snowmane with armour"
+        "mount_name": "Snowmane with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0426",
@@ -12402,8 +12402,8 @@
         "points": 25,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Firefoot with armour"
+        "mount_name": "Firefoot with armour",
+        "quantity": 1
       },
       {
         "id": "OPT0429",
@@ -12448,8 +12448,8 @@
         "points": 25,
         "type": "passenger",
         "included": true,
-        "quantity": 1,
-        "passengers": 1
+        "passengers": 1,
+        "quantity": 1
       },
       {
         "id": "OPT0432",
@@ -12457,8 +12457,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0433",
@@ -12509,8 +12509,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -12537,8 +12537,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0439",
@@ -12586,8 +12586,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -12861,8 +12861,8 @@
     "name": "Mirkwood Giant Spider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -12875,8 +12875,8 @@
     "name": "Mirkwood Hunting Spider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -12889,8 +12889,8 @@
     "name": "Hunter Orc Warg Rider",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -12915,8 +12915,8 @@
     "name": "Fell Warg",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -12929,8 +12929,8 @@
     "name": "Hunter Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -13109,8 +13109,8 @@
     "unit_type": "Warrior",
     "base_points": 20,
     "default_bow": true,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -13134,8 +13134,8 @@
     "name": "Rivendell Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -13186,8 +13186,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Snowmane"
+        "mount_name": "Snowmane",
+        "quantity": 1
       }
     ]
   },
@@ -13215,8 +13215,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Brego"
+        "mount_name": "Brego",
+        "quantity": 1
       },
       {
         "id": "OPT0148",
@@ -13282,8 +13282,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0151",
@@ -13335,8 +13335,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -13363,8 +13363,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0141",
@@ -13412,8 +13412,8 @@
     "name": "Rohan Royal Guard",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -13423,8 +13423,8 @@
         "points": 5,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0146",
@@ -13488,8 +13488,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Asfaloth"
+        "mount_name": "Asfaloth",
+        "quantity": 1
       },
       {
         "id": "OPT0311",
@@ -13799,8 +13799,8 @@
     "name": "Werewolf",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -13813,8 +13813,8 @@
     "name": "Spectre",
     "unit_type": "Warrior",
     "base_points": 15,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -13827,8 +13827,8 @@
     "name": "Angmar Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -13866,8 +13866,8 @@
     "name": "Wild Warg",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -13880,8 +13880,8 @@
     "name": "Angmar Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -13938,8 +13938,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -14098,8 +14098,8 @@
     "name": "Lake-town Militia",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -14200,8 +14200,8 @@
         "points": 55,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Great Eagle"
+        "mount_name": "Great Eagle",
+        "quantity": 1
       }
     ]
   },
@@ -14229,8 +14229,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       }
     ]
   },
@@ -14799,8 +14799,8 @@
     "name": "Great Eagle",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -14813,8 +14813,8 @@
     "name": "Fledgeling Great Eagle",
     "unit_type": "Warrior",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -14827,8 +14827,8 @@
     "name": "Iron Hills Goat Rider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -14847,8 +14847,8 @@
     "name": "Mirkwood Elf Knight",
     "unit_type": "Warrior",
     "base_points": 16,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -14861,8 +14861,8 @@
     "name": "Iron Hills Warrior",
     "unit_type": "Warrior",
     "base_points": 10,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -14903,8 +14903,8 @@
     "name": "Mirkwood Elf Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -14935,8 +14935,8 @@
     "name": "Lake-town Militia",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -15101,8 +15101,8 @@
         "points": 50,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Fell Beast"
+        "mount_name": "Fell Beast",
+        "quantity": 1
       },
       {
         "id": "OPT0259",
@@ -15119,8 +15119,8 @@
     "name": "Mordor Troll",
     "unit_type": "Warrior",
     "base_points": 90,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -15139,8 +15139,8 @@
     "name": "Morannon Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -15182,8 +15182,8 @@
         "2:14:2:1"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 18,
-    "no_followers": true,
     "options": [
       {
         "id": "OPT0336",
@@ -15199,8 +15199,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0338",
@@ -15224,8 +15224,8 @@
         "1:10:1:1"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 12,
-    "no_followers": true,
     "options": [
       {
         "id": "OPT0339",
@@ -15241,8 +15241,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Horse"
+        "mount_name": "Horse",
+        "quantity": 1
       },
       {
         "id": "OPT0341",
@@ -15278,8 +15278,8 @@
     "name": "Great Eagle",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -15292,8 +15292,8 @@
     "name": "Fledgeling Great Eagle",
     "unit_type": "Warrior",
     "base_points": 75,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -15603,8 +15603,8 @@
     "name": "Iron Hills Chariot",
     "unit_type": "Warrior",
     "base_points": 170,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -15617,8 +15617,8 @@
     "name": "Iron Hills Goat Rider",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -15637,8 +15637,8 @@
     "name": "Iron Hills Warrior",
     "unit_type": "Warrior",
     "base_points": 10,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -15679,8 +15679,8 @@
     "name": "Iron Hills Ballista",
     "unit_type": "Siege Engine",
     "base_points": 130,
-    "bow_limit": true,
     "siege_crew": 3,
+    "bow_limit": true,
     "MWFW": [
       [
         "Iron Hills Ballista - Siege Veteran",
@@ -15854,8 +15854,8 @@
     "name": "Rivendell Warrior",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -15905,8 +15905,8 @@
     "name": "Warrior of Numenor",
     "unit_type": "Warrior",
     "base_points": 9,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -16685,8 +16685,8 @@
     "name": "Great Eagle",
     "unit_type": "Warrior",
     "base_points": 100,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -16810,8 +16810,8 @@
     "name": "Uruk-Hai Scout",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -16841,8 +16841,8 @@
     "name": "Isengard Orc Warrior",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -17004,8 +17004,8 @@
     "name": "Crebain",
     "unit_type": "Warrior",
     "base_points": 20,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -17018,8 +17018,8 @@
     "name": "Rohirrim Traitor",
     "unit_type": "Warrior",
     "base_points": 6,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -17062,8 +17062,8 @@
     "name": "Hill Tribesman",
     "unit_type": "Warrior",
     "base_points": 5,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": [
@@ -17145,8 +17145,8 @@
     "name": "Werewolf",
     "unit_type": "Warrior",
     "base_points": 25,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -17159,8 +17159,8 @@
     "name": "Fell Warg",
     "unit_type": "Warrior",
     "base_points": 8,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -17173,8 +17173,8 @@
     "name": "Wild Warg",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -17221,8 +17221,8 @@
         "points": 20,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Warg"
+        "mount_name": "Warg",
+        "quantity": 1
       }
     ]
   },
@@ -17234,8 +17234,8 @@
     "name": "Isengard Warg Rider",
     "unit_type": "Warrior",
     "base_points": 11,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "opt_mandatory": true,
     "MWFW": [],
     "warband_size": 0,
@@ -17273,8 +17273,8 @@
     "name": "Isengard Warg",
     "unit_type": "Warrior",
     "base_points": 7,
-    "bow_limit": true,
     "siege_crew": 0,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -17295,8 +17295,8 @@
         "2:14:2:1"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 15,
-    "no_followers": true,
     "options": [
       {
         "id": "OPT0039",
@@ -17312,8 +17312,8 @@
         "points": 50,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Fell Beast"
+        "mount_name": "Fell Beast",
+        "quantity": 1
       },
       {
         "id": "OPT0042",
@@ -17349,8 +17349,8 @@
         "2:14:2:1"
       ]
     ],
+    "no_followers": 1.0,
     "warband_size": 12,
-    "no_followers": true,
     "options": [
       {
         "id": "OPT0044",
@@ -17366,8 +17366,8 @@
         "points": 50,
         "type": "mount",
         "included": true,
-        "quantity": 1,
-        "mount_name": "Fell Beast"
+        "mount_name": "Fell Beast",
+        "quantity": 1
       },
       {
         "id": "OPT0046",
