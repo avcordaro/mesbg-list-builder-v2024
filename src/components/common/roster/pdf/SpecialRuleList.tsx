@@ -6,6 +6,7 @@ import keywords from "../../../../assets/data/keywords.json";
 import { armyListData } from "../../../../assets/data.ts";
 import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useUserPreferences } from "../../../../state/preference";
 import { isMovieQuote } from "../../../../utils/string.ts";
 
 interface SpecialRuleListProps {
@@ -65,6 +66,9 @@ function mapAopRule(rule: {
 
 export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
   const {
+    preferences: { removePdfPageBreak, hidePdfSpecialRules, hidePdfArmyRules },
+  } = useUserPreferences();
+  const {
     roster: { armyList, metadata },
   } = useRosterInformation();
   const armyListRules = armyListData[armyList];
@@ -84,72 +88,78 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
 
   return (
     <>
-      <Box id="pdf-rules" className="page-break">
-        <Box sx={{ mb: 2 }}>
-          <Typography variant="h5" sx={{ mb: 1 }}>
-            Army special rules
-          </Typography>
-          <Stack gap={1}>
-            {armyListRules.special_rules
-              .filter((rule) => {
-                if (armyList === "The Three Trolls") {
-                  return (
-                    rule.troll_purchase !== true ||
-                    (metadata.tttSpecialUpgrades &&
-                      metadata.tttSpecialUpgrades.includes(rule.title))
-                  );
-                }
-                return true;
-              })
-              .map((rule, index) => (
-                <Box
-                  key={index}
-                  component={rule.troll_purchase === true ? "ul" : "div"}
-                  sx={{ pageBreakInside: "avoid" }}
-                >
-                  {isMovieQuote(rule.title) ? (
-                    <Typography
-                      component={rule.troll_purchase === true ? "li" : "p"}
-                    >
-                      <b>
-                        <i>{rule.title}</i>
-                      </b>
-                    </Typography>
-                  ) : (
-                    <Typography
-                      component={rule.troll_purchase === true ? "li" : "p"}
-                    >
-                      <b>{rule.title}</b>
-                    </Typography>
-                  )}
-                  <Stack gap={0.5}>
-                    {rule.description.split("\n").map((paragraph, index) => (
-                      <Typography key={index}>{paragraph}</Typography>
-                    ))}
-                  </Stack>
+      <Box id="pdf-rules" className={removePdfPageBreak ? "" : "page-break"}>
+        {!hidePdfArmyRules && (
+          <Box sx={{ mb: 2 }}>
+            <Typography variant="h5" sx={{ mb: 1 }}>
+              Army special rules
+            </Typography>
+            <Stack gap={1}>
+              {armyListRules.special_rules
+                .filter((rule) => {
+                  if (armyList === "The Three Trolls") {
+                    return (
+                      rule.troll_purchase !== true ||
+                      (metadata.tttSpecialUpgrades &&
+                        metadata.tttSpecialUpgrades.includes(rule.title))
+                    );
+                  }
+                  return true;
+                })
+                .map((rule, index) => (
+                  <Box
+                    key={index}
+                    component={rule.troll_purchase === true ? "ul" : "div"}
+                    sx={{ pageBreakInside: "avoid" }}
+                  >
+                    {isMovieQuote(rule.title) ? (
+                      <Typography
+                        component={rule.troll_purchase === true ? "li" : "p"}
+                      >
+                        <b>
+                          <i>{rule.title}</i>
+                        </b>
+                      </Typography>
+                    ) : (
+                      <Typography
+                        component={rule.troll_purchase === true ? "li" : "p"}
+                      >
+                        <b>{rule.title}</b>
+                      </Typography>
+                    )}
+                    <Stack gap={0.5}>
+                      {rule.description.split("\n").map((paragraph, index) => (
+                        <Typography key={index}>{paragraph}</Typography>
+                      ))}
+                    </Stack>
+                  </Box>
+                ))}
+            </Stack>
+          </Box>
+        )}
+
+        {!hidePdfSpecialRules && (
+          <Box>
+            <Typography variant="h5">Special rules</Typography>
+            <Stack gap={1} sx={{ py: 1 }}>
+              {specialRules.map((rule) => (
+                <Box key={rule.name} sx={{ py: 0.8, pageBreakInside: "avoid" }}>
+                  <Typography variant="body1">
+                    <b>
+                      {rule.name} {rule.type && <>({rule.type})</>}
+                    </b>
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    dangerouslySetInnerHTML={{
+                      __html: rule.description?.replaceAll("\n\n", "<br />"),
+                    }}
+                  />
                 </Box>
               ))}
-          </Stack>
-        </Box>
-
-        <Typography variant="h5">Special rules</Typography>
-        <Stack gap={1} sx={{ py: 1 }}>
-          {specialRules.map((rule) => (
-            <Box key={rule.name} sx={{ py: 0.8, pageBreakInside: "avoid" }}>
-              <Typography variant="body1">
-                <b>
-                  {rule.name} {rule.type && <>({rule.type})</>}
-                </b>
-              </Typography>
-              <Typography
-                variant="body2"
-                dangerouslySetInnerHTML={{
-                  __html: rule.description?.replaceAll("\n\n", "<br />"),
-                }}
-              />
-            </Box>
-          ))}
-        </Stack>
+            </Stack>
+          </Box>
+        )}
       </Box>
     </>
   );

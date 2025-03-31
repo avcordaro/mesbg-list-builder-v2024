@@ -9,6 +9,7 @@ import {
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { useUserPreferences } from "../../../../state/preference";
 
 interface QuickReferenceTableProps {
   profiles: Profile[];
@@ -112,6 +113,10 @@ export const QuickReferenceTable = ({
   profiles,
   noCaption,
 }: QuickReferenceTableProps) => {
+  const {
+    preferences: { removePdfPageBreak },
+  } = useUserPreferences();
+
   const mounts = profiles
     .flatMap(
       (profile) =>
@@ -141,7 +146,11 @@ export const QuickReferenceTable = ({
 
   return (
     <>
-      <TableContainer id="pdf-quick-ref" component="div" className="page-break">
+      <TableContainer
+        id="pdf-quick-ref"
+        component="div"
+        className={removePdfPageBreak ? "" : "page-break"}
+      >
         {noCaption !== true && (
           <Typography variant="h5">Quick reference sheet</Typography>
         )}

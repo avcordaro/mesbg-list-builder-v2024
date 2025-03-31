@@ -10,7 +10,9 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
+import { keywords } from "../../../../assets/data.ts";
 import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { useUserPreferences } from "../../../../state/preference";
 
 interface UnitListProps {
   units: Profile[];
@@ -119,14 +121,39 @@ const AdditionalText = ({ profile }: { profile: Profile }) => {
 };
 
 const SpecialRules = ({ profile }: { profile: Profile }) => {
-  const specialRules: string[] = [
-    ...profile.active_or_passive_rules.map((rule) => rule.name),
-    ...profile.special_rules,
-  ].sort((a, b) => a.localeCompare(b));
+  const {
+    preferences: { includePdfSpecialRuleDescriptions },
+  } = useUserPreferences();
+  const specialRules: { name: string; description: string }[] = [
+    ...profile.active_or_passive_rules,
+    ...profile.special_rules.map((rule) => ({
+      ...keywords.find((kw) => kw.name === rule.replace(/\(.*?\)/g, "(X)")),
+      name: rule,
+    })),
+  ].sort((a, b) => a.name.localeCompare(b.name));
+
+  if (includePdfSpecialRuleDescriptions) {
+    return (
+      <>
+        <Typography sx={{ mt: 0.5 }}>
+          <b>Special Rules</b> {specialRules.length === 0 && <i>None</i>}
+        </Typography>
+        {specialRules.map((rule, index) => (
+          <Box key={index} sx={{ my: 1, ml: 2 }}>
+            <Typography>
+              <b>{rule.name}</b>
+              <br />
+              {rule.description}
+            </Typography>
+          </Box>
+        ))}
+      </>
+    );
+  }
 
   return (
     <Typography sx={{ mt: 0.5 }}>
-      <b>Special Rules:</b> {specialRules.join(", ")}{" "}
+      <b>Special Rules:</b> {specialRules.map((rule) => rule.name).join(", ")}{" "}
       {specialRules.length === 0 && <i>None</i>}
     </Typography>
   );
@@ -172,6 +199,37 @@ const MagicalPowers = ({ profile }: { profile: Profile }) => {
 };
 
 const HeroicActions = ({ profile }: { profile: Profile }) => {
+  const {
+    preferences: { includePdfHeroicActionDescriptions },
+  } = useUserPreferences();
+
+  if (!profile.heroic_actions || profile.heroic_actions.length === 0) {
+    return <></>;
+  }
+
+  if (includePdfHeroicActionDescriptions) {
+    const heroicActions = profile.heroic_actions.map((action) =>
+      keywords.find((kw) => kw.name === action),
+    );
+
+    return (
+      <>
+        <Typography sx={{ mt: 0.5 }}>
+          <b>Heroic actions:</b>
+        </Typography>
+        {heroicActions.map((rule, index) => (
+          <Box key={index} sx={{ my: 1, ml: 2 }}>
+            <Typography>
+              <b>{rule.name}</b>
+              <br />
+              {rule.description}
+            </Typography>
+          </Box>
+        ))}
+      </>
+    );
+  }
+
   return (
     <>
       {profile.heroic_actions && profile.heroic_actions.length > 0 && (
@@ -197,8 +255,8 @@ const AdditionalProfiles = ({
           </Typography>
           <Box sx={{ pl: 2 }}>
             <AdditionalText profile={profile} />
-            <SpecialRules profile={profile} />
             <HeroicActions profile={profile} />
+            <SpecialRules profile={profile} />
             <MagicalPowers profile={profile} />
           </Box>
         </Box>
@@ -216,8 +274,8 @@ const ListItem = ({ profile }: { profile: Profile }) => {
         </Typography>
         <AdditionalText profile={profile} />
         <Stats profile={profile} />
-        <SpecialRules profile={profile} />
         <HeroicActions profile={profile} />
+        <SpecialRules profile={profile} />
         <MagicalPowers profile={profile} />
         <AdditionalProfiles
           additionalProfiles={profile?.additional_stats || []}
@@ -228,8 +286,11 @@ const ListItem = ({ profile }: { profile: Profile }) => {
 };
 
 export const UnitProfileList = ({ units }: UnitListProps) => {
+  const {
+    preferences: { removePdfPageBreak },
+  } = useUserPreferences();
   return (
-    <Box id="pdf-profiles" className="page-break">
+    <Box id="pdf-profiles" className={removePdfPageBreak ? "" : "page-break"}>
       <Typography variant="h5">Profiles</Typography>
       {units
         .filter((unit) => unit.type !== "Siege Equipment")

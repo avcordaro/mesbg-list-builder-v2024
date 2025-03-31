@@ -1,14 +1,32 @@
 import { Slice } from "../../Slice.ts";
 
 export type Preferences =
-  | "mobileRosterToolbar"
-  | "autoUpdateUnitData"
-  | "colorCodedRules"
-  | "splitActiveRules"
-  | "collectionWarnings"
+  //   General UI preferences
   | "darkMode"
+  | "mobileRosterToolbar"
   | "oldShareScreen"
-  | "allowCompulsoryGeneralDelete";
+  //   Builder restriction preferences
+  | "allowCompulsoryGeneralDelete"
+  //   Collection preferences
+  | "collectionWarnings"
+  //   Auto update preferences
+  | "autoUpdateUnitData"
+  // Pdf Preferences
+  | "removePdfPageBreak"
+  | "includePdfSpecialRuleDescriptions"
+  | "includePdfHeroicActionDescriptions"
+  | "enableHidePdfSections"
+  | "hidePdfQuickRefTable"
+  | "hidePdfArmyComposition"
+  | "hidePdfProfiles"
+  | "hidePdfSpecialRules"
+  | "hidePdfArmyRules"
+  | "hidePdfHeroicActions"
+  | "hidePdfMagicPowers"
+  | "hidePdfStatTrackers"
+  //   Special rule drawer preferences
+  | "colorCodedRules"
+  | "splitActiveRules";
 
 export type PreferenceState = {
   preferences: Record<Preferences, boolean>;
@@ -25,6 +43,18 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     collectionWarnings: false,
     darkMode: false,
     allowCompulsoryGeneralDelete: false,
+    removePdfPageBreak: false,
+    includePdfSpecialRuleDescriptions: false,
+    includePdfHeroicActionDescriptions: false,
+    enableHidePdfSections: false,
+    hidePdfArmyComposition: false,
+    hidePdfHeroicActions: false,
+    hidePdfMagicPowers: false,
+    hidePdfProfiles: false,
+    hidePdfQuickRefTable: false,
+    hidePdfSpecialRules: false,
+    hidePdfArmyRules: false,
+    hidePdfStatTrackers: false,
   },
 };
 
