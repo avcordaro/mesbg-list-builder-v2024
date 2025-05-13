@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle the /api subfolder separately
+RewriteCond %{REQUEST_URI} ^/api($|/)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api(/.*)?$ ./v2024/public/index.php [L]
+
+# Route all other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /v2024/public/index.php [QSA,L]
