@@ -11469,9 +11469,6 @@
       "W": "3",
       "C": "5+",
       "I": "5+",
-      "Might": "3",
-      "Will": "3",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "The Lord of Blades",
@@ -11499,12 +11496,6 @@
           "description": "While mounted, gain the Shieldwall rule. The +1 Defence applies to both rider and mount. Hero models don't need a shield to benefit from this special rule."
         }
       ],
-      "options": [
-        {
-          "name": "Armoured horse",
-          "points": "25"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Strike",
@@ -11517,9 +11508,7 @@
       "wargear": [
         "Heavy armour",
         "Durtuz the Silver Falchion"
-      ],
-      "point_cost": "135",
-      "opt_mandatory": false
+      ]
     },
     "Black Dragon Warrior": {
       "Mv": "6\"",
@@ -11531,9 +11520,6 @@
       "W": "1",
       "C": "6+",
       "I": "6+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Easterling Halberd",
@@ -11551,16 +11537,6 @@
           "description": "This model may only be included in the Warband of a Black Dragon Hero. Additionally, whilst within 3\" of a Black Dragon Hero, this model gains a bonus of +1 Fight value."
         }
       ],
-      "options": [
-        {
-          "name": "Exchange shield for banner",
-          "points": "25"
-        },
-        {
-          "name": "Easterling Halberd",
-          "points": "1"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [],
@@ -11568,9 +11544,7 @@
         "Heavy armour",
         "shield",
         "hand weapon"
-      ],
-      "point_cost": "10",
-      "opt_mandatory": false
+      ]
     },
     "Brorgir the Conjurer": {
       "Mv": "6\"",
@@ -11582,9 +11556,6 @@
       "W": "2",
       "C": "6+",
       "I": "5+",
-      "Might": "2",
-      "Will": "5",
-      "Fate": "2",
       "active_or_passive_rules": [
         {
           "name": "Sorcerous Adept",
@@ -11597,7 +11568,6 @@
           "description": "This weapon can be used as either a pike or two-handed weapon."
         }
       ],
-      "options": [],
       "magic_powers": [
         {
           "name": "Bladewrath",
@@ -11627,9 +11597,7 @@
       "wargear": [
         "Heavy armour",
         "Easterling Halberd"
-      ],
-      "point_cost": "80",
-      "opt_mandatory": false
+      ]
     },
     "Dragon Cult Acolyte": {
       "Mv": "6\"",
@@ -11641,9 +11609,6 @@
       "W": "1",
       "C": "6+",
       "I": "6",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Supreme Agility",
@@ -11656,7 +11621,6 @@
           "description": "This model may only be included in the Warband of a Black Dragon Hero. Additionally, whilst within 3\" of a Black Dragon Hero, this model gains a bonus of +1 Fight value."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [
@@ -11666,9 +11630,7 @@
         "Armour",
         "throwing weapons",
         "hand weapons"
-      ],
-      "point_cost": "11",
-      "opt_mandatory": false
+      ]
     },
     "Easterling Dragon Knight": {
       "Mv": "6\"",
@@ -11680,9 +11642,6 @@
       "W": "2",
       "C": "6+",
       "I": "6+",
-      "Might": "2",
-      "Will": "0",
-      "Fate": "0",
       "active_or_passive_rules": [
         {
           "name": "Shield of Blades",
@@ -11705,12 +11664,6 @@
           "description": "May only include Black Dragon Warrior models in his warband."
         }
       ],
-      "options": [
-        {
-          "name": "Armoured horse",
-          "points": "25"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Challenge"
@@ -11722,9 +11675,7 @@
       "wargear": [
         "Heavy armour",
         "hand weapons"
-      ],
-      "point_cost": "70",
-      "opt_mandatory": false
+      ]
     },
     "Easterling Kataphrakt Captain": {
       "Mv": "6\"",
@@ -11736,9 +11687,6 @@
       "W": "2",
       "C": "6+",
       "I": "5+",
-      "Might": "2",
-      "Will": "1",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Phalanx",
@@ -11751,7 +11699,6 @@
           "description": "While mounted, gain the Shieldwall rule. The +1 Defence applies to both rider and mount. Hero models don't need a shield to benefit from this special rule."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March"
@@ -11762,9 +11709,7 @@
         "shield",
         "hand weapon",
         "Armoured horse"
-      ],
-      "point_cost": "90",
-      "opt_mandatory": false
+      ]
     },
     "Easterling Kataphrakt": {
       "Mv": "6\"",
@@ -11776,9 +11721,6 @@
       "W": "1",
       "C": "7+",
       "I": "6+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Phalanx",
@@ -11791,16 +11733,6 @@
           "description": "While mounted, gain the Shieldwall rule. The +1 Defence applies to both rider and mount. Hero models don't need a shield to benefit from this special rule."
         }
       ],
-      "options": [
-        {
-          "name": "Banner",
-          "points": "25"
-        },
-        {
-          "name": "Exchange shield for war drum",
-          "points": "25"
-        }
-      ],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic March"
@@ -11811,9 +11743,7 @@
         "shield",
         "hand weapon",
         "Armoured horse"
-      ],
-      "point_cost": "15",
-      "opt_mandatory": false
+      ]
     },
     "Easterling War Priest": {
       "Mv": "6\"",
@@ -11825,20 +11755,11 @@
       "W": "2",
       "C": "6+",
       "I": "6+",
-      "Might": "1",
-      "Will": "3",
-      "Fate": "1",
       "active_or_passive_rules": [
         {
           "name": "Easterling Halberd",
           "type": "Active",
           "description": "This weapon can be used as either a pike or two-handed weapon."
-        }
-      ],
-      "options": [
-        {
-          "name": "Armoured horse",
-          "points": "25"
         }
       ],
       "magic_powers": [
@@ -11865,9 +11786,7 @@
       "wargear": [
         "Heavy armour",
         "Easterling Halberd"
-      ],
-      "point_cost": "60",
-      "opt_mandatory": false
+      ]
     },
     "Royal Palanquin": {
       "Mv": "6\"",
@@ -11879,9 +11798,6 @@
       "W": "6",
       "C": "6+",
       "I": "6+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "The Palanquin",
@@ -11904,15 +11820,12 @@
           "description": "Friendly Easterling models within 6\" of the Royal Palanquin and have line of sight to it, may re-roll To Wound rolls of a natural 1 when making Strikes."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [
         "Dominant (*)"
       ],
-      "wargear": [],
-      "point_cost": "",
-      "opt_mandatory": false
+      "wargear": []
     },
     "Rutabi, General of the Dragon Legion": {
       "Mv": "6\"",
@@ -11924,9 +11837,6 @@
       "W": "3",
       "C": "5+",
       "I": "4+",
-      "Might": "3",
-      "Will": "2",
-      "Fate": "2",
       "active_or_passive_rules": [
         {
           "name": "Phalanx",
@@ -11939,7 +11849,6 @@
           "description": "When making strikes against Trapped enemy models, you may re-roll failed To Wound rolls."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Challenge",
@@ -11953,9 +11862,7 @@
         "Heavy armour",
         "shield",
         "hand weapon"
-      ],
-      "point_cost": "120",
-      "opt_mandatory": false
+      ]
     },
     "The Dragon Emperor of Rhun": {
       "Mv": "6\"",
@@ -11967,9 +11874,6 @@
       "W": "3",
       "C": "4+",
       "I": "4+",
-      "Might": "3",
-      "Will": "3",
-      "Fate": "3",
       "active_or_passive_rules": [
         {
           "name": "The Emperor's Glaive",
@@ -11992,7 +11896,6 @@
           "description": "Easterlings can use pike and shield without penalty. If an Infantry model with this rule loses a Combat, up to two other models that also have the Phalanx rule can Make Way, instead of one."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [
         "Heroic Resolve",
@@ -12006,9 +11909,7 @@
         "The Emperor's Glaive",
         "Helm of the Dragon Emperor",
         "Royal Palanquin"
-      ],
-      "point_cost": "200",
-      "opt_mandatory": false
+      ]
     },
     "War Drake of Rhun": {
       "Mv": "6\"",
@@ -12020,9 +11921,6 @@
       "W": "2",
       "C": "6+",
       "I": "9+",
-      "Might": "",
-      "Will": "",
-      "Fate": "",
       "active_or_passive_rules": [
         {
           "name": "Slow-acting Venom",
@@ -12030,7 +11928,6 @@
           "description": "Any model that suffers a wound from a War Drake which isn't prevented, and is not slain, reduces their Fight and Attack value by 1 (to a minimum of 1) for the remainder of the game. This effect does not stack on the same model between wounds from different War Drakes."
         }
       ],
-      "options": [],
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [
@@ -12040,9 +11937,7 @@
       ],
       "wargear": [
         "Armour, claws and teeth (hand weapons)"
-      ],
-      "point_cost": "20",
-      "opt_mandatory": false
+      ]
     }
   },
   "Smaug": {
