@@ -4978,6 +4978,74 @@
         "Amour",
         "hand weapon"
       ]
+    },
+    "Deorwine, Chief of the King's Knights": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "For Theoden!",
+          "type": "Active",
+          "description": "During the Declare Heroic Actions step of the Fight Phase, if Theoden is Engaged in Combat within 6\", Deorwine may call a Heroic Combat for free. If the action is successful, you must use the following move to join Theoden's Combat, or get as close as possible to him. He cannot use this special rule if he is in the same Combat as Theoden."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Expert Rider",
+        "Horse Lord",
+        "Sworn Protector (Theoden)",
+        "Leader (Rohan Royal Guard)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Elfhelm, Captain of Rohan": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pinpoint Accuracy",
+          "type": "Active",
+          "description": "Elfhelm may re-roll To Hit, To Wound and In The Way rolls when using his throwing spears, and never suffers the normal -1 penalty when moving and shooting with his throwing spears."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic Defence",
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Expert Rider",
+        "Horse Lord"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield",
+        "throwing spears"
+      ]
     }
   },
   "Isengard": {
