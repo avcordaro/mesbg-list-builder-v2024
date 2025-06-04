@@ -1565,6 +1565,130 @@
       "additional_text": [
         "Crewed by two Dale Siege Crew, one of which is the Siege Veteran."
       ]
+    },
+    "Bard II, Prince of Dale": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Wall of Blades",
+          "type": "Active",
+          "description": "This model gains a bonus of +1 To Wound when making Strikes with their spear against a model that Charged them this turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Resolve",
+        "Heroic Defence"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield",
+        "spear"
+      ]
+    },
+    "Brand, King of Dale": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Lord of Dale",
+          "type": "Active",
+          "description": "Brand's Stand Fast! Is 12\" rather than 6\"."
+        },
+        {
+          "name": "Stoic Fighter",
+          "type": "Active",
+          "description": "At the start of any Combat involving Brand, if he would be Trapped upon losing the Duel roll, he may re-roll a single D6 in the Duel roll, and a single D6 when rolling To Wound."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Resolve",
+        "Heroic Strength"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Halbarad": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Banner of Arwen Evenstar",
+          "type": "Passive",
+          "description": "A banner with a range of 6\", and Halbarad does not suffer the usual -1 penalty in Duel rolls. Additionally, friendly models within 6\" and in Line of Sight of the banner automatically pass any Courage Tests they are required to take."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Knight of Dale": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Wall of Blades",
+          "type": "Active",
+          "description": "This model gains a bonus of +1 To Wound when making Strikes with their spear against a model that Charged them this turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield",
+        "spear"
+      ]
     }
   },
   "Gundabad & Dol Guldur": {
