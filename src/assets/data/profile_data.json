@@ -8577,6 +8577,144 @@
         "Heavy armour",
         "sword"
       ]
+    },
+    "Black Numenorean Knight": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Visage of Terror",
+          "type": "Passive",
+          "description": "If an enemy attempts to Charge this model and fails its Courage Test (due to Terror), then their Activation will immediately end rather than just not being able to Move than turn. They also cannot Shoot in the Shoot Phase, and cannot Move in the Fight Phase if part of a successful Heroic Combat, but may otherwise act normally."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Lance",
+        "Shield",
+        "Armoured horse"
+      ]
+    },
+    "Black Numenorean Warrior": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Visage of Terror",
+          "type": "Passive",
+          "description": "If an enemy attempts to Charge this model and fails its Courage Test (due to Terror), then their Activation will immediately end rather than just not being able to Move than turn. They also cannot Shoot in the Shoot Phase, and cannot Move in the Fight Phase if part of a successful Heroic Combat, but may otherwise act normally."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Mordor Siege Bow": {
+      "Range": "6\" - 48\"",
+      "Mv": "-",
+      "F": "-",
+      "S": "8",
+      "D": "9",
+      "A": "-",
+      "W": "3",
+      "C": "-",
+      "active_or_passive_rules": [
+        {
+          "name": "Accurate",
+          "type": "Active",
+          "description": "A Mordor Siege Bow will only Scatter 3\" rather than 6\"."
+        },
+        {
+          "name": "Piercing Shot",
+          "type": "Active",
+          "description": "A model hit will be flung back D6\" if it has a Strength of 5 or lower. Any models passed over are knocked prone and take a Strength 5 hit. The flung model stops if it hits impassable terrain or a model with Strength 6 or higher, and both take a Strength 6 hit. The flung model is knocked prone if it survives. If the flung model would end its  movement over other models, those models are moved the minimum distance to allow the flung model to be placed."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Direct Shot"
+      ],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Mordor Orc Siege Crew",
+          "Mv": "6\"",
+          "Fv": "3",
+          "Sv": "4+",
+          "S": "3",
+          "D": "4",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [],
+          "special_rules": [],
+          "wargear": [
+            "Armour",
+            "hand weapon"
+          ]
+        }
+      ],
+      "additional_text": [
+        "Crewed by three Mordor Orc Siege Crew, one of which is the Siege Veteran."
+      ]
+    },
+    "Black Numenorean Marshal": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Visage of Terror",
+          "type": "Passive",
+          "description": "If an enemy attempts to Charge this model and fails its Courage Test (due to Terror), then their Activation will immediately end rather than just not being able to Move than turn. They also cannot Shoot in the Shoot Phase, and cannot Move in the Fight Phase if part of a successful Heroic Combat, but may otherwise act normally."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield",
+        "Armoured horse"
+      ]
     }
   },
   "Gondor": {
