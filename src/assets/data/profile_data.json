@@ -484,7 +484,7 @@
     "Gulavhar, The Terror of Arnor": {
       "Mv": "6\"",
       "Fv": "7",
-      "Sv": "4+",
+      "Sv": "5+",
       "S": "8",
       "D": "5",
       "A": "*",
@@ -11937,6 +11937,298 @@
       ],
       "wargear": [
         "Armour, claws and teeth (hand weapons)"
+      ]
+    },
+    "Corsair Crossbowman": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pavise",
+          "type": "Passive",
+          "description": "A shield that provides +3 Defence, rather than +1. However, this model cannot gain this bonus whilst Engaged in Combat."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Pavise",
+        "crossbow",
+        "hand weapon"
+      ]
+    },
+    "Dalamyr, Fleetmaster of Umbar": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "4",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Smoke Bombs",
+          "type": "Active",
+          "description": "Throwing weapons with Strength 1. Any target hit, but not slain, must immediately spend a point of Will or suffer the effects of the Transfix Magical Power, and have their Fight value halved until the End Phase of the turn. If Dalamyr rolls a 1 on the To Hit roll, then he has run out of supply and cannot use smoke bombs again for the rest of the game."
+        },
+        {
+          "name": "Preternatural Agility",
+          "type": "Active",
+          "description": "Dalamyr can never be Trapped whilst still standing."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Backstabbers",
+        "Bane of Kings",
+        "Stalk Unseen"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "throwing weapons",
+        "smoke bombs"
+      ]
+    },
+    "Delgamar, Gatemaster of Umbar": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Ruthless Commander",
+          "type": "Active",
+          "description": "Friendly Corsair Warrior models within 3\" may re-roll a single dice during the Duel roll, after any other re-rolls from other sources have been used. However, if they use this bonus and still fail to win the Duel roll, they immediately suffer a Strength 2 hit. Only a single Corsair Warrior can use this special rule in each Combat."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "whip",
+        "throwing weapons"
+      ]
+    },
+    "Haradrim Raider": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Poisoned Attacks (bow)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Horse"
+      ]
+    },
+    "Haradrim Taskmaster": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Whip of the Masters",
+          "type": "Active",
+          "description": "Each time a friendly Hero model within 6\" attempts a Heroic Move, March or Shoot, roll a D6. On a 4+, the Hero does not spend the Might Point and the Heroic action is free."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "whip"
+      ]
+    },
+    "Hasharin": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "4",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Preternatural Agility",
+          "type": "Active",
+          "description": "A Hasharin can never be Trapped while still standing."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Backstabbers",
+        "Bane of Kings",
+        "Stalk Unseen",
+        "General Hunter"
+      ],
+      "wargear": [
+        "Dagger",
+        "throwing daggers",
+        "blowpipe"
+      ]
+    },
+    "Raza, Fang of the Serpent": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Serpent's Weapon",
+          "type": "Active",
+          "description": "At the start of the game, after both sides have deployed, secretly select one Hero model in the opponent's force to be Raza's target. If Raza is Engaged in Combat with this target, after any Heroic Actions have been resolved, reveal Raza's target. Raza gains a +2 bonus to his Fight value whilst Engaged in Combat with his target."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Bane of Kings",
+        "Leader (Serpent Guard)",
+        "Sworn Protector (Suladan)"
+      ],
+      "wargear": [
+        "Armour",
+        "Spear"
+      ]
+    },
+    "Serpent Guard": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Poisoned Attacks"
+      ],
+      "wargear": [
+        "Armour",
+        "spear"
+      ]
+    },
+    "Serpent Rider": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Poisoned Attacks"
+      ],
+      "wargear": [
+        "Armour",
+        "war spear",
+        "Horse"
+      ]
+    },
+    "Suladan, The Serpent Lord": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "3",
+      "W": "3",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Serpent Banner",
+          "type": "Active",
+          "description": "Banner with 6\" range, and Suladan never suffers -1 penalty to Duel rolls whilst carrying it."
+        },
+        {
+          "name": "Ascendant",
+          "type": "Active",
+          "description": "Suladan's Stand Fast! is 12\" rather than 6\"."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic March",
+        "Heroic Strike",
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Leader (Serpent Guard)",
+        "Poisoned Attacks",
+        "Leader (serpent Rider)"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "Serpent Banner"
       ]
     }
   },
