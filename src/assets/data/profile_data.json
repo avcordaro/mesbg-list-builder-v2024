@@ -6403,6 +6403,21 @@
       "additional_text": [
         "If Radagast dismounts from his Sleigh, it must be removed from play."
       ]
+    },
+    "Galadhrim Steed": {
+      "Mv": "10\"",
+      "Fv": "2",
+      "Sv": "6+",
+      "S": "3",
+      "D": "5",
+      "A": "0",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "special_rules": [
+        "Woodland Creature"
+      ]
     }
   },
   "The Free Peoples": {
@@ -10584,6 +10599,222 @@
       ],
       "wargear": [
         "Elven hand-and-a-half weapons"
+      ]
+    },
+    "Elladan": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Unbreakable Bond",
+          "type": "Active",
+          "description": "If Elrohir is slain, make a note of the model that killed him. Elladan increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elrohir. If Elladan is Engaged in Combat with the model that killed Elrohir, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero's Heroic Tier."
+        },
+        {
+          "name": "Twin Elven Blades",
+          "type": "Active",
+          "description": "Whilst he has the Infantry keyword, Elladan can choose one of three bonuses at the start of a Combat: Gain 3 Attacks rather than 2, use the Shielding rule, or use his Elven weapons as Elven hand-and-a-half weapons."
+        },
+        {
+          "name": "Strength of Brotherhood",
+          "type": "Active",
+          "description": "Whilst within 3\" of Elrohir, Elladan gains Dominant (2) and may re-roll To Wound rolls of a natural 1 when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Elven hand weapons"
+      ]
+    },
+    "Elrohir": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Unbreakable Bond",
+          "type": "Active",
+          "description": "If Elrohir is slain, make a note of the model that killed him. Elladan increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elrohir. If Elladan is Engaged in Combat with the model that killed Elrohir, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero's Heroic Tier."
+        },
+        {
+          "name": "Twin Elven Blades",
+          "type": "Active",
+          "description": "Whilst he has the Infantry keyword, Elladan can choose one of three bonuses at the start of a Combat: Gain 3 Attacks rather than 2, use the Shielding rule, or use his Elven weapons as Elven hand-and-a-half weapons."
+        },
+        {
+          "name": "Strength of Brotherhood",
+          "type": "Active",
+          "description": "Whilst within 3\" of Elrohir, Elladan gains Dominant (2) and may re-roll To Wound rolls of a natural 1 when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Elven hand weapons"
+      ]
+    },
+    "Galadhrim Knight": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Galadhrim steed",
+        "Elven hand-and-a-half weapon",
+        "heavy armour"
+      ]
+    },
+    "Guard of the Galadhrim Court": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Caras Galadhon Fighting Style",
+          "type": "Active",
+          "description": "This model may use the Shielding rule with their Elven pike. The usual restrictions for Shielding still apply, chiefly that a model using the Shielding rule cannot be Supported by another model, not even by another Guard of the Galadhrim Court."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Elven pike"
+      ]
+    },
+    "Orophin, Galadhrim Captain": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "3",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Whirl of Blades",
+          "type": "Active",
+          "description": "If Orophin rolls a natural 6 in the Duel roll, then he will make double the number of strikes he normally would when rolling To Wound. Note that if the model he is fighting is Trapped, these Strikes will not also gain the benefit for Striking a Trapped model."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Elven hand weapons"
+      ]
+    },
+    "Rumil, Warden of Caras Galadhon": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Swift Parry",
+          "type": "Active",
+          "description": "Rumil may force one enemy model involved in the same Combat as him to re-roll one D6 in their Duel roll. This must be done before all other re-rolls, and before any Might points are spent."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Elven hand weapon",
+        "shield"
+      ]
+    },
+    "Wood Elf Sentinel": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "3",
+      "D": "3",
+      "A": "2",
+      "W": "1",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Enchanting Song",
+          "type": "Active",
+          "description": "During their Activation, a Sentinel may sing one of the following songs:\nThe Hymn of Elbereth - Choose a friendly model within 12\", who will  automatically pass all Courage Tests until the End Phase of the turn.\nEldamar Madrigal - Choose an enemy model within 12\" who is not Engaged in Combat. They must take an Intelligence Test. If failed, you may immediately Move that model. However you cannot make them enter an enemy model\u2019s Control Zone, dismount, lie down, be forced to Climb, Jump, Leap or Swim, or Move in any way that would cause direct harm. The model affected by this song cannot be Activated later in the turn.\nThe Lay of Gondolin - Sentinel and all friendly models within 3\" gain Terror until the End Phase of the turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Elven hand weapon",
+        "Elf bow",
+        "Elven Cloak"
       ]
     }
   },
