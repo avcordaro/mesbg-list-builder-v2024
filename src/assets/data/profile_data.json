@@ -9683,6 +9683,421 @@
         "Armour",
         "hand weapon"
       ]
+    },
+    "Angbor the Fearless": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Chief of Lamedon",
+          "type": "Passive",
+          "description": "Friendly Lamedon models within 3\" of Angbor automatically pass any Courage Tests they are required to make."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Fearless",
+        "Mighty Blow"
+      ],
+      "wargear": [
+        "Armour",
+        "Two-handed weapon"
+      ]
+    },
+    "Axeman of Lossarnach": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Axe of Lossarnach",
+          "type": "Active",
+          "description": "This weapon can be used as either a spear or two-handed weapon."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Axe of Lossarnach"
+      ]
+    },
+    "Beregond, Guard of the Citadel": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "An Unlikely Friendship",
+          "type": "Active",
+          "description": "Whilst within 3\" of a friendly Pippin, Beregond may re-roll any failed To Wound rolls when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Bodyguard"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Longbow"
+      ]
+    },
+    "Blackroot Vale Archer": {
+      "Mv": "6\"",
+      "Fv": "3/3+",
+      "Sv": "",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "2",
+      "I": "",
+      "active_or_passive_rules": [
+        {
+          "name": "Dead-eye Shot",
+          "type": "Passive",
+          "description": "When benefiting from a Heroic Shoot, this model may re-roll failed To Wound rolls when making shooting attacks."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Captain of Dol Amroth": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pride of Dol Amroth",
+          "type": "Active",
+          "description": "Whilst within 3\" of Prince Imrahil, this model gains a bonus of +1 Fight value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy amour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Clansman of Lamedon": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Honour of Lamedon",
+          "type": "Passive",
+          "description": "Clansmen of Lamedon within 3\" of a friendly Lamedon Hero model may re-roll any rolls of a natural 1 when making a Duel roll."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "two-handed weapon"
+      ]
+    },
+    "Duinhir, Lord of the Blackroot Vale": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Go for the Eyes!",
+          "type": "Active",
+          "description": "Duinhir may re-roll failed To Hit rolls when shooting an enemy Monster model. Also, if he successfully Wounds an enemy Monster with a shooting attack that is not prevented, it will deal D3 Wounds rather than 1."
+        },
+        {
+          "name": "Lord of the Blackroot Vale",
+          "type": "Passive",
+          "description": "Blackroot Vale Archers within 3\" of Duinhir may re-roll To Hit rolls of 1 when making shooting attacks, as long as they didn't Move during the preceding Move phase."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Mountain Dweller",
+        "Sharpshooter"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Bow",
+        "Spear"
+      ]
+    },
+    "Forlong the Fat": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "6",
+      "A": "2",
+      "W": "3",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Horn of Lossarnach",
+          "type": "Active",
+          "description": "A war horn. Once per game at the beginning of his Activation, Forlong may use it to give friendly models within 12\" of him the Terror special rule until the end of the turn."
+        },
+        {
+          "name": "Lord of Lossarnach",
+          "type": "Passive",
+          "description": "Friendly Lossarnach models within 3\" may re-roll results of a natural 1 when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "War spear",
+        "The Horn of Lossarnach"
+      ]
+    },
+    "Gondor Avenger Bolt Thrower": {
+      "Range": "0\" - 36\"",
+      "Mv": "-",
+      "F": "-",
+      "S": "7",
+      "D": "9",
+      "A": "-",
+      "W": "3",
+      "C": "-",
+      "active_or_passive_rules": [
+        {
+          "name": "Swift Reload",
+          "type": "Active",
+          "description": "AWhen firing the Bolt Thrower, you may roll two dice and pick the highest result when determining how many shots it may take."
+        },
+        {
+          "name": "Rapid Fire",
+          "type": "Active",
+          "description": "A Bolt Thrower doesn't shoot like a normal Siege Engine. Instead, it may make D6 shoot attacks in the same way as a normal Missile Weapon. No Scatter is required for these shots, they will either hit or miss. Each shot may be fully resolved before determining the target of the next one. Shots fired by the Bolt Thrower do not kill their targets outright if they Wound them."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Minas Tirith Siege Crew",
+          "Mv": "6\"",
+          "Fv": "3",
+          "Sv": "4+",
+          "S": "3",
+          "D": "5",
+          "A": "1",
+          "W": "1",
+          "C": "7+",
+          "I": "7+",
+          "active_or_passive_rules": [],
+          "special_rules": [],
+          "wargear": [
+            "Heavy armour",
+            "hand weapon"
+          ]
+        }
+      ],
+      "additional_text": [
+        "Crewed by three Minas Tirith Siege Crew, one of which is the Siege Veteran."
+      ]
+    },
+    "Hurin the Tall, Warden of the Keys": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Warden's Sword",
+          "type": "Active",
+          "description": "Master Forged hand-and-a-half weapon."
+        },
+        {
+          "name": "In Defence of the King",
+          "type": "Active",
+          "description": "Whilst Hurin is within 3\" of your General, so long as your General has the Gondor keyword, Hurin automatically passes any Courage Tests he is required to make, and may re-roll To Wound rolls of a natural 1 when making Strikes."
+        },
+        {
+          "name": "Lines of Command",
+          "type": "Passive",
+          "description": "Your opponent cannot score Victory Points for Wounding or slaying the enemy General, so long as Hurin is alive on the battlefield and your General has the Gondor keyword."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike",
+        "Heroic Strength"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Warden's Sword"
+      ]
+    },
+    "Ingold, Warden of The Rammas Echor": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Resolute Fighter",
+          "type": "Passive",
+          "description": "Ingold and friendly Gondor Warrior models within 3\" do not Back Away if they lose a Combat - their opponent must Back Away instead. However, this does not mean that a model benefiting from this rule cannot count as being Trapped, when they lose their Duel roll."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Shieldwall"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Knight of Dol Amroth": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Prince Imrahil": {
+      "Mv": "6\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "4+",
+      "I": "3+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Lineage of Numenor",
+          "type": "Active",
+          "description": "The range of Prince Imrahil's Stand Fast is 12\" rather than 6\"."
+        },
+        {
+          "name": "Dol Amroth for Gondor!",
+          "type": "Passive",
+          "description": "Friendly Dol Amroth models treat Prince Imrahil as a banner with a range of 6\""
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike",
+        "Heroic Strength",
+        "Heroic Defence"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "shield"
+      ]
     }
   },
   "Elven Kingdoms": {
