@@ -4295,6 +4295,398 @@
         "hand weapon",
         "The Oakenshield"
       ]
+    },
+    "Dain Ironfoot, King Under the Mountain": {
+      "Mv": "5\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "3",
+      "W": "3",
+      "C": "3+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Barazantathul",
+          "type": "Active",
+          "description": "Master-forged two-handed weapon."
+        },
+        {
+          "name": "King Under the Mountain",
+          "type": "Active",
+          "description": "Dain's Stand Fast will cover the entire battlefield, regardless of range. Additionally, friendly Erebor Dwarf Hero models may benefit from his Stand Fast."
+        },
+        {
+          "name": "Venerable",
+          "type": "Passive",
+          "description": "Whenever Dain makes a Jump, Leap or Climb test, he will roll two D6 and choose the lowest result."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike",
+        "Heroic Strength",
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Fearless"
+      ],
+      "wargear": [
+        "Heavy Dwarf armour",
+        "Barazantathul"
+      ]
+    },
+    "Durin, King of Khazad-Dum": {
+      "Mv": "5\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "4",
+      "D": "9",
+      "A": "3",
+      "W": "3",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Exquisite Mithril Armour",
+          "type": "Passive",
+          "description": "Mithril armour that adds 4 to Durin's Defence rather than the usual 3 (already included in his profile)."
+        },
+        {
+          "name": "Durin's axe",
+          "type": "Active",
+          "description": "Master-forged two-handed weapon. Durin may re-roll a single D6 when making a Duel roll."
+        },
+        {
+          "name": "The Horn of Zirakzigil",
+          "type": "Active",
+          "description": "A war horn which also gives Durin the Terror special rule."
+        },
+        {
+          "name": "The Ring of Durin",
+          "type": "Passive",
+          "description": "Once per game during the Priority phase, after both sides have rolled their dice, you can re-roll your side's Priority roll."
+        },
+        {
+          "name": "The Crown of Kings",
+          "type": "Passive",
+          "description": "For each Wound he suffers, roll a D6. On a 6, the Wound is prevented and ignored."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Challenge",
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Fearless",
+        "Leader (Khazad Guard)"
+      ],
+      "wargear": [
+        "Exquisite Mithril armour",
+        "The Ring of Durin",
+        "Durin's axe",
+        "The Crown of Kings",
+        "The Horn of Zirakzigil"
+      ]
+    },
+    "Dwarf Captain": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "shield",
+        "hand weapon"
+      ]
+    },
+    "Dwarf Ranger": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Mountain Fighters",
+          "type": "Active",
+          "description": "This model gains a bonus of +1 To Wound when making Strikes against a model that is within a piece of difficult terrain, such as a piece of rocky terrain, or a ruin."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Dwarf Warrior": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon"
+      ]
+    },
+    "Dwarven Ballista": {
+      "Range": "6\" - 48\"",
+      "Mv": "-",
+      "F": "-",
+      "S": "9",
+      "D": "10",
+      "A": "-",
+      "W": "3",
+      "C": "-",
+      "active_or_passive_rules": [
+        {
+          "name": "Accurate",
+          "type": "Active",
+          "description": "A Dwarven Ballista will only Scatter 3\" rather than 6\"."
+        },
+        {
+          "name": "Piercing Shot",
+          "type": "Active",
+          "description": "A model hit will be flung back D6\" if it has a Strength of 5 or lower. Any models passed over are knocked prone and take a Strength 5 hit. The flung model stops if it hits impassable terrain or a model with Strength 6 or higher, and both take a Strength 6 hit. The flung model is knocked prone if it survives. If the flung model would end its  movement over other models, those models are moved the minimum distance to allow the flung model to be placed."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Direct Shot"
+      ],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Mordor Orc Siege Crew",
+          "Mv": "5\"",
+          "Fv": "4",
+          "Sv": "4+",
+          "S": "4",
+          "D": "6",
+          "A": "1",
+          "W": "1",
+          "C": "6+",
+          "I": "6+",
+          "active_or_passive_rules": [],
+          "special_rules": [],
+          "wargear": [
+            "Armour",
+            "hand weapon"
+          ]
+        }
+      ],
+      "additional_text": [
+        "Crewed by two Dwarf Siege Crew, one of which is the Siege Veteran."
+      ]
+    },
+    "Iron Guard": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Dwarf armour",
+        "Hand weapon",
+        "Throwing weapons"
+      ]
+    },
+    "Khazad Guard": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Bodyguard"
+      ],
+      "wargear": [
+        "Heavy Dwarf armour",
+        "two-handed weapon",
+        "hand weapon"
+      ]
+    },
+    "Mardin, The King's Ward": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Torozul",
+          "type": "Active",
+          "description": "This is a Foe Spear, with the Trollbane special rule. Additionally, Mardin adds +1 when rolling To Wound against Monster models."
+        },
+        {
+          "name": "Durin's Protector",
+          "type": "Active",
+          "description": "During the Declare Heroic Actions step of the Fight phase, if Durin is Engaged in Combat within 6\" of Mardin, then Mardin may declare a free Heroic Combat. If this is successful, Mardin must use the following Move to join Durin's Combat if able, or move as close as possible to him. Mardin cannot use this special rule if he is in the same Combat as Durin."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Sworn Protector (Durin)"
+      ],
+      "wargear": [
+        "Heavy Dwarf armour",
+        "Torozul"
+      ]
+    },
+    "Thorin III Stonehelm": {
+      "Mv": "5\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "9",
+      "A": "3",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Cold-headed",
+          "type": "Active",
+          "description": "Whenever Thorin declares a Heroic Action, roll a D6. On a 5+, the action is free and no Might points are spent. Additionally, if he declares a Heroic Action and an enemy subsequently declares a Heroic Action as well, Thorin may change the action he has declared."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Strength",
+        "Heroic Defence"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy Dwarf armour",
+        "Shield",
+        "Hand weapon"
+      ]
+    },
+    "Vault Warden Team": {
+      "Mv": "-",
+      "Fv": "-",
+      "Sv": "-",
+      "S": "-",
+      "D": "-",
+      "A": "-",
+      "W": "-",
+      "C": "-",
+      "I": "-",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Iron Shield Bearer",
+          "Mv": "5\"",
+          "Fv": "4",
+          "Sv": "4+",
+          "S": "4",
+          "D": "9",
+          "A": "1",
+          "W": "1",
+          "C": "6+",
+          "I": "6+",
+          "active_or_passive_rules": [
+            {
+              "name": "Iron Shield",
+              "type": "Active",
+              "description": "A shield that provides +3 Defence to this model rather than the usual +1. Also, this model suffers a \u20131 penalty to their Duel rolls, unless they are Supported by a model with a Foe Spear."
+            }
+          ],
+          "special_rules": [],
+          "wargear": [
+            "Heavy armour",
+            "hand weapon",
+            "Iron Shield"
+          ]
+        },
+        {
+          "name": "Foe Spear Wielder",
+          "Mv": "5\"",
+          "Fv": "4",
+          "Sv": "4+",
+          "S": "4",
+          "D": "6",
+          "A": "1",
+          "W": "1",
+          "C": "6+",
+          "I": "6+",
+          "active_or_passive_rules": [
+            {
+              "name": "Foe Spear",
+              "type": "Active",
+              "description": "A spear, if this model is Supporting a model with an Iron Shield, they gain +1 To Wound when making Strikes against Monster models."
+            }
+          ],
+          "special_rules": [],
+          "wargear": [
+            "Heavy armour",
+            "Foe Spear"
+          ]
+        }
+      ]
     }
   },
   "Rohan": {
