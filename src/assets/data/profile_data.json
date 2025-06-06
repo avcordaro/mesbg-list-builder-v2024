@@ -1,4 +1,4 @@
-﻿{
+{
   "Arnor & Angmar": {
     "Aldrac, Warlord of Carn Dum": {
       "Mv": "6\"",
@@ -3017,7 +3017,7 @@
         {
           "name": "Steadfast",
           "type": "Passive",
-          "description": "When a friendly Thorin's Company model within 3\" of Bofur is affected by an enemy special rule or Magical Power, they may roll a D6. On a 3+, the model will ignore the effects. For Magical Powers, any Resist tests must be made before using this special rule."
+          "description": "When a friendly Erebor Hero model within 3\" of Bofur is affected by an enemy special rule or Magical Power, they may roll a D6. On a 3+, the model will ignore the effects. For Magical Powers, any Resist tests must be made before using this special rule."
         }
       ],
       "magic_powers": [],
