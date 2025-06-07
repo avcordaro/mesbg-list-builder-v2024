@@ -6795,6 +6795,19 @@
       "active_or_passive_rules": [],
       "special_rules": []
     },
+    "Pony": {
+      "Mv": "8\"",
+      "Fv": "1",
+      "Sv": "6+",
+      "S": "3",
+      "D": "3",
+      "A": "0",
+      "W": "1",
+      "C": "8+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "special_rules": []
+    },
     "Armoured horse": {
       "Mv": "10\"",
       "Fv": "2",
@@ -8410,6 +8423,690 @@
       "special_rules": [],
       "wargear": [
         "Hand weapon"
+      ]
+    },
+    "Baldo Tulpenny": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Champion Stone Skipper",
+          "type": "Active",
+          "description": "Baldo may re-roll failed To Hit Rolls when throwing stones. Additionally, if Baldo rolls a natural 6 when rolling To Hit, do not take any In The Way Tests and do not roll To Wound. Baldo's target automatically suffers a Wound."
+        },
+        {
+          "name": "Master of Traps",
+          "type": "Passive",
+          "description": "At the start of the game, after both sides have deployed, Baldo may place eight 25mm Trap Markers face-down on the board; two each of Snare Traps, Tripwire Traps, Pitfall Traps, and Dummy Traps. These cannot be deployed in the enemy's deployment zone, within 3\" of another Trap Marker or an Objective Marker, or within an enemy model's Control Zone. When an enemy model Moves within 1\" of a Trap Marker, they immediately stop Moving and flip the Trap Marker; after resolving its effects, the model's Activation immediately ends. Monster, War Beast, Swarm and Chariot models are completely unaffected by Trap Markers, and will instead simply remove them from play if they Move within 1\" of them. Once a Trap has been resolved and any affected models are no longer affected, remove that Trap Marker from play. The effects of each Trap Marker are explained below:\nTripwire Trap - When this is revealed, Baldo's player rolls a D6. On a 2+, the model that revealed the trap suffers a Strength 2 hit and is placed Prone. Cavalry models that reveal a trap are only affected on a 4+. However, they will also be Knocked Flying in addition to the other effects.\nPitfall Trap - When this is revealed, Baldo's player rolls a D6. On a 2+, the model that revealed the trap falls into the hole. Whilst in a hole, a model may not Move and always counts as Trapped. If a model begins its Move in a hole they must roll a D6; on a 4+, the model clambers out of the hole and their Move immediately ends. Cavalry models that reveal a trap are only affected on a 4+. However, they will also be Knocked Flying in addition to the other effects.\nSnare Trap - When this is revealed, Baldo's player rolls a D6. On a 2+, the model that revealed the trap suffers a Strength 1 hit, is placed Prone and is now caught in the Snare Trap. A model caught in a Snare Trap cannot Activate and will always count as Trapped. During the End Phase, a model caught in a Snare Trap must roll a D6; if the roll is equal to or less than their Strength, then they are freed from the Snare Trap. Cavalry models that reveal a trap are only affected on a 4+. However, they will also be Knocked Flying in addition to the other effects.\nDummy Trap - When this is revealed, the Activation of the model that revealed the Trap Marker immediately ends. There are no additional effects."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Sharpshooter",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Beorning": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Followers of the Bear",
+          "type": "Passive",
+          "description": "This model treats friendly Bear models as a banner."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Burly",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Hand-and-a-half weapon",
+        "Hand weapon"
+      ]
+    },
+    "Farmer Tolman Cotton": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pitchfork",
+          "type": "Passive",
+          "description": "A Pitchfork can either be used as a spear or a two-handed weapon."
+        },
+        {
+          "name": "\"This is our Country\"",
+          "type": "Passive",
+          "description": "Friendly Hobbit models within 3\" of Farmer Cotton may re-roll any rolls of a 1 when making a Duel Roll."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Pitchfork"
+      ]
+    },
+    "Folco Boffin": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "High Spirits",
+          "type": "Passive",
+          "description": "Whenever a friendly Hobbit model within 6\" of Folco spends a Might Point, they may roll a D6. On a natural 6, the Might Point spent is free and does not reduce the model's store of Might."
+        },
+        {
+          "name": "A Helpful Sort",
+          "type": "Active",
+          "description": "If Folco is within 3\" of Frodo, then Frodo can spend Folco's Will Points to declare a Heroic Move instead of using one of his own Might Points."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Unarmed"
+      ]
+    },
+    "Frodo of the Nine Fingers": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "6",
+      "A": "1",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Mithril Coat",
+          "type": "Passive",
+          "description": "Mithril armour. Additionally, the wearer may re-roll Fate Rolls of a 1."
+        },
+        {
+          "name": "\"It will never really heal!\"",
+          "type": "Passive",
+          "description": "Frodo may never Charge enemy models under any circumstances. Additionally, Frodo may never make Strikes if his side wins a Combat."
+        },
+        {
+          "name": "Home is the Hero",
+          "type": "Passive",
+          "description": "Friendly Hobbit models treat Frodo as a banner with a range of 6\"."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Resistant to Magic"
+      ],
+      "wargear": [
+        "Mithril Coat",
+        "Pony",
+        "unarmed"
+      ]
+    },
+    "Ghan-Buri-Ghan": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Forest Stalker",
+          "type": "Passive",
+          "description": "Whenever a friendly Druadan model within 6\" of Ghan-buri-Ghan that is within a piece of woodland terrain suffers a Wound, roll a D6. On the roll of a natural 6, the Wound is ignored."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Hatred (Goblin)",
+        "Hated (Orc)",
+        "Hatred (Uruk-hai)",
+        "Poisoned Attacks",
+        "Stalk Unseen",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "spear",
+        "blowpipe"
+      ]
+    },
+    "Grimbeorn the Bear": {
+      "Mv": "8\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "8",
+      "D": "8",
+      "A": "3",
+      "W": "3",
+      "C": "3+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Skin-changer",
+          "type": "Active",
+          "description": "At the beginning of his Activation, Grimbeorn the Bear can change his form from Bear to Man. If he does, place the Man model in base contact with the Bear model, and then remove the Bear model from play. If there is no space to place the Man model, then Grimbeorn cannot transform. Once he has transformed, Grimbeorn may continue his Activation as normal, including Charging in which case check the Line of Sight from the newly placed Man model to determine whether Grimbeorn can Charge. Once Grimbeorn has transformed, he uses the Grimbeorn profile - though his Wounds, Might, Will and Fate Points remain the same between both profiles."
+        },
+        {
+          "name": "Leader of the Beornings",
+          "type": "Passive",
+          "description": "Only Beorning models can benefit from Grimbeorn's Heroic Actions or Stand Fast."
+        },
+        {
+          "name": "Crushing Strength",
+          "type": "Brutal Power Attack",
+          "description": "If Grimbeorn wins a Duel Roll he can choose to use this Brutal Power Attack. If he does, choose a single enemy model involved in the Combat. The chosen model immediately suffers a Strength 10 hit. If the To Wound Roll is successful (even if the Wound is prevented), the model immediately suffers another Strength 10 hit, and so on until either Grimbeorn fails a To Wound Roll, or the chosen model is slain and removed as a casualty."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Burly",
+        "Dominant (5)",
+        "Fearless",
+        "Monstrous Charge",
+        "Resistant to Magic",
+        "Terror",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Grimbeorn": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "3",
+      "W": "3",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Skin-changer",
+          "type": "Active",
+          "description": "At the beginning of his Activation, Grimbeorn can change his form from Man to Bear. If he does, place the Bear model in base contact with the Man model, and then remove the Man model from play. If there is no space to place the Bear model, then Grimbeorn cannot transform. Once he has transformed, Grimbeorn the Bear may continue his Activation as normal, including Charging in which case check the Line of Sight from the newly placed Bear model to determine whether Grimbeorn can Charge. Once Grimbeorn has transformed, he uses the Grimbeorn the Bear profile - though his Wounds, Might, Will and Fate Points remain the same between both profiles."
+        },
+        {
+          "name": "Leader of the Beornings",
+          "type": "Passive",
+          "description": "Only Beorning models can benefit from Grimbeorn's Heroic Actions or Stand Fast."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Burly",
+        "Dominant (2)",
+        "Fearless",
+        "Resistant to Magic",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Two-handed weapon",
+        "Great bow"
+      ]
+    },
+    "Hobbit Archer": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "short bow"
+      ]
+    },
+    "Hobbit Militia": {
+      "Mv": "4\"",
+      "Fv": "1",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)."
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Hobbit Shirriff": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand-and-a-half weapon"
+      ]
+    },
+    "Holfoot Bracegirdle, Shirriff-Leader": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Head Shirriff",
+          "type": "Passive",
+          "description": "Holfoot, and any Hobbit Shirriffs (including Robin Smallburrow) within 3\" of him, do not suffer the -1 penalty to their Duel Roll for using their hand-and-a-half weapon as a two-handed weapon."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Leader (Hobbit Shirriff)",
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand-and-a-half weapon"
+      ]
+    },
+    "Lotho Sackville-Baggins": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Family Rivalry",
+          "type": "Passive",
+          "description": "Lotho may not take part in any Heroic Actions declared by either Bilbo Baggins or Frodo Baggins."
+        },
+        {
+          "name": "Considerable Wealth",
+          "type": "Active",
+          "description": "Lotho may spend his Will Points to pay off models around him in the following ways:\nAt the start of a Fight Phase, before the Declare Heroic Actions step, Lotho can spend a Will Point to use this ability. If he does, until the End Phase of the turn, friendly Hobbit models within 3\" of Lotho gain a +1 bonus to their Fight Value.\nAt the start of a Move Phase, before the Declare Heroic Actions step, Lotho can spend a Will Point to use this ability. If he does, until the End Phase of the turn, friendly Ruffian models within 3\" of Lotho count as having the Fearless special rule.\nWhen an enemy model attempts to Charge Lotho, Lotho may spend a Will Point to use this ability. If he does, roll a D6. On a 2+, the enemy model stops 1\" away from Lotho instead of Charging him and their Activation immediately ends."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic,",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Meriadoc Brandybuck, Captain of the Shire": {
+      "Mv": "4\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "2",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Horn of the Riddermark",
+          "type": "Active",
+          "description": "A war horn. Additionally, Merry gains the Fearless special rule."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Challenge",
+        "Heroic March",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Pony",
+        "Horn of the Riddermark"
+      ],
+      "additional_text": [
+        "Any Hobbit Militia in Merry's Warband upgraded to Battlin' Brandybucks have Strength 3."
+      ]
+    },
+    "Peregrin Took, Captain of the Shire": {
+      "Mv": "4\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "2",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Against all odds",
+          "type": "Active",
+          "description": "Pippin may re-roll any failed To Wound rolls when making Strikes against Hero or Monster models."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic March",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "Pony"
+      ],
+      "additional_text": [
+        "Any Hobbit Archerys in Pippin's Warband upgraded to Tookish Hunters may re-roll To Wounds of a 1 when making shooting attacks."
+      ]
+    },
+    "Goldberry": {
+      "Mv": "6\"",
+      "Fv": "?",
+      "Sv": "?",
+      "S": "?",
+      "D": "?",
+      "A": "?",
+      "W": "?",
+      "C": "?",
+      "I": "?",
+      "active_or_passive_rules": [
+        {
+          "name": "River-daughter",
+          "type": "Passive",
+          "description": "Goldberry treats all kinds of terrain as Open Ground and always treats the result of any Climb, Leap, Jump and Swim Tests as a 6. Goldberry cannot be targeted by any abilities, special rules, Magical Powers, Brutal Power Attacks or shooting attacks, either friendly or enemy. This means that any Magical Powers that would target Goldberry will automatically be resisted, even if they would target multiple models. If Goldberry is hit by a missile weapon as a result of a failed In The Way Test, the shot will automatically disappear and have no effect. Goldberry does not have a Control Zone. Enemy models cannot Move into base contact with Goldberry for any reason, unless Goldberry's controlling player explicitly allows it. If a model would be forced into base contact with Goldberry, then they will stop just before moving into base contact. Goldberry may Charge enemy models as normal, and her side will automatically win any Combat that Goldberry is involved in; however, when they do, friendly models may not make Strikes in that Combat. Goldberry may never carry Objectives under any circumstances and may never be chosen in Scenarios that require a player to choose a specific Hero model."
+        },
+        {
+          "name": "Goldberry is waiting",
+          "type": "Passive",
+          "description": "Goldberry may only be included in your Army if it includes Tom Bombadil. Goldberry must give up a Will Point during the End Phase of any turn in which she was Engaged in Combat. Should Goldberry be reduced to 0 Will Points, or if there are no friendly models on the board other than herself and/or Tom Bombadil, then she will simply wander off back to her homestead. Remove Goldberry as a casualty."
+        },
+        {
+          "name": "Sing a Jolly Song",
+          "type": "Active",
+          "description": "At any point during her Activation, Goldberry may spend a Will Point to sing one of the songs listed below to gain the relevant effect. Goldberry may sing any number of these songs during her Activation, and may sing each of these songs as many times as she wishes during her Activation unless otherwise stated. Every time Goldberry sings a song it will cost her a Will Point.\n\"Supper is Ready\" - Choose a friendly model within 6\" of Goldberry. The chosen model immediately regains a single Wound lost earlier in the battle. A model may only be chosen by this song once per turn.\n\"Have Peace Now\" - Choose an enemy model within 6\" of Goldberry. The chosen model may not be Activated during their player's Activation Phase this turn, but may otherwise act normally in all other Phases. This song may only be sung once per turn.\n\"Heed no Nightly Noises\" - Choose a friendly model within 6\" of Goldberry. Until the end of the turn, the chosen model automatically passes any Courage Tests it is required to take. Additionally, if the chosen model Charges an enemy model, the chosen model will increase their Fight Value by 1 until the End Phase of the turn. A model may only be chosen by this song once per turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Unarmed"
+      ]
+    },
+    "Robin Smallburrow, Hobbit Shirriff": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "A Nose for Shortcuts",
+          "type": "Passive",
+          "description": "In Scenarios where you roll for Warbands to arrive, or ones where you roll to see which part of the board you deploy a Warband in (though not when rolling to choose deployment zones), you may choose the result instead of rolling, even if Robin is not on the battlefield. Robin may only use this special rule if his Warband only contains Hobbit Shirriffs."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Leader (Hobbit Shirriff)",
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand-and-a-half weapon"
+      ]
+    },
+    "Samwise the Brave": {
+      "Mv": "4\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Sting",
+          "type": "Active",
+          "description": "Elven hand weapon. This model gains a bonus of +1 Strength when making Strikes with Sting."
+        },
+        {
+          "name": "\"There\u2019s some good in this world, Mr Frodo, and it\u2019s worth fighting for\"",
+          "type": "Active",
+          "description": "During the Declare Heroic Actions step of the Fight Phase, if Frodo and/or Rosie are Engaged in Combat and are within 6\" of Sam, then Sam may declare a free Heroic Combat. If this Heroic Combat is successful, then Sam must use the following Move to join either Frodo\u2019s or Rosie\u2019s Combat, as chosen by Sam\u2019s controlling player. If this is not possible, then Sam must Move as close as possible to either Frodo or Rosie. Sam cannot use this special rule if he is in the same Combat as either Frodo or Rosie."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Sworn Protector (Frodo)",
+        "Sworn Protector (Rosie)",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Sting",
+        "Pony"
+      ]
+    },
+    "Tom Bombadil": {
+      "Mv": "6\"",
+      "Fv": "?",
+      "Sv": "?",
+      "S": "?",
+      "D": "?",
+      "A": "?",
+      "W": "?",
+      "C": "?",
+      "I": "?",
+      "active_or_passive_rules": [
+        {
+          "name": "Tom is Master",
+          "type": "Passive",
+          "description": "Tom Bombadil treats all kinds of terrain as Open Ground and always treats the result of any Climb, Leap, Jump and Swim Tests as a 6. Tom cannot be targeted by any abilities, special rules, Magical Powers, Brutal Power Attacks or shooting attacks, either friendly or enemy. This means that any Magical Powers that would target Tom will automatically be resisted, even if they would target multiple models. If Tom is hit by a missile weapon as a result of a failed In The Way Test, the shot will automatically disappear and have no effect. Tom Bombadil does not have a Control Zone. Enemy models cannot Move into base contact with Tom for any reason, unless Tom's controlling player explicitly allows it. If a model would be forced into base contact with Tom, then they will stop just before moving into base contact. Tom may Charge enemy models as normal, and his side will automatically win any Combat that Tom is involved in; however, when they do, friendly models may not make Strikes in that Combat. Tom Bombadil may never carry Objectives under any circumstances, and may never be chosen in Scenarios that require a player to choose a specific Hero model."
+        },
+        {
+          "name": "Tom has his house to mind",
+          "type": "Passive",
+          "description": "Tom Bombadil must give up a Will Point during the End Phase of any turn in which he was Engaged in Combat. Should Tom Bombadil be reduced to 0 Will Points, or if there are no friendly models on the board other than himself and/or Goldberry, then he will simply wander off back to his homestead. Remove Tom Bombadil as a casualty."
+        },
+        {
+          "name": "Sing a Jolly Song",
+          "type": "Active",
+          "description": "At any point during his Activation, Tom may spend a Will Point to sing one of the songs listed below to gain the relevant effect. Tom may sing any number of these songs during his Activation, and may sing each of these songs as many times as he wishes during his Activation unless otherwise stated. Every time Tom sings a song it will cost his a Will Point.\n\"Hey! Come Merry Doll!\" - Choose a friendly model within 6\" of Tom Bombadil. The chosen model immediately regains a single Wound lost earlier in the battle. A model may only be chosen by this song once per turn.\n\"Hop along, my hearties!\" - Until the end of the turn, friendly models that begin their Activation within 6\" of Tom Bombadil may add 3\" to their Move Value and will treat all areas of Difficult Terrain as Open Ground.\n\"Wake now my merry lads!\" - Choose a friendly model within 6\" of Tom Bombadil. The chosen model immediately recovers from the effects of any enemy Magical Powers currently cast upon them. Additionally, until the end of the turn, the chosen model cannot be chosen as the target of any enemy Magical Powers or special rules.\n\"Ring a ding dillo!\" - Until the end of the turn, friendly models within 6\" of Tom Bombadil automatically pass any Courage Tests they are required to take.\n\"Get out, you Wight!\" - Choose an enemy Spirit model within 6\" of Tom Bombadil. The chosen model immediately suffers a Wound. This song may only be sung once per turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Unarmed"
+      ]
+    },
+    "Will Whitfoot, Mayor of Michel Delving": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Mayor of Michel Delving",
+          "type": "Active",
+          "description": "At the beginning of a Fight Phase, before the Declare Heroic Actions step, Will Whitfoot can spend a Will Point to use this special rule. If he does, friendly Hobbit Warrior models within 3\" of him gain a bonus of +1 to their Fight Value until the End Phase of the turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve"
+      ],
+      "special_rules": [
+        "Leader (Hobbit Shirriff)",
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Woses Warrior": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "3",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "3+",
+      "I": "",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Hatred (Goblin)",
+        "Hated (Orc)",
+        "Hatred (Uruk-hai)",
+        "Stalk Unseen",
+        "Poisoned Attacks",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "spear",
+        "blowpipe"
       ]
     }
   },
