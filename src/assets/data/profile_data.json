@@ -1,4 +1,4 @@
-{
+﻿{
   "Arnor & Angmar": {
     "Aldrac, Warlord of Carn Dum": {
       "Mv": "6\"",
@@ -6336,6 +6336,369 @@
       "additional_text": [
         "Crewed by three Uruk-Hai Siege Crew, one of which is the Siege Veteran."
       ]
+    },
+    "Bill Ferny": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Sharkey's Spy",
+          "type": "Passive",
+          "description": "At the start of the game, before both sides have deployed, Bill may choose an enemy. Whilst Bill is within 12\" and has Line of Sight to that chosen model, whenever they declare a Heroic Action, they must roll a D6. On a 1-2, that action is immediately cancelled, and the Might point is not spent. That hero may not attempt to declare the same Heroic Action again that turn."
+        },
+        {
+          "name": "Put 'em in Chains",
+          "type": "Active",
+          "description": "If this model wins a Combat, then instead of making Strikes, they may choose a Hobbit model they were Engaged in Combat with and roll a D6. If it is higher than the model's Strength, that model is put in chains, treated as if it had suffered the Paralyse Magic Power. However, the effects will not immediately end should this model have no Will points or be slain."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Challenge"
+      ],
+      "special_rules": [
+        "Hatred (Hobbit)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Isengard Orc Shaman": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Fury (Isengard Orc)",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Enrage Beast",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Spear"
+      ]
+    },
+    "Isengard Troll": {
+      "Mv": "6\"",
+      "Fv": "7",
+      "Sv": "5+",
+      "S": "7",
+      "D": "8",
+      "A": "3",
+      "W": "4",
+      "C": "6+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror",
+        "Throw Stones (range 12\", Strength 8)",
+        "Dominant (3)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Rowan Thistlewood": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Let 'em have it!",
+          "type": "Active",
+          "description": "At the start of the Fight Phase, during the Declare Heroic Actions step, Rowan may declare a free Heroic Combat. If he does, he must using the ensuing Move to Charge an enemy Hobbit Hero model. If he cannot do so, then he cannot use this special rule."
+        },
+        {
+          "name": "Put 'em in Chains",
+          "type": "Active",
+          "description": "If this model wins a Combat, then instead of making Strikes, they may choose a Hobbit model they were Engaged in Combat with and roll a D6. If it is higher than the model's Strength, that model is put in chains, treated as if it had suffered the Paralyse Magic Power. However, the effects will not immediately end should this model have no Will points or be slain."
+        },
+        {
+          "name": "Burn it Down!",
+          "type": "Active",
+          "description": "Once per game, if Rowan ends his Move within 1\" of a single building or piece of woodland terrain, and he is not Engaged in Combat, roll a D6. On 3+, it is set on fire. Any model within base contact of it during the End Phase of any turn must roll a D6. On a 4+, they are immediately Set Ablaze."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Ruffian": {
+      "Mv": "6\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Put 'em in Chains",
+          "type": "Active",
+          "description": "If this model wins a Combat, then instead of making Strikes, they may choose a Hobbit model they were Engaged in Combat with and roll a D6. If it is higher than the model's Strength, that model is put in chains, treated as if it had suffered the Paralyse Magic Power. However, the effects will not immediately end should this model have no Will points or be slain."
+        },
+        {
+          "name": "At 'em Lads!",
+          "type": "Active",
+          "description": "Whilst Engaged in Combat with an enemy Hobbit model, this model gains a bonus of +1 to their Fight value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Sharkey & Worm": {
+      "Mv": "-",
+      "Fv": "-",
+      "Sv": "-",
+      "S": "-",
+      "D": "-",
+      "A": "-",
+      "W": "-",
+      "C": "-",
+      "I": "-",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Sharkey",
+          "Mv": "6\"",
+          "Fv": "4",
+          "Sv": "4+",
+          "S": "4",
+          "D": "4",
+          "A": "1",
+          "W": "2",
+          "C": "6+",
+          "I": "3+",
+          "Might": "2",
+          "Will": "4",
+          "Fate": "1",
+          "active_or_passive_rules": [
+            {
+              "name": "Whoever strikes me shall be accursed",
+              "type": "Passive",
+              "description": "After a model has resolved all of its Strikes against Sharkey during a Combat, they must take a Courage Test. If failed, the model immediately suffers a single Strength 4 hit."
+            }
+          ],
+          "options": [],
+          "magic_powers": [
+            {
+              "name": "Compel",
+              "range": "12\"",
+              "cast": "3+"
+            },
+            {
+              "name": "Terrifying Aura",
+              "range": "Self",
+              "cast": "3+"
+            },
+            {
+              "name": "Transfix",
+              "range": "12\"",
+              "cast": "3+"
+            }
+          ],
+          "heroic_actions": [
+            "Heroic Challenge"
+          ],
+          "special_rules": [
+            "Hatred (Hobbit)"
+          ],
+          "wargear": [
+            "Hand weapon",
+            "two-handed weapon"
+          ]
+        },
+        {
+          "name": "Worm",
+          "Mv": "6\"",
+          "Fv": "3",
+          "Sv": "4+",
+          "S": "3",
+          "D": "3",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [
+            {
+              "name": "Broken Loyalties",
+              "type": "Passive",
+              "description": "If at the start of any turn Sharkey has been reduced to 1 Wound and has no Fate remaining, Worm immediately becomes an enemy model for the remainder of the game. Also, after this, whenever Worm Activates he must Charge Sharkey if able to do so. If Sharkey is slain, then at the start of the next turn, Worm reverts back to being a friendly model."
+            },
+            {
+              "name": "When He Sneaks",
+              "type": "Active",
+              "description": "Before making a Duel Roll for Worm, check to see if any enemy models, with the exception of any models he is Engaged in Combat with, can see him. If no other enemy models can see him, then Worm increases his Fight Value to 4 and his Attacks to 3 for the duration of the Combat."
+            }
+          ],
+          "magic_powers": [],
+          "heroic_actions": [],
+          "special_rules": [
+            "Stalk Unseen"
+          ],
+          "wargear": [
+            "Hand weapon"
+          ]
+        }
+      ]
+    },
+    "Sid Briarthorn": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "With Me Lads!",
+          "type": "Passive",
+          "description": "Other friendly Ruffian models treat Sid as a banner."
+        },
+        {
+          "name": "Put 'em in Chains",
+          "type": "Active",
+          "description": "If this model wins a Combat, then instead of making Strikes, they may choose a Hobbit model they were Engaged in Combat with and roll a D6. If it is higher than the model's Strength, that model is put in chains, treated as if it had suffered the Paralyse Magic Power. However, the effects will not immediately end should this model have no Will points or be slain."
+        },
+        {
+          "name": "Brawler",
+          "type": "Active",
+          "description": "If he is outnumbered in a Combat, Sid may re-roll rolls of a natural 1 in his Duel roll. Sid also never counts as Unarmed."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Terror (Hobbit)"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "whip"
+      ]
+    },
+    "Ted Sandyman": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "A Bad Influence",
+          "type": "Passive",
+          "description": "Ted may include only include Hobbit models in his warband. Friendly Hobbit models within 3\" of Ted gain a bonus of +1 To Wound when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ]
+    },
+    "Uruk-Hai Shaman": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Fury (Isengard Uruk-hai)",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Bladewrath",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Hand weapon",
+        "spear"
+      ]
     }
   },
   "Mounts": {
@@ -9121,6 +9484,44 @@
         "Hand weapon",
         "Shield",
         "Armoured horse"
+      ]
+    },
+    "Mordor Orc Shaman": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Fury (Mordor Orc)",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Curse",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Spear"
       ]
     }
   },
