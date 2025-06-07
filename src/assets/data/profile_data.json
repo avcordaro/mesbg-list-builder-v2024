@@ -12835,6 +12835,352 @@
       "wargear": [
         "Tentacles (hand weapon)"
       ]
+    },
+    "Bat Swarm": {
+      "Mv": "12\"",
+      "Fv": "1",
+      "Sv": "6+",
+      "S": "3",
+      "D": "3",
+      "A": "2",
+      "W": "4",
+      "C": "8+",
+      "I": "9+",
+      "active_or_passive_rules": [
+        {
+          "name": "Blinding Swarm",
+          "type": "Active",
+          "description": "Enemy models Engaged in Combat with a Bat Swarm halve their Fight value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Cave Dweller",
+        "Fly"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Cave Drake": {
+      "Mv": "8\"",
+      "Fv": "7",
+      "Sv": "5+",
+      "S": "7",
+      "D": "7",
+      "A": "4",
+      "W": "6",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Protect the Nest",
+          "type": "Active",
+          "description": "At the beginning of the game, after both sides have deployed, you may place a single 25mm Nest Marker anywhere on the board. Whilst within 3\" of a friendly Nest Marker, a Cave Drake has the Fearless special rule."
+        },
+        {
+          "name": "Cornered Beast",
+          "type": "Active",
+          "description": "If a Cave Drake loses a Duel Roll and is Trapped, then after any Strikes have been made against it the Cave Drake will lash out. When a Cave Drake lashes out, any models (friend or foe) that were Engaged in Combat with it, or are within 1\" of it, will immediately suffer a Strength 4 hit."
+        },
+        {
+          "name": "Gaping Maw",
+          "type": "Brutal Power Attack",
+          "description": "Instead of making Strikes, a Cave Drake may choose a single enemy model on a 25mm base that was involved in the same combat and roll a D6. On a 2+, the chosen model suffers a Wound and, if this Wound is not prevented, the model is swallowed whole and removed as a Casualty. If the Cave Drake slays a model with this Brutal Power Attack, they may immediately regain a Wound lost earlier in the battle."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Cave Dweller",
+        "Dominant(4)",
+        "Large Target",
+        "Monstrous Charge",
+        "Mountain Dweller",
+        "Resistant to Magic",
+        "Terror",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Dragon": {
+      "Mv": "6\"",
+      "Fv": "8",
+      "Sv": "2+",
+      "S": "7",
+      "D": "7",
+      "A": "4",
+      "W": "7",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Breathe Fire",
+          "type": "Active",
+          "description": "Used as a shooting attack during the Shoot Phase; treat this as a bow with a range 12\". On a hit, the model that is hit, and all models (friend or foe) within 2\" of the hit model, will suffer a Strength 10 hit. Any model that suffers a Wound from this shooting attack which is not prevented is automatically slain. This is a fire-based attack."
+        },
+        {
+          "name": "Fly",
+          "type": "Active",
+          "description": "The Dragon gains the Fly special rule and increases its Move Value to 12\" whilst using the Fly special rule."
+        },
+        {
+          "name": "Tough Hide",
+          "type": "Passive",
+          "description": "The Dragon automatically passes any Intelligence Tests it is required to take. Additionally, each time the Dragon spends a Might Point, roll a D6. On a 4+, the Might Point is free and does not reduce the Dragon's store of Might."
+        },
+        {
+          "name": "Tough Hide",
+          "type": "Passive",
+          "description": "Increases Wounds and Defence to 9 each."
+        },
+        {
+          "name": "Wyrmtongue",
+          "type": "Active",
+          "description": "The Dragon gains a free Will Point at the start of each turn. If this free Will Point is not spent by the end of the turn, it is lost."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Foil Magic",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling",
+        "Heroic Resolve",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Dominant (5)",
+        "Harbinger of Evil (12\")",
+        "Large Target",
+        "Monstrous Charge",
+        "Resistant to Magic",
+        "Survival Instinct",
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Druzhag the Beastcaller": {
+      "Mv": "5\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Master of the Dark Wild",
+          "type": "Passive",
+          "description": "Friendly Beast models within 12\" of Druzhag may use his Courage or Intelligence values instead of their own when making a Courage Test or an Intelligence Test. Additionally, whenever Druzhag suffers a Wound, before any Fate Rolls are made, he may roll a D6. On a 2+, he may choose a single friendly Beast model within 2\" to immediately suffer the Wound instead of him. Fate Rolls can then be made as normal."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Enrage Beast",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Fury (Beast)",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Writhing Vines",
+          "range": "Self",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Durburz, Goblin-King of Moria": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "5+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Iron Fist",
+          "type": "Active",
+          "description": "Durburz's Stand Fast range is 12\" rather than 6\"."
+        },
+        {
+          "name": "Callous Leadership",
+          "type": "Active",
+          "description": "Once per game, at the start of any Fight Phase, before the Declare Heroic Actions Step, Durburz can declare he is using this ability. Until the End Phase of the turn, friendly Goblin models within 6\" of Durburz gain a bonus of +1 To Wound when making Strikes. However, any other friendly Goblin model within 6\" that loses a Duel Roll (not including Supporting models) must roll a D6 after any Strikes have been made against them. On the roll of a 1, the model suffers a Wound."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Resolve",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon"
+      ]
+    },
+    "Moria Goblin Drum": {
+      "Mv": "-",
+      "Fv": "-",
+      "Sv": "-",
+      "S": "-",
+      "D": "10",
+      "A": "-",
+      "W": "3",
+      "C": "-",
+      "I": "-",
+      "active_or_passive_rules": [
+        {
+          "name": "Moria Goblin Drum",
+          "type": "Active",
+          "description": "The Drum has 10 Defence, 3 Wounds, is a Heavy Object, can be shot at, is always on a 25mm base and must be deployed in base contact with one of its Moria Goblin Drummers. If, during the End Phase, an enemy model is in base contact with the Drum, and the only thing that model has done is Move this turn (e.g. no shooting, combat etc.), and that model was not affected by a Magical Power this turn, then it can remove the Drum from play."
+        },
+        {
+          "name": "Moria Goblin Drum",
+          "type": "Active",
+          "description": "For the Drum to be played, at least one Drummer must be in base contact with it, have not Moved that turn, and not be Engaged in Combat. Whilst the Drum is being played it has the following effects:\n\n* Friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take.\n* Enemy models suffer a -1 penalty to any Courage Tests they are required to take.\n* Friendly Moria Goblin models within 18\" count as being in range.\n* Whilst being played, the Moria Goblin Drum counts as a banner for the purpose of Victory Points."
+        },
+        {
+          "name": "Moria Goblin Drum",
+          "type": "Active",
+          "description": "If a Drummer is slain, then they may pass on their wargear to a friendly Moria Goblin Warrior within 1\" of them. The chosen model becomes a Moria Goblin Drummer and exchanges their wargear for that of the slain model - replace the chosen model with the slain Moria Goblin Drummer."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Moria Goblin Drummer",
+          "Mv": "5\"",
+          "Fv": "2",
+          "Sv": "5+",
+          "S": "3",
+          "D": "4",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [],
+          "magic_powers": [],
+          "heroic_actions": [],
+          "special_rules": [
+            "Cave Dweller"
+          ],
+          "wargear": [
+            "Armour",
+            "hand weapon"
+          ]
+        }
+      ]
+    },
+    "Moria Goblin Prowler": {
+      "Mv": "5\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Cave Dweller",
+        "Backstabbers",
+        "Stalk Unseen"
+      ],
+      "wargear": [
+        "Armour",
+        "two-handed weapon",
+        "throwing weapons"
+      ]
+    },
+    "Moria Goblin Shaman": {
+      "Mv": "5\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Fury (Moria Goblin)",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "5+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "spear",
+        "hand weapon"
+      ]
     }
   },
   "Fallen Realms": {
