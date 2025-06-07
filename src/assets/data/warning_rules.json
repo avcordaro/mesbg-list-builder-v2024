@@ -17,6 +17,15 @@
       "warning":"An Army of Carn Dum must always contain Aldrac, who is always the Army's General."
     }
   ],
+  "Army of Dale":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[army-of-dale] brand-king-of-dale"
+      ],
+      "warning":"An Army of Dale Army must always contain Brand, who is always the Army's General."
+    }
+  ],
   "Army of Gothmog":[
     {
       "type":"compulsory",
@@ -166,6 +175,15 @@
       "warning":"A Desolator of the North Army must always include Smaug, who is always the Army's General."
     }
   ],
+  "Dragons of the North":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[dragons-of-the-north] dragon-general"
+      ],
+      "warning":"A Dragons of the North Army must always contain a Dragon who is always the Army's General."
+    }
+  ],
   "Erebor & Dale":[
     {
       "type":"requires_one",
@@ -195,6 +213,15 @@
       "warning":"A Fangorn Army must always contain Treebeard, who is always the Army's General."
     }
   ],
+  "Fords of Isen":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[fords-of-isen] theodred"
+      ],
+      "warning":"A Fords of Isen Army must always contain Th\u00e9odred, who is always the Army's General."
+    }
+  ],
   "Garrison of Dale":[
     {
       "type":"compulsory",
@@ -220,6 +247,15 @@
         "[goblin-town] the-goblin-king"
       ],
       "warning":"A Goblin-town Army must always contain the Goblin King, who is always the Army's General."
+    }
+  ],
+  "Host of the Dragon Emperor":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[host-of-the-dragon-emperor] the-dragon-emperor-of-rhun"
+      ],
+      "warning":"A Host of the Dragon Emperor Army must always contain the Dragon Emperor of Rh\u00fbn, who is always the Army's General."
     }
   ],
   "Host of the Witch-king":[
@@ -408,6 +444,33 @@
       "warning":"A Black Riders Army must always contain the Witch-king of Angmar, who is always the Army's General."
     }
   ],
+  "The Easterlings":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-easterlings] amdur-lord-of-blades"
+      ],
+      "warning":"An Easterlings Army must always contain Amd\u00fbr, who is always the Army's General."
+    }
+  ],
+  "The Grey Company":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-grey-company] aragorn-strider"
+      ],
+      "warning":"A Grey Company Army must always contain Aragorn, who is always the Army's General"
+    }
+  ],
+  "The Grief of Eomer":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-grief-of-eomer] eomer"
+      ],
+      "warning":"A Grief of \u00c9omer Army must always contain \u00c9omer, who is always the Army's General."
+    }
+  ],
   "The Iron Hills":[
     {
       "type":"compulsory",
@@ -574,6 +637,61 @@
         "[realms-of-men] king-of-men-dale"
       ],
       "warning":"A Windlance may only be included if your army also contains a King of Men (Dale)"
+    }
+  ],
+  "[the-fiefdoms] axeman-of-lossarnach":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[the-fiefdoms] forlong-the-fat"
+      ],
+      "warning":"Lossarnach Warrior models may only be included if your army also includes a Lossarnach Hero."
+    }
+  ],
+  "[the-fiefdoms] blackroot-vale-archer":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[the-fiefdoms] duinhir-lord-of-the-blackroot-vale"
+      ],
+      "warning":"Blackroot Vale Warrior models may only be included if your army also includes a Blackroot Vale Hero."
+    }
+  ],
+  "[the-fiefdoms] clansman-of-lamedon":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[the-fiefdoms] angbor-the-fearless"
+      ],
+      "warning":"Lamedon Warrior models may only be included if your army also includes a Lamedon Hero."
+    }
+  ],
+  "[the-fiefdoms] knight-of-dol-amroth":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[the-fiefdoms] prince-imrahil",
+        "[the-fiefdoms] captain-of-dol-amroth"
+      ],
+      "warning":"Dol Amroth Warrior models may only be included if your army also includes a Dol Amroth Hero."
+    }
+  ],
+  "[the-grey-company] elladan":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[the-grey-company] elrohir"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
+  "[the-grey-company] elrohir":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[the-grey-company] elladan"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
     }
   ],
   "[thorin's-company] great-eagle":[

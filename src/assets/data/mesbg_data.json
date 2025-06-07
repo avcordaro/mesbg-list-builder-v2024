@@ -260,6 +260,138 @@
       }
     ]
   },
+  "[army-of-dale] brand-king-of-dale": {
+    "model_id": "[army-of-dale] brand-king-of-dale",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Brand, King of Dale",
+    "unit_type": "Hero of Legend",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[army-of-dale] bard-ii-prince-of-dale": {
+    "model_id": "[army-of-dale] bard-ii-prince-of-dale",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard II, Prince of Dale",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-dale] captain-of-dale": {
+    "model_id": "[army-of-dale] captain-of-dale",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Captain of Dale",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-dale] knight-of-dale": {
+    "model_id": "[army-of-dale] knight-of-dale",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Knight of Dale",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-dale] warrior-of-dale": {
+    "model_id": "[army-of-dale] warrior-of-dale",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Warrior of Dale",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0889",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0890",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0891",
+        "name": "Esgaroth bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0892",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0893",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-dale] windlance": {
+    "model_id": "[army-of-dale] windlance",
+    "army_type": "Good",
+    "army_list": "Army of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Windlance",
+    "unit_type": "Siege Engine",
+    "base_points": 70,
+    "siege_crew": 1,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Windlance - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
   "[army-of-edoras] helm-hammerhand-king-of-rohan": {
     "model_id": "[army-of-edoras] helm-hammerhand-king-of-rohan",
     "army_type": "Good",
@@ -5664,6 +5796,116 @@
     "warband_size": 18,
     "options": []
   },
+  "[dragons-of-the-north] dragon-general": {
+    "model_id": "[dragons-of-the-north] dragon-general",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0982",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT0983",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT0984",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT0985",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT0986",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
+  "[dragons-of-the-north] dragon": {
+    "model_id": "[dragons-of-the-north] dragon",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0961",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT0962",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT0963",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT0964",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT0965",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
+  "[dragons-of-the-north] cave-drake": {
+    "model_id": "[dragons-of-the-north] cave-drake",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Cave Drake",
+    "unit_type": "Minor Hero",
+    "base_points": 150,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:6"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 6,
+    "options": []
+  },
   "[erebor-&-dale] thror-king-under-the-mountain": {
     "model_id": "[erebor-&-dale] thror-king-under-the-mountain",
     "army_type": "Good",
@@ -6379,6 +6621,202 @@
         "id": "OPT0610",
         "name": "Ash",
         "points": 0
+      }
+    ]
+  },
+  "[fords-of-isen] theodred": {
+    "model_id": "[fords-of-isen] theodred",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Theodred",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0967",
+        "name": "Brego",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Brego"
+      }
+    ]
+  },
+  "[fords-of-isen] elfhelm-captain-of-rohan": {
+    "model_id": "[fords-of-isen] elfhelm-captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Elfhelm, Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0968",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[fords-of-isen] captain-of-rohan": {
+    "model_id": "[fords-of-isen] captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0969",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0970",
+        "name": "Exchange armour for heavy armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0971",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[fords-of-isen] rider-of-rohan": {
+    "model_id": "[fords-of-isen] rider-of-rohan",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Rider of Rohan",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0977",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0978",
+        "name": "Throwing spears",
+        "points": 2,
+        "type": "throw"
+      }
+    ]
+  },
+  "[fords-of-isen] rohan-royal-guard": {
+    "model_id": "[fords-of-isen] rohan-royal-guard",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Rohan Royal Guard",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0979",
+        "name": "Horse and throwing spears",
+        "points": 7,
+        "type": "mount, throw",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0980",
+        "name": "Horse",
+        "points": 5,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0981",
+        "name": "Throwing spears",
+        "points": 2,
+        "type": "throw"
+      }
+    ]
+  },
+  "[fords-of-isen] warrior-of-rohan": {
+    "model_id": "[fords-of-isen] warrior-of-rohan",
+    "army_type": "Good",
+    "army_list": "Fords of Isen",
+    "profile_origin": "Rohan",
+    "name": "Warrior of Rohan",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0972",
+        "name": "War horn, shield, throwing spears",
+        "points": 28,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0973",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0974",
+        "name": "Shield and throwing spears",
+        "points": 3,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0975",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0976",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
       }
     ]
   },
@@ -7275,6 +7713,266 @@
         "id": "OPT0097",
         "name": "Spear",
         "points": 1
+      }
+    ]
+  },
+  "[host-of-the-dragon-emperor] the-dragon-emperor-of-rhun": {
+    "model_id": "[host-of-the-dragon-emperor] the-dragon-emperor-of-rhun",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "The Dragon Emperor of Rhun",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] rutabi-general-of-the-dragon-legion": {
+    "model_id": "[host-of-the-dragon-emperor] rutabi-general-of-the-dragon-legion",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Rutabi, General of the Dragon Legion",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] easterling-kataphrakt-captain": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-kataphrakt-captain",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] brorgir-the-conjurer": {
+    "model_id": "[host-of-the-dragon-emperor] brorgir-the-conjurer",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Brorgir the Conjurer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:5:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] easterling-captain": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-captain",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Mordor",
+    "name": "Easterling Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] easterling-war-priest": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-war-priest",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling War Priest",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0894",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[host-of-the-dragon-emperor] easterling-dragon-knight": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-dragon-knight",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Dragon Knight",
+    "unit_type": "Minor Hero",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:0:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT0895",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[host-of-the-dragon-emperor] war-drake-of-rhun": {
+    "model_id": "[host-of-the-dragon-emperor] war-drake-of-rhun",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "War Drake of Rhun",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] easterling-kataphrakt": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-kataphrakt",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0896",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0897",
+        "name": "Exchange shield for war drum",
+        "points": 25
+      }
+    ]
+  },
+  "[host-of-the-dragon-emperor] dragon-cult-acolyte": {
+    "model_id": "[host-of-the-dragon-emperor] dragon-cult-acolyte",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Dragon Cult Acolyte",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[host-of-the-dragon-emperor] black-dragon-warrior": {
+    "model_id": "[host-of-the-dragon-emperor] black-dragon-warrior",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Fallen Realms",
+    "name": "Black Dragon Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0898",
+        "name": "Exchange shield for banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0899",
+        "name": "Easterling Halberd",
+        "points": 1
+      }
+    ]
+  },
+  "[host-of-the-dragon-emperor] easterling-warrior": {
+    "model_id": "[host-of-the-dragon-emperor] easterling-warrior",
+    "army_type": "Evil",
+    "army_list": "Host of the Dragon Emperor",
+    "profile_origin": "Mordor",
+    "name": "Easterling Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0900",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0901",
+        "name": "Easterling Halberd and shield",
+        "points": 2
+      },
+      {
+        "id": "OPT0902",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0903",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
       }
     ]
   },
@@ -15026,6 +15724,65 @@
       }
     ]
   },
+  "[the-beornings] beorn": {
+    "model_id": "[the-beornings] beorn",
+    "army_type": "Good",
+    "army_list": "The Beornings",
+    "profile_origin": "The Free Peoples",
+    "name": "Beorn",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[the-beornings] grimbeorn": {
+    "model_id": "[the-beornings] grimbeorn",
+    "army_type": "Good",
+    "army_list": "The Beornings",
+    "profile_origin": "The Free Peoples",
+    "name": "Grimbeorn",
+    "unit_type": "Hero of Valour",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-beornings] beorning": {
+    "model_id": "[the-beornings] beorning",
+    "army_type": "Good",
+    "army_list": "The Beornings",
+    "profile_origin": "The Free Peoples",
+    "name": "Beorning",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0966",
+        "name": "Swap hand-and-a-half weapon for great bow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
   "[the-black-gate] mordor-troll-chieftain-general": {
     "model_id": "[the-black-gate] mordor-troll-chieftain-general",
     "army_type": "Evil",
@@ -15365,6 +16122,236 @@
     "warband_size": 0,
     "options": []
   },
+  "[the-easterlings] amdur-lord-of-blades": {
+    "model_id": "[the-easterlings] amdur-lord-of-blades",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Amdur, Lord of Blades",
+    "unit_type": "Hero of Valour",
+    "base_points": 135,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0904",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-easterlings] easterling-kataphrakt-captain": {
+    "model_id": "[the-easterlings] easterling-kataphrakt-captain",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-easterlings] easterling-captain": {
+    "model_id": "[the-easterlings] easterling-captain",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Mordor",
+    "name": "Easterling Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-easterlings] easterling-war-priest": {
+    "model_id": "[the-easterlings] easterling-war-priest",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling War Priest",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0905",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-easterlings] easterling-dragon-knight": {
+    "model_id": "[the-easterlings] easterling-dragon-knight",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Dragon Knight",
+    "unit_type": "Minor Hero",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:0:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT0906",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-easterlings] war-drake-of-rhun": {
+    "model_id": "[the-easterlings] war-drake-of-rhun",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "War Drake of Rhun",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-easterlings] easterling-kataphrakt": {
+    "model_id": "[the-easterlings] easterling-kataphrakt",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0907",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0908",
+        "name": "Exchange shield for war drum",
+        "points": 25
+      }
+    ]
+  },
+  "[the-easterlings] dragon-cult-acolyte": {
+    "model_id": "[the-easterlings] dragon-cult-acolyte",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Dragon Cult Acolyte",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-easterlings] black-dragon-warrior": {
+    "model_id": "[the-easterlings] black-dragon-warrior",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Fallen Realms",
+    "name": "Black Dragon Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0909",
+        "name": "Exchange shield for banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0910",
+        "name": "Easterling Halberd",
+        "points": 1
+      }
+    ]
+  },
+  "[the-easterlings] easterling-warrior": {
+    "model_id": "[the-easterlings] easterling-warrior",
+    "army_type": "Evil",
+    "army_list": "The Easterlings",
+    "profile_origin": "Mordor",
+    "name": "Easterling Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0911",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0912",
+        "name": "Easterling Halberd and shield",
+        "points": 2
+      },
+      {
+        "id": "OPT0913",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0914",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
+  },
   "[the-fellowship] gandalf-the-grey": {
     "model_id": "[the-fellowship] gandalf-the-grey",
     "army_type": "Good",
@@ -15585,6 +16572,757 @@
     ],
     "warband_size": 0,
     "options": []
+  },
+  "[the-fiefdoms] prince-imrahil": {
+    "model_id": "[the-fiefdoms] prince-imrahil",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Prince Imrahil",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0915",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-fiefdoms] forlong-the-fat": {
+    "model_id": "[the-fiefdoms] forlong-the-fat",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Forlong the Fat",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-fiefdoms] angbor-the-fearless": {
+    "model_id": "[the-fiefdoms] angbor-the-fearless",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Angbor the Fearless",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-fiefdoms] duinhir-lord-of-the-blackroot-vale": {
+    "model_id": "[the-fiefdoms] duinhir-lord-of-the-blackroot-vale",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Duinhir, Lord of the Blackroot Vale",
+    "unit_type": "Hero of Valour",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-fiefdoms] captain-of-dol-amroth": {
+    "model_id": "[the-fiefdoms] captain-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Captain of Dol Amroth",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0916",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-fiefdoms] knight-of-dol-amroth": {
+    "model_id": "[the-fiefdoms] knight-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Knight of Dol Amroth",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0917",
+        "name": "Armoured horse and banner",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT0918",
+        "name": "Armoured horse and war horn",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT0919",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0920",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0921",
+        "name": "Armoured horse and lance",
+        "points": 9,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-fiefdoms] axeman-of-lossarnach": {
+    "model_id": "[the-fiefdoms] axeman-of-lossarnach",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Axeman of Lossarnach",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-fiefdoms] blackroot-vale-archer": {
+    "model_id": "[the-fiefdoms] blackroot-vale-archer",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Blackroot Vale Archer",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0922",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0923",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0924",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[the-fiefdoms] clansman-of-lamedon": {
+    "model_id": "[the-fiefdoms] clansman-of-lamedon",
+    "army_type": "Good",
+    "army_list": "The Fiefdoms",
+    "profile_origin": "Gondor",
+    "name": "Clansman of Lamedon",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-grey-company] aragorn-strider": {
+    "model_id": "[the-grey-company] aragorn-strider",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Aragorn, Strider",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0953",
+        "name": "Bow",
+        "points": 5,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0954",
+        "name": "Elven Cloak",
+        "points": 5
+      },
+      {
+        "id": "OPT0952",
+        "name": "Anduril, Flame of the West",
+        "points": 0,
+        "included": true,
+        "quantity": 1
+      }
+    ]
+  },
+  "[the-grey-company] gimli": {
+    "model_id": "[the-grey-company] gimli",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Gimli",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0957",
+        "name": "Elven Cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[the-grey-company] legolas": {
+    "model_id": "[the-grey-company] legolas",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Legolas",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0955",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0956",
+        "name": "Elven Cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[the-grey-company] elladan": {
+    "model_id": "[the-grey-company] elladan",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elladan",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-grey-company] elrohir": {
+    "model_id": "[the-grey-company] elrohir",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elrohir",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-grey-company] halbarad": {
+    "model_id": "[the-grey-company] halbarad",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Halbarad",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0958",
+        "name": "Banner of Arwen Evenstar",
+        "points": 40
+      }
+    ]
+  },
+  "[the-grey-company] ranger-of-the-north": {
+    "model_id": "[the-grey-company] ranger-of-the-north",
+    "army_type": "Good",
+    "army_list": "The Grey Company",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0959",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0960",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[the-grief-of-eomer] prince-imrahil": {
+    "model_id": "[the-grief-of-eomer] prince-imrahil",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Prince Imrahil",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0938",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] eomer": {
+    "model_id": "[the-grief-of-eomer] eomer",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Rohan",
+    "name": "Eomer",
+    "unit_type": "Hero of Legend",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0925",
+        "name": "Firefoot with armour",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Firefoot with armour"
+      },
+      {
+        "id": "OPT0926",
+        "name": "Shield",
+        "points": 5
+      },
+      {
+        "id": "OPT0927",
+        "name": "Throwing spears",
+        "points": 5,
+        "type": "throw"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] hurin-the-tall-warden-of-the-keys": {
+    "model_id": "[the-grief-of-eomer] hurin-the-tall-warden-of-the-keys",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Hurin the Tall, Warden of the Keys",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0939",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] captain-of-dol-amroth": {
+    "model_id": "[the-grief-of-eomer] captain-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Captain of Dol Amroth",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0940",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] captain-of-minas-tirith": {
+    "model_id": "[the-grief-of-eomer] captain-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Captain of Minas Tirith",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-grief-of-eomer] captain-of-rohan": {
+    "model_id": "[the-grief-of-eomer] captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Rohan",
+    "name": "Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0928",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT0929",
+        "name": "Exchange armour for heavy armour",
+        "points": 5
+      },
+      {
+        "id": "OPT0930",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[the-grief-of-eomer] knight-of-minas-tirith": {
+    "model_id": "[the-grief-of-eomer] knight-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Knight of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0946",
+        "name": "Exchange shield and lance for banner",
+        "points": 25
+      }
+    ]
+  },
+  "[the-grief-of-eomer] rider-of-rohan": {
+    "model_id": "[the-grief-of-eomer] rider-of-rohan",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Rohan",
+    "name": "Rider of Rohan",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0936",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0937",
+        "name": "Throwing spears",
+        "points": 2,
+        "type": "throw"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] knight-of-dol-amroth": {
+    "model_id": "[the-grief-of-eomer] knight-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Knight of Dol Amroth",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0941",
+        "name": "Armoured horse and banner",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT0942",
+        "name": "Armoured horse and war horn",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT0943",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0944",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0945",
+        "name": "Armoured horse and lance",
+        "points": 9,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] warrior-of-minas-tirith": {
+    "model_id": "[the-grief-of-eomer] warrior-of-minas-tirith",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Gondor",
+    "name": "Warrior of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0947",
+        "name": "War horn and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT0948",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0949",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT0950",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0951",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
+  },
+  "[the-grief-of-eomer] warrior-of-rohan": {
+    "model_id": "[the-grief-of-eomer] warrior-of-rohan",
+    "army_type": "Good",
+    "army_list": "The Grief of Eomer",
+    "profile_origin": "Rohan",
+    "name": "Warrior of Rohan",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0931",
+        "name": "War horn, shield, throwing spears",
+        "points": 28,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0932",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0933",
+        "name": "Shield and throwing spears",
+        "points": 3,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0934",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0935",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
   },
   "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills": {
     "model_id": "[the-iron-hills] dain-ironfoot-lord-of-the-iron-hills",

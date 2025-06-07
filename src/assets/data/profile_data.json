@@ -12520,17 +12520,17 @@
         {
           "name": "Unbreakable Bond",
           "type": "Active",
-          "description": "If Elrohir is slain, make a note of the model that killed him. Elladan increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elrohir. If Elladan is Engaged in Combat with the model that killed Elrohir, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero's Heroic Tier."
+          "description": "If Elladan is slain, make a note of the model that killed him. Elrohir increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elladan. If Elrohir is Engaged in Combat with the model that killed Elladan, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero’s Heroic Tier."
         },
         {
           "name": "Twin Elven Blades",
           "type": "Active",
-          "description": "Whilst he has the Infantry keyword, Elladan can choose one of three bonuses at the start of a Combat: Gain 3 Attacks rather than 2, use the Shielding rule, or use his Elven weapons as Elven hand-and-a-half weapons."
+          "description": "Whilst he has the Infantry keyword, Elrohir can choose one of three bonuses at the start of a Combat: Gain 3 Attacks rather than 2, use the Shielding rule, or use his Elven weapons as Elven hand-and-a-half weapons."
         },
         {
           "name": "Strength of Brotherhood",
           "type": "Active",
-          "description": "Whilst within 3\" of Elrohir, Elladan gains Dominant (2) and may re-roll To Wound rolls of a natural 1 when making Strikes."
+          "description": "Whilst within 3\" of Elladan, Elrohir gains Dominant (2) and may re-roll To Wound rolls of a natural 1 when making Strikes."
         }
       ],
       "magic_powers": [],
@@ -14614,7 +14614,7 @@
         {
           "name": "The Palanquin",
           "type": "Passive",
-          "description": "A Mount treated as a single Infantry model (not multiple single models). For any special rules or Magical Powers that affect either the rider or mount, the player using the special rule or Magical Power may choose either the Emperor or Palanquin to be affected. The movement range of the Palanquin will change depending on the remaining Wounds\nMovement\n3+ wounds - 6\" move\n2 wounds - 3\" move\n1 wound - no movement.\nFor shooting attacks, the shooter must take an In The Way test, where a roll of 1-4 will hit the Palanquin, and 5-6 will hit the Emperor. Models with the Sharpshooter special rule may still choose either the rider or mount as normal.\nIf the Emperor dismounts or is slain, replace the Palanquin with a number of Black Dragon Warriors with shield equal to the remaining Wounds. No Courage Tests are required for being a Separated Mount. The Palanquin cannot be knocked Prone, other than by a Direct Hit from a Siege Engine. It also cannot be affected by Hurl or Barge Brutal Powers, nor be forced back by Magical Powers, or be flung back by the effects of a Siege Engine."
+          "description": "A Mount treated as a single Infantry model (not multiple single models). For any special rules or Magical Powers that affect either the rider or mount, the player using the special rule or Magical Power may choose either the Emperor or Palanquin to be affected. The movement range of the Palanquin will change depending on the remaining Wounds:\n3+ wounds - 6\" move\n2 wounds - 3\" move\n1 wound - no movement.\nFor shooting attacks, the shooter must take an In The Way test, where a roll of 1-4 will hit the Palanquin, and 5-6 will hit the Emperor. Models with the Sharpshooter special rule may still choose either the rider or mount as normal.\nIf the Emperor dismounts or is slain, replace the Palanquin with a number of Black Dragon Warriors with shield equal to the remaining Wounds. No Courage Tests are required for being a Separated Mount. The Palanquin cannot be knocked Prone, other than by a Direct Hit from a Siege Engine. It also cannot be affected by Hurl or Barge Brutal Powers, nor be forced back by Magical Powers, or be flung back by the effects of a Siege Engine."
         },
         {
           "name": "Fighting from the Palanquin",

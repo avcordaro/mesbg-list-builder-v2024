@@ -51,6 +51,31 @@
     ],
     "extra_profiles": []
   },
+  "[army-of-dale] bard-ii-prince-of-dale": {
+    "valid_warband_units": [
+      "[army-of-dale] warrior-of-dale",
+      "[army-of-dale] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dale] brand-king-of-dale": {
+    "valid_warband_units": [
+      "[army-of-dale] warrior-of-dale",
+      "[army-of-dale] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dale] captain-of-dale": {
+    "valid_warband_units": [
+      "[army-of-dale] warrior-of-dale",
+      "[army-of-dale] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dale] windlance": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[army-of-edoras] captain-of-rohan": {
     "valid_warband_units": [
       "[army-of-edoras] warrior-of-rohan",
@@ -1082,6 +1107,18 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[dragons-of-the-north] cave-drake": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[dragons-of-the-north] dragon": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[dragons-of-the-north] dragon-general": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[erebor-&-dale] captain-of-dale": {
     "valid_warband_units": [
       "[erebor-&-dale] warrior-of-dale"
@@ -1253,6 +1290,28 @@
       "Meriadoc Brandybuck",
       "Peregrin Took"
     ]
+  },
+  "[fords-of-isen] captain-of-rohan": {
+    "valid_warband_units": [
+      "[fords-of-isen] warrior-of-rohan",
+      "[fords-of-isen] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[fords-of-isen] elfhelm-captain-of-rohan": {
+    "valid_warband_units": [
+      "[fords-of-isen] warrior-of-rohan",
+      "[fords-of-isen] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[fords-of-isen] theodred": {
+    "valid_warband_units": [
+      "[fords-of-isen] warrior-of-rohan",
+      "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-royal-guard"
+    ],
+    "extra_profiles": []
   },
   "[garrison-of-dale] captain-of-dale": {
     "valid_warband_units": [
@@ -1439,6 +1498,65 @@
     ],
     "extra_profiles": [
       "War Mumak of Harad (Options)"
+    ]
+  },
+  "[host-of-the-dragon-emperor] brorgir-the-conjurer": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] easterling-captain": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] easterling-dragon-knight": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] black-dragon-warrior",
+      "[host-of-the-dragon-emperor] dragon-cult-acolyte"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] easterling-kataphrakt-captain": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] easterling-war-priest": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] rutabi-general-of-the-dragon-legion": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[host-of-the-dragon-emperor] the-dragon-emperor-of-rhun": {
+    "valid_warband_units": [
+      "[host-of-the-dragon-emperor] easterling-kataphrakt",
+      "[host-of-the-dragon-emperor] black-dragon-warrior",
+      "[host-of-the-dragon-emperor] dragon-cult-acolyte",
+      "[host-of-the-dragon-emperor] war-drake-of-rhun",
+      "[host-of-the-dragon-emperor] easterling-warrior"
+    ],
+    "extra_profiles": [
+      "Royal Palanquin"
     ]
   },
   "[host-of-the-witch-king] aldrac-warlord-of-carn-dum": {
@@ -3128,6 +3246,22 @@
     ],
     "extra_profiles": []
   },
+  "[the-beornings] beorn": {
+    "valid_warband_units": [
+      "[the-beornings] beorning"
+    ],
+    "extra_profiles": [
+      "Beorn the Bear"
+    ]
+  },
+  "[the-beornings] grimbeorn": {
+    "valid_warband_units": [
+      "[the-beornings] beorning"
+    ],
+    "extra_profiles": [
+      "Grimbeorn the Bear"
+    ]
+  },
   "[the-black-gate] morannon-orc-captain": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
@@ -3186,6 +3320,47 @@
     "valid_warband_units": [
       "[the-eagles] great-eagle",
       "[the-eagles] fledgeling-great-eagle"
+    ],
+    "extra_profiles": []
+  },
+  "[the-easterlings] amdur-lord-of-blades": {
+    "valid_warband_units": [
+      "[the-easterlings] easterling-kataphrakt",
+      "[the-easterlings] black-dragon-warrior",
+      "[the-easterlings] dragon-cult-acolyte",
+      "[the-easterlings] war-drake-of-rhun",
+      "[the-easterlings] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[the-easterlings] easterling-captain": {
+    "valid_warband_units": [
+      "[the-easterlings] easterling-kataphrakt",
+      "[the-easterlings] war-drake-of-rhun",
+      "[the-easterlings] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[the-easterlings] easterling-dragon-knight": {
+    "valid_warband_units": [
+      "[the-easterlings] black-dragon-warrior",
+      "[the-easterlings] dragon-cult-acolyte"
+    ],
+    "extra_profiles": []
+  },
+  "[the-easterlings] easterling-kataphrakt-captain": {
+    "valid_warband_units": [
+      "[the-easterlings] easterling-kataphrakt",
+      "[the-easterlings] war-drake-of-rhun",
+      "[the-easterlings] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[the-easterlings] easterling-war-priest": {
+    "valid_warband_units": [
+      "[the-easterlings] easterling-kataphrakt",
+      "[the-easterlings] war-drake-of-rhun",
+      "[the-easterlings] easterling-warrior"
     ],
     "extra_profiles": []
   },
@@ -3303,6 +3478,173 @@
       "[the-fellowship] meriadoc-brandybuck",
       "[the-fellowship] peregrin-took",
       "[the-fellowship] bill-the-pony"
+    ],
+    "extra_profiles": []
+  },
+  "[the-fiefdoms] angbor-the-fearless": {
+    "valid_warband_units": [
+      "[the-fiefdoms] knight-of-dol-amroth",
+      "[the-fiefdoms] axeman-of-lossarnach",
+      "[the-fiefdoms] clansman-of-lamedon",
+      "[the-fiefdoms] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[the-fiefdoms] captain-of-dol-amroth": {
+    "valid_warband_units": [
+      "[the-fiefdoms] knight-of-dol-amroth",
+      "[the-fiefdoms] axeman-of-lossarnach",
+      "[the-fiefdoms] clansman-of-lamedon",
+      "[the-fiefdoms] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[the-fiefdoms] duinhir-lord-of-the-blackroot-vale": {
+    "valid_warband_units": [
+      "[the-fiefdoms] knight-of-dol-amroth",
+      "[the-fiefdoms] axeman-of-lossarnach",
+      "[the-fiefdoms] clansman-of-lamedon",
+      "[the-fiefdoms] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[the-fiefdoms] forlong-the-fat": {
+    "valid_warband_units": [
+      "[the-fiefdoms] knight-of-dol-amroth",
+      "[the-fiefdoms] axeman-of-lossarnach",
+      "[the-fiefdoms] clansman-of-lamedon",
+      "[the-fiefdoms] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[the-fiefdoms] prince-imrahil": {
+    "valid_warband_units": [
+      "[the-fiefdoms] knight-of-dol-amroth",
+      "[the-fiefdoms] axeman-of-lossarnach",
+      "[the-fiefdoms] clansman-of-lamedon",
+      "[the-fiefdoms] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] aragorn-strider": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] elladan": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] elrohir": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] gimli": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] halbarad": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] legolas": {
+    "valid_warband_units": [
+      "[the-grey-company] aragorn-strider",
+      "[the-grey-company] legolas",
+      "[the-grey-company] gimli",
+      "[the-grey-company] halbarad",
+      "[the-grey-company] elladan",
+      "[the-grey-company] elrohir",
+      "[the-grey-company] ranger-of-the-north"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grey-company] ranger-of-the-north": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] captain-of-dol-amroth": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] knight-of-dol-amroth",
+      "[the-grief-of-eomer] knight-of-minas-tirith",
+      "[the-grief-of-eomer] warrior-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] captain-of-minas-tirith": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] knight-of-dol-amroth",
+      "[the-grief-of-eomer] knight-of-minas-tirith",
+      "[the-grief-of-eomer] warrior-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] captain-of-rohan": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] warrior-of-rohan",
+      "[the-grief-of-eomer] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] eomer": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] warrior-of-rohan",
+      "[the-grief-of-eomer] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] hurin-the-tall-warden-of-the-keys": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] knight-of-dol-amroth",
+      "[the-grief-of-eomer] knight-of-minas-tirith",
+      "[the-grief-of-eomer] warrior-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[the-grief-of-eomer] prince-imrahil": {
+    "valid_warband_units": [
+      "[the-grief-of-eomer] knight-of-dol-amroth",
+      "[the-grief-of-eomer] knight-of-minas-tirith",
+      "[the-grief-of-eomer] warrior-of-minas-tirith"
     ],
     "extra_profiles": []
   },

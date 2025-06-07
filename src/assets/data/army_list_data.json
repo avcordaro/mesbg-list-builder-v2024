@@ -2092,5 +2092,236 @@
     "bow_limit": 0.33,
     "throw_limit": 0.33,
     "rule_highlights": []
+  },
+  "Army of Dale": {
+    "additional_rules": [
+      {
+        "description": "An Army of Dale Army must always contain Brand, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Skilled Bowmen",
+        "description": "Friendly Dale models improve their Shoot Value to 3+."
+      },
+      {
+        "title": "Protect the King",
+        "description": "Friendly models gain the Sworn Protector (Brand) special rule."
+      },
+      {
+        "title": "Stoic Defence",
+        "description": "Once per game, at the start of any Move Phase before the Declare Heroic Actions step, you may declare you are using this ability. If you do, then during the Move Phase friendly models cannot Move during their Activation (but can otherwise act normally). Additionally, until the End Phase of the turn, friendly models gain the Dominant (2) special rule and may re-roll any failed To Wound Rolls when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Sworn Protector (Brand)",
+      "Dominant (2)"
+    ]
+  },
+  "Host of the Dragon Emperor": {
+    "additional_rules": [
+      {
+        "description": "A Host of the Dragon Emperor Army must always contain the Dragon Emperor of Rh\u00fbn, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Heroes of the Easterlings",
+        "description": "Friendly Easterling Hero models may re-roll a single D6 in a Duel Roll."
+      },
+      {
+        "title": "Easterling Phalanxes",
+        "description": "Friendly models Supported by two other friendly models gain a bonus of +1 To Wound when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "The Easterlings": {
+    "additional_rules": [
+      {
+        "description": "An Easterlings Army must always contain Amd\u00fbr, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "No quarter was asked...",
+        "description": "Friendly Easterling models gain a bonus of +1 to any Courage Tests they are required to take once their Army is Broken. Additionally, once per game in Scenarios in which a dice is rolled to see when the game ends, you may choose to have the dice re-rolled if the Scenario ends before you wish it to."
+      },
+      {
+        "title": "Press the advantage",
+        "description": "Whilst the enemy Army is Broken, friendly Easterling Hero models gain the Fearless special rule."
+      },
+      {
+        "title": "Raze the White City",
+        "description": "Friendly models gain the Ancient Enemies (Gondor) special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Fearless",
+      "Ancient Enemies (Gondor)"
+    ]
+  },
+  "The Fiefdoms": {
+    "additional_rules": [
+      {
+        "description": "Warrior models with one of the following keywords may only be included in your Army if your Army also includes a Hero with the same keyword: Dol Amroth, Lossarnach, Lamedon, Blackroot Vale."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"For the White City!\"",
+        "description": "The first turn in which this Army would be Broken and therefore have to take Courage Tests as a result of being a Broken Army, all friendly models will automatically pass Courage Tests for being Broken that turn."
+      },
+      {
+        "title": "Leaders of the Fiefdoms",
+        "description": "If a friendly Hero Charges into Combat, then during the Fight Phase, friendly Infantry models within 6\" of the Hero that share both of the same Faction Keywords as the Hero gain an additional +1 bonus To Wound when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "The Grief of Eomer": {
+    "additional_rules": [
+      {
+        "description": "A Grief of \u00c9omer Army must always contain \u00c9omer, who is always the Army's General."
+      },
+      {
+        "description": "Rohan Warrior models can only be included in the Warband of a Rohan Hero."
+      },
+      {
+        "description": "Gondor Warrior models can only be included in the Warband of a Gondor Hero."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\u00c9omer's Wrath",
+        "description": "\u00c9omer is always treated as being under the effects of his The Price of Grief special rule. Additionally, \u00c9omer gains a bonus of +1 to his Fight Value on a turn in which he Charges."
+      },
+      {
+        "title": "Fear no enemy",
+        "description": "\u00c9omer gains the Fearless special rule. Additionally, friendly Rohan models that can draw Line of Sight to \u00c9omer automatically pass any Courage Tests they are required to take."
+      },
+      {
+        "title": "Ride of Dol Amroth",
+        "description": "Friendly Gondor models may re-roll To Wound Rolls of a natural 1 when making Strikes in a turn in which they Charged."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Fearless"
+    ]
+  },
+  "The Grey Company": {
+    "additional_rules": [
+      {
+        "description": "A Grey Company Army must always contain Aragorn, who is always the Army's General."
+      },
+      {
+        "description": "A Grey Company Army may be deployed as a single Warband, with Aragorn as the Warband's Captain, regardless of the number of models."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Heir of Isildur",
+        "description": "Aragorn does not have to pay any points for And\u00faril, Flame of the West; he automatically has this upgrade - it is free."
+      },
+      {
+        "title": "\"They're dangerous folk, wandering the wilds\"",
+        "description": "Rangers of the North increase their Attacks value to 2."
+      },
+      {
+        "title": "Passing of the Grey Company",
+        "description": "Rangers of the North may benefit from the Stand Fast of any friendly Unique Hero model."
+      },
+      {
+        "title": "Masters of the Wild",
+        "description": "Friendly models are not slowed by difficult terrain of any type."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Dragons of the North": {
+    "additional_rules": [
+      {
+        "description": "A Dragons of the North Army must always contain a Dragon as the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Dragons' Hoard",
+        "description": "Each time a friendly model slays an enemy model in Combat they may roll a D6. On a natural 6, they have located some gold upon the body of the fallen and claimed it for themselves - keep a note of how much gold each model claims in this way. Friendly models gain the following benefits depending on how much gold they have collected. These benefits are cumulative:\n1 gold - The model may re-roll a single To Wound Roll when making Strikes.\n2-3 gold - The model may re-roll a single D6 during a Duel Roll.\n4-5 gold - The model gains the Fearless special rule.\n6+ gold - At the end of the game, their controlling player will gain an additional 1 Victory Point. This can never take this Army's total number of Victory Points above 20."
+      },
+      {
+        "title": "Beast of Legend",
+        "description": "The Dragon that is your General may select up to three options rather than the usual two."
+      },
+      {
+        "title": "Supreme Jealousy",
+        "description": "Each Dragon in your Army must have a different combination of options. Dragons that have no options do not count for the purpose of this special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "The Beornings": {
+    "additional_rules": [],
+    "special_rules": [
+      {
+        "title": "Great Resilience",
+        "description": "Whenever a friendly Bear model suffers a Wound, roll a D6.On the roll of a natural 6, the Wound is ignored."
+      },
+      {
+        "title": "Natural Resistance",
+        "description": "Friendly models gain the Resistant to Magic special rule."
+      },
+      {
+        "title": "Ursine Fury",
+        "description": "At the beginning of each Move Phase, before the Declare Heroic Action step, you may roll a D6 for each friendly Bear model you have on the battlefield. If any of the D6 roll a natural 6, then for the duration of the turn enemy models suffer a -1 penalty to any Courage Tests they are required to take as a result of trying to Charge a model with the Terror special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Terror",
+      "Resistant to Magic"
+    ]
+  },
+  "Fords of Isen": {
+    "additional_rules": [
+      {
+        "description": "A Fords of Isen Army must always contain Th\u00e9odred, who is always the Army's General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Protect the Prince",
+        "description": "Friendly models gain the Sworn Protector (Th\u00e9odred) special rule."
+      },
+      {
+        "title": "Resolute Rohirrim",
+        "description": "If your Army is Broken, friendly models gain the Dominant (2) special rule."
+      },
+      {
+        "title": "The Courage of Elfhelm",
+        "description": "If Th\u00e9odred is Engaged in Combat within 6\" of Elfhelm, then enemy models may not make Strikes against Th\u00e9odred if there is another model they could make Strikes against instead."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Sworn Protector (Theodred)",
+      "Dominant (2)"
+    ]
   }
 }
