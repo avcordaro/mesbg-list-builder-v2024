@@ -7,6 +7,8 @@ import { MwfwUpdater } from "../useMwfMutations.ts";
 export const handledModels = [
   "[harad] war-mumak-of-harad",
   "[legions-of-mordor] war-mumak-of-harad",
+  "[grand-army-of-the-south] war-mumak-of-harad",
+  "[the-serpent-horde] war-mumak-of-harad",
 ];
 
 export const handler: MwfwUpdater = {

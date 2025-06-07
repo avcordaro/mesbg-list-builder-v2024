@@ -133,6 +133,83 @@
     ],
     "extra_profiles": []
   },
+  "[army-of-erebor] bifur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] bofur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] dain-ironfoot-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] dori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] dwalin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] dwarf-king": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] gimli": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] gloin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] iron-hills-captain": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] nori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-erebor] thorin-iii-stonehelm": {
+    "valid_warband_units": [
+      "[army-of-erebor] iron-hills-warrior",
+      "[army-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-gothmog] gothmog": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
@@ -284,6 +361,204 @@
   "[army-of-lake-town] the-master-of-lake-town": {
     "valid_warband_units": [
       "[army-of-lake-town] lake-town-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] black-numenorean-marshal": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] gorbag": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] gothmog": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] gothmog's-enforcer": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] guritz": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] morannon-orc-captain": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-orc-drummer": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-orc-taskmaster": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-siege-bow": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-troll-chieftain": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-uruk-hai-captain": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mordor-war-catapult": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] mouth-of-sauron": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] ringwraith": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] shagrat": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] shelob": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[army-of-the-great-eye] the-witch-king-of-angmar": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight"
     ],
     "extra_profiles": []
   },
@@ -641,6 +916,163 @@
     ],
     "extra_profiles": []
   },
+  "[battle-of-bywater] baldo-tulpenny": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] farmer-maggot": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": [
+      "Grip, Fang and Wolf"
+    ]
+  },
+  "[battle-of-bywater] farmer-tolman-cotton": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] folco-boffin": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] fredegar-'fatty'-bolger": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] frodo-of-the-nine-fingers": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] hamfast-'gaffer'-gamgee": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] holfoot-bracegirdle-shirriff-leader": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] lobelia-sackville-baggins": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] meriadoc-brandybuck-captain-of-the-shire": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] paladin-took-thain-of-the-shire": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] peregrin-took-captain-of-the-shire": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] robin-smallburrow-hobbit-shirriff": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] rosie-cotton": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] samwise-the-brave": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-bywater] will-whitfoot-mayor-of-michel-delving": {
+    "valid_warband_units": [
+      "[battle-of-bywater] rosie-cotton",
+      "[battle-of-bywater] lobelia-sackville-baggins",
+      "[battle-of-bywater] folco-boffin",
+      "[battle-of-bywater] hobbit-militia",
+      "[battle-of-bywater] hobbit-archer",
+      "[battle-of-bywater] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
   "[battle-of-fornost] aranarth": {
     "valid_warband_units": [
       "[battle-of-fornost] hobbit-archer",
@@ -857,6 +1289,90 @@
   "[corsair-fleet] corsair-captain-general": {
     "valid_warband_units": [
       "[corsair-fleet] corsair-of-umbar"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] bard-ii-prince-of-dale": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] warrior-of-dale",
+      "[defenders-of-erebor] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] bifur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] bofur-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] brand-king-of-dale": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] warrior-of-dale",
+      "[defenders-of-erebor] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] captain-of-dale": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] warrior-of-dale",
+      "[defenders-of-erebor] knight-of-dale"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] dain-ironfoot-king-under-the-mountain": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] dori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] dwalin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] gloin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] iron-hills-captain": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] nori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-erebor] thorin-iii-stonehelm": {
+    "valid_warband_units": [
+      "[defenders-of-erebor] iron-hills-warrior",
+      "[defenders-of-erebor] iron-hills-goat-rider"
     ],
     "extra_profiles": []
   },
@@ -1422,6 +1938,130 @@
     ],
     "extra_profiles": []
   },
+  "[grand-army-of-the-south] amdur-lord-of-blades": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] easterling-kataphrakt",
+      "[grand-army-of-the-south] black-dragon-warrior",
+      "[grand-army-of-the-south] dragon-cult-acolyte",
+      "[grand-army-of-the-south] war-drake-of-rhun",
+      "[grand-army-of-the-south] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] corsair-bo'sun": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] corsair-of-umbar",
+      "[grand-army-of-the-south] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] corsair-captain": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] corsair-of-umbar",
+      "[grand-army-of-the-south] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] dalamyr-fleetmaster-of-umbar": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] corsair-of-umbar",
+      "[grand-army-of-the-south] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] delgamar-gatemaster-of-umbar": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] corsair-of-umbar",
+      "[grand-army-of-the-south] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] easterling-captain": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] easterling-kataphrakt",
+      "[grand-army-of-the-south] war-drake-of-rhun",
+      "[grand-army-of-the-south] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] easterling-dragon-knight": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] black-dragon-warrior",
+      "[grand-army-of-the-south] dragon-cult-acolyte"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] easterling-kataphrakt-captain": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] easterling-kataphrakt",
+      "[grand-army-of-the-south] war-drake-of-rhun",
+      "[grand-army-of-the-south] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] easterling-war-priest": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] easterling-kataphrakt",
+      "[grand-army-of-the-south] war-drake-of-rhun",
+      "[grand-army-of-the-south] easterling-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] haradrim-chieftain": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior",
+      "[grand-army-of-the-south] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] haradrim-taskmaster": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior",
+      "[grand-army-of-the-south] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] hasharin": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior",
+      "[grand-army-of-the-south] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] mumak-war-leader": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior"
+    ],
+    "extra_profiles": [
+      "Royal War Mumak"
+    ]
+  },
+  "[grand-army-of-the-south] raza-fang-of-the-serpent": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior",
+      "[grand-army-of-the-south] haradrim-raider",
+      "[grand-army-of-the-south] serpent-guard",
+      "[grand-army-of-the-south] serpent-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] suladan-the-serpent-lord": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior",
+      "[grand-army-of-the-south] haradrim-raider",
+      "[grand-army-of-the-south] serpent-guard",
+      "[grand-army-of-the-south] serpent-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[grand-army-of-the-south] war-mumak-of-harad": {
+    "valid_warband_units": [
+      "[grand-army-of-the-south] haradrim-warrior"
+    ],
+    "extra_profiles": [
+      "War Mumak of Harad (Options)"
+    ]
+  },
   "[halls-of-thranduil] legolas-greenleaf-prince-of-mirkwood": {
     "valid_warband_units": [
       "[halls-of-thranduil] mirkwood-elf-warrior",
@@ -1659,6 +2299,48 @@
     ],
     "extra_profiles": []
   },
+  "[kingdom-of-khazad-dum] durin-king-of-khazad-dum": {
+    "valid_warband_units": [
+      "[kingdom-of-khazad-dum] dwarf-warrior",
+      "[kingdom-of-khazad-dum] dwarf-ranger",
+      "[kingdom-of-khazad-dum] khazad-guard",
+      "[kingdom-of-khazad-dum] iron-guard",
+      "[kingdom-of-khazad-dum] vault-warden-team"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-khazad-dum] dwarf-captain": {
+    "valid_warband_units": [
+      "[kingdom-of-khazad-dum] dwarf-warrior",
+      "[kingdom-of-khazad-dum] dwarf-ranger",
+      "[kingdom-of-khazad-dum] iron-guard",
+      "[kingdom-of-khazad-dum] vault-warden-team"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-khazad-dum] dwarf-king": {
+    "valid_warband_units": [
+      "[kingdom-of-khazad-dum] dwarf-warrior",
+      "[kingdom-of-khazad-dum] dwarf-ranger",
+      "[kingdom-of-khazad-dum] khazad-guard",
+      "[kingdom-of-khazad-dum] iron-guard",
+      "[kingdom-of-khazad-dum] vault-warden-team"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-khazad-dum] dwarven-ballista": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[kingdom-of-khazad-dum] mardin-the-king's-ward": {
+    "valid_warband_units": [
+      "[kingdom-of-khazad-dum] dwarf-warrior",
+      "[kingdom-of-khazad-dum] dwarf-ranger",
+      "[kingdom-of-khazad-dum] iron-guard",
+      "[kingdom-of-khazad-dum] vault-warden-team"
+    ],
+    "extra_profiles": []
+  },
   "[kingdom-of-rohan] captain-of-rohan": {
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
@@ -1783,7 +2465,9 @@
     "valid_warband_units": [
       "[legions-of-mordor] haradrim-warrior"
     ],
-    "extra_profiles": []
+    "extra_profiles": [
+      "War Mumak of Harad (Options)"
+    ]
   },
   "[lindon] cirdan": {
     "valid_warband_units": [
@@ -2044,6 +2728,67 @@
       "[minas-tirith] knight-of-minas-tirith",
       "[minas-tirith] citadel-guard"
     ],
+    "extra_profiles": []
+  },
+  "[moria] cave-drake": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] dragon": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] druzhag-the-beastcaller": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll",
+      "[moria] bat-swarm",
+      "[moria] mirkwood-hunting-spider",
+      "[moria] fell-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] durburz-goblin-king-of-moria": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] moria-goblin-captain": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] moria-goblin-shaman": {
+    "valid_warband_units": [
+      "[moria] moria-goblin-warrior",
+      "[moria] moria-goblin-prowler",
+      "[moria] moria-goblin-drum",
+      "[moria] cave-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[moria] the-watcher-in-the-water": {
+    "valid_warband_units": [],
     "extra_profiles": []
   },
   "[muster-of-isengard] grima": {
@@ -2978,6 +3723,51 @@
     ],
     "extra_profiles": []
   },
+  "[sharkey's-rogues] bill-ferny": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian"
+    ],
+    "extra_profiles": []
+  },
+  "[sharkey's-rogues] lotho-sackville-baggins": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian",
+      "[sharkey's-rogues] hobbit-militia"
+    ],
+    "extra_profiles": []
+  },
+  "[sharkey's-rogues] rowan-thistlewood": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian"
+    ],
+    "extra_profiles": []
+  },
+  "[sharkey's-rogues] ruffian-cpt": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian"
+    ],
+    "extra_profiles": []
+  },
+  "[sharkey's-rogues] sharkey-&-worm": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian"
+    ],
+    "extra_profiles": [
+      "Worm"
+    ]
+  },
+  "[sharkey's-rogues] sid-briarthorn": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] ruffian"
+    ],
+    "extra_profiles": []
+  },
+  "[sharkey's-rogues] ted-sandyman": {
+    "valid_warband_units": [
+      "[sharkey's-rogues] hobbit-militia"
+    ],
+    "extra_profiles": []
+  },
   "[survivors-of-lake-town] alfrid-the-councillor": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -3714,6 +4504,46 @@
     ],
     "extra_profiles": []
   },
+  "[the-serpent-horde] haradrim-chieftain": {
+    "valid_warband_units": [
+      "[the-serpent-horde] haradrim-warrior",
+      "[the-serpent-horde] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-serpent-horde] haradrim-taskmaster": {
+    "valid_warband_units": [
+      "[the-serpent-horde] haradrim-warrior",
+      "[the-serpent-horde] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-serpent-horde] raza-fang-of-the-serpent": {
+    "valid_warband_units": [
+      "[the-serpent-horde] haradrim-warrior",
+      "[the-serpent-horde] haradrim-raider",
+      "[the-serpent-horde] serpent-guard",
+      "[the-serpent-horde] serpent-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-serpent-horde] suladan-the-serpent-lord": {
+    "valid_warband_units": [
+      "[the-serpent-horde] haradrim-warrior",
+      "[the-serpent-horde] haradrim-raider",
+      "[the-serpent-horde] serpent-guard",
+      "[the-serpent-horde] serpent-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-serpent-horde] war-mumak-of-harad": {
+    "valid_warband_units": [
+      "[the-serpent-horde] haradrim-warrior"
+    ],
+    "extra_profiles": [
+      "War Mumak of Harad (Options)"
+    ]
+  },
   "[the-shire] bilbo-baggins-ageing-hobbit": {
     "valid_warband_units": [
       "[the-shire] gandalf-the-grey",
@@ -4029,6 +4859,62 @@
     "valid_warband_units": [
       "[ugluk's-scouts] uruk-hai-drummer",
       "[ugluk's-scouts] uruk-hai-scout"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] black-numenorean-marshal": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] corsair-bo'sun": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] corsair-captain": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] dalamyr-fleetmaster-of-umbar": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] delgamar-gatemaster-of-umbar": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] haradrim-chieftain": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[umbar] hasharin": {
+    "valid_warband_units": [
+      "[umbar] haradrim-warrior",
+      "[umbar] corsair-of-umbar",
+      "[umbar] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },

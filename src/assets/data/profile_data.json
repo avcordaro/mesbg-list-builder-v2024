@@ -4490,7 +4490,7 @@
       "wargear": [],
       "additional_stats": [
         {
-          "name": "Mordor Orc Siege Crew",
+          "name": "Dwarf Siege Crew",
           "Mv": "5\"",
           "Fv": "4",
           "Sv": "4+",
@@ -8913,7 +8913,7 @@
         "Pony"
       ],
       "additional_text": [
-        "Any Hobbit Archerys in Pippin's Warband upgraded to Tookish Hunters may re-roll To Wounds of a 1 when making shooting attacks."
+        "Any Hobbit Archers in Pippin's Warband upgraded to Tookish Hunters may re-roll To Wounds of a 1 when making shooting attacks."
       ]
     },
     "Goldberry": {
@@ -9107,6 +9107,71 @@
         "Hand weapon",
         "spear",
         "blowpipe"
+      ]
+    },
+    "Fredegar 'Fatty' Bolger": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Live to fight another day",
+          "type": "Passive",
+          "description": "If Fredegar attempts to Charge an enemy model with the Terror special rule and fails the Courage Test, then Fredegar may still Move as normal; however, he may not Charge any model that turn."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (2)",
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Unarmed"
+      ]
+    },
+    "Paladin Took, Thain of the Shire": {
+      "Mv": "4\"",
+      "Fv": "2",
+      "Sv": "3+",
+      "S": "2",
+      "D": "3",
+      "A": "1",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "To me, Shire-folk!",
+          "type": "Active",
+          "description": "Paladin's Stand Fast has a range of 12\"; however, only friendly Hobbit models may benefit from Paladin's Stand Fast."
+        },
+        {
+          "name": "For Tuckborough!",
+          "type": "Passive",
+          "description": "Friendly Tookish Hunters within 6\" of Paladin gain a bonus of +1 To Wound when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon"
+      ],
+      "additional_text": [
+        "Any Hobbit Archers in Paladin's Warband upgraded to Tookish Hunters may re-roll To Wounds of a 1 when making shooting attacks."
       ]
     }
   },
@@ -10106,12 +10171,14 @@
     "Mordor Siege Bow": {
       "Range": "6\" - 48\"",
       "Mv": "-",
-      "F": "-",
+      "Fv": "-",
+      "Sv": "-",
       "S": "8",
       "D": "9",
       "A": "-",
       "W": "3",
       "C": "-",
+      "I": "-",
       "active_or_passive_rules": [
         {
           "name": "Accurate",
@@ -12520,7 +12587,7 @@
         {
           "name": "Unbreakable Bond",
           "type": "Active",
-          "description": "If Elladan is slain, make a note of the model that killed him. Elrohir increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elladan. If Elrohir is Engaged in Combat with the model that killed Elladan, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero’s Heroic Tier."
+          "description": "If Elladan is slain, make a note of the model that killed him. Elrohir increases his Strength by 1 for the remainder of the game, and must always Charge an enemy if able to do so, prioritising the enemy who killed Elladan. If Elrohir is Engaged in Combat with the model that killed Elladan, and that model is a Hero, he may declare a free Heroic Challenge, regardless of the Hero\u2019s Heroic Tier."
         },
         {
           "name": "Twin Elven Blades",

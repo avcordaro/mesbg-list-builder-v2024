@@ -2323,5 +2323,271 @@
       "Sworn Protector (Theodred)",
       "Dominant (2)"
     ]
+  },
+  "Kingdom of Khazad-Dum": {
+    "additional_rules": [
+      {
+        "description": "If a Dwarf King is your General, they gain the Leader (Khaz\u00e2d Guard) special rule."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"The wealth of Moria lay not in gold or jewels, but in Mithril\"",
+        "description": "Friendly models may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "Steadfast Warriors",
+        "description": "Friendly Dwarf Captains, Dwarf Warriors and Dwarf Rangers gain the Dominant (2) special rule."
+      },
+      {
+        "title": "The Stubbornness of Dwarves",
+        "description": "During a Duel Roll, before any re-rolls have been used, if the opposition player has rolled more dice (including for Supporting models), then a single friendly Khazad-d\u00fbm model may re-roll a single D6 as part of the Duel Roll."
+      },
+      {
+        "title": "Dwarven Mirrors",
+        "description": "At the start of the game, after both sides have deployed, you may deploy two 40mm Dwarven Mirror Markers anywhere on the battlefield that is not within the opposition deployment zone. The area within 6\" of a Dwarven Mirror Marker is always considered to be daylight. Enemy models targeting a friendly model within 6\" of a Dwarven Mirror Marker with a shooting attack suffers a -1 penalty to the To Hit Roll. Additionally, Orc models, Goblin models, or models with the Cave Dweller special rule, suffer a -1 penalty to any Courage Tests they are required to take whilst they are within 6\" of a Dwarven Mirror Marker. If, during the End Phase of a turn, an enemy model is in base contact with a Dwarven Mirror Marker, that model hasn't done anything during that turn except Move (i.e., has not made a shooting attack, cast a Magical Power, been Engaged in Combat), and that model was not affected by a Magical Power that turn, then it can remove the Dwarven Mirror Marker from play. Models cannot overlap a Dwarven Mirror Marker for any reason, though a War Beast or Chariot that Moves into base contact with one (via Trample or Chariot Charge respectively) will immediately remove it from play and may carry on as normal."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Leader (Khazad Guard)",
+      "Dominant (2)"
+    ]
+  },
+  "Battle of Bywater": {
+    "additional_rules": [
+      {
+        "description": "A Battle of Bywater Army must include Frodo, Sam, Merry and Pippin. Merry must always be the Army's General."
+      },
+      {
+        "description": "Hobbit Militia in Merry's Warband must be upgraded to Battlin' Brandybucks."
+      },
+      {
+        "description": "Any Hobbit Archers in a Warband led by either Pippin or Paladin must be upgraded to Tookish Hunters."
+      }
+    ],
+    "special_rules": [],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Army of the Great Eye": {
+    "additional_rules": [
+      {
+        "description": "An Army of the Great Eye must always contain a Ringwraith model as the Army's General."
+      }
+    ],
+    "special_rules": [],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Umbar": {
+    "additional_rules": [
+      {
+        "description": "An Umbar Army must always contain at least one H\u00e2sharin."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Seize Command",
+        "description": "If during the End Phase of any turn, your General has only a single Wound remaining and is within 3\" and Line of Sight of a friendly H\u00e2sharin, you may choose to remove your General as a casualty. If you do, you may immediately choose another friendly Hero to be your new General (this must still be a Hero with the highest Heroic Tier remaining). The previous model loses the General keyword and no longer counts as a General for the purpose of special rules or Victory Points. If a H\u00e2sharin is your General, they cannot use this special rule to kill themselves \u2013 a different H\u00e2sharin would have to be within 3\" to use this special rule."
+      },
+      {
+        "title": "Shadows of Umbar",
+        "description": "Friendly models gain the Stalk Unseen special rule."
+      },
+      {
+        "title": "Death to Gondor",
+        "description": "Friendly models gain the Hatred (Gondor) special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Stalk Unseen",
+      "Hatred (Gondor)"
+    ]
+  },
+  "Grand Army of the South": {
+    "additional_rules": [
+      {
+        "description": "Corsair Warrior models can only be included in the Warband of a Corsair Hero."
+      },
+      {
+        "description": "Harad Warrior models can only be included in the Warband of a Harad Hero."
+      },
+      {
+        "description": "Easterling Warrior models can only be included in the Warband of an Easterling Hero."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Pride of the Southlands",
+        "description": "Friendly models gain a bonus of +1 to any Courage Tests they are required to take."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Army of Erebor": {
+    "additional_rules": [
+      {
+        "description": "Friendly Dwarf models gain the Erebor keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Wall of Steel",
+        "description": "Friendly models that are Supporting gain a bonus of +1 To Wound when making Strikes."
+      },
+      {
+        "title": "\"For Erebor!\"",
+        "description": "Each friendly Hero model may, once per game, declare a Heroic Combat for free."
+      },
+      {
+        "title": "Like Father, Like Son",
+        "description": "Whilst within 3\" of each other, Gimli and Gl\u00f3in may re-roll any failed To Wound Rolls when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Moria": {
+    "additional_rules": [
+      {
+        "description": "Beast models may only be included in Dr\u00fbzhag's Warband."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"We cannot get out, they are coming.\"",
+        "description": "Friendly Moria Goblin models Engaged in Combat with an enemy model that would be considered Trapped gain a bonus of +1 to their Fight Value for the duration of the Combat."
+      },
+      {
+        "title": "Skittering Warriors",
+        "description": "Friendly Moria Goblin models gain the Mountain Dweller special rule."
+      },
+      {
+        "title": "Durb\u00fbrz's Will",
+        "description": "Once per game, at the start of his Activation, Durb\u00farz may declare he is using this ability. If he does, Durb\u00fbrz may not Move during his Activation; however, all friendly Moria Goblin models gain a bonus of +2\" to their Move Value until the End Phase of the turn. Additionally, in a turn in which Durb\u00fbrz uses this ability, all friendly Moria Goblin models within 6\" of him automatically pass any Courage Tests required when attempting to Charge a model with the Terror special rule."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Mountain Dweller"
+    ]
+  },
+  "Sharkey's Rogues": {
+    "additional_rules": [
+      {
+        "description": "A Sharkey's Rogues Army must always contain Sharkey, who is always the Army's General."
+      },
+      {
+        "description": "Hobbit Warrior models can only be included in the Warband of a Hobbit Hero."
+      },
+      {
+        "description": "This Army may include Warbands of 10-12 Ruffians without a Hero to lead them. In these Warbands, nominate a single Warrior model to count as the Warband's Captain for the purpose of deployment. These Warbands may only be included after all other available Hero models have been included in the Army."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"You do what Sharkey says!\"",
+        "description": "Sharkey's Stand Fast will cover the entire battlefield, regardless of range"
+      },
+      {
+        "title": "Strength in Numbers",
+        "description": "Whilst this Army is not Broken, friendly Ruffian models gain a +1 bonus to any Courage Tests they are required to take."
+      },
+      {
+        "title": "The Wizard's Command",
+        "description": "Friendly Ruffian models within 6\" of Sharkey may use his Courage instead of their own when taking Courage Tests."
+      },
+      {
+        "title": "Sharkey's Wrath",
+        "description": "Sharkey gains the Hatred (Hobbit) special rule."
+      },
+      {
+        "title": "The Chief's Whips",
+        "description": "Friendly Ruffian models gain a bonus of +1 To Hit when making a shooting attack with a whip."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Hatred (Hobbit)"
+    ]
+  },
+  "Defenders of Erebor": {
+    "additional_rules": [
+      {
+        "description": "A Defenders of Erebor Army must always include at least one Unique Erebor Hero, and at least one Unique Dale Hero."
+      },
+      {
+        "description": "Erebor Warrior models can only be included in the Warband of a Erebor Hero."
+      },
+      {
+        "description": "Dale Warrlor models can only be included in the Warband of a Dale Hero."
+      },
+      {
+        "description": "Any models with the Iron Hills keyword replace it with the Erebor keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Long-standing Alliance",
+        "description": "Friendly Dale models within 1\" of a friendly Erebor model may re-roll To Wound Rolls of a natural 1 when making Strikes. Friendly Erebor models within 1\" of a friendly Dale model may re-roll To Wound Rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "A Bond Forged in War",
+        "description": "At the beginning of the Fight Phase, at the start of the Declare Heroic Actions step, if either D\u00e1in or Brand would be considered Trapped then the other may declare a Heroic Combat for free. If this Heroic Combat is successful, then D\u00e1in or Brand must use the following Move to join the other's Combat. If this is not possible, then D\u00e1in or Brand must Move as close as possible to the other. A model cannot use this special rule if they are in the same Combat as the other."
+      },
+      {
+        "title": "The Heirs to the Kingdoms",
+        "description": "At the beginning of the Fight Phase, at the start of the Declare Heroic Actions step, if either Thorin or Bard would be considered Trapped then the other may declare a Herolc Combat for free. If this Heroic Combat is successful, then Thorin or Bard must use the following Move to Join the other's Combat. If this is not possible, then Thorin or Bard must Move as close as possible to the other. A model cannot use this special rule if they are in the same Combat as the other."
+      },
+      {
+        "title": "Royal Bloodlines",
+        "description": "Friendly models treat each of D\u00e1in, Thorin, Brand and Bard as a banner."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "The Serpent Horde": {
+    "additional_rules": [
+      {
+        "description": "A Serpent Horde Army must always contain Sulad\u00e2n, who is always the Army's General."
+      },
+      {
+        "description": "A Serpent Horde Army may have up to 50% of its Warrior models armed with bows rather than the usual 33%."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Scorpion's Sting",
+        "description": "Friendly models with the Poisoned Attacks (bow) special rule exchange it for Poisoned Attacks on all of their weapons."
+      },
+      {
+        "title": "Sulad\u00e2n's Bodyguard",
+        "description": "So long as Sulad\u00e2n has Will Points remaining, friendly Elite models gain the Sworn Protector (Sulad\u00e2n) special rule."
+      },
+      {
+        "title": "Lethal Toxins",
+        "description": "Once per game, at the start of any Fight Phase, Sulad\u00e2n can use this special rule so long as he is alive and on the battlefield. If he does, then friendly Harad models gain the Bane of Kings special rule until the End Phase of the turn. This is treated as an Active ability belonging to Sulad\u00e2n."
+      }
+    ],
+    "bow_limit": 0.5,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Poisoned Attacks (bow)",
+      "Sworn Protector (Suladan)",
+      "Bane of Kings"
+    ]
   }
 }

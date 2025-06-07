@@ -35,6 +35,16 @@
       "warning":"The Army of Gothmog must always contain Gothmog, who is always the Army's General."
     }
   ],
+  "Army of the Great Eye":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[army-of-the-great-eye] the-witch-king-of-angmar",
+        "[army-of-the-great-eye] ringwraith"
+      ],
+      "warning":"An Army of the Great Eye must always contain a Ringwraith model as the Army's General."
+    }
+  ],
   "Arnor":[
     {
       "type":"compulsory",
@@ -78,6 +88,36 @@
         "[barad-dur] the-dark-lord-sauron"
       ],
       "warning":"A Barad-dur Army must always contain Sauron, who is always the Army's General."
+    }
+  ],
+  "Battle of Bywater":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-bywater] meriadoc-brandybuck-captain-of-the-shire"
+      ],
+      "warning":"A Battle of Bywater Army must include Merry, who is always the Army's General."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-bywater] peregrin-took-captain-of-the-shire"
+      ],
+      "warning":"A Battle of Bywater Army must include Pippin."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-bywater] frodo-of-the-nine-fingers"
+      ],
+      "warning":"A Battle of Bywater Army must include Frodo."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-bywater] samwise-the-brave"
+      ],
+      "warning":"A Battle of Bywater Army must include Sam."
     }
   ],
   "Battle of Fornost":[
@@ -155,6 +195,30 @@
         "[corsair-fleet] corsair-captain-general"
       ],
       "warning":"A Corsair Fleets Army must always contain a Corsair Captain, who is always the Army's General."
+    }
+  ],
+  "Defenders of Erebor":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[defenders-of-erebor] dain-ironfoot-king-under-the-mountain",
+        "[defenders-of-erebor] thorin-iii-stonehelm",
+        "[defenders-of-erebor] dwalin-the-dwarf-champion-of-erebor",
+        "[defenders-of-erebor] bifur-the-dwarf-champion-of-erebor",
+        "[defenders-of-erebor] bofur-the-dwarf-champion-of-erebor",
+        "[defenders-of-erebor] nori-the-dwarf-champion-of-erebor",
+        "[defenders-of-erebor] dori-the-dwarf-champion-of-erebor",
+        "[defenders-of-erebor] gloin-the-dwarf-champion-of-erebor"
+      ],
+      "warning":"A Defenders of Erebor Army must always include at least one Unique Erebor Hero."
+    },
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[defenders-of-erebor] brand-king-of-dale",
+        "[defenders-of-erebor] bard-ii-prince-of-dale"
+      ],
+      "warning":"A Defenders of Erebor Army must always include at least one Unique Dale Hero."
     }
   ],
   "Defenders of Helm's Deep":[
@@ -410,6 +474,15 @@
       "warning":"A Road to Rivendell Army must include Frodo."
     }
   ],
+  "Sharkey's Rogues":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[sharkey's-rogues] sharkey-&-worm"
+      ],
+      "warning":"A Sharkey's Rogues Army must always contain Sharkey, who is always the Army's General."
+    }
+  ],
   "Survivors of Lake-town":[
     {
       "type":"compulsory",
@@ -498,6 +571,15 @@
       "warning":"A Last Alliance Army must include at least one Unique Rivendell Hero."
     }
   ],
+  "The Serpent Horde":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-serpent-horde] suladan-the-serpent-lord"
+      ],
+      "warning":"A Serpent Horde Army must always contain Sulad\u00e2n, who is always the Army's General."
+    }
+  ],
   "The Three Trolls":[
     {
       "type":"compulsory",
@@ -537,6 +619,15 @@
         "[ugluk's-scouts] ugluk"
       ],
       "warning":"An Ugluk's Scouts Army must always contain Ugluk, who is always the Army's General."
+    }
+  ],
+  "Umbar":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[umbar] hasharin"
+      ],
+      "warning":"An Umbar Army must always contain at least one H\u00e2sharin."
     }
   ],
   "Wolf Pack of Angmar":[
@@ -637,6 +728,20 @@
         "[realms-of-men] king-of-men-dale"
       ],
       "warning":"A Windlance may only be included if your army also contains a King of Men (Dale)"
+    }
+  ],
+  "[sharkey's-rogues] ruffian-cpt":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[sharkey's-rogues] sharkey-&-worm",
+        "[sharkey's-rogues] sid-briarthorn",
+        "[sharkey's-rogues] rowan-thistlewood",
+        "[sharkey's-rogues] bill-ferny",
+        "[sharkey's-rogues] ted-sandyman",
+        "[sharkey's-rogues] lotho-sackville-baggins"
+      ],
+      "warning":"A Ruffian may only lead a warband of other Ruffians if all other Heroes are already in your army."
     }
   ],
   "[the-fiefdoms] axeman-of-lossarnach":[

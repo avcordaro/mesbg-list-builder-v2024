@@ -728,6 +728,281 @@
       }
     ]
   },
+  "[army-of-erebor] dain-ironfoot-king-under-the-mountain": {
+    "model_id": "[army-of-erebor] dain-ironfoot-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dain Ironfoot, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[army-of-erebor] dwalin-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] dwalin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-erebor] thorin-iii-stonehelm": {
+    "model_id": "[army-of-erebor] thorin-iii-stonehelm",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin III Stonehelm",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-erebor] dwarf-king": {
+    "model_id": "[army-of-erebor] dwarf-king",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf King",
+    "unit_type": "Hero of Valour",
+    "base_points": 85,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[army-of-erebor] gimli": {
+    "model_id": "[army-of-erebor] gimli",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "The Free Peoples",
+    "name": "Gimli",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] gloin-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] gloin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] iron-hills-captain": {
+    "model_id": "[army-of-erebor] iron-hills-captain",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1085",
+        "name": "Exchange shield and spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[army-of-erebor] dori-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] dori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] nori-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] nori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] bifur-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] bifur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] bofur-the-dwarf-champion-of-erebor": {
+    "model_id": "[army-of-erebor] bofur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-erebor] iron-hills-goat-rider": {
+    "model_id": "[army-of-erebor] iron-hills-goat-rider",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Goat Rider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1091",
+        "name": "Exchange war spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[army-of-erebor] iron-hills-warrior": {
+    "model_id": "[army-of-erebor] iron-hills-warrior",
+    "army_type": "Good",
+    "army_list": "Army of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1086",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1087",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1088",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT1089",
+        "name": "Crossbow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1090",
+        "name": "Mattock",
+        "points": 1
+      }
+    ]
+  },
   "[army-of-gothmog] gothmog": {
     "model_id": "[army-of-gothmog] gothmog",
     "army_type": "Evil",
@@ -1635,6 +1910,686 @@
         "id": "OPT0717",
         "name": "Spear",
         "points": 1
+      }
+    ]
+  },
+  "[army-of-the-great-eye] the-witch-king-of-angmar": {
+    "model_id": "[army-of-the-great-eye] the-witch-king-of-angmar",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "The Witch-king of Angmar",
+    "unit_type": "Hero of Legend",
+    "base_points": 0,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:18:3:1"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT1003",
+        "name": "3A / 3M / 18W / 3F",
+        "points": 150,
+        "type": "ringwraith_amwf",
+        "included": true,
+        "quantity": 1
+      },
+      {
+        "id": "OPT1004",
+        "name": "Armoured Fell Beast",
+        "points": 70,
+        "type": "mount",
+        "mount_name": "Armoured Fell Beast"
+      },
+      {
+        "id": "OPT1005",
+        "name": "Fell Beast",
+        "points": 50,
+        "type": "mount",
+        "mount_name": "Fell Beast"
+      },
+      {
+        "id": "OPT1006",
+        "name": "Crown of Morgul",
+        "points": 25
+      },
+      {
+        "id": "OPT1007",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT1008",
+        "name": "Morgul Blade",
+        "points": 10
+      },
+      {
+        "id": "OPT1009",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[army-of-the-great-eye] gothmog": {
+    "model_id": "[army-of-the-great-eye] gothmog",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Gothmog",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1015",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Warg"
+      },
+      {
+        "id": "OPT1016",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mouth-of-sauron": {
+    "model_id": "[army-of-the-great-eye] mouth-of-sauron",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mouth of Sauron",
+    "unit_type": "Hero of Valour",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:4:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1017",
+        "name": "Armoured horse",
+        "points": 15,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[army-of-the-great-eye] ringwraith": {
+    "model_id": "[army-of-the-great-eye] ringwraith",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Ringwraith",
+    "unit_type": "Hero of Valour",
+    "base_points": 0,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:14:2:1"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1010",
+        "name": "2A / 2M / 14W / 2F",
+        "points": 120,
+        "type": "ringwraith_amwf",
+        "included": true,
+        "quantity": 1
+      },
+      {
+        "id": "OPT1011",
+        "name": "Armoured Fell Beast",
+        "points": 70,
+        "type": "mount",
+        "mount_name": "Armoured Fell Beast"
+      },
+      {
+        "id": "OPT1012",
+        "name": "Fell Beast",
+        "points": 50,
+        "type": "mount",
+        "mount_name": "Fell Beast"
+      },
+      {
+        "id": "OPT1013",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT1014",
+        "name": "Morgul Blade",
+        "points": 10
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-troll-chieftain": {
+    "model_id": "[army-of-the-great-eye] mordor-troll-chieftain",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Troll Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 150,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:4"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] shagrat": {
+    "model_id": "[army-of-the-great-eye] shagrat",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Shagrat",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] black-numenorean-marshal": {
+    "model_id": "[army-of-the-great-eye] black-numenorean-marshal",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Black Numenorean Marshal",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1021",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT1022",
+        "name": "Lance",
+        "points": 5
+      }
+    ]
+  },
+  "[army-of-the-great-eye] guritz": {
+    "model_id": "[army-of-the-great-eye] guritz",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Guritz",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] gorbag": {
+    "model_id": "[army-of-the-great-eye] gorbag",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Gorbag",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] gothmog's-enforcer": {
+    "model_id": "[army-of-the-great-eye] gothmog's-enforcer",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Gothmog's Enforcer",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] morannon-orc-captain": {
+    "model_id": "[army-of-the-great-eye] morannon-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Morannon Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1018",
+        "name": "Shield",
+        "points": 5
+      },
+      {
+        "id": "OPT1019",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-uruk-hai-captain": {
+    "model_id": "[army-of-the-great-eye] mordor-uruk-hai-captain",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Uruk-Hai Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1020",
+        "name": "Two-handed weapon",
+        "points": 5
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-orc-captain": {
+    "model_id": "[army-of-the-great-eye] mordor-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] mordor-orc-taskmaster": {
+    "model_id": "[army-of-the-great-eye] mordor-orc-taskmaster",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Taskmaster",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-the-great-eye] shelob": {
+    "model_id": "[army-of-the-great-eye] shelob",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Shelob",
+    "unit_type": "Independent Hero",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:6:0:6"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-the-great-eye] mordor-orc-drummer": {
+    "model_id": "[army-of-the-great-eye] mordor-orc-drummer",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Drummer",
+    "unit_type": "Independent Hero",
+    "base_points": 30,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-the-great-eye] mordor-troll": {
+    "model_id": "[army-of-the-great-eye] mordor-troll",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Troll",
+    "unit_type": "Warrior",
+    "base_points": 90,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1037",
+        "name": "War drum (Mordor)",
+        "points": 25
+      }
+    ]
+  },
+  "[army-of-the-great-eye] black-numenorean-knight": {
+    "model_id": "[army-of-the-great-eye] black-numenorean-knight",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Black Numenorean Knight",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1038",
+        "name": "Exchange lance for banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1039",
+        "name": "Exchange lance for war horn",
+        "points": 25
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-warg-rider": {
+    "model_id": "[army-of-the-great-eye] mordor-warg-rider",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1032",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1033",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1034",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1035",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[army-of-the-great-eye] black-numenorean-warrior": {
+    "model_id": "[army-of-the-great-eye] black-numenorean-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Black Numenorean Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-the-great-eye] morannon-orc-warrior": {
+    "model_id": "[army-of-the-great-eye] morannon-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Morannon Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1023",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1024",
+        "name": "Shield and spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1025",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1026",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-uruk-hai": {
+    "model_id": "[army-of-the-great-eye] mordor-uruk-hai",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Uruk-Hai",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1036",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-orc-warrior": {
+    "model_id": "[army-of-the-great-eye] mordor-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1027",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1028",
+        "name": "Orc Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1029",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1030",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1031",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-war-catapult": {
+    "model_id": "[army-of-the-great-eye] mordor-war-catapult",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor War Catapult",
+    "unit_type": "Siege Engine",
+    "base_points": 150,
+    "siege_crew": 3,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Mordor War Catapult - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1040",
+        "name": "Severed Heads",
+        "points": 20
+      },
+      {
+        "id": "OPT1041",
+        "name": "Flaming Ammunition",
+        "points": 10
+      }
+    ]
+  },
+  "[army-of-the-great-eye] mordor-siege-bow": {
+    "model_id": "[army-of-the-great-eye] mordor-siege-bow",
+    "army_type": "Evil",
+    "army_list": "Army of the Great Eye",
+    "profile_origin": "Mordor",
+    "name": "Mordor Siege Bow",
+    "unit_type": "Siege Engine",
+    "base_points": 50,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Mordor Siege Bow - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1042",
+        "name": "Flaming Ammunition",
+        "points": 10
       }
     ]
   },
@@ -3119,6 +4074,420 @@
       }
     ]
   },
+  "[battle-of-bywater] meriadoc-brandybuck-captain-of-the-shire": {
+    "model_id": "[battle-of-bywater] meriadoc-brandybuck-captain-of-the-shire",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Meriadoc Brandybuck, Captain of the Shire",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0995",
+        "name": "Elven cloak",
+        "points": 5
+      },
+      {
+        "id": "OPT0996",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[battle-of-bywater] peregrin-took-captain-of-the-shire": {
+    "model_id": "[battle-of-bywater] peregrin-took-captain-of-the-shire",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Peregrin Took, Captain of the Shire",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT0997",
+        "name": "Elven cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[battle-of-bywater] frodo-of-the-nine-fingers": {
+    "model_id": "[battle-of-bywater] frodo-of-the-nine-fingers",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Frodo of the Nine Fingers",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0998",
+        "name": "Elven Cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[battle-of-bywater] samwise-the-brave": {
+    "model_id": "[battle-of-bywater] samwise-the-brave",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Samwise the Brave",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT0999",
+        "name": "Elven Cloak",
+        "points": 5
+      }
+    ]
+  },
+  "[battle-of-bywater] farmer-maggot": {
+    "model_id": "[battle-of-bywater] farmer-maggot",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Farmer Maggot",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 3,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] baldo-tulpenny": {
+    "model_id": "[battle-of-bywater] baldo-tulpenny",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Baldo Tulpenny",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] holfoot-bracegirdle-shirriff-leader": {
+    "model_id": "[battle-of-bywater] holfoot-bracegirdle-shirriff-leader",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Holfoot Bracegirdle, Shirriff-Leader",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] will-whitfoot-mayor-of-michel-delving": {
+    "model_id": "[battle-of-bywater] will-whitfoot-mayor-of-michel-delving",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Will Whitfoot, Mayor of Michel Delving",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] farmer-tolman-cotton": {
+    "model_id": "[battle-of-bywater] farmer-tolman-cotton",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Farmer Tolman Cotton",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] hamfast-'gaffer'-gamgee": {
+    "model_id": "[battle-of-bywater] hamfast-'gaffer'-gamgee",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Hamfast 'Gaffer' Gamgee",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] paladin-took-thain-of-the-shire": {
+    "model_id": "[battle-of-bywater] paladin-took-thain-of-the-shire",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Paladin Took, Thain of the Shire",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] robin-smallburrow-hobbit-shirriff": {
+    "model_id": "[battle-of-bywater] robin-smallburrow-hobbit-shirriff",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Robin Smallburrow, Hobbit Shirriff",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 25,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[battle-of-bywater] fredegar-'fatty'-bolger": {
+    "model_id": "[battle-of-bywater] fredegar-'fatty'-bolger",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Fredegar 'Fatty' Bolger",
+    "unit_type": "Minor Hero",
+    "base_points": 10,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:1:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[battle-of-bywater] folco-boffin": {
+    "model_id": "[battle-of-bywater] folco-boffin",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Folco Boffin",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:3:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-bywater] lobelia-sackville-baggins": {
+    "model_id": "[battle-of-bywater] lobelia-sackville-baggins",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Lobelia Sackville-Baggins",
+    "unit_type": "Independent Hero",
+    "base_points": 20,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:4:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-bywater] rosie-cotton": {
+    "model_id": "[battle-of-bywater] rosie-cotton",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Rosie Cotton",
+    "unit_type": "Independent Hero",
+    "base_points": 20,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:1:2:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-bywater] hobbit-archer": {
+    "model_id": "[battle-of-bywater] hobbit-archer",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Archer",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1001",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1002",
+        "name": "Tookish Hunters",
+        "points": 1,
+        "type": "special_warband_upgrade",
+        "dependencies": [
+          {
+            "type": "requires-one",
+            "condition": "in-warband",
+            "dependencies": [
+              "[battle-of-bywater] peregrin-took-captain-of-the-shire",
+              "[battle-of-bywater] paladin-took-thain-of-the-shire"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "[battle-of-bywater] hobbit-shirriff": {
+    "model_id": "[battle-of-bywater] hobbit-shirriff",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Shirriff",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-bywater] hobbit-militia": {
+    "model_id": "[battle-of-bywater] hobbit-militia",
+    "army_type": "Good",
+    "army_list": "Battle of Bywater",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Militia",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1000",
+        "name": "Battlin' Brandybucks",
+        "points": 1,
+        "type": "special_warband_upgrade",
+        "dependencies": [
+          {
+            "type": "requires-all",
+            "condition": "in-warband",
+            "dependencies": [
+              "[battle-of-bywater] meriadoc-brandybuck-captain-of-the-shire"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "[battle-of-fornost] glorfindel-lord-of-the-west": {
     "model_id": "[battle-of-fornost] glorfindel-lord-of-the-west",
     "army_type": "Good",
@@ -4410,6 +5779,356 @@
     ],
     "warband_size": 6,
     "options": []
+  },
+  "[defenders-of-erebor] dain-ironfoot-king-under-the-mountain": {
+    "model_id": "[defenders-of-erebor] dain-ironfoot-king-under-the-mountain",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dain Ironfoot, King Under the Mountain",
+    "unit_type": "Hero of Legend",
+    "base_points": 130,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[defenders-of-erebor] brand-king-of-dale": {
+    "model_id": "[defenders-of-erebor] brand-king-of-dale",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Brand, King of Dale",
+    "unit_type": "Hero of Legend",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[defenders-of-erebor] dwalin-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] dwalin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwalin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[defenders-of-erebor] thorin-iii-stonehelm": {
+    "model_id": "[defenders-of-erebor] thorin-iii-stonehelm",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Thorin III Stonehelm",
+    "unit_type": "Hero of Valour",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[defenders-of-erebor] bard-ii-prince-of-dale": {
+    "model_id": "[defenders-of-erebor] bard-ii-prince-of-dale",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Bard II, Prince of Dale",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[defenders-of-erebor] gloin-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] gloin-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Gloin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] iron-hills-captain": {
+    "model_id": "[defenders-of-erebor] iron-hills-captain",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1105",
+        "name": "Exchange shield and spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[defenders-of-erebor] dori-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] dori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] nori-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] nori-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Nori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] bifur-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] bifur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bifur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] bofur-the-dwarf-champion-of-erebor": {
+    "model_id": "[defenders-of-erebor] bofur-the-dwarf-champion-of-erebor",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Bofur the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] captain-of-dale": {
+    "model_id": "[defenders-of-erebor] captain-of-dale",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Captain of Dale",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-erebor] iron-hills-goat-rider": {
+    "model_id": "[defenders-of-erebor] iron-hills-goat-rider",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Goat Rider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1111",
+        "name": "Exchange war spear for Mattock",
+        "points": 0
+      }
+    ]
+  },
+  "[defenders-of-erebor] knight-of-dale": {
+    "model_id": "[defenders-of-erebor] knight-of-dale",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Knight of Dale",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[defenders-of-erebor] iron-hills-warrior": {
+    "model_id": "[defenders-of-erebor] iron-hills-warrior",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Hills Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1106",
+        "name": "Banner and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1107",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1108",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT1109",
+        "name": "Crossbow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1110",
+        "name": "Mattock",
+        "points": 1
+      }
+    ]
+  },
+  "[defenders-of-erebor] warrior-of-dale": {
+    "model_id": "[defenders-of-erebor] warrior-of-dale",
+    "army_type": "Good",
+    "army_list": "Defenders of Erebor",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Warrior of Dale",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1112",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1113",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1114",
+        "name": "Esgaroth bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1115",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT1116",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
   },
   "[defenders-of-helm's-deep] theoden": {
     "model_id": "[defenders-of-helm's-deep] theoden",
@@ -7326,6 +9045,661 @@
       }
     ]
   },
+  "[grand-army-of-the-south] mumak-war-leader": {
+    "model_id": "[grand-army-of-the-south] mumak-war-leader",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Mumak War Leader",
+    "unit_type": "Hero of Legend",
+    "base_points": 400,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Mumak War Leader",
+        "3:2:2:3"
+      ],
+      [
+        "Royal War Mumak",
+        "0:0:0:10"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[grand-army-of-the-south] suladan-the-serpent-lord": {
+    "model_id": "[grand-army-of-the-south] suladan-the-serpent-lord",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Suladan, The Serpent Lord",
+    "unit_type": "Hero of Legend",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT1053",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] dalamyr-fleetmaster-of-umbar": {
+    "model_id": "[grand-army-of-the-south] dalamyr-fleetmaster-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Dalamyr, Fleetmaster of Umbar",
+    "unit_type": "Hero of Legend",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:3:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[grand-army-of-the-south] amdur-lord-of-blades": {
+    "model_id": "[grand-army-of-the-south] amdur-lord-of-blades",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Amdur, Lord of Blades",
+    "unit_type": "Hero of Valour",
+    "base_points": 135,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1054",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] delgamar-gatemaster-of-umbar": {
+    "model_id": "[grand-army-of-the-south] delgamar-gatemaster-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Delgamar, Gatemaster of Umbar",
+    "unit_type": "Hero of Valour",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[grand-army-of-the-south] war-mumak-of-harad": {
+    "model_id": "[grand-army-of-the-south] war-mumak-of-harad",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "War Mumak of Harad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 250,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Haradrim Commander",
+        "2:1:1:2"
+      ],
+      [
+        "War Mumak of Harad",
+        "0:0:0:10"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1069",
+        "name": "Gnarled Hide",
+        "points": 25
+      },
+      {
+        "id": "OPT1070",
+        "name": "Mahud Beastmaster Chieftain",
+        "points": 25
+      },
+      {
+        "id": "OPT1071",
+        "name": "Rocks",
+        "points": 20
+      },
+      {
+        "id": "OPT1072",
+        "name": "Sigils of Defiance",
+        "points": 20
+      },
+      {
+        "id": "OPT1073",
+        "name": "Tusk Weapons",
+        "points": 20
+      },
+      {
+        "id": "OPT1074",
+        "name": "Foul Temperament",
+        "points": 15
+      },
+      {
+        "id": "OPT1075",
+        "name": "Rappelling Lines",
+        "points": 10
+      }
+    ]
+  },
+  "[grand-army-of-the-south] easterling-kataphrakt-captain": {
+    "model_id": "[grand-army-of-the-south] easterling-kataphrakt-captain",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 90,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[grand-army-of-the-south] hasharin": {
+    "model_id": "[grand-army-of-the-south] hasharin",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Hasharin",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[grand-army-of-the-south] raza-fang-of-the-serpent": {
+    "model_id": "[grand-army-of-the-south] raza-fang-of-the-serpent",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Raza, Fang of the Serpent",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[grand-army-of-the-south] easterling-captain": {
+    "model_id": "[grand-army-of-the-south] easterling-captain",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Mordor",
+    "name": "Easterling Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[grand-army-of-the-south] easterling-war-priest": {
+    "model_id": "[grand-army-of-the-south] easterling-war-priest",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling War Priest",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1055",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] corsair-captain": {
+    "model_id": "[grand-army-of-the-south] corsair-captain",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1076",
+        "name": "Exchange two-handed weapon for crossbow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] corsair-bo'sun": {
+    "model_id": "[grand-army-of-the-south] corsair-bo'sun",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair Bo'sun",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1077",
+        "name": "Exchange spear for crossbow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] haradrim-chieftain": {
+    "model_id": "[grand-army-of-the-south] haradrim-chieftain",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1133",
+        "name": "Bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] haradrim-taskmaster": {
+    "model_id": "[grand-army-of-the-south] haradrim-taskmaster",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Taskmaster",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[grand-army-of-the-south] easterling-dragon-knight": {
+    "model_id": "[grand-army-of-the-south] easterling-dragon-knight",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Dragon Knight",
+    "unit_type": "Minor Hero",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:0:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1056",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] war-drake-of-rhun": {
+    "model_id": "[grand-army-of-the-south] war-drake-of-rhun",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "War Drake of Rhun",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[grand-army-of-the-south] easterling-kataphrakt": {
+    "model_id": "[grand-army-of-the-south] easterling-kataphrakt",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Easterling Kataphrakt",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1061",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1062",
+        "name": "Exchange shield for war drum",
+        "points": 25
+      }
+    ]
+  },
+  "[grand-army-of-the-south] serpent-rider": {
+    "model_id": "[grand-army-of-the-south] serpent-rider",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Serpent Rider",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[grand-army-of-the-south] dragon-cult-acolyte": {
+    "model_id": "[grand-army-of-the-south] dragon-cult-acolyte",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Dragon Cult Acolyte",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[grand-army-of-the-south] haradrim-raider": {
+    "model_id": "[grand-army-of-the-south] haradrim-raider",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Raider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1057",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1058",
+        "name": "Bow & war spear",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1059",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1060",
+        "name": "War spear",
+        "points": 1
+      }
+    ]
+  },
+  "[grand-army-of-the-south] black-dragon-warrior": {
+    "model_id": "[grand-army-of-the-south] black-dragon-warrior",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Black Dragon Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1063",
+        "name": "Exchange shield for banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1064",
+        "name": "Easterling Halberd",
+        "points": 1
+      }
+    ]
+  },
+  "[grand-army-of-the-south] corsair-crossbowman": {
+    "model_id": "[grand-army-of-the-south] corsair-crossbowman",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair Crossbowman",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[grand-army-of-the-south] corsair-of-umbar": {
+    "model_id": "[grand-army-of-the-south] corsair-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair of Umbar",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1078",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1079",
+        "name": "Light shield and throwing weapons",
+        "points": 1,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1080",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[grand-army-of-the-south] easterling-warrior": {
+    "model_id": "[grand-army-of-the-south] easterling-warrior",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Mordor",
+    "name": "Easterling Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1065",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1066",
+        "name": "Easterling Halberd and shield",
+        "points": 2
+      },
+      {
+        "id": "OPT1067",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1068",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
+  },
+  "[grand-army-of-the-south] serpent-guard": {
+    "model_id": "[grand-army-of-the-south] serpent-guard",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Serpent Guard",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[grand-army-of-the-south] haradrim-warrior": {
+    "model_id": "[grand-army-of-the-south] haradrim-warrior",
+    "army_type": "Evil",
+    "army_list": "Grand Army of the South",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Warrior",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1081",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1082",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1083",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1084",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[halls-of-thranduil] thranduil-king-of-the-woodland-realm": {
     "model_id": "[halls-of-thranduil] thranduil-king-of-the-woodland-realm",
     "army_type": "Good",
@@ -8315,6 +10689,217 @@
         "points": 1
       }
     ]
+  },
+  "[kingdom-of-khazad-dum] durin-king-of-khazad-dum": {
+    "model_id": "[kingdom-of-khazad-dum] durin-king-of-khazad-dum",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Durin, King of Khazad-Dum",
+    "unit_type": "Hero of Legend",
+    "base_points": 170,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] dwarf-king": {
+    "model_id": "[kingdom-of-khazad-dum] dwarf-king",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf King",
+    "unit_type": "Hero of Valour",
+    "base_points": 85,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] mardin-the-king's-ward": {
+    "model_id": "[kingdom-of-khazad-dum] mardin-the-king's-ward",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Mardin, The King's Ward",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] dwarf-captain": {
+    "model_id": "[kingdom-of-khazad-dum] dwarf-captain",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] vault-warden-team": {
+    "model_id": "[kingdom-of-khazad-dum] vault-warden-team",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Vault Warden Team",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] iron-guard": {
+    "model_id": "[kingdom-of-khazad-dum] iron-guard",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Guard",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] khazad-guard": {
+    "model_id": "[kingdom-of-khazad-dum] khazad-guard",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Khazad Guard",
+    "unit_type": "Warrior",
+    "base_points": 12,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[kingdom-of-khazad-dum] dwarf-ranger": {
+    "model_id": "[kingdom-of-khazad-dum] dwarf-ranger",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Ranger",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0992",
+        "name": "Dwarf longbow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0993",
+        "name": "Throwing weapons",
+        "points": 1,
+        "type": "throw"
+      },
+      {
+        "id": "OPT0994",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[kingdom-of-khazad-dum] dwarf-warrior": {
+    "model_id": "[kingdom-of-khazad-dum] dwarf-warrior",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT0987",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT0988",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT0989",
+        "name": "Dwarf bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT0990",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT0991",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[kingdom-of-khazad-dum] dwarven-ballista": {
+    "model_id": "[kingdom-of-khazad-dum] dwarven-ballista",
+    "army_type": "Good",
+    "army_list": "Kingdom of Khazad-Dum",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarven Ballista",
+    "unit_type": "Siege Engine",
+    "base_points": 70,
+    "siege_crew": 1,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Dwarven Ballista - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
   },
   "[kingdom-of-rohan] theoden": {
     "model_id": "[kingdom-of-rohan] theoden",
@@ -10575,6 +13160,297 @@
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      }
+    ]
+  },
+  "[moria] dragon": {
+    "model_id": "[moria] dragon",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Valour",
+    "base_points": 200,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1092",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT1093",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT1094",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT1095",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT1096",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
+  "[moria] durburz-goblin-king-of-moria": {
+    "model_id": "[moria] durburz-goblin-king-of-moria",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Durburz, Goblin-King of Moria",
+    "unit_type": "Hero of Valour",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[moria] druzhag-the-beastcaller": {
+    "model_id": "[moria] druzhag-the-beastcaller",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Druzhag the Beastcaller",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:5:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[moria] moria-goblin-captain": {
+    "model_id": "[moria] moria-goblin-captain",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1097",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[moria] cave-drake": {
+    "model_id": "[moria] cave-drake",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Cave Drake",
+    "unit_type": "Minor Hero",
+    "base_points": 150,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:6"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[moria] moria-goblin-shaman": {
+    "model_id": "[moria] moria-goblin-shaman",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[moria] the-watcher-in-the-water": {
+    "model_id": "[moria] the-watcher-in-the-water",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "The Watcher in the Water",
+    "unit_type": "Independent Hero",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:6"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] cave-troll": {
+    "model_id": "[moria] cave-troll",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Cave Troll",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1101",
+        "name": "Hand-and-a-half weapon",
+        "points": 5
+      },
+      {
+        "id": "OPT1102",
+        "name": "Troll Spear",
+        "points": 5
+      }
+    ]
+  },
+  "[moria] moria-goblin-drum": {
+    "model_id": "[moria] moria-goblin-drum",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Drum",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] bat-swarm": {
+    "model_id": "[moria] bat-swarm",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bat Swarm",
+    "unit_type": "Warrior",
+    "base_points": 35,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] mirkwood-hunting-spider": {
+    "model_id": "[moria] mirkwood-hunting-spider",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] fell-warg": {
+    "model_id": "[moria] fell-warg",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] moria-goblin-prowler": {
+    "model_id": "[moria] moria-goblin-prowler",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Prowler",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[moria] moria-goblin-warrior": {
+    "model_id": "[moria] moria-goblin-warrior",
+    "army_type": "Evil",
+    "army_list": "Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Warrior",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1098",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1099",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1100",
+        "name": "Spear",
+        "points": 1
       }
     ]
   },
@@ -14679,6 +17555,178 @@
       }
     ]
   },
+  "[sharkey's-rogues] sharkey-&-worm": {
+    "model_id": "[sharkey's-rogues] sharkey-&-worm",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Sharkey & Worm",
+    "unit_type": "Hero of Legend",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 1,
+    "MWFW": [
+      [
+        "Sharkey",
+        "2:4:1:2"
+      ],
+      [
+        "Worm",
+        "0:0:0:1"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[sharkey's-rogues] sid-briarthorn": {
+    "model_id": "[sharkey's-rogues] sid-briarthorn",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Sid Briarthorn",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[sharkey's-rogues] rowan-thistlewood": {
+    "model_id": "[sharkey's-rogues] rowan-thistlewood",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Rowan Thistlewood",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[sharkey's-rogues] bill-ferny": {
+    "model_id": "[sharkey's-rogues] bill-ferny",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Bill Ferny",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[sharkey's-rogues] lotho-sackville-baggins": {
+    "model_id": "[sharkey's-rogues] lotho-sackville-baggins",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "The Free Peoples",
+    "name": "Lotho Sackville-Baggins",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:1"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[sharkey's-rogues] ted-sandyman": {
+    "model_id": "[sharkey's-rogues] ted-sandyman",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Ted Sandyman",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[sharkey's-rogues] ruffian-cpt": {
+    "model_id": "[sharkey's-rogues] ruffian-cpt",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Ruffian",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 12,
+    "options": []
+  },
+  "[sharkey's-rogues] ruffian": {
+    "model_id": "[sharkey's-rogues] ruffian",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "Isengard",
+    "name": "Ruffian",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1103",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1104",
+        "name": "Whip",
+        "points": 1
+      }
+    ]
+  },
+  "[sharkey's-rogues] hobbit-militia": {
+    "model_id": "[sharkey's-rogues] hobbit-militia",
+    "army_type": "Evil",
+    "army_list": "Sharkey's Rogues",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Militia",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
   "[survivors-of-lake-town] bard-the-bowman": {
     "model_id": "[survivors-of-lake-town] bard-the-bowman",
     "army_type": "Good",
@@ -17734,6 +20782,248 @@
       }
     ]
   },
+  "[the-serpent-horde] suladan-the-serpent-lord": {
+    "model_id": "[the-serpent-horde] suladan-the-serpent-lord",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Suladan, The Serpent Lord",
+    "unit_type": "Hero of Legend",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT1117",
+        "name": "Armoured horse",
+        "points": 25,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
+  "[the-serpent-horde] war-mumak-of-harad": {
+    "model_id": "[the-serpent-horde] war-mumak-of-harad",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "War Mumak of Harad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 250,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Haradrim Commander",
+        "2:1:1:2"
+      ],
+      [
+        "War Mumak of Harad",
+        "0:0:0:10"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1126",
+        "name": "Gnarled Hide",
+        "points": 25
+      },
+      {
+        "id": "OPT1127",
+        "name": "Mahud Beastmaster Chieftain",
+        "points": 25
+      },
+      {
+        "id": "OPT1128",
+        "name": "Rocks",
+        "points": 20
+      },
+      {
+        "id": "OPT1129",
+        "name": "Sigils of Defiance",
+        "points": 20
+      },
+      {
+        "id": "OPT1130",
+        "name": "Tusk Weapons",
+        "points": 20
+      },
+      {
+        "id": "OPT1131",
+        "name": "Foul Temperament",
+        "points": 15
+      },
+      {
+        "id": "OPT1132",
+        "name": "Rappelling Lines",
+        "points": 10
+      }
+    ]
+  },
+  "[the-serpent-horde] raza-fang-of-the-serpent": {
+    "model_id": "[the-serpent-horde] raza-fang-of-the-serpent",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Raza, Fang of the Serpent",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-serpent-horde] haradrim-chieftain": {
+    "model_id": "[the-serpent-horde] haradrim-chieftain",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-serpent-horde] haradrim-taskmaster": {
+    "model_id": "[the-serpent-horde] haradrim-taskmaster",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Taskmaster",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-serpent-horde] serpent-rider": {
+    "model_id": "[the-serpent-horde] serpent-rider",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Serpent Rider",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-serpent-horde] haradrim-raider": {
+    "model_id": "[the-serpent-horde] haradrim-raider",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Raider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1118",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1119",
+        "name": "Bow & war spear",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1120",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1121",
+        "name": "War spear",
+        "points": 1
+      }
+    ]
+  },
+  "[the-serpent-horde] serpent-guard": {
+    "model_id": "[the-serpent-horde] serpent-guard",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Serpent Guard",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-serpent-horde] haradrim-warrior": {
+    "model_id": "[the-serpent-horde] haradrim-warrior",
+    "army_type": "Evil",
+    "army_list": "The Serpent Horde",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Warrior",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1122",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1123",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1124",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1125",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[the-shire] gandalf-the-grey": {
     "model_id": "[the-shire] gandalf-the-grey",
     "army_type": "Good",
@@ -18676,6 +21966,237 @@
       {
         "id": "OPT0335",
         "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[umbar] dalamyr-fleetmaster-of-umbar": {
+    "model_id": "[umbar] dalamyr-fleetmaster-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Dalamyr, Fleetmaster of Umbar",
+    "unit_type": "Hero of Legend",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:3:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[umbar] delgamar-gatemaster-of-umbar": {
+    "model_id": "[umbar] delgamar-gatemaster-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Delgamar, Gatemaster of Umbar",
+    "unit_type": "Hero of Valour",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[umbar] hasharin": {
+    "model_id": "[umbar] hasharin",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Hasharin",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:3:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[umbar] black-numenorean-marshal": {
+    "model_id": "[umbar] black-numenorean-marshal",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Mordor",
+    "name": "Black Numenorean Marshal",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[umbar] corsair-captain": {
+    "model_id": "[umbar] corsair-captain",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1044",
+        "name": "Exchange two-handed weapon for crossbow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
+  "[umbar] corsair-bo'sun": {
+    "model_id": "[umbar] corsair-bo'sun",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair Bo'sun",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1045",
+        "name": "Exchange spear for crossbow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
+  "[umbar] haradrim-chieftain": {
+    "model_id": "[umbar] haradrim-chieftain",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1043",
+        "name": "Bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[umbar] black-numenorean-warrior": {
+    "model_id": "[umbar] black-numenorean-warrior",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Mordor",
+    "name": "Black Numenorean Warrior",
+    "unit_type": "Warrior",
+    "base_points": 10,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[umbar] corsair-of-umbar": {
+    "model_id": "[umbar] corsair-of-umbar",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Corsair of Umbar",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1050",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1051",
+        "name": "Light shield and throwing weapons",
+        "points": 1,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1052",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[umbar] haradrim-warrior": {
+    "model_id": "[umbar] haradrim-warrior",
+    "army_type": "Evil",
+    "army_list": "Umbar",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Warrior",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1046",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1047",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1048",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1049",
+        "name": "Spear",
         "points": 1
       }
     ]

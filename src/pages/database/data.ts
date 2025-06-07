@@ -3,6 +3,7 @@ import { Unit } from "../../types/mesbg-data.types.ts";
 import {
   convertBardsFamilyToSingleRows,
   convertShankAndWrotToSingleRows,
+  convertSharkeyAndWormToSingleRows,
 } from "./utils/special-rows.ts";
 
 export const rows = Object.values(
@@ -22,6 +23,9 @@ export const rows = Object.values(
     }
     if (dataPoint[0].name === "Shank & Wrot") {
       return convertShankAndWrotToSingleRows(dataPoint);
+    }
+    if (dataPoint[0].name === "Sharkey & Worm") {
+      return convertSharkeyAndWormToSingleRows(dataPoint);
     }
     return {
       name: dataPoint[0].name,

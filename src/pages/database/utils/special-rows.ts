@@ -88,3 +88,35 @@ export function convertShankAndWrotToSingleRows(dataPoint: Unit[]) {
     },
   ];
 }
+
+export function convertSharkeyAndWormToSingleRows(dataPoint: Unit[]) {
+  const base = {
+    army_type: dataPoint[0].army_type,
+    profile_origin: dataPoint[0].profile_origin,
+    unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
+    army_list: dataPoint.map((p) => p.army_list),
+    option_mandatory: dataPoint[0].opt_mandatory,
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
+  };
+
+  return [
+    {
+      ...base,
+      name: `Sharkey`,
+      MWFW: [dataPoint.flatMap((p) => p.MWFW)[0]],
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Sharkey"),
+    },
+    {
+      ...base,
+      name: `Worm`,
+      MWFW: [dataPoint.flatMap((p) => p.MWFW)[1]],
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Worm"),
+    },
+  ];
+}
