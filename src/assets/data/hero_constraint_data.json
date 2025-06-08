@@ -778,6 +778,14 @@
     ],
     "extra_profiles": []
   },
+  "[atop-the-walls] beregond-guard-of-the-citadel": {
+    "valid_warband_units": [
+      "[atop-the-walls] peregrin-took",
+      "[atop-the-walls] warrior-of-minas-tirith",
+      "[atop-the-walls] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
   "[atop-the-walls] captain-of-minas-tirith": {
     "valid_warband_units": [
       "[atop-the-walls] peregrin-took",
@@ -796,8 +804,20 @@
       "Peregrin Took"
     ]
   },
+  "[atop-the-walls] gondor-avenger-bolt-thrower": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[atop-the-walls] gondor-battlecry-trebuchet": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[atop-the-walls] hurin-the-tall-warden-of-the-keys": {
+    "valid_warband_units": [
+      "[atop-the-walls] peregrin-took",
+      "[atop-the-walls] warrior-of-minas-tirith",
+      "[atop-the-walls] knight-of-minas-tirith"
+    ],
     "extra_profiles": []
   },
   "[atop-the-walls] irolas": {
@@ -1496,6 +1516,18 @@
     ],
     "extra_profiles": []
   },
+  "[defenders-of-the-pelennor] angbor-the-fearless": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
   "[defenders-of-the-pelennor] aragorn-strider": {
     "valid_warband_units": [
       "[defenders-of-the-pelennor] warrior-of-the-dead",
@@ -1503,17 +1535,72 @@
     ],
     "extra_profiles": []
   },
+  "[defenders-of-the-pelennor] beregond-guard-of-the-citadel": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
   "[defenders-of-the-pelennor] captain-of-minas-tirith": {
     "valid_warband_units": [
       "[defenders-of-the-pelennor] peregrin-took",
       "[defenders-of-the-pelennor] warrior-of-minas-tirith",
-      "[defenders-of-the-pelennor] knight-of-minas-tirith"
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
     ],
     "extra_profiles": []
   },
   "[defenders-of-the-pelennor] captain-of-rohan": {
     "valid_warband_units": [
       "[defenders-of-the-pelennor] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] deorwine-chief-of-the-king's-knights": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] rider-of-rohan",
+      "[defenders-of-the-pelennor] rohan-royal-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] duinhir-lord-of-the-blackroot-vale": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] elfhelm-captain-of-rohan": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] elladan": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] elladan",
+      "[defenders-of-the-pelennor] elrohir"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] elrohir": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] elladan",
+      "[defenders-of-the-pelennor] elrohir"
     ],
     "extra_profiles": []
   },
@@ -1532,6 +1619,18 @@
       "Meriadoc Brandybuck"
     ]
   },
+  "[defenders-of-the-pelennor] forlong-the-fat": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
   "[defenders-of-the-pelennor] gamling": {
     "valid_warband_units": [
       "[defenders-of-the-pelennor] rider-of-rohan",
@@ -1543,7 +1642,11 @@
     "valid_warband_units": [
       "[defenders-of-the-pelennor] peregrin-took",
       "[defenders-of-the-pelennor] warrior-of-minas-tirith",
-      "[defenders-of-the-pelennor] knight-of-minas-tirith"
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
     ],
     "extra_profiles": [
       "Peregrin Took"
@@ -1556,8 +1659,25 @@
     ],
     "extra_profiles": []
   },
+  "[defenders-of-the-pelennor] gondor-avenger-bolt-thrower": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[defenders-of-the-pelennor] gondor-battlecry-trebuchet": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] halbarad": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] ranger-of-the-north"
+    ],
     "extra_profiles": []
   },
   "[defenders-of-the-pelennor] herald-of-the-dead": {
@@ -1567,12 +1687,41 @@
     ],
     "extra_profiles": []
   },
+  "[defenders-of-the-pelennor] hurin-the-tall-warden-of-the-keys": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] ingold-warden-of-the-rammas-echor": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
   "[defenders-of-the-pelennor] irolas": {
     "valid_warband_units": [
       "[defenders-of-the-pelennor] peregrin-took",
       "[defenders-of-the-pelennor] warrior-of-minas-tirith",
       "[defenders-of-the-pelennor] knight-of-minas-tirith",
-      "[defenders-of-the-pelennor] citadel-guard"
+      "[defenders-of-the-pelennor] citadel-guard",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] ranger-of-the-north"
     ],
     "extra_profiles": []
   },
@@ -1591,6 +1740,22 @@
     "extra_profiles": []
   },
   "[defenders-of-the-pelennor] peregrin-took": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] prince-imrahil": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] ranger-of-the-north": {
     "valid_warband_units": [],
     "extra_profiles": []
   },
@@ -1637,7 +1802,8 @@
   },
   "[erebor-&-dale] captain-of-dale": {
     "valid_warband_units": [
-      "[erebor-&-dale] warrior-of-dale"
+      "[erebor-&-dale] warrior-of-dale",
+      "[erebor-&-dale] knight-of-dale"
     ],
     "extra_profiles": []
   },
@@ -1650,7 +1816,8 @@
   },
   "[erebor-&-dale] girion-lord-of-dale": {
     "valid_warband_units": [
-      "[erebor-&-dale] warrior-of-dale"
+      "[erebor-&-dale] warrior-of-dale",
+      "[erebor-&-dale] knight-of-dale"
     ],
     "extra_profiles": []
   },
@@ -1831,13 +1998,15 @@
   },
   "[garrison-of-dale] captain-of-dale": {
     "valid_warband_units": [
-      "[garrison-of-dale] warrior-of-dale"
+      "[garrison-of-dale] warrior-of-dale",
+      "[garrison-of-dale] knight-of-dale"
     ],
     "extra_profiles": []
   },
   "[garrison-of-dale] girion-lord-of-dale": {
     "valid_warband_units": [
-      "[garrison-of-dale] warrior-of-dale"
+      "[garrison-of-dale] warrior-of-dale",
+      "[garrison-of-dale] knight-of-dale"
     ],
     "extra_profiles": [
       "Windlance"
@@ -2067,7 +2236,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": []
   },
@@ -2076,7 +2246,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": []
   },
@@ -2085,7 +2256,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": []
   },
@@ -2094,7 +2266,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": []
   },
@@ -2103,7 +2276,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": []
   },
@@ -2112,7 +2286,8 @@
       "[halls-of-thranduil] mirkwood-elf-warrior",
       "[halls-of-thranduil] mirkwood-elf-knight",
       "[halls-of-thranduil] palace-guard",
-      "[halls-of-thranduil] mirkwood-ranger"
+      "[halls-of-thranduil] mirkwood-ranger",
+      "[halls-of-thranduil] wood-elf-sentinel"
     ],
     "extra_profiles": [
       "Great Elk"
@@ -2348,6 +2523,21 @@
     ],
     "extra_profiles": []
   },
+  "[kingdom-of-rohan] deorwine-chief-of-the-king's-knights": {
+    "valid_warband_units": [
+      "[kingdom-of-rohan] warrior-of-rohan",
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-royal-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-rohan] elfhelm-captain-of-rohan": {
+    "valid_warband_units": [
+      "[kingdom-of-rohan] warrior-of-rohan",
+      "[kingdom-of-rohan] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
   "[kingdom-of-rohan] eomer": {
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
@@ -2490,6 +2680,13 @@
     ],
     "extra_profiles": []
   },
+  "[lindon] glorfindel-lord-of-the-west": {
+    "valid_warband_units": [
+      "[lindon] rivendell-warrior",
+      "[lindon] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
   "[lindon] rivendell-captain": {
     "valid_warband_units": [
       "[lindon] rivendell-warrior",
@@ -2500,35 +2697,70 @@
   "[lothlorien] celeborn-lord-of-lothlorien": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
-      "[lothlorien] lothlorien-warrior"
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
     ],
     "extra_profiles": []
   },
   "[lothlorien] galadhrim-captain": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
-      "[lothlorien] lothlorien-warrior"
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
     ],
     "extra_profiles": []
   },
   "[lothlorien] galadriel-lady-of-lothlorien": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
-      "[lothlorien] lothlorien-warrior"
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
     ],
     "extra_profiles": []
   },
   "[lothlorien] haldir-galadhrim-captain": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
-      "[lothlorien] lothlorien-warrior"
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
     ],
     "extra_profiles": []
   },
   "[lothlorien] lothlorien-captain": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
-      "[lothlorien] lothlorien-warrior"
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[lothlorien] orophin-galadhrim-captain": {
+    "valid_warband_units": [
+      "[lothlorien] galadhrim-warrior",
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[lothlorien] rumil-warden-of-caras-galadhon": {
+    "valid_warband_units": [
+      "[lothlorien] galadhrim-warrior",
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
     ],
     "extra_profiles": []
   },
@@ -2562,7 +2794,18 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
+    ],
+    "extra_profiles": []
+  },
+  "[men-of-the-west] beregond-guard-of-the-citadel": {
+    "valid_warband_units": [
+      "[men-of-the-west] peregrin-took",
+      "[men-of-the-west] warrior-of-minas-tirith",
+      "[men-of-the-west] meriadoc-brandybuck",
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2571,7 +2814,8 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2580,7 +2824,32 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
+    ],
+    "extra_profiles": []
+  },
+  "[men-of-the-west] elladan": {
+    "valid_warband_units": [
+      "[men-of-the-west] peregrin-took",
+      "[men-of-the-west] warrior-of-minas-tirith",
+      "[men-of-the-west] meriadoc-brandybuck",
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] elladan",
+      "[men-of-the-west] elrohir"
+    ],
+    "extra_profiles": []
+  },
+  "[men-of-the-west] elrohir": {
+    "valid_warband_units": [
+      "[men-of-the-west] peregrin-took",
+      "[men-of-the-west] warrior-of-minas-tirith",
+      "[men-of-the-west] meriadoc-brandybuck",
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] elladan",
+      "[men-of-the-west] elrohir"
     ],
     "extra_profiles": []
   },
@@ -2589,7 +2858,8 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2598,7 +2868,8 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": [
       "Peregrin Took"
@@ -2609,7 +2880,8 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2624,7 +2896,8 @@
       "[men-of-the-west] peregrin-took",
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
-      "[men-of-the-west] warrior-of-rohan"
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2634,6 +2907,16 @@
   },
   "[men-of-the-west] peregrin-took": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[men-of-the-west] prince-imrahil": {
+    "valid_warband_units": [
+      "[men-of-the-west] peregrin-took",
+      "[men-of-the-west] warrior-of-minas-tirith",
+      "[men-of-the-west] meriadoc-brandybuck",
+      "[men-of-the-west] warrior-of-rohan",
+      "[men-of-the-west] knight-of-dol-amroth"
+    ],
     "extra_profiles": []
   },
   "[minas-morgul] morannon-orc-captain": {
@@ -2690,6 +2973,13 @@
     ],
     "extra_profiles": []
   },
+  "[minas-tirith] beregond-guard-of-the-citadel": {
+    "valid_warband_units": [
+      "[minas-tirith] warrior-of-minas-tirith",
+      "[minas-tirith] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
   "[minas-tirith] boromir-captain-of-the-white-tower": {
     "valid_warband_units": [
       "[minas-tirith] warrior-of-minas-tirith",
@@ -2719,6 +3009,24 @@
       "[minas-tirith] warrior-of-minas-tirith",
       "[minas-tirith] knight-of-minas-tirith",
       "[minas-tirith] citadel-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[minas-tirith] gondor-avenger-bolt-thrower": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[minas-tirith] hurin-the-tall-warden-of-the-keys": {
+    "valid_warband_units": [
+      "[minas-tirith] warrior-of-minas-tirith",
+      "[minas-tirith] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[minas-tirith] ingold-warden-of-the-rammas-echor": {
+    "valid_warband_units": [
+      "[minas-tirith] warrior-of-minas-tirith",
+      "[minas-tirith] knight-of-minas-tirith"
     ],
     "extra_profiles": []
   },
@@ -3206,6 +3514,19 @@
     ],
     "extra_profiles": []
   },
+  "[riders-of-theoden] deorwine-chief-of-the-king's-knights": {
+    "valid_warband_units": [
+      "[riders-of-theoden] rider-of-rohan",
+      "[riders-of-theoden] rohan-royal-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[riders-of-theoden] elfhelm-captain-of-rohan": {
+    "valid_warband_units": [
+      "[riders-of-theoden] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
   "[riders-of-theoden] eomer": {
     "valid_warband_units": [
       "[riders-of-theoden] rider-of-rohan",
@@ -3488,7 +3809,31 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[rivendell] elladan": {
+    "valid_warband_units": [
+      "[rivendell] bilbo-baggins-ageing-hobbit",
+      "[rivendell] rivendell-warrior",
+      "[rivendell] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[rivendell] elrohir": {
+    "valid_warband_units": [
+      "[rivendell] bilbo-baggins-ageing-hobbit",
+      "[rivendell] rivendell-warrior",
+      "[rivendell] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
   "[rivendell] elrond": {
+    "valid_warband_units": [
+      "[rivendell] bilbo-baggins-ageing-hobbit",
+      "[rivendell] rivendell-warrior",
+      "[rivendell] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[rivendell] glorfindel-lord-of-the-west": {
     "valid_warband_units": [
       "[rivendell] bilbo-baggins-ageing-hobbit",
       "[rivendell] rivendell-warrior",
@@ -4555,7 +4900,16 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": []
   },
@@ -4570,11 +4924,52 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": [
       "Grip, Fang and Wolf"
     ]
+  },
+  "[the-shire] farmer-tolman-cotton": {
+    "valid_warband_units": [
+      "[the-shire] gandalf-the-grey",
+      "[the-shire] bilbo-baggins-ageing-hobbit",
+      "[the-shire] frodo-baggins",
+      "[the-shire] samwise-gamgee",
+      "[the-shire] hamfast-'gaffer'-gamgee",
+      "[the-shire] farmer-maggot",
+      "[the-shire] meriadoc-brandybuck",
+      "[the-shire] peregrin-took",
+      "[the-shire] rosie-cotton",
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[the-shire] folco-boffin": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[the-shire] fredegar-'fatty'-bolger": {
+    "valid_warband_units": [],
+    "extra_profiles": []
   },
   "[the-shire] frodo-baggins": {
     "valid_warband_units": [
@@ -4587,7 +4982,16 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": []
   },
@@ -4602,7 +5006,16 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": []
   },
@@ -4617,7 +5030,16 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": []
   },
@@ -4625,8 +5047,56 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[the-shire] lotho-sackville-baggins": {
+    "valid_warband_units": [
+      "[the-shire] gandalf-the-grey",
+      "[the-shire] bilbo-baggins-ageing-hobbit",
+      "[the-shire] frodo-baggins",
+      "[the-shire] samwise-gamgee",
+      "[the-shire] hamfast-'gaffer'-gamgee",
+      "[the-shire] farmer-maggot",
+      "[the-shire] meriadoc-brandybuck",
+      "[the-shire] peregrin-took",
+      "[the-shire] rosie-cotton",
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
   "[the-shire] meriadoc-brandybuck": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[the-shire] paladin-took-thain-of-the-shire": {
+    "valid_warband_units": [
+      "[the-shire] gandalf-the-grey",
+      "[the-shire] bilbo-baggins-ageing-hobbit",
+      "[the-shire] frodo-baggins",
+      "[the-shire] samwise-gamgee",
+      "[the-shire] hamfast-'gaffer'-gamgee",
+      "[the-shire] farmer-maggot",
+      "[the-shire] meriadoc-brandybuck",
+      "[the-shire] peregrin-took",
+      "[the-shire] rosie-cotton",
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
+    ],
     "extra_profiles": []
   },
   "[the-shire] peregrin-took": {
@@ -4648,7 +5118,40 @@
       "[the-shire] meriadoc-brandybuck",
       "[the-shire] peregrin-took",
       "[the-shire] rosie-cotton",
-      "[the-shire] lobelia-sackville-baggins"
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[the-shire] will-whitfoot-mayor-of-michel-delving": {
+    "valid_warband_units": [
+      "[the-shire] gandalf-the-grey",
+      "[the-shire] bilbo-baggins-ageing-hobbit",
+      "[the-shire] frodo-baggins",
+      "[the-shire] samwise-gamgee",
+      "[the-shire] hamfast-'gaffer'-gamgee",
+      "[the-shire] farmer-maggot",
+      "[the-shire] meriadoc-brandybuck",
+      "[the-shire] peregrin-took",
+      "[the-shire] rosie-cotton",
+      "[the-shire] lobelia-sackville-baggins",
+      "[the-shire] fredegar-'fatty'-bolger",
+      "[the-shire] paladin-took-thain-of-the-shire",
+      "[the-shire] will-whitfoot-mayor-of-michel-delving",
+      "[the-shire] folco-boffin",
+      "[the-shire] farmer-tolman-cotton",
+      "[the-shire] lotho-sackville-baggins",
+      "[the-shire] hobbit-militia",
+      "[the-shire] hobbit-archer",
+      "[the-shire] hobbit-shirriff"
     ],
     "extra_profiles": []
   },

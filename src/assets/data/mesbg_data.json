@@ -3379,6 +3379,52 @@
       }
     ]
   },
+  "[atop-the-walls] hurin-the-tall-warden-of-the-keys": {
+    "model_id": "[atop-the-walls] hurin-the-tall-warden-of-the-keys",
+    "army_type": "Good",
+    "army_list": "Atop the Walls",
+    "profile_origin": "Gondor",
+    "name": "Hurin the Tall, Warden of the Keys",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1143",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[atop-the-walls] beregond-guard-of-the-citadel": {
+    "model_id": "[atop-the-walls] beregond-guard-of-the-citadel",
+    "army_type": "Good",
+    "army_list": "Atop the Walls",
+    "profile_origin": "Gondor",
+    "name": "Beregond, Guard of the Citadel",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[atop-the-walls] irolas": {
     "model_id": "[atop-the-walls] irolas",
     "army_type": "Good",
@@ -3552,6 +3598,31 @@
         "id": "OPT0513",
         "name": "Flaming Ammunition",
         "points": 10
+      }
+    ]
+  },
+  "[atop-the-walls] gondor-avenger-bolt-thrower": {
+    "model_id": "[atop-the-walls] gondor-avenger-bolt-thrower",
+    "army_type": "Good",
+    "army_list": "Atop the Walls",
+    "profile_origin": "Gondor",
+    "name": "Gondor Avenger Bolt Thrower",
+    "unit_type": "Siege Engine",
+    "base_points": 50,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Gondor Avenger Bolt Thrower - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1146",
+        "name": "Swift Reload",
+        "points": 20
       }
     ]
   },
@@ -6783,6 +6854,33 @@
       }
     ]
   },
+  "[defenders-of-the-pelennor] prince-imrahil": {
+    "model_id": "[defenders-of-the-pelennor] prince-imrahil",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Prince Imrahil",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT1148",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
   "[defenders-of-the-pelennor] theoden": {
     "model_id": "[defenders-of-the-pelennor] theoden",
     "army_type": "Good",
@@ -6942,6 +7040,180 @@
       }
     ]
   },
+  "[defenders-of-the-pelennor] forlong-the-fat": {
+    "model_id": "[defenders-of-the-pelennor] forlong-the-fat",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Forlong the Fat",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] hurin-the-tall-warden-of-the-keys": {
+    "model_id": "[defenders-of-the-pelennor] hurin-the-tall-warden-of-the-keys",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Hurin the Tall, Warden of the Keys",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1144",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[defenders-of-the-pelennor] duinhir-lord-of-the-blackroot-vale": {
+    "model_id": "[defenders-of-the-pelennor] duinhir-lord-of-the-blackroot-vale",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Duinhir, Lord of the Blackroot Vale",
+    "unit_type": "Hero of Valour",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] elladan": {
+    "model_id": "[defenders-of-the-pelennor] elladan",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elladan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] elrohir": {
+    "model_id": "[defenders-of-the-pelennor] elrohir",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elrohir",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] angbor-the-fearless": {
+    "model_id": "[defenders-of-the-pelennor] angbor-the-fearless",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Angbor the Fearless",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] deorwine-chief-of-the-king's-knights": {
+    "model_id": "[defenders-of-the-pelennor] deorwine-chief-of-the-king's-knights",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Rohan",
+    "name": "Deorwine, Chief of the King's Knights",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1141",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[defenders-of-the-pelennor] halbarad": {
+    "model_id": "[defenders-of-the-pelennor] halbarad",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Halbarad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1165",
+        "name": "Banner of Arwen Evenstar",
+        "points": 40
+      }
+    ]
+  },
   "[defenders-of-the-pelennor] herald-of-the-dead": {
     "model_id": "[defenders-of-the-pelennor] herald-of-the-dead",
     "army_type": "Good",
@@ -6959,6 +7231,70 @@
     ],
     "warband_size": 12,
     "options": []
+  },
+  "[defenders-of-the-pelennor] ingold-warden-of-the-rammas-echor": {
+    "model_id": "[defenders-of-the-pelennor] ingold-warden-of-the-rammas-echor",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Ingold, Warden of The Rammas Echor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] beregond-guard-of-the-citadel": {
+    "model_id": "[defenders-of-the-pelennor] beregond-guard-of-the-citadel",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Beregond, Guard of the Citadel",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] captain-of-dol-amroth": {
+    "model_id": "[defenders-of-the-pelennor] captain-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Captain of Dol Amroth",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1150",
+        "name": "Armoured horse and lance",
+        "points": 30,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
   },
   "[defenders-of-the-pelennor] irolas": {
     "model_id": "[defenders-of-the-pelennor] irolas",
@@ -6996,6 +7332,33 @@
     ],
     "warband_size": 12,
     "options": []
+  },
+  "[defenders-of-the-pelennor] elfhelm-captain-of-rohan": {
+    "model_id": "[defenders-of-the-pelennor] elfhelm-captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Rohan",
+    "name": "Elfhelm, Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1138",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
   },
   "[defenders-of-the-pelennor] eowyn": {
     "model_id": "[defenders-of-the-pelennor] eowyn",
@@ -7154,6 +7517,35 @@
       }
     ]
   },
+  "[defenders-of-the-pelennor] ranger-of-the-north": {
+    "model_id": "[defenders-of-the-pelennor] ranger-of-the-north",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1166",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT1167",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[defenders-of-the-pelennor] rider-of-the-dead": {
     "model_id": "[defenders-of-the-pelennor] rider-of-the-dead",
     "army_type": "Good",
@@ -7250,6 +7642,52 @@
       }
     ]
   },
+  "[defenders-of-the-pelennor] knight-of-dol-amroth": {
+    "model_id": "[defenders-of-the-pelennor] knight-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Knight of Dol Amroth",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1152",
+        "name": "Armoured horse and banner",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT1153",
+        "name": "Armoured horse and war horn",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT1154",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1155",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1156",
+        "name": "Armoured horse and lance",
+        "points": 9,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      }
+    ]
+  },
   "[defenders-of-the-pelennor] rohan-royal-guard": {
     "model_id": "[defenders-of-the-pelennor] rohan-royal-guard",
     "army_type": "Good",
@@ -7280,6 +7718,51 @@
       }
     ]
   },
+  "[defenders-of-the-pelennor] axeman-of-lossarnach": {
+    "model_id": "[defenders-of-the-pelennor] axeman-of-lossarnach",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Axeman of Lossarnach",
+    "unit_type": "Warrior",
+    "base_points": 9,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[defenders-of-the-pelennor] blackroot-vale-archer": {
+    "model_id": "[defenders-of-the-pelennor] blackroot-vale-archer",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Blackroot Vale Archer",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1162",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1163",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1164",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[defenders-of-the-pelennor] citadel-guard": {
     "model_id": "[defenders-of-the-pelennor] citadel-guard",
     "army_type": "Good",
@@ -7306,6 +7789,20 @@
         "points": 1
       }
     ]
+  },
+  "[defenders-of-the-pelennor] clansman-of-lamedon": {
+    "model_id": "[defenders-of-the-pelennor] clansman-of-lamedon",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Clansman of Lamedon",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
   },
   "[defenders-of-the-pelennor] warrior-of-minas-tirith": {
     "model_id": "[defenders-of-the-pelennor] warrior-of-minas-tirith",
@@ -7371,6 +7868,31 @@
         "id": "OPT0538",
         "name": "Flaming Ammunition",
         "points": 10
+      }
+    ]
+  },
+  "[defenders-of-the-pelennor] gondor-avenger-bolt-thrower": {
+    "model_id": "[defenders-of-the-pelennor] gondor-avenger-bolt-thrower",
+    "army_type": "Good",
+    "army_list": "Defenders of the Pelennor",
+    "profile_origin": "Gondor",
+    "name": "Gondor Avenger Bolt Thrower",
+    "unit_type": "Siege Engine",
+    "base_points": 50,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Gondor Avenger Bolt Thrower - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1147",
+        "name": "Swift Reload",
+        "points": 20
       }
     ]
   },
@@ -7823,6 +8345,20 @@
         ]
       }
     ]
+  },
+  "[erebor-&-dale] knight-of-dale": {
+    "model_id": "[erebor-&-dale] knight-of-dale",
+    "army_type": "Good",
+    "army_list": "Erebor & Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Knight of Dale",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
   },
   "[erebor-&-dale] erebor-dwarf-warrior": {
     "model_id": "[erebor-&-dale] erebor-dwarf-warrior",
@@ -8581,6 +9117,20 @@
       ]
     ],
     "warband_size": 12,
+    "options": []
+  },
+  "[garrison-of-dale] knight-of-dale": {
+    "model_id": "[garrison-of-dale] knight-of-dale",
+    "army_type": "Good",
+    "army_list": "Garrison of Dale",
+    "profile_origin": "Kingdoms of Men",
+    "name": "Knight of Dale",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
     "options": []
   },
   "[garrison-of-dale] warrior-of-dale": {
@@ -9855,6 +10405,20 @@
     "warband_size": 12,
     "options": []
   },
+  "[halls-of-thranduil] wood-elf-sentinel": {
+    "model_id": "[halls-of-thranduil] wood-elf-sentinel",
+    "army_type": "Good",
+    "army_list": "Halls of Thranduil",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Wood Elf Sentinel",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
   "[halls-of-thranduil] mirkwood-elf-knight": {
     "model_id": "[halls-of-thranduil] mirkwood-elf-knight",
     "army_type": "Good",
@@ -11022,6 +11586,60 @@
       }
     ]
   },
+  "[kingdom-of-rohan] deorwine-chief-of-the-king's-knights": {
+    "model_id": "[kingdom-of-rohan] deorwine-chief-of-the-king's-knights",
+    "army_type": "Good",
+    "army_list": "Kingdom of Rohan",
+    "profile_origin": "Rohan",
+    "name": "Deorwine, Chief of the King's Knights",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1139",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[kingdom-of-rohan] elfhelm-captain-of-rohan": {
+    "model_id": "[kingdom-of-rohan] elfhelm-captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "Kingdom of Rohan",
+    "profile_origin": "Rohan",
+    "name": "Elfhelm, Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1136",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
   "[kingdom-of-rohan] hama-captain-of-rohan": {
     "model_id": "[kingdom-of-rohan] hama-captain-of-rohan",
     "army_type": "Good",
@@ -11779,6 +12397,40 @@
       }
     ]
   },
+  "[lindon] glorfindel-lord-of-the-west": {
+    "model_id": "[lindon] glorfindel-lord-of-the-west",
+    "army_type": "Good",
+    "army_list": "Lindon",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Glorfindel, Lord of the West",
+    "unit_type": "Hero of Valour",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1168",
+        "name": "Asfaloth",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Asfaloth"
+      },
+      {
+        "id": "OPT1169",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
   "[lindon] cirdan": {
     "model_id": "[lindon] cirdan",
     "army_type": "Good",
@@ -11950,6 +12602,44 @@
     "warband_size": 15,
     "options": []
   },
+  "[lothlorien] orophin-galadhrim-captain": {
+    "model_id": "[lothlorien] orophin-galadhrim-captain",
+    "army_type": "Good",
+    "army_list": "Lothlorien",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Orophin, Galadhrim Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[lothlorien] rumil-warden-of-caras-galadhon": {
+    "model_id": "[lothlorien] rumil-warden-of-caras-galadhon",
+    "army_type": "Good",
+    "army_list": "Lothlorien",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Rumil, Warden of Caras Galadhon",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 85,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[lothlorien] galadhrim-captain": {
     "model_id": "[lothlorien] galadhrim-captain",
     "army_type": "Good",
@@ -12027,6 +12717,65 @@
       ]
     ],
     "warband_size": 12,
+    "options": []
+  },
+  "[lothlorien] wood-elf-sentinel": {
+    "model_id": "[lothlorien] wood-elf-sentinel",
+    "army_type": "Good",
+    "army_list": "Lothlorien",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Wood Elf Sentinel",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[lothlorien] galadhrim-knight": {
+    "model_id": "[lothlorien] galadhrim-knight",
+    "army_type": "Good",
+    "army_list": "Lothlorien",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Galadhrim Knight",
+    "unit_type": "Warrior",
+    "base_points": 18,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1174",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1175",
+        "name": "Elf bow",
+        "points": 2,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1176",
+        "name": "Shield",
+        "points": 1
+      }
+    ]
+  },
+  "[lothlorien] guard-of-the-galadhrim-court": {
+    "model_id": "[lothlorien] guard-of-the-galadhrim-court",
+    "army_type": "Good",
+    "army_list": "Lothlorien",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Guard of the Galadhrim Court",
+    "unit_type": "Warrior",
+    "base_points": 12,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
     "options": []
   },
   "[lothlorien] galadhrim-warrior": {
@@ -12267,6 +13016,25 @@
       }
     ]
   },
+  "[men-of-the-west] prince-imrahil": {
+    "model_id": "[men-of-the-west] prince-imrahil",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Gondor",
+    "name": "Prince Imrahil",
+    "unit_type": "Hero of Legend",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
   "[men-of-the-west] gwaihir": {
     "model_id": "[men-of-the-west] gwaihir",
     "army_type": "Good",
@@ -12427,6 +13195,81 @@
       }
     ]
   },
+  "[men-of-the-west] elladan": {
+    "model_id": "[men-of-the-west] elladan",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elladan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[men-of-the-west] elrohir": {
+    "model_id": "[men-of-the-west] elrohir",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elrohir",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[men-of-the-west] beregond-guard-of-the-citadel": {
+    "model_id": "[men-of-the-west] beregond-guard-of-the-citadel",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Gondor",
+    "name": "Beregond, Guard of the Citadel",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[men-of-the-west] captain-of-dol-amroth": {
+    "model_id": "[men-of-the-west] captain-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Gondor",
+    "name": "Captain of Dol Amroth",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[men-of-the-west] captain-of-minas-tirith": {
     "model_id": "[men-of-the-west] captain-of-minas-tirith",
     "army_type": "Good",
@@ -12542,6 +13385,45 @@
     "MWFW": [],
     "warband_size": 0,
     "options": []
+  },
+  "[men-of-the-west] knight-of-dol-amroth": {
+    "model_id": "[men-of-the-west] knight-of-dol-amroth",
+    "army_type": "Good",
+    "army_list": "Men of the West",
+    "profile_origin": "Gondor",
+    "name": "Knight of Dol Amroth",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1157",
+        "name": "Armoured horse and banner",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT1158",
+        "name": "Armoured horse and war horn",
+        "points": 33,
+        "type": "mount",
+        "mount_name": "Armoured horse"
+      },
+      {
+        "id": "OPT1159",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1160",
+        "name": "War horn",
+        "points": 25
+      }
+    ]
   },
   "[men-of-the-west] warrior-of-minas-tirith": {
     "model_id": "[men-of-the-west] warrior-of-minas-tirith",
@@ -13004,6 +13886,33 @@
       }
     ]
   },
+  "[minas-tirith] hurin-the-tall-warden-of-the-keys": {
+    "model_id": "[minas-tirith] hurin-the-tall-warden-of-the-keys",
+    "army_type": "Good",
+    "army_list": "Minas Tirith",
+    "profile_origin": "Gondor",
+    "name": "Hurin the Tall, Warden of the Keys",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1142",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
   "[minas-tirith] denethor": {
     "model_id": "[minas-tirith] denethor",
     "army_type": "Good",
@@ -13021,6 +13930,44 @@
       ]
     ],
     "warband_size": 15,
+    "options": []
+  },
+  "[minas-tirith] ingold-warden-of-the-rammas-echor": {
+    "model_id": "[minas-tirith] ingold-warden-of-the-rammas-echor",
+    "army_type": "Good",
+    "army_list": "Minas Tirith",
+    "profile_origin": "Gondor",
+    "name": "Ingold, Warden of The Rammas Echor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[minas-tirith] beregond-guard-of-the-citadel": {
+    "model_id": "[minas-tirith] beregond-guard-of-the-citadel",
+    "army_type": "Good",
+    "army_list": "Minas Tirith",
+    "profile_origin": "Gondor",
+    "name": "Beregond, Guard of the Citadel",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
     "options": []
   },
   "[minas-tirith] irolas": {
@@ -13160,6 +14107,31 @@
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      }
+    ]
+  },
+  "[minas-tirith] gondor-avenger-bolt-thrower": {
+    "model_id": "[minas-tirith] gondor-avenger-bolt-thrower",
+    "army_type": "Good",
+    "army_list": "Minas Tirith",
+    "profile_origin": "Gondor",
+    "name": "Gondor Avenger Bolt Thrower",
+    "unit_type": "Siege Engine",
+    "base_points": 50,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [
+      [
+        "Gondor Avenger Bolt Thrower - Siege Veteran",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1145",
+        "name": "Swift Reload",
+        "points": 20
       }
     ]
   },
@@ -16061,6 +17033,60 @@
       }
     ]
   },
+  "[riders-of-theoden] deorwine-chief-of-the-king's-knights": {
+    "model_id": "[riders-of-theoden] deorwine-chief-of-the-king's-knights",
+    "army_type": "Good",
+    "army_list": "Riders of Theoden",
+    "profile_origin": "Rohan",
+    "name": "Deorwine, Chief of the King's Knights",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1140",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[riders-of-theoden] elfhelm-captain-of-rohan": {
+    "model_id": "[riders-of-theoden] elfhelm-captain-of-rohan",
+    "army_type": "Good",
+    "army_list": "Riders of Theoden",
+    "profile_origin": "Rohan",
+    "name": "Elfhelm, Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1137",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
   "[riders-of-theoden] eowyn": {
     "model_id": "[riders-of-theoden] eowyn",
     "army_type": "Good",
@@ -16608,6 +17634,94 @@
     "options": [
       {
         "id": "OPT0048",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[rivendell] glorfindel-lord-of-the-west": {
+    "model_id": "[rivendell] glorfindel-lord-of-the-west",
+    "army_type": "Good",
+    "army_list": "Rivendell",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Glorfindel, Lord of the West",
+    "unit_type": "Hero of Valour",
+    "base_points": 160,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1170",
+        "name": "Asfaloth",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Asfaloth"
+      },
+      {
+        "id": "OPT1171",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[rivendell] elladan": {
+    "model_id": "[rivendell] elladan",
+    "army_type": "Good",
+    "army_list": "Rivendell",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elladan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1172",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      }
+    ]
+  },
+  "[rivendell] elrohir": {
+    "model_id": "[rivendell] elrohir",
+    "army_type": "Good",
+    "army_list": "Rivendell",
+    "profile_origin": "Elven Kingdoms",
+    "name": "Elrohir",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1173",
         "name": "Horse",
         "points": 20,
         "type": "mount",
@@ -21145,6 +22259,44 @@
     "warband_size": 12,
     "options": []
   },
+  "[the-shire] will-whitfoot-mayor-of-michel-delving": {
+    "model_id": "[the-shire] will-whitfoot-mayor-of-michel-delving",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Will Whitfoot, Mayor of Michel Delving",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-shire] farmer-tolman-cotton": {
+    "model_id": "[the-shire] farmer-tolman-cotton",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Farmer Tolman Cotton",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[the-shire] hamfast-'gaffer'-gamgee": {
     "model_id": "[the-shire] hamfast-'gaffer'-gamgee",
     "army_type": "Good",
@@ -21162,6 +22314,63 @@
       ]
     ],
     "warband_size": 12,
+    "options": []
+  },
+  "[the-shire] paladin-took-thain-of-the-shire": {
+    "model_id": "[the-shire] paladin-took-thain-of-the-shire",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Paladin Took, Thain of the Shire",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-shire] lotho-sackville-baggins": {
+    "model_id": "[the-shire] lotho-sackville-baggins",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Lotho Sackville-Baggins",
+    "unit_type": "Minor Hero",
+    "base_points": 30,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:1"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[the-shire] folco-boffin": {
+    "model_id": "[the-shire] folco-boffin",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Folco Boffin",
+    "unit_type": "Independent Hero",
+    "base_points": 25,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:3:1:1"
+      ]
+    ],
+    "warband_size": 0,
     "options": []
   },
   "[the-shire] lobelia-sackville-baggins": {
@@ -21202,6 +22411,25 @@
     "warband_size": 0,
     "options": []
   },
+  "[the-shire] fredegar-'fatty'-bolger": {
+    "model_id": "[the-shire] fredegar-'fatty'-bolger",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Fredegar 'Fatty' Bolger",
+    "unit_type": "Independent Hero",
+    "base_points": 10,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:1:1:2"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
   "[the-shire] meriadoc-brandybuck": {
     "model_id": "[the-shire] meriadoc-brandybuck",
     "army_type": "Good",
@@ -21237,6 +22465,70 @@
         "0:0:2:1"
       ]
     ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-shire] hobbit-archer": {
+    "model_id": "[the-shire] hobbit-archer",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Archer",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1134",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1135",
+        "name": "Tookish Hunters",
+        "points": 1,
+        "type": "special_warband_upgrade",
+        "dependencies": [
+          {
+            "type": "requires-all",
+            "condition": "in-warband",
+            "dependencies": [
+              "[the-shire] paladin-took-thain-of-the-shire"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "[the-shire] hobbit-shirriff": {
+    "model_id": "[the-shire] hobbit-shirriff",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Shirriff",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-shire] hobbit-militia": {
+    "model_id": "[the-shire] hobbit-militia",
+    "army_type": "Good",
+    "army_list": "The Shire",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Militia",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
     "warband_size": 0,
     "options": []
   },

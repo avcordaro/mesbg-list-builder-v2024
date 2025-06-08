@@ -8836,7 +8836,7 @@
       "magic_powers": [],
       "heroic_actions": [],
       "special_rules": [
-        "Resistant to Magic,",
+        "Resistant to Magic",
         "Throw Stones (range 8\", Strength 1)"
       ],
       "wargear": [
@@ -12670,7 +12670,7 @@
         "Woodland Creature"
       ],
       "wargear": [
-        "Galadhrim steed",
+        "Galadhrim Steed",
         "Elven hand-and-a-half weapon",
         "heavy armour"
       ]
