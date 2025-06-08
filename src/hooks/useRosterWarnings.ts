@@ -139,6 +139,35 @@ function extraScriptedRosterWarnings(
     }
   }
 
+  if (
+    [
+      "Defenders of the Pelennor",
+      "Men of the West",
+      "Rivendell",
+      "The Grey Company",
+    ].includes(roster.armyList)
+  ) {
+    const brothers = roster.warbands
+      .map((wb) => wb.hero)
+      .filter(isSelectedUnit)
+      .filter((hero) => ["Elladan", "Elrohir"].includes(hero.name));
+    if (brothers.length == 2) {
+      const mountsSelected = brothers
+        .flatMap((brother) => brother.options)
+        .filter((option) => option.type === "mount")
+        .map((option) => option.quantity ?? 0)
+        .reduce((a, b) => b + a, 0);
+      if (mountsSelected === 1) {
+        // either none or both need a mount, not just 1.
+        warnings.push({
+          warning: `If you wish to upgrade Elladan & Elrohir with horses, then you must purchase horses for both the Elven twins at the given cost.`,
+          type: undefined,
+          dependencies: [],
+        });
+      }
+    }
+  }
+
   const siegeEngines = roster.warbands.filter(
     ({ hero }) => hero?.unit_type === "Siege Engine",
   );
