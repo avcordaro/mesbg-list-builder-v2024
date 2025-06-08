@@ -4464,12 +4464,14 @@
     "Dwarven Ballista": {
       "Range": "6\" - 48\"",
       "Mv": "-",
-      "F": "-",
+      "Fv": "-",
+      "Sv": "-",
       "S": "9",
       "D": "10",
       "A": "-",
       "W": "3",
       "C": "-",
+      "I": "-",
       "active_or_passive_rules": [
         {
           "name": "Accurate",
@@ -11484,12 +11486,14 @@
     "Gondor Avenger Bolt Thrower": {
       "Range": "0\" - 36\"",
       "Mv": "-",
-      "F": "-",
+      "Fv": "-",
+      "Sv": "-",
       "S": "7",
       "D": "9",
       "A": "-",
       "W": "3",
       "C": "-",
+      "I": "-",
       "active_or_passive_rules": [
         {
           "name": "Swift Reload",
