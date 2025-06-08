@@ -119,6 +119,26 @@ function extraScriptedRosterWarnings(
     }
   }
 
+  if (roster.armyList === "Kingdom of Khazad-Dum") {
+    const dKingId = "[kingdom-of-khazad-dum] dwarf-king";
+    const hasIllegalKhazadGuard = roster.warbands
+      .filter(({ hero }) => isSelectedUnit(hero))
+      .filter(({ hero }) => hero.model_id === dKingId)
+      .filter(({ id }) => id !== roster.metadata.leader)
+      .flatMap(({ units }) => units)
+      .filter(isSelectedUnit)
+      .map(({ model_id }) => model_id)
+      .includes("[kingdom-of-khazad-dum] khazad-guard");
+
+    if (hasIllegalKhazadGuard) {
+      warnings.push({
+        warning: `A Dwarf King can only include Khazad Guards in his warband if he is also your army's General.`,
+        type: undefined,
+        dependencies: [],
+      });
+    }
+  }
+
   const siegeEngines = roster.warbands.filter(
     ({ hero }) => hero?.unit_type === "Siege Engine",
   );
