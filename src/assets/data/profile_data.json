@@ -10053,7 +10053,7 @@
           "name": "Crown of Morgul",
           "type": "Passive",
           "option_dependency": "Crown of Morgul",
-          "description": "Enemies within 6\" or those who Charge the Witch-king cannot benefit from automatically passing Courage tests, except for Heroic Resolve. Also, once per game in a Fight phase, any model that suffers a Wound from the Witch-king is Set Ablaze."
+          "description": "Enemies within 6\" or those who Charge the Witch-king cannot benefit from automatically passing Courage tests, except for Heroic Resolve. Additionally, once per game, at the start of any Fight phase, you can imbue great power to his hand weapon, and until the end of the turn, any model that suffers a Wound from the Witch-king is Set Ablaze."
         }
       ],
       "magic_powers": [

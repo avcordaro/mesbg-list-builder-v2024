@@ -23,6 +23,15 @@ function checkCompulsory(rule: WarningRule, setOfModelIds: string[]): boolean {
   );
 }
 
+function checkIncompatible(
+  rule: WarningRule,
+  setOfModelIds: string[],
+): boolean {
+  return rule.dependencies.some((incompatibleModel) =>
+    setOfModelIds.includes(incompatibleModel),
+  );
+}
+
 function extraScriptedRosterWarnings(
   roster: Roster,
   ignoreCompulsoryArmyGeneral: boolean,
@@ -183,6 +192,8 @@ function isActiveRule(setOfModelIds: string[]) {
         return checkRequiresAll(rule, setOfModelIds);
       case "compulsory":
         return checkCompulsory(rule, setOfModelIds);
+      case "incompatible":
+        return checkIncompatible(rule, setOfModelIds);
       default:
         return true;
     }

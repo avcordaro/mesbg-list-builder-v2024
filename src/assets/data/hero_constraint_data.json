@@ -238,6 +238,17 @@
     ],
     "extra_profiles": []
   },
+  "[army-of-gothmog] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gothmog] mordor-siege-bow": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
   "[army-of-gothmog] mordor-war-catapult": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -572,7 +583,19 @@
       "[army-of-the-white-hand] wild-man-of-dunland",
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
-      "[army-of-the-white-hand] crebain"
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-white-hand] isengard-orc-shaman": {
+    "valid_warband_units": [
+      "[army-of-the-white-hand] uruk-hai-scout",
+      "[army-of-the-white-hand] wild-man-of-dunland",
+      "[army-of-the-white-hand] isengard-orc-warrior",
+      "[army-of-the-white-hand] isengard-warg-rider",
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -583,7 +606,8 @@
       "[army-of-the-white-hand] wild-man-of-dunland",
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
-      "[army-of-the-white-hand] crebain"
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -593,7 +617,19 @@
       "[army-of-the-white-hand] wild-man-of-dunland",
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
-      "[army-of-the-white-hand] crebain"
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-the-white-hand] uruk-hai-shaman": {
+    "valid_warband_units": [
+      "[army-of-the-white-hand] uruk-hai-scout",
+      "[army-of-the-white-hand] wild-man-of-dunland",
+      "[army-of-the-white-hand] isengard-orc-warrior",
+      "[army-of-the-white-hand] isengard-warg-rider",
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -603,7 +639,8 @@
       "[army-of-the-white-hand] wild-man-of-dunland",
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
-      "[army-of-the-white-hand] crebain"
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -613,7 +650,8 @@
       "[army-of-the-white-hand] wild-man-of-dunland",
       "[army-of-the-white-hand] isengard-orc-warrior",
       "[army-of-the-white-hand] isengard-warg-rider",
-      "[army-of-the-white-hand] crebain"
+      "[army-of-the-white-hand] crebain",
+      "[army-of-the-white-hand] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -766,7 +804,8 @@
     "valid_warband_units": [
       "[assault-upon-helm's-deep] uruk-hai-warrior",
       "[assault-upon-helm's-deep] uruk-hai-berserker",
-      "[assault-upon-helm's-deep] uruk-hai-demolition-team"
+      "[assault-upon-helm's-deep] uruk-hai-demolition-team",
+      "[assault-upon-helm's-deep] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -774,7 +813,17 @@
     "valid_warband_units": [
       "[assault-upon-helm's-deep] uruk-hai-warrior",
       "[assault-upon-helm's-deep] uruk-hai-berserker",
-      "[assault-upon-helm's-deep] uruk-hai-demolition-team"
+      "[assault-upon-helm's-deep] uruk-hai-demolition-team",
+      "[assault-upon-helm's-deep] isengard-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-upon-helm's-deep] uruk-hai-shaman": {
+    "valid_warband_units": [
+      "[assault-upon-helm's-deep] uruk-hai-warrior",
+      "[assault-upon-helm's-deep] uruk-hai-berserker",
+      "[assault-upon-helm's-deep] uruk-hai-demolition-team",
+      "[assault-upon-helm's-deep] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -883,16 +932,44 @@
     ],
     "extra_profiles": []
   },
+  "[barad-dur] black-numenorean-marshal": {
+    "valid_warband_units": [
+      "[barad-dur] mordor-orc-drummer",
+      "[barad-dur] mordor-orc-warrior",
+      "[barad-dur] mordor-warg-rider",
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[barad-dur] mordor-orc-captain": {
     "valid_warband_units": [
       "[barad-dur] mordor-orc-drummer",
       "[barad-dur] mordor-orc-warrior",
       "[barad-dur] mordor-warg-rider",
-      "[barad-dur] mordor-troll"
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
   "[barad-dur] mordor-orc-drummer": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[barad-dur] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[barad-dur] mordor-orc-drummer",
+      "[barad-dur] mordor-orc-warrior",
+      "[barad-dur] mordor-warg-rider",
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[barad-dur] mordor-siege-bow": {
     "valid_warband_units": [],
     "extra_profiles": []
   },
@@ -901,7 +978,9 @@
       "[barad-dur] mordor-orc-drummer",
       "[barad-dur] mordor-orc-warrior",
       "[barad-dur] mordor-warg-rider",
-      "[barad-dur] mordor-troll"
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
@@ -914,7 +993,9 @@
       "[barad-dur] mordor-orc-drummer",
       "[barad-dur] mordor-orc-warrior",
       "[barad-dur] mordor-warg-rider",
-      "[barad-dur] mordor-troll"
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
@@ -923,7 +1004,9 @@
       "[barad-dur] mordor-orc-drummer",
       "[barad-dur] mordor-orc-warrior",
       "[barad-dur] mordor-warg-rider",
-      "[barad-dur] mordor-troll"
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
@@ -932,7 +1015,9 @@
       "[barad-dur] mordor-orc-drummer",
       "[barad-dur] mordor-orc-warrior",
       "[barad-dur] mordor-warg-rider",
-      "[barad-dur] mordor-troll"
+      "[barad-dur] mordor-troll",
+      "[barad-dur] black-numenorean-knight",
+      "[barad-dur] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
@@ -1267,6 +1352,13 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[cirith-ungol] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[cirith-ungol] mordor-orc-drummer",
+      "[cirith-ungol] mordor-orc-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[cirith-ungol] mordor-orc-taskmaster": {
     "valid_warband_units": [
       "[cirith-ungol] mordor-orc-drummer",
@@ -1296,19 +1388,36 @@
   },
   "[corsair-fleet] corsair-bo'sun": {
     "valid_warband_units": [
-      "[corsair-fleet] corsair-of-umbar"
+      "[corsair-fleet] corsair-of-umbar",
+      "[corsair-fleet] corsair-crossbowman"
     ],
     "extra_profiles": []
   },
   "[corsair-fleet] corsair-captain": {
     "valid_warband_units": [
-      "[corsair-fleet] corsair-of-umbar"
+      "[corsair-fleet] corsair-of-umbar",
+      "[corsair-fleet] corsair-crossbowman"
     ],
     "extra_profiles": []
   },
   "[corsair-fleet] corsair-captain-general": {
     "valid_warband_units": [
-      "[corsair-fleet] corsair-of-umbar"
+      "[corsair-fleet] corsair-of-umbar",
+      "[corsair-fleet] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[corsair-fleet] dalamyr-fleetmaster-of-umbar": {
+    "valid_warband_units": [
+      "[corsair-fleet] corsair-of-umbar",
+      "[corsair-fleet] corsair-crossbowman"
+    ],
+    "extra_profiles": []
+  },
+  "[corsair-fleet] delgamar-gatemaster-of-umbar": {
+    "valid_warband_units": [
+      "[corsair-fleet] corsair-of-umbar",
+      "[corsair-fleet] corsair-crossbowman"
     ],
     "extra_profiles": []
   },
@@ -1769,14 +1878,24 @@
   "[depths-of-moria] moria-goblin-captain": {
     "valid_warband_units": [
       "[depths-of-moria] moria-goblin-warrior",
-      "[depths-of-moria] cave-troll"
+      "[depths-of-moria] cave-troll",
+      "[depths-of-moria] moria-goblin-prowler"
+    ],
+    "extra_profiles": []
+  },
+  "[depths-of-moria] moria-goblin-shaman": {
+    "valid_warband_units": [
+      "[depths-of-moria] moria-goblin-warrior",
+      "[depths-of-moria] cave-troll",
+      "[depths-of-moria] moria-goblin-prowler"
     ],
     "extra_profiles": []
   },
   "[depths-of-moria] the-balrog": {
     "valid_warband_units": [
       "[depths-of-moria] moria-goblin-warrior",
-      "[depths-of-moria] cave-troll"
+      "[depths-of-moria] cave-troll",
+      "[depths-of-moria] moria-goblin-prowler"
     ],
     "extra_profiles": []
   },
@@ -2295,7 +2414,15 @@
   },
   "[harad] haradrim-chieftain": {
     "valid_warband_units": [
-      "[harad] haradrim-warrior"
+      "[harad] haradrim-warrior",
+      "[harad] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[harad] haradrim-taskmaster": {
+    "valid_warband_units": [
+      "[harad] haradrim-warrior",
+      "[harad] haradrim-raider"
     ],
     "extra_profiles": []
   },
@@ -2585,44 +2712,118 @@
     ],
     "extra_profiles": []
   },
+  "[legions-of-mordor] amdur-lord-of-blades": {
+    "valid_warband_units": [
+      "[legions-of-mordor] easterling-warrior",
+      "[legions-of-mordor] black-dragon-warrior",
+      "[legions-of-mordor] easterling-kataphrakt"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] black-numenorean-marshal": {
+    "valid_warband_units": [
+      "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[legions-of-mordor] easterling-captain": {
     "valid_warband_units": [
-      "[legions-of-mordor] easterling-warrior"
+      "[legions-of-mordor] easterling-warrior",
+      "[legions-of-mordor] easterling-kataphrakt"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] easterling-dragon-knight": {
+    "valid_warband_units": [
+      "[legions-of-mordor] black-dragon-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] easterling-kataphrakt-captain": {
+    "valid_warband_units": [
+      "[legions-of-mordor] easterling-warrior",
+      "[legions-of-mordor] easterling-kataphrakt"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] easterling-war-priest": {
+    "valid_warband_units": [
+      "[legions-of-mordor] easterling-warrior",
+      "[legions-of-mordor] easterling-kataphrakt"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] gothmog": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] gothmog's-enforcer": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] guritz": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] haradrim-chieftain": {
     "valid_warband_units": [
-      "[legions-of-mordor] haradrim-warrior"
+      "[legions-of-mordor] haradrim-warrior",
+      "[legions-of-mordor] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] haradrim-taskmaster": {
+    "valid_warband_units": [
+      "[legions-of-mordor] haradrim-warrior",
+      "[legions-of-mordor] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] hasharin": {
+    "valid_warband_units": [
+      "[legions-of-mordor] haradrim-warrior",
+      "[legions-of-mordor] haradrim-raider"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] morannon-orc-captain": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
     ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] mordor-siege-bow": {
+    "valid_warband_units": [],
     "extra_profiles": []
   },
   "[legions-of-mordor] mordor-war-catapult": {
@@ -2637,17 +2838,35 @@
       "Royal War Mumak"
     ]
   },
+  "[legions-of-mordor] raza-fang-of-the-serpent": {
+    "valid_warband_units": [
+      "[legions-of-mordor] haradrim-warrior",
+      "[legions-of-mordor] haradrim-raider"
+    ],
+    "extra_profiles": []
+  },
   "[legions-of-mordor] ringwraith": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] suladan-the-serpent-lord": {
+    "valid_warband_units": [
+      "[legions-of-mordor] haradrim-warrior",
+      "[legions-of-mordor] haradrim-raider"
     ],
     "extra_profiles": []
   },
   "[legions-of-mordor] the-witch-king-of-angmar": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
-      "[legions-of-mordor] mordor-troll"
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
     ],
     "extra_profiles": []
   },
@@ -2943,6 +3162,16 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[minas-morgul] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[minas-morgul] mordor-orc-drummer",
+      "[minas-morgul] mordor-orc-warrior",
+      "[minas-morgul] morannon-orc",
+      "[minas-morgul] mordor-troll",
+      "[minas-morgul] spectre"
+    ],
+    "extra_profiles": []
+  },
   "[minas-morgul] mordor-orc-taskmaster": {
     "valid_warband_units": [
       "[minas-morgul] mordor-orc-drummer",
@@ -3109,7 +3338,8 @@
       "[muster-of-isengard] uruk-hai-berserker",
       "[muster-of-isengard] uruk-hai-scout",
       "[muster-of-isengard] grima",
-      "[muster-of-isengard] uruk-hai-drummer"
+      "[muster-of-isengard] uruk-hai-drummer",
+      "[muster-of-isengard] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -3118,7 +3348,8 @@
       "[muster-of-isengard] uruk-hai-warrior",
       "[muster-of-isengard] uruk-hai-berserker",
       "[muster-of-isengard] uruk-hai-scout",
-      "[muster-of-isengard] uruk-hai-drummer"
+      "[muster-of-isengard] uruk-hai-drummer",
+      "[muster-of-isengard] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -3131,7 +3362,18 @@
       "[muster-of-isengard] uruk-hai-warrior",
       "[muster-of-isengard] uruk-hai-berserker",
       "[muster-of-isengard] uruk-hai-scout",
-      "[muster-of-isengard] uruk-hai-drummer"
+      "[muster-of-isengard] uruk-hai-drummer",
+      "[muster-of-isengard] isengard-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[muster-of-isengard] uruk-hai-shaman": {
+    "valid_warband_units": [
+      "[muster-of-isengard] uruk-hai-warrior",
+      "[muster-of-isengard] uruk-hai-berserker",
+      "[muster-of-isengard] uruk-hai-scout",
+      "[muster-of-isengard] uruk-hai-drummer",
+      "[muster-of-isengard] isengard-troll"
     ],
     "extra_profiles": []
   },
@@ -4404,6 +4646,13 @@
     ],
     "extra_profiles": []
   },
+  "[the-black-gate] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-troll"
+    ],
+    "extra_profiles": []
+  },
   "[the-black-gate] mordor-orc-taskmaster": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
@@ -5341,6 +5590,12 @@
     ],
     "extra_profiles": []
   },
+  "[ugluk's-scouts] isengard-orc-shaman": {
+    "valid_warband_units": [
+      "[ugluk's-scouts] isengard-orc-warrior"
+    ],
+    "extra_profiles": []
+  },
   "[ugluk's-scouts] snaga": {
     "valid_warband_units": [
       "[ugluk's-scouts] isengard-orc-warrior"
@@ -5472,6 +5727,13 @@
     "extra_profiles": []
   },
   "[wolves-of-isengard] isengard-orc-captain": {
+    "valid_warband_units": [
+      "[wolves-of-isengard] isengard-warg-rider",
+      "[wolves-of-isengard] isengard-warg"
+    ],
+    "extra_profiles": []
+  },
+  "[wolves-of-isengard] isengard-orc-shaman": {
     "valid_warband_units": [
       "[wolves-of-isengard] isengard-warg-rider",
       "[wolves-of-isengard] isengard-warg"

@@ -429,6 +429,9 @@
     "additional_rules": [
       {
         "description": "A Corsair Fleets Army must always contain a Corsair Captain, who is always the Army's General."
+      },
+      {
+        "description": "If your army contains Dalamyr, then he will always be the Army's General, instead of a Corsair Catapin."
       }
     ],
     "special_rules": [

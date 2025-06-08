@@ -190,11 +190,12 @@
   ],
   "Corsair Fleet":[
     {
-      "type":"compulsory",
+      "type":"requires_one",
       "dependencies":[
-        "[corsair-fleet] corsair-captain-general"
+        "[corsair-fleet] corsair-captain-general",
+        "[corsair-fleet] dalamyr-fleetmaster-of-umbar"
       ],
-      "warning":"A Corsair Fleets Army must always contain a Corsair Captain, who is always the Army's General."
+      "warning":"A Corsair Fleets Army must always contain either Dalamyr or the Corsair Captain (General)."
     }
   ],
   "Defenders of Erebor":[
@@ -646,6 +647,15 @@
         "[wolves-of-isengard] sharku"
       ],
       "warning":"A Wolves of Isengard Army must always contain Sharku, who is always the Army's General."
+    }
+  ],
+  "[corsair-fleet] corsair-captain-general":[
+    {
+      "type":"incompatible",
+      "dependencies":[
+        "[corsair-fleet] dalamyr-fleetmaster-of-umbar"
+      ],
+      "warning":"You cannot have both Dalaymr and the Corsair Captain (General) in your army at the same time. Only one of them can be included to be your General."
     }
   ],
   "[garrison-of-ithilien] samwise-gamgee":[
