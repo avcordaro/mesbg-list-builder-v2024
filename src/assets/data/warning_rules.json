@@ -658,6 +658,24 @@
       "warning":"You cannot have both Dalaymr and the Corsair Captain (General) in your army at the same time. Only one of them can be included to be your General."
     }
   ],
+  "[defenders-of-the-pelennor] elladan":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[defenders-of-the-pelennor] elrohir"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
+  "[defenders-of-the-pelennor] elrohir":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[defenders-of-the-pelennor] elladan"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
   "[garrison-of-ithilien] samwise-gamgee":[
     {
       "type":"requires_all",
@@ -675,6 +693,24 @@
         "[garrison-of-ithilien] samwise-gamgee"
       ],
       "warning":"You may only include Smeagol if your Army includes Frodo and Sam."
+    }
+  ],
+  "[men-of-the-west] elladan":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[men-of-the-west] elrohir"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
+  "[men-of-the-west] elrohir":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[men-of-the-west] elladan"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
     }
   ],
   "[realms-of-men] captain-of-arnor":[
@@ -738,6 +774,24 @@
         "[realms-of-men] king-of-men-dale"
       ],
       "warning":"A Windlance may only be included if your army also contains a King of Men (Dale)"
+    }
+  ],
+  "[rivendell] elladan":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[rivendell] elrohir"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
+  "[rivendell] elrohir":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[rivendell] elladan"
+      ],
+      "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
     }
   ],
   "[sharkey's-rogues] ruffian-cpt":[
