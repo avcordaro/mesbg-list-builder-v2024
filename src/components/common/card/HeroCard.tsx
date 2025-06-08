@@ -114,7 +114,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
 
         return optionAvailable;
       })
-      .map((option) => {
+      .map((option, _, otherOptions) => {
         if (unit.name === "Gandalf the White" && option.name === "Pippin") {
           return {
             ...option,
@@ -129,6 +129,23 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                   ),
               ),
           };
+        }
+
+        if (unit.name === "Dragon") {
+          if (option.quantity > 0) return option;
+
+          const optionCap =
+            unit.model_id === "[dragons-of-the-north] dragon-general" ? 3 : 2;
+
+          const selectedOptions = otherOptions
+            .map(({ quantity }) => quantity ?? 0)
+            .reduce((a, b) => a + b, 0);
+
+          const isCapped = selectedOptions < optionCap;
+
+          return isCapped
+            ? { ...option, selectable: true }
+            : { ...option, selectable: false };
         }
 
         return option;
