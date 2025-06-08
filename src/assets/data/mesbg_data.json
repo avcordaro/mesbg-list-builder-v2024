@@ -18591,6 +18591,15 @@
         "name": "Asfaloth",
         "points": 20,
         "type": "mount",
+        "dependencies": [
+          {
+            "type": "requires-none",
+            "condition": "in-roster",
+            "dependencies": [
+              "[rivendell] arwen"
+            ]
+          }
+        ],
         "mount_name": "Asfaloth"
       },
       {
