@@ -4154,7 +4154,9 @@
       "[road-to-rivendell] peregrin-took",
       "[road-to-rivendell] bill-the-pony",
       "[road-to-rivendell] the-gatekeeper-of-bree",
-      "[road-to-rivendell] arwen"
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry"
     ],
     "extra_profiles": []
   },
@@ -4168,7 +4170,9 @@
       "[road-to-rivendell] peregrin-took",
       "[road-to-rivendell] bill-the-pony",
       "[road-to-rivendell] the-gatekeeper-of-bree",
-      "[road-to-rivendell] arwen"
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry"
     ],
     "extra_profiles": []
   },
@@ -4182,7 +4186,9 @@
       "[road-to-rivendell] peregrin-took",
       "[road-to-rivendell] bill-the-pony",
       "[road-to-rivendell] the-gatekeeper-of-bree",
-      "[road-to-rivendell] arwen"
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry"
     ],
     "extra_profiles": []
   },
@@ -4200,8 +4206,14 @@
       "[road-to-rivendell] peregrin-took",
       "[road-to-rivendell] bill-the-pony",
       "[road-to-rivendell] the-gatekeeper-of-bree",
-      "[road-to-rivendell] arwen"
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry"
     ],
+    "extra_profiles": []
+  },
+  "[road-to-rivendell] goldberry": {
+    "valid_warband_units": [],
     "extra_profiles": []
   },
   "[road-to-rivendell] meriadoc-brandybuck": {
@@ -4222,11 +4234,17 @@
       "[road-to-rivendell] peregrin-took",
       "[road-to-rivendell] bill-the-pony",
       "[road-to-rivendell] the-gatekeeper-of-bree",
-      "[road-to-rivendell] arwen"
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry"
     ],
     "extra_profiles": []
   },
   "[road-to-rivendell] the-gatekeeper-of-bree": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[road-to-rivendell] tom-bombadil": {
     "valid_warband_units": [],
     "extra_profiles": []
   },

@@ -19250,6 +19250,44 @@
     "warband_size": 6,
     "options": []
   },
+  "[road-to-rivendell] tom-bombadil": {
+    "model_id": "[road-to-rivendell] tom-bombadil",
+    "army_type": "Good",
+    "army_list": "Road to Rivendell",
+    "profile_origin": "The Free Peoples",
+    "name": "Tom Bombadil",
+    "unit_type": "Independent Hero",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:12:0:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[road-to-rivendell] goldberry": {
+    "model_id": "[road-to-rivendell] goldberry",
+    "army_type": "Good",
+    "army_list": "Road to Rivendell",
+    "profile_origin": "The Free Peoples",
+    "name": "Goldberry",
+    "unit_type": "Independent Hero",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:8:0:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
   "[road-to-rivendell] the-gatekeeper-of-bree": {
     "model_id": "[road-to-rivendell] the-gatekeeper-of-bree",
     "army_type": "Good",
