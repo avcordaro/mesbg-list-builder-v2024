@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Incorporated the leaked profiles  and army lists from \"Armies of Middle Earth\""
+    ],
     "bugfixes": [
       "Corrected custom tracker calculation for the Snow Troll in the Shank & Wrot profile.",
       "Correctly jump back to page 1 when a new filter is applied to the profile database.",
