@@ -1,8 +1,10 @@
 import { v4 as randomUuid } from "uuid";
+import { mesbgData } from "../assets/data.ts";
 import { AlertTypes } from "../components/alerts/alert-types.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { useAppState } from "../state/app";
 import { useRosterBuildingState } from "../state/roster-building";
+import { emptyWarband as newWarband } from "../state/roster-building/roster";
 import { SiegeEquipment, Unit } from "../types/mesbg-data.types.ts";
 import {
   FreshUnit,
@@ -39,6 +41,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
     const points = unit.options
       .filter((o) => o.included)
       .reduce((a, b) => a + b.points * b.quantity, unit.base_points);
+
     const updatedRoster: Roster = {
       ...roster,
       warbands: roster.warbands.map((wb) =>
@@ -56,6 +59,39 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
+
+    if (["Elladan", "Elrohir"].includes(unit.name)) {
+      const otherBrotherName = unit.name === "Elladan" ? "Elrohir" : "Elladan";
+      const otherBrotherId = unit.model_id.replace(
+        /\]\s.*$/,
+        `] ${otherBrotherName.toLowerCase()}`,
+      );
+
+      const rosterContainsTheOtherBrother = updatedRoster.warbands
+        .map((wb) => wb.hero)
+        .filter(isSelectedUnit)
+        .map((hero) => hero.model_id)
+        .includes(otherBrotherId);
+
+      if (!rosterContainsTheOtherBrother) {
+        const otherBrother = mesbgData[otherBrotherId];
+        updatedRoster.warbands = [
+          ...updatedRoster.warbands,
+          {
+            ...newWarband,
+            id: randomUuid(),
+            hero: {
+              ...otherBrother,
+              id: randomUuid(),
+              pointsPerUnit: otherBrother.base_points,
+              pointsTotal: otherBrother.base_points,
+              quantity: 1,
+            },
+          },
+        ];
+      }
+    }
+
     updateRoster(updatedRoster);
   }
 
