@@ -13701,7 +13701,7 @@
           "description": "The Dragon gains the Fly special rule and increases its Move Value to 12\" whilst using the Fly special rule."
         },
         {
-          "name": "Tough Hide",
+          "name": "Superior Intellect",
           "type": "Passive",
           "description": "The Dragon automatically passes any Intelligence Tests it is required to take. Additionally, each time the Dragon spends a Might Point, roll a D6. On a 4+, the Might Point is free and does not reduce the Dragon's store of Might."
         },
@@ -13850,12 +13850,12 @@
           "description": "The Drum has 10 Defence, 3 Wounds, is a Heavy Object, can be shot at, is always on a 25mm base and must be deployed in base contact with one of its Moria Goblin Drummers. If, during the End Phase, an enemy model is in base contact with the Drum, and the only thing that model has done is Move this turn (e.g. no shooting, combat etc.), and that model was not affected by a Magical Power this turn, then it can remove the Drum from play."
         },
         {
-          "name": "Moria Goblin Drum",
+          "name": "Drums in the Deep",
           "type": "Active",
-          "description": "For the Drum to be played, at least one Drummer must be in base contact with it, have not Moved that turn, and not be Engaged in Combat. Whilst the Drum is being played it has the following effects:\n\n* Friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take.\n* Enemy models suffer a -1 penalty to any Courage Tests they are required to take.\n* Friendly Moria Goblin models within 18\" count as being in range.\n* Whilst being played, the Moria Goblin Drum counts as a banner for the purpose of Victory Points."
+          "description": "For the Drum to be played, at least one Drummer must be in base contact with it, have not Moved that turn, and not be Engaged in Combat. Whilst the Drum is being played it has the following effects:\n\n* Friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take.\n* Enemy models suffer a -1 penalty to any Courage Tests they are required to take.\n* Friendly Moria Goblin models within 18\" count as being in range of a banner.\n* Whilst being played, the Moria Goblin Drum counts as a banner for the purpose of Victory Points."
         },
         {
-          "name": "Moria Goblin Drum",
+          "name": "Take up the Drum",
           "type": "Active",
           "description": "If a Drummer is slain, then they may pass on their wargear to a friendly Moria Goblin Warrior within 1\" of them. The chosen model becomes a Moria Goblin Drummer and exchanges their wargear for that of the slain model - replace the chosen model with the slain Moria Goblin Drummer."
         }

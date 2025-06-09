@@ -2081,7 +2081,7 @@
       {
         "id": "OPT1017",
         "name": "Armoured horse",
-        "points": 15,
+        "points": 25,
         "type": "mount",
         "mount_name": "Armoured horse"
       }
@@ -10821,6 +10821,7 @@
     "name": "Wood Elf Sentinel",
     "unit_type": "Warrior",
     "base_points": 25,
+    "default_bow": true,
     "siege_crew": 0,
     "bow_limit": true,
     "MWFW": [],
@@ -13595,6 +13596,7 @@
     "name": "Wood Elf Sentinel",
     "unit_type": "Warrior",
     "base_points": 25,
+    "default_bow": true,
     "siege_crew": 0,
     "bow_limit": true,
     "MWFW": [],

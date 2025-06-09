@@ -3,7 +3,11 @@
     "bugfixes": [
       "Added the missing Hearthguard option for Khazad Guard in Durin's warband.",
       "Corrected the point cost of the Gondor Avenger Bolt Thrower from 50 to 60.",
-      "Added the missing army special rule to the Army of the Great Eye."
+      "Added the missing army special rule to the Army of the Great Eye.",
+      "Wood Elf Sentinels now correctly count towards the Bow Limit",
+      "Corrected the special rule wordings on the Dragon profile card.",
+      "Corrected the special rule wordings on the Moria Goblin Drum profile card.",
+      "Corrected the Mouth of Sauron's Armoured Horse cost to 25."
     ]
   },
   "1.20": {
