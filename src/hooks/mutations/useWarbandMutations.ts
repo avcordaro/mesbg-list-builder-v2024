@@ -332,6 +332,30 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
     triggerAlert(AlertTypes.DUPLICATE_WARBAND_SUCCESS);
   }
 
+  function addNewWarband() {
+    const newWarbandId = randomUuid();
+    updateRoster({
+      ...roster,
+      warbands: [
+        ...roster.warbands,
+        {
+          ...newWarband,
+          id: newWarbandId,
+          meta: {
+            ...newWarband.meta,
+            num: roster.warbands.length + 1,
+          },
+        },
+      ],
+    });
+    updateBuilderSidebar({
+      armyList: rosterId,
+      selectionType: "hero",
+      selectionFocus: [newWarbandId, null],
+    });
+    openSidebar(DrawerTypes.UNIT_SELECTOR);
+  }
+
   return {
     handleHeroSelection,
     toggleArmyGeneral,
@@ -348,6 +372,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
 
     removeWarband,
     emptyWarband,
+    addNewWarband,
     duplicateWarband,
   };
 };
