@@ -25,12 +25,20 @@ import { useExport } from "../../../hooks/useExport.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { emptyRoster } from "../../../state/roster-building/roster";
+import { ArmyType } from "../../../types/mesbg-data.types.ts";
 import { Roster } from "../../../types/roster.ts";
 import { WarningRules } from "../../../types/warning-rules.types.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
 import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 import { FactionLogo } from "../../common/images/FactionLogo.tsx";
 import { CustomSwitch } from "../../common/switch/CustomSwitch.tsx";
+
+const armyTypeOrder: Record<ArmyType, number> = {
+  "Evil (Legacy)": 4,
+  "Good (Legacy)": 2,
+  Evil: 3,
+  Good: 1,
+};
 
 const armyLists = Object.values(data)
   .map((item) => ({
@@ -42,7 +50,7 @@ const armyLists = Object.values(data)
     (value, index, array) =>
       array.findIndex((other) => other.title === value.title) === index,
   )
-  .sort((a, b) => b.type.localeCompare(a.type));
+  .sort((a, b) => armyTypeOrder[a.type] - armyTypeOrder[b.type]);
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();

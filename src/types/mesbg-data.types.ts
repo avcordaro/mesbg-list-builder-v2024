@@ -1,4 +1,4 @@
-export type ArmyType = "Good" | "Evil";
+export type ArmyType = "Good" | "Good (Legacy)" | "Evil" | "Evil (Legacy)";
 
 /**
  * TODO: regenerate this list after all 2024 data is loaded.
