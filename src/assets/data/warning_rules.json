@@ -136,6 +136,15 @@
       "warning":"A Battle of Fornost Army must always contain Glorfindel."
     }
   ],
+  "Battle of Greenfields":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[battle-of-greenfields] bandobras-took"
+      ],
+      "warning":"A Battle of Greenfields Army must always contain Bandobras Took, who is always the Army's General."
+    }
+  ],
   "Beseigers of the Hornburg":[
     {
       "type":"compulsory",

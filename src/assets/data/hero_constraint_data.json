@@ -1213,6 +1213,22 @@
     ],
     "extra_profiles": []
   },
+  "[battle-of-greenfields] bandobras-took": {
+    "valid_warband_units": [
+      "[battle-of-greenfields] hobbit-archer",
+      "[battle-of-greenfields] hobbit-militia",
+      "[battle-of-greenfields] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
+  "[battle-of-greenfields] ranger-of-the-north": {
+    "valid_warband_units": [
+      "[battle-of-greenfields] hobbit-archer",
+      "[battle-of-greenfields] hobbit-militia",
+      "[battle-of-greenfields] hobbit-shirriff"
+    ],
+    "extra_profiles": []
+  },
   "[beseigers-of-the-hornburg] general-targg": {
     "valid_warband_units": [
       "[beseigers-of-the-hornburg] hill-tribesman",

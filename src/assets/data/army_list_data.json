@@ -2630,5 +2630,35 @@
     "bow_limit": 0.33,
     "throw_limit": 0.33,
     "rule_highlights": []
+  },
+  "Battle of Greenfields": {
+    "additional_rules": [
+      {
+        "description": "A Battle of Greenfields Army must always contain Bandobras Took, who is always the Army\u2019s General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "The Bullroarer",
+        "description": "Bandobras Took may declare a Heroic Combat each turn for free."
+      },
+      {
+        "title": "\"They\u2019re dangerous folk, wandering the wilds\"",
+        "description": "Rangers of the North increase their Attacks value to 2."
+      },
+      {
+        "title": "\"Defend the Shire!\"",
+        "description": "Friendly Hobbit Warrior models within 3\" of Bandobras gain the Dominant (2) special rule."
+      },
+      {
+        "title": "The Bounders",
+        "description": "Whilst wholly within their own deployment zone, friendly Hobbit models may re-roll To Hit rolls of a natural 1 when making shooting attacks."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Dominant (2)"
+    ]
   }
 }

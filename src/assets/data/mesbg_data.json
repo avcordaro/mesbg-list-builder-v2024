@@ -5166,6 +5166,103 @@
       }
     ]
   },
+  "[battle-of-greenfields] bandobras-took": {
+    "model_id": "[battle-of-greenfields] bandobras-took",
+    "army_type": "Good (Legacy)",
+    "army_list": "Battle of Greenfields",
+    "profile_origin": "Good Legacy",
+    "name": "Bandobras Took",
+    "unit_type": "Hero of Valour",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[battle-of-greenfields] ranger-of-the-north": {
+    "model_id": "[battle-of-greenfields] ranger-of-the-north",
+    "army_type": "Good (Legacy)",
+    "army_list": "Battle of Greenfields",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Ranger of the North",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 25,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:1"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1244",
+        "name": "Armour",
+        "points": 5
+      },
+      {
+        "id": "OPT1245",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[battle-of-greenfields] hobbit-archer": {
+    "model_id": "[battle-of-greenfields] hobbit-archer",
+    "army_type": "Good (Legacy)",
+    "army_list": "Battle of Greenfields",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Hobbit Archer",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1246",
+        "name": "War horn",
+        "points": 25
+      }
+    ]
+  },
+  "[battle-of-greenfields] hobbit-shirriff": {
+    "model_id": "[battle-of-greenfields] hobbit-shirriff",
+    "army_type": "Good (Legacy)",
+    "army_list": "Battle of Greenfields",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Shirriff",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[battle-of-greenfields] hobbit-militia": {
+    "model_id": "[battle-of-greenfields] hobbit-militia",
+    "army_type": "Good (Legacy)",
+    "army_list": "Battle of Greenfields",
+    "profile_origin": "The Free Peoples",
+    "name": "Hobbit Militia",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
   "[beseigers-of-the-hornburg] wulf": {
     "model_id": "[beseigers-of-the-hornburg] wulf",
     "army_type": "Evil",
@@ -8445,6 +8542,51 @@
     "warband_size": 18,
     "options": []
   },
+  "[dragons-of-the-north] dragon": {
+    "model_id": "[dragons-of-the-north] dragon",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0961",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT0962",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT0963",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT0964",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT0965",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
   "[dragons-of-the-north] dragon-general": {
     "model_id": "[dragons-of-the-north] dragon-general",
     "army_type": "Evil",
@@ -8486,51 +8628,6 @@
       },
       {
         "id": "OPT0986",
-        "name": "Wyrm Magic",
-        "points": 50
-      }
-    ]
-  },
-  "[dragons-of-the-north] dragon": {
-    "model_id": "[dragons-of-the-north] dragon",
-    "army_type": "Evil",
-    "army_list": "Dragons of the North",
-    "profile_origin": "The Misty Mountains",
-    "name": "Dragon",
-    "unit_type": "Hero of Legend",
-    "base_points": 200,
-    "siege_crew": 0,
-    "MWFW": [
-      [
-        "",
-        "3:3:3:7"
-      ]
-    ],
-    "no_followers": true,
-    "warband_size": 18,
-    "options": [
-      {
-        "id": "OPT0961",
-        "name": "Breathe Fire",
-        "points": 50
-      },
-      {
-        "id": "OPT0962",
-        "name": "Fly",
-        "points": 50
-      },
-      {
-        "id": "OPT0963",
-        "name": "Superior Intellect",
-        "points": 50
-      },
-      {
-        "id": "OPT0964",
-        "name": "Tough Hide",
-        "points": 50
-      },
-      {
-        "id": "OPT0965",
         "name": "Wyrm Magic",
         "points": 50
       }
