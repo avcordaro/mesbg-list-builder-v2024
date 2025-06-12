@@ -17,6 +17,7 @@ import { ModalTypes } from "../../../modal/modals.tsx";
 import { HeroCard } from "../../card/HeroCard.tsx";
 import { SelectUnitCardButton } from "../../card/SelectUnitCardButton.tsx";
 import { WarriorCard } from "../../card/WarriorCard.tsx";
+import { WithRibbon } from "../../unit-selection/WithRibbon.tsx";
 
 export type WarbandContentProps = {
   warband: Pick<Warband, "id" | "hero" | "units" | "meta">;
@@ -159,35 +160,45 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                             index={index + 1} // +1 offset for the warband captain.
                             collapsed={collapsed}
                           />
-                        ) : unit.unit_type.includes("Hero") ? (
-                          <HeroCard
-                            unit={unit}
-                            followerOf={hero?.model_id}
-                            warbandId={warbandId}
-                            warbandNum={warbandNum}
-                            index={index + 1} // +1 offset for the warband captain.
-                            updateUnit={mutations.updateUnit}
-                            openProfileCard={() => openProfileCard(unit)}
-                            reselect={() => openUnitPicker(unit.id)}
-                            remove={() => mutations.removeUnit(unit.id)}
-                            collapsed={collapsed}
-                          />
                         ) : (
-                          <WarriorCard
-                            unit={unit}
-                            followerOf={hero?.model_id}
-                            warbandId={warbandId}
-                            warbandNum={warbandNum}
-                            index={index + 1} // +1 offset for the warband captain.
-                            openProfileCard={() => openProfileCard(unit)}
-                            updateUnit={(updatedUnit) =>
-                              mutations.updateUnit(updatedUnit)
-                            }
-                            duplicate={() => mutations.duplicateUnit(unit.id)}
-                            remove={() => mutations.removeUnit(unit.id)}
-                            reselect={() => openUnitPicker(unit.id)}
-                            collapsed={collapsed}
-                          />
+                          <WithRibbon
+                            label="Legacy"
+                            hideRibbon={!unit.legacy}
+                            type="warband"
+                          >
+                            {unit.unit_type.includes("Hero") ? (
+                              <HeroCard
+                                unit={unit}
+                                followerOf={hero?.model_id}
+                                warbandId={warbandId}
+                                warbandNum={warbandNum}
+                                index={index + 1} // +1 offset for the warband captain.
+                                updateUnit={mutations.updateUnit}
+                                openProfileCard={() => openProfileCard(unit)}
+                                reselect={() => openUnitPicker(unit.id)}
+                                remove={() => mutations.removeUnit(unit.id)}
+                                collapsed={collapsed}
+                              />
+                            ) : (
+                              <WarriorCard
+                                unit={unit}
+                                followerOf={hero?.model_id}
+                                warbandId={warbandId}
+                                warbandNum={warbandNum}
+                                index={index + 1} // +1 offset for the warband captain.
+                                openProfileCard={() => openProfileCard(unit)}
+                                updateUnit={(updatedUnit) =>
+                                  mutations.updateUnit(updatedUnit)
+                                }
+                                duplicate={() =>
+                                  mutations.duplicateUnit(unit.id)
+                                }
+                                remove={() => mutations.removeUnit(unit.id)}
+                                reselect={() => openUnitPicker(unit.id)}
+                                collapsed={collapsed}
+                              />
+                            )}
+                          </WithRibbon>
                         )}
                       </Box>
                     </Box>

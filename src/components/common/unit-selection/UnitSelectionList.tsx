@@ -6,6 +6,7 @@ import { heroConstraintData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 import { UnitSelectionButton } from "./UnitSelectionButton.tsx";
+import { WithRibbon } from "./WithRibbon.tsx";
 import { handleSpecialRestriction } from "./special-unit-selection-rules.ts";
 
 export type UnitSelectionListProps = {
@@ -46,11 +47,13 @@ export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
           unit.name.toLowerCase().includes(filter.toLowerCase()),
         )
         .map((unit) => (
-          <UnitSelectionButton
+          <WithRibbon
             key={unit.model_id}
-            unit={unit}
-            onClick={() => selectUnit(unit)}
-          />
+            label="Legacy"
+            hideRibbon={!unit.legacy}
+          >
+            <UnitSelectionButton unit={unit} onClick={() => selectUnit(unit)} />
+          </WithRibbon>
         ))}
     </Stack>
   );
