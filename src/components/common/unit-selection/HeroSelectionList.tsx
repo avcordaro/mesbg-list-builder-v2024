@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { mesbgData } from "../../../assets/data.ts";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { Unit } from "../../../types/mesbg-data.types.ts";
 import { UnitSelectionButton } from "./UnitSelectionButton.tsx";
 import { handleSpecialRestriction } from "./special-hero-selection-rules.ts";

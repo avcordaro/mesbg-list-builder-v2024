@@ -4,8 +4,8 @@ import {
   Roster,
   SelectedUnit,
   Warband,
-} from "../types/roster.ts";
-import { isNotNull } from "../utils/nulls.ts";
+} from "../../types/roster.ts";
+import { isNotNull } from "../../utils/nulls.ts";
 
 function heroAdditionalUnitRosterCount(warband: Warband) {
   if (!warband.hero) return 0;

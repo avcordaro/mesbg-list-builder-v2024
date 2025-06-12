@@ -1,7 +1,7 @@
 import Drawer from "@mui/material/Drawer";
 import { useEffect, useState } from "react";
 import { RosterInformation } from "../../components/common/roster-info/RosterInformation.tsx";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { DrawerHeader } from "../../layout/Navigation.tsx";
 import { Roster } from "../../types/roster.ts";
 

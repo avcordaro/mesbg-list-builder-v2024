@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent, MouseEvent, useState } from "react";
 import { useParams } from "react-router-dom";
 import { SquareIconButton } from "../../../../components/common/icon-button/SquareIconButton.tsx";
-import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useGameModeState } from "../../../../state/gamemode";
 import { CustomTracker as CustomTrackerType } from "../../../../state/gamemode/gamestate";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";

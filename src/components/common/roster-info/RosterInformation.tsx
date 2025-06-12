@@ -5,8 +5,8 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { FunctionComponent } from "react";
 import { BiPencil } from "react-icons/bi";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
-import { useUpdateRoster } from "../../../hooks/useUpdateRoster.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useUpdateRosterVersion } from "../../../hooks/mutations/useUpdateRosterVersion.ts";
 import { useAppState } from "../../../state/app";
 import { Roster } from "../../../types/roster.ts";
 import { ModalTypes } from "../../modal/modals.tsx";
@@ -26,7 +26,7 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
 ) => {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
-  const { isOutdatedRoster, updateRoster } = useUpdateRoster();
+  const { isOutdatedRoster, updateRoster } = useUpdateRosterVersion();
   const screen = useScreenSize();
   return (
     <Stack gap={2} sx={{ p: 2 }}>

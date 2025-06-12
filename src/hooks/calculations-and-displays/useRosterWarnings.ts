@@ -1,8 +1,8 @@
-import data from "../assets/data/warning_rules.json";
-import { useUserPreferences } from "../state/preference";
-import { isSelectedUnit, Roster } from "../types/roster.ts";
-import { WarningRule, WarningRules } from "../types/warning-rules.types.ts";
-import { byHeroicTier } from "./profile-utils/sorting.ts";
+import data from "../../assets/data/warning_rules.json";
+import { useUserPreferences } from "../../state/preference";
+import { isSelectedUnit, Roster } from "../../types/roster.ts";
+import { WarningRule, WarningRules } from "../../types/warning-rules.types.ts";
+import { byHeroicTier } from "../profiles/profile-utils/sorting.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 function checkRequiresOne(rule: WarningRule, setOfModelIds: string[]): boolean {

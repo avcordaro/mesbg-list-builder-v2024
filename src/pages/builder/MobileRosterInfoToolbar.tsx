@@ -4,8 +4,8 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import { armyListData } from "../../assets/data.ts";
 import { OpenNavigationDrawerEvent } from "../../events/OpenNavigationDrawerEvent.ts";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 
 export const ROSTER_INFO_BAR_HEIGHT = 40;
 

@@ -1,5 +1,5 @@
-import { armyListData } from "../assets/data.ts";
-import { useProfiles } from "./useProfiles.ts";
+import { armyListData } from "../../assets/data.ts";
+import { useProfiles } from "../profiles/useProfiles.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useUsedSpecialRules = () => {

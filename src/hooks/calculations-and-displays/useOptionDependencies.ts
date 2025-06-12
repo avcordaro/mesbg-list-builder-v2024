@@ -1,4 +1,4 @@
-import { OptionDependency } from "../types/mesbg-data.types.ts";
+import { OptionDependency } from "../../types/mesbg-data.types.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useOptionDependencies = (warbandId: string) => {

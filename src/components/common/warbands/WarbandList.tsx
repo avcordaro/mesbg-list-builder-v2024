@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { createRef, FunctionComponent, useEffect, useRef } from "react";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
-import { useRosterMutations } from "../../../hooks/useRosterMutations.ts";
-import { useRosterSorting } from "../../../hooks/useRosterSorting.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useRosterMutations } from "../../../hooks/mutations/useRosterMutations.ts";
+import { useRosterSorting } from "../../../hooks/mutations/useRosterSorting.ts";
 import { Warband as WarbandType } from "../../../types/roster.ts";
 import { Warband, WarbandActions } from "./Warband.tsx";
 

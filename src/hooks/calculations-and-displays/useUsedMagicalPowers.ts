@@ -1,4 +1,4 @@
-import { useProfiles } from "./useProfiles.ts";
+import { useProfiles } from "../profiles/useProfiles.ts";
 
 export const useUsedMagicalPowers = () => {
   try {

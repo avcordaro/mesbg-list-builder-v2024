@@ -7,7 +7,7 @@ import { User } from "firebase/auth";
 import { useState, MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../firebase/FirebaseAuthContext.tsx";
-import { useScreenSize } from "../hooks/useScreenSize.ts";
+import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
 
 const SignInLink = () => {
   const screen = useScreenSize();

@@ -15,7 +15,7 @@ import { useTheme } from "@mui/material/styles";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { Link } from "../../components/common/link/Link.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";

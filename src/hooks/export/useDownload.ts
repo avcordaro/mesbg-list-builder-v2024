@@ -1,9 +1,9 @@
 import { saveAs } from "file-saver";
 import JSZip from "jszip";
 import { useState } from "react";
-import { heroConstraintData } from "../assets/data.ts";
-import { isSelectedUnit } from "../types/roster.ts";
-import { useRosterInformation } from "./useRosterInformation.ts";
+import { heroConstraintData } from "../../assets/data.ts";
+import { isSelectedUnit } from "../../types/roster.ts";
+import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
 
 export function download(
   content: string,

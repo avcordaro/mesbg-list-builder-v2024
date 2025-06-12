@@ -1,10 +1,10 @@
 import { DragStart, DropResult } from "@hello-pangea/dnd";
-import { useRosterBuildingState } from "../state/roster-building";
-import { SiegeEquipment } from "../types/mesbg-data.types.ts";
-import { FreshUnit, SelectedUnit, Warband } from "../types/roster.ts";
-import { moveItem, moveItemBetweenLists } from "../utils/array.ts";
-import { useCalculator } from "./useCalculator.ts";
-import { useRosterInformation } from "./useRosterInformation.ts";
+import { useRosterBuildingState } from "../../state/roster-building";
+import { SiegeEquipment } from "../../types/mesbg-data.types.ts";
+import { FreshUnit, SelectedUnit, Warband } from "../../types/roster.ts";
+import { moveItem, moveItemBetweenLists } from "../../utils/array.ts";
+import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
+import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
 
 function byId(id: string) {
   return (warband) => warband.id === id;

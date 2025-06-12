@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
-import { mesbgData } from "../assets/data.ts";
-import { handleSpecialRestriction } from "../components/common/unit-selection/special-hero-selection-rules.ts";
-import { useRosterBuildingState } from "../state/roster-building";
-import { Unit } from "../types/mesbg-data.types.ts";
-import { isSelectedUnit, Roster } from "../types/roster.ts";
-import { isNotNull } from "../utils/nulls.ts";
-import { slugify } from "../utils/string.ts";
+import { mesbgData } from "../../assets/data.ts";
+import { handleSpecialRestriction } from "../../components/common/unit-selection/special-hero-selection-rules.ts";
+import { useRosterBuildingState } from "../../state/roster-building";
+import { Unit } from "../../types/mesbg-data.types.ts";
+import { isSelectedUnit, Roster } from "../../types/roster.ts";
+import { isNotNull } from "../../utils/nulls.ts";
+import { slugify } from "../../utils/string.ts";
 
 export type RosterInformationFunctions = {
   roster: Roster;

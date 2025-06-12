@@ -1,18 +1,18 @@
 import { useEffect } from "react";
-import { mesbgData, siegeEquipmentData } from "../assets/data.ts";
-import { useUserPreferences } from "../state/preference";
-import { useRosterBuildingState } from "../state/roster-building";
+import { mesbgData, siegeEquipmentData } from "../../assets/data.ts";
+import { useUserPreferences } from "../../state/preference";
+import { useRosterBuildingState } from "../../state/roster-building";
 import {
   FreshUnit,
   isSelectedUnit,
   Roster,
   SelectedUnit,
-} from "../types/roster.ts";
-import { deepEqual } from "../utils/objects.ts";
-import { useCalculator } from "./useCalculator.ts";
-import { useRosterInformation } from "./useRosterInformation.ts";
+} from "../../types/roster.ts";
+import { deepEqual } from "../../utils/objects.ts";
+import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
+import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
 
-export const useUpdateRoster = () => {
+export const useUpdateRosterVersion = () => {
   const { preferences } = useUserPreferences();
   const { roster } = useRosterInformation();
   const calculator = useCalculator();

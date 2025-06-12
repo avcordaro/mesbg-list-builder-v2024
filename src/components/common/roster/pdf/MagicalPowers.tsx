@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import keywords from "../../../../assets/data/keywords.json";
 
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 
 interface MagicalPowerListProps {

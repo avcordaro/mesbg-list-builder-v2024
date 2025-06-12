@@ -1,8 +1,8 @@
-import { useCollectionState } from "../state/collection";
-import { useUserPreferences } from "../state/preference";
-import { isSiegeEquipment, SelectedUnit } from "../types/roster.ts";
-import { arraysMatch } from "../utils/array.ts";
-import { findBestMatch } from "../utils/string.ts";
+import { useCollectionState } from "../../state/collection";
+import { useUserPreferences } from "../../state/preference";
+import { isSiegeEquipment, SelectedUnit } from "../../types/roster.ts";
+import { arraysMatch } from "../../utils/array.ts";
+import { findBestMatch } from "../../utils/string.ts";
 import {
   calculateGenericModels,
   getAmountOfAvailableUnitsIncludingGenerics,
@@ -10,7 +10,7 @@ import {
   getListOfOptionsForGivenUnit,
   getMountName,
   getTotalSelectedModelsGroupedPerChosenOptions,
-} from "./collections/utils.ts";
+} from "../collections/utils.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useCollectionWarnings = (
