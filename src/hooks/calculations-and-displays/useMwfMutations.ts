@@ -1,6 +1,6 @@
 import { Option } from "../../types/mesbg-data.types.ts";
 import { SelectedUnit } from "../../types/roster.ts";
-import handlers, { handledModels } from "../mwfw";
+import handlers, { handledModels } from "./mwfw";
 
 export interface MwfwUpdater {
   isMatchingUnit: (unitId: string) => boolean;
