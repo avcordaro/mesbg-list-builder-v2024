@@ -7075,6 +7075,19 @@
         "Woodland Creature"
       ]
     },
+    "Feralof": {
+      "Mv": "12\"",
+      "Fv": "2",
+      "Sv": "6+",
+      "S": "3",
+      "D": "5",
+      "A": "0",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "special_rules": []
+    },
     "War Boar": {
       "Mv": "8\"",
       "Fv": "4",
@@ -15367,6 +15380,780 @@
       ],
       "special_rules": [],
       "magic_powers": []
+    }
+  },
+  "Good Legacy": {
+    "Anborn, Ranger of Ithilien": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Lethal Aim",
+          "type": "Active",
+          "description": "Each turn, Anborn gains a free Might Point that can only be spent during a shooting attack on either a To Hit Roll, a To Wound Roll, or an In The Way Test. If this free Might Point is not spent by the end of the turn, it is lost."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Sharpshooter",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Bow"
+      ]
+    },
+    "Balin the Dwarf, King of Moria": {
+      "Mv": "5\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Durin's Axe",
+          "type": "Active",
+          "description": "This is a Unique Master-forged two-handed weapon. Additionally, Balin may re-roll a single D6 when making a Duel Roll."
+        },
+        {
+          "name": "Longbeard",
+          "type": "Active",
+          "description": "During the Priority Phase, after the roll for Priority has taken place, Balin can spend a Will Point to allow his controlling player to re-roll their roll for Priority."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic March",
+        "Heroic Resolve",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Leader (Khazad Guard)"
+      ],
+      "wargear": [
+        "Heavy Dwarf armour",
+        "Durin's Axe"
+      ]
+    },
+    "Bandobras Took": {
+      "Mv": "4\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "3",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Clean strike",
+          "type": "Active",
+          "description": "If Bandobras rolls a natural 6 To Wound when making a Strike, and the Wound is successful, then the target will suffer 2 Wounds rather than 1."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Leader (Hobbit Shirriff)",
+        "Resistant to Magic",
+        "Throw Stones (range 8\", Strength 1)"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "Horse"
+      ]
+    },
+    "Cirion, Lieutenant of Amon Barad": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Boldest of the Bold",
+          "type": "Active",
+          "description": "Cirion gains a bonus of +2 to his Courage Test when attempting to Charge an enemy with the Terror special rule. Additionally, when an enemy model with the Blades of the Dead special rule makes Strikes against Cirion, he treats his Courage value as 4+ rather than 6+ (before any modifiers are applied)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "Shield",
+        "Hand weapon"
+      ]
+    },
+    "Drar": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Expert Shot",
+        "Sharpshooter",
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Dwarf armour",
+        "Hand weapon",
+        "Dwarf bow"
+      ]
+    },
+    "Dwarf Shieldbearer": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "In Defence of the King",
+          "type": "Active",
+          "description": "During the Declare Heroic Actions step of the Fight Phase, if a friendly Dwarf General is Engaged in Combat and is within 6\" of this model, then this model may declare a free Heroic Combat. If this Heroic Combat is successful, then this model must use the following Move to join the friendly Dwarf General model's Combat. If this is not possible, then this model must Move as close as possible to the Dwarf General. This model cannot use this special rule if it is in the same Combat as a friendly Dwarf General."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Dwarf armour",
+        "shield",
+        "hand weapon"
+      ]
+    },
+    "Man-at-Arms of Dol Amroth": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pride of Dol Amroth",
+          "type": "Active",
+          "description": "Whilst within 3\" of Prince Imrahil, this model gains a bonus of +1 to their Fight Value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Pike"
+      ]
+    },
+    "Eorl the Young": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Legendary Hero",
+          "type": "Active",
+          "description": "The first time each turn Eorl spends a Might Point, roll a D6. On a 4+, the Might Point is free and does not reduce Eorl's store of Might."
+        },
+        {
+          "name": "Spear Mastery",
+          "type": "Passive",
+          "description": "This model may use its throwing spears as a normal spear during the Fight Phase, so long as it hasn't made a shooting attack with it in either the preceding Move Phase or Shoot Phase."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic Resolve",
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Expert Rider",
+        "Horse Lord",
+        "Leader (Sons of Eorl)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield",
+        "throwing spears",
+        "Feralof"
+      ]
+    },
+    "Erestor": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Noldorin Daggers",
+          "type": "Active",
+          "description": "These are Elven hand weapons, which Erestor may also use as Elven throwing weapons. Erestor may re-roll To Wound rolls of a natural 1 when making Strikes or when making Shooting Attacks with these weapons."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Terror",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Noldorin Daggers"
+      ]
+    },
+    "Erkenbrand, Captain of Rohan": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Horn of the Hammerhand",
+          "type": "Active",
+          "description": "This is a Unique war horn. Additionally, once per game at the start of any Move Phase, Erkenbrand can unleash a fearsome blow of the Horn of the Hammerhand. Until the End Phase of the turn, enemy models within 24\" of Erkenbrand suffer a -1 penalty to any Courage Test they are required to make."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March",
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Expert Rider",
+        "Horse Lord"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield",
+        "Horse",
+        "Horn of the Hammerhand"
+      ]
+    },
+    "Floi Stonehand": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Loremaster",
+          "type": "Active",
+          "description": "At any point during his Activation, Floi can spend a Will Point to choose a single enemy model within 12\" and Line of Sight of himself. If he does, then for the remainder of the turn friendly models within 6\" of Floi gain a bonus of +1 To Wound against the chosen model both when making Strikes and when making Shooting Attacks."
+        },
+        {
+          "name": "The Living Lore",
+          "type": "Passive",
+          "description": "Whenever a friendly model slays an enemy Hero or Monster model that Floi can draw Line of Sight to, Floi may regain a Will Point spent earlier in the battle."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Gildor Inglorion": {
+      "Mv": "8\"",
+      "Fv": "6",
+      "Sv": "3+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "2",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Immobilise",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Writhing Vines",
+          "range": "Self",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling",
+        "Heroic Defence",
+        "Heroic March",
+        "Heroic Resolve"
+      ],
+      "special_rules": [
+        "Terror",
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Elven weapon",
+        "Elven cloak"
+      ]
+    },
+    "Grimbold of Grimslade": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength"
+      ],
+      "special_rules": [
+        "Mighty Blow"
+      ],
+      "wargear": [
+        "Armour",
+        "two-handed weapon"
+      ]
+    },
+    "King's Champion": {
+      "Mv": "5\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "5",
+      "D": "7",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "The Herald's Duty",
+          "type": "Active",
+          "description": "This model receives a bonus of +1 to its Defence for each other friendly model with this special rule it is in base contact with. If you have multiple King\u2019s Champions in your Army, they will only get this bonus for being in base contact with models from their own Warband (i.e., a Herald from one King\u2019s Champion cannot provide the bonus to a model from another King\u2019s Champion)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Dwarf armour",
+        "hand weapons"
+      ],
+      "additional_stats": [
+        {
+          "name": "Herald",
+          "Mv": "5\"",
+          "Fv": "6",
+          "Sv": "4+",
+          "S": "5",
+          "D": "7",
+          "A": "3",
+          "W": "2",
+          "C": "5+",
+          "I": "6+",
+          "Might": "2",
+          "Will": "1",
+          "Fate": "1",
+          "active_or_passive_rules": [
+            {
+              "name": "The Herald's Duty",
+              "type": "Active",
+              "description": "This model receives a bonus of +1 to its Defence for each other friendly model with this special rule it is in base contact with. If you have multiple King\u2019s Champions in your Army, they will only get this bonus for being in base contact with models from their own Warband (i.e., a Herald from one King\u2019s Champion cannot provide the bonus to a model from another King\u2019s Champion)."
+            },
+            {
+              "name": "The Life Guard",
+              "type": "Active",
+              "description": "If the King\u2019s Champion this Herald belongs to is Wounded, and this model is in base contact with it, this model may expend its Fate Points on behalf of the King\u2019s Champion. Note that they cannot suffer Wounds on the King\u2019s Champion\u2019s behalf \u2013 they may only spend their Fate Points."
+            }
+          ],
+          "options": [],
+          "magic_powers": [],
+          "heroic_actions": [],
+          "special_rules": [],
+          "wargear": [
+            "Dwarf armour",
+            "shield",
+            "hand weapon",
+            "banner"
+          ]
+        }
+      ]
+    },
+    "King's Huntsman": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Master Archer",
+          "type": "Active",
+          "description": "This model only fails an In The Way Test on the roll of a natural 1. Additionally, if this model slays an enemy Hero or Monster model with a shooting attack, then you may restore this model's Might to its starting value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Sharpshooter"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Longbow"
+      ]
+    },
+    "Knight of the White Tower": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "White Sword of Gondor",
+          "type": "Active",
+          "description": "This is a two-handed weapon. Additionally, Strikes made with a White Sword of Gondor have the Mighty Blow special rule."
+        },
+        {
+          "name": "The Bladelord's Skill",
+          "type": "Active",
+          "description": "If this model is Engaged in Combat with an enemy Hero, it may re-roll a single D6 during the Duel Roll."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "White Sword of Gondor"
+      ]
+    },
+    "Lothlorien Stormcaller": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Powers of Nature",
+          "type": "Passive",
+          "description": "If this model rolls a natural 6 during its Casting Test, then upon completion of the Magical Power it regains a number of Will Points equal to the number of Will Points spent during the Casting Test."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Call Winds",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Enchant Blades",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Writhing Vines",
+          "range": "Self",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "Elven hand weapons"
+      ]
+    },
+    "Mablung, Ranger of Ithilien": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Birdcalls",
+          "type": "Active",
+          "description": "Mablung and any Rangers of Gondor (including Faramir, Madril, Damrod and Anborn) within 6\" of him gain the Stalk Unseen special rule. Additionally, Mablung and any Rangers of Gondor (including Faramir, Madril, Damrod and Anborn) within 6\" of him ignore the Stalk Unseen special rule of enemy models."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Murin": {
+      "Mv": "5\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Kalazal",
+          "type": "Active",
+          "description": "This is a Unique hand weapon. Murin gains a bonus of +1 To Wound when making Strikes against Orc, Goblin or Uruk-hai models."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Dwarf armour",
+        "Shield",
+        "Kalazal"
+      ]
+    },
+    "Noldorin Exiles": {
+      "Mv": "8\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "3",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Wood Elf spear",
+          "type": "Active",
+          "description": "An Elven spear, and this model may use the Shielding rule even if they do not have a shield."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Elven hand-and-a-half weapon",
+        "Elven Cloak"
+      ]
+    },
+    "Rivendell Stormcaller": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Powers of Nature",
+          "type": "Passive",
+          "description": "If this model rolls a natural 6 during its Casting Test, then upon completion of the Magical Power it regains a number of Will Points equal to the number of Will Points spent during the Casting Test."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Call Winds",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Foil Magic",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Strengthen Will",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ],
+      "wargear": [
+        "Armour",
+        "Elven hand weapons"
+      ]
+    },
+    "Rohan Outrider": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Vanguard",
+          "type": "Active",
+          "description": "This model may benefit from a friendly Hero model's Stand Fast regardless of range."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Expert Rider"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "bow"
+      ]
+    },
+    "Son of Eorl": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Riders of Eorl",
+          "type": "Active",
+          "description": "Whilst within 6\" of Eorl the Young, this model gains a bonus of +1 to their Fight Value."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Expert Rider"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield",
+        "Armoured horse"
+      ]
     }
   }
 }
