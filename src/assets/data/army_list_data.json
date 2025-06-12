@@ -2659,6 +2659,102 @@
     "throw_limit": 0.33,
     "rule_highlights": [
       "Dominant (2)"
-    ]
+    ],
+    "legacy": true
+  },
+  "Fields of Celebrant": {
+    "additional_rules": [
+      {
+        "description": "A Fields of Celebrant Army must always contain Eorl the Young, who is always the Army's General."
+      },
+      {
+        "description": "A Fields of Celebrant Army must always contain a King of Men, which must choose the Gondor keyword as part of its Kingdoms of Men special rule. No other Kings of Men can be taken."
+      },
+      {
+        "description": "Rohan Warrior models can only be included in the Warband of a Rohan Hero."
+      },
+      {
+        "description": "Gondor Warrior models can only be included in the Warband of a Gondor Hero."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Birth of an Alliance",
+        "description": "Friendly models within 6\" of both a friendly Rohan Hero model and a friendly Gondor Hero model gain a bonus of +1 to any Courage or Intelligence Tests they are required to take."
+      },
+      {
+        "title": "Gondor's Last Defence",
+        "description": "Friendly Gondor models within range of an Objective Marker may re-roll To Wound rolls of a natural 1 when making Strikes."
+      },
+      {
+        "title": "The Charge of Eorl",
+        "description": "Once per game, at the start of any friendly Activation Phase, Eorl can use this special rule so long as he is alive and on the battlefield, and has the Cavalry keyword. If he does, then until the end of the turn all friendly Cavalry models must Charge when they Move if able. Additionally, until the end of the turn, friendly Cavalry models that Charged this turn may re-roll any failed To Wound rolls when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "Reclamation of Moria": {
+    "additional_rules": [
+      {
+        "description": "A Reclamation of Moria Army must always contain Balin, who is always the Army's General."
+      },
+      {
+        "description": "Ori and \u00d3in gain the Khazad-d\u00fbm keyword."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Reclaim Moria",
+        "description": "At the end of the game, if you control more Objective Markers than your opponent (if applicable), or are in possession of more Objective Markers than your opponent (if applicable), you score an additional 2 Victory Points. This can never take this Army's controlling player's total Victory Points above 20. Models that escape the board carrying an Objective Marker count as still being in possession of that Objective Marker for the purpose of this special rule."
+      },
+      {
+        "title": "A Desperate Defence",
+        "description": "Whilst this Army is considered to be Broken, friendly models gain a bonus of +1 To Wound when making Strikes."
+      },
+      {
+        "title": "Balin's Last Stand",
+        "description": "At the beginning of the Fight Phase, at the start of the Declare Heroic Actions Step, any friendly Dwarf Hero models that would be considered Trapped may declare a Heroic Defence for free, even if they could not normally declare a Heroic Defence."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "Expedition to the East": {
+    "additional_rules": [
+      {
+        "description": "The General of an Expedition to the East Army must always be a Unique Hero."
+      },
+      {
+        "description": "Dwarf Warrior models can only be included in the Warband of a Dwarf Hero."
+      },
+      {
+        "description": "Gondor Warrior models can only be included in the Warband of a Gondor Hero."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Campaign in Rh\u00fbn",
+        "description": "Friendly models gain the Hatred (Easterling) special rule."
+      },
+      {
+        "title": "Unlikely Allies",
+        "description": "Friendly Dwarf models may re-roll To Wound rolls of a natural 1 whilst within 1\" of a friendly Gondor model. Friendly Gondor models may re-roll To Wound rolls of a natural 1 whilst within 1\" of a friendly Dwarf model."
+      },
+      {
+        "title": "Spoils of War",
+        "description": "At the beginning of the game, before either Army has been deployed, your opponent secretly chooses a piece of terrain on the board; this contains the treasure your Army is seeking. If a friendly model ends its Activation in base contact with a piece of terrain and is not Engaged in Combat, it may search that piece of terrain. If it does, your opponent must reveal if that was their chosen terrain piece. If it was not, nothing happens. If it was, then the model discovers the treasure and leaves to return it to Minas Tirith. Remove the model from play \u2013 it does not count as a casualty. If when the game ends you have discovered the treasure, you gain an additional 2 Victory Points. This can never take this Army's controlling player's total Victory Points above 20."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Hatred (Easterling)"
+    ],
+    "legacy": true
   }
 }

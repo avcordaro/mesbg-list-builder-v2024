@@ -8542,51 +8542,6 @@
     "warband_size": 18,
     "options": []
   },
-  "[dragons-of-the-north] dragon": {
-    "model_id": "[dragons-of-the-north] dragon",
-    "army_type": "Evil",
-    "army_list": "Dragons of the North",
-    "profile_origin": "The Misty Mountains",
-    "name": "Dragon",
-    "unit_type": "Hero of Legend",
-    "base_points": 200,
-    "siege_crew": 0,
-    "MWFW": [
-      [
-        "",
-        "3:3:3:7"
-      ]
-    ],
-    "no_followers": true,
-    "warband_size": 18,
-    "options": [
-      {
-        "id": "OPT0961",
-        "name": "Breathe Fire",
-        "points": 50
-      },
-      {
-        "id": "OPT0962",
-        "name": "Fly",
-        "points": 50
-      },
-      {
-        "id": "OPT0963",
-        "name": "Superior Intellect",
-        "points": 50
-      },
-      {
-        "id": "OPT0964",
-        "name": "Tough Hide",
-        "points": 50
-      },
-      {
-        "id": "OPT0965",
-        "name": "Wyrm Magic",
-        "points": 50
-      }
-    ]
-  },
   "[dragons-of-the-north] dragon-general": {
     "model_id": "[dragons-of-the-north] dragon-general",
     "army_type": "Evil",
@@ -8628,6 +8583,51 @@
       },
       {
         "id": "OPT0986",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
+  "[dragons-of-the-north] dragon": {
+    "model_id": "[dragons-of-the-north] dragon",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "no_followers": true,
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0961",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT0962",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT0963",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT0964",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT0965",
         "name": "Wyrm Magic",
         "points": 50
       }
@@ -9284,6 +9284,250 @@
       }
     ]
   },
+  "[expedition-to-the-east] cirion-lieutenant-of-amon-barad": {
+    "model_id": "[expedition-to-the-east] cirion-lieutenant-of-amon-barad",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Good Legacy",
+    "name": "Cirion, Lieutenant of Amon Barad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[expedition-to-the-east] captain-of-minas-tirith": {
+    "model_id": "[expedition-to-the-east] captain-of-minas-tirith",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Gondor",
+    "name": "Captain of Minas Tirith",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[expedition-to-the-east] drar": {
+    "model_id": "[expedition-to-the-east] drar",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Good Legacy",
+    "name": "Drar",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[expedition-to-the-east] murin": {
+    "model_id": "[expedition-to-the-east] murin",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Good Legacy",
+    "name": "Murin",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[expedition-to-the-east] knight-of-minas-tirith": {
+    "model_id": "[expedition-to-the-east] knight-of-minas-tirith",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Gondor",
+    "name": "Knight of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1276",
+        "name": "Exchange shield and lance for banner",
+        "points": 25
+      }
+    ]
+  },
+  "[expedition-to-the-east] dwarf-ranger": {
+    "model_id": "[expedition-to-the-east] dwarf-ranger",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Ranger",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1285",
+        "name": "Dwarf longbow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1286",
+        "name": "Throwing weapons",
+        "points": 1,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1287",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[expedition-to-the-east] dwarf-warrior": {
+    "model_id": "[expedition-to-the-east] dwarf-warrior",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1280",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1281",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1282",
+        "name": "Dwarf bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1283",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1284",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[expedition-to-the-east] ranger-of-gondor": {
+    "model_id": "[expedition-to-the-east] ranger-of-gondor",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Gondor",
+    "name": "Ranger of Gondor",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1277",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1278",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1279",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[expedition-to-the-east] warrior-of-minas-tirith": {
+    "model_id": "[expedition-to-the-east] warrior-of-minas-tirith",
+    "army_type": "Good (Legacy)",
+    "army_list": "Expedition to the East",
+    "profile_origin": "Gondor",
+    "name": "Warrior of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1271",
+        "name": "War horn and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1272",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1273",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT1274",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1275",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      }
+    ]
+  },
   "[fangorn] treebeard": {
     "model_id": "[fangorn] treebeard",
     "army_type": "Good",
@@ -9381,6 +9625,232 @@
         "id": "OPT0610",
         "name": "Ash",
         "points": 0
+      }
+    ]
+  },
+  "[fields-of-celebrant] eorl-the-young": {
+    "model_id": "[fields-of-celebrant] eorl-the-young",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Good Legacy",
+    "name": "Eorl the Young",
+    "unit_type": "Hero of Legend",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:3"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[fields-of-celebrant] king-of-men-(gondor)": {
+    "model_id": "[fields-of-celebrant] king-of-men-(gondor)",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Gondor",
+    "name": "King of Men (Gondor)",
+    "unit_type": "Hero of Valour",
+    "base_points": 75,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1252",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Horse"
+      },
+      {
+        "id": "OPT1253",
+        "name": "Exchange armour for heavy armour",
+        "points": 5
+      },
+      {
+        "id": "OPT1254",
+        "name": "Lance",
+        "points": 5
+      },
+      {
+        "id": "OPT1255",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[fields-of-celebrant] captain-of-minas-tirith": {
+    "model_id": "[fields-of-celebrant] captain-of-minas-tirith",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Gondor",
+    "name": "Captain of Minas Tirith",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[fields-of-celebrant] captain-of-rohan": {
+    "model_id": "[fields-of-celebrant] captain-of-rohan",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Rohan",
+    "name": "Captain of Rohan",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1247",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount",
+        "included": true,
+        "mount_name": "Horse",
+        "quantity": 1
+      },
+      {
+        "id": "OPT1248",
+        "name": "Exchange armour for heavy armour",
+        "points": 5
+      },
+      {
+        "id": "OPT1249",
+        "name": "Shield",
+        "points": 5
+      }
+    ]
+  },
+  "[fields-of-celebrant] son-of-eorl": {
+    "model_id": "[fields-of-celebrant] son-of-eorl",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Good Legacy",
+    "name": "Son of Eorl",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fields-of-celebrant] rider-of-rohan": {
+    "model_id": "[fields-of-celebrant] rider-of-rohan",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Rohan",
+    "name": "Rider of Rohan",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1250",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1251",
+        "name": "Throwing spears",
+        "points": 2,
+        "type": "throw"
+      }
+    ]
+  },
+  "[fields-of-celebrant] citadel-guard": {
+    "model_id": "[fields-of-celebrant] citadel-guard",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Gondor",
+    "name": "Citadel Guard",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1261",
+        "name": "Longbow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1262",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[fields-of-celebrant] warrior-of-minas-tirith": {
+    "model_id": "[fields-of-celebrant] warrior-of-minas-tirith",
+    "army_type": "Good (Legacy)",
+    "army_list": "Fields of Celebrant",
+    "profile_origin": "Gondor",
+    "name": "Warrior of Minas Tirith",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1256",
+        "name": "War horn and shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1257",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1258",
+        "name": "Shield and spear",
+        "points": 2
+      },
+      {
+        "id": "OPT1259",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1260",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
       }
     ]
   },
@@ -17579,6 +18049,266 @@
     ],
     "warband_size": 6,
     "options": []
+  },
+  "[reclamation-of-moria] balin-the-dwarf-king-of-moria": {
+    "model_id": "[reclamation-of-moria] balin-the-dwarf-king-of-moria",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Good Legacy",
+    "name": "Balin the Dwarf, King of Moria",
+    "unit_type": "Hero of Legend",
+    "base_points": 110,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:2"
+      ]
+    ],
+    "warband_size": 18,
+    "options": []
+  },
+  "[reclamation-of-moria] dwarf-king": {
+    "model_id": "[reclamation-of-moria] dwarf-king",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf King",
+    "unit_type": "Hero of Valour",
+    "base_points": 85,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[reclamation-of-moria] king's-champion": {
+    "model_id": "[reclamation-of-moria] king's-champion",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Good Legacy",
+    "name": "King's Champion",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 140,
+    "siege_crew": 2,
+    "MWFW": [
+      [
+        "King's Champion",
+        "2:1:1:2"
+      ],
+      [
+        "Herald",
+        "0:1:2:2"
+      ],
+      [
+        "Herald",
+        "0:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[reclamation-of-moria] floi-stonehand": {
+    "model_id": "[reclamation-of-moria] floi-stonehand",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Good Legacy",
+    "name": "Floi Stonehand",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 75,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[reclamation-of-moria] dwarf-captain": {
+    "model_id": "[reclamation-of-moria] dwarf-captain",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 65,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[reclamation-of-moria] oin-the-dwarf-champion-of-erebor": {
+    "model_id": "[reclamation-of-moria] oin-the-dwarf-champion-of-erebor",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Oin the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:5:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[reclamation-of-moria] ori-the-dwarf-champion-of-erebor": {
+    "model_id": "[reclamation-of-moria] ori-the-dwarf-champion-of-erebor",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Ori the Dwarf, Champion of Erebor",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[reclamation-of-moria] dwarf-shieldbearer": {
+    "model_id": "[reclamation-of-moria] dwarf-shieldbearer",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Good Legacy",
+    "name": "Dwarf Shieldbearer",
+    "unit_type": "Minor Hero",
+    "base_points": 60,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:0:0:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[reclamation-of-moria] iron-guard": {
+    "model_id": "[reclamation-of-moria] iron-guard",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Iron Guard",
+    "unit_type": "Warrior",
+    "base_points": 15,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[reclamation-of-moria] khazad-guard": {
+    "model_id": "[reclamation-of-moria] khazad-guard",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Khazad Guard",
+    "unit_type": "Warrior",
+    "base_points": 12,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[reclamation-of-moria] dwarf-ranger": {
+    "model_id": "[reclamation-of-moria] dwarf-ranger",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Ranger",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1268",
+        "name": "Dwarf longbow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1269",
+        "name": "Throwing weapons",
+        "points": 1,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1270",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[reclamation-of-moria] dwarf-warrior": {
+    "model_id": "[reclamation-of-moria] dwarf-warrior",
+    "army_type": "Good (Legacy)",
+    "army_list": "Reclamation of Moria",
+    "profile_origin": "Dwarven Holds",
+    "name": "Dwarf Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1263",
+        "name": "War horn",
+        "points": 25
+      },
+      {
+        "id": "OPT1264",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1265",
+        "name": "Dwarf bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1266",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1267",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
   },
   "[reclamation-of-osgiliath] boromir-captain-of-the-white-tower": {
     "model_id": "[reclamation-of-osgiliath] boromir-captain-of-the-white-tower",

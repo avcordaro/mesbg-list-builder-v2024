@@ -268,6 +268,17 @@
       "warning":"An Erebor & Dale Army must include Girion."
     }
   ],
+  "Expedition to the East":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[expedition-to-the-east] murin",
+        "[expedition-to-the-east] drar",
+        "[expedition-to-the-east] cirion-lieutenant-of-amon-barad"
+      ],
+      "warning":"An  Expedition to the East Army must always contain a Unique Hero to be your General."
+    }
+  ],
   "Fangorn":[
     {
       "type":"compulsory",
@@ -275,6 +286,22 @@
         "[fangorn] treebeard"
       ],
       "warning":"A Fangorn Army must always contain Treebeard, who is always the Army's General."
+    }
+  ],
+  "Fields of Celebrant":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[fields-of-celebrant] eorl-the-young"
+      ],
+      "warning":"A Fields of Celebrant Army must always contain Eorl the Young, who is always the Army's General."
+    },
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[fields-of-celebrant] king-of-men-(gondor)"
+      ],
+      "warning":"A Fields of Celebrant Army must always contain a King of Men (Gondor)"
     }
   ],
   "Fords of Isen":[
@@ -418,6 +445,15 @@
         "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood"
       ],
       "warning":"A Rangers of Mirkwood must include at least one Unique Elf Hero."
+    }
+  ],
+  "Reclamation of Moria":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[reclamation-of-moria] balin-the-dwarf-king-of-moria"
+      ],
+      "warning":"A Reclamation of Moria Army must always contain Balin, who is always the Army's General."
     }
   ],
   "Reclamation of Osgiliath":[
@@ -680,6 +716,24 @@
         "[defenders-of-the-pelennor] elladan"
       ],
       "warning":"Elrohir and Elladan must always be chosen together in your army, you cannot have one on their own."
+    }
+  ],
+  "[expedition-to-the-east] drar":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[expedition-to-the-east] murin"
+      ],
+      "warning":"Murin & Drar must always be included together in your army, you cannot have one on their own."
+    }
+  ],
+  "[expedition-to-the-east] murin":[
+    {
+      "type":"requires_all",
+      "dependencies":[
+        "[expedition-to-the-east] drar"
+      ],
+      "warning":"Murin & Drar must always be included together in your army, you cannot have one on their own."
     }
   ],
   "[garrison-of-ithilien] samwise-gamgee":[

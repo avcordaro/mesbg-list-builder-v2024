@@ -1224,8 +1224,7 @@
   "[battle-of-greenfields] ranger-of-the-north": {
     "valid_warband_units": [
       "[battle-of-greenfields] hobbit-archer",
-      "[battle-of-greenfields] hobbit-militia",
-      "[battle-of-greenfields] hobbit-shirriff"
+      "[battle-of-greenfields] hobbit-militia"
     ],
     "extra_profiles": []
   },
@@ -2078,6 +2077,36 @@
     ],
     "extra_profiles": []
   },
+  "[expedition-to-the-east] captain-of-minas-tirith": {
+    "valid_warband_units": [
+      "[expedition-to-the-east] warrior-of-minas-tirith",
+      "[expedition-to-the-east] knight-of-minas-tirith",
+      "[expedition-to-the-east] ranger-of-gondor"
+    ],
+    "extra_profiles": []
+  },
+  "[expedition-to-the-east] cirion-lieutenant-of-amon-barad": {
+    "valid_warband_units": [
+      "[expedition-to-the-east] warrior-of-minas-tirith",
+      "[expedition-to-the-east] knight-of-minas-tirith",
+      "[expedition-to-the-east] ranger-of-gondor"
+    ],
+    "extra_profiles": []
+  },
+  "[expedition-to-the-east] drar": {
+    "valid_warband_units": [
+      "[expedition-to-the-east] dwarf-warrior",
+      "[expedition-to-the-east] dwarf-ranger"
+    ],
+    "extra_profiles": []
+  },
+  "[expedition-to-the-east] murin": {
+    "valid_warband_units": [
+      "[expedition-to-the-east] dwarf-warrior",
+      "[expedition-to-the-east] dwarf-ranger"
+    ],
+    "extra_profiles": []
+  },
   "[fangorn] beechbone": {
     "valid_warband_units": [
       "[fangorn] ent"
@@ -2098,6 +2127,32 @@
       "Meriadoc Brandybuck",
       "Peregrin Took"
     ]
+  },
+  "[fields-of-celebrant] captain-of-minas-tirith": {
+    "valid_warband_units": [
+      "[fields-of-celebrant] warrior-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
+  "[fields-of-celebrant] captain-of-rohan": {
+    "valid_warband_units": [
+      "[fields-of-celebrant] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[fields-of-celebrant] eorl-the-young": {
+    "valid_warband_units": [
+      "[fields-of-celebrant] son-of-eorl",
+      "[fields-of-celebrant] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
+  "[fields-of-celebrant] king-of-men-(gondor)": {
+    "valid_warband_units": [
+      "[fields-of-celebrant] warrior-of-minas-tirith",
+      "[fields-of-celebrant] citadel-guard"
+    ],
+    "extra_profiles": []
   },
   "[fords-of-isen] captain-of-rohan": {
     "valid_warband_units": [
@@ -3699,6 +3754,71 @@
   },
   "[realms-of-men] windlance": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] balin-the-dwarf-king-of-moria": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] khazad-guard",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] dwarf-captain": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] dwarf-king": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] dwarf-shieldbearer": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] floi-stonehand": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] king's-champion": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] oin-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[reclamation-of-moria] ori-the-dwarf-champion-of-erebor": {
+    "valid_warband_units": [
+      "[reclamation-of-moria] dwarf-warrior",
+      "[reclamation-of-moria] dwarf-ranger",
+      "[reclamation-of-moria] iron-guard"
+    ],
     "extra_profiles": []
   },
   "[reclamation-of-osgiliath] boromir-captain-of-the-white-tower": {
