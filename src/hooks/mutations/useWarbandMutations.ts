@@ -13,25 +13,27 @@ import {
   SelectedUnit,
 } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
+import { useRosterSync } from "../cloud-sync/useCloudSync.ts";
 
 export const useWarbandMutations = (rosterId: string, warbandId: string) => {
   const calculator = useCalculator();
+  const sync = useRosterSync();
 
   const triggerAlert = useAppState((state) => state.triggerAlert);
   const openSidebar = useAppState((state) => state.openSidebar);
   const updateBuilderSidebar = useRosterBuildingState(
     (state) => state.updateBuilderSidebar,
   );
-  const [roster, updateRoster] = useRosterBuildingState(
+  const [roster, recalculateAndUpdate] = useRosterBuildingState(
     (state): [Roster, (roster: Roster) => void] => [
       state.rosters.find(({ id }) => id === rosterId),
       (roster) => {
-        state.updateRoster(
-          calculator.recalculateRoster({
-            ...roster,
-            warbands: roster.warbands.map(calculator.recalculateWarband),
-          }),
-        );
+        const rosterUpdate = calculator.recalculateRoster({
+          ...roster,
+          warbands: roster.warbands.map(calculator.recalculateWarband),
+        });
+        state.updateRoster(rosterUpdate);
+        sync(rosterUpdate);
       },
     ],
   );
@@ -92,7 +94,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
       }
     }
 
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function handleUnitSelection(unitId: string, unit: Unit) {
@@ -121,7 +123,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb;
       }),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function addEmptyUnit() {
@@ -138,7 +140,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     updateBuilderSidebar({
       armyList: rosterId,
       selectionType: "unit",
@@ -181,7 +183,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb;
       }),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function toggleArmyGeneral(value: boolean) {
@@ -193,7 +195,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
         leader: value ? warbandId : null,
       },
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function updateHero(unit: SelectedUnit) {
@@ -209,7 +211,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function updateUnit(unit: SelectedUnit) {
@@ -225,7 +227,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
   }
 
   function duplicateUnit(unitId: string) {
@@ -247,7 +249,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.DUPLICATE_UNIT_SUCCESS);
   }
 
@@ -264,7 +266,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.DELETE_UNIT_SUCCESS);
   }
 
@@ -276,7 +278,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
         wb.id === warbandId ? { ...wb, units: [] } : wb,
       ),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.EMPTY_WARBAND_SUCCESS);
   }
 
@@ -294,7 +296,7 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
           },
         })),
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.DELETE_WARBAND_SUCCESS);
   }
 
@@ -328,13 +330,13 @@ export const useWarbandMutations = (rosterId: string, warbandId: string) => {
         },
       ],
     };
-    updateRoster(updatedRoster);
+    recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.DUPLICATE_WARBAND_SUCCESS);
   }
 
   function addNewWarband() {
     const newWarbandId = randomUuid();
-    updateRoster({
+    recalculateAndUpdate({
       ...roster,
       warbands: [
         ...roster.warbands,

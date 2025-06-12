@@ -67,6 +67,7 @@ export type Unit = {
   default_throw?: boolean;
   inc_bow_count?: boolean;
   no_followers?: boolean;
+  legacy?: boolean;
 };
 
 export type SiegeEquipment = Pick<
