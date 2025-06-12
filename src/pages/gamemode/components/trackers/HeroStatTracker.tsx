@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { UnitProfilePicture } from "../../../../components/common/images/UnitProfilePicture.tsx";
-import { useScreenSize } from "../../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { Trackable } from "../../../../state/gamemode/gamestate";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
 import { Counter } from "./Counter.tsx";

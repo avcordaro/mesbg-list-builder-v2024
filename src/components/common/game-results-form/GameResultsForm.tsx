@@ -9,7 +9,7 @@ import {
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, forwardRef, useImperativeHandle, useState } from "react";
 import { v4 } from "uuid";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";

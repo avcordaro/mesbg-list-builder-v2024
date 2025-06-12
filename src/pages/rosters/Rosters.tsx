@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ModalTypes } from "../../components/modal/modals.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";

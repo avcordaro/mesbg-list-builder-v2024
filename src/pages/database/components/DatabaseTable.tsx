@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { MouseEvent } from "react";
-import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { ArmyType, Option, UnitType } from "../../../types/mesbg-data.types.ts";
 import { Profile } from "../../../types/profile-data.types.ts";
