@@ -76,18 +76,20 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
   return (
     <Stack sx={{ p: 1 }} gap={1}>
       {isSelectedUnit(hero) ? (
-        <HeroCard
-          unit={hero}
-          warbandId={warbandId}
-          warbandNum={warbandNum}
-          index={0}
-          updateUnit={mutations.updateHero}
-          openProfileCard={() => openProfileCard(hero)}
-          reselect={openHeroPicker}
-          isLeader={isWarbandWithLeader}
-          toggleLeader={mutations.toggleArmyGeneral}
-          collapsed={collapsed}
-        />
+        <WithRibbon label="Legacy" hideRibbon={!hero.legacy}>
+          <HeroCard
+            unit={hero}
+            warbandId={warbandId}
+            warbandNum={warbandNum}
+            index={0}
+            updateUnit={mutations.updateHero}
+            openProfileCard={() => openProfileCard(hero)}
+            reselect={openHeroPicker}
+            isLeader={isWarbandWithLeader}
+            toggleLeader={mutations.toggleArmyGeneral}
+            collapsed={collapsed}
+          />
+        </WithRibbon>
       ) : (
         <SelectUnitCardButton
           title="Select a hero"
@@ -161,11 +163,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                             collapsed={collapsed}
                           />
                         ) : (
-                          <WithRibbon
-                            label="Legacy"
-                            hideRibbon={!unit.legacy}
-                            type="warband"
-                          >
+                          <WithRibbon label="Legacy" hideRibbon={!unit.legacy}>
                             {unit.unit_type.includes("Hero") ? (
                               <HeroCard
                                 unit={unit}
