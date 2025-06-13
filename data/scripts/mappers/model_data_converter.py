@@ -40,6 +40,7 @@ class ModelDataConverter:
         # Converter fiels from 0/1 to a bool (true/false)
         self.__models["opt_mandatory"] = self.__models["opt_mandatory"] == 1
         self.__models["no_followers"] = self.__models["no_followers"] == 1
+        self.__models['legacy'] = self.__models['legacy'] == 1
 
     def __convert_option_column_to_wanted_data_type(self):
         int_columns = ['points', 'quantity', 'passengers']

@@ -905,6 +905,16 @@
       "warning":"Dol Amroth Warrior models may only be included if your army also includes a Dol Amroth Hero."
     }
   ],
+  "[the-fiefdoms] man-at-arms-of-dol-amroth":[
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[the-fiefdoms] prince-imrahil",
+        "[the-fiefdoms] captain-of-dol-amroth"
+      ],
+      "warning":"Dol Amroth Warrior models may only be included if your army also includes a Dol Amroth Hero."
+    }
+  ],
   "[the-grey-company] elladan":[
     {
       "type":"requires_all",

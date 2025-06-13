@@ -119,6 +119,13 @@
     ],
     "extra_profiles": []
   },
+  "[army-of-edoras] kings-huntsman": {
+    "valid_warband_units": [
+      "[army-of-edoras] warrior-of-rohan",
+      "[army-of-edoras] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-edoras] lief-page-of-helm": {
     "valid_warband_units": [
       "[army-of-edoras] warrior-of-rohan",
@@ -878,6 +885,13 @@
     ],
     "extra_profiles": []
   },
+  "[atop-the-walls] knight-of-the-white-tower": {
+    "valid_warband_units": [
+      "[atop-the-walls] warrior-of-minas-tirith",
+      "[atop-the-walls] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
   "[atop-the-walls] peregrin-took": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -1578,6 +1592,16 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[defenders-of-helm's-deep] kings-huntsman": {
+    "valid_warband_units": [
+      "[defenders-of-helm's-deep] warrior-of-rohan",
+      "[defenders-of-helm's-deep] rohan-royal-guard",
+      "[defenders-of-helm's-deep] galadhrim-warrior",
+      "[defenders-of-helm's-deep] aldor",
+      "[defenders-of-helm's-deep] haleth-son-of-hama"
+    ],
+    "extra_profiles": []
+  },
   "[defenders-of-helm's-deep] legolas": {
     "valid_warband_units": [
       "[defenders-of-helm's-deep] warrior-of-rohan",
@@ -1638,7 +1662,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1657,7 +1682,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1669,7 +1695,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1694,7 +1721,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1741,7 +1769,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1760,7 +1789,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": [
       "Peregrin Took"
@@ -1790,7 +1820,8 @@
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
       "[defenders-of-the-pelennor] blackroot-vale-archer",
-      "[defenders-of-the-pelennor] ranger-of-the-north"
+      "[defenders-of-the-pelennor] ranger-of-the-north",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1809,7 +1840,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1821,7 +1853,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1835,7 +1868,8 @@
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
       "[defenders-of-the-pelennor] blackroot-vale-archer",
-      "[defenders-of-the-pelennor] ranger-of-the-north"
+      "[defenders-of-the-pelennor] ranger-of-the-north",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1843,6 +1877,20 @@
     "valid_warband_units": [
       "[defenders-of-the-pelennor] warrior-of-the-dead",
       "[defenders-of-the-pelennor] rider-of-the-dead"
+    ],
+    "extra_profiles": []
+  },
+  "[defenders-of-the-pelennor] knight-of-the-white-tower": {
+    "valid_warband_units": [
+      "[defenders-of-the-pelennor] peregrin-took",
+      "[defenders-of-the-pelennor] warrior-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-minas-tirith",
+      "[defenders-of-the-pelennor] knight-of-dol-amroth",
+      "[defenders-of-the-pelennor] axeman-of-lossarnach",
+      "[defenders-of-the-pelennor] clansman-of-lamedon",
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] ranger-of-the-north",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -1865,7 +1913,8 @@
       "[defenders-of-the-pelennor] knight-of-dol-amroth",
       "[defenders-of-the-pelennor] axeman-of-lossarnach",
       "[defenders-of-the-pelennor] clansman-of-lamedon",
-      "[defenders-of-the-pelennor] blackroot-vale-archer"
+      "[defenders-of-the-pelennor] blackroot-vale-archer",
+      "[defenders-of-the-pelennor] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -2157,14 +2206,32 @@
   "[fords-of-isen] captain-of-rohan": {
     "valid_warband_units": [
       "[fords-of-isen] warrior-of-rohan",
-      "[fords-of-isen] rider-of-rohan"
+      "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[fords-of-isen] elfhelm-captain-of-rohan": {
     "valid_warband_units": [
       "[fords-of-isen] warrior-of-rohan",
-      "[fords-of-isen] rider-of-rohan"
+      "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-outrider"
+    ],
+    "extra_profiles": []
+  },
+  "[fords-of-isen] grimbold-of-grimslade": {
+    "valid_warband_units": [
+      "[fords-of-isen] warrior-of-rohan",
+      "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-outrider"
+    ],
+    "extra_profiles": []
+  },
+  "[fords-of-isen] kings-huntsman": {
+    "valid_warband_units": [
+      "[fords-of-isen] warrior-of-rohan",
+      "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2172,6 +2239,7 @@
     "valid_warband_units": [
       "[fords-of-isen] warrior-of-rohan",
       "[fords-of-isen] rider-of-rohan",
+      "[fords-of-isen] rohan-outrider",
       "[fords-of-isen] rohan-royal-guard"
     ],
     "extra_profiles": []
@@ -2194,6 +2262,15 @@
   },
   "[garrison-of-dale] windlance": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[garrison-of-ithilien] anborn-ranger-of-ithilien": {
+    "valid_warband_units": [
+      "[garrison-of-ithilien] warrior-of-minas-tirith",
+      "[garrison-of-ithilien] knight-of-minas-tirith",
+      "[garrison-of-ithilien] ranger-of-gondor",
+      "[garrison-of-ithilien] osgiliath-veteran"
+    ],
     "extra_profiles": []
   },
   "[garrison-of-ithilien] captain-of-minas-tirith": {
@@ -2235,6 +2312,15 @@
     "extra_profiles": []
   },
   "[garrison-of-ithilien] madril": {
+    "valid_warband_units": [
+      "[garrison-of-ithilien] warrior-of-minas-tirith",
+      "[garrison-of-ithilien] knight-of-minas-tirith",
+      "[garrison-of-ithilien] ranger-of-gondor",
+      "[garrison-of-ithilien] osgiliath-veteran"
+    ],
+    "extra_profiles": []
+  },
+  "[garrison-of-ithilien] mublung-ranger-of-ithilien": {
     "valid_warband_units": [
       "[garrison-of-ithilien] warrior-of-minas-tirith",
       "[garrison-of-ithilien] knight-of-minas-tirith",
@@ -2691,6 +2777,15 @@
     ],
     "extra_profiles": []
   },
+  "[kingdom-of-khazad-dum] dwarf-shieldbeearer": {
+    "valid_warband_units": [
+      "[kingdom-of-khazad-dum] dwarf-warrior",
+      "[kingdom-of-khazad-dum] dwarf-ranger",
+      "[kingdom-of-khazad-dum] iron-guard",
+      "[kingdom-of-khazad-dum] vault-warden-team"
+    ],
+    "extra_profiles": []
+  },
   "[kingdom-of-khazad-dum] dwarven-ballista": {
     "valid_warband_units": [],
     "extra_profiles": []
@@ -2707,7 +2802,8 @@
   "[kingdom-of-rohan] captain-of-rohan": {
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
-      "[kingdom-of-rohan] rider-of-rohan"
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2715,14 +2811,16 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[kingdom-of-rohan] elfhelm-captain-of-rohan": {
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
-      "[kingdom-of-rohan] rider-of-rohan"
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2730,14 +2828,24 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[kingdom-of-rohan] eowyn": {
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
-      "[kingdom-of-rohan] rider-of-rohan"
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-rohan] erkenbrand-captain-of-rohan": {
+    "valid_warband_units": [
+      "[kingdom-of-rohan] warrior-of-rohan",
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2745,7 +2853,16 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-rohan] grimbold-of-grimslade": {
+    "valid_warband_units": [
+      "[kingdom-of-rohan] warrior-of-rohan",
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2753,7 +2870,16 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
+    ],
+    "extra_profiles": []
+  },
+  "[kingdom-of-rohan] kings-huntsman": {
+    "valid_warband_units": [
+      "[kingdom-of-rohan] warrior-of-rohan",
+      "[kingdom-of-rohan] rider-of-rohan",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2761,7 +2887,8 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2769,7 +2896,8 @@
     "valid_warband_units": [
       "[kingdom-of-rohan] warrior-of-rohan",
       "[kingdom-of-rohan] rider-of-rohan",
-      "[kingdom-of-rohan] rohan-royal-guard"
+      "[kingdom-of-rohan] rohan-royal-guard",
+      "[kingdom-of-rohan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -2953,6 +3081,13 @@
     ],
     "extra_profiles": []
   },
+  "[lindon] erestor": {
+    "valid_warband_units": [
+      "[lindon] rivendell-warrior",
+      "[lindon] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
   "[lindon] gil-galad": {
     "valid_warband_units": [
       "[lindon] rivendell-warrior",
@@ -2968,6 +3103,13 @@
     "extra_profiles": []
   },
   "[lindon] rivendell-captain": {
+    "valid_warband_units": [
+      "[lindon] rivendell-warrior",
+      "[lindon] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[lindon] rivendell-stormcaller": {
     "valid_warband_units": [
       "[lindon] rivendell-warrior",
       "[lindon] rivendell-knight"
@@ -3015,6 +3157,16 @@
     "extra_profiles": []
   },
   "[lothlorien] lothlorien-captain": {
+    "valid_warband_units": [
+      "[lothlorien] galadhrim-warrior",
+      "[lothlorien] lothlorien-warrior",
+      "[lothlorien] wood-elf-sentinel",
+      "[lothlorien] guard-of-the-galadhrim-court",
+      "[lothlorien] galadhrim-knight"
+    ],
+    "extra_profiles": []
+  },
+  "[lothlorien] lothlorien-stormcaller": {
     "valid_warband_units": [
       "[lothlorien] galadhrim-warrior",
       "[lothlorien] lothlorien-warrior",
@@ -3075,7 +3227,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3085,7 +3238,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3095,7 +3249,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3105,7 +3260,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3117,7 +3273,8 @@
       "[men-of-the-west] warrior-of-rohan",
       "[men-of-the-west] knight-of-dol-amroth",
       "[men-of-the-west] elladan",
-      "[men-of-the-west] elrohir"
+      "[men-of-the-west] elrohir",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3129,7 +3286,8 @@
       "[men-of-the-west] warrior-of-rohan",
       "[men-of-the-west] knight-of-dol-amroth",
       "[men-of-the-west] elladan",
-      "[men-of-the-west] elrohir"
+      "[men-of-the-west] elrohir",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3139,7 +3297,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3149,7 +3308,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": [
       "Peregrin Took"
@@ -3161,7 +3321,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3177,7 +3338,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3195,7 +3357,8 @@
       "[men-of-the-west] warrior-of-minas-tirith",
       "[men-of-the-west] meriadoc-brandybuck",
       "[men-of-the-west] warrior-of-rohan",
-      "[men-of-the-west] knight-of-dol-amroth"
+      "[men-of-the-west] knight-of-dol-amroth",
+      "[men-of-the-west] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -3285,6 +3448,13 @@
     ],
     "extra_profiles": []
   },
+  "[minas-tirith] cirion-lieutenant-of-amon-barad": {
+    "valid_warband_units": [
+      "[minas-tirith] warrior-of-minas-tirith",
+      "[minas-tirith] knight-of-minas-tirith"
+    ],
+    "extra_profiles": []
+  },
   "[minas-tirith] denethor": {
     "valid_warband_units": [
       "[minas-tirith] warrior-of-minas-tirith",
@@ -3325,6 +3495,13 @@
       "[minas-tirith] warrior-of-minas-tirith",
       "[minas-tirith] knight-of-minas-tirith",
       "[minas-tirith] citadel-guard"
+    ],
+    "extra_profiles": []
+  },
+  "[minas-tirith] knight-of-the-white-tower": {
+    "valid_warband_units": [
+      "[minas-tirith] warrior-of-minas-tirith",
+      "[minas-tirith] knight-of-minas-tirith"
     ],
     "extra_profiles": []
   },
@@ -3460,7 +3637,8 @@
     "valid_warband_units": [
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3469,7 +3647,8 @@
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
       "[paths-of-the-druadan] rohan-royal-guard",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3477,7 +3656,8 @@
     "valid_warband_units": [
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3486,7 +3666,8 @@
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
       "[paths-of-the-druadan] rohan-royal-guard",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3501,7 +3682,8 @@
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
       "[paths-of-the-druadan] rohan-royal-guard",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3509,7 +3691,8 @@
     "valid_warband_units": [
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3518,7 +3701,8 @@
       "[paths-of-the-druadan] eowyn",
       "[paths-of-the-druadan] rider-of-rohan",
       "[paths-of-the-druadan] rohan-royal-guard",
-      "[paths-of-the-druadan] woses-warrior"
+      "[paths-of-the-druadan] woses-warrior",
+      "[paths-of-the-druadan] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -3936,6 +4120,12 @@
     ],
     "extra_profiles": []
   },
+  "[riders-of-eomer] erkenbrand-captain-of-rohan": {
+    "valid_warband_units": [
+      "[riders-of-eomer] rider-of-rohan"
+    ],
+    "extra_profiles": []
+  },
   "[riders-of-eomer] gandalf-the-white": {
     "valid_warband_units": [
       "[riders-of-eomer] rider-of-rohan"
@@ -4267,6 +4457,14 @@
     ],
     "extra_profiles": []
   },
+  "[rivendell] erestor": {
+    "valid_warband_units": [
+      "[rivendell] bilbo-baggins-ageing-hobbit",
+      "[rivendell] rivendell-warrior",
+      "[rivendell] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
   "[rivendell] glorfindel-lord-of-the-west": {
     "valid_warband_units": [
       "[rivendell] bilbo-baggins-ageing-hobbit",
@@ -4291,48 +4489,63 @@
     ],
     "extra_profiles": []
   },
+  "[rivendell] rivendell-stormcaller": {
+    "valid_warband_units": [
+      "[rivendell] bilbo-baggins-ageing-hobbit",
+      "[rivendell] rivendell-warrior",
+      "[rivendell] rivendell-knight"
+    ],
+    "extra_profiles": []
+  },
   "[road-to-helm's-deep] aragorn-strider": {
     "valid_warband_units": [
-      "[road-to-helm's-deep] rider-of-rohan"
+      "[road-to-helm's-deep] rider-of-rohan",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] captain-of-rohan": {
     "valid_warband_units": [
-      "[road-to-helm's-deep] rider-of-rohan"
+      "[road-to-helm's-deep] rider-of-rohan",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] gamling": {
     "valid_warband_units": [
       "[road-to-helm's-deep] rider-of-rohan",
-      "[road-to-helm's-deep] rohan-royal-guard"
+      "[road-to-helm's-deep] rohan-royal-guard",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] gimli": {
     "valid_warband_units": [
-      "[road-to-helm's-deep] rider-of-rohan"
+      "[road-to-helm's-deep] rider-of-rohan",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] hama-captain-of-rohan": {
     "valid_warband_units": [
       "[road-to-helm's-deep] rider-of-rohan",
-      "[road-to-helm's-deep] rohan-royal-guard"
+      "[road-to-helm's-deep] rohan-royal-guard",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] legolas": {
     "valid_warband_units": [
-      "[road-to-helm's-deep] rider-of-rohan"
+      "[road-to-helm's-deep] rider-of-rohan",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
   "[road-to-helm's-deep] theoden": {
     "valid_warband_units": [
       "[road-to-helm's-deep] rider-of-rohan",
-      "[road-to-helm's-deep] rohan-royal-guard"
+      "[road-to-helm's-deep] rohan-royal-guard",
+      "[road-to-helm's-deep] rohan-outrider"
     ],
     "extra_profiles": []
   },
@@ -4401,6 +4614,23 @@
       "[road-to-rivendell] arwen",
       "[road-to-rivendell] tom-bombadil",
       "[road-to-rivendell] goldberry"
+    ],
+    "extra_profiles": []
+  },
+  "[road-to-rivendell] gildor-inglorion": {
+    "valid_warband_units": [
+      "[road-to-rivendell] aragorn-strider",
+      "[road-to-rivendell] frodo-baggins",
+      "[road-to-rivendell] samwise-gamgee",
+      "[road-to-rivendell] barliman-butterbur",
+      "[road-to-rivendell] meriadoc-brandybuck",
+      "[road-to-rivendell] peregrin-took",
+      "[road-to-rivendell] bill-the-pony",
+      "[road-to-rivendell] the-gatekeeper-of-bree",
+      "[road-to-rivendell] arwen",
+      "[road-to-rivendell] tom-bombadil",
+      "[road-to-rivendell] goldberry",
+      "[road-to-rivendell] noldorin-exiles"
     ],
     "extra_profiles": []
   },
@@ -5080,7 +5310,8 @@
       "[the-fiefdoms] knight-of-dol-amroth",
       "[the-fiefdoms] axeman-of-lossarnach",
       "[the-fiefdoms] clansman-of-lamedon",
-      "[the-fiefdoms] blackroot-vale-archer"
+      "[the-fiefdoms] blackroot-vale-archer",
+      "[the-fiefdoms] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5089,7 +5320,8 @@
       "[the-fiefdoms] knight-of-dol-amroth",
       "[the-fiefdoms] axeman-of-lossarnach",
       "[the-fiefdoms] clansman-of-lamedon",
-      "[the-fiefdoms] blackroot-vale-archer"
+      "[the-fiefdoms] blackroot-vale-archer",
+      "[the-fiefdoms] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5098,7 +5330,8 @@
       "[the-fiefdoms] knight-of-dol-amroth",
       "[the-fiefdoms] axeman-of-lossarnach",
       "[the-fiefdoms] clansman-of-lamedon",
-      "[the-fiefdoms] blackroot-vale-archer"
+      "[the-fiefdoms] blackroot-vale-archer",
+      "[the-fiefdoms] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5107,7 +5340,8 @@
       "[the-fiefdoms] knight-of-dol-amroth",
       "[the-fiefdoms] axeman-of-lossarnach",
       "[the-fiefdoms] clansman-of-lamedon",
-      "[the-fiefdoms] blackroot-vale-archer"
+      "[the-fiefdoms] blackroot-vale-archer",
+      "[the-fiefdoms] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5116,7 +5350,8 @@
       "[the-fiefdoms] knight-of-dol-amroth",
       "[the-fiefdoms] axeman-of-lossarnach",
       "[the-fiefdoms] clansman-of-lamedon",
-      "[the-fiefdoms] blackroot-vale-archer"
+      "[the-fiefdoms] blackroot-vale-archer",
+      "[the-fiefdoms] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5200,7 +5435,8 @@
     "valid_warband_units": [
       "[the-grief-of-eomer] knight-of-dol-amroth",
       "[the-grief-of-eomer] knight-of-minas-tirith",
-      "[the-grief-of-eomer] warrior-of-minas-tirith"
+      "[the-grief-of-eomer] warrior-of-minas-tirith",
+      "[the-grief-of-eomer] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5208,7 +5444,8 @@
     "valid_warband_units": [
       "[the-grief-of-eomer] knight-of-dol-amroth",
       "[the-grief-of-eomer] knight-of-minas-tirith",
-      "[the-grief-of-eomer] warrior-of-minas-tirith"
+      "[the-grief-of-eomer] warrior-of-minas-tirith",
+      "[the-grief-of-eomer] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5230,7 +5467,8 @@
     "valid_warband_units": [
       "[the-grief-of-eomer] knight-of-dol-amroth",
       "[the-grief-of-eomer] knight-of-minas-tirith",
-      "[the-grief-of-eomer] warrior-of-minas-tirith"
+      "[the-grief-of-eomer] warrior-of-minas-tirith",
+      "[the-grief-of-eomer] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5238,7 +5476,8 @@
     "valid_warband_units": [
       "[the-grief-of-eomer] knight-of-dol-amroth",
       "[the-grief-of-eomer] knight-of-minas-tirith",
-      "[the-grief-of-eomer] warrior-of-minas-tirith"
+      "[the-grief-of-eomer] warrior-of-minas-tirith",
+      "[the-grief-of-eomer] man-at-arms-of-dol-amroth"
     ],
     "extra_profiles": []
   },
@@ -5285,6 +5524,12 @@
     "extra_profiles": []
   },
   "[the-last-alliance] elrond": {
+    "valid_warband_units": [
+      "[the-last-alliance] rivendell-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[the-last-alliance] erestor": {
     "valid_warband_units": [
       "[the-last-alliance] rivendell-warrior"
     ],
