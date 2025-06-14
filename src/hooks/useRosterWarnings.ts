@@ -139,6 +139,93 @@ function extraScriptedRosterWarnings(
     }
   }
 
+  if (roster.armyList === "Assault on Lothlorien") {
+    // todo: check amount of orcs and goblins
+    const orcs = [
+      "[assault-on-lothlorien] muzgur-orc-shaman",
+      "[assault-on-lothlorien] mordor-orc-captain",
+      "[assault-on-lothlorien] mordor-orc-shaman",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] morder-warg-rider",
+      "[assault-on-lothlorien] orc-tracker",
+    ];
+    const goblins = [
+      "[assault-on-lothlorien] ashrak",
+      "[assault-on-lothlorien] druzag-the-beastcaller",
+      "[assault-on-lothlorien] moria-goblin-captain",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-shaman",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] warg-marauder",
+    ];
+
+    const [amountOfOrcs, amountOfGoblins] = roster.warbands
+      .flatMap((wb) => [wb.hero, ...wb.units])
+      .filter(isSelectedUnit)
+      .filter((unit) => [...orcs, ...goblins].includes(unit.model_id))
+      .map((unit) => ({
+        type: orcs.includes(unit.model_id) ? "orc" : "goblin",
+        quantity: unit.quantity + unit.quantity * unit.siege_crew,
+      }))
+      .reduce(
+        ([orcs, goblins], { type, quantity }) =>
+          type === "orc"
+            ? [orcs + quantity, goblins]
+            : [orcs, goblins + quantity],
+        [0, 0],
+      );
+
+    if (amountOfGoblins > amountOfOrcs) {
+      warnings.push({
+        warning: `This Army may not include more Goblin models than Orc models. Currently counting ${amountOfOrcs} Orcs and ${amountOfGoblins} Goblins.`,
+        type: undefined,
+        dependencies: [],
+      });
+    }
+  }
+
+  if (roster.armyList === "The Spider Queen's Brood") {
+    roster.warbands
+      .filter((wb) => isSelectedUnit(wb.hero))
+      .filter((wb) => wb.hero.name !== "The Spider Queen")
+      .map((wb) => ({
+        num: wb.meta.num,
+        quantity: wb.units
+          .filter(isSelectedUnit)
+          .map((unit) => unit.quantity)
+          .reduce((a, b) => a + b, 1), // starting with 1 cause the hero is included in the 6.
+      }))
+      .filter((wb) => wb.quantity < 6)
+      .forEach((wb) =>
+        warnings.push({
+          warning: `Warbands without a hero require 6 or more models. Warband ${wb.num} only has ${wb.quantity}`,
+          type: undefined,
+          dependencies: [],
+        }),
+      );
+  }
+
+  if (roster.armyList === "Sharkey's Rogues") {
+    roster.warbands
+      .filter((wb) => isSelectedUnit(wb.hero))
+      .filter((wb) => wb.hero.model_id === "[sharkey's-rogues] ruffian-cpt")
+      .map((wb) => ({
+        num: wb.meta.num,
+        quantity: wb.units
+          .filter(isSelectedUnit)
+          .map((unit) => unit.quantity)
+          .reduce((a, b) => a + b, 1), // starting with 1 cause the hero is included in the 6.
+      }))
+      .filter((wb) => wb.quantity < 10 || wb.quantity > 12)
+      .forEach((wb) =>
+        warnings.push({
+          warning: `Warbands without a hero require 10 to 12 models. Warband ${wb.num} is outside this range.`,
+          type: undefined,
+          dependencies: [],
+        }),
+      );
+  }
+
   if (
     [
       "Defenders of the Pelennor",

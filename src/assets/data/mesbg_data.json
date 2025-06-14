@@ -392,6 +392,226 @@
     "warband_size": 6,
     "options": []
   },
+  "[army-of-dunland] thrydan-wolfsbane": {
+    "model_id": "[army-of-dunland] thrydan-wolfsbane",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Thrydan Wolfsbane",
+    "unit_type": "Hero of Valour",
+    "base_points": 90,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1323",
+        "name": "Horse",
+        "points": 20
+      }
+    ]
+  },
+  "[army-of-dunland] frida-tallspear": {
+    "model_id": "[army-of-dunland] frida-tallspear",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Frida Tallspear",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-dunland] gorulf-ironskin": {
+    "model_id": "[army-of-dunland] gorulf-ironskin",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Gorulf Ironskin",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:2:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-dunland] dunlending-chieftain": {
+    "model_id": "[army-of-dunland] dunlending-chieftain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Dunlending Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-dunland] the-wild-man-oathmaker": {
+    "model_id": "[army-of-dunland] the-wild-man-oathmaker",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Isengard",
+    "name": "Wild Man Oathmaker",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[army-of-dunland] crebain": {
+    "model_id": "[army-of-dunland] crebain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Isengard",
+    "name": "Crebain",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-dunland] dunlending-horseman": {
+    "model_id": "[army-of-dunland] dunlending-horseman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Dunlending Horseman",
+    "unit_type": "Warrior",
+    "base_points": 12,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-dunland] dunlending-huscarl": {
+    "model_id": "[army-of-dunland] dunlending-huscarl",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Dunlending Huscarl",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[army-of-dunland] dunlending-warrior": {
+    "model_id": "[army-of-dunland] dunlending-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Evil Legacy",
+    "name": "Dunlending Warrior",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1324",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1325",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1326",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1327",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-dunland] wild-man-of-dunland": {
+    "model_id": "[army-of-dunland] wild-man-of-dunland",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Army of Dunland",
+    "profile_origin": "Isengard",
+    "name": "Wild Man of Dunland",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1328",
+        "name": "Light shield and Flaming Brand",
+        "points": 2
+      },
+      {
+        "id": "OPT1329",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1330",
+        "name": "Light shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1331",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1332",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[army-of-edoras] helm-hammerhand-king-of-rohan": {
     "model_id": "[army-of-edoras] helm-hammerhand-king-of-rohan",
     "army_type": "Good",
@@ -3397,6 +3617,376 @@
     ],
     "warband_size": 6,
     "options": []
+  },
+  "[assault-on-lothlorien] druzag-the-beastcaller": {
+    "model_id": "[assault-on-lothlorien] druzag-the-beastcaller",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Druzhag the Beastcaller",
+    "unit_type": "Hero of Valour",
+    "base_points": 80,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:5:2:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-lothlorien] muzgur-orc-shaman": {
+    "model_id": "[assault-on-lothlorien] muzgur-orc-shaman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Evil Legacy",
+    "name": "Muzgur, Orc Shaman",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:4:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-lothlorien] ashrak": {
+    "model_id": "[assault-on-lothlorien] ashrak",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Evil Legacy",
+    "name": "Ashrak",
+    "unit_type": "Hero of Valour",
+    "base_points": 60,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:4:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[assault-on-lothlorien] wild-warg-chieftain": {
+    "model_id": "[assault-on-lothlorien] wild-warg-chieftain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Wild Warg Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 80,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:3"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[assault-on-lothlorien] mordor-orc-shaman": {
+    "model_id": "[assault-on-lothlorien] mordor-orc-shaman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Shaman",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[assault-on-lothlorien] mordor-orc-captain": {
+    "model_id": "[assault-on-lothlorien] mordor-orc-captain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[assault-on-lothlorien] moria-goblin-shaman": {
+    "model_id": "[assault-on-lothlorien] moria-goblin-shaman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Shaman",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[assault-on-lothlorien] moria-goblin-captain": {
+    "model_id": "[assault-on-lothlorien] moria-goblin-captain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 40,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1310",
+        "name": "Orc bow",
+        "points": 5,
+        "type": "bow"
+      }
+    ]
+  },
+  "[assault-on-lothlorien] bat-swarm": {
+    "model_id": "[assault-on-lothlorien] bat-swarm",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bat Swarm",
+    "unit_type": "Warrior",
+    "base_points": 35,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[assault-on-lothlorien] warg-marauder": {
+    "model_id": "[assault-on-lothlorien] warg-marauder",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Evil Legacy",
+    "name": "Warg Marauder",
+    "unit_type": "Warrior",
+    "base_points": 35,
+    "default_bow": true,
+    "siege_crew": 2,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[assault-on-lothlorien] mirkwood-giant-spider": {
+    "model_id": "[assault-on-lothlorien] mirkwood-giant-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[assault-on-lothlorien] mirkwood-hunting-spider": {
+    "model_id": "[assault-on-lothlorien] mirkwood-hunting-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1359",
+        "name": "Upgrade to Venomback Spider",
+        "points": 2,
+        "type": "special_warband_upgrade",
+        "dependencies": [
+          {
+            "type": "requires-all",
+            "condition": "in-warband",
+            "dependencies": [
+              "[assault-on-lothlorien] ashrak"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "[assault-on-lothlorien] mordor-warg-rider": {
+    "model_id": "[assault-on-lothlorien] mordor-warg-rider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Mordor",
+    "name": "Mordor Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1316",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1317",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1318",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1319",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[assault-on-lothlorien] moria-goblin-prowler": {
+    "model_id": "[assault-on-lothlorien] moria-goblin-prowler",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Prowler",
+    "unit_type": "Warrior",
+    "base_points": 7,
+    "default_throw": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[assault-on-lothlorien] orc-tracker": {
+    "model_id": "[assault-on-lothlorien] orc-tracker",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Evil Legacy",
+    "name": "Orc Tracker",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[assault-on-lothlorien] mordor-orc-warrior": {
+    "model_id": "[assault-on-lothlorien] mordor-orc-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1311",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1312",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1313",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1314",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1315",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
+  "[assault-on-lothlorien] moria-goblin-warrior": {
+    "model_id": "[assault-on-lothlorien] moria-goblin-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Assault on Lothlorien",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Warrior",
+    "unit_type": "Warrior",
+    "base_points": 4,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1320",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1321",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1322",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
   },
   "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain": {
     "model_id": "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain",
@@ -8633,6 +9223,51 @@
     "warband_size": 18,
     "options": []
   },
+  "[dragons-of-the-north] dragon": {
+    "model_id": "[dragons-of-the-north] dragon",
+    "army_type": "Evil",
+    "army_list": "Dragons of the North",
+    "profile_origin": "The Misty Mountains",
+    "name": "Dragon",
+    "unit_type": "Hero of Legend",
+    "base_points": 200,
+    "siege_crew": 0,
+    "no_followers": true,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:7"
+      ]
+    ],
+    "warband_size": 18,
+    "options": [
+      {
+        "id": "OPT0961",
+        "name": "Breathe Fire",
+        "points": 50
+      },
+      {
+        "id": "OPT0962",
+        "name": "Fly",
+        "points": 50
+      },
+      {
+        "id": "OPT0963",
+        "name": "Superior Intellect",
+        "points": 50
+      },
+      {
+        "id": "OPT0964",
+        "name": "Tough Hide",
+        "points": 50
+      },
+      {
+        "id": "OPT0965",
+        "name": "Wyrm Magic",
+        "points": 50
+      }
+    ]
+  },
   "[dragons-of-the-north] dragon-general": {
     "model_id": "[dragons-of-the-north] dragon-general",
     "army_type": "Evil",
@@ -8674,51 +9309,6 @@
       },
       {
         "id": "OPT0986",
-        "name": "Wyrm Magic",
-        "points": 50
-      }
-    ]
-  },
-  "[dragons-of-the-north] dragon": {
-    "model_id": "[dragons-of-the-north] dragon",
-    "army_type": "Evil",
-    "army_list": "Dragons of the North",
-    "profile_origin": "The Misty Mountains",
-    "name": "Dragon",
-    "unit_type": "Hero of Legend",
-    "base_points": 200,
-    "siege_crew": 0,
-    "no_followers": true,
-    "MWFW": [
-      [
-        "",
-        "3:3:3:7"
-      ]
-    ],
-    "warband_size": 18,
-    "options": [
-      {
-        "id": "OPT0961",
-        "name": "Breathe Fire",
-        "points": 50
-      },
-      {
-        "id": "OPT0962",
-        "name": "Fly",
-        "points": 50
-      },
-      {
-        "id": "OPT0963",
-        "name": "Superior Intellect",
-        "points": 50
-      },
-      {
-        "id": "OPT0964",
-        "name": "Tough Hide",
-        "points": 50
-      },
-      {
-        "id": "OPT0965",
         "name": "Wyrm Magic",
         "points": 50
       }
@@ -9719,6 +10309,403 @@
       }
     ]
   },
+  "[far-harad] mahud-king": {
+    "model_id": "[far-harad] mahud-king",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Far Harad",
+    "profile_origin": "Evil Legacy",
+    "name": "Mahud King",
+    "unit_type": "Hero of Valour",
+    "base_points": 70,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1338",
+        "name": "War Camel",
+        "points": 25,
+        "type": "mount"
+      }
+    ]
+  },
+  "[far-harad] mahud-tribesmaster": {
+    "model_id": "[far-harad] mahud-tribesmaster",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Far Harad",
+    "profile_origin": "Evil Legacy",
+    "name": "Mahud Tribesmaster",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1339",
+        "name": "War Camel",
+        "points": 25,
+        "type": "mount"
+      },
+      {
+        "id": "OPT1340",
+        "name": "Blowpipe",
+        "points": 5
+      },
+      {
+        "id": "OPT1341",
+        "name": "Shield",
+        "points": 5
+      },
+      {
+        "id": "OPT1342",
+        "name": "War Spear",
+        "points": 5
+      }
+    ]
+  },
+  "[far-harad] half-troll": {
+    "model_id": "[far-harad] half-troll",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Far Harad",
+    "profile_origin": "Evil Legacy",
+    "name": "Half Troll",
+    "unit_type": "Warrior",
+    "base_points": 25,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1347",
+        "name": "Exchange hand-and-a-half weapon for two-handed weapon",
+        "points": 0
+      }
+    ]
+  },
+  "[far-harad] mahud-raider": {
+    "model_id": "[far-harad] mahud-raider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Far Harad",
+    "profile_origin": "Evil Legacy",
+    "name": "Mahud Raider",
+    "unit_type": "Warrior",
+    "base_points": 17,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1345",
+        "name": "Blowpipe",
+        "points": 1
+      },
+      {
+        "id": "OPT1346",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[far-harad] mahud-warrior": {
+    "model_id": "[far-harad] mahud-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Far Harad",
+    "profile_origin": "Evil Legacy",
+    "name": "Mahud Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1343",
+        "name": "Blowpipe",
+        "points": 1
+      },
+      {
+        "id": "OPT1344",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[fell-beings-of-mirkwood] razgush-war-leader-of-the-north": {
+    "model_id": "[fell-beings-of-mirkwood] razgush-war-leader-of-the-north",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Evil Legacy",
+    "name": "Razgush, War Leader of the North",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:1:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] the-spider-queen": {
+    "model_id": "[fell-beings-of-mirkwood] the-spider-queen",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Evil Legacy",
+    "name": "The Spider Queen",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:0:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-captain": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-orc-captain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-taskmaster": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-orc-taskmaster",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Taskmaster",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-shaman": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-orc-shaman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-drummer": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-orc-drummer",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Drummer",
+    "unit_type": "Independent Hero",
+    "base_points": 30,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "0:0:1:1"
+      ]
+    ],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] bat-swarm": {
+    "model_id": "[fell-beings-of-mirkwood] bat-swarm",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bat Swarm",
+    "unit_type": "Warrior",
+    "base_points": 35,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mirkwood-giant-spider": {
+    "model_id": "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mirkwood-hunting-spider": {
+    "model_id": "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-warg-rider": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-warg-rider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1306",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1307",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1308",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1309",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[fell-beings-of-mirkwood] fell-warg": {
+    "model_id": "[fell-beings-of-mirkwood] fell-warg",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] orc-tracker": {
+    "model_id": "[fell-beings-of-mirkwood] orc-tracker",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Evil Legacy",
+    "name": "Orc Tracker",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "default_bow": true,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-warrior": {
+    "model_id": "[fell-beings-of-mirkwood] mordor-orc-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Fell Beings of Mirkwood",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1301",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1302",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1303",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1304",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1305",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[fields-of-celebrant] eorl-the-young": {
     "model_id": "[fields-of-celebrant] eorl-the-young",
     "army_type": "Good (Legacy)",
@@ -10201,6 +11188,7 @@
         "type": "bow"
       },
       {
+        "id": "OPT1298",
         "name": "Upgrade to Helmingas",
         "points": 1,
         "type": "special_warband_upgrade",
@@ -12557,6 +13545,7 @@
     "unit_type": "Hero of Fortitude",
     "base_points": 140,
     "siege_crew": 2,
+    "legacy": true,
     "MWFW": [
       [
         "King's Champion",
@@ -12654,7 +13643,7 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1221",
+        "id": "OPT1296",
         "name": "Hearthguard",
         "points": 2,
         "type": "special_warband_upgrade",
@@ -13151,6 +14140,7 @@
         "type": "throw"
       },
       {
+        "id": "OPT1299",
         "name": "Upgrade to Westfold Redshield",
         "points": 1,
         "type": "special_warband_upgrade",
@@ -13267,6 +14257,7 @@
         "type": "bow"
       },
       {
+        "id": "OPT1297",
         "name": "Upgrade to Helmingas",
         "points": 1,
         "type": "special_warband_upgrade",
@@ -17811,6 +18802,170 @@
     "warband_size": 0,
     "options": []
   },
+  "[ravagers-of-the-shire] mordor-orc-shaman": {
+    "model_id": "[ravagers-of-the-shire] mordor-orc-shaman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Shaman",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 50,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1349",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount"
+      }
+    ]
+  },
+  "[ravagers-of-the-shire] golfimbul-orc-captain": {
+    "model_id": "[ravagers-of-the-shire] golfimbul-orc-captain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Evil Legacy",
+    "name": "Golfimbul, Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:0:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1348",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount"
+      }
+    ]
+  },
+  "[ravagers-of-the-shire] mordor-orc-captain": {
+    "model_id": "[ravagers-of-the-shire] mordor-orc-captain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
+  "[ravagers-of-the-shire] hill-troll": {
+    "model_id": "[ravagers-of-the-shire] hill-troll",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Arnor & Angmar",
+    "name": "Hill Troll",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[ravagers-of-the-shire] mordor-warg-rider": {
+    "model_id": "[ravagers-of-the-shire] mordor-warg-rider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Mordor",
+    "name": "Mordor Warg Rider",
+    "unit_type": "Warrior",
+    "base_points": 11,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1355",
+        "name": "Shield and throwing spears",
+        "points": 2,
+        "type": "throw"
+      },
+      {
+        "id": "OPT1356",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1357",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1358",
+        "name": "Throwing spears",
+        "points": 1,
+        "type": "throw"
+      }
+    ]
+  },
+  "[ravagers-of-the-shire] mordor-orc-warrior": {
+    "model_id": "[ravagers-of-the-shire] mordor-orc-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Ravagers of the Shire",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1350",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1351",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1352",
+        "name": "Shield",
+        "points": 1
+      },
+      {
+        "id": "OPT1353",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1354",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[realms-of-men] king-of-men-arnor": {
     "model_id": "[realms-of-men] king-of-men-arnor",
     "army_type": "Good",
@@ -19597,6 +20752,7 @@
         "type": "throw"
       },
       {
+        "id": "OPT1300",
         "name": "Upgrade to Westfold Redshield",
         "points": 1,
         "type": "special_warband_upgrade",
@@ -25481,6 +26637,137 @@
     "warband_size": 0,
     "options": []
   },
+  "[the-spider-queens-brood] the-spider-queen": {
+    "model_id": "[the-spider-queens-brood] the-spider-queen",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Evil Legacy",
+    "name": "The Spider Queen",
+    "unit_type": "Hero of Valour",
+    "base_points": 120,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:0:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
+  "[the-spider-queens-brood] bat-swarm-cpt": {
+    "model_id": "[the-spider-queens-brood] bat-swarm-cpt",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bat Swarm",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 35,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-spider-queens-brood] mirkwood-giant-spider-cpt": {
+    "model_id": "[the-spider-queens-brood] mirkwood-giant-spider-cpt",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-spider-queens-brood] mirkwood-hunting-spider-cpt": {
+    "model_id": "[the-spider-queens-brood] mirkwood-hunting-spider-cpt",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-spider-queens-brood] fell-warg-cpt": {
+    "model_id": "[the-spider-queens-brood] fell-warg-cpt",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 12,
+    "options": []
+  },
+  "[the-spider-queens-brood] bat-swarm": {
+    "model_id": "[the-spider-queens-brood] bat-swarm",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "The Misty Mountains",
+    "name": "Bat Swarm",
+    "unit_type": "Warrior",
+    "base_points": 35,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-spider-queens-brood] mirkwood-giant-spider": {
+    "model_id": "[the-spider-queens-brood] mirkwood-giant-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Giant Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-spider-queens-brood] mirkwood-hunting-spider": {
+    "model_id": "[the-spider-queens-brood] mirkwood-hunting-spider",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Mirkwood Hunting Spider",
+    "unit_type": "Warrior",
+    "base_points": 20,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[the-spider-queens-brood] fell-warg": {
+    "model_id": "[the-spider-queens-brood] fell-warg",
+    "army_type": "Evil (Legacy)",
+    "army_list": "The Spider Queen's Brood",
+    "profile_origin": "Gundabad & Dol Guldur",
+    "name": "Fell Warg",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
   "[the-three-trolls] bill-the-troll": {
     "model_id": "[the-three-trolls] bill-the-troll",
     "army_type": "Evil",
@@ -26682,6 +27969,136 @@
         "id": "OPT0226",
         "name": "Two-handed weapon",
         "points": 1
+      }
+    ]
+  },
+  "[variags-of-khand] khandish-king": {
+    "model_id": "[variags-of-khand] khandish-king",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish King",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1333",
+        "name": "Khandish Chariot",
+        "points": 35,
+        "type": "mount"
+      }
+    ]
+  },
+  "[variags-of-khand] khandish-king-general": {
+    "model_id": "[variags-of-khand] khandish-king-general",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish King",
+    "unit_type": "Hero of Valour",
+    "base_points": 100,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:2:1:2"
+      ]
+    ],
+    "warband_size": 15,
+    "options": [
+      {
+        "id": "OPT1337",
+        "name": "Khandish Chariot",
+        "points": 35,
+        "type": "mount"
+      }
+    ]
+  },
+  "[variags-of-khand] khandish-chieftain": {
+    "model_id": "[variags-of-khand] khandish-chieftain",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish Chieftain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1334",
+        "name": "Horse",
+        "points": 20,
+        "type": "mount"
+      }
+    ]
+  },
+  "[variags-of-khand] khandish-charioteer": {
+    "model_id": "[variags-of-khand] khandish-charioteer",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish Charioteer",
+    "unit_type": "Warrior",
+    "base_points": 40,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1336",
+        "name": "Exchange hand-and-a-half weapon for bow",
+        "points": 0,
+        "type": "bow"
+      }
+    ]
+  },
+  "[variags-of-khand] khandish-horseman": {
+    "model_id": "[variags-of-khand] khandish-horseman",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish Horseman",
+    "unit_type": "Warrior",
+    "base_points": 14,
+    "siege_crew": 0,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[variags-of-khand] khandish-warrior": {
+    "model_id": "[variags-of-khand] khandish-warrior",
+    "army_type": "Evil (Legacy)",
+    "army_list": "Variags of Khand",
+    "profile_origin": "Evil Legacy",
+    "name": "Khandish Warrior",
+    "unit_type": "Warrior",
+    "base_points": 8,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1335",
+        "name": "Exchange hand-and-a-half weapon for bow",
+        "points": 0,
+        "type": "bow"
       }
     ]
   },

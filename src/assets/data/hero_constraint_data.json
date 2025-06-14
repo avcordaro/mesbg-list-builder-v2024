@@ -76,6 +76,54 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[army-of-dunland] dunlending-chieftain": {
+    "valid_warband_units": [
+      "[army-of-dunland] crebain",
+      "[army-of-dunland] dunlending-horseman",
+      "[army-of-dunland] dunlending-warrior",
+      "[army-of-dunland] wild-man-of-dunland"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dunland] frida-tallspear": {
+    "valid_warband_units": [
+      "[army-of-dunland] crebain",
+      "[army-of-dunland] dunlending-horseman",
+      "[army-of-dunland] dunlending-warrior",
+      "[army-of-dunland] dunlending-huscarl",
+      "[army-of-dunland] wild-man-of-dunland"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dunland] gorulf-ironskin": {
+    "valid_warband_units": [
+      "[army-of-dunland] crebain",
+      "[army-of-dunland] dunlending-horseman",
+      "[army-of-dunland] dunlending-warrior",
+      "[army-of-dunland] dunlending-huscarl",
+      "[army-of-dunland] wild-man-of-dunland"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dunland] the-wild-man-oathmaker": {
+    "valid_warband_units": [
+      "[army-of-dunland] crebain",
+      "[army-of-dunland] dunlending-horseman",
+      "[army-of-dunland] dunlending-warrior",
+      "[army-of-dunland] wild-man-of-dunland"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-dunland] thrydan-wolfsbane": {
+    "valid_warband_units": [
+      "[army-of-dunland] crebain",
+      "[army-of-dunland] dunlending-horseman",
+      "[army-of-dunland] dunlending-warrior",
+      "[army-of-dunland] dunlending-huscarl",
+      "[army-of-dunland] wild-man-of-dunland"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-edoras] captain-of-rohan": {
     "valid_warband_units": [
       "[army-of-edoras] warrior-of-rohan",
@@ -765,6 +813,106 @@
   },
   "[arnor] ranger-of-the-north": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] ashrak": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mirkwood-giant-spider",
+      "[assault-on-lothlorien] mirkwood-hunting-spider",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] druzag-the-beastcaller": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mirkwood-giant-spider",
+      "[assault-on-lothlorien] mirkwood-hunting-spider",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] moria-goblin-captain": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] moria-goblin-shaman": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] muzgur-orc-shaman": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
+    "extra_profiles": []
+  },
+  "[assault-on-lothlorien] wild-warg-chieftain": {
+    "valid_warband_units": [
+      "[assault-on-lothlorien] bat-swarm",
+      "[assault-on-lothlorien] mordor-warg-rider",
+      "[assault-on-lothlorien] mordor-orc-warrior",
+      "[assault-on-lothlorien] moria-goblin-prowler",
+      "[assault-on-lothlorien] moria-goblin-warrior",
+      "[assault-on-lothlorien] orc-tracker",
+      "[assault-on-lothlorien] warg-marauder"
+    ],
     "extra_profiles": []
   },
   "[assault-on-ravenhill] bilbo-baggins-master-burglar": {
@@ -2175,6 +2323,91 @@
       "Meriadoc Brandybuck",
       "Peregrin Took"
     ]
+  },
+  "[far-harad] mahud-king": {
+    "valid_warband_units": [
+      "[far-harad] half-troll",
+      "[far-harad] mahud-warrior",
+      "[far-harad] mahud-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[far-harad] mahud-tribesmaster": {
+    "valid_warband_units": [
+      "[far-harad] half-troll",
+      "[far-harad] mahud-warrior",
+      "[far-harad] mahud-raider"
+    ],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[fell-beings-of-mirkwood] bat-swarm",
+      "[fell-beings-of-mirkwood] fell-warg",
+      "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+      "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+      "[fell-beings-of-mirkwood] mordor-orc-warrior",
+      "[fell-beings-of-mirkwood] mordor-warg-rider",
+      "[fell-beings-of-mirkwood] orc-tracker",
+      "[fell-beings-of-mirkwood] mordor-orc-drummer"
+    ],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-drummer": {
+    "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[fell-beings-of-mirkwood] bat-swarm",
+      "[fell-beings-of-mirkwood] fell-warg",
+      "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+      "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+      "[fell-beings-of-mirkwood] mordor-orc-warrior",
+      "[fell-beings-of-mirkwood] mordor-warg-rider",
+      "[fell-beings-of-mirkwood] orc-tracker",
+      "[fell-beings-of-mirkwood] mordor-orc-drummer"
+    ],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] mordor-orc-taskmaster": {
+    "valid_warband_units": [
+      "[fell-beings-of-mirkwood] bat-swarm",
+      "[fell-beings-of-mirkwood] fell-warg",
+      "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+      "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+      "[fell-beings-of-mirkwood] mordor-orc-warrior",
+      "[fell-beings-of-mirkwood] mordor-warg-rider",
+      "[fell-beings-of-mirkwood] orc-tracker",
+      "[fell-beings-of-mirkwood] mordor-orc-drummer"
+    ],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] razgush-war-leader-of-the-north": {
+    "valid_warband_units": [
+      "[fell-beings-of-mirkwood] bat-swarm",
+      "[fell-beings-of-mirkwood] fell-warg",
+      "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+      "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+      "[fell-beings-of-mirkwood] mordor-orc-warrior",
+      "[fell-beings-of-mirkwood] mordor-warg-rider",
+      "[fell-beings-of-mirkwood] orc-tracker",
+      "[fell-beings-of-mirkwood] mordor-orc-drummer"
+    ],
+    "extra_profiles": []
+  },
+  "[fell-beings-of-mirkwood] the-spider-queen": {
+    "valid_warband_units": [
+      "[fell-beings-of-mirkwood] bat-swarm",
+      "[fell-beings-of-mirkwood] fell-warg",
+      "[fell-beings-of-mirkwood] mirkwood-giant-spider",
+      "[fell-beings-of-mirkwood] mirkwood-hunting-spider",
+      "[fell-beings-of-mirkwood] mordor-orc-warrior",
+      "[fell-beings-of-mirkwood] mordor-warg-rider",
+      "[fell-beings-of-mirkwood] orc-tracker",
+      "[fell-beings-of-mirkwood] mordor-orc-drummer"
+    ],
+    "extra_profiles": []
   },
   "[fields-of-celebrant] captain-of-minas-tirith": {
     "valid_warband_units": [
@@ -3865,6 +4098,30 @@
   },
   "[rangers-of-mirkwood] thorin-oakenshield": {
     "valid_warband_units": [],
+    "extra_profiles": []
+  },
+  "[ravagers-of-the-shire] golfimbul-orc-captain": {
+    "valid_warband_units": [
+      "[ravagers-of-the-shire] hill-troll",
+      "[ravagers-of-the-shire] mordor-orc-warrior",
+      "[ravagers-of-the-shire] mordor-warg-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[ravagers-of-the-shire] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[ravagers-of-the-shire] hill-troll",
+      "[ravagers-of-the-shire] mordor-orc-warrior",
+      "[ravagers-of-the-shire] mordor-warg-rider"
+    ],
+    "extra_profiles": []
+  },
+  "[ravagers-of-the-shire] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[ravagers-of-the-shire] hill-troll",
+      "[ravagers-of-the-shire] mordor-orc-warrior",
+      "[ravagers-of-the-shire] mordor-warg-rider"
+    ],
     "extra_profiles": []
   },
   "[realms-of-men] captain-of-arnor": {
@@ -5874,6 +6131,51 @@
     ],
     "extra_profiles": []
   },
+  "[the-spider-queens-brood] bat-swarm-cpt": {
+    "valid_warband_units": [
+      "[the-spider-queens-brood] bat-swarm",
+      "[the-spider-queens-brood] fell-warg",
+      "[the-spider-queens-brood] mirkwood-giant-spider",
+      "[the-spider-queens-brood] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-spider-queens-brood] fell-warg-cpt": {
+    "valid_warband_units": [
+      "[the-spider-queens-brood] bat-swarm",
+      "[the-spider-queens-brood] fell-warg",
+      "[the-spider-queens-brood] mirkwood-giant-spider",
+      "[the-spider-queens-brood] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-spider-queens-brood] mirkwood-giant-spider-cpt": {
+    "valid_warband_units": [
+      "[the-spider-queens-brood] bat-swarm",
+      "[the-spider-queens-brood] fell-warg",
+      "[the-spider-queens-brood] mirkwood-giant-spider",
+      "[the-spider-queens-brood] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-spider-queens-brood] mirkwood-hunting-spider-cpt": {
+    "valid_warband_units": [
+      "[the-spider-queens-brood] bat-swarm",
+      "[the-spider-queens-brood] fell-warg",
+      "[the-spider-queens-brood] mirkwood-giant-spider",
+      "[the-spider-queens-brood] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
+  "[the-spider-queens-brood] the-spider-queen": {
+    "valid_warband_units": [
+      "[the-spider-queens-brood] bat-swarm",
+      "[the-spider-queens-brood] fell-warg",
+      "[the-spider-queens-brood] mirkwood-giant-spider",
+      "[the-spider-queens-brood] mirkwood-hunting-spider"
+    ],
+    "extra_profiles": []
+  },
   "[the-three-trolls] bert-the-troll": {
     "valid_warband_units": [
       "[the-three-trolls] bill-the-troll",
@@ -6177,6 +6479,30 @@
     "valid_warband_units": [
       "[usurpers-of-edoras] hill-tribesman",
       "[usurpers-of-edoras] crebain"
+    ],
+    "extra_profiles": []
+  },
+  "[variags-of-khand] khandish-chieftain": {
+    "valid_warband_units": [
+      "[variags-of-khand] khandish-charioteer",
+      "[variags-of-khand] khandish-horseman",
+      "[variags-of-khand] khandish-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[variags-of-khand] khandish-king": {
+    "valid_warband_units": [
+      "[variags-of-khand] khandish-charioteer",
+      "[variags-of-khand] khandish-horseman",
+      "[variags-of-khand] khandish-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[variags-of-khand] khandish-king-general": {
+    "valid_warband_units": [
+      "[variags-of-khand] khandish-charioteer",
+      "[variags-of-khand] khandish-horseman",
+      "[variags-of-khand] khandish-warrior"
     ],
     "extra_profiles": []
   },

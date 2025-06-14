@@ -7,18 +7,21 @@ export const UnitRow = ({
   options,
   points,
   unique,
+  legacy,
 }: {
   quantity: number | string;
   name: string;
   options: string;
   points: number;
   unique: boolean;
+  legacy?: boolean;
 }) => {
   return (
     <Stack direction="row" gap={1} justifyContent="space-between">
       <Typography>
         <strong>
           {!unique && <>{quantity}</>} {name}
+          {legacy ? <sup>&#10013;</sup> : ""}
         </strong>{" "}
         {options && (
           <span style={{ whiteSpace: "nowrap" }}>with {options}</span>

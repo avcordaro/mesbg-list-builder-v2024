@@ -26,6 +26,15 @@
       "warning":"An Army of Dale Army must always contain Brand, who is always the Army's General."
     }
   ],
+  "Army of Dunland":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[army-of-dunland] thrydan-wolfsbane"
+      ],
+      "warning":"An Army of Dunland Army must always contain Thrydan, who is always the Army's General."
+    }
+  ],
   "Army of Gothmog":[
     {
       "type":"compulsory",
@@ -61,6 +70,23 @@
         "[assault-upon-helm's-deep] uruk-hai-captain-general"
       ],
       "warning":"An Assault Upon Helm's Deep Army must always contain an Uruk-hai Captain, who is always the Army's General."
+    }
+  ],
+  "Assault on Lothlorien":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[assault-on-lothlorien] muzgur-orc-shaman"
+      ],
+      "warning":"An Assault on Lothl\u00f3rien Army must always contain Muzg\u00far, who is always the Army's General."
+    },
+    {
+      "type":"requires_one",
+      "dependencies":[
+        "[assault-on-lothlorien] ashrak",
+        "[assault-on-lothlorien] druzag-the-beastcaller"
+      ],
+      "warning":"An Assault on Lothl\u00f3rien Army must always contain at least one Unique Goblin Hero."
     }
   ],
   "Assault on Ravenhill":[
@@ -288,6 +314,24 @@
       "warning":"A Fangorn Army must always contain Treebeard, who is always the Army's General."
     }
   ],
+  "Far Harad":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[far-harad] mahud-king"
+      ],
+      "warning":"A Far Harad Army must always contain a Mah\u00fbd King, who is always the Army's General."
+    }
+  ],
+  "Fell Beings of Mirkwood":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[fell-beings-of-mirkwood] razgush-war-leader-of-the-north"
+      ],
+      "warning":"A Fell Beings of Mirkwood Army must always contain Razg\u00fbsh, who is always the Army's General."
+    }
+  ],
   "Fields of Celebrant":[
     {
       "type":"compulsory",
@@ -445,6 +489,15 @@
         "[rangers-of-mirkwood] tauriel-ranger-of-mirkwood"
       ],
       "warning":"A Rangers of Mirkwood must include at least one Unique Elf Hero."
+    }
+  ],
+  "Ravagers of the Shire":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[ravagers-of-the-shire] golfimbul-orc-captain"
+      ],
+      "warning":"A Ravagers of the Shire Army must always contain Golfimbul, who is always the Army's General."
     }
   ],
   "Reclamation of Moria":[
@@ -632,6 +685,15 @@
       "warning":"A Serpent Horde Army must always contain Sulad\u00e2n, who is always the Army's General."
     }
   ],
+  "The Spider Queen's Brood":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[the-spider-queens-brood] the-spider-queen"
+      ],
+      "warning":"The Spider Queen\u2019s Brood Army must always contain The Spider Queen, who is always the Army's General."
+    }
+  ],
   "The Three Trolls":[
     {
       "type":"compulsory",
@@ -680,6 +742,15 @@
         "[umbar] hasharin"
       ],
       "warning":"An Umbar Army must always contain at least one H\u00e2sharin."
+    }
+  ],
+  "Variags of Khand":[
+    {
+      "type":"compulsory",
+      "dependencies":[
+        "[variags-of-khand] khandish-king-general"
+      ],
+      "warning":"A Variags of Khand Army must always contain a Khandish King, who is always the Army's General."
     }
   ],
   "Wolf Pack of Angmar":[

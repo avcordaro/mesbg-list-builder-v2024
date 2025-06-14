@@ -1,10 +1,39 @@
 import { mesbgData, profileData } from "../../assets/data.ts";
 import { Unit } from "../../types/mesbg-data.types.ts";
+import { Profile } from "../../types/profile-data.types.ts";
 import {
   convertBardsFamilyToSingleRows,
   convertShankAndWrotToSingleRows,
   convertSharkeyAndWormToSingleRows,
 } from "./utils/special-rows.ts";
+
+const emptyProfile: Profile = {
+  Mv: "",
+  Fv: "",
+  Sv: "",
+  S: "",
+  D: "",
+  A: "",
+  W: "",
+  C: "",
+  I: "",
+  Range: "",
+  special_rules: [],
+  active_or_passive_rules: [],
+  additional_stats: [],
+  additional_text: [],
+  heroic_actions: [],
+  magic_powers: [],
+  wargear: [],
+};
+
+const getProfileData = ([{ profile_origin, name }]: Unit[]) => {
+  const profiles = profileData[profile_origin];
+  if (!profiles) return emptyProfile;
+  const profile = profiles[name];
+  if (!profile) return emptyProfile;
+  return profile;
+};
 
 export const rows = Object.values(
   Object.values(mesbgData).reduce((acc, currentValue) => {
@@ -27,6 +56,7 @@ export const rows = Object.values(
     if (dataPoint[0].name === "Sharkey & Worm") {
       return convertSharkeyAndWormToSingleRows(dataPoint);
     }
+    const profile = getProfileData(dataPoint);
     return {
       name: dataPoint[0].name,
       army_type: dataPoint[0].army_type,
@@ -38,7 +68,7 @@ export const rows = Object.values(
         .flatMap((p) => p.options)
         .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
       MWFW: dataPoint.flatMap((p) => p.MWFW),
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name],
+      profile: profile,
     };
   })
   .map((row) => {

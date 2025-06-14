@@ -1,7 +1,12 @@
 {
   "main": {
+    "added": [
+      "Added army lists from the Evil Legacies PDF to the PDF (does not yet include profile cards & profile data).",
+      "Added banner and icon-indicator to the roster summary indicating the usage of legacy models."
+    ],
     "bugfixes": [
-      "Corrected the mandatory option selection label when selecting an hero specific unit upgrade (such as Helmingas or Hearthgaurd)."
+      "Corrected the mandatory option selection label when selecting an hero specific unit upgrade (such as Helmingas or Hearthgaurd).",
+      "Added missing warning on ruffian warbands in Sharkey's Rouges"
     ]
   },
   "1.21": {

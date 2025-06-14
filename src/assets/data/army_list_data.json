@@ -2756,5 +2756,196 @@
       "Hatred (Easterling)"
     ],
     "legacy": true
+  },
+  "Fell Beings of Mirkwood": {
+    "additional_rules": [
+      {
+        "description": "A Fell Beings of Mirkwood Army must always contain Razg\u00fbsh, who is always the Army\u2019s General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Through the Forest",
+        "description": "Friendly Infantry models gain the Woodland Creature special rule."
+      },
+      {
+        "title": "Death to the Elves",
+        "description": "Friendly models gain the Hatred (Elf) special rule."
+      },
+      {
+        "title": "The War Leader",
+        "description": "Whilst Engaged in Combat with an enemy Elf model, Razg\u00fbsh gains a bonus of +1 to his Fight Value."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Hatred (X)"
+    ],
+    "legacy": true
+  },
+  "Assault on Lothlorien": {
+    "additional_rules": [
+      {
+        "description": "An Assault on Lothl\u00f3rien Army must always contain Muzg\u00far, who is always the Army's General."
+      },
+      {
+        "description": "An Assault on Lothl\u00f3rien Army must always contain at least one Unique Goblin Hero."
+      },
+      {
+        "description": "Spider models may only be included in either Dr\u00fbzhag\u2019s or Ashr\u00e2k\u2019s Warbands."
+      },
+      {
+        "description": "This Army may not include more Goblin models than Orc models."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Cover of Darkness",
+        "description": "Any game using this Army List automatically takes place at night. Use the Fighting at Night special rules found on page 137 of the Middle-earth Strategy Battle Game Rules Manual."
+      },
+      {
+        "title": "Ruthless Savagery",
+        "description": "Friendly Orc and Goblin models gain a bonus of +1 To Wound when making Strikes against an enemy model that is outnumbered in a Combat."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "Army of Dunland": {
+    "additional_rules": [
+      {
+        "description": "An Army of Dunland Army must always contain Thrydan, who is always the Army's General"
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "\"Death to the Forgoil!\"",
+        "description": "Friendly Dunland models gain the Hatred (Rohan) special rule."
+      },
+      {
+        "title": "Dunlending Pride",
+        "description": "Friendly banners have a range of 6\" rather than 3\"."
+      },
+      {
+        "title": "Dunlending War Cry",
+        "description": "Once per game, at the start of any Fight Phase, Thrydan can use this special rule so long as he is alive and on the battlefield. If he does, then until the end of the turn friendly Dunland models within 12\" of Thrydan gain a bonus of +1 To Wound when making Strikes."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [
+      "Hatred (X)"
+    ],
+    "legacy": true
+  },
+  "Variags of Khand": {
+    "additional_rules": [
+      {
+        "description": "A Variags of Khand Army must always contain a Khandish King, who is always the Army's General."
+      },
+      {
+        "description": "Khandish Horsemen and Khandish Charioteers do not count towards this Army\u2019s bow limit."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "High King of Khand",
+        "description": "The Khandish King that is your General gains an additional Might Point. Additionally, so long as he is alive and on the battlefield, your General counts as a banner for the purpose of Victory Points."
+      },
+      {
+        "title": "Khandish Fury",
+        "description": "Once per game, at the start of any Fight Phase, you can declare that you are using this ability so long as there is at least one friendly Hero model alive and on the battlefield. If you do, then until the end of the turn friendly Warrior models that are within 3\" of a friendly Hero model gain a bonus of +1 to their Fight Value."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "Far Harad": {
+    "additional_rules": [
+      {
+        "description": "A Far Harad Army must always contain a Mah\u00fbd King, who is always the Army\u2019s General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Warrior Pride",
+        "description": "Mah\u00fbd Warrior models within 6\" of a friendly Mah\u00fbd Hero model that is Engaged in Combat automatically pass all Courage Tests they are required to take."
+      },
+      {
+        "title": "Revel in Death",
+        "description": "If your General slays an enemy Hero model in Combat, then until the end of the turn friendly Mah\u00fbd Warrior models within 6\" of your General gain a bonus of +1 to their Fight Value."
+      },
+      {
+        "title": "Battle Frenzy",
+        "description": "Whenever a friendly Mah\u00fbd model suffers a Wound, roll a D6. On the roll of natural 6, the Wound is ignored."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "Ravagers of the Shire": {
+    "additional_rules": [
+      {
+        "description": "A Ravagers of the Shire Army must always contain Golfimbul, who is always the Army\u2019s General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Golfimbul\u2019s Rage",
+        "description": "Golfimbul may declare a Heroic Combat each turn for free."
+      },
+      {
+        "title": "Courage from Ignorance",
+        "description": "Whilst Golfimbul is still alive and on the battlefield, friendly Orc models gain a bonus of +1 to any Courage Tests they are required to take."
+      },
+      {
+        "title": "Overwhelm the Foe",
+        "description": "Friendly Orc models gain a bonus of +1 To Wound when making Strikes against an enemy model that is outnumbered in a Combat."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
+  },
+  "The Spider Queen's Brood": {
+    "additional_rules": [
+      {
+        "description": "The Spider Queen\u2019s Brood Army must always contain The Spider Queen, who is always the Army\u2019s General."
+      }
+    ],
+    "special_rules": [
+      {
+        "title": "Beasts of the Forest",
+        "description": "Warbands from this Army do not need a Hero to lead them if they number six or more models. Instead, one Warrior model within the Warband takes on the role of the Warband\u2019s Captain for the purposes of deployment. Warbands without a Hero model leading them may not include more than 12 models."
+      },
+      {
+        "title": "\u201cWorse are the Webs\u201d",
+        "description": "After both sides have deployed, but before the first turn begins, a player using this Army List may place four 25mm Web Markers on the board. Web Markers cannot be set up within 3\" of an enemy model or Objective Marker, and cannot be set up within 6\" of the edge of the board or within 9\" of another Web Marker. Any non-Spider model within 3\" of a Web Marker is considered to be in Difficult Terrain. Additionally, Spider models do not need Line of Sight to Charge a model within 3\" of a Web Marker."
+      },
+      {
+        "title": "Protect the Queen",
+        "description": "Whenever the Spider Queen suffers a Wound, before any Fate Rolls are made, she may roll a D6. On a 3+, she may choose a single friendly Spider model within 1\" to immediately suffer the Wound instead of her."
+      },
+      {
+        "title": "Pounce",
+        "description": "When a friendly Spider Warrior model Charges an enemy Infantry model, they gain the Knock to the Ground bonus as if they were Cavalry. This bonus is lost if they are subsequently Charged by an enemy Cavalry model."
+      },
+      {
+        "title": "The Queen\u2019s Cunning",
+        "description": "If the Spider Queen declares a Heroic Move in the same turn as an enemy Hero, and subsequently loses the roll-off to see which Heroic Move will go first, she may choose to cancel her Heroic Move and regain the Might point spent to declare it."
+      }
+    ],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": [],
+    "legacy": true
   }
 }

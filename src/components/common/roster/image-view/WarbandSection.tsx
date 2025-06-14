@@ -43,6 +43,7 @@ export const WarbandSection = ({
         quantity: unit.quantity,
         points: unit.pointsTotal,
         unique: unit.unique,
+        legacy: unit.legacy,
       }))
       .reduce(
         (acc, item) => {
@@ -66,6 +67,7 @@ export const WarbandSection = ({
             quantity: number;
             points: number;
             unique: boolean;
+            legacy: boolean;
           };
         },
       ),
@@ -108,7 +110,8 @@ export const WarbandSection = ({
         >
           <Typography>
             <strong>
-              {hero?.name?.replaceAll("(General)", "")}{" "}
+              {hero?.name?.replaceAll("(General)", "")}
+              {hero?.legacy ? <sup>&#10013;</sup> : ""}{" "}
               {leader === warband.id && <i>(General)</i>}
             </strong>{" "}
             <span style={{ whiteSpace: "nowrap" }}>
@@ -120,16 +123,19 @@ export const WarbandSection = ({
           </Typography>
         </Stack>
 
-        {units.map(({ name, options, quantity, points, unique }, index) => (
-          <UnitRow
-            key={index}
-            name={name}
-            options={options}
-            quantity={quantity}
-            points={points}
-            unique={unique}
-          />
-        ))}
+        {units.map(
+          ({ name, options, quantity, points, unique, legacy }, index) => (
+            <UnitRow
+              key={index}
+              name={name}
+              options={options}
+              quantity={quantity}
+              points={points}
+              unique={unique}
+              legacy={legacy}
+            />
+          ),
+        )}
       </Stack>
       <Divider sx={{ height: 2, bgcolor: "#800000" }} />
     </>

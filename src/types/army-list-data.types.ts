@@ -13,5 +13,6 @@ export type ArmyListData = Record<
     bow_limit: number;
     throw_limit: number;
     break_point?: number;
+    legacy?: boolean;
   }
 >;

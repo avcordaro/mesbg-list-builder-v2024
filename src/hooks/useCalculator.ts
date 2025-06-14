@@ -7,6 +7,14 @@ import {
 } from "../types/roster.ts";
 import { isNotNull } from "../utils/nulls.ts";
 
+const heroesThatAreIncludedInTheWarbandCount = [
+  "[the-spider-queens-brood] bat-swarm-cpt",
+  "[the-spider-queens-brood] fell-warg-cpt",
+  "[the-spider-queens-brood] mirkwood-giant-spider-cpt",
+  "[the-spider-queens-brood] mirkwood-hunting-spider-cpt",
+  "[sharkey's-rogues] ruffian-cpt",
+];
+
 function heroAdditionalUnitRosterCount(warband: Warband) {
   if (!warband.hero) return 0;
   if (
@@ -29,6 +37,10 @@ function heroAdditionalUnitRosterCount(warband: Warband) {
     )
   ) {
     return 2;
+  }
+
+  if (heroesThatAreIncludedInTheWarbandCount.includes(warband.hero?.model_id)) {
+    return 0;
   }
 
   return 1;
@@ -129,7 +141,12 @@ export const useCalculator = () => {
           warband?.hero?.name === "Saruman" ? unit.name !== "Grima" : true,
       )
       .map((unit) => unit.quantity * (unit.siege_crew || 1))
-      .reduce((a, b) => a + b, 0);
+      .reduce(
+        (a, b) => a + b,
+        heroesThatAreIncludedInTheWarbandCount.includes(warband.hero?.model_id)
+          ? 1
+          : 0,
+      );
 
     const totalPoints = [warband.hero, ...warband.units]
       .filter(isNotNull)
