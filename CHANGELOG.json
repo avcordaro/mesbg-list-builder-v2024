@@ -1,7 +1,7 @@
 {
   "main": {
     "added": [
-      "Added army lists from the Evil Legacies PDF to the PDF (does not yet include profile cards & profile data).",
+      "Added army lists from the Evil Legacies PDF to the builder, including profile cards and profile data.",
       "Added banner and icon-indicator to the roster summary indicating the usage of legacy models."
     ],
     "bugfixes": [
