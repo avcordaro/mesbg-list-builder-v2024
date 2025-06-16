@@ -7075,6 +7075,48 @@
         "Woodland Creature"
       ]
     },
+    "War Camel": {
+      "Mv": "10\"",
+      "Fv": "2",
+      "Sv": "6+",
+      "S": "4",
+      "D": "4",
+      "A": "0",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Impaler",
+          "type": "Active",
+          "description": "Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between. Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between."
+        }
+      ],
+      "special_rules": [
+        "Woodland Creature"
+      ]
+    },
+    "Khandish Chariot": {
+      "Mv": "10\"",
+      "Fv": "2",
+      "Sv": "6+",
+      "S": "3",
+      "D": "7",
+      "A": "1",
+      "W": "3",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Chariot Charge",
+          "type": "Active",
+          "description": "When a Khandish Charioteer Moves via Chariot Charge, it will inflict 2 Strength 4 Impact Hits."
+        }
+      ],
+      "special_rules": [
+        "Dominant (3)"
+      ]
+    },
     "Feralof": {
       "Mv": "12\"",
       "Fv": "2",
@@ -9108,8 +9150,8 @@
       "D": "3",
       "A": "1",
       "W": "1",
-      "C": "3+",
-      "I": "",
+      "C": "7+",
+      "I": "7+",
       "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
@@ -15743,7 +15785,7 @@
       "active_or_passive_rules": [],
       "magic_powers": [
         {
-          "name": "Immobilise",
+          "name": "Transfix",
           "range": "12\"",
           "cast": "3+"
         },
@@ -16150,6 +16192,1901 @@
         "Hand weapon",
         "Shield",
         "Armoured horse"
+      ]
+    }
+  },
+  "Evil Legacy": {
+    "Abrakhan Merchant Guard": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Burly"
+      ],
+      "wargear": [
+        "Two-handed weapon"
+      ]
+    },
+    "Ashrak": {
+      "Mv": "5\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Death-touch",
+          "type": "Passive",
+          "description": "Any model that Wounds Ashrak in Combat, or is Wounded by Ashrak in Combat, must immediately roll a D6. On a 4+ the model immediately suffers the effects of the Paralyse Magical Power; however, the effects will not immediately end should Ashrak have no Will Points or be slain."
+        },
+        {
+          "name": "Spider-kin",
+          "type": "Passive",
+          "description": "Only Spider models may benefit from Ashrak's Stand Fast or Heroic Actions. Additionally, whilst within 3\" of a friendly Spider model, Ashrak gains the Terror special rule."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Fury (Spider)",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "two-handed weapon"
+      ]
+    },
+    "Black Guard Drummer": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "War drum (Mordor Uruk-Hai)"
+      ]
+    },
+    "Black Guard of Barad-dur": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "5",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Captain of the Black Guard": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "7",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "\"For the Dark Lord!\"",
+          "type": "Passive",
+          "description": "Whilst there is at least one friendly Ringwraith on the battlefield, treat this model's Courage as 4+."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Castellan of Dol Guldur": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "6",
+      "A": "2",
+      "W": "1",
+      "C": "4+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Morgul Blade",
+          "type": "Active",
+          "description": "This is a hand weapon. Once per game, a model with a Morgul Blade can use it during a Combat instead of the normal hand weapon; this must be declared before Strikes are made. If they do, all their Strikes must be resolved against a single enemy model, and if the target suffers a Wound that is not prevented in some way, they will immediately lose all remaining Wounds and be removed as a casualty. If the model using the Morgul Blade is mounted, they must use Strength and Attacks of the rider rather than their Mount."
+        },
+        {
+          "name": "Automatons",
+          "type": "Passive",
+          "description": "This model may never provide a Stand Fast to nearby Warrior models."
+        },
+        {
+          "name": "Will of the Necromancer",
+          "type": "Passive",
+          "description": "This model can spend its Will Points as if they were Fate Points."
+        },
+        {
+          "name": "Bound in Shadow",
+          "type": "Passive",
+          "description": "Whilst within 6\" of Sauron or a friendly Ringwraith model, this model automatically passes any Courage Tests it is required to take."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "Morgul Blade"
+      ]
+    },
+    "Corsair Reaver": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "3",
+      "A": "2",
+      "W": "1",
+      "C": "6+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Mindless Killers",
+          "type": "Active",
+          "description": "If this model starts its Activation more than 6\" away from a friendly Corsair Bo'sun, it must immediately take an Intelligence Test. If the test is passed, all is fine and this model acts as normal. If the test is failed, then you must choose another friendly model within 1\" of this model; the chosen model immediately suffers a Strength 3 hit and, after this Strength 3 hit has been resolved, this model must Charge an enemy model if able. If there are no other friendly models within 1\" of this model when it fails its Intelligence Test, then this model's Activation immediately ends. In a turn in which this model fails its Intelligence Test for this special rule, it must re-roll all failed To Wound rolls when making Strikes and gains a bonus of +1 To Wound when making Strikes."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Fearless"
+      ],
+      "wargear": [
+        "Hand weapons"
+      ]
+    },
+    "Dunlending Chieftain": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Two-handed weapon"
+      ]
+    },
+    "Dunlending Horseman": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "\"Slay their Horses!\"",
+          "type": "Active",
+          "description": "Whilst this model has the Cavalry keyword, it may re-roll To Wound rolls of a natural 1 when making Strikes against an enemy Mount."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield",
+        "Horse"
+      ]
+    },
+    "Dunlending Huscarl": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Dunlending War Axe",
+          "type": "Active",
+          "description": "This can be used as either a spear or a two-handed weapon."
+        },
+        {
+          "name": "Favour of the War Chief",
+          "type": "Passive",
+          "description": "If this model is Supporting a Combat, and is within 3\" of a friendly Dunland Hero, then this model gains a bonus of +1 to its Fight Value for the duration of the Combat."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Bodyguard"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Dunlending War Axe"
+      ]
+    },
+    "Dunlending Warrior": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Dweller in the Dark": {
+      "Mv": "8\"",
+      "Fv": "7",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "3",
+      "W": "3",
+      "C": "3+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Murderous Power",
+          "type": "Active",
+          "description": "Each time a Dweller in the Dark slays a model in Combat, it regains a single Wound lost earlier in the battle. These Wounds are regained at the end of the Combat. A Dweller in the Dark can only regain Wounds in this way by making Strikes, never by using a Brutal Power Attack."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (3)",
+        "Resistant to Magic",
+        "Terror"
+      ],
+      "wargear": [
+        "Claws and teeth (hand weapons)"
+      ]
+    },
+    "Feral Uruk-Hai": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "1",
+      "C": "5+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Oblivious to Pain",
+          "type": "Passive",
+          "description": "Whenever a Feral Uruk-hai suffers a Wound, roll a D6. On the roll of a natural 6, the Wound is ignored."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Hatred (Man)"
+      ],
+      "wargear": [
+        "Light armour",
+        "Hand weapons"
+      ]
+    },
+    "Frida Tallspear": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Readied Stance",
+          "type": "Active",
+          "description": "Cavalry models do not gain the Extra Attack and Knock to the Ground bonuses whilst Engaged in Combat with Frida, or Engaged in Combat with a model Frida is Supporting."
+        },
+        {
+          "name": "Go for the Horse!",
+          "type": "Passive",
+          "description": "Friendly Dunland models within 3\" of Frida may re-roll failed To Wound rolls when making Strikes against an enemy Mount."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Leader (Dunlending Huscarl)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Spear",
+        "Shield"
+      ]
+    },
+    "Golfimbul, Orc Captain": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Impressive Girth",
+          "type": "Passive",
+          "description": "Whenever Golfimbul suffers a Wound, roll a D6. On the roll of a 5+, the Wound is ignored. Golfimbul may use Might to influence this roll, though he may not use this special rule against Wounds caused by Magical Powers."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Challenge",
+        "Heroic Strike"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand-and-a-half weapon"
+      ]
+    },
+    "Goroth, Captain of the Morannon": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "5+",
+      "S": "5",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Come here maggot!",
+          "type": "Active",
+          "description": "Whenever Goroth suffers a Wound, before any Fate Rolls are made, he may roll a D6. On a 2+, he may choose a single friendly Mordor Orc model within 1\" to immediately suffer the Wound instead of him. Fate Rolls can then be made as normal."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Burly",
+        "Dominant (2)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "two-handed weapon"
+      ]
+    },
+    "Gorulf Ironskin": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Ironskin",
+          "type": "Active",
+          "description": "If at the start of the Fight Phase Gorulf is Engaged in Combat with an enemy Hero model, he may declare a Heroic Defence for free."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike",
+        "Heroic Defence"
+      ],
+      "special_rules": [
+        "Leader (Dunlending Huscarl)"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapons"
+      ]
+    },
+    "Great Beast of Gorgoroth": {
+      "Mv": "8\"",
+      "Fv": "4",
+      "Sv": "6+",
+      "S": "6",
+      "D": "7",
+      "A": "3",
+      "W": "6",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Trample",
+          "type": "Active",
+          "description": "When a Great Beast Tramples, it will inflict 3 Strength 6 hits."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (6)",
+        "Large Target",
+        "Terror"
+      ],
+      "wargear": [
+        "Hooves (hand weapon)"
+      ],
+      "additional_stats": [
+        {
+          "name": "Howdah",
+          "Mv": "-",
+          "Fv": "-",
+          "Sv": "5+",
+          "S": "-",
+          "D": "7",
+          "A": "-",
+          "W": "9",
+          "C": "-",
+          "I": "-",
+          "active_or_passive_rules": [
+            {
+              "name": "Orc Archers",
+              "type": "Passive",
+              "description": "The Orcs in the Howdah are not treated as separate models, and as such cannot be targeted individually. During the Shoot Phase, the Howdah can make a number of shooting attacks equal to its remaining Wounds, using its own Shoot Value. These shots are treated as being made with an Orc bow, can still be made if the Great Beast has Moved over half its Move Value, and do not suffer the -1 penalty for Moving and Shooting. Measure the range from the base of the Great Beast, and Line of Sight from the Commander."
+            }
+          ],
+          "special_rules": [],
+          "wargear": []
+        },
+        {
+          "name": "Orc Commander",
+          "Mv": "6\"",
+          "Fv": "4",
+          "Sv": "5+",
+          "S": "4",
+          "D": "5",
+          "A": "2",
+          "W": "2",
+          "C": "6+",
+          "I": "7+",
+          "active_or_passive_rules": [
+            {
+              "name": "Plenty of Orcs",
+              "type": "Passive",
+              "description": "If the Orc Commander would lose its last Wound whilst riding the Great Beast, then the Howdah will suffer the Wound instead (this represents an Orc from the Howdah taking command). If the Great Beast is slain, then the Orc Commander will also be slain and removed as a casualty."
+            }
+          ],
+          "special_rules": [],
+          "heroic_actions": [
+            "Heroic March"
+          ],
+          "wargear": [
+            "Armour",
+            "spear"
+          ]
+        }
+      ]
+    },
+    "Groblog": {
+      "Mv": "5\"",
+      "Fv": "4",
+      "Sv": "5+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Mithril Crown",
+          "type": "Active",
+          "description": " This is a Unique piece of wargear. Friendly Moria Goblin models within 3\" of Groblog gain the Dominant (2) special rule."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon",
+        "Mithril Crown"
+      ]
+    },
+    "Half Troll": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "6+",
+      "S": "5",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "8+",
+      "I": "9+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (2)",
+        "Terror"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon"
+      ]
+    },
+    "Haradrim King": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Tribal King",
+          "type": "Active",
+          "description": "If this model is your General, it increases its Attacks characteristic to 3 and gains the General Hunter special rule."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Bane of Kings"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon"
+      ]
+    },
+    "Kardush the Firecaller": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Shadow Pawn",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, Kardush's controlling player can choose to remove him from the battlefield as a casualty if he is within 6\" of a friendly Ringwraith. If they do, then a single friendly Ringwraith model within 6\" of where Kardush was immediately regains D6 Will Points spent earlier in the battle."
+        },
+        {
+          "name": "Heart of Darkness",
+          "type": "Active",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, Kardush can choose a single friendly Orc Warrior model within 6\" of himself. If he does, the chosen model is removed as a casualty and Kardush immediately regains D3 Will Points spent earlier in the battle."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Flameburst",
+          "range": "6\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Fury (Mordor Orc)",
+          "range": "Self",
+          "cast": "3+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "spear"
+      ]
+    },
+    "Khamul the Easterling": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Essence Leech",
+          "type": "Active",
+          "description": "Each time Khamul slays an enemy model in Combat, he immediately regains a single Will Point spent earlier in the battle. Additionally, at the start of the Fight Phase, before the Declare Heroic Actions step, Khamul may spend a Will Point to increase either his Fight Value, Strength or Attacks by 1 until the End Phase of the turn. Note this will only ever affect Khamul, not any Mount he is riding."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Bladewrath",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "6+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Challenge",
+        "Heroic Channelling",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon"
+      ]
+    },
+    "Khandish Charioteer": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "7",
+      "A": "1",
+      "W": "3",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Chariot Charge",
+          "type": "Active",
+          "description": "When a Khandish Charioteer Moves via Chariot Charge, it will inflict 2 Strength 4 Impact Hits."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (3)"
+      ],
+      "wargear": [
+        "Armour",
+        "hand-and-a-half weapon",
+        "hand weapon"
+      ]
+    },
+    "Khandish Chieftain": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand-and-a-half weapon",
+        "bow"
+      ]
+    },
+    "Khandish Horseman": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand-and-a-half weapon",
+        "hand weapon",
+        "bow",
+        "Horse"
+      ]
+    },
+    "Khandish King": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "6",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Commanding Presence",
+          "type": "Passive",
+          "description": "Friendly Khand models treat a Khandish King as a banner with a range of 6\"."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Resolve",
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Heavy armour",
+        "hand-and-a-half weapon",
+        "bow"
+      ]
+    },
+    "Khandish Warrior": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand-and-a-half weapon",
+        "hand weapon"
+      ]
+    },
+    "Mahud King": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "5",
+      "D": "6",
+      "A": "3",
+      "W": "2",
+      "C": "5+",
+      "I": "6+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Mahud Raider": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Poisoned Attacks (blowpipe)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Shield",
+        "War Camel"
+      ]
+    },
+    "Mahud Tribesmaster": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Poisoned Attacks (blowpipe)"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Mahud Warrior": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "3+",
+      "S": "4",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Poisoned Attacks (blowpipe)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Shield"
+      ]
+    },
+    "Mauhur": {
+      "Mv": "8\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "5",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Unhinged Charge",
+          "type": "Active",
+          "description": "At the start of a Combat in which Mauhur Charged, Mauhur may declare he is using this special rule before any dice are rolled. If he does, then he suffers a -1 penalty to his Duel Rolls; however, if his side wins, he may re-roll any failed To Wound rolls when making Strikes in that Combat."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic March"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "Hand weapons"
+      ]
+    },
+    "Morgul Stalker": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Stalk Unseen"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon"
+      ]
+    },
+    "Moria Blackshield Captain": {
+      "Mv": "5\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "4",
+      "D": "6",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Cave Dweller",
+        "Hatred (Dwarf)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "two-handed weapon"
+      ]
+    },
+    "Moria Blackshield Drum": {
+      "Mv": "5\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "5",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "Run and Drum",
+          "type": "Active",
+          "description": "The Drum is considered to be playing as long as both the Drummer and Drum Bearer are in base contact, and the Drummer is not Engaged in Combat. Whilst the Drum is being played it has the following effects: \u2022 Friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take. \u2022 Enemy models suffer a -1 penalty to any Courage Tests they are required to take. \u2022 Friendly Moria Goblin models within 18\" count as being in range of a banner. \u2022 Whilst being played, the Moria Blackshield Drum counts as a banner for the purpose of Victory Points."
+        },
+        {
+          "name": "Take up the Drum",
+          "type": "Active",
+          "description": "If the Moria Blackshield Drummer or Moria Blackshield Drum Bearer is slain, then they may pass on their wargear to a friendly Moria Blackshield Warrior within 1\" of them. The chosen model becomes a Moria Blackshield Drummer/Drum Bearer (as applicable) and exchanges their wargear for that of the slain model - replace the chosen model with the slain Moria Blackshield Drummer/Drum Bearer."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Cave Dweller",
+        "Hatred (Dwarf)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "Drum"
+      ]
+    },
+    "Moria Blackshield Shaman": {
+      "Mv": "5\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "2",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [
+        {
+          "name": "Collapse Rocks",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Tremor",
+          "range": "Self",
+          "cast": "5+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Cave Dweller",
+        "Hatred (Dwarf)"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon"
+      ]
+    },
+    "Moria Blackshield Warrior": {
+      "Mv": "5\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "6",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "8+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Cave Dweller",
+        "Hatred (Dwarf)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon",
+        "shield"
+      ]
+    },
+    "Muzgur, Orc Shaman": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Power from Death",
+          "type": "Active",
+          "description": "Whenever Muzgur slays an enemy model in Combat, he immediately regains a Will Point spent earlier in the battle."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Wither",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling",
+        "Heroic Defence"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Spear"
+      ]
+    },
+    "Orc Tracker": {
+      "Mv": "6\"",
+      "Fv": "3",
+      "Sv": "5+",
+      "S": "4",
+      "D": "4",
+      "A": "2",
+      "W": "1",
+      "C": "7+",
+      "I": "7+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Mountain Dweller"
+      ],
+      "wargear": [
+        "Hand weapon",
+        "orc bow"
+      ]
+    },
+    "Razgush, War Leader of the North": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "7",
+      "A": "3",
+      "W": "3",
+      "C": "5+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Bone-breakers",
+          "type": "Active",
+          "description": "This is a Unique hand weapon. Enemy models with an Elven weapon Engaged in Combat with, or supporting a model Engaged in Combat with, Razgush do not receive the bonus to the roll-off should the Duel Roll result in a Drawn Combat."
+        },
+        {
+          "name": "The Beasts of Mirkwood",
+          "type": "Passive",
+          "description": "Razgush may include Bat Swarms, Mirkwood Giant Spiders, Mirkwood Hunting Spiders and Fell Wargs in his Warband even if they are not listed in the Army List Razgush is included in."
+        },
+        {
+          "name": "War Leader of the North",
+          "type": "Passive",
+          "description": "The range of Razgush's Stand Fast is 12\" rather than 6\"."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Elfbane",
+        "Hatred (Elf)"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Bone-breaker",
+        "shield"
+      ]
+    },
+    "The Betrayer": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Master of Poisons",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Betrayer may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, friendly models with the Poisoned Attacks special rule within 6\" of the Betrayer may re-roll all failed To Wound rolls for their Poisoned Attacks, rather than just To Wound rolls of a natural 1."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Panic Steed",
+          "range": "12\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Bane of Kings",
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand-and-a-half weapon"
+      ]
+    },
+    "The Dark Marshal": {
+      "Mv": "6\"",
+      "Fv": "6",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Rule Through Fear",
+          "type": "Passive",
+          "description": "At the start of the Fight Phase, before the Declare Heroic Actions step, the Dark Marshal may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, friendly Warrior models treat the Dark Marshal as a banner with a range of 6\"."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Aura of Command",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon"
+      ]
+    },
+    "The Dwimmerlaik": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Sap Fortitude",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Dwimmerlaik may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, whenever an enemy Hero model within 6\" of the Dwimmerlaik declares a Heroic Action, they must take an Intelligence Test. If the test is failed the Heroic Action is immediately cancelled, and the Might Point spent to declare it is lost."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Curse",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "two-handed weapon"
+      ]
+    },
+    "The Golden King of Abrakhan": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "4",
+      "W": "4",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Resolve"
+      ],
+      "special_rules": [
+        "Burly"
+      ],
+      "wargear": [
+        "Two-handed weapon",
+        "The Golden Throne"
+      ]
+    },
+    "The Knight of Umbar": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Armour of the Sundered Land",
+          "type": "Passive",
+          "description": "This is Unique heavy armour. Additionally, the Knight of Umbar only loses a Will Point for having been in a Combat, as per the Will of Evil special rule, if his side loses a Combat during the Fight Phase."
+        },
+        {
+          "name": "Combat Mimicry",
+          "type": "Active",
+          "description": "At the start of the Fight Phase, before the Declare Heroic Actions step, the Knight of Umbar may spend a Will Point to use this special rule. If he does, he may immediately choose a single enemy model he is Engaged in Combat with. The Knight of Umbar can elect to use the Fight Value, Attacks and/or Strength characteristics of the chosen model (in any combination) until the End Phase of the turn."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Enchant Blades",
+          "range": "12\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon"
+      ]
+    },
+    "The Shadow Lord": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "5+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Pall of Darkness",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Shadow Lord may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, Shooting Attacks that target the Shadow Lord, or any model within 6\" of him, will only ever hit on the roll of a 6."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Fog of Disarray",
+          "range": "Self",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand weapon"
+      ]
+    },
+    "The Spider Queen": {
+      "Mv": "10\"",
+      "Fv": "6",
+      "Sv": "6+",
+      "S": "6",
+      "D": "4",
+      "A": "2",
+      "W": "3",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Progeny",
+          "type": "Active",
+          "description": "At the beginning of her Activation, the Spider Queen may spend any number of Will Points she has remaining to summon a Broodling. For each Will Point spent, place a single Broodling anywhere within 3\" of the Spider Queen. Broodlings placed in this manner can never be placed in base contact with enemy models, but may be placed within the Control Zones of enemy models. Broodlings may be Activated on a turn in which they were summoned, though may not Activate as part of a Heroic Move or Heroic March declared by a friendly model that turn as they were not on the board when the Heroic Action was declared. Broodlings are never taken into account when working out if an Army is Broken or reduced to 25%."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Defence",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Dominant (3)",
+        "Monstrous Charge",
+        "Swift Movement",
+        "Terror",
+        "Venom"
+      ],
+      "wargear": [
+        "Large venomous fangs (hand weapons)"
+      ],
+      "additional_stats": [
+        {
+          "name": "Broodling",
+          "Mv": "10\"",
+          "Fv": "2",
+          "Sv": "6+",
+          "S": "3",
+          "D": "3",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [],
+          "special_rules": [
+            "Poisoned Attacks",
+            "Swift Movement"
+          ],
+          "wargear": [
+            "Fangs (hand weapons)"
+          ]
+        }
+      ]
+    },
+    "The Tainted": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Miasmatic Presence",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Tainted may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, all Warrior models (both friendly and enemy) within 6\" of the Tainted may not benefit from the Stand Fast rule, nor take part in any Heroic Actions."
+        },
+        {
+          "name": "Seeping Decay",
+          "type": "Passive",
+          "description": "At the start of the Fight Phase, before the Declare Heroic Actions step, roll a D6 for every non-Spirit model in base contact with the Tainted, both friendly and enemy. On the roll of a natural 6, the model immediately suffers a Wound. If the model in base contact is a Cavalry model, roll for both the rider and the Mount separately. If after this special rule has been resolved the Tainted is no longer in base contact with any enemy models, then he will not count as being Engaged in Combat that turn (unless he is subsequently Charged as a result of a Heroic Combat)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "Hand weapon"
+      ]
+    },
+    "The Undying": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "4",
+      "D": "8",
+      "A": "1",
+      "W": "1",
+      "C": "4+",
+      "I": "4+",
+      "active_or_passive_rules": [
+        {
+          "name": "Arcana Leech",
+          "type": "Passive",
+          "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Undying may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, the Undying regains a Will Point spent earlier in the battle every time another model successfully casts a Magical Power within 6\"."
+        },
+        {
+          "name": "Arcana Leech",
+          "type": "Passive",
+          "description": "The Undying can spend his Will Points as if they were Fate Points."
+        }
+      ],
+      "magic_powers": [
+        {
+          "name": "Compel",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Transfix",
+          "range": "12\"",
+          "cast": "3+"
+        },
+        {
+          "name": "Drain Courage",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Foil Magic",
+          "range": "12\"",
+          "cast": "4+"
+        },
+        {
+          "name": "Black Dart",
+          "range": "6\"",
+          "cast": "5+"
+        },
+        {
+          "name": "Instill Fear",
+          "range": "Self",
+          "cast": "6+"
+        }
+      ],
+      "heroic_actions": [
+        "Heroic Channelling"
+      ],
+      "special_rules": [
+        "Harbinger of Evil (12\")",
+        "Terror",
+        "Will of Evil"
+      ],
+      "wargear": [
+        "Heavy armour",
+        "hand-and-a-half weapon"
+      ]
+    },
+    "Thrydan Wolfsbane": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "4+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "6+",
+      "active_or_passive_rules": [
+        {
+          "name": "Lord of Dunland",
+          "type": "Active",
+          "description": "The range of Thrydan's Stand Fast is 12\" rather than 6\"."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strength",
+        "Heroic Strike"
+      ],
+      "special_rules": [
+        "Leader (Dunlending Huscarl)",
+        "Mighty Blow"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Two-handed weapon"
+      ]
+    },
+    "Vrasku": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "3+",
+      "S": "5",
+      "D": "5",
+      "A": "2",
+      "W": "2",
+      "C": "6+",
+      "I": "5+",
+      "active_or_passive_rules": [],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Accuracy",
+        "Heroic March"
+      ],
+      "special_rules": [
+        "Expert Shot",
+        "Sharpshooter"
+      ],
+      "wargear": [
+        "Armour",
+        "Hand weapon",
+        "Crossbow"
+      ]
+    },
+    "Warg Marauder": {
+      "Mv": "5\"",
+      "Fv": "2",
+      "Sv": "5+",
+      "S": "3",
+      "D": "4",
+      "A": "1",
+      "W": "1",
+      "C": "8+",
+      "I": "8+",
+      "active_or_passive_rules": [
+        {
+          "name": "On the Hunt",
+          "type": "Active",
+          "description": "During the Shoot Phase, a Warg Marauder can make a shooting attack with an Orc bow for each Moria Goblin Warrior with an Orc bow still alive upon the Warg. These shooting attacks can still be made even if the Warg Marauder has Moved further than half its Move Value that turn, and even if it is Engaged in Combat."
+        },
+        {
+          "name": "Lethal Union",
+          "type": "Active",
+          "description": "Whilst the Goblins remain mounted upon the Warg, the entire model gains the Terror special rule and gains a bonus of +1 to any Courage Tests it is required to take. Additionally, during a Combat a Warg Marauder gains an additional Attack for each Goblin after the first that is still mounted upon the Warg, provided they did not shoot during the Shoot Phase."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Cave Dweller"
+      ],
+      "wargear": [
+        "Armour",
+        "hand weapon",
+        "either shield or orc bow"
+      ],
+      "additional_text": [
+        "A Warg Marauder consists of three Moria Goblin Warriors riding a single Warg Mount. Two of the Warriors have an Orc bow, the other has a shield. This is treated as any other Cavalry model with the following exceptions: Whilst the Warrior with shield remains alive, all parts of the Cavalry model gain the +1 Defence bonus. The Warg Marauder only counts as a single model towards an Army's Bow Limit. If one Moria Goblin Warrior wishes to dismount, then they must all do so together."
+      ]
+    },
+    "Watcher of Karna": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "3+",
+      "S": "3",
+      "D": "3",
+      "A": "1",
+      "W": "1",
+      "C": "7+",
+      "I": "5+",
+      "active_or_passive_rules": [
+        {
+          "name": "Twin Blades",
+          "type": "Active",
+          "description": "A Watcher of Karna with Twin Blades increases its Attacks to 2."
+        },
+        {
+          "name": "Steely Nerve",
+          "type": "Active",
+          "description": "Watchers of Karna gain a bonus of +2 to their Courage Test when attempting to Charge an enemy with the Terror special rule. Additionally, when an enemy model with the Blades of the Dead makes Strikes against this model, this model will treat its Courage value as 5+ rather than 7+ (before any modifiers are applied)."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Hatred (Spirit)",
+        "Poisoned Attacks (bow)",
+        "Resistant to Magic"
+      ],
+      "wargear": [
+        "Light armour",
+        "Hand weapon"
+      ]
+    },
+    "Zagdush, Orc Captain": {
+      "Mv": "6\"",
+      "Fv": "4",
+      "Sv": "4+",
+      "S": "4",
+      "D": "5",
+      "A": "3",
+      "W": "2",
+      "C": "6+",
+      "I": "7+",
+      "active_or_passive_rules": [
+        {
+          "name": "Reckless Fighter",
+          "type": "Active",
+          "description": "At the start of any Combat involving Zagdush, before any dice are rolled, Zagdush may choose to reduce his Defence by 1 and increase his Strength by 1. This effect lasts until the Combat is resolved."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [
+        "Heroic Strike",
+        "Heroic Strength"
+      ],
+      "special_rules": [],
+      "wargear": [
+        "Armour",
+        "hand weapons"
       ]
     }
   }
