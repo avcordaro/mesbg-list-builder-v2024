@@ -22793,7 +22793,19 @@
     "bow_limit": true,
     "MWFW": [],
     "warband_size": 12,
-    "options": []
+    "options": [
+      {
+        "id": "OPT1361",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1362",
+        "name": "Whip",
+        "points": 1
+      }
+    ]
   },
   "[sharkey's-rogues] ruffian": {
     "model_id": "[sharkey's-rogues] ruffian",
