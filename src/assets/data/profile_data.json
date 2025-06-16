@@ -7092,9 +7092,7 @@
           "description": "Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between. Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between."
         }
       ],
-      "special_rules": [
-        "Woodland Creature"
-      ]
+      "special_rules": []
     },
     "Khandish Chariot": {
       "Mv": "10\"",
@@ -17992,36 +17990,67 @@
       ]
     },
     "Warg Marauder": {
-      "Mv": "5\"",
-      "Fv": "2",
-      "Sv": "5+",
-      "S": "3",
-      "D": "4",
-      "A": "1",
-      "W": "1",
-      "C": "8+",
-      "I": "8+",
-      "active_or_passive_rules": [
-        {
-          "name": "On the Hunt",
-          "type": "Active",
-          "description": "During the Shoot Phase, a Warg Marauder can make a shooting attack with an Orc bow for each Moria Goblin Warrior with an Orc bow still alive upon the Warg. These shooting attacks can still be made even if the Warg Marauder has Moved further than half its Move Value that turn, and even if it is Engaged in Combat."
-        },
-        {
-          "name": "Lethal Union",
-          "type": "Active",
-          "description": "Whilst the Goblins remain mounted upon the Warg, the entire model gains the Terror special rule and gains a bonus of +1 to any Courage Tests it is required to take. Additionally, during a Combat a Warg Marauder gains an additional Attack for each Goblin after the first that is still mounted upon the Warg, provided they did not shoot during the Shoot Phase."
-        }
-      ],
+      "Mv": "-",
+      "Fv": "-",
+      "Sv": "-",
+      "S": "-",
+      "D": "-",
+      "A": "-",
+      "W": "-",
+      "C": "-",
+      "I": "-",
+      "active_or_passive_rules": [],
       "magic_powers": [],
       "heroic_actions": [],
-      "special_rules": [
-        "Cave Dweller"
-      ],
-      "wargear": [
-        "Armour",
-        "hand weapon",
-        "either shield or orc bow"
+      "special_rules": [],
+      "wargear": [],
+      "additional_stats": [
+        {
+          "name": "Moria Goblin Warrior",
+          "Mv": "5\"",
+          "Fv": "2",
+          "Sv": "5+",
+          "S": "3",
+          "D": "4",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [
+            {
+              "name": "On the Hunt",
+              "type": "Active",
+              "description": "During the Shoot Phase, a Warg Marauder can make a shooting attack with an Orc bow for each Moria Goblin Warrior with an Orc bow still alive upon the Warg. These shooting attacks can still be made even if the Warg Marauder has Moved further than half its Move Value that turn, and even if it is Engaged in Combat."
+            },
+            {
+              "name": "Lethal Union",
+              "type": "Active",
+              "description": "Whilst the Goblins remain mounted upon the Warg, the entire model gains the Terror special rule and gains a bonus of +1 to any Courage Tests it is required to take. Additionally, during a Combat a Warg Marauder gains an additional Attack for each Goblin after the first that is still mounted upon the Warg, provided they did not shoot during the Shoot Phase."
+            }
+          ],
+          "special_rules": [
+            "Cave Dweller"
+          ],
+          "wargear": [
+            "Armour",
+            "hand weapon",
+            "either shield or orc bow"
+          ]
+        },
+        {
+          "name": "Warg",
+          "Mv": "10\"",
+          "Fv": "3",
+          "Sv": "6+",
+          "S": "4",
+          "D": "4",
+          "A": "1",
+          "W": "1",
+          "C": "8+",
+          "I": "8+",
+          "active_or_passive_rules": [],
+          "special_rules": []
+        }
       ],
       "additional_text": [
         "A Warg Marauder consists of three Moria Goblin Warriors riding a single Warg Mount. Two of the Warriors have an Orc bow, the other has a shield. This is treated as any other Cavalry model with the following exceptions: Whilst the Warrior with shield remains alive, all parts of the Cavalry model gain the +1 Defence bonus. The Warg Marauder only counts as a single model towards an Army's Bow Limit. If one Moria Goblin Warrior wishes to dismount, then they must all do so together."

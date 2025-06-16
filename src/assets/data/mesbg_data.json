@@ -609,6 +609,11 @@
         "id": "OPT1332",
         "name": "Two-handed weapon",
         "points": 1
+      },
+      {
+        "id": "OPT1360",
+        "name": "Flaming Brand",
+        "points": 1
       }
     ]
   },
@@ -3795,7 +3800,7 @@
     "unit_type": "Warrior",
     "base_points": 35,
     "default_bow": true,
-    "siege_crew": 2,
+    "siege_crew": 3,
     "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
