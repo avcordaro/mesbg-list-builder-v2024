@@ -1,7 +1,8 @@
 {
   "main": {
     "added": [
-      "Added a warning on Defenders of Helm's Deep indicating the overuse of Lothlórien models."
+      "Added a warning on Defenders of Helm's Deep indicating the overuse of Lothlórien models.",
+      "Added utility to automatically create the warband full of woses in Paths of the Druadan."
     ],
     "bugfixes": [
       "Fixed the lookup for Fury special rules by replacing the value of X during the lookup.",
