@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added a warning on Defenders of Helm's Deep indicating the overuse of Lothlórien models."
+    ],
     "bugfixes": [
       "Fixed the lookup for Fury special rules by replacing the value of X during the lookup.",
       "Added a missing mapping for Xbane special rule to highlight the 'Bane Weapons' special rule.",

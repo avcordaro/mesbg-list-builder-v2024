@@ -143,7 +143,6 @@ function extraScriptedRosterWarnings(
   }
 
   if (roster.armyList === "Assault on Lothlorien") {
-    // todo: check amount of orcs and goblins
     const orcs = [
       "[assault-on-lothlorien] muzgur-orc-shaman",
       "[assault-on-lothlorien] mordor-orc-captain",
@@ -227,6 +226,38 @@ function extraScriptedRosterWarnings(
           dependencies: [],
         }),
       );
+  }
+
+  if (roster.armyList === "Defenders of Helm's Deep") {
+    const lothlorienIds = [
+      "[defenders-of-helm's-deep] haldir-galadhrim-captain",
+      "[defenders-of-helm's-deep] galadhrim-captain",
+      "[defenders-of-helm's-deep] galadhrim-warrior",
+    ];
+
+    const [lothlorienModels, others] = roster.warbands
+      .flatMap((wb) => [wb.hero, ...wb.units])
+      .filter(isSelectedUnit)
+      .map((unit) => ({
+        type: lothlorienIds.includes(unit.model_id) ? "lothlorien" : "other",
+        quantity: unit.quantity + unit.quantity * unit.siege_crew,
+      }))
+      .reduce(
+        ([l, o], { type, quantity }) =>
+          type === "lothlorien" ? [l + quantity, o] : [l, o + quantity],
+        [0, 0],
+      );
+
+    const perc = Math.floor(
+      (lothlorienModels / (others + lothlorienModels)) * 100,
+    );
+    if (perc > 33) {
+      warnings.push({
+        warning: `Only 33% of this army can have the Lothlórien keyword. The current roster has ${perc}% models with the Lothlórien keyword`,
+        type: undefined,
+        dependencies: [],
+      });
+    }
   }
 
   if (
