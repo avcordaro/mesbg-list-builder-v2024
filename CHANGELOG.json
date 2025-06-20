@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added hero names to the search box when creating an army allowing users to select an army list based on a hero they want to play with. This hero is automatically added to the created roster."
+    ],
     "bugfixes": [
       "Updated the Move value of Khandish Charioteer to 10 inches.",
       "Added the new additional army rule for The Spider Queen's Brood.",

@@ -16,22 +16,13 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import { useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { v4 as randomUuid } from "uuid";
 import data from "../../../assets/data/mesbg_data.json";
-import models from "../../../assets/data/mesbg_data.json";
-import warningRules from "../../../assets/data/warning_rules.json";
-import { mesbgData } from "../../../assets/data.ts";
-import { useCalculator } from "../../../hooks/useCalculator.ts";
+import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuilder.ts";
 import { useExport } from "../../../hooks/useExport.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
-import {
-  emptyRoster,
-  emptyWarband,
-} from "../../../state/roster-building/roster";
 import { ArmyType } from "../../../types/mesbg-data.types.ts";
-import { Roster, Warband } from "../../../types/roster.ts";
-import { WarningRules } from "../../../types/warning-rules.types.ts";
+import { Roster } from "../../../types/roster.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
 import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 import { FactionLogo } from "../../common/images/FactionLogo.tsx";
@@ -56,13 +47,27 @@ const armyLists = Object.values(data)
   )
   .sort((a, b) => armyTypeOrder[a.type] - armyTypeOrder[b.type]);
 
+const heroesPerArmy = Object.values(data)
+  .filter((item) => item.unit_type && item.unit_type.includes("Hero"))
+  .map((item) => ({
+    title: `${item.name.split("(")[0].trim()} (${item.army_list})`,
+    hero: item.name.split("(")[0].trim(),
+    army: item.army_list,
+    type: "Hero",
+  }))
+  .filter(
+    (value, index, array) =>
+      array.findIndex((other) => other.title === value.title) === index,
+  )
+  .sort((a, b) => armyTypeOrder[a.type] - armyTypeOrder[b.type]);
+
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();
   const { createRoster, rosters, groups } = useRosterBuildingState();
   const navigate = useNavigate();
   const { importJsonRoster } = useExport();
-  const calculator = useCalculator();
   const { groupId: groupSlug } = useParams();
+  const buildNewRoster = useNewRosterBuilder();
   const { id: groupId } =
     groups.find((group) => group.slug === groupSlug) || {};
 
@@ -71,6 +76,7 @@ export const CreateNewRosterModal = () => {
   const [armyList, setArmyList] = useState<{
     title: string;
     type: string;
+    hero?: string;
     army: string;
   }>({
     title: "",
@@ -98,94 +104,16 @@ export const CreateNewRosterModal = () => {
     }
   }
 
-  function wosesWarband(): Warband {
-    const ghan = mesbgData["[paths-of-the-druadan] ghan-buri-ghan"];
-    const woses = mesbgData["[paths-of-the-druadan] woses-warrior"];
-
-    return calculator.recalculateWarband({
-      id: randomUuid(),
-      hero: calculator.recalculatePointsForUnit({
-        ...ghan,
-        id: randomUuid(),
-        pointsPerUnit: ghan.base_points,
-        pointsTotal: ghan.base_points,
-        quantity: 1,
-      }),
-      units: [
-        calculator.recalculatePointsForUnit({
-          ...woses,
-          id: randomUuid(),
-          pointsPerUnit: woses.base_points,
-          pointsTotal: woses.base_points * 12,
-          quantity: 12,
-        }),
-      ],
-      meta: {
-        ...emptyWarband.meta,
-        num: 2,
-      },
-    });
-  }
-
-  function addMandatoryWoses(roster: Roster) {
-    if (roster.armyList !== "Paths of the Druadan") {
-      return roster;
-    }
-
-    return calculator.recalculateRoster({
-      ...roster,
-      warbands: [...roster.warbands, wosesWarband()],
-    });
-  }
-
-  function validateAndAdjustForCompulsoryRules(roster: Roster): Roster {
-    const rules = (warningRules as WarningRules)[roster.armyList];
-    if (!rules) return roster;
-
-    const compulsoryRules = rules.filter(
-      ({ type, warning }) =>
-        type === "compulsory" &&
-        warning.includes("who is always the Army's General"),
-    );
-    if (compulsoryRules.length === 0) return roster;
-
-    const [requiredGeneral] = compulsoryRules[0].dependencies;
-    const general = models[requiredGeneral];
-    const warband = roster.warbands[0];
-
-    return calculator.recalculateRoster({
-      ...roster,
-      warbands: [
-        calculator.recalculateWarband({
-          ...warband,
-          hero: calculator.recalculatePointsForUnit({
-            ...general,
-            id: randomUuid(),
-            pointsPerUnit: general.base_points,
-            pointsTotal: general.base_points,
-            quantity: 1,
-            compulsory: true,
-          }),
-        }),
-      ],
-      metadata: {
-        ...roster.metadata,
-        leader: warband.id,
-        leaderCompulsory: true,
-      },
-    });
-  }
-
   function fillRosterNameIfEmpty(rosterNameValue: string) {
     if (rosterNameValue) {
       return rosterNameValue;
     }
-    const regex = new RegExp(`^${armyList.title} ?(\\(\\d+\\))?$`);
+    const regex = new RegExp(`^${armyList.army} ?(\\(\\d+\\))?$`);
     const matchingRosterNames = rosters
       .filter((roster) => regex.test(roster.name))
       .map((r) => r.name);
 
-    if (matchingRosterNames.length === 0) return `${armyList.title}`;
+    if (matchingRosterNames.length === 0) return `${armyList.army}`;
     const maxNameIndex = Math.max(
       ...matchingRosterNames.map((name) => {
         const matches = name.match(/\((\d+)\)/);
@@ -193,7 +121,7 @@ export const CreateNewRosterModal = () => {
         return parseInt(index);
       }),
     );
-    return `${armyList.title} (${maxNameIndex + 1})`;
+    return `${armyList.army} (${maxNameIndex + 1})`;
   }
 
   function getRosterId(rosterNameValue: string) {
@@ -208,25 +136,18 @@ export const CreateNewRosterModal = () => {
     e.preventDefault();
 
     if (maxRosterPoints !== "" && Number(maxRosterPoints) <= 0) return;
-
-    const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
-
     if (armyList.army) {
-      const newRoster = addMandatoryWoses(
-        validateAndAdjustForCompulsoryRules({
-          ...emptyRoster,
-          id: getRosterId(rosterNameValue),
-          group: groupId,
-          name: rosterNameValue,
-          armyList: armyList.title,
-          metadata: {
-            ...emptyRoster.metadata,
-            maxPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
-            siegeRoster: enableSiege,
-            siegeRole: enableSiege ? rosterSiegeRole : undefined,
-          },
-        }),
-      );
+      const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
+      const newRoster = buildNewRoster({
+        id: getRosterId(rosterNameValue),
+        name: rosterNameValue,
+        armyList: armyList.army,
+        enableSiege: enableSiege,
+        groupId: groupId,
+        maximumPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
+        siegeRole: enableSiege ? rosterSiegeRole : undefined,
+        withHero: armyList.hero,
+      });
 
       createRoster(newRoster);
       navigate(`/roster/${newRoster.id}`, { viewTransition: true });
@@ -321,7 +242,7 @@ export const CreateNewRosterModal = () => {
 
         <Autocomplete
           disableClearable
-          options={armyLists}
+          options={[...armyLists, ...heroesPerArmy]}
           getOptionLabel={(option) => option.title}
           renderOption={(props, option) => {
             return (
@@ -338,7 +259,20 @@ export const CreateNewRosterModal = () => {
           onChange={(_, newValue) => {
             setArmyList(newValue);
           }}
-          filterSelectedOptions
+          filterOptions={(_, state) => {
+            if (state.inputValue.length === 0) return armyLists;
+            const f = state.inputValue.toLowerCase();
+            const lists = armyLists.filter(({ army }) =>
+              army.toLowerCase().includes(f),
+            );
+            if (f.length < 3) {
+              return lists;
+            }
+            const heroes = heroesPerArmy.filter(({ hero }) =>
+              hero.toLowerCase().includes(f),
+            );
+            return [...lists, ...heroes];
+          }}
           blurOnSelect={true}
           renderInput={(params) => (
             <TextField
