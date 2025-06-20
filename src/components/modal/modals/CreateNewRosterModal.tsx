@@ -279,9 +279,11 @@ export const CreateNewRosterModal = () => {
               {...params}
               placeholder="Type to filter..."
               label="Army"
+              helperText="Filter by typing the name of the Army List OR the name of a Hero you wish to play."
             />
           )}
         />
+
         <TextField
           fullWidth
           label="Roster name (Optional)"
