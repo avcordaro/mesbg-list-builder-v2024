@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Expanded the automatic warband creation function for mandatory heroes which already had a warning containing the phrase 'must always contain'."
+    ],
     "bugfixes": [
       "Corrected Duinhir to be a Hero of Fortitude in Defenders of the Pelennor.",
       "Corrected the Fate points shown on the The Undying's profile card."
