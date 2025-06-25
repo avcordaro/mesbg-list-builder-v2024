@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import { GiMightyForce } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
+import { HiIdentification } from "react-icons/hi2";
 import { Changelog } from "./drawers/Changelog.tsx";
 import { HeroicActionsSearch } from "./drawers/HeroicActionsSearch.tsx";
 import { MagicalPowersSearch } from "./drawers/MagicalPowersSearch.tsx";
@@ -75,7 +76,7 @@ export const drawers = new Map<DrawerTypes, DrawerProps>([
     {
       title: (
         <Stack alignItems="center" direction="row" gap={2}>
-          <GiMightyForce /> Profiles
+          <HiIdentification /> Profiles
         </Stack>
       ),
       children: <ProfileSearch />,
