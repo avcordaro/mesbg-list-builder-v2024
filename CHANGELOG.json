@@ -1,7 +1,9 @@
 {
   "main": {
     "added": [
-      "Expanded the automatic warband creation function for mandatory heroes which already had a warning containing the phrase 'must always contain'."
+      "Expanded the automatic warband creation function for mandatory heroes which already had a warning containing the phrase 'must always contain'.",
+      "Added a drawer to quickly find profile cards for specific units, like your opponents hero for instance.",
+      "Added search query parameters allowing you to deeplink to a specific profile in the database."
     ],
     "bugfixes": [
       "Corrected Duinhir to be a Hero of Fortitude in Defenders of the Pelennor.",
