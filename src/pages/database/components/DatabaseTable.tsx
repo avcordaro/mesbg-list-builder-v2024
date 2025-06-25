@@ -9,33 +9,15 @@ import TableRow from "@mui/material/TableRow";
 import { MouseEvent } from "react";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
-import { ArmyType, Option, UnitType } from "../../../types/mesbg-data.types.ts";
-import { Profile } from "../../../types/profile-data.types.ts";
+import { DatabaseRow } from "../data.ts";
 import { Order } from "../utils/sorting.ts";
 import { DatabaseTableRow } from "./DatabaseTableRow.tsx";
-
-export type DatabaseRowData = {
-  army_list: string[];
-  F: string;
-  profile: Profile;
-  Mv: number;
-  unit_type: UnitType[];
-  M: string;
-  profile_origin: string;
-  searchString: string;
-  W: string;
-  name: string;
-  option_mandatory: boolean;
-  options: Option[];
-  army_type: ArmyType;
-  MWFW: string[][];
-};
 
 interface DatabaseTableProps {
   order: Order;
   orderBy: string;
   createSortHandler: (property: string) => (event: MouseEvent<unknown>) => void;
-  rows: DatabaseRowData[];
+  rows: DatabaseRow[];
 }
 
 export const DatabaseTable = ({

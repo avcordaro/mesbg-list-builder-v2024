@@ -40,6 +40,7 @@ import { AiFillTrophy } from "react-icons/ai";
 import { FaChessRook, FaDatabase } from "react-icons/fa";
 import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
+import { HiIdentification } from "react-icons/hi2";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
@@ -389,6 +390,12 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       icon: <GiMightyForce style={{ fontSize: "1.5rem" }} />,
       label: "Heroic Actions",
       action: () => openSidebar(DrawerTypes.HEROIC_ACTION_SEARCH),
+      active: false,
+    },
+    {
+      icon: <HiIdentification style={{ fontSize: "1.5rem" }} />,
+      label: "Profiles",
+      action: () => openSidebar(DrawerTypes.PROFILE_SEARCH),
       active: false,
     },
     {

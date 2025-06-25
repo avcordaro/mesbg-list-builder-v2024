@@ -21,11 +21,11 @@ import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
+import { DatabaseRow } from "../data.ts";
 import { COMPOSED_UNIT_MAP } from "../utils/special-rows.ts";
-import { DatabaseRowData } from "./DatabaseTable.tsx";
 import { ExtraInfoRow } from "./ExtraInformationSection.tsx";
 
-export const DatabaseTableRow = ({ row }: { row: DatabaseRowData }) => {
+export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
   const { palette } = useTheme();
   const { inventory } = useCollectionState();
   const { mode } = useThemeContext();

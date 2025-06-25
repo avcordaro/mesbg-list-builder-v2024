@@ -20,9 +20,9 @@ export type Profile = {
   C: string;
   I: string;
 
-  HF?: string;
-  HM?: string;
-  HW?: string;
+  HF?: string | number;
+  HM?: string | number;
+  HW?: string | number;
 
   additional_stats?: Profile[];
 

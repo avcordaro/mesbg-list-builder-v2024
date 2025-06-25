@@ -7,6 +7,7 @@ import { HiFire } from "react-icons/hi";
 import { Changelog } from "./drawers/Changelog.tsx";
 import { HeroicActionsSearch } from "./drawers/HeroicActionsSearch.tsx";
 import { MagicalPowersSearch } from "./drawers/MagicalPowersSearch.tsx";
+import { ProfileSearch } from "./drawers/ProfileSearch.tsx";
 import { SpecialRulesSearch } from "./drawers/SpecialRulesSearch.tsx";
 import { UnitSelector } from "./drawers/UnitSelector.tsx";
 
@@ -15,6 +16,7 @@ export enum DrawerTypes {
   SPECIAL_RULE_SEARCH = "SPECIAL_RULE_SEARCH",
   MAGICAL_POWER_SEARCH = "MAGICAL_POWER_SEARCH",
   HEROIC_ACTION_SEARCH = "HEROIC_ACTION_SEARCH",
+  PROFILE_SEARCH = "PROFILE_SEARCH",
   CHANGELOG = "CHANGELOG",
 }
 
@@ -66,6 +68,17 @@ export const drawers = new Map<DrawerTypes, DrawerProps>([
         </Stack>
       ),
       children: <HeroicActionsSearch />,
+    },
+  ],
+  [
+    DrawerTypes.PROFILE_SEARCH,
+    {
+      title: (
+        <Stack alignItems="center" direction="row" gap={2}>
+          <GiMightyForce /> Profiles
+        </Stack>
+      ),
+      children: <ProfileSearch />,
     },
   ],
   [

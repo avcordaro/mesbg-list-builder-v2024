@@ -10,15 +10,39 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, MouseEvent, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Link } from "../../components/common/link/Link.tsx";
 import { DatabaseTable } from "./components/DatabaseTable.tsx";
 import { rows } from "./data.ts";
 import { getComparator, Order } from "./utils/sorting.ts";
 
+const useDatabaseParams = () => {
+  const DEFAULT_ORDER: Order = "asc";
+  const DEFAULT_ORDER_BY: string = "name";
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  return {
+    setParams: (filter, order, orderBy) => {
+      const params = new URLSearchParams();
+      if (filter) params.set("filter", filter);
+      if (order !== DEFAULT_ORDER) params.set("order", order);
+      if (orderBy !== DEFAULT_ORDER_BY) params.set("orderBy", orderBy);
+      setSearchParams(params, { preventScrollReset: true, replace: false });
+    },
+    getParams: () => ({
+      filter: searchParams.get("filter") ?? "",
+      order: (searchParams.get("order") as Order) ?? DEFAULT_ORDER,
+      orderBy: searchParams.get("orderBy") ?? DEFAULT_ORDER_BY,
+    }),
+  };
+};
+
 export const Database = () => {
-  const [filter, setFilter] = useState("");
-  const [order, setOrder] = useState<Order>("asc");
-  const [orderBy, setOrderBy] = useState<string>("name");
+  const { getParams, setParams } = useDatabaseParams();
+  const params = getParams();
+  const [filter, setFilter] = useState(params.filter);
+  const [order, setOrder] = useState<Order>(params.order);
+  const [orderBy, setOrderBy] = useState<string>(params.orderBy);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(20);
 
@@ -26,6 +50,12 @@ export const Database = () => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
+    setParams(filter, isAsc ? "desc" : "asc", property);
+  };
+
+  const updateFilter = (value: string) => {
+    setFilter(value);
+    setParams(value, order, orderBy);
   };
 
   const createSortHandler =
@@ -90,7 +120,7 @@ export const Database = () => {
           }}
           fullWidth
           onChange={(event: ChangeEvent<HTMLInputElement>) => {
-            setFilter(event.target.value);
+            updateFilter(event.target.value);
             setPage(0);
           }}
           slotProps={{
@@ -99,7 +129,7 @@ export const Database = () => {
                 <InputAdornment position="end">
                   <IconButton
                     aria-label="clear filters"
-                    onClick={() => setFilter("")}
+                    onClick={() => updateFilter("")}
                     edge="end"
                     sx={{
                       display: filter.length > 0 ? "inherit" : "none",

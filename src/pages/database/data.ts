@@ -1,5 +1,5 @@
 import { mesbgData, profileData } from "../../assets/data.ts";
-import { Unit } from "../../types/mesbg-data.types.ts";
+import { Option, Unit } from "../../types/mesbg-data.types.ts";
 import { Profile } from "../../types/profile-data.types.ts";
 import {
   convertBardsFamilyToSingleRows,
@@ -35,7 +35,35 @@ const getProfileData = ([{ profile_origin, name }]: Unit[]) => {
   return profile;
 };
 
-export const rows = Object.values(
+export type DatabaseRow = {
+  army_type: "Good" | "Good (Legacy)" | "Evil" | "Evil (Legacy)";
+  profile_origin: string;
+  unit_type: (
+    | "Warrior"
+    | "Hero of Legend"
+    | "Hero of Valour"
+    | "Hero of Fortitude"
+    | "Minor Hero"
+    | "Independent Hero"
+    | "Independent Hero*"
+    | "Siege Engine"
+    | "Siege Equipment"
+    | string
+  )[];
+  army_list: string[];
+  option_mandatory: boolean;
+  options: Option[];
+  name: string;
+  MWFW: string[][] | never[];
+  profile: (Profile & { name: string }) | Profile;
+  Mv: number;
+  M: number | string;
+  W: number | string;
+  F: number | string;
+  searchString: string;
+};
+
+export const rows: DatabaseRow[] = Object.values(
   Object.values(mesbgData).reduce((acc, currentValue) => {
     const name = `${currentValue.name}-${currentValue.profile_origin}`;
     if (!acc[name]) {
