@@ -22,7 +22,10 @@ export const AdditionalRules: FunctionComponent<
             key={index}
             sx={{ py: size === "normal" ? 1 : 0 }}
           >
-            {rule.description}
+            <Typography
+              component="span"
+              dangerouslySetInnerHTML={{ __html: rule.description }}
+            />
           </Typography>
         ))}
       </Box>

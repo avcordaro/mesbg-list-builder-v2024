@@ -132,7 +132,10 @@ export const SpecialRules: FunctionComponent<
               )}
               <Stack gap={1}>
                 {rule.description.split("\n").map((line, index) => (
-                  <Typography key={index}>{line}</Typography>
+                  <Typography
+                    key={index}
+                    dangerouslySetInnerHTML={{ __html: line }}
+                  />
                 ))}
               </Stack>
             </Box>

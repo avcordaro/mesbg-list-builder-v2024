@@ -1,7 +1,8 @@
 {
   "main": {
     "changed": [
-      "Change the maximum with of the drawers to fit smaller screens."
+      "Change the maximum with of the drawers to fit smaller screens.",
+      "Updated the way how the additional and special rules are presented allowing the use of bold keyword texts. (these have not yet been implemented on all lists)"
     ],
     "security": [
       "Upgraded the developer tools used to build the application resolving all the known vulnerabilities."
