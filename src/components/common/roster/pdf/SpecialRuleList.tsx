@@ -137,7 +137,10 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
                     )}
                     <Stack gap={0.5}>
                       {rule.description.split("\n").map((paragraph, index) => (
-                        <Typography key={index}>{paragraph}</Typography>
+                        <Typography
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: paragraph }}
+                        />
                       ))}
                     </Stack>
                   </Box>
