@@ -25,7 +25,11 @@ export const ArmyBonuses = () => {
           </Typography>
           {armyListMetadata.additional_rules.map((rule, index) => (
             <Typography key={index}>
-              &#9679;&nbsp;&nbsp;{rule.description}
+              &#9679;&nbsp;&nbsp;
+              <Typography
+                component="span"
+                dangerouslySetInnerHTML={{ __html: rule.description }}
+              />
             </Typography>
           ))}
         </>
@@ -68,7 +72,10 @@ export const ArmyBonuses = () => {
                   )}
                   <Stack gap={1}>
                     {rule.description.split("\n").map((line, index) => (
-                      <Typography key={index}>{line}</Typography>
+                      <Typography
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: line }}
+                      />
                     ))}
                   </Stack>
                 </Box>
