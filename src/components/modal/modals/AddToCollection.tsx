@@ -38,9 +38,16 @@ export const AddToCollection = () => {
           !isHero || !option.type || !option.type.includes("mount"),
       )
       .filter((option: Option) => option.type !== "ringwraith_amwf")
+      .filter((option: Option) => option.type !== "special_warband_upgrade")
       .map((option: Option) => option.name),
     !unit.option_mandatory ? "None" : null,
   ].filter((v) => !!v);
+
+  const wbUpgrade: Option | undefined = unit.options.find(
+    (o) => o.type === "special_warband_upgrade",
+  );
+
+  console.log({ loadoutOptions, wbUpgrade });
 
   const mountOptions = unit.options
     .filter((option: Option) => !!option.type && option.type.includes("mount"))

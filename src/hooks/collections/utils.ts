@@ -108,7 +108,10 @@ export function calculateGenericModels(
 }
 
 export function getListOfOptionsForGivenUnit(unit: SelectedUnit): string[] {
-  let options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
+  let options = unit.options
+    .filter((o) => o.quantity > 0)
+    .filter((o) => o.type !== "special_warband_upgrade")
+    .map((o) => o.name);
   if (
     unit.name === "Rohan Royal Guard" &&
     arraysMatch(options, ["Horse", "Throwing spears"])
