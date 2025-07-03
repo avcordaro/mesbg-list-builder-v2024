@@ -6,7 +6,8 @@
     "bugfixes": [
       "Fixed the incorrectly placed legacies ribbon on the Three Trolls army list.",
       "Corrected a mistake for the Armoured Horse on the Black Numenorean Marshal's profile card.",
-      "Corrected the exchange weapon option for Half Trolls in the Far Harad army list."
+      "Corrected the exchange weapon option for Half Trolls in the Far Harad army list.",
+      "Corrected the MWFW (especialy Wounds) value for Dragons whenever they have selected the Tough Hide option."
     ]
   },
   "1.26": {
