@@ -108,7 +108,7 @@ export const SavedGameResults = () => {
   }, [filters, recentGames]);
 
   return (
-    <Container sx={{ mt: 2 }}>
+    <Container sx={{ mt: 2, maxWidth: "calc(100vw - 3*24px)" }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         Match History
       </Typography>
