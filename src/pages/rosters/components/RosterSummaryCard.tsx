@@ -8,6 +8,7 @@ import { armyListData } from "../../../assets/data.ts";
 import { FactionLogo } from "../../../components/common/images/FactionLogo.tsx";
 import { Link } from "../../../components/common/link/Link.tsx";
 import { WithRibbon } from "../../../components/common/unit-selection/WithRibbon.tsx";
+import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { isSelectedUnit, Roster } from "../../../types/roster.ts";
 import { RosterPopoverMenu } from "./RosterPopoverMenu.tsx";
@@ -39,6 +40,7 @@ const KeyValue = ({ label, value }) => {
 export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
   roster,
 }) => {
+  const screen = useScreenSize();
   const { mode } = useThemeContext();
   const isLegacy =
     armyListData[roster.armyList]?.legacy ||
@@ -72,7 +74,9 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
                   whiteSpace: "nowrap", // Prevent text from wrapping
                   overflow: "hidden", // Hide the overflowing text
                   textOverflow: "ellipsis", // Show ellipsis when text overflows
-                  width: `${CARD_SIZE_IN_PX / 2}px`, // Set a fixed width or max-width for overflow
+                  width: screen.isTooSmall
+                    ? `${CARD_SIZE_IN_PX}px`
+                    : `${CARD_SIZE_IN_PX / 1.5}px`, // Set a fixed width or max-width for overflow
                 }}
               >
                 {roster.name}

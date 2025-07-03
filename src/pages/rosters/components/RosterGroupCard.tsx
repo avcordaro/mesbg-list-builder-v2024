@@ -104,8 +104,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 whiteSpace: "nowrap", // Prevent text from wrapping
                 overflow: "hidden", // Hide the overflowing text
                 textOverflow: "ellipsis", // Show ellipsis when text overflows
-                width: "200px", // Set a fixed width or max-width for overflow
-                fontSize: "2rem",
+                width: "300px", // Set a fixed width or max-width for overflow
               }}
             >
               {name}
