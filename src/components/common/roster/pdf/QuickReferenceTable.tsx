@@ -150,6 +150,7 @@ export const QuickReferenceTable = ({
         id="pdf-quick-ref"
         component="div"
         className={removePdfPageBreak ? "" : "page-break"}
+        sx={{ maxWidth: "100%" }}
       >
         {noCaption !== true && (
           <Typography variant="h5">Quick reference sheet</Typography>

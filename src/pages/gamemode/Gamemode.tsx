@@ -9,7 +9,7 @@ import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useGameModeState } from "../../state/gamemode";
 import { deepEqual } from "../../utils/objects.ts";
-import { drawerWidth, RosterInfoDrawer } from "../builder/RosterInfoDrawer.tsx";
+import { RosterInfoDrawer } from "../builder/RosterInfoDrawer.tsx";
 import { GamemodeToolbar } from "./components/GamemodeToolbar.tsx";
 import { DeploymentHelper } from "./components/tabs/DeploymentHelperTable.tsx";
 import { ProfileCards } from "./components/tabs/ProfileCards.tsx";
@@ -58,17 +58,8 @@ export const Gamemode = () => {
   );
 
   return (
-    <Container
-      maxWidth={false}
-      sx={{
-        p: 2,
-      }}
-    >
-      <Box
-        sx={{
-          width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
-        }}
-      >
+    <Container maxWidth={false} sx={{ p: 2 }}>
+      <Box>
         <GamemodeToolbar />
         {changedSinceStart && rosterChangedWarning && (
           <CustomAlert
@@ -87,15 +78,18 @@ export const Gamemode = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            variant="scrollable"
-            scrollButtons
-            allowScrollButtonsMobile
+            variant="fullWidth"
+            // scrollButtons
+            // allowScrollButtonsMobile
+            // selectionFollowsFocus
           >
             <Tab label="Trackers" />
             <Tab label="Army overview" />
             <Tab label="Profiles" />
             <Tab label="Stats table" />
-            {!screen.isDesktop && <Tab label="Roster Info" />}
+            {!screen.isDesktop && !screen.isTooSmall && (
+              <Tab label="Roster Info" />
+            )}
           </Tabs>
         </Box>
         <TabPanel tabName="trackers" visible={value === 0}>
@@ -114,6 +108,7 @@ export const Gamemode = () => {
           <RosterInfoTab />
         </TabPanel>
       </Box>
+
       <RosterInfoDrawer roster={roster} />
     </Container>
   );
