@@ -8,9 +8,11 @@ export const useScreenSize = (): {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
+  isTooSmall: boolean;
 } => {
   const theme = useTheme();
 
+  const isTooSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isTablet = useMediaQuery(theme.breakpoints.between("md", "xl"));
   const isDesktop = useMediaQuery(theme.breakpoints.up("xl"));
@@ -21,5 +23,5 @@ export const useScreenSize = (): {
     if (isDesktop) return "desktop";
   }
 
-  return { getSize, isMobile, isTablet, isDesktop };
+  return { getSize, isMobile, isTablet, isDesktop, isTooSmall };
 };

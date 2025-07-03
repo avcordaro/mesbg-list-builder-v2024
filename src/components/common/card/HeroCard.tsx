@@ -281,36 +281,38 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             </Box>
           )}
         </Collapse>
-        <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
-          {!unit.unique && followerOf && (
-            <QuantityButtons
-              quantity={unit.quantity}
-              updateQuantity={updateQuantity}
+        <Collapse in={!(collapsed && !preferences.forceShowCardActionButtons)}>
+          <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
+            {!unit.unique && followerOf && (
+              <QuantityButtons
+                quantity={unit.quantity}
+                updateQuantity={updateQuantity}
+                warbandNum={warbandNum}
+                index={index}
+                unitName={unit.name}
+                collapsed={collapsed}
+              />
+            )}
+            <CardActionButtons
+              remove={
+                unit.compulsory === true &&
+                !preferences.allowCompulsoryGeneralDelete
+                  ? null
+                  : remove
+              }
+              reselect={
+                unit.compulsory === true &&
+                !preferences.allowCompulsoryGeneralDelete
+                  ? null
+                  : reselect
+              }
+              openProfileCard={openProfileCard}
               warbandNum={warbandNum}
               index={index}
               unitName={unit.name}
-              collapsed={collapsed}
             />
-          )}
-          <CardActionButtons
-            remove={
-              unit.compulsory === true &&
-              !preferences.allowCompulsoryGeneralDelete
-                ? null
-                : remove
-            }
-            reselect={
-              unit.compulsory === true &&
-              !preferences.allowCompulsoryGeneralDelete
-                ? null
-                : reselect
-            }
-            openProfileCard={openProfileCard}
-            warbandNum={warbandNum}
-            index={index}
-            unitName={unit.name}
-          />
-        </Stack>
+          </Stack>
+        </Collapse>
       </Stack>
     </Card>
   ) : (

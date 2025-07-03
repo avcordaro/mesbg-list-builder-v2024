@@ -1,3 +1,5 @@
+import AddIcon from "@mui/icons-material/Add";
+import { Fab } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
@@ -5,21 +7,41 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import fallbackLogo from "../../../assets/images/default.png";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
+import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
+import { CARD_SIZE_IN_PX } from "./RosterSummaryCard.tsx";
 
 export const CreateRosterCardButton: FunctionComponent = () => {
   const { setCurrentModal } = useAppState();
   const { mode } = useThemeContext();
+  const screen = useScreenSize();
 
   function openCreateRosterModal() {
     console.debug("Open create roster modal.");
     setCurrentModal(ModalTypes.CREATE_NEW_ROSTER);
   }
 
-  return (
+  return screen.isMobile ? (
+    <Fab
+      sx={{
+        position: "fixed",
+        bottom: "1rem",
+        right: "1rem",
+      }}
+      onClick={() => openCreateRosterModal()}
+      color="primary"
+    >
+      <AddIcon />
+    </Fab>
+  ) : (
     <Card
-      sx={{ p: 2, height: "300px", aspectRatio: "1/1", cursor: "pointer" }}
+      sx={{
+        p: 2,
+        width: `${CARD_SIZE_IN_PX}px`,
+        aspectRatio: "1/1",
+        cursor: "pointer",
+      }}
       elevation={4}
       onClick={() => openCreateRosterModal()}
       data-test-id="rosters--create-a-roster--button"

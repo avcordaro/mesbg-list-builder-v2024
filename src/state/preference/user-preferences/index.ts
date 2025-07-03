@@ -6,6 +6,7 @@ export type Preferences =
   | "mobileRosterToolbar"
   | "oldShareScreen"
   | "hideRostersInNavigation"
+  | "forceShowCardActionButtons"
   //   Builder restriction preferences
   | "allowCompulsoryGeneralDelete"
   //   Collection preferences
@@ -57,6 +58,7 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     hidePdfArmyRules: false,
     hidePdfStatTrackers: false,
     hideRostersInNavigation: false,
+    forceShowCardActionButtons: false,
   },
 };
 

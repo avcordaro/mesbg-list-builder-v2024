@@ -16,6 +16,7 @@ import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
@@ -26,6 +27,7 @@ import {
   SortOrder,
 } from "./components/RosterSortButton.tsx";
 import {
+  CARD_SIZE_IN_PX,
   RosterSummaryCard,
   RosterSummaryCardProps,
 } from "./components/RosterSummaryCard.tsx";
@@ -34,6 +36,7 @@ import { getComparator } from "./utils/sorting.ts";
 export const Rosters: FunctionComponent = () => {
   const { rosters, groups, updateGroup } = useRosterBuildingState();
   const { getAdjustedMetaData } = useRosterInformation();
+  const screen = useScreenSize();
   const [draggingRoster, setDraggingRoster] = useState<string>();
   const { setCurrentModal } = useAppState();
   const [filter, setFilter] = useState("");
@@ -105,15 +108,12 @@ export const Rosters: FunctionComponent = () => {
           roster onto another, or onto an existing group.
         </Typography>
 
-        <Stack direction="row" gap={2} sx={{ py: 2, width: "90%" }}>
+        <Stack direction="row" gap={2} sx={{ py: 2 }}>
           <TextField
             id="database-filter-input"
             label="Filter"
             placeholder="Start typing to filter"
             value={filter}
-            sx={{
-              maxWidth: "80ch",
-            }}
             fullWidth
             onChange={(event: ChangeEvent<HTMLInputElement>) => {
               setFilter(event.target.value);
@@ -176,7 +176,13 @@ export const Rosters: FunctionComponent = () => {
                     <Box
                       ref={provided.innerRef}
                       {...provided.droppableProps}
-                      sx={
+                      sx={[
+                        {
+                          width: screen.isTooSmall
+                            ? "100%"
+                            : `${CARD_SIZE_IN_PX}px`,
+                          aspectRatio: "1/1",
+                        },
                         snapshot.isDraggingOver
                           ? {
                               backgroundColor: "#FFFFFF33",
@@ -187,8 +193,8 @@ export const Rosters: FunctionComponent = () => {
                           : {
                               p: 1,
                               transition: "padding 0.3s ease",
-                            }
-                      }
+                            },
+                      ]}
                     >
                       <RosterGroupCard
                         name={group.name}
@@ -215,7 +221,13 @@ export const Rosters: FunctionComponent = () => {
                       return (
                         <Box
                           ref={provided.innerRef}
-                          sx={
+                          sx={[
+                            {
+                              width: screen.isTooSmall
+                                ? "100%"
+                                : `${CARD_SIZE_IN_PX}px`,
+                              aspectRatio: "1/1",
+                            },
                             snapshot.isDraggingOver
                               ? {
                                   backgroundColor: "#FFFFFF33",
@@ -226,8 +238,8 @@ export const Rosters: FunctionComponent = () => {
                               : {
                                   p: "0.5rem",
                                   transition: "padding 0.3s ease",
-                                }
-                          }
+                                },
+                          ]}
                         >
                           <Draggable draggableId={card.roster.id} index={index}>
                             {(draggableProvided, draggableSnapshot) => {
@@ -245,7 +257,13 @@ export const Rosters: FunctionComponent = () => {
                                   }
                                 >
                                   <Box
-                                    sx={
+                                    sx={[
+                                      {
+                                        width: screen.isTooSmall
+                                          ? "100%"
+                                          : `${CARD_SIZE_IN_PX}px`,
+                                        aspectRatio: "1/1",
+                                      },
                                       draggableSnapshot.isDragging
                                         ? {
                                             transform: "rotate(1.5deg)",
@@ -257,8 +275,8 @@ export const Rosters: FunctionComponent = () => {
                                         : {
                                             transition:
                                               "transform 0.3s ease, boxShadow 0.3s ease",
-                                          }
-                                    }
+                                          },
+                                    ]}
                                   >
                                     <RosterSummaryCard roster={card.roster} />
                                   </Box>

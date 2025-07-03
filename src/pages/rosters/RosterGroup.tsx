@@ -16,6 +16,7 @@ import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { Link } from "../../components/common/link/Link.tsx";
 import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/useScreenSize.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { CreateRosterCardButton } from "./components/CreateRosterCardButton.tsx";
@@ -26,6 +27,7 @@ import {
   SortOrder,
 } from "./components/RosterSortButton.tsx";
 import {
+  CARD_SIZE_IN_PX,
   RosterSummaryCard,
   RosterSummaryCardProps,
 } from "./components/RosterSummaryCard.tsx";
@@ -36,6 +38,7 @@ export const RosterGroup: FunctionComponent = () => {
     useRosterBuildingState();
   const { getAdjustedMetaData } = useRosterInformation();
   const { groupId: slug } = useParams();
+  const screen = useScreenSize();
   const navigate = useNavigate();
   const [filter, setFilter] = useState("");
   const { palette } = useTheme();
@@ -107,7 +110,7 @@ export const RosterGroup: FunctionComponent = () => {
   return (
     <Container maxWidth={false} sx={{ my: 2 }}>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Stack>
+        <Stack sx={{ pb: 10 }}>
           <Stack flexGrow={1} gap={1}>
             <Typography variant="h4" className="middle-earth">
               My Rosters
@@ -140,15 +143,12 @@ export const RosterGroup: FunctionComponent = () => {
             </Breadcrumbs>
           </Stack>
 
-          <Stack direction="row" gap={2} sx={{ py: 2, width: "90%" }}>
+          <Stack direction="row" gap={2} sx={{ pt: 2, width: "100%" }}>
             <TextField
               id="database-filter-input"
               label="Filter"
               placeholder="Start typing to filter"
               value={filter}
-              sx={{
-                maxWidth: "80ch",
-              }}
               fullWidth
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
                 setFilter(event.target.value);
@@ -195,7 +195,7 @@ export const RosterGroup: FunctionComponent = () => {
                     {
                       p: 1,
                       border: 2,
-                      width: "300px",
+                      width: screen.isMobile ? "100%" : `${CARD_SIZE_IN_PX}px`,
                       borderStyle: "dashed",
                       borderColor: (theme) => theme.palette.text.disabled,
                     },
@@ -235,7 +235,16 @@ export const RosterGroup: FunctionComponent = () => {
                 isDropDisabled
               >
                 {(provided) => (
-                  <Box ref={provided.innerRef} {...provided.droppableProps}>
+                  <Box
+                    ref={provided.innerRef}
+                    {...provided.droppableProps}
+                    sx={{
+                      width: screen.isTooSmall
+                        ? "100%"
+                        : `${CARD_SIZE_IN_PX}px`,
+                      aspectRatio: "1/1",
+                    }}
+                  >
                     <Draggable
                       draggableId={card.roster.id}
                       key={card.roster.id}

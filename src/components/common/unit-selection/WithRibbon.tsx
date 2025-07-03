@@ -21,7 +21,7 @@ export const WithRibbon: FunctionComponent<
   return hideRibbon ? (
     children
   ) : (
-    <Box position="relative" sx={{ overflow: "hidden" }}>
+    <Box position="relative" sx={{ overflow: "hidden", height: "100%" }}>
       {/* Ribbon */}
       <Box
         sx={[

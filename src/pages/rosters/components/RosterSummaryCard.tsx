@@ -12,6 +12,8 @@ import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { isSelectedUnit, Roster } from "../../../types/roster.ts";
 import { RosterPopoverMenu } from "./RosterPopoverMenu.tsx";
 
+export const CARD_SIZE_IN_PX = 300;
+
 export type RosterSummaryCardProps = {
   roster: Roster;
 };
@@ -26,6 +28,7 @@ const KeyValue = ({ label, value }) => {
         </Stack>
       }
       sx={{
+        width: "100%",
         justifyContent: "start",
         "& span": { display: "block", width: "100%" },
       }}
@@ -51,11 +54,16 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
       data-test-id={"rosters--" + roster.id + "--link"}
     >
       <Card
-        sx={{ height: "300px", aspectRatio: "1/1", position: "relative" }}
+        sx={{
+          width: "100%",
+          minWidth: `${CARD_SIZE_IN_PX}px`,
+          aspectRatio: "1/1",
+          position: "relative",
+        }}
         elevation={4}
       >
         <WithRibbon label="Legacy" hideRibbon={!isLegacy}>
-          <Stack sx={{ p: 3 }}>
+          <Stack sx={{ p: 2, height: "100%" }} justifyContent="space-around">
             <center>
               <Typography
                 variant="h6"
@@ -64,12 +72,12 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
                   whiteSpace: "nowrap", // Prevent text from wrapping
                   overflow: "hidden", // Hide the overflowing text
                   textOverflow: "ellipsis", // Show ellipsis when text overflows
-                  width: "200px", // Set a fixed width or max-width for overflow
+                  width: `${CARD_SIZE_IN_PX / 2}px`, // Set a fixed width or max-width for overflow
                 }}
               >
                 {roster.name}
               </Typography>
-              <FactionLogo faction={roster.armyList} size={62} />
+              <FactionLogo faction={roster.armyList} size={75} />
               <Typography
                 variant="body2"
                 sx={{
@@ -93,12 +101,12 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
               <KeyValue label="Points" value={roster.metadata.points} />
               <KeyValue label="Units" value={roster.metadata.units} />
               <KeyValue label="Warbands" value={roster.warbands.length} />
+              <KeyValue label="Might" value={roster.metadata.might} />
               <KeyValue label="Bows" value={roster.metadata.bows} />
               <KeyValue
                 label="Thr. Weap"
                 value={roster.metadata.throwingWeapons}
               />
-              <KeyValue label="Might" value={roster.metadata.might} />
             </Box>
           </Stack>
           <Box

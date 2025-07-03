@@ -9,6 +9,7 @@ import { useCalculator } from "../../../hooks/useCalculator.ts";
 import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
+import { useUserPreferences } from "../../../state/preference";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { Option } from "../../../types/mesbg-data.types.ts";
 import { isSiegeEquipment, SelectedUnit } from "../../../types/roster.ts";
@@ -52,6 +53,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const screen = useScreenSize();
   const { warnings, available, selected, overExceededCollection } =
     useCollectionWarnings(unit);
+  const { preferences } = useUserPreferences();
 
   const valid =
     followerOf === undefined ||
@@ -199,7 +201,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           </Box>
         )}
       </Collapse>
-      <Collapse in={!collapsed}>
+      <Collapse in={!(collapsed && !preferences.forceShowCardActionButtons)}>
         <Stack
           direction="row"
           justifyContent="space-between"

@@ -10,6 +10,7 @@ import {
   PhotoCameraOutlined,
   Summarize,
   SwitchAccessShortcut,
+  UnfoldLess,
   Update,
 } from "@mui/icons-material";
 
@@ -168,6 +169,13 @@ export const Settings = () => {
           }
           value={preferences.hideRostersInNavigation || false}
           onChange={updatePreference("hideRostersInNavigation")}
+        />
+        <SettingsOption
+          icon={<UnfoldLess />}
+          label="Show mutation buttons when collapsed"
+          description="Keep the mutation buttons (increment, decrement, delete, ect.) in view when collapsing a warband. (Note: this only affect small screens!)"
+          value={preferences.forceShowCardActionButtons || false}
+          onChange={updatePreference("forceShowCardActionButtons")}
         />
         <SettingsOption
           icon={<PhotoCameraOutlined />}

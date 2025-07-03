@@ -1,7 +1,8 @@
 {
   "main": {
     "changed": [
-      "Toyed with the screen sizes a bit more to help figure out where the sweet spot is between different users."
+      "Toyed with the screen sizes a bit more to help figure out where the sweet spot is between different users.",
+      "Also collapse mutation buttons on selected units"
     ],
     "bugfixes": [
       "Fixed the incorrectly placed legacies ribbon on the Three Trolls army list.",

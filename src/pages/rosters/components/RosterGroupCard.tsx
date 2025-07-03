@@ -5,7 +5,9 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { GroupIcon } from "../../../components/common/group-icon/GroupIcon.tsx";
 import { Link } from "../../../components/common/link/Link.tsx";
+import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
+import { CARD_SIZE_IN_PX } from "./RosterSummaryCard.tsx";
 
 export type RosterSummaryCardProps = {
   name: string;
@@ -20,12 +22,14 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
   rosters,
   icon,
 }) => {
-  const spacing = "10px";
+  const screen = useScreenSize();
+  const spacing = screen.isTooSmall ? "40px" : "10px";
   const cardStyle = {
     left: spacing,
     top: spacing,
     p: 1,
-    height: `calc(300px - 2 * ${spacing})`,
+    width: `calc(${screen.isTooSmall ? "100%" : `${CARD_SIZE_IN_PX}px`} - 2 * ${spacing})`,
+    minWidth: `calc(${CARD_SIZE_IN_PX}px - 2 * ${spacing})`,
     aspectRatio: "1/1",
     position: "absolute",
   };
@@ -51,7 +55,14 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
       style={{ textDecoration: "none", color: "inherit" }}
       data-test-id={"rosters--" + slug + "--group-link"}
     >
-      <Box sx={{ position: "relative", height: "300px", aspectRatio: "1/1" }}>
+      <Box
+        sx={{
+          position: "relative",
+          width: screen.isTooSmall ? "100%" : `${CARD_SIZE_IN_PX}px`,
+          minWidth: `${CARD_SIZE_IN_PX}px`,
+          aspectRatio: "1/1",
+        }}
+      >
         {stack.map((rot, i) => (
           <Card
             key={i}
@@ -94,6 +105,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 overflow: "hidden", // Hide the overflowing text
                 textOverflow: "ellipsis", // Show ellipsis when text overflows
                 width: "200px", // Set a fixed width or max-width for overflow
+                fontSize: "2rem",
               }}
             >
               {name}
@@ -106,6 +118,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 overflow: "hidden", // Hide the overflowing text
                 textOverflow: "ellipsis", // Show ellipsis when text overflows
                 width: "200px", // Set a fixed width or max-width for overflow
+                fontSize: "1rem",
               }}
             >
               {rosters} Rosters
@@ -115,8 +128,8 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
         <Box
           sx={{
             position: "absolute",
-            right: 32,
-            top: 24,
+            right: screen.isTooSmall ? 64 : 32,
+            top: screen.isTooSmall ? 64 : 24,
           }}
         >
           <GroupOptionsPopoverMenu groupId={slug} />
