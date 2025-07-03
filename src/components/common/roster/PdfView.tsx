@@ -7,6 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import { useProfiles } from "../../../hooks/useProfiles.ts";
 import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useUserPreferences } from "../../../state/preference";
+import { useRosterBuildingState } from "../../../state/roster-building";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { Link } from "../link/Link.tsx";
@@ -44,13 +45,16 @@ export const PdfView = () => {
 const PrintablePdf = () => {
   const { profiles, missingProfiles } = useProfiles();
   const { roster } = useRosterInformation();
+  const { groups } = useRosterBuildingState();
+  const group = roster.group && groups.find(({ id }) => roster.group === id);
+
   const theme = useTheme();
   const themeContext = useThemeContext();
   const { preferences } = useUserPreferences();
 
   return (
     <>
-      <Container sx={{ mb: 8, py: 2 }}>
+      <Container sx={{ mb: 8, py: 2, maxWidth: "calc(100vw - 3*24px)" }}>
         <Breadcrumbs sx={{ mb: 1 }}>
           <Link
             to="/rosters"
@@ -60,14 +64,14 @@ const PrintablePdf = () => {
           >
             My Rosters
           </Link>
-          {roster.group && (
+          {group && (
             <Link
-              to={`/rosters/${roster.group}`}
+              to={`/rosters/${group.slug}`}
               style={{
                 textDecoration: "none",
               }}
             >
-              {roster.group}
+              {group.name}
             </Link>
           )}
           <Link

@@ -62,7 +62,10 @@ export const Collection = () => {
   };
 
   return (
-    <Container maxWidth={false} sx={{ p: 2, mb: 12 }}>
+    <Container
+      maxWidth={false}
+      sx={{ p: 2, mb: 12, maxWidth: "calc(100vw - 3*24px)" }}
+    >
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         My Collection
       </Typography>

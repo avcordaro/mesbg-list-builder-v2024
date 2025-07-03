@@ -89,7 +89,7 @@ export const Database = () => {
   }, [order, orderBy, filteredRows, page, rowsPerPage]);
 
   return (
-    <Container maxWidth={false} sx={{ p: 2 }}>
+    <Container maxWidth={false} sx={{ p: 2, maxWidth: "calc(100vw - 3*24px)" }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2, mt: 1 }}>
         Profile Database
       </Typography>
