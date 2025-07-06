@@ -57,7 +57,14 @@
       {
         "id": "OPT0821",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0822",
@@ -172,7 +179,14 @@
         "id": "OPT0868",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0869",
@@ -183,7 +197,14 @@
       {
         "id": "OPT0870",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0871",
@@ -262,7 +283,14 @@
       {
         "id": "OPT0865",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0866",
@@ -361,13 +389,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0889",
-        "name": "War horn",
+        "id": "OPT0890",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0890",
-        "name": "Banner",
+        "id": "OPT0889",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -379,12 +407,26 @@
       {
         "id": "OPT0892",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0893",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -577,7 +619,14 @@
       {
         "id": "OPT1326",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1327",
@@ -611,6 +660,11 @@
         "type": "bow"
       },
       {
+        "id": "OPT1360",
+        "name": "Flaming Brand",
+        "points": 1
+      },
+      {
         "id": "OPT1330",
         "name": "Light shield",
         "points": 1
@@ -623,11 +677,6 @@
       {
         "id": "OPT1332",
         "name": "Two-handed weapon",
-        "points": 1
-      },
-      {
-        "id": "OPT1360",
-        "name": "Flaming Brand",
         "points": 1
       }
     ]
@@ -827,12 +876,26 @@
       {
         "id": "OPT0171",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0172",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -961,7 +1024,14 @@
         "id": "OPT0174",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0175",
@@ -972,18 +1042,32 @@
         "id": "OPT0176",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0177",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0178",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0177",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -1120,7 +1204,14 @@
       {
         "id": "OPT1085",
         "name": "Exchange shield and spear for Mattock",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -1237,7 +1328,14 @@
       {
         "id": "OPT1086",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1087",
@@ -1245,15 +1343,22 @@
         "points": 25
       },
       {
-        "id": "OPT1088",
-        "name": "Shield and spear",
-        "points": 2
-      },
-      {
         "id": "OPT1089",
         "name": "Crossbow",
         "points": 2,
         "type": "bow"
+      },
+      {
+        "id": "OPT1088",
+        "name": "Shield and spear",
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1090",
@@ -1290,7 +1395,14 @@
       {
         "id": "OPT0099",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -1392,7 +1504,14 @@
       {
         "id": "OPT0100",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0101",
@@ -1468,12 +1587,26 @@
       {
         "id": "OPT0103",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0104",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0105",
@@ -1565,6 +1698,13 @@
         "name": "Heavy armour",
         "points": 10,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -1763,7 +1903,14 @@
       {
         "id": "OPT0672",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0673",
@@ -1773,7 +1920,14 @@
       {
         "id": "OPT0674",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0675",
@@ -2249,12 +2403,26 @@
       {
         "id": "OPT0715",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0716",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0717",
@@ -2579,7 +2747,14 @@
       {
         "id": "OPT1016",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -2955,7 +3130,14 @@
       {
         "id": "OPT1018",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1019",
@@ -3188,7 +3370,14 @@
       {
         "id": "OPT1388",
         "name": "Exchange shield for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -3210,7 +3399,14 @@
         "id": "OPT1032",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1033",
@@ -3221,7 +3417,14 @@
       {
         "id": "OPT1034",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1035",
@@ -3297,12 +3500,26 @@
       {
         "id": "OPT1024",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1025",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1026",
@@ -3375,7 +3592,14 @@
       {
         "id": "OPT1029",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1030",
@@ -3682,7 +3906,14 @@
       {
         "id": "OPT1177",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       }
     ]
   },
@@ -3833,7 +4064,14 @@
         "id": "OPT0363",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0364",
@@ -3844,7 +4082,14 @@
       {
         "id": "OPT0365",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0366",
@@ -3875,7 +4120,14 @@
       {
         "id": "OPT0350",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0351",
@@ -3913,7 +4165,14 @@
       {
         "id": "OPT1394",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1395",
@@ -3950,7 +4209,14 @@
       {
         "id": "OPT0360",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0361",
@@ -4124,7 +4390,14 @@
       {
         "id": "OPT0823",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0824",
@@ -4255,7 +4528,14 @@
       {
         "id": "OPT1179",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       }
     ]
   },
@@ -4345,7 +4625,14 @@
       {
         "id": "OPT0345",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -4613,7 +4900,14 @@
         "id": "OPT1316",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1317",
@@ -4624,7 +4918,14 @@
       {
         "id": "OPT1318",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1319",
@@ -4692,7 +4993,14 @@
       {
         "id": "OPT1313",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1314",
@@ -4729,7 +5037,14 @@
       {
         "id": "OPT1321",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1322",
@@ -5056,7 +5371,14 @@
       {
         "id": "OPT0510",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -5104,7 +5426,14 @@
       {
         "id": "OPT0505",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0506",
@@ -5114,18 +5443,32 @@
       {
         "id": "OPT0507",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0508",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0509",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0508",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -5687,7 +6030,14 @@
         "id": "OPT0243",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0244",
@@ -5698,7 +6048,14 @@
       {
         "id": "OPT0245",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0246",
@@ -5766,7 +6123,14 @@
       {
         "id": "OPT0240",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0241",
@@ -5861,7 +6225,14 @@
       {
         "id": "OPT0996",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -6361,7 +6732,14 @@
       {
         "id": "OPT0816",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -6403,7 +6781,14 @@
       {
         "id": "OPT0807",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0808",
@@ -6432,7 +6817,14 @@
       {
         "id": "OPT0877",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0878",
@@ -6457,7 +6849,14 @@
       {
         "id": "OPT0815",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -6488,12 +6887,26 @@
       {
         "id": "OPT0819",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0820",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -6514,7 +6927,14 @@
       {
         "id": "OPT0810",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0811",
@@ -6524,18 +6944,32 @@
       {
         "id": "OPT0812",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0813",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0814",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0813",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -6599,7 +7033,14 @@
       {
         "id": "OPT1244",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT1245",
@@ -6931,7 +7372,14 @@
       {
         "id": "OPT0130",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0883",
@@ -7235,7 +7683,14 @@
         "id": "OPT0857",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0858",
@@ -7246,7 +7701,14 @@
       {
         "id": "OPT0859",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0860",
@@ -7298,7 +7760,14 @@
       {
         "id": "OPT0854",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0855",
@@ -7538,7 +8007,14 @@
       {
         "id": "OPT0370",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0371",
@@ -7882,7 +8358,14 @@
       {
         "id": "OPT1105",
         "name": "Exchange shield and spear for Mattock",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -8031,7 +8514,14 @@
       {
         "id": "OPT1106",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1107",
@@ -8039,15 +8529,22 @@
         "points": 25
       },
       {
-        "id": "OPT1108",
-        "name": "Shield and spear",
-        "points": 2
-      },
-      {
         "id": "OPT1109",
         "name": "Crossbow",
         "points": 2,
         "type": "bow"
+      },
+      {
+        "id": "OPT1108",
+        "name": "Shield and spear",
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1110",
@@ -8071,13 +8568,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1112",
-        "name": "War horn",
+        "id": "OPT1113",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1113",
-        "name": "Banner",
+        "id": "OPT1112",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -8089,7 +8586,14 @@
       {
         "id": "OPT1115",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1116",
@@ -8121,12 +8625,26 @@
         "name": "Exchange armour for heavy armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
         "id": "OPT0063",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8153,6 +8671,13 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -8203,7 +8728,14 @@
       {
         "id": "OPT0074",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0075",
@@ -8235,6 +8767,13 @@
         "name": "Heavy armour",
         "points": 10,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -8322,12 +8861,26 @@
       {
         "id": "OPT0065",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0066",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8442,7 +8995,14 @@
       {
         "id": "OPT0083",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0084",
@@ -8452,7 +9012,14 @@
       {
         "id": "OPT0085",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8474,7 +9041,14 @@
         "id": "OPT0067",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0068",
@@ -8485,18 +9059,32 @@
         "id": "OPT0069",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0070",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0071",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0070",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8541,7 +9129,14 @@
       {
         "id": "OPT0445",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8599,12 +9194,26 @@
       {
         "id": "OPT0448",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0449",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8680,7 +9289,14 @@
         "id": "OPT0451",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0452",
@@ -8691,18 +9307,32 @@
         "id": "OPT0453",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0454",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0455",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0454",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -8829,6 +9459,13 @@
         "name": "Exchange armour for heavy armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -8836,6 +9473,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -8872,6 +9516,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -8947,7 +9598,14 @@
       {
         "id": "OPT0541",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0542",
@@ -9340,12 +9998,26 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       },
       {
         "id": "OPT0553",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0554",
@@ -9418,12 +10090,26 @@
       {
         "id": "OPT0558",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0559",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -9472,7 +10158,14 @@
       {
         "id": "OPT1166",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT1167",
@@ -9511,7 +10204,14 @@
       {
         "id": "OPT0535",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -9563,12 +10263,26 @@
       {
         "id": "OPT0527",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0528",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0529",
@@ -9697,13 +10411,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1162",
-        "name": "War horn",
+        "id": "OPT1163",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1163",
-        "name": "Banner",
+        "id": "OPT1162",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -9771,7 +10485,14 @@
       {
         "id": "OPT0530",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0531",
@@ -9781,18 +10502,32 @@
       {
         "id": "OPT0532",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0533",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0534",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0533",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -10066,7 +10801,14 @@
       {
         "id": "OPT0252",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0253",
@@ -10130,7 +10872,14 @@
       {
         "id": "OPT0964",
         "name": "Tough Hide",
-        "points": 50
+        "points": 50,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Tough Hide"
+          }
+        ]
       },
       {
         "id": "OPT0965",
@@ -10176,7 +10925,14 @@
       {
         "id": "OPT0985",
         "name": "Tough Hide",
-        "points": 50
+        "points": 50,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Tough Hide"
+          }
+        ]
       },
       {
         "id": "OPT0986",
@@ -10434,12 +11190,26 @@
       {
         "id": "OPT0750",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0751",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0752",
@@ -10463,13 +11233,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0753",
-        "name": "War horn",
+        "id": "OPT0754",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0754",
-        "name": "Banner",
+        "id": "OPT0753",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -10481,12 +11251,26 @@
       {
         "id": "OPT0756",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0757",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -10649,7 +11433,14 @@
       {
         "id": "OPT0728",
         "name": "Exchange shield and spear for Mattock",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -10811,7 +11602,14 @@
       {
         "id": "OPT0729",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0730",
@@ -10819,15 +11617,22 @@
         "points": 25
       },
       {
-        "id": "OPT0731",
-        "name": "Shield and spear",
-        "points": 2
-      },
-      {
         "id": "OPT0732",
         "name": "Crossbow",
         "points": 2,
         "type": "bow"
+      },
+      {
+        "id": "OPT0731",
+        "name": "Shield and spear",
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0733",
@@ -10927,7 +11732,14 @@
       {
         "id": "OPT1276",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -10979,13 +11791,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1280",
-        "name": "War horn",
+        "id": "OPT1281",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1281",
-        "name": "Banner",
+        "id": "OPT1280",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -10997,7 +11809,14 @@
       {
         "id": "OPT1283",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1284",
@@ -11054,7 +11873,14 @@
       {
         "id": "OPT1271",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1272",
@@ -11064,18 +11890,32 @@
       {
         "id": "OPT1273",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT1274",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1275",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT1274",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -11158,13 +11998,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0607",
-        "name": "Beech",
+        "id": "OPT0610",
+        "name": "Ash",
         "points": 0
       },
       {
-        "id": "OPT0608",
-        "name": "Oak",
+        "id": "OPT0607",
+        "name": "Beech",
         "points": 0
       },
       {
@@ -11173,8 +12013,8 @@
         "points": 0
       },
       {
-        "id": "OPT0610",
-        "name": "Ash",
+        "id": "OPT0608",
+        "name": "Oak",
         "points": 0
       }
     ]
@@ -11235,7 +12075,14 @@
       {
         "id": "OPT1341",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1342",
@@ -11484,7 +12331,14 @@
         "id": "OPT1306",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1307",
@@ -11495,7 +12349,14 @@
       {
         "id": "OPT1308",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1309",
@@ -11562,7 +12423,14 @@
       {
         "id": "OPT1303",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1304",
@@ -11622,7 +12490,14 @@
       {
         "id": "OPT1253",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT1254",
@@ -11632,7 +12507,14 @@
       {
         "id": "OPT1255",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -11683,12 +12565,26 @@
       {
         "id": "OPT1248",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT1249",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -11777,7 +12673,14 @@
       {
         "id": "OPT1256",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1257",
@@ -11787,18 +12690,32 @@
       {
         "id": "OPT1258",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT1259",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1260",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT1259",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -11902,12 +12819,26 @@
       {
         "id": "OPT0970",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0971",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -12033,7 +12964,14 @@
         "id": "OPT0972",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0973",
@@ -12044,18 +12982,32 @@
         "id": "OPT0974",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0975",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0976",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0975",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1298",
@@ -12147,13 +13099,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0745",
-        "name": "War horn",
+        "id": "OPT0746",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0746",
-        "name": "Banner",
+        "id": "OPT0745",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -12165,12 +13117,26 @@
       {
         "id": "OPT0748",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0749",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -12275,15 +13241,15 @@
         "quantity": 1
       },
       {
-        "id": "OPT0484",
-        "name": "Sting",
+        "id": "OPT0485",
+        "name": "Elven Cloak",
         "points": 5,
         "included": true,
         "quantity": 1
       },
       {
-        "id": "OPT0485",
-        "name": "Elven Cloak",
+        "id": "OPT0484",
+        "name": "Sting",
         "points": 5,
         "included": true,
         "quantity": 1
@@ -12411,7 +13377,14 @@
       {
         "id": "OPT0476",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -12438,7 +13411,14 @@
       {
         "id": "OPT0481",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0482",
@@ -12495,7 +13475,14 @@
       {
         "id": "OPT0471",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0472",
@@ -12505,18 +13492,32 @@
       {
         "id": "OPT0473",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0474",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0475",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0474",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -13176,7 +14177,14 @@
       {
         "id": "OPT1409",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1410",
@@ -13383,7 +14391,14 @@
       {
         "id": "OPT1062",
         "name": "Exchange shield for war drum",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -13486,7 +14501,14 @@
       {
         "id": "OPT1063",
         "name": "Exchange shield for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       },
       {
         "id": "OPT1064",
@@ -13621,18 +14643,32 @@
       {
         "id": "OPT1066",
         "name": "Easterling Halberd and shield",
-        "points": 2
-      },
-      {
-        "id": "OPT1067",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1068",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT1067",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -13712,13 +14748,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1081",
-        "name": "War horn",
+        "id": "OPT1082",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1082",
-        "name": "Banner",
+        "id": "OPT1081",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -13762,7 +14798,14 @@
       {
         "id": "OPT0759",
         "name": "Heavy armour",
-        "points": 10
+        "points": 10,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       }
     ]
   },
@@ -13849,7 +14892,14 @@
       {
         "id": "OPT0764",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -13950,17 +15000,31 @@
       {
         "id": "OPT0768",
         "name": "Shield and Elven spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0769",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0770",
         "name": "Elven Spear",
         "points": 1
+      },
+      {
+        "id": "OPT0769",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -13992,7 +15056,14 @@
       {
         "id": "OPT0767",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -14291,13 +15362,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0094",
-        "name": "War horn",
+        "id": "OPT0095",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0095",
-        "name": "Banner",
+        "id": "OPT0094",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -14493,7 +15564,14 @@
       {
         "id": "OPT0897",
         "name": "Exchange shield for war drum",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -14528,7 +15606,14 @@
       {
         "id": "OPT0898",
         "name": "Exchange shield for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       },
       {
         "id": "OPT0899",
@@ -14558,18 +15643,32 @@
       {
         "id": "OPT0901",
         "name": "Easterling Halberd and shield",
-        "points": 2
-      },
-      {
-        "id": "OPT0902",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0903",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0902",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -14881,7 +15980,14 @@
         "id": "OPT0834",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0835",
@@ -14892,7 +15998,14 @@
       {
         "id": "OPT0836",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0837",
@@ -14955,7 +16068,14 @@
       {
         "id": "OPT0831",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0832",
@@ -15196,13 +16316,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0987",
-        "name": "War horn",
+        "id": "OPT0988",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0988",
-        "name": "Banner",
+        "id": "OPT0987",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -15214,7 +16334,14 @@
       {
         "id": "OPT0990",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0991",
@@ -15277,12 +16404,26 @@
       {
         "id": "OPT0003",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0004",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -15321,7 +16462,14 @@
       {
         "id": "OPT0009",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0010",
@@ -15359,7 +16507,14 @@
       {
         "id": "OPT0006",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -15533,12 +16688,26 @@
       {
         "id": "OPT0014",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0015",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -15570,12 +16739,26 @@
       {
         "id": "OPT0018",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0019",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0020",
@@ -15721,7 +16904,14 @@
         "id": "OPT0021",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0022",
@@ -15732,18 +16922,32 @@
         "id": "OPT0023",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0024",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0025",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0024",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1297",
@@ -16138,7 +17342,14 @@
       {
         "id": "OPT0276",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -16551,7 +17762,14 @@
       {
         "id": "OPT0277",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0278",
@@ -16721,7 +17939,14 @@
       {
         "id": "OPT1211",
         "name": "Exchange shield for war drum",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -16779,7 +18004,14 @@
       {
         "id": "OPT1207",
         "name": "Exchange shield for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       },
       {
         "id": "OPT1208",
@@ -16866,18 +18098,32 @@
       {
         "id": "OPT0285",
         "name": "Easterling Halberd and shield",
-        "points": 2
-      },
-      {
-        "id": "OPT0286",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0287",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0286",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -16902,12 +18148,26 @@
       {
         "id": "OPT0280",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0281",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0282",
@@ -16931,13 +18191,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0298",
-        "name": "War horn",
+        "id": "OPT0299",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0299",
-        "name": "Banner",
+        "id": "OPT0298",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -17154,7 +18414,14 @@
       {
         "id": "OPT0155",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -17199,7 +18466,14 @@
       {
         "id": "OPT0162",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -17230,12 +18504,26 @@
       {
         "id": "OPT0158",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0159",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0160",
@@ -17382,7 +18670,14 @@
       {
         "id": "OPT0591",
         "name": "Heavy armour",
-        "points": 10
+        "points": 10,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0592",
@@ -17476,7 +18771,14 @@
       {
         "id": "OPT1176",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -17527,7 +18829,14 @@
       {
         "id": "OPT0598",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0599",
@@ -17537,7 +18846,14 @@
       {
         "id": "OPT0600",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0601",
@@ -17615,7 +18931,14 @@
       {
         "id": "OPT0124",
         "name": "Shield",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -17715,7 +19038,14 @@
       {
         "id": "OPT0126",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0127",
@@ -17859,7 +19189,14 @@
       {
         "id": "OPT0575",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0576",
@@ -17922,7 +19259,14 @@
       {
         "id": "OPT0587",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0588",
@@ -18044,12 +19388,26 @@
       {
         "id": "OPT0577",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0578",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -18079,7 +19437,14 @@
       {
         "id": "OPT0580",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -18193,7 +19558,14 @@
       {
         "id": "OPT0568",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0569",
@@ -18203,18 +19575,32 @@
       {
         "id": "OPT0570",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0571",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0572",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0571",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -18236,7 +19622,14 @@
         "id": "OPT0581",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0582",
@@ -18247,18 +19640,32 @@
         "id": "OPT0583",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0584",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0585",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0584",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -18412,7 +19819,14 @@
       {
         "id": "OPT0199",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0200",
@@ -18571,12 +19985,26 @@
       {
         "id": "OPT0207",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0208",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0209",
@@ -18629,7 +20057,14 @@
       {
         "id": "OPT0203",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0204",
@@ -18671,7 +20106,14 @@
       {
         "id": "OPT0459",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -18703,13 +20145,27 @@
       {
         "id": "OPT0461",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0462",
         "name": "Exchange armour and bow for heavy armour",
         "points": 0,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -18890,7 +20346,14 @@
       {
         "id": "OPT0468",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -18952,7 +20415,14 @@
       {
         "id": "OPT0463",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0464",
@@ -18962,18 +20432,32 @@
       {
         "id": "OPT0465",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0466",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0467",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0466",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -19037,7 +20521,14 @@
       {
         "id": "OPT1095",
         "name": "Tough Hide",
-        "points": 50
+        "points": 50,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Tough Hide"
+          }
+        ]
       },
       {
         "id": "OPT1096",
@@ -19429,7 +20920,14 @@
       {
         "id": "OPT1099",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1100",
@@ -19541,7 +21039,14 @@
       {
         "id": "OPT1178",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       }
     ]
   },
@@ -19669,7 +21174,14 @@
       {
         "id": "OPT0035",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -19694,7 +21206,14 @@
       {
         "id": "OPT0037",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0038",
@@ -19799,18 +21318,32 @@
       {
         "id": "OPT0121",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0122",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0123",
         "name": "Longbow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0122",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -19846,6 +21379,13 @@
         "name": "Exchange armour for heavy armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -19853,6 +21393,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -19887,7 +21434,14 @@
       {
         "id": "OPT1226",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1227",
@@ -20037,12 +21591,26 @@
       {
         "id": "OPT1229",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT1230",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -20091,12 +21659,26 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       },
       {
         "id": "OPT1238",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1239",
@@ -20392,7 +21974,14 @@
       {
         "id": "OPT0682",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0683",
@@ -20402,7 +21991,14 @@
       {
         "id": "OPT0684",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0685",
@@ -21024,7 +22620,14 @@
         "id": "OPT1355",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1356",
@@ -21035,7 +22638,14 @@
       {
         "id": "OPT1357",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1358",
@@ -21073,7 +22683,14 @@
       {
         "id": "OPT1352",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1353",
@@ -21114,7 +22731,14 @@
       {
         "id": "OPT0614",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0615",
@@ -21124,7 +22748,14 @@
       {
         "id": "OPT0616",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21155,7 +22786,14 @@
       {
         "id": "OPT0618",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0619",
@@ -21165,7 +22803,14 @@
       {
         "id": "OPT0620",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21196,7 +22841,14 @@
       {
         "id": "OPT0622",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0623",
@@ -21206,7 +22858,14 @@
       {
         "id": "OPT0624",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21237,7 +22896,14 @@
       {
         "id": "OPT0626",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0627",
@@ -21247,7 +22913,14 @@
       {
         "id": "OPT0628",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21278,7 +22951,14 @@
       {
         "id": "OPT0630",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0631",
@@ -21288,7 +22968,14 @@
       {
         "id": "OPT0632",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21436,12 +23123,26 @@
       {
         "id": "OPT0643",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0644",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21674,18 +23375,32 @@
       {
         "id": "OPT0655",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0656",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0657",
         "name": "Longbow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0656",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21704,13 +23419,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1426",
-        "name": "War horn",
+        "id": "OPT1427",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1427",
-        "name": "Banner",
+        "id": "OPT1426",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -21876,7 +23591,14 @@
       {
         "id": "OPT0633",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0634",
@@ -21886,18 +23608,32 @@
       {
         "id": "OPT0635",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0636",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0637",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0636",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21916,13 +23652,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0658",
-        "name": "War horn",
+        "id": "OPT0659",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0659",
-        "name": "Banner",
+        "id": "OPT0658",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -21934,12 +23670,26 @@
       {
         "id": "OPT0661",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0662",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -21961,7 +23711,14 @@
         "id": "OPT0645",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0646",
@@ -21972,18 +23729,32 @@
         "id": "OPT0647",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0648",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0649",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0648",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -22289,13 +24060,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1263",
-        "name": "War horn",
+        "id": "OPT1264",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1264",
-        "name": "Banner",
+        "id": "OPT1263",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -22307,7 +24078,14 @@
       {
         "id": "OPT1266",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT1267",
@@ -22349,7 +24127,14 @@
       {
         "id": "OPT0489",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -22425,7 +24210,14 @@
       {
         "id": "OPT0495",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -22452,7 +24244,14 @@
       {
         "id": "OPT0500",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0501",
@@ -22509,7 +24308,14 @@
       {
         "id": "OPT0490",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0491",
@@ -22519,18 +24325,32 @@
       {
         "id": "OPT0492",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0493",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0494",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0493",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -22631,7 +24451,14 @@
       {
         "id": "OPT0520",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0521",
@@ -22693,12 +24520,26 @@
       {
         "id": "OPT0515",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0516",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0517",
@@ -22739,6 +24580,13 @@
         "name": "Exchange armour for heavy armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -22746,6 +24594,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -22782,6 +24637,13 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -22818,6 +24680,13 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -22885,12 +24754,26 @@
       {
         "id": "OPT0318",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0319",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -22982,6 +24865,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -23073,12 +24963,26 @@
       {
         "id": "OPT0420",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0421",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -23155,6 +25059,13 @@
         "name": "Exchange armour for heavy armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -23162,6 +25073,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -23198,6 +25116,13 @@
         "name": "Shield",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ],
         "quantity": 1
       },
       {
@@ -23311,12 +25236,26 @@
         "name": "Armour",
         "points": 5,
         "included": true,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       },
       {
         "id": "OPT0434",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0435",
@@ -23389,12 +25328,26 @@
       {
         "id": "OPT0439",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0440",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -24043,7 +25996,14 @@
       {
         "id": "OPT0052",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -24123,7 +26083,14 @@
       {
         "id": "OPT0058",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -24154,12 +26121,26 @@
       {
         "id": "OPT0055",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0056",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -24370,12 +26351,26 @@
       {
         "id": "OPT0141",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0142",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -24959,7 +26954,14 @@
         "id": "OPT0848",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0849",
@@ -24970,7 +26972,14 @@
       {
         "id": "OPT0850",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0851",
@@ -25022,7 +27031,14 @@
       {
         "id": "OPT0845",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0846",
@@ -25245,6 +27261,13 @@
         "type": "mount",
         "included": true,
         "mount_name": "Horse",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -25536,6 +27559,13 @@
         "type": "mount",
         "included": true,
         "mount_name": "Horse",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ],
         "quantity": 1
       }
     ]
@@ -25593,7 +27623,14 @@
       {
         "id": "OPT0787",
         "name": "Heavy armour",
-        "points": 10
+        "points": 10,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       }
     ]
   },
@@ -25813,7 +27850,14 @@
       {
         "id": "OPT0779",
         "name": "Exchange shield and spear for Mattock",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -26176,7 +28220,14 @@
       {
         "id": "OPT0780",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0781",
@@ -26184,15 +28235,22 @@
         "points": 25
       },
       {
-        "id": "OPT0782",
-        "name": "Shield and spear",
-        "points": 2
-      },
-      {
         "id": "OPT0783",
         "name": "Crossbow",
         "points": 2,
         "type": "bow"
+      },
+      {
+        "id": "OPT0782",
+        "name": "Shield and spear",
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0784",
@@ -26229,7 +28287,14 @@
       {
         "id": "OPT0794",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -26408,7 +28473,14 @@
       {
         "id": "OPT0260",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0261",
@@ -26543,12 +28615,26 @@
       {
         "id": "OPT0263",
         "name": "Shield and spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0264",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0265",
@@ -26867,7 +28953,14 @@
       {
         "id": "OPT0908",
         "name": "Exchange shield for war drum",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -26902,7 +28995,14 @@
       {
         "id": "OPT0909",
         "name": "Exchange shield for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       },
       {
         "id": "OPT0910",
@@ -26932,18 +29032,32 @@
       {
         "id": "OPT0912",
         "name": "Easterling Halberd and shield",
-        "points": 2
-      },
-      {
-        "id": "OPT0913",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0914",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0913",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -27058,7 +29172,14 @@
       {
         "id": "OPT0304",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -27368,13 +29489,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT0922",
-        "name": "War horn",
+        "id": "OPT0923",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT0923",
-        "name": "Banner",
+        "id": "OPT0922",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -27482,7 +29603,14 @@
       {
         "id": "OPT0955",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0956",
@@ -27574,7 +29702,14 @@
       {
         "id": "OPT0959",
         "name": "Armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Armour"
+          }
+        ]
       },
       {
         "id": "OPT0960",
@@ -27638,7 +29773,14 @@
       {
         "id": "OPT0926",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0927",
@@ -27746,12 +29888,26 @@
       {
         "id": "OPT0929",
         "name": "Exchange armour for heavy armour",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 2,
+            "label": "Heavy armour"
+          }
+        ]
       },
       {
         "id": "OPT0930",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -27771,7 +29927,14 @@
       {
         "id": "OPT0946",
         "name": "Exchange shield and lance for banner",
-        "points": 25
+        "points": 25,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -27880,7 +30043,14 @@
       {
         "id": "OPT0947",
         "name": "War horn and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0948",
@@ -27890,18 +30060,32 @@
       {
         "id": "OPT0949",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0950",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0951",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0950",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -27923,7 +30107,14 @@
         "id": "OPT0931",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0932",
@@ -27934,18 +30125,32 @@
         "id": "OPT0933",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0934",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0935",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0934",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -28021,7 +30226,14 @@
       {
         "id": "OPT0720",
         "name": "Exchange shield and spear for Mattock",
-        "points": 0
+        "points": 0,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": -1,
+            "label": "No shield"
+          }
+        ]
       }
     ]
   },
@@ -28116,7 +30328,14 @@
       {
         "id": "OPT0721",
         "name": "Banner and shield",
-        "points": 26
+        "points": 26,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0722",
@@ -28124,15 +30343,22 @@
         "points": 25
       },
       {
-        "id": "OPT0723",
-        "name": "Shield and spear",
-        "points": 2
-      },
-      {
         "id": "OPT0724",
         "name": "Crossbow",
         "points": 2,
         "type": "bow"
+      },
+      {
+        "id": "OPT0723",
+        "name": "Shield and spear",
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0725",
@@ -28332,7 +30558,14 @@
       {
         "id": "OPT0385",
         "name": "Shield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -28363,12 +30596,26 @@
       {
         "id": "OPT0388",
         "name": "Shield and Elven spear",
-        "points": 2
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0389",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0390",
@@ -28404,18 +30651,32 @@
       {
         "id": "OPT0380",
         "name": "Shield and spear",
-        "points": 2
-      },
-      {
-        "id": "OPT0381",
-        "name": "Shield",
-        "points": 1
+        "points": 2,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0382",
         "name": "Longbow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0381",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -28701,13 +30962,13 @@
     "warband_size": 0,
     "options": [
       {
-        "id": "OPT1122",
-        "name": "War horn",
+        "id": "OPT1123",
+        "name": "Banner",
         "points": 25
       },
       {
-        "id": "OPT1123",
-        "name": "Banner",
+        "id": "OPT1122",
+        "name": "War horn",
         "points": 25
       },
       {
@@ -29964,7 +32225,14 @@
       {
         "id": "OPT0329",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0330",
@@ -30002,7 +32270,14 @@
       {
         "id": "OPT0333",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0334",
@@ -30443,7 +32718,14 @@
         "id": "OPT0227",
         "name": "War horn, shield, throwing spears",
         "points": 28,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0228",
@@ -30454,18 +32736,32 @@
         "id": "OPT0229",
         "name": "Shield and throwing spears",
         "points": 3,
-        "type": "throw"
-      },
-      {
-        "id": "OPT0230",
-        "name": "Shield",
-        "points": 1
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0231",
         "name": "Bow",
         "points": 1,
         "type": "bow"
+      },
+      {
+        "id": "OPT0230",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -30817,7 +33113,14 @@
         "id": "OPT0184",
         "name": "Shield and throwing spears",
         "points": 2,
-        "type": "throw"
+        "type": "throw",
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0185",
@@ -30828,7 +33131,14 @@
       {
         "id": "OPT0186",
         "name": "Shield",
-        "points": 1
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       },
       {
         "id": "OPT0187",

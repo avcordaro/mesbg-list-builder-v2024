@@ -62,6 +62,7 @@ class ModelDataConverter:
         # Make sure each option has a list of dependencies. If its missing form the datafile set the value
         # to an empty JSON array.
         self.__options["dependencies"] = self.__options.dependencies.fillna("[]").apply(eval)
+        self.__options["modifiers"] = self.__options.modifiers.fillna("[]").apply(eval)
         self.__convert_option_column_to_wanted_data_type()
 
     def __merge_models_and_options(self):

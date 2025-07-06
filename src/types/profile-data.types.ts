@@ -1,4 +1,4 @@
-export type Profile = {
+export type Stats = {
   Mv: string;
   Fv: string;
   Sv: string;
@@ -9,6 +9,9 @@ export type Profile = {
   C: string;
   I: string;
   Range?: string;
+};
+
+export type Profile = Stats & {
   active_or_passive_rules?: ActivePassiveRule[];
   magic_powers?: MagicPower[];
   heroic_actions?: string[];

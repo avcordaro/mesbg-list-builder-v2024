@@ -1,3 +1,5 @@
+import { Stats } from "./profile-data.types.ts";
+
 export type ArmyType = "Good" | "Good (Legacy)" | "Evil" | "Evil (Legacy)";
 
 /**
@@ -34,6 +36,12 @@ export type OptionDependency = {
   dependencies: string[];
 };
 
+export type StatModifier = {
+  stat: keyof Stats;
+  mod: number;
+  label: string;
+};
+
 export type Option = {
   max?: number;
   min?: number;
@@ -46,6 +54,7 @@ export type Option = {
   passengers?: number;
   included?: boolean;
   dependencies?: OptionDependency[];
+  modifiers?: StatModifier[];
 };
 
 export type Unit = {
