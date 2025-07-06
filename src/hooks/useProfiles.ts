@@ -5,6 +5,8 @@ export const useProfiles = () => {
   const { roster } = useRosterInformation();
   const profileData = convertRosterToProfiles(roster);
 
+  console.log(profileData);
+
   return {
     profiles: profileData.profiles,
     missingProfiles: profileData.missing,

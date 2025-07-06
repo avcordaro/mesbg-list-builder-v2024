@@ -1,4 +1,6 @@
 import { profileData } from "../../assets/data.ts";
+import { Option, StatModifier } from "../../types/mesbg-data.types.ts";
+import { Stats } from "../../types/profile-data.types.ts";
 import {
   isSelectedUnit,
   Roster,
@@ -22,6 +24,65 @@ export const isMissingProfile = (
   unit: Profile[] | { missing: true; profile: string },
 ): unit is { missing: true; profile: string } =>
   !!(unit as { missing: true; profile: string })?.missing === true;
+
+const sumModifiers = (
+  modifiers: StatModifier[],
+): Record<keyof Stats, number> => {
+  return modifiers.reduce(
+    (acc, { stat, mod }) => {
+      acc[stat] = (acc[stat] || 0) + mod;
+      return acc;
+    },
+    {} as Record<keyof Stats, number>,
+  );
+};
+
+const splitStatValue = (value: string) => {
+  if (!value) return ["", ""];
+  const match = value.match(/^(\d+)(.*)$/);
+  if (!match) return [value, ""]; // fallback if not a match
+  return [parseInt(match[1], 10), match[2]];
+};
+
+const applyModifiersToStats = (
+  { Mv, Fv, Sv, S, D, A, W, C, I, Range }: Stats,
+  modifiers: Record<keyof Stats, number>,
+): Stats => {
+  const baseStats = { Mv, Fv, Sv, S, D, A, W, C, I, Range };
+  return Object.fromEntries(
+    Object.entries(baseStats).map(([stat, value]) => {
+      const mod = modifiers[stat] || 0;
+      const [num, suffix] = splitStatValue(value);
+      if (typeof num === "number" && !isNaN(num)) {
+        return [stat, String(num + mod) + suffix];
+      }
+      return [stat, value]; // fallback: leave unchanged
+    }),
+  ) as Stats;
+};
+
+const getCorrectedProfileBasedOnOptionSelection = (
+  options: Option[],
+  originalStats: Stats,
+): { suffix: string; correctedStats: Partial<Stats> } => {
+  const modifiers = options.filter(
+    (option) =>
+      option.quantity > 0 && !!option.modifiers && option.modifiers.length > 0,
+  );
+
+  if (modifiers.length === 0) return { correctedStats: {}, suffix: "" };
+
+  const optionNames = modifiers
+    .flatMap((option) => option.modifiers)
+    .map((modifier) => modifier.label)
+    .join(", ");
+  const corrections = applyModifiersToStats(
+    originalStats,
+    sumModifiers(modifiers.flatMap((option) => option.modifiers)),
+  );
+
+  return { correctedStats: corrections, suffix: ` (${optionNames})` };
+};
 
 /**
  * This function transforms a specific Unit into all the profile data. For most units this is simple lookup
@@ -75,7 +136,24 @@ function transformUnitToListOfProfiles(
     }
   }
 
-  const additional_stats = getAdditionalStats(unit, profile);
+  const { correctedStats, suffix } = getCorrectedProfileBasedOnOptionSelection(
+    unit.options,
+    profile,
+  );
+
+  const modifiedProfile = {
+    ...profile,
+    ...getMightWillAndFate(unit),
+    ...correctedStats,
+  };
+
+  const additional_stats =
+    suffix && !unit.unique
+      ? [
+          { name: unit.name + suffix, ...modifiedProfile },
+          ...getAdditionalStats(unit, profile),
+        ]
+      : getAdditionalStats(unit, profile);
   const additional_special_rules = getAdditionalSpecialRules(unit);
   const used_active_or_passive_rules = profile.active_or_passive_rules.filter(
     (rule) => {
@@ -93,6 +171,7 @@ function transformUnitToListOfProfiles(
       type: unit.unit_type,
       ...profile,
       ...getMightWillAndFate(unit),
+      ...(suffix && unit.unique ? modifiedProfile : {}), // apply the stat updates if the unit is unique and does not get a additional row.
       additional_stats,
       special_rules: [...profile.special_rules, ...additional_special_rules],
       active_or_passive_rules: used_active_or_passive_rules,
