@@ -96,11 +96,13 @@ export function calculateGenericModels(
       return [
         key,
         Number(
-          value.find((c) =>
-            typeof c.options === "string"
-              ? c.options === "Generic"
-              : c.options.includes("Generic"),
-          )?.amount || "0",
+          value
+            .filter((c) =>
+              typeof c.options === "string"
+                ? c.options === "Generic"
+                : c.options.includes("Generic"),
+            )
+            .reduce((a, b) => a + Number(b.amount), 0),
         ),
       ];
     }),
@@ -108,10 +110,7 @@ export function calculateGenericModels(
 }
 
 export function getListOfOptionsForGivenUnit(unit: SelectedUnit): string[] {
-  let options = unit.options
-    .filter((o) => o.quantity > 0)
-    .filter((o) => o.type !== "special_warband_upgrade")
-    .map((o) => o.name);
+  let options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
   if (
     unit.name === "Rohan Royal Guard" &&
     arraysMatch(options, ["Horse", "Throwing spears"])
