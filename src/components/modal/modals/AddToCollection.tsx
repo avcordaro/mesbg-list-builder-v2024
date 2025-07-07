@@ -68,6 +68,7 @@ export const AddToCollection = () => {
     {
       options: string | string[];
       mount: string;
+      upgrade: string;
       amount: string;
     }[]
   >(
@@ -78,6 +79,7 @@ export const AddToCollection = () => {
           {
             options: isHero ? ["Generic"] : "Generic",
             mount: "",
+            upgrade: "",
             amount: "",
           },
         ],
@@ -97,7 +99,12 @@ export const AddToCollection = () => {
   const addRow = () => {
     setLoadOuts([
       ...loadOuts,
-      { options: isHero ? ["Generic"] : "Generic", mount: "", amount: "" },
+      {
+        options: isHero ? ["Generic"] : "Generic",
+        mount: "",
+        upgrade: "",
+        amount: "",
+      },
     ]);
   };
 
@@ -255,12 +262,43 @@ export const AddToCollection = () => {
                     )}
                   </Grid2>
                 )}
+                {!isHero && wbUpgrade && (
+                  <Grid2
+                    size={isMobile ? 12 : 3}
+                    sx={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                      display: "flex",
+                    }}
+                  >
+                    <FormControlLabel
+                      control={
+                        <CustomSwitch
+                          checked={!!loadOut.upgrade}
+                          onChange={(_, checked) =>
+                            checked
+                              ? handleInputChange(
+                                  index,
+                                  "upgrade",
+                                  wbUpgrade.name,
+                                )
+                              : handleInputChange(index, "upgrade", "")
+                          }
+                          name="Mounted"
+                          color="primary"
+                        />
+                      }
+                      label={wbUpgrade.name.replaceAll("Upgrade to", "")}
+                    />
+                  </Grid2>
+                )}
+
                 {loadoutOptions.length > 2 && (
                   <Grid2
                     size={
                       isMobile
                         ? 12
-                        : !isHero || mountOptions.length === 0
+                        : mountOptions.length === 0 || wbUpgrade
                           ? 9
                           : 6
                     }
@@ -295,7 +333,8 @@ export const AddToCollection = () => {
                     isMobile
                       ? 9
                       : loadoutOptions.length <= 2
-                        ? isHero && mountOptions.length > 0
+                        ? (isHero && mountOptions.length > 0) ||
+                          (!isHero && wbUpgrade)
                           ? 8
                           : 10
                         : 2
@@ -334,8 +373,9 @@ export const AddToCollection = () => {
               </Grid2>
             </FormGroup>
           ))}
-
+          `
           {((isHero && mountOptions.length > 0) ||
+            (!isHero && wbUpgrade) ||
             loadoutOptions.length >= 3) && (
             <Button onClick={() => addRow()}>Add row</Button>
           )}
