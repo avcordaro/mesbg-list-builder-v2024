@@ -136,6 +136,15 @@ export const Collection = () => {
                           ? item.options
                           : item.options.join(", ")}
                         {item.mount ? ` on ${item.mount}` : ""}
+                        {item.upgrade && (
+                          <span>
+                            {" "}
+                            with <i>
+                              {item.upgrade.replace("Upgrade to", "")}
+                            </i>{" "}
+                            upgrade.
+                          </span>
+                        )}
                       </Typography>
                     ))}
                   </TableCell>

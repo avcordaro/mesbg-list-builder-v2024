@@ -4,6 +4,7 @@ import { CollectionState } from "../index.ts";
 export type Collection = {
   options: string[] | string;
   mount: string;
+  upgrade: string;
   amount: string;
 };
 export type ModelInventory = {

@@ -96,11 +96,13 @@ export function calculateGenericModels(
       return [
         key,
         Number(
-          value.find((c) =>
-            typeof c.options === "string"
-              ? c.options === "Generic"
-              : c.options.includes("Generic"),
-          )?.amount || "0",
+          value
+            .filter((c) =>
+              typeof c.options === "string"
+                ? c.options === "Generic"
+                : c.options.includes("Generic"),
+            )
+            .reduce((a, b) => a + Number(b.amount), 0),
         ),
       ];
     }),
