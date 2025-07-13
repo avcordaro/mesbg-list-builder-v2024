@@ -1,4 +1,4 @@
-type MagicalPower = { name: string; range: string; cast: string };
+export type MagicalPower = { name: string; range: string; cast: string };
 
 type CustomSpecialRule = {
   name: string;

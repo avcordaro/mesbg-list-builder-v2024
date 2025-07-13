@@ -3,7 +3,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import keywords from "../../../../assets/data/keywords.json";
 
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import {
+  MagicalPower as Caster,
+  Profile,
+} from "../../../../hooks/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 
 interface MagicalPowerListProps {
@@ -13,10 +16,24 @@ interface MagicalPowerListProps {
 type MagicalPower = {
   name: string;
   description: string;
+  casters: Caster[];
 };
 
-function duplicates(item: MagicalPower, index: number, self: MagicalPower[]) {
-  return index === self.findIndex((other) => other.name === item.name);
+function mergeCasters(powers: MagicalPower[]): MagicalPower[] {
+  return Object.values(
+    powers.reduce((acc, power) => {
+      const key = power.name;
+
+      if (!acc[key]) {
+        // Clone the object to avoid mutating the original
+        acc[key] = { ...power, casters: [...power.casters] };
+      } else {
+        acc[key].casters.push(...power.casters);
+      }
+
+      return acc;
+    }, {}),
+  );
 }
 
 export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
@@ -24,20 +41,21 @@ export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
     preferences: { removePdfPageBreak },
   } = useUserPreferences();
 
-  const magicalPowers: MagicalPower[] = profiles
-    .flatMap((profile) =>
-      profile.magic_powers
-        .map(({ name }) => name.replace(/\(.*?\)/g, "(X)"))
-        .map((name) => {
+  const magicalPowers: MagicalPower[] = mergeCasters(
+    profiles
+      .flatMap((profile) =>
+        profile.magic_powers.map((mp) => {
+          const name = mp.name.replace(/\(.*?\)/g, "(X)");
           const power = keywords.find((keyword) => keyword.name === name);
           return {
             name,
             description: power?.description,
+            casters: [{ name: profile.name, cast: mp.cast, range: mp.range }],
           };
         }),
-    )
-    .filter(duplicates)
-    .sort((a, b) => a.name.localeCompare(b.name));
+      )
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  );
 
   return (
     <>
@@ -61,6 +79,17 @@ export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
                       ?.replaceAll("</b>:", ":</h4>"),
                   }}
                 />
+                <Typography variant="body2">
+                  <b>Cast by: </b>
+                  <i>
+                    {rule.casters
+                      .map(
+                        (caster) =>
+                          `${caster.name} (${caster.range} at ${caster.cast})`,
+                      )
+                      .join(" | ")}
+                  </i>
+                </Typography>
               </Box>
             ))}
           </Stack>
