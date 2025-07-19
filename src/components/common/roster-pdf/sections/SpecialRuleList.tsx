@@ -4,8 +4,8 @@ import Typography from "@mui/material/Typography";
 import keywords from "../../../../assets/data/keywords.json";
 
 import { armyListData } from "../../../../assets/data.ts";
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
-import { useRosterInformation } from "../../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 import { isMovieQuote } from "../../../../utils/string.ts";
 
