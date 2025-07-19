@@ -3094,7 +3094,10 @@
       "[grand-army-of-the-south] black-dragon-warrior",
       "[grand-army-of-the-south] dragon-cult-acolyte",
       "[grand-army-of-the-south] war-drake-of-rhun",
-      "[grand-army-of-the-south] easterling-warrior"
+      "[grand-army-of-the-south] easterling-warrior",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3102,7 +3105,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] corsair-of-umbar",
       "[grand-army-of-the-south] corsair-crossbowman",
-      "[grand-army-of-the-south] corsair-reaver"
+      "[grand-army-of-the-south] corsair-reaver",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3110,7 +3116,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] corsair-of-umbar",
       "[grand-army-of-the-south] corsair-crossbowman",
-      "[grand-army-of-the-south] corsair-reaver"
+      "[grand-army-of-the-south] corsair-reaver",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3118,7 +3127,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] corsair-of-umbar",
       "[grand-army-of-the-south] corsair-crossbowman",
-      "[grand-army-of-the-south] corsair-reaver"
+      "[grand-army-of-the-south] corsair-reaver",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3126,7 +3138,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] corsair-of-umbar",
       "[grand-army-of-the-south] corsair-crossbowman",
-      "[grand-army-of-the-south] corsair-reaver"
+      "[grand-army-of-the-south] corsair-reaver",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3134,14 +3149,20 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] easterling-kataphrakt",
       "[grand-army-of-the-south] war-drake-of-rhun",
-      "[grand-army-of-the-south] easterling-warrior"
+      "[grand-army-of-the-south] easterling-warrior",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
   "[grand-army-of-the-south] easterling-dragon-knight": {
     "valid_warband_units": [
       "[grand-army-of-the-south] black-dragon-warrior",
-      "[grand-army-of-the-south] dragon-cult-acolyte"
+      "[grand-army-of-the-south] dragon-cult-acolyte",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3149,7 +3170,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] easterling-kataphrakt",
       "[grand-army-of-the-south] war-drake-of-rhun",
-      "[grand-army-of-the-south] easterling-warrior"
+      "[grand-army-of-the-south] easterling-warrior",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3157,7 +3181,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] easterling-kataphrakt",
       "[grand-army-of-the-south] war-drake-of-rhun",
-      "[grand-army-of-the-south] easterling-warrior"
+      "[grand-army-of-the-south] easterling-warrior",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3169,7 +3196,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3181,7 +3211,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3193,7 +3226,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3205,7 +3241,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3213,7 +3252,10 @@
     "valid_warband_units": [
       "[grand-army-of-the-south] easterling-kataphrakt",
       "[grand-army-of-the-south] war-drake-of-rhun",
-      "[grand-army-of-the-south] easterling-warrior"
+      "[grand-army-of-the-south] easterling-warrior",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3241,7 +3283,10 @@
       "[grand-army-of-the-south] haradrim-warrior",
       "[grand-army-of-the-south] haradrim-raider",
       "[grand-army-of-the-south] abrakhan-merchant-guard",
-      "[grand-army-of-the-south] watcher-of-karna"
+      "[grand-army-of-the-south] watcher-of-karna",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3253,7 +3298,10 @@
       "[grand-army-of-the-south] haradrim-warrior",
       "[grand-army-of-the-south] haradrim-raider",
       "[grand-army-of-the-south] abrakhan-merchant-guard",
-      "[grand-army-of-the-south] watcher-of-karna"
+      "[grand-army-of-the-south] watcher-of-karna",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3265,7 +3313,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": [
       "Royal War Mumak"
@@ -3281,7 +3332,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3295,7 +3349,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3307,7 +3364,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
@@ -3319,12 +3379,19 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": []
   },
   "[grand-army-of-the-south] the-knight-of-umbar": {
-    "valid_warband_units": [],
+    "valid_warband_units": [
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
+    ],
     "extra_profiles": []
   },
   "[grand-army-of-the-south] war-mumak-of-harad": {
@@ -3335,7 +3402,10 @@
       "[grand-army-of-the-south] watcher-of-karna",
       "[grand-army-of-the-south] mahud-warrior",
       "[grand-army-of-the-south] mahud-raider",
-      "[grand-army-of-the-south] half-troll"
+      "[grand-army-of-the-south] half-troll",
+      "[grand-army-of-the-south] khandish-warrior",
+      "[grand-army-of-the-south] khandish-horseman",
+      "[grand-army-of-the-south] khandish-charioteer"
     ],
     "extra_profiles": [
       "War Mumak of Harad (Options)"

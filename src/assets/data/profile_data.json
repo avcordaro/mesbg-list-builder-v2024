@@ -2203,7 +2203,7 @@
         {
           "name": "Spider Webs",
           "type": "Active",
-          "description": "A Mirkwood Spider can shoot webs, treated as a throwing weapon with a range of 8\". If the spider hits its target, do not roll To Wound. Instead, the model suffers the effects of the Paralyse Magical Power, however the effects will not immediately end should this model have no Will points or be slain. If this hits a Cavalry model, both the rider and mount will be hit. A Hero model hit may spend a Fat point to avoid its effects If the Hero is a Cavalry model, this would negate the effects on both the rider and mount."
+          "description": "A Mirkwood Spider can shoot webs, treated as a throwing weapon with a range of 8\". If the spider hits its target, do not roll To Wound. Instead, the model suffers the effects of the Paralyse Magical Power, however the effects will not immediately end should this model have no Will points or be slain. If this hits a Cavalry model, both the rider and mount will be hit. A Hero model hit may spend a Fate point to avoid its effects If the Hero is a Cavalry model, this would negate the effects on both the rider and mount."
         }
       ],
       "magic_powers": [],
@@ -11698,7 +11698,7 @@
         {
           "name": "Dol Amroth for Gondor!",
           "type": "Passive",
-          "description": "Other friendly Dol Amroth models treat Prince Imrahil as a banner with a range of 6\""
+          "description": "Other friendly Dol Amroth models treat Prince Imrahil as a banner with a range of 6\"."
         }
       ],
       "magic_powers": [],
@@ -17880,7 +17880,7 @@
           "description": "At the start of the Move Phase, before the Declare Heroic Actions step, the Undying may spend a Will Point to use this special rule. If he does, then until the End Phase of the turn, the Undying regains a Will Point spent earlier in the battle every time another model successfully casts a Magical Power within 6\"."
         },
         {
-          "name": "Arcana Leech",
+          "name": "Eternal Willpower",
           "type": "Passive",
           "description": "The Undying can spend his Will Points as if they were Fate Points."
         }
