@@ -6,7 +6,7 @@ import html2canvas from "html2canvas";
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { armyListData } from "../../../assets/data.ts";
 import backgroundCover from "../../../assets/images/roster-summary/background.jpg";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 import { isSelectedUnit } from "../../../types/roster.ts";
 import { ModalTypes } from "../../modal/modals.tsx";

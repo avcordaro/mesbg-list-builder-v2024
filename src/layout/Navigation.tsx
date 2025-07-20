@@ -55,6 +55,7 @@ import { useGameModeState } from "../state/gamemode";
 import { useUserPreferences } from "../state/preference";
 import { useRosterBuildingState } from "../state/roster-building";
 import { slugify } from "../utils/string.ts";
+import { AccountAvatar } from "./AccountAvatar.tsx";
 
 const drawerWidth = 320;
 
@@ -534,6 +535,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             />
           </Button>
           <Box flexGrow={1} />
+          <AccountAvatar />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} id="navigation-drawer">

@@ -11,7 +11,7 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { keywords } from "../../../../assets/data.ts";
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 import { Stats } from "./Stats.tsx";
 

@@ -38,9 +38,9 @@ import { MobileRosterWarningsToolbar } from "../components/common/toolbar/Mobile
 import { WarbandList } from "../components/common/warbands/WarbandList.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
 import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
-import { useRosterInformation } from "../hooks/useRosterInformation.ts";
-import { useRosterWarnings } from "../hooks/useRosterWarnings.ts";
-import { useScreenSize } from "../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useRosterWarnings } from "../hooks/calculations-and-displays/useRosterWarnings.ts";
+import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../state/app";
 import { useUserPreferences } from "../state/preference";
 import {

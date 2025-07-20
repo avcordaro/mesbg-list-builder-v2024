@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
-import { Profile } from "../../../../hooks/profile-utils/profile.type.ts";
+import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 
 interface QuickReferenceTableProps {
