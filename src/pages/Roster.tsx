@@ -24,6 +24,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
+import { GiRollingDices } from "react-icons/gi";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "../components/common/link/Link.tsx";
 import {
@@ -132,6 +133,12 @@ export const Roster = () => {
       icon: <Print />,
       name: "Open Printable PDF view",
       callback: () => navigate(`/roster/${rosterId}/pdf-printable`),
+      disabled: roster.metadata.units === 0,
+    },
+    {
+      icon: <GiRollingDices size="1.8rem" />,
+      name: "Tabletop Simulator Export",
+      callback: () => setCurrentModal(ModalTypes.TABLETOP_SIM_EXPORT),
       disabled: roster.metadata.units === 0,
     },
     {
