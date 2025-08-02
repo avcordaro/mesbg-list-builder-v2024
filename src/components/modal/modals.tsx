@@ -36,6 +36,7 @@ import { ImportGameHistoryModal } from "./modals/ImportHistoryModal.tsx";
 import { ProfileCardModal } from "./modals/ProfileCardModal.tsx";
 import { RosterSummaryModal } from "./modals/RosterSummaryModal.tsx";
 import { RosterSummaryScreenshotModal } from "./modals/RosterSummaryScreenshotModal.tsx";
+import { TabletopSimulatorExportModal } from "./modals/TabletopSimulatorExportModal.tsx";
 import { UpdateGroupModal } from "./modals/UpdateGroupModal.tsx";
 
 export enum ModalTypes {
@@ -52,6 +53,7 @@ export enum ModalTypes {
 
   DOWNLOAD_PROFILE_CARDS = "DOWNLOAD_PROFILE_CARDS",
   ROSTER_SUMMARY = "ROSTER_SUMMARY",
+  TABLETOP_SIM_EXPORT = "TABLETOP_SIM_EXPORT",
   ROSTER_SCREENSHOT = "ROSTER_SCREENSHOT",
 
   CONFIRM_DELETE_ROSTER = "CONFIRM_DELETE_ROSTER",
@@ -184,6 +186,14 @@ export const modals = new Map<ModalTypes, ModalProps>([
     {
       customModalHeader: true,
       children: <RosterSummaryModal />,
+      maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.TABLETOP_SIM_EXPORT,
+    {
+      customModalHeader: true,
+      children: <TabletopSimulatorExportModal />,
       maxWidth: "md",
     },
   ],
