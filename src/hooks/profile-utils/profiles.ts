@@ -82,7 +82,7 @@ const getCorrectedProfileBasedOnOptionSelection = (
     sumModifiers(modifiers.flatMap((option) => option.modifiers)),
   );
 
-  return { correctedStats: corrections, suffix: ` (${optionNames})` };
+  return { correctedStats: corrections, suffix: `with ${optionNames}` };
 };
 
 /**
@@ -153,7 +153,7 @@ function transformUnitToListOfProfiles(
   const additional_stats =
     suffix && !unit.unique
       ? [
-          { name: unit.name + suffix, ...modifiedProfile },
+          { name: suffix, ...modifiedProfile },
           ...getAdditionalStats(unit, profile),
         ]
       : getAdditionalStats(unit, profile);

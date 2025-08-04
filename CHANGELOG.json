@@ -3,6 +3,9 @@
     "added": [
       "Added the Tabletop Simulator text export to allow easily import you roster using the MESBG FTC."
     ],
+    "changed": [
+      "Removed the names of the models in the modified rows of the quick reference tables in the PDF."
+    ],
     "bugfixes": [
       "Cleaned up the entire dataset's legacy markers to make sure no army lists are falsely listed as legacy.",
       "Removed falsely selectable gondor options for Halbarad in Defenders of the Pelennor.",
