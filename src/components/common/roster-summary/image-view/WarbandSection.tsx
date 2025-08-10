@@ -22,6 +22,7 @@ export const WarbandSection = ({
     roster: {
       metadata: { leader },
     },
+    isCustomRoster,
   } = useRosterInformation();
   const hero = warband.hero;
   const heroOptions =
@@ -76,6 +77,7 @@ export const WarbandSection = ({
   const overExceededWarbandSize =
     warband.meta.maxUnits !== "-" && warband.meta.units > warband.meta.maxUnits;
   const improperUnits =
+    !isCustomRoster &&
     !!hero &&
     warband.units
       .filter(isSelectedUnit)

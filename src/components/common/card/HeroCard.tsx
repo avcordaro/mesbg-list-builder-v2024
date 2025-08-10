@@ -57,7 +57,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { mode } = useThemeContext();
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
-  const { roster, getSetOfModelIds } = useRosterInformation();
+  const { roster, getSetOfModelIds, isCustomRoster } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
   const { warnings, available, selected, overExceededCollection } =
@@ -65,6 +65,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { preferences } = useUserPreferences();
 
   const valid =
+    isCustomRoster ||
     !followerOf ||
     heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
 

@@ -8,11 +8,13 @@ import { UnitProfilePicture } from "../images/UnitProfilePicture.tsx";
 
 export type UnitSelectionButtonProps = {
   equipment: SiegeEquipment;
+  showRole?: boolean;
   onClick: () => void;
 };
 
 export function SiegeSelectionButton({
   equipment,
+  showRole = false,
   onClick,
 }: UnitSelectionButtonProps) {
   const { palette } = useTheme();
@@ -38,7 +40,9 @@ export function SiegeSelectionButton({
           <Stack direction="row" alignItems="center" sx={{ width: "100%" }}>
             <Box flexGrow={1}>
               <Typography sx={{ pl: 0.5 }} variant="body1">
-                <strong>{equipment.name}</strong>
+                <strong>
+                  {equipment.name} {showRole && `(${equipment.siege_role})`}
+                </strong>
                 <br />
                 Points: {equipment.base_points}
               </Typography>

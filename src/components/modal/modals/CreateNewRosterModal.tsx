@@ -9,6 +9,10 @@ import {
 } from "react";
 import { useAppState } from "../../../state/app";
 import {
+  CreateCustomRoster,
+  CreateCustomRosterHandlers,
+} from "../../common/create-roster/CreateCustomRoster.tsx";
+import {
   CreateMatchedPlayRoster,
   CreateMatchedPlayRosterHandlers,
 } from "../../common/create-roster/CreateMatchedPlayRoster.tsx";
@@ -25,12 +29,13 @@ export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();
 
   const [activeTab, setActiveTab] = useState("regular");
-  const handleTabChange = (event: SyntheticEvent, newValue: string) => {
+  const handleTabChange = (_: SyntheticEvent, newValue: string) => {
     setActiveTab(newValue);
   };
 
   const regRef = useRef<CreateMatchedPlayRosterHandlers>(null);
   const sieRef = useRef<CreateSiegeRosterHandlers>(null);
+  const cusRef = useRef<CreateCustomRosterHandlers>(null);
   const impRef = useRef<ImportRosterHandlers>(null);
 
   function createNewRoster(e: MouseEvent) {
@@ -40,7 +45,7 @@ export const CreateNewRosterModal = () => {
       case "siege":
         return sieRef.current.handleCreateRoster(e);
       case "custom":
-        return null;
+        return cusRef.current.handleCreateRoster(e);
       case "import":
         return impRef.current.handleImportRoster(e);
     }
@@ -75,6 +80,9 @@ export const CreateNewRosterModal = () => {
         </TabPanel>
         <TabPanel value="siege">
           <CreateSiegeRoster ref={sieRef} />
+        </TabPanel>
+        <TabPanel value="custom">
+          <CreateCustomRoster ref={cusRef} />
         </TabPanel>
         <TabPanel value="import">
           <ImportRoster ref={impRef} />

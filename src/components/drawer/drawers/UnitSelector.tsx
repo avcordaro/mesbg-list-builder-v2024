@@ -6,6 +6,8 @@ import { SiegeEquipment, Unit } from "../../../types/mesbg-data.types.ts";
 import { HeroSelectionList } from "../../common/unit-selection/HeroSelectionList.tsx";
 import { SiegeSelectionList } from "../../common/unit-selection/SiegeSelectionList.tsx";
 import { UnitSelectionList } from "../../common/unit-selection/UnitSelectionList.tsx";
+import { HeroSelectionList as CustomHeroSelectionList } from "../../common/unit-selection/custom-rosters/HeroSelectionList.tsx";
+import { UnitSelectionList as CustomUnitSelectionList } from "../../common/unit-selection/custom-rosters/UnitSelectionList.tsx";
 
 export const UnitSelector = () => {
   const {
@@ -54,17 +56,32 @@ export const UnitSelector = () => {
         pb: 10,
       }}
     >
-      {selectionType === "hero" && (
-        <HeroSelectionList armyList={roster.armyList} selectUnit={selectUnit} />
-      )}
-      {selectionType === "unit" && (
-        <UnitSelectionList
-          leadingHeroModelId={
-            roster.warbands.find(({ id }) => id === warbandId)?.hero?.model_id
-          }
-          selectUnit={selectUnit}
-        />
-      )}
+      {selectionType === "hero" &&
+        (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
+          <CustomHeroSelectionList
+            armyList={roster.armyList}
+            selectUnit={selectUnit}
+          />
+        ) : (
+          <HeroSelectionList
+            armyList={roster.armyList}
+            selectUnit={selectUnit}
+          />
+        ))}
+      {selectionType === "unit" &&
+        (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
+          <CustomUnitSelectionList
+            armyList={roster.armyList}
+            selectUnit={selectUnit}
+          />
+        ) : (
+          <UnitSelectionList
+            leadingHeroModelId={
+              roster.warbands.find(({ id }) => id === warbandId)?.hero?.model_id
+            }
+            selectUnit={selectUnit}
+          />
+        ))}
       {selectionType === "siege" && (
         <SiegeSelectionList selectEquipment={selectEquipment} />
       )}

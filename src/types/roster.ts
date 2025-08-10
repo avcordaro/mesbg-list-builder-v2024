@@ -61,6 +61,6 @@ export type Roster = {
     tttSpecialUpgrades?: string[];
     maxPoints?: number;
     siegeRoster: boolean;
-    siegeRole?: "Attacker" | "Defender";
+    siegeRole?: "Attacker" | "Defender" | "Both";
   };
 };

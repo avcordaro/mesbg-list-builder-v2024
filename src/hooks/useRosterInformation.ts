@@ -9,6 +9,7 @@ import { slugify } from "../utils/string.ts";
 
 export type RosterInformationFunctions = {
   roster: Roster;
+  isCustomRoster: boolean;
   getSetOfModelIds: (roster?: Roster) => string[];
   getSetOfModelIdsInWarband: (warbandId: string, roster?: Roster) => string[];
   getAdjustedMetaData: (roster?: Roster) => Roster["metadata"];
@@ -19,6 +20,9 @@ export const useRosterInformation = (): RosterInformationFunctions => {
   const { rosterId } = useParams();
   const currentRoster = useRosterBuildingState(
     (state): Roster => state.rosters.find(({ id }) => id === rosterId),
+  );
+  const isCustomRoster = ["Custom: Good", "Custom: Evil"].includes(
+    currentRoster?.armyList,
   );
 
   function getModelIdsFromOptions(unit: Unit): string[] {
@@ -140,6 +144,12 @@ export const useRosterInformation = (): RosterInformationFunctions => {
   function canSupportMoreWarbands(roster: Roster = currentRoster): boolean {
     if (!roster) return false;
 
+    if (
+      roster.armyList === "Custom: Good" ||
+      roster.armyList === "Custom: Evil"
+    )
+      return true;
+
     if (roster.armyList === "The Fellowship")
       // The Fellowship is always deployed as a single Warband. You cannot add more warbands!
       return roster.warbands.length < 1;
@@ -178,6 +188,7 @@ export const useRosterInformation = (): RosterInformationFunctions => {
 
   return {
     roster: currentRoster,
+    isCustomRoster,
     getSetOfModelIds,
     getSetOfModelIdsInWarband,
     getAdjustedMetaData,

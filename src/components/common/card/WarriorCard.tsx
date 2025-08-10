@@ -8,6 +8,7 @@ import { heroConstraintData } from "../../../assets/data.ts";
 import { useCalculator } from "../../../hooks/useCalculator.ts";
 import { useCollectionWarnings } from "../../../hooks/useCollectionWarnings.ts";
 import { useOptionDependencies } from "../../../hooks/useOptionDependencies.ts";
+import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
 import { useScreenSize } from "../../../hooks/useScreenSize.ts";
 import { useUserPreferences } from "../../../state/preference";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
@@ -48,6 +49,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   collapsed,
 }) => {
   const { mode } = useThemeContext();
+  const { isCustomRoster } = useRosterInformation();
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
@@ -56,6 +58,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const { preferences } = useUserPreferences();
 
   const valid =
+    isCustomRoster ||
     followerOf === undefined ||
     followerOf === null ||
     heroConstraintData[followerOf].valid_warband_units.includes(

@@ -2963,5 +2963,19 @@
     "bow_limit": 0.33,
     "throw_limit": 0.33,
     "rule_highlights": []
+  },
+  "Custom: Good": {
+    "additional_rules": [],
+    "special_rules": [],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
+  },
+  "Custom: Evil": {
+    "additional_rules": [],
+    "special_rules": [],
+    "bow_limit": 0.33,
+    "throw_limit": 0.33,
+    "rule_highlights": []
   }
 }

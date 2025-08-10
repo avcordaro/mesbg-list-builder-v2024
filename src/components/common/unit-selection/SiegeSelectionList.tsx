@@ -28,9 +28,16 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
     );
   }
 
-  const equipment = Object.values(siegeEquipmentData).filter(
-    (equipment) => equipment.siege_role === siegeRole,
-  );
+  const equipment = Object.values(siegeEquipmentData)
+    .filter(
+      (equipment) => siegeRole === "Both" || equipment.siege_role === siegeRole,
+    )
+    .sort((a, b) => {
+      const x = a.name.localeCompare(b.name);
+      const y = a.base_points > b.base_points ? -1 : 1;
+      const z = a.siege_role.localeCompare(b.siege_role);
+      return z * 100 + y * 10 + x;
+    });
 
   return (
     <Stack gap={1.5}>
@@ -45,6 +52,7 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
         <SiegeSelectionButton
           key={item.model_id}
           equipment={item}
+          showRole={siegeRole === "Both"}
           onClick={() => selectEquipment(item)}
         />
       ))}
