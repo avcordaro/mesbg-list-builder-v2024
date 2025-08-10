@@ -14,7 +14,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { CreateRosterButton } from "../../components/common/create-roster/CreateRosterButton.tsx";
+import { NewRosterButton } from "../../components/common/create-roster/NewRosterButton.tsx";
 import {
   CARD_SIZE_IN_PX,
   RosterSummaryCard,
@@ -295,7 +295,7 @@ export const Rosters: FunctionComponent = () => {
             </DragDropContext>
 
             <Box sx={{ p: 1 }}>
-              <CreateRosterButton />
+              <NewRosterButton />
             </Box>
           </Stack>
         )}

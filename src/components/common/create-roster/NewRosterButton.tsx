@@ -12,7 +12,7 @@ import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { ModalTypes } from "../../modal/modals.tsx";
 import { CARD_SIZE_IN_PX } from "../roster-card/RosterSummaryCard.tsx";
 
-export const CreateRosterButton: FunctionComponent = () => {
+export const NewRosterButton: FunctionComponent = () => {
   const { setCurrentModal } = useAppState();
   const { mode } = useThemeContext();
   const screen = useScreenSize();
