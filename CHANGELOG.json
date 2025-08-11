@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added the ability to create custom good/evil rosters without the regular list building restrictions from the army lists in the books."
+    ],
     "changed": [
       "Updated all profile data for the latest FAQ/Errata released on 7th Aug 2025."
     ],
