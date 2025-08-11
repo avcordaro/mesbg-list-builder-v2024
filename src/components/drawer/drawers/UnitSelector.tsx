@@ -53,7 +53,7 @@ export const UnitSelector = () => {
     <Stack
       spacing={2}
       sx={{
-        pb: 10,
+        height: "100%",
       }}
     >
       {selectionType === "hero" &&

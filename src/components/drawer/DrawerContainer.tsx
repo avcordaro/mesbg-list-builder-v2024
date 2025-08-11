@@ -40,7 +40,7 @@ export const DrawerContainer = () => {
             <CloseIcon />
           </IconButton>
         </Stack>
-        <Box sx={{ px: 2, pt: 1, pb: 2 }}>{props.children}</Box>
+        <Box sx={{ px: 2, pt: 1, pb: 2, height: "100%" }}>{props.children}</Box>
       </Drawer>
     );
   });

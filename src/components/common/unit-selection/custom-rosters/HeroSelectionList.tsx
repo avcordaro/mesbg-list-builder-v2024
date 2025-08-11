@@ -1,12 +1,13 @@
 import { TextField } from "@mui/material";
 import Stack from "@mui/material/Stack";
-import { ChangeEvent, FunctionComponent, useState } from "react";
+import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
+import { Virtuoso } from "react-virtuoso";
 import { mesbgData } from "../../../../assets/data";
 import { unitSortOrder } from "../../../../hooks/profile-utils/sorting";
 import { useRosterInformation } from "../../../../hooks/useRosterInformation";
 import { Unit } from "../../../../types/mesbg-data.types";
-import { UnitSelectionButton } from "../UnitSelectionButton.tsx";
-import { WithRibbon } from "../WithRibbon.tsx";
+import { VirtualUnitRow } from "./VirtualUnitRow.tsx";
+import { removeArmyListSection } from "./removeArmyListSection.ts";
 import { useMergedUnitData } from "./useMergedUnitData.ts";
 
 export type HeroSelectionListProps = {
@@ -18,20 +19,12 @@ export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
   armyList,
   selectUnit,
 }) => {
-  const selectedModels = useRosterInformation().getSetOfModelIds();
   const [filter, setFilter] = useState("");
+  const [rows, setRows] = useState([]);
   const mergeDuplicateHeroes = useMergedUnitData();
-
-  function removeArmyListSection(item: string) {
-    return item.replace(/\[[^\]]*\]\s*/g, "");
-  }
-
-  const actualSelectedModels = selectedModels.map((item) =>
-    removeArmyListSection(item),
-  );
-
+  const selectedModels = useRosterInformation().getSetOfModelIds();
+  const actualSelectedModels = selectedModels.map(removeArmyListSection);
   const goodOrEvil = armyList.replaceAll("Custom: ", "");
-
   const heroes: Unit[] = mergeDuplicateHeroes(
     Object.values(mesbgData)
       .filter((unit) => unit.army_type.includes(goodOrEvil))
@@ -54,8 +47,16 @@ export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
       }),
   );
 
+  useEffect(() => {
+    setRows(
+      heroes.filter((hero) =>
+        hero.name.toLowerCase().includes(filter.toLowerCase()),
+      ),
+    );
+  }, [filter, setRows, heroes]);
+
   return (
-    <Stack gap={1.5}>
+    <Stack gap={1.5} sx={{ height: "100%" }}>
       <TextField
         id="hero-selection-list--name-filter"
         label="Filter"
@@ -65,19 +66,13 @@ export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
           setFilter(event.target.value);
         }}
       />
-      {heroes
-        .filter((hero) =>
-          hero.name.toLowerCase().includes(filter.toLowerCase()),
-        )
-        .map((hero) => (
-          <WithRibbon
-            key={hero.model_id}
-            label="Legacy"
-            hideRibbon={!hero.legacy}
-          >
-            <UnitSelectionButton unit={hero} onClick={() => selectUnit(hero)} />
-          </WithRibbon>
-        ))}
+      <Virtuoso
+        style={{ height: "100%", minHeight: "200px" }}
+        totalCount={rows.length}
+        itemContent={(index) => (
+          <VirtualUnitRow unit={rows[index]} selectUnit={selectUnit} />
+        )}
+      />
     </Stack>
   );
 };
