@@ -11,7 +11,6 @@ import { SignIn } from "../pages/account/SignIn.tsx";
 import { SignUp } from "../pages/account/SignUp.tsx";
 import { Database } from "../pages/database/Database.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
-import { StartGamemode } from "../pages/gamemode/StartGamemode.tsx";
 import { Home } from "../pages/home/Home.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
 import { RosterGroup } from "../pages/rosters/RosterGroup.tsx";
@@ -45,12 +44,7 @@ export const routes: RouteObject[] = [
         errorElement: <AppFallback />,
       },
       {
-        path: "gamemode/start",
-        element: <StartGamemode />,
-        errorElement: <AppFallback />,
-      },
-      {
-        path: "gamemode/-/:rosterId",
+        path: "gamemode/:rosterId",
         element: <Gamemode />,
         errorElement: <AppFallback />,
       },

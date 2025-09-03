@@ -156,6 +156,7 @@ type NavLink = {
   children?: NavItem[];
   showCaret?: boolean;
   disabled?: boolean;
+  disabledReason?: string;
 };
 
 type NavDivider = {
@@ -178,57 +179,62 @@ export const NavItemLink = ({
 
   return (
     <>
-      <ListItem disablePadding sx={{ display: "block" }}>
-        <ListItemButton
-          sx={[
-            { minHeight: 48, pr: 2.5, pl: pl + 2.5 },
-            open ? { justifyContent: "initial" } : { justifyContent: "center" },
-          ]}
-          selected={item.active}
-          onClick={() => {
-            if (item.showCaret) {
-              setExpanded(!expanded);
-              window.dispatchEvent(
-                new Event("mlb-event--open-navigation-drawer"),
-              );
-            } else {
-              item.action();
-            }
-          }}
-          disabled={item.disabled}
-          data-test-id={slugify(item.label) + "--nav-link"}
-        >
-          <Tooltip title={open ? "" : item.label}>
-            <ListItemIcon
-              sx={[
-                { minWidth: 0, justifyContent: "center" },
-                open ? { mr: 3 } : { mr: "auto" },
-              ]}
-            >
-              {item.icon}
-            </ListItemIcon>
-          </Tooltip>
-
-          <ListItemText
-            primary={item.label}
+      <Tooltip title={item.disabled ? item.disabledReason : ""}>
+        <ListItem disablePadding sx={{ display: "block" }}>
+          <ListItemButton
             sx={[
-              {
-                "& span": {
-                  display: "inline-block",
-                  width: "21ch",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                },
-              },
-              open ? { opacity: 1 } : { opacity: 0 },
+              { minHeight: 48, pr: 2.5, pl: pl + 2.5 },
+              open
+                ? { justifyContent: "initial" }
+                : { justifyContent: "center" },
             ]}
-          />
-          {item.children && item.showCaret && open && (
-            <> {expanded ? <ExpandLess /> : <ExpandMore />}</>
-          )}
-        </ListItemButton>
-      </ListItem>
+            selected={item.active}
+            onClick={() => {
+              if (item.showCaret) {
+                setExpanded(!expanded);
+                window.dispatchEvent(
+                  new Event("mlb-event--open-navigation-drawer"),
+                );
+              } else {
+                item.action();
+              }
+            }}
+            disabled={item.disabled}
+            data-test-id={slugify(item.label) + "--nav-link"}
+          >
+            <Tooltip title={open ? "" : item.label}>
+              <ListItemIcon
+                sx={[
+                  { minWidth: 0, justifyContent: "center" },
+                  open ? { mr: 3 } : { mr: "auto" },
+                ]}
+              >
+                {item.icon}
+              </ListItemIcon>
+            </Tooltip>
+
+            <ListItemText
+              primary={item.label}
+              sx={[
+                {
+                  "& span": {
+                    display: "inline-block",
+                    width: "21ch",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  },
+                },
+                open ? { opacity: 1 } : { opacity: 0 },
+              ]}
+            />
+            {item.children && item.showCaret && open && (
+              <> {expanded ? <ExpandLess /> : <ExpandMore />}</>
+            )}
+          </ListItemButton>
+        </ListItem>
+      </Tooltip>
+
       {item.children && item.children.length > 0 && (
         <Collapse in={(!expanded && open) || !item.showCaret}>
           {item.children?.map((subItem, index) =>
@@ -317,6 +323,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const navigate = useNavigate();
   const { rosterId } = useParams();
   const { rosters } = useRosterBuildingState();
+  const roster = rosters.find((roster) => roster.id === rosterId);
   const { openSidebar, setCurrentModal } = useAppState();
   const { startNewGame, gameState } = useGameModeState();
   const rosterLinks = useRosters();
@@ -369,18 +376,14 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       ),
       label: "Game Mode",
       action: () => {
-        if (rosterId) {
-          const roster = rosters.find((roster) => roster.id === rosterId);
-          if (roster) {
-            const ongoingGame = gameState[roster.id];
-            if (!ongoingGame) startNewGame(roster);
-            navigate(`/gamemode/-/${rosterId}`);
-            return;
-          }
-        }
-        navigate("/gamemode/start");
+        if (!roster) return; // No roster open to start game for.
+        const ongoingGame = gameState[roster.id];
+        if (!ongoingGame) startNewGame(roster);
+        navigate(`/gamemode/${rosterId}`);
       },
       active: location.pathname.startsWith("/gamemode"),
+      disabled: !roster,
+      disabledReason: "To use gamemode, first open a roster.",
     },
 
     {

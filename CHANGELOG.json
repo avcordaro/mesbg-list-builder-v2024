@@ -1,5 +1,7 @@
 {
   "main": {
+    "added": ["Accounts. And syncing your data to your account."],
+    "changed": ["Removed the start game page. Games can now only be started from the three-dot menu on the rosters page or from the roster builder."],
     "bugfixes": [
       "Corrected Brorgir the Conjurer's spell cast value for Bladewrath to 3+.",
       "Corrected the wording of the Sorcerous Adept special rule on Brorgir the Conjurer's profile card.",
