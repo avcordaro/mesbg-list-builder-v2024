@@ -41,6 +41,7 @@ export const isSiegeEquipment = (
 export type Roster = {
   version: string;
   id: string;
+  slug: string;
   name: string;
   armyList: string;
   warbands: Warband[];

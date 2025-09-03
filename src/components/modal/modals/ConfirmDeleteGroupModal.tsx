@@ -2,6 +2,7 @@ import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
@@ -14,6 +15,7 @@ export const ConfirmDeleteGroupModal = () => {
     triggerAlert,
   } = useAppState();
   const { deleteGroup, groups, rosters } = useRosterBuildingState();
+  const api = useApi();
   const navigate = useNavigate();
   const { id, name } = groups.find((group) => group.slug === groupId) || {};
   const affectedRosters = rosters.filter((roster) => roster.group === id);
@@ -25,6 +27,7 @@ export const ConfirmDeleteGroupModal = () => {
 
     if (id) {
       deleteGroup(id);
+      api.deleteGroup(groupId, false);
       if (redirect === true) {
         navigate("/rosters");
       }
