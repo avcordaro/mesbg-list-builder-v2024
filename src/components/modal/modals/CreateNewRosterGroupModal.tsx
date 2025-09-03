@@ -1,5 +1,6 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
 import { useState } from "react";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { Roster } from "../../../types/roster.ts";
@@ -15,6 +16,7 @@ export const CreateNewRosterGroupModal = () => {
     modalContext: { rosters = [] },
   } = useAppState();
   const { createGroup } = useRosterBuildingState();
+  const { createGroup: remoteCreate } = useApi();
 
   const [rosterGroupName, setRosterGroupName] = useState("");
   const [rosterGroupNameValid, setRosterGroupNameValid] = useState(true);
@@ -36,12 +38,14 @@ export const CreateNewRosterGroupModal = () => {
     setRosterGroupNameValid(nameValid);
 
     if (nameValid) {
-      createGroup({
+      const group = {
         name: rosterGroupNameValue,
         slug: withSuffix(slugify(rosterGroupNameValue)),
         rosters: rosters.map((roster: Roster) => roster.id),
         icon: rosterGroupIcon?.name,
-      });
+      };
+      const id = createGroup(group);
+      remoteCreate({ id, ...group });
 
       closeModal();
     }
