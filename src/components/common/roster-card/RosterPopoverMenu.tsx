@@ -6,7 +6,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState, MouseEvent } from "react";
-import { FaClone } from "react-icons/fa";
+import { FaChessRook, FaClone } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { Roster } from "../../../types/roster.ts";
@@ -16,6 +17,7 @@ import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 
 export const RosterPopoverMenu = (props: { roster: Roster }) => {
   const { setCurrentModal } = useAppState();
+  const navigate = useNavigate();
   const { createRoster, rosters } = useRosterBuildingState();
   const existingRosterIds = rosters.map(({ id }) => id);
 
@@ -64,6 +66,11 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
     handleClose(event);
   };
 
+  const startGame = (event: MouseEvent<HTMLElement>) => {
+    navigate(`/gamemode/${props.roster.id}`);
+    handleClose(event);
+  };
+
   return (
     <div>
       <SquareIconButton
@@ -89,6 +96,13 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
             <FaClone />
           </ListItemIcon>
           <ListItemText> Duplicate roster</ListItemText>
+        </MenuItem>
+        <Divider />
+        <MenuItem onClick={startGame}>
+          <ListItemIcon>
+            <FaChessRook />
+          </ListItemIcon>
+          <ListItemText> Start/Continue game</ListItemText>
         </MenuItem>
         <Divider />
         <MenuItem onClick={deleteRoster}>
