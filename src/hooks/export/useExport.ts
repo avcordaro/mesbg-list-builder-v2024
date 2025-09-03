@@ -133,6 +133,7 @@ export const useExport = () => {
   }
 
   return {
+    convertRosterToJson,
     exportToClipboard: () => {
       window.navigator.clipboard.writeText(convertRosterToJson(roster));
     },

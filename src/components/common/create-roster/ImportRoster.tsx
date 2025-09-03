@@ -8,6 +8,7 @@ import {
   useState,
 } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useExport } from "../../../hooks/export/useExport.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -24,6 +25,7 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
   const { closeModal } = useAppState();
   const { importJsonRoster } = useExport();
   const { createRoster, rosters, groups } = useRosterBuildingState();
+  const { createRoster: remoteCreate } = useApi();
   const { groupId: groupSlug } = useParams();
   const existingRosterIds = rosters.map(({ id }) => id);
 
@@ -66,6 +68,7 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
       group: groupId,
     };
     createRoster(importedRoster);
+    remoteCreate(importedRoster);
     navigate(`/roster/${importedRoster.id}`, { viewTransition: true });
     closeModal();
   }
