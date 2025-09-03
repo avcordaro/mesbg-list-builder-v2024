@@ -4,10 +4,12 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import { User } from "firebase/auth";
-import { useState, MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ModalTypes } from "../components/modal/modals.tsx";
 import { useAuth } from "../firebase/FirebaseAuthContext.tsx";
 import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
+import { useAppState } from "../state/app";
 
 const SignInLink = () => {
   const screen = useScreenSize();
@@ -39,6 +41,7 @@ interface AccountMenuProps {
 
 const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
   const screen = useScreenSize();
+  const { setCurrentModal } = useAppState();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -47,11 +50,6 @@ const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
   };
   const handleClose = () => {
     setAnchorEl(null);
-  };
-
-  const logout = () => {
-    signOut();
-    handleClose();
   };
 
   return (
@@ -72,8 +70,8 @@ const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
         <Person sx={{ color: ({ palette }) => palette.primary.contrastText }} />
       </Avatar>
       <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
+        id="account-menu"
+        aria-labelledby="account menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -86,7 +84,14 @@ const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
           horizontal: "right",
         }}
       >
-        <MenuItem onClick={logout}>Logout</MenuItem>
+        <MenuItem
+          onClick={() => {
+            setCurrentModal(ModalTypes.LOGOUT_WARNING, { signOut });
+            handleClose();
+          }}
+        >
+          Logout
+        </MenuItem>
       </Menu>
     </>
   );

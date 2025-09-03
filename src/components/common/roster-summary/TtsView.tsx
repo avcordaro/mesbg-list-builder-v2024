@@ -2,12 +2,12 @@ import Link from "@mui/material/Link";
 import TextField from "@mui/material/TextField";
 import { forwardRef, useImperativeHandle } from "react";
 import tta2mlbJson from "../../../assets/data/tta2mlb.json";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 import { isSelectedUnit, SelectedUnit } from "../../../types/roster.ts";
 import { selectedOptionWithType } from "../../../utils/options.ts";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
 import { CustomAlert } from "../alert/CustomAlert.tsx";
-import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 
 export type RosterTextViewHandlers = {
   copyToClipboard: () => void;

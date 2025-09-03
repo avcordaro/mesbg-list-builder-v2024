@@ -1,5 +1,4 @@
 import { useCollectionState } from "../../state/collection";
-import { Collection } from "../state/collection/inventory";
 import { useUserPreferences } from "../../state/preference";
 import { isSiegeEquipment, SelectedUnit } from "../../types/roster.ts";
 import { arraysMatch } from "../../utils/array.ts";
@@ -12,6 +11,7 @@ import {
   getMountName,
   getTotalSelectedModelsGroupedPerChosenOptions,
 } from "../collections/utils.ts";
+import { Collection } from "../state/collection/inventory";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 export const useCollectionWarnings = (

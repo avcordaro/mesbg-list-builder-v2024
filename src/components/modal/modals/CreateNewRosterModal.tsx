@@ -1,3 +1,9 @@
+import Button from "@mui/material/Button";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import Stack from "@mui/material/Stack";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import {
   PropsWithChildren,
   SyntheticEvent,
@@ -22,12 +28,6 @@ import {
   ImportRoster,
   ImportRosterHandlers,
 } from "../../common/create-roster/ImportRoster.tsx";
-import DialogContent from "@mui/material/DialogContent";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import DialogActions from "@mui/material/DialogActions";
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();

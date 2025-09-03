@@ -33,6 +33,8 @@ export type GameHistoryState = {
   ) => void;
   editGame: (game: PastGame) => void;
   deleteGame: (gameId: string) => void;
+
+  reset: () => void;
 };
 
 const initialState = {
@@ -122,4 +124,14 @@ export const historySlice: Slice<RecentGamesState, GameHistoryState> = (
       undefined,
       "DELETE_GAME_RESULTS",
     ),
+
+  reset: () => {
+    set(
+      {
+        recentGames: [],
+      },
+      undefined,
+      "CLEAR_STATE",
+    );
+  },
 });
