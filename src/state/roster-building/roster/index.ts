@@ -1,6 +1,7 @@
 import { v4 as uuid } from "uuid";
 import { Roster, Warband } from "../../../types/roster.ts";
 import { Slice } from "../../Slice.ts";
+import { RosterGroup } from "../groups";
 import { RosterBuildingState } from "../index.ts";
 
 type RosterFunctions = {
@@ -8,7 +9,7 @@ type RosterFunctions = {
   updateRoster: (roster: Roster, originalRosterId?: string) => void;
   deleteRoster: (roster: Roster) => void;
 
-  reset: () => void;
+  reset: (rosters?: Roster[], groups?: RosterGroup[]) => void;
 };
 
 export type RosterState = {
@@ -111,14 +112,6 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (
     );
   },
 
-  reset: () => {
-    set(
-      {
-        rosters: [],
-        groups: [],
-      },
-      undefined,
-      "CLEAR_STATE",
-    );
-  },
+  reset: (rosters: Roster[] = [], groups: RosterGroup[] = []) =>
+    set({ rosters, groups }, undefined, "CLEAR_STATE"),
 });

@@ -92,6 +92,16 @@ const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
         >
           Logout
         </MenuItem>
+
+        <MenuItem
+          onClick={async () => {
+            const idToken = await user.getIdToken();
+            await window.navigator.clipboard.writeText(idToken);
+            handleClose();
+          }}
+        >
+          Copy ID Token
+        </MenuItem>
       </Menu>
     </>
   );

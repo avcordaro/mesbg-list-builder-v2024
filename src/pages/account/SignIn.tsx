@@ -44,7 +44,7 @@ export const SignIn = () => {
 
   useEffect(() => {
     if (auth.user) {
-      navigate("/");
+      navigate("/rosters");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth.user]);

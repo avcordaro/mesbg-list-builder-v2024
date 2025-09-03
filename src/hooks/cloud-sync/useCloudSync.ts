@@ -8,7 +8,10 @@ export const useRosterSync = () => {
   const auth = useAuth();
 
   const previousRosterRef = useRef(null);
-  const debouncedSync = debounce((nextRoster) => syncRoster(nextRoster), 1000);
+  const debouncedSync = debounce(
+    (nextRoster) => syncRoster(nextRoster),
+    10_000,
+  );
 
   async function syncRoster(roster: Roster) {
     try {

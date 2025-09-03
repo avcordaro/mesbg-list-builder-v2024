@@ -41,7 +41,7 @@ export type InventoryState = {
 
   deleteEntry: (group: string, name: string) => void;
 
-  reset: () => void;
+  reset: (inventory?: Inventory) => void;
 };
 
 const initialState = {
@@ -85,10 +85,10 @@ export const inventorySlice: Slice<CollectionState, InventoryState> = (
       "DELETE_ENTRY",
     ),
 
-  reset: () => {
+  reset: (inventory: Inventory = {}) => {
     set(
       {
-        inventory: {},
+        inventory: inventory,
       },
       undefined,
       "CLEAR_STATE",
