@@ -7,6 +7,8 @@ type RosterFunctions = {
   createRoster: (roster: Roster) => void;
   updateRoster: (roster: Roster, originalRosterId?: string) => void;
   deleteRoster: (roster: Roster) => void;
+
+  reset: () => void;
 };
 
 export type RosterState = {
@@ -106,6 +108,17 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (
       }),
       undefined,
       "DELETE_ROSTER",
+    );
+  },
+
+  reset: () => {
+    set(
+      {
+        rosters: [],
+        groups: [],
+      },
+      undefined,
+      "CLEAR_STATE",
     );
   },
 });

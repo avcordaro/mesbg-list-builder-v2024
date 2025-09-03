@@ -5,6 +5,7 @@ import {
   Download,
   Edit,
   LibraryAdd,
+  Logout,
   UploadFile,
 } from "@mui/icons-material";
 import AddCircleOutline from "@mui/icons-material/AddCardOutlined";
@@ -33,6 +34,7 @@ import { ExportHistoryModal } from "./modals/ExportHistoryModal.tsx";
 import { ExportRosterModal } from "./modals/ExportRosterModal.tsx";
 import { ImportCollection } from "./modals/ImportCollection.tsx";
 import { ImportGameHistoryModal } from "./modals/ImportHistoryModal.tsx";
+import { LogoutWarningModal } from "./modals/LogoutWarningModal.tsx";
 import { ProfileCardModal } from "./modals/ProfileCardModal.tsx";
 import { ResetPassword } from "./modals/ResetPassword.tsx";
 import { RosterSummaryModal } from "./modals/RosterSummaryModal.tsx";
@@ -70,6 +72,7 @@ export enum ModalTypes {
   IMPORT_COLLECTION = "IMPORT_COLLECTION",
 
   RESET_PASSWORD = "RESET_PASSWORD",
+  LOGOUT_WARNING = "LOGOUT_WARNING",
 }
 
 export type ModalProps = {
@@ -278,6 +281,15 @@ export const modals = new Map<ModalTypes, ModalProps>([
       title: "Reset password",
       children: <ResetPassword />,
       maxWidth: "md",
+    },
+  ],
+  [
+    ModalTypes.LOGOUT_WARNING,
+    {
+      icon: <Logout />,
+      title: "Logging out?",
+      children: <LogoutWarningModal />,
+      maxWidth: "sm",
     },
   ],
 ]);
