@@ -260,7 +260,10 @@ const useRosters = () => {
   const { preferences } = useUserPreferences();
   const navigate = useNavigate();
 
-  const groupMap = Object.fromEntries(groups.map((group) => [group.id, group]));
+  const groupMap = Object.fromEntries([
+    ...groups.map((group) => [group.id, group]),
+    ...groups.map((group) => [group.slug, group]),
+  ]);
   const groupedRosters = rosters.reduce(
     (groups, roster) => {
       const group = roster.group || "ungrouped";
@@ -285,25 +288,28 @@ const useRosters = () => {
           .sort((a, b) =>
             groupMap[a[0]].name.localeCompare(groupMap[b[0]].name),
           )
-          .map(([group, groupRosters]) => ({
-            action: () => {},
-            active:
-              location.pathname ===
-              `/rosters/${encodeURIComponent(groupMap[group].slug)}`,
-            icon: groupIcons[groupMap[group]?.icon] || <FolderOutlined />,
-            label: groupMap[group]?.name || "Unknown name",
-            children: [
-              ...groupRosters
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map((roster) => ({
-                  action: () => navigate(`/roster/${roster.id}`),
-                  active: location.pathname === `/roster/${roster.id}`,
-                  icon: <FactionLogo faction={roster.armyList} />,
-                  label: roster.name,
-                })),
-            ],
-            showCaret: true,
-          })),
+          .map(([group, groupRosters]) => {
+            console.log(group);
+            return {
+              action: () => {},
+              active:
+                location.pathname ===
+                `/rosters/${encodeURIComponent(groupMap[group]?.slug)}`,
+              icon: groupIcons[groupMap[group]?.icon] || <FolderOutlined />,
+              label: groupMap[group]?.name || "Unknown name",
+              children: [
+                ...groupRosters
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map((roster) => ({
+                    action: () => navigate(`/roster/${roster.id}`),
+                    active: location.pathname === `/roster/${roster.id}`,
+                    icon: <FactionLogo faction={roster.armyList} />,
+                    label: roster.name,
+                  })),
+              ],
+              showCaret: true,
+            };
+          }),
         ...groupedRosters.ungrouped
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((roster) => ({
