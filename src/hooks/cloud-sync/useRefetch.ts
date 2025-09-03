@@ -19,7 +19,7 @@ export const useRefetch = () => {
   const resetCollection = useCollectionState((state) => state.reset);
 
   const getFromApi = (path: string) => {
-    return fetch(`https://api.mesbg-list-builder.com/v2024/${path}`, {
+    return fetch(`${API_URL}/${path}`, {
       headers: {
         Authorization: "Bearer " + auth.idToken,
       },
