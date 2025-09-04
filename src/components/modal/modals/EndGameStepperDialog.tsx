@@ -41,7 +41,7 @@ export const EndGameStepperDialog = () => {
   };
 
   const closeModalAndEndGame = async () => {
-    await navigate("/gamemode/start");
+    await navigate(`/roster/${modalContext.gameId}`);
     endGame(modalContext.gameId);
     closeModal();
   };
@@ -64,7 +64,7 @@ export const EndGameStepperDialog = () => {
     }
 
     addGame(formValues);
-    await navigate("/gamemode/start");
+    await navigate(`/roster/${modalContext.gameId}`);
     triggerAlert(AlertTypes.EXPORT_HISTORY_ALERT);
     endGame(modalContext.gameId);
     closeModal();

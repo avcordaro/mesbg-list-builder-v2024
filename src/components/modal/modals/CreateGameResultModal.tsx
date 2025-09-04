@@ -30,7 +30,7 @@ export const CreateGameResultModal = () => {
 
   const closeModalAndGame = async () => {
     if (modalContext.gameId) {
-      await navigate("/gamemode/start");
+      await navigate(`/roster/${modalContext.gameId}`);
       endGame(modalContext.gameId);
       closeModal();
     }

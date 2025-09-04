@@ -79,11 +79,7 @@ export const GamemodeToolbar = () => {
           color="inherit"
           startIcon={<ChevronLeft />}
           onClick={() => {
-            if (window.history.state && window.history.state.idx > 0) {
-              navigate(-1);
-            } else {
-              navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
-            }
+            navigate(`/roster/${roster.id}`);
           }}
         >
           Back
@@ -159,11 +155,7 @@ export const GamemodeToolbar = () => {
           <Button
             startIcon={<ChevronLeft />}
             onClick={() => {
-              if (window.history.state && window.history.state.idx > 0) {
-                navigate(-1);
-              } else {
-                navigate("/gamemode/start", { replace: true }); // the current entry in the history stack will be replaced with the new one with { replace: true }
-              }
+              navigate(`/roster/${roster.id}`);
             }}
           >
             Back

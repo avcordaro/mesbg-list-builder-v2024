@@ -13,7 +13,7 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Badge, Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
+import { Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -37,11 +37,11 @@ import {
   useState,
 } from "react";
 import { AiFillTrophy } from "react-icons/ai";
-import { FaChessRook, FaDatabase, FaDiscord, FaPatreon } from "react-icons/fa";
+import { FaDatabase, FaDiscord, FaPatreon } from "react-icons/fa";
 import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
 import { HiIdentification } from "react-icons/hi2";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
 import { icons as groupIcons } from "../components/common/group-icon/icons.tsx";
@@ -52,7 +52,6 @@ import { charts } from "../constants/charts.ts";
 import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
 import { DISCORD_LINK, PATREON_LINK } from "../pages/home/Home.tsx";
 import { useAppState } from "../state/app";
-import { useGameModeState } from "../state/gamemode";
 import { useUserPreferences } from "../state/preference";
 import { useRosterBuildingState } from "../state/roster-building";
 import { slugify } from "../utils/string.ts";
@@ -324,11 +323,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const { rosterId } = useParams();
-  const { rosters } = useRosterBuildingState();
-  const roster = rosters.find((roster) => roster.id === rosterId);
   const { openSidebar, setCurrentModal } = useAppState();
-  const { startNewGame, gameState } = useGameModeState();
   const rosterLinks = useRosters();
 
   const toggleMenuDrawer = () => {
@@ -363,31 +358,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       showCaret: false,
     },
     { divider: true },
-    {
-      icon: (
-        <Badge
-          variant="dot"
-          color="info"
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          badgeContent={gameState[rosterId] ? 1 : 0}
-        >
-          <FaChessRook style={{ fontSize: "1.5rem" }} />
-        </Badge>
-      ),
-      label: "Game Mode",
-      action: () => {
-        if (!roster) return; // No roster open to start game for.
-        const ongoingGame = gameState[roster.id];
-        if (!ongoingGame) startNewGame(roster);
-        navigate(`/gamemode/${rosterId}`);
-      },
-      active: location.pathname.startsWith("/gamemode"),
-      disabled: !roster,
-      disabledReason: "To use gamemode, first open a roster.",
-    },
 
     {
       icon: <AiFillTrophy style={{ fontSize: "1.5rem" }} />,
