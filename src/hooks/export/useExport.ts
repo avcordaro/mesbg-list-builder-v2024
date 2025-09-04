@@ -102,6 +102,9 @@ export const useExport = () => {
     }
   }
 
+  const isImported = (importedRoster: Roster): importedRoster is Roster =>
+    !!(importedRoster as Roster)?.armyList;
+
   function rehydrateRoster(uploadedRoster: Partial<Roster>): Roster {
     console.debug("rehydrating roster data from imported json");
     return calculator.recalculateRoster({
@@ -140,5 +143,6 @@ export const useExport = () => {
     exportToFile: (fileName: string) =>
       download(convertRosterToJson(roster), fileName, "application/json"),
     importJsonRoster: (jsonString: string) => convertJsonToRoster(jsonString),
+    isImported,
   };
 };

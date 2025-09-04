@@ -15,6 +15,7 @@ import { Home } from "../pages/home/Home.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
 import { RosterGroup } from "../pages/rosters/RosterGroup.tsx";
 import { Rosters } from "../pages/rosters/Rosters.tsx";
+import { SharedRoster } from "../pages/shared/Roster.tsx";
 import { RedirectTo } from "./RedirectTo.tsx";
 
 export const routes: RouteObject[] = [
@@ -91,6 +92,11 @@ export const routes: RouteObject[] = [
       {
         path: "sign-up",
         element: <SignUp />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "shared/roster/:sid",
+        element: <SharedRoster />,
         errorElement: <AppFallback />,
       },
       {

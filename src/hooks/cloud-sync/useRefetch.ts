@@ -5,15 +5,11 @@ import { useRecentGamesState } from "../../state/recent-games";
 import { PastGame } from "../../state/recent-games/history";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { RosterGroup } from "../../state/roster-building/groups";
-import { Roster } from "../../types/roster.ts";
 import { useExport } from "../export/useExport.ts";
-
-const isImported = (importedRoster: Roster): importedRoster is Roster =>
-  !!(importedRoster as Roster)?.armyList;
 
 export const useRefetch = () => {
   const auth = useAuth();
-  const { importJsonRoster } = useExport();
+  const { importJsonRoster, isImported } = useExport();
   const resetRostersAndGroups = useRosterBuildingState((state) => state.reset);
   const resetRecentGames = useRecentGamesState((state) => state.reset);
   const resetCollection = useCollectionState((state) => state.reset);
