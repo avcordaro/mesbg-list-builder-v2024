@@ -93,21 +93,21 @@ export const useCollectionWarnings = (
 
   // // Debug line given a specific profile name,
   // // ~ Keep commented until needed!! ~
-  if (clonedUnit.name.includes("Orc W")) {
-    console.dir({
-      name: clonedUnit.name,
-      generics,
-      mount,
-      bestMatchingMount,
-      amountOfGenericsForGivenMount,
-      totalGenericsUsed,
-      collection,
-      options,
-      totalSelected,
-      available,
-      selected,
-    });
-  }
+  // if (clonedUnit.name.includes("Orc W")) {
+  //   console.dir({
+  //     name: clonedUnit.name,
+  //     generics,
+  //     mount,
+  //     bestMatchingMount,
+  //     amountOfGenericsForGivenMount,
+  //     totalGenericsUsed,
+  //     collection,
+  //     options,
+  //     totalSelected,
+  //     available,
+  //     selected,
+  //   });
+  // }
 
   return {
     warnings: "on",
