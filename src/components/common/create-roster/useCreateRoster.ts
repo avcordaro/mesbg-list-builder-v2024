@@ -12,7 +12,7 @@ export const useCreateRoster = () => {
   const { groupId: groupSlug } = useParams();
   const { closeModal } = useAppState();
   const { createRoster, rosters, groups } = useRosterBuildingState();
-  const { createRoster: remoteCreate } = useApi();
+  const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const buildNewRoster = useNewRosterBuilder();
   const { id: groupId } =
     groups.find((group) => group.slug === groupSlug) || {};
@@ -85,6 +85,7 @@ export const useCreateRoster = () => {
 
       createRoster(newRoster);
       remoteCreate(newRoster);
+      if (groupSlug) addRosterToGroup(groupSlug, newRoster.id);
       navigate(`/roster/${newRoster.id}`, { viewTransition: true });
       closeModal();
     }

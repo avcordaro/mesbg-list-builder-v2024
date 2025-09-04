@@ -85,7 +85,6 @@ export const ImportGameHistoryModal = () => {
     }
 
     for (const game of history) {
-      console.log(game);
       const validGame = validateKeys(game, requiredKeys);
       if (!validGame) {
         displayImportAlert();

@@ -147,9 +147,6 @@ function transformUnitToListOfProfiles(
     ...getMightWillAndFate(unit),
     ...correctedStats,
   };
-
-  console.log(modifiedProfile);
-
   const additional_stats =
     suffix && !unit.unique
       ? [

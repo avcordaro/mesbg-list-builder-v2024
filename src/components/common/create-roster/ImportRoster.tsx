@@ -25,7 +25,7 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
   const { closeModal } = useAppState();
   const { importJsonRoster } = useExport();
   const { createRoster, rosters, groups } = useRosterBuildingState();
-  const { createRoster: remoteCreate } = useApi();
+  const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const { groupId: groupSlug } = useParams();
   const existingRosterIds = rosters.map(({ id }) => id);
 
@@ -69,6 +69,7 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
     };
     createRoster(importedRoster);
     remoteCreate(importedRoster);
+    if (groupSlug) addRosterToGroup(groupSlug, importedRoster.id);
     navigate(`/roster/${importedRoster.id}`, { viewTransition: true });
     closeModal();
   }

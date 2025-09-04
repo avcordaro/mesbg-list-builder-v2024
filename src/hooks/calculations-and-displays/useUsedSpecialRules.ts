@@ -6,8 +6,6 @@ export const useUsedSpecialRules = () => {
   const { roster } = useRosterInformation();
   try {
     const profiles = useProfiles();
-
-    console.log(profiles);
     return [
       ...armyListData[roster.armyList].rule_highlights,
       ...profiles.profiles

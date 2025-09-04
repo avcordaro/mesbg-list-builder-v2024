@@ -36,7 +36,6 @@ export const emptyWarband: Warband = {
 export const emptyRoster: Roster = {
   version: BUILD_VERSION,
   id: "",
-  slug: "",
   name: "",
   armyList: "",
   warbands: [emptyWarband],
