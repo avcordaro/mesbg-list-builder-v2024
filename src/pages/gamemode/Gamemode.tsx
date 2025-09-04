@@ -40,8 +40,8 @@ export const Gamemode = () => {
         </Typography>
         <Typography>
           Please navigate back to{" "}
-          <Link to="/gamemode/start">the roster selection</Link> and start a
-          game from there.
+          <Link to="/rosters">the roster selection</Link> and select a roster
+          before starting a game.
         </Typography>
       </Box>
     );

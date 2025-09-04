@@ -24,6 +24,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
+import { FaChessRook } from "react-icons/fa";
 import { GiRollingDices } from "react-icons/gi";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "../components/common/link/Link.tsx";
@@ -43,6 +44,7 @@ import { useRosterInformation } from "../hooks/calculations-and-displays/useRost
 import { useRosterWarnings } from "../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../state/app";
+import { useGameModeState } from "../state/gamemode";
 import { useUserPreferences } from "../state/preference";
 import {
   useRosterBuildingState,
@@ -58,6 +60,10 @@ export const Roster = () => {
   const { rosterId } = useParams();
   const { roster } = useRosterInformation();
   const { groups } = useRosterBuildingState();
+  const [startNewGame, hasStartedGame] = useGameModeState((state) => [
+    state.startNewGame,
+    state.gameState[roster.id],
+  ]);
   const group = roster.group && groups.find(({ id }) => roster.group === id);
   const { setCurrentModal } = useAppState();
   const displayMobileToolbar = useUserPreferences(
@@ -211,49 +217,76 @@ export const Roster = () => {
               </Typography>
             </Breadcrumbs>
 
-            {screen.isMobile ? (
-              <IconButton
-                aria-label="open drawer"
-                onClick={() =>
-                  window.dispatchEvent(new Event("mlb-event--open-roster-info"))
-                }
-                sx={
-                  warnings.length > 0
-                    ? {
-                        backgroundColor: (theme) => theme.palette.error.main,
-                        color: (theme) => theme.palette.error.contrastText,
-                        "&:hover": {
-                          backgroundColor: (theme) => theme.palette.error.light,
-                        },
-                      }
-                    : {
-                        backgroundColor: (theme) => theme.palette.success.main,
-                        color: (theme) => theme.palette.success.contrastText,
-                        "&:hover": {
-                          backgroundColor: (theme) =>
-                            theme.palette.success.light,
-                        },
-                      }
-                }
-              >
-                {warnings.length > 0 ? <WarningRounded /> : <Info />}
-              </IconButton>
-            ) : !screen.isDesktop ? (
+            <Stack gap={2} direction="row">
               <Button
-                color={warnings.length > 0 ? "error" : "success"}
+                color="primary"
                 variant="contained"
                 aria-label="open drawer"
-                onClick={() =>
-                  window.dispatchEvent(new Event("mlb-event--open-roster-info"))
-                }
-                startIcon={warnings.length > 0 ? <WarningRounded /> : <Info />}
+                onClick={() => {
+                  if (!hasStartedGame) startNewGame(roster);
+                  navigate(`/gamemode/${rosterId}`);
+                }}
+                startIcon={<FaChessRook />}
                 sx={{
                   whiteSpace: "nowrap", // Prevent text from wrapping
+                  minWidth: "20ch",
                 }}
               >
-                Roster information
+                {hasStartedGame ? "Continue" : "Start"} Game
               </Button>
-            ) : null}
+
+              {screen.isMobile ? (
+                <IconButton
+                  aria-label="open drawer"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new Event("mlb-event--open-roster-info"),
+                    )
+                  }
+                  sx={
+                    warnings.length > 0
+                      ? {
+                          backgroundColor: (theme) => theme.palette.error.main,
+                          color: (theme) => theme.palette.error.contrastText,
+                          "&:hover": {
+                            backgroundColor: (theme) =>
+                              theme.palette.error.light,
+                          },
+                        }
+                      : {
+                          backgroundColor: (theme) =>
+                            theme.palette.success.main,
+                          color: (theme) => theme.palette.success.contrastText,
+                          "&:hover": {
+                            backgroundColor: (theme) =>
+                              theme.palette.success.light,
+                          },
+                        }
+                  }
+                >
+                  {warnings.length > 0 ? <WarningRounded /> : <Info />}
+                </IconButton>
+              ) : !screen.isDesktop ? (
+                <Button
+                  color={warnings.length > 0 ? "error" : "success"}
+                  variant="contained"
+                  aria-label="open drawer"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new Event("mlb-event--open-roster-info"),
+                    )
+                  }
+                  startIcon={
+                    warnings.length > 0 ? <WarningRounded /> : <Info />
+                  }
+                  sx={{
+                    whiteSpace: "nowrap", // Prevent text from wrapping
+                  }}
+                >
+                  Roster information
+                </Button>
+              ) : null}
+            </Stack>
           </Stack>
 
           <WarbandList warbands={roster.warbands} />
