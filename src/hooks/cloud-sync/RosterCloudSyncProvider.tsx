@@ -45,10 +45,33 @@ export const RosterCloudSyncProvider = ({
     [],
   );
 
+  /**
+   * Effect that flushes the debounce whenever the provider unloads.
+   * This is useful when they stay within the app but navigate away
+   * from the roster builder screen; IE starting a gamemode.
+   */
   useEffect(() => {
     return () => {
       console.debug("Flushing debounce...");
       debouncedSync.flush();
+    };
+  }, [debouncedSync]);
+
+  /**
+   * Effect that flushes the debounce whenever webapp closes. This
+   * is useful whenever someone makes changes and then within the
+   * debounce time navigates to another site or closes the PWA.
+   */
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      debouncedSync.flush();
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      debouncedSync.flush();
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, [debouncedSync]);
 
