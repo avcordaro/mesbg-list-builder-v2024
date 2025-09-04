@@ -21,6 +21,7 @@ import { useRef, useState } from "react";
 import { SquareIconButton } from "../components/common/icon-button/SquareIconButton.tsx";
 import { Link } from "../components/common/link/Link.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
+import { useApi } from "../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../state/app";
 import { useCollectionState } from "../state/collection";
 import { useUserPreferences } from "../state/preference";
@@ -32,6 +33,7 @@ export const Collection = () => {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
   const { inventory, deleteEntry } = useCollectionState();
+  const { deleteFromCollection } = useApi();
   const { preferences, setPreference } = useUserPreferences();
   const { mode } = useThemeContext();
   const speedDialRef = useRef<HTMLDivElement | null>(null);
@@ -59,6 +61,7 @@ export const Collection = () => {
 
   const removeItem = (origin: string, model: string) => {
     deleteEntry(origin, model);
+    deleteFromCollection(origin, model);
   };
 
   return (
