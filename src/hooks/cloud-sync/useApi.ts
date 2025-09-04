@@ -1,4 +1,5 @@
 import { useAuth } from "../../firebase/FirebaseAuthContext";
+import { PastGame } from "../../state/recent-games/history";
 import { RosterGroup } from "../../state/roster-building/groups";
 import { Roster } from "../../types/roster.ts";
 import { useExport } from "../export/useExport.ts";
@@ -80,6 +81,38 @@ export const useApi = () => {
     });
   };
 
+  const createGame = (game: PastGame) => {
+    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    return fetch(`${API_URL}/games`, {
+      method: "POST",
+      body: JSON.stringify(game),
+      headers: {
+        Authorization: "Bearer " + auth.idToken,
+      },
+    });
+  };
+
+  const updateGame = (game: PastGame) => {
+    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    return fetch(`${API_URL}/games/${game.id}`, {
+      method: "PUT",
+      body: JSON.stringify(game),
+      headers: {
+        Authorization: "Bearer " + auth.idToken,
+      },
+    });
+  };
+
+  const deleteGame = (gameId: string) => {
+    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    return fetch(`${API_URL}/games/${gameId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + auth.idToken,
+      },
+    });
+  };
+
   return {
     createRoster,
     updateRoster,
@@ -88,5 +121,8 @@ export const useApi = () => {
     addRosterToGroup,
     removeRosterFromGroup,
     deleteGroup,
+    createGame,
+    updateGame,
+    deleteGame,
   };
 };
