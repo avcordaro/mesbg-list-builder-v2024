@@ -13,7 +13,8 @@ import {
   SelectedUnit,
 } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
-import { useRosterSync } from "../cloud-sync/useCloudSync.ts";
+
+import { useRosterSync } from "../cloud-sync/RosterCloudSyncProvider.tsx";
 
 function getBrotherId(unit: Unit, [left, right]: [string, string]) {
   const otherBrotherName = unit.name === left ? right : left;

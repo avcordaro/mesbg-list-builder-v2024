@@ -69,7 +69,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         return {
           groups: groups.filter((group) => group.id !== id),
           rosters: get().rosters.map((roster) =>
-            group.rosters.includes(roster.slug)
+            group.rosters.includes(roster.id)
               ? { ...roster, group: null }
               : roster,
           ),
@@ -86,7 +86,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         return {
           groups: groups.filter((group) => group.id !== id),
           rosters: get().rosters.filter(
-            (roster) => !group.rosters.includes(roster.slug),
+            (roster) => !group.rosters.includes(roster.id),
           ),
         };
       },

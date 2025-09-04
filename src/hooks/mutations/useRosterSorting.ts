@@ -94,7 +94,7 @@ export const useRosterSorting = () => {
   }
 
   function onUnitStartedDragging(start: DragStart) {
-    console.info("Drag and drop started:", start);
+    console.debug("Drag and drop started:", start);
   }
 
   return {

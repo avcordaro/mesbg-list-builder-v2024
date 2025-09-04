@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import { useAuth } from "../firebase/FirebaseAuthContext.tsx";
+import { RosterCloudSyncProvider } from "../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
 import { useRefetch } from "../hooks/cloud-sync/useRefetch.ts";
 
 export const WithCloudSync: FunctionComponent<PropsWithChildren> = ({
@@ -46,6 +47,6 @@ export const WithCloudSync: FunctionComponent<PropsWithChildren> = ({
       <CircularProgress color="inherit" size={100} thickness={2} />
     </Box>
   ) : (
-    children
+    <RosterCloudSyncProvider>{children}</RosterCloudSyncProvider>
   );
 };

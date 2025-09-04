@@ -91,8 +91,6 @@ export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
     (a, b) => new Date(a.gameDate).getTime() - new Date(b.gameDate).getTime(),
   );
 
-  console.log(sortedData);
-
   const wldRatiosPerDay = sortedData.reduce(
     (
       acc: { [key: string]: { won: number; lost: number; draw: number } },
