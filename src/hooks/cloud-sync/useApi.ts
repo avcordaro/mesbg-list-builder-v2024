@@ -1,4 +1,5 @@
 import { useAuth } from "../../firebase/FirebaseAuthContext";
+import { ModelInventory } from "../../state/collection/inventory";
 import { PastGame } from "../../state/recent-games/history";
 import { RosterGroup } from "../../state/roster-building/groups";
 import { Roster } from "../../types/roster.ts";
@@ -113,6 +114,31 @@ export const useApi = () => {
     });
   };
 
+  const upsertCollection = (
+    group: string,
+    model: string,
+    collection: ModelInventory,
+  ) => {
+    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    return fetch(`${API_URL}/collection/${group}/${model}`, {
+      method: "PUT",
+      body: JSON.stringify(collection.collection),
+      headers: {
+        Authorization: "Bearer " + auth.idToken,
+      },
+    });
+  };
+
+  const deleteFromCollection = (group: string, model: string) => {
+    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    return fetch(`${API_URL}/collection/${group}/${model}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + auth.idToken,
+      },
+    });
+  };
+
   return {
     createRoster,
     updateRoster,
@@ -124,5 +150,7 @@ export const useApi = () => {
     createGame,
     updateGame,
     deleteGame,
+    upsertCollection,
+    deleteFromCollection,
   };
 };
