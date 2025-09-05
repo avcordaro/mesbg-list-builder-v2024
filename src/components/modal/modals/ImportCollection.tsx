@@ -11,6 +11,7 @@ import {
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useCollectionState } from "../../../state/collection";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
@@ -19,6 +20,7 @@ import { CustomAlert } from "../../common/alert/CustomAlert.tsx";
 export const ImportCollection = () => {
   const { closeModal, triggerAlert } = useAppState();
   const { upsertInventory } = useCollectionState();
+  const { upsertCollection } = useApi();
 
   const [importedData, setImportedData] = useState("");
   const [importAlert, setImportAlert] = useState(false);
@@ -43,9 +45,10 @@ export const ImportCollection = () => {
         return;
       }
 
-      importData.forEach(({ group, model, data }) =>
-        upsertInventory(group, model, data),
-      );
+      importData.forEach(({ group, model, data }) => {
+        upsertInventory(group, model, data);
+        upsertCollection(group, model, data);
+      });
 
       triggerAlert(AlertTypes.IMPORT_COLLECTION_COMPLETED);
       closeModal();

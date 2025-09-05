@@ -1,6 +1,7 @@
 import { Button, DialogActions, DialogContent } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -14,6 +15,8 @@ export const ConfirmDeleteRosterModal = () => {
     triggerAlert,
   } = useAppState();
   const { deleteRoster } = useRosterBuildingState();
+  const { deleteRoster: remoteDelete } = useApi();
+
   const { endGame } = useGameModeState();
   const navigate = useNavigate();
 
@@ -21,6 +24,7 @@ export const ConfirmDeleteRosterModal = () => {
     e.preventDefault();
 
     deleteRoster(roster);
+    remoteDelete(roster.id);
     endGame(roster.id);
     if (manualRedirect !== true) {
       navigate("/rosters");

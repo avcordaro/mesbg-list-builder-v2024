@@ -9,8 +9,8 @@ import {
   drawerWidth,
   RosterInfoDrawer,
 } from "../../components/common/roster-info/RosterInfoDrawer.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useGameModeState } from "../../state/gamemode";
 import { deepEqual } from "../../utils/objects.ts";
 import { GamemodeToolbar } from "./components/GamemodeToolbar.tsx";
@@ -40,8 +40,8 @@ export const Gamemode = () => {
         </Typography>
         <Typography>
           Please navigate back to{" "}
-          <Link to="/gamemode/start">the roster selection</Link> and start a
-          game from there.
+          <Link to="/rosters">the roster selection</Link> and select a roster
+          before starting a game.
         </Typography>
       </Box>
     );

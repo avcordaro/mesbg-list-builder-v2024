@@ -1,6 +1,7 @@
 import { Button, DialogActions, DialogContent } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
@@ -13,16 +14,16 @@ export const ConfirmDisbandGroupModal = () => {
     triggerAlert,
   } = useAppState();
   const { disbandGroup, groups } = useRosterBuildingState();
+  const { deleteGroup } = useApi();
   const id = groups.find((group) => group.slug === groupId)?.id;
   const navigate = useNavigate();
 
   const handleConfirmDisband = (e) => {
     e.preventDefault();
 
-    console.log(id);
-
     if (id) {
       disbandGroup(id);
+      deleteGroup(groupId, true);
       if (redirect === true) {
         navigate("/rosters");
       }

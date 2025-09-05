@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { createRef, FunctionComponent, useEffect, useRef } from "react";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
-import { useRosterMutations } from "../../../hooks/useRosterMutations.ts";
-import { useRosterSorting } from "../../../hooks/useRosterSorting.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useRosterSorting } from "../../../hooks/mutations/useRosterSorting.ts";
+import { useWarbandMutations } from "../../../hooks/mutations/useWarbandMutations.ts";
 import { Warband as WarbandType } from "../../../types/roster.ts";
 import { Warband, WarbandActions } from "./Warband.tsx";
 
@@ -17,9 +17,9 @@ export type WarbandListProps = {
 export const WarbandList: FunctionComponent<WarbandListProps> = ({
   warbands,
 }) => {
-  const mutations = useRosterMutations();
-  const sorting = useRosterSorting();
   const { canSupportMoreWarbands, roster } = useRosterInformation();
+  const { addNewWarband } = useWarbandMutations(roster.id, null);
+  const sorting = useRosterSorting();
 
   const refs = useRef(roster.warbands.map(() => createRef<WarbandActions>()));
 
@@ -115,7 +115,7 @@ export const WarbandList: FunctionComponent<WarbandListProps> = ({
 
       {canSupportMoreWarbands() && (
         <Button
-          onClick={() => mutations.addNewWarband()}
+          onClick={addNewWarband}
           endIcon={<AddIcon />}
           variant="contained"
           data-test-id="add-warband"

@@ -34,6 +34,8 @@ export type GameState = {
   gameState?: Record<string, Game>;
   updateGameState: (id: string, update: Partial<Game>) => void;
   endGame: (id: string) => void;
+
+  reset: () => void;
 };
 
 const initialState = {
@@ -87,4 +89,14 @@ export const gameStateSlice: Slice<GameModeState, GameState> = (set) => ({
       undefined,
       "UPDATE_GAME_STATE",
     ),
+
+  reset: () => {
+    set(
+      {
+        gameState: {},
+      },
+      undefined,
+      "CLEAR_STATE",
+    );
+  },
 });

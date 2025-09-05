@@ -7,13 +7,15 @@ import { Changelog } from "../pages/Changelog.tsx";
 import { Collection } from "../pages/Collection.tsx";
 import { Roster } from "../pages/Roster.tsx";
 import { Settings } from "../pages/Settings.tsx";
+import { SignIn } from "../pages/account/SignIn.tsx";
+import { SignUp } from "../pages/account/SignUp.tsx";
 import { Database } from "../pages/database/Database.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
-import { StartGamemode } from "../pages/gamemode/StartGamemode.tsx";
 import { Home } from "../pages/home/Home.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
 import { RosterGroup } from "../pages/rosters/RosterGroup.tsx";
 import { Rosters } from "../pages/rosters/Rosters.tsx";
+import { SharedRoster } from "../pages/shared/Roster.tsx";
 import { RedirectTo } from "./RedirectTo.tsx";
 
 export const routes: RouteObject[] = [
@@ -43,12 +45,7 @@ export const routes: RouteObject[] = [
         errorElement: <AppFallback />,
       },
       {
-        path: "gamemode/start",
-        element: <StartGamemode />,
-        errorElement: <AppFallback />,
-      },
-      {
-        path: "gamemode/-/:rosterId",
+        path: "gamemode/:rosterId",
         element: <Gamemode />,
         errorElement: <AppFallback />,
       },
@@ -85,6 +82,21 @@ export const routes: RouteObject[] = [
       {
         path: "changelog",
         element: <Changelog />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-in",
+        element: <SignIn />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "shared/roster/:sid",
+        element: <SharedRoster />,
         errorElement: <AppFallback />,
       },
       {

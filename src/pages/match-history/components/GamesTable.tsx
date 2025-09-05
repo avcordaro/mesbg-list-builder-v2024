@@ -29,6 +29,7 @@ import {
   useState,
 } from "react";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
@@ -42,6 +43,7 @@ const resultColours = {
 const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
   const { setCurrentModal } = useAppState();
   const { deleteGame } = useRecentGamesState();
+  const { deleteGame: remoteDelete } = useApi();
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -64,6 +66,7 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
   };
   const handleDelete = () => {
     deleteGame(row.id);
+    remoteDelete(row.id);
     handleMenuClose();
   };
 

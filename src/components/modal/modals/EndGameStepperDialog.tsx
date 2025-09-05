@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 } from "uuid";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import { useRecentGamesState } from "../../../state/recent-games";
@@ -20,6 +21,7 @@ export const EndGameStepperDialog = () => {
   const { closeModal, modalContext, triggerAlert } = useAppState();
   const { endGame } = useGameModeState();
   const { addGame } = useRecentGamesState();
+  const { createGame } = useApi();
   const [activeStep, setActiveStep] = useState(0);
   const [missingFields, setMissingFields] = useState<string[]>([]);
   const [formValues, setFormValues] = useState<PastGame>({
@@ -41,7 +43,7 @@ export const EndGameStepperDialog = () => {
   };
 
   const closeModalAndEndGame = async () => {
-    await navigate("/gamemode/start");
+    await navigate(`/roster/${modalContext.gameId}`);
     endGame(modalContext.gameId);
     closeModal();
   };
@@ -64,7 +66,8 @@ export const EndGameStepperDialog = () => {
     }
 
     addGame(formValues);
-    await navigate("/gamemode/start");
+    createGame(formValues);
+    await navigate(`/roster/${modalContext.gameId}`);
     triggerAlert(AlertTypes.EXPORT_HISTORY_ALERT);
     endGame(modalContext.gameId);
     closeModal();

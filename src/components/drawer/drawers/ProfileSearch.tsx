@@ -75,7 +75,6 @@ export const ProfileSearch = () => {
       setProfiles([]);
       return;
     }
-    console.log(rows.sort((a, b) => a.name.localeCompare(b.name)));
     const newKeywordList = rows.filter((kw) =>
       kw.name.toLowerCase().includes(filter),
     );
