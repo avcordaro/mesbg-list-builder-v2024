@@ -14,7 +14,7 @@ export const WithCloudSync: FunctionComponent<PropsWithChildren> = ({
   // Not Logged in, just render the application...
   if (!auth.user) return children;
 
-  return location.pathname === "/sign-in" ? (
+  return ["/sign-in", "/sign-up"].includes(location.pathname) ? (
     <GuardedRoute>
       <InitialSyncRequest />
     </GuardedRoute>
