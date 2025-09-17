@@ -37,16 +37,14 @@ export function useSyncQueue() {
   const api = useApi();
   const apiMap: Record<EntityType, (data: SyncItemData) => Promise<void>> = {
     rosters: async (data: Roster) => {
-      console.warn(`Item sync not implemented`, data);
-      // await api.createRoster(data);
+      await api.createRoster(data);
     },
     groups: async (data: RosterGroup) => {
-      console.warn(`Item sync not implemented`, data);
-      // await api.createGroup(data);
+      await api.createGroup(data);
     },
     games: async (data: { id: string; game: Game }) => {
-      // todo: implement api call
-      console.warn(`Item sync not implemented`, data);
+      console.warn("Not syncing game for " + data.id);
+      throw new Error("Sync for ongoing games has not yet been implemented");
     },
     gameHistory: async (data: PastGame) => {
       await api.createGame(data);
