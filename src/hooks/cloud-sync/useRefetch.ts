@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
 import { useCollectionState } from "../../state/collection";
 import { Collection, InventoryState } from "../../state/collection/inventory";
@@ -63,9 +64,19 @@ export const useRefetch = () => {
     resetCollection(inventory);
   };
 
+  const reloadAll = useCallback(async () => {
+    return Promise.all([
+      reloadRostersAndGroups(),
+      reloadRecentGames(),
+      reloadCollections(),
+    ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return {
     reloadRostersAndGroups,
     reloadRecentGames,
     reloadCollections,
+    reloadAll,
   };
 };

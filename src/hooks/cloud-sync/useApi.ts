@@ -82,15 +82,20 @@ export const useApi = () => {
     });
   };
 
-  const createGame = (game: PastGame) => {
+  const createGame = async (game: PastGame) => {
     if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
-    return fetch(`${API_URL}/games`, {
+    const response = await fetch(`${API_URL}/games`, {
       method: "POST",
       body: JSON.stringify(game),
       headers: {
         Authorization: "Bearer " + auth.idToken,
       },
     });
+    if (!response.ok) {
+      const { message } = await response.json();
+      throw new Error(`Failed to create game: ${message}`);
+    }
+    return response;
   };
 
   const updateGame = (game: PastGame) => {
@@ -114,13 +119,13 @@ export const useApi = () => {
     });
   };
 
-  const upsertCollection = (
+  const upsertCollection = async (
     group: string,
     model: string,
     collection: ModelInventory,
   ) => {
     if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
-    return fetch(`${API_URL}/collection/${group}/${model}`, {
+    return await fetch(`${API_URL}/collection/${group}/${model}`, {
       method: "PUT",
       body: JSON.stringify(collection.collection),
       headers: {

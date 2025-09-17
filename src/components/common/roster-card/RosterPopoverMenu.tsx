@@ -9,6 +9,7 @@ import { useState, MouseEvent } from "react";
 import { FaChessRook, FaClone } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useAppState } from "../../../state/app";
+import { useGameModeState } from "../../../state/gamemode";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { Roster } from "../../../types/roster.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
@@ -19,6 +20,10 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
   const { setCurrentModal } = useAppState();
   const navigate = useNavigate();
   const { createRoster, rosters } = useRosterBuildingState();
+  const [startNewGame, hasStartedGame] = useGameModeState((state) => [
+    state.startNewGame,
+    state.gameState[props.roster.id],
+  ]);
   const existingRosterIds = rosters.map(({ id }) => id);
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -67,6 +72,7 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
   };
 
   const startGame = (event: MouseEvent<HTMLElement>) => {
+    if (!hasStartedGame) startNewGame(props.roster);
     navigate(`/gamemode/${props.roster.id}`);
     handleClose(event);
   };

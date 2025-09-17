@@ -14,9 +14,7 @@ import { CustomAlert } from "../../components/common/alert/CustomAlert.tsx";
 import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
 
 const errorMap = {
-  "auth/invalid-credential":
-    "Invalid login details. Check your email and password and try again.",
-  "auth/email-already-exists":
+  "auth/email-already-in-use":
     "An account with this email already exists. Sign in or use a different email.",
   "auth/invalid-email":
     "That doesn’t look like a valid email address. Please check and try again.",
@@ -46,7 +44,7 @@ export const SignUp = () => {
 
   useEffect(() => {
     if (auth.user) {
-      navigate("/");
+      navigate(`/rosters?asksync=true`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth.user]);
@@ -64,12 +62,20 @@ export const SignUp = () => {
         data.get("name") as string,
       )
       .then((response) => console.log(response))
-      .catch((error) =>
-        setSignInError(
-          errorMap[error.code] ??
-            "Oops! We encountered an error. Please refresh the page and try again.",
-        ),
-      );
+      .catch((error) => {
+        if (error.code === "auth/password-does-not-meet-requirements") {
+          const reason = error.message?.match(/\[(.*?)]/);
+          if (reason) {
+            setSignInError(reason[1]);
+          }
+        } else {
+          console.error(error.code);
+          setSignInError(
+            errorMap[error.code] ??
+              "Oops! We encountered an error. Please refresh the page and try again.",
+          );
+        }
+      });
   };
 
   const validateInputs = () => {
@@ -236,7 +242,13 @@ export const SignUp = () => {
           alignItems="center"
         >
           <Typography>Already have an account?</Typography>
-          <Button onClick={() => navigate("/sign-in")}>Sign In</Button>
+          <Button
+            onClick={() =>
+              navigate("/sign-in", { state: { allowNavigation: true } })
+            }
+          >
+            Sign In
+          </Button>
         </Stack>
       </Box>
     </Container>

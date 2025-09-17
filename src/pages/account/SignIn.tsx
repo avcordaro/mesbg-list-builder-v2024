@@ -44,7 +44,7 @@ export const SignIn = () => {
 
   useEffect(() => {
     if (auth.user) {
-      navigate("/rosters");
+      navigate(`/rosters?asksync=true`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth.user]);
@@ -207,7 +207,13 @@ export const SignIn = () => {
           alignItems="center"
         >
           <Typography>Don&apos;t have an account?</Typography>
-          <Button onClick={() => navigate("/sign-up")}>Sign up</Button>
+          <Button
+            onClick={() =>
+              navigate("/sign-up", { state: { allowNavigation: true } })
+            }
+          >
+            Sign up
+          </Button>
         </Stack>
       </Box>
     </Container>

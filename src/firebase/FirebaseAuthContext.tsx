@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
+import Typography from "@mui/material/Typography";
 import { getIdToken, onAuthStateChanged, User } from "firebase/auth";
 import {
   createContext,
@@ -62,6 +63,8 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
+            gap: 2,
             width: "100svw",
             height: "100svh",
             justifyContent: "center",
@@ -69,6 +72,9 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
           }}
         >
           <CircularProgress color="inherit" size={100} thickness={2} />
+          <Typography variant="overline">
+            Getting account information...
+          </Typography>
         </Box>
       ) : (
         children

@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import { PdfView } from "../components/common/roster-pdf/PdfView.tsx";
-import { AppFallback } from "../components/error-boundary/AppFallback.tsx";
 import { App } from "../layout/App.tsx";
+import { AppFallback } from "../layout/error-boundary/AppFallback.tsx";
 import { About } from "../pages/About.tsx";
 import { Changelog } from "../pages/Changelog.tsx";
 import { Collection } from "../pages/Collection.tsx";
@@ -113,7 +113,7 @@ export const routes: RouteObject[] = [
   },
   {
     path: "/*",
-    element: <RedirectTo path="/rosters" />,
+    element: <RedirectTo path="/" />,
     errorElement: <AppFallback />,
   },
 ];

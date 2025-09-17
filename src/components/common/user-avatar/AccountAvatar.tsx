@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 import { User } from "firebase/auth";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ModalTypes } from "../components/modal/modals.tsx";
-import { useAuth } from "../firebase/FirebaseAuthContext.tsx";
-import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
-import { useAppState } from "../state/app";
+import { useAuth } from "../../../firebase/FirebaseAuthContext.tsx";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize";
+import { useAppState } from "../../../state/app";
+import { ModalTypes } from "../../modal/modals.tsx";
 
 const SignInLink = () => {
   const screen = useScreenSize();
@@ -26,7 +26,9 @@ const SignInLink = () => {
           bgcolor: ({ palette }) => palette.primary.main,
           cursor: "pointer",
         }}
-        onClick={() => navigate("/sign-in")}
+        onClick={() =>
+          navigate("/sign-in", { state: { allowNavigation: true } })
+        }
       >
         <Person sx={{ color: ({ palette }) => palette.primary.contrastText }} />
       </Avatar>

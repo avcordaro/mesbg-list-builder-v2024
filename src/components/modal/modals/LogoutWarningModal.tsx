@@ -18,7 +18,7 @@ export const LogoutWarningModal = () => {
 
   const logout = () => {
     modalContext.signOut().then(async () => {
-      await navigate("/sign-in");
+      await navigate("/sign-in", { state: { allowNavigation: true } });
       resetCollection();
       resetGameMode();
       resetRostersAndGroups();

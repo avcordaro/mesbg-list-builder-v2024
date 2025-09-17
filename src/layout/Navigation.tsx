@@ -46,6 +46,7 @@ import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
 import { icons as groupIcons } from "../components/common/group-icon/icons.tsx";
 import { FactionLogo } from "../components/common/images/FactionLogo.tsx";
+import { AccountAvatar } from "../components/common/user-avatar/AccountAvatar.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
 import { charts } from "../constants/charts.ts";
@@ -55,7 +56,6 @@ import { useAppState } from "../state/app";
 import { useUserPreferences } from "../state/preference";
 import { useRosterBuildingState } from "../state/roster-building";
 import { slugify } from "../utils/string.ts";
-import { AccountAvatar } from "./AccountAvatar.tsx";
 
 const drawerWidth = 320;
 
