@@ -2,7 +2,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { siegeEquipmentData } from "../../../assets/data.ts";
-import { useRosterInformation } from "../../../hooks/useRosterInformation.ts";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { SiegeEquipment } from "../../../types/mesbg-data.types.ts";
 import { CustomAlert } from "../alert/CustomAlert.tsx";
 import { SiegeSelectionButton } from "./SiegeSelectionButton.tsx";

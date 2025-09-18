@@ -13,7 +13,7 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Badge, Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
+import { Collapse, CSSObject, Theme, Tooltip } from "@mui/material";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -37,22 +37,22 @@ import {
   useState,
 } from "react";
 import { AiFillTrophy } from "react-icons/ai";
-import { FaChessRook, FaDatabase, FaDiscord, FaPatreon } from "react-icons/fa";
+import { FaDatabase, FaDiscord, FaPatreon } from "react-icons/fa";
 import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
 import { HiFire } from "react-icons/hi";
 import { HiIdentification } from "react-icons/hi2";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import title from "../assets/images/title-v2024.png";
 import { icons as groupIcons } from "../components/common/group-icon/icons.tsx";
 import { FactionLogo } from "../components/common/images/FactionLogo.tsx";
+import { AccountAvatar } from "../components/common/user-avatar/AccountAvatar.tsx";
 import { DrawerTypes } from "../components/drawer/drawers.tsx";
 import { ModalTypes } from "../components/modal/modals.tsx";
 import { charts } from "../constants/charts.ts";
 import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.ts";
 import { DISCORD_LINK, PATREON_LINK } from "../pages/home/Home.tsx";
 import { useAppState } from "../state/app";
-import { useGameModeState } from "../state/gamemode";
 import { useUserPreferences } from "../state/preference";
 import { useRosterBuildingState } from "../state/roster-building";
 import { slugify } from "../utils/string.ts";
@@ -155,6 +155,7 @@ type NavLink = {
   children?: NavItem[];
   showCaret?: boolean;
   disabled?: boolean;
+  disabledReason?: string;
 };
 
 type NavDivider = {
@@ -177,57 +178,62 @@ export const NavItemLink = ({
 
   return (
     <>
-      <ListItem disablePadding sx={{ display: "block" }}>
-        <ListItemButton
-          sx={[
-            { minHeight: 48, pr: 2.5, pl: pl + 2.5 },
-            open ? { justifyContent: "initial" } : { justifyContent: "center" },
-          ]}
-          selected={item.active}
-          onClick={() => {
-            if (item.showCaret) {
-              setExpanded(!expanded);
-              window.dispatchEvent(
-                new Event("mlb-event--open-navigation-drawer"),
-              );
-            } else {
-              item.action();
-            }
-          }}
-          disabled={item.disabled}
-          data-test-id={slugify(item.label) + "--nav-link"}
-        >
-          <Tooltip title={open ? "" : item.label}>
-            <ListItemIcon
-              sx={[
-                { minWidth: 0, justifyContent: "center" },
-                open ? { mr: 3 } : { mr: "auto" },
-              ]}
-            >
-              {item.icon}
-            </ListItemIcon>
-          </Tooltip>
-
-          <ListItemText
-            primary={item.label}
+      <Tooltip title={item.disabled ? item.disabledReason : ""}>
+        <ListItem disablePadding sx={{ display: "block" }}>
+          <ListItemButton
             sx={[
-              {
-                "& span": {
-                  display: "inline-block",
-                  width: "21ch",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                },
-              },
-              open ? { opacity: 1 } : { opacity: 0 },
+              { minHeight: 48, pr: 2.5, pl: pl + 2.5 },
+              open
+                ? { justifyContent: "initial" }
+                : { justifyContent: "center" },
             ]}
-          />
-          {item.children && item.showCaret && open && (
-            <> {expanded ? <ExpandLess /> : <ExpandMore />}</>
-          )}
-        </ListItemButton>
-      </ListItem>
+            selected={item.active}
+            onClick={() => {
+              if (item.showCaret) {
+                setExpanded(!expanded);
+                window.dispatchEvent(
+                  new Event("mlb-event--open-navigation-drawer"),
+                );
+              } else {
+                item.action();
+              }
+            }}
+            disabled={item.disabled}
+            data-test-id={slugify(item.label) + "--nav-link"}
+          >
+            <Tooltip title={open ? "" : item.label}>
+              <ListItemIcon
+                sx={[
+                  { minWidth: 0, justifyContent: "center" },
+                  open ? { mr: 3 } : { mr: "auto" },
+                ]}
+              >
+                {item.icon}
+              </ListItemIcon>
+            </Tooltip>
+
+            <ListItemText
+              primary={item.label}
+              sx={[
+                {
+                  "& span": {
+                    display: "inline-block",
+                    width: "21ch",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  },
+                },
+                open ? { opacity: 1 } : { opacity: 0 },
+              ]}
+            />
+            {item.children && item.showCaret && open && (
+              <> {expanded ? <ExpandLess /> : <ExpandMore />}</>
+            )}
+          </ListItemButton>
+        </ListItem>
+      </Tooltip>
+
       {item.children && item.children.length > 0 && (
         <Collapse in={(!expanded && open) || !item.showCaret}>
           {item.children?.map((subItem, index) =>
@@ -253,7 +259,10 @@ const useRosters = () => {
   const { preferences } = useUserPreferences();
   const navigate = useNavigate();
 
-  const groupMap = Object.fromEntries(groups.map((group) => [group.id, group]));
+  const groupMap = Object.fromEntries([
+    ...groups.map((group) => [group.id, group]),
+    ...groups.map((group) => [group.slug, group]),
+  ]);
   const groupedRosters = rosters.reduce(
     (groups, roster) => {
       const group = roster.group || "ungrouped";
@@ -282,7 +291,7 @@ const useRosters = () => {
             action: () => {},
             active:
               location.pathname ===
-              `/rosters/${encodeURIComponent(groupMap[group].slug)}`,
+              `/rosters/${encodeURIComponent(groupMap[group]?.slug)}`,
             icon: groupIcons[groupMap[group]?.icon] || <FolderOutlined />,
             label: groupMap[group]?.name || "Unknown name",
             children: [
@@ -314,10 +323,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const { rosterId } = useParams();
-  const { rosters } = useRosterBuildingState();
   const { openSidebar, setCurrentModal } = useAppState();
-  const { startNewGame, gameState } = useGameModeState();
   const rosterLinks = useRosters();
 
   const toggleMenuDrawer = () => {
@@ -352,35 +358,6 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       showCaret: false,
     },
     { divider: true },
-    {
-      icon: (
-        <Badge
-          variant="dot"
-          color="info"
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          badgeContent={gameState[rosterId] ? 1 : 0}
-        >
-          <FaChessRook style={{ fontSize: "1.5rem" }} />
-        </Badge>
-      ),
-      label: "Game Mode",
-      action: () => {
-        if (rosterId) {
-          const roster = rosters.find((roster) => roster.id === rosterId);
-          if (roster) {
-            const ongoingGame = gameState[roster.id];
-            if (!ongoingGame) startNewGame(roster);
-            navigate(`/gamemode/-/${rosterId}`);
-            return;
-          }
-        }
-        navigate("/gamemode/start");
-      },
-      active: location.pathname.startsWith("/gamemode"),
-    },
 
     {
       icon: <AiFillTrophy style={{ fontSize: "1.5rem" }} />,
@@ -537,7 +514,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
           <Button
             aria-label="logo"
             sx={{ mr: 2 }}
-            href="https://mesbg-list-builder.com/"
+            href={window.location.protocol + "//" + window.location.host}
           >
             <img src={logo} alt="Logo" style={{ height: "50px" }} />
             <img
@@ -547,6 +524,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             />
           </Button>
           <Box flexGrow={1} />
+          <AccountAvatar />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} id="navigation-drawer">

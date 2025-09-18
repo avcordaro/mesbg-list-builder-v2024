@@ -2,16 +2,19 @@ import { Button, Tab, Tabs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { CustomAlert } from "../../components/common/alert/CustomAlert.tsx";
 import { Link } from "../../components/common/link/Link.tsx";
 import {
   drawerWidth,
   RosterInfoDrawer,
 } from "../../components/common/roster-info/RosterInfoDrawer.tsx";
-import { useRosterInformation } from "../../hooks/useRosterInformation.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
+import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useGamestateSync } from "../../hooks/cloud-sync/GamestateCloudSyncProvider.tsx";
+import { useApi } from "../../hooks/cloud-sync/useApi.ts";
 import { useGameModeState } from "../../state/gamemode";
+import { Roster } from "../../types/roster.ts";
 import { deepEqual } from "../../utils/objects.ts";
 import { GamemodeToolbar } from "./components/GamemodeToolbar.tsx";
 import { DeploymentHelper } from "./components/tabs/DeploymentHelperTable.tsx";
@@ -21,13 +24,36 @@ import { StatTrackers } from "./components/tabs/StatTrackers.tsx";
 import { StatsTable } from "./components/tabs/StatsTable.tsx";
 import { TabPanel } from "./components/tabs/TabPanel.tsx";
 
+const removeUncheckedFields = (
+  data: Roster["metadata"] & {
+    owner?: string;
+  },
+) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { owner, siegeRoster, ...sanitized } = data;
+  return sanitized;
+};
+
+const hasChanged = (a: Roster["metadata"], b: Roster["metadata"]) => {
+  return !deepEqual(removeUncheckedFields(a), removeUncheckedFields(b));
+};
+
 export const Gamemode = () => {
   const screen = useScreenSize();
   const { roster } = useRosterInformation();
   const { gameState, startNewGame } = useGameModeState();
+  const api = useApi();
+  const syncGame = useGamestateSync();
 
   const [value, setValue] = useState(0);
   const [rosterChangedWarning, setRosterChangedWarning] = useState(true);
+
+  useEffect(() => {
+    if (gameState[roster.id]) {
+      syncGame(roster.id, gameState[roster.id]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gameState, roster.id]);
 
   if (!roster) {
     return (
@@ -40,8 +66,8 @@ export const Gamemode = () => {
         </Typography>
         <Typography>
           Please navigate back to{" "}
-          <Link to="/gamemode/start">the roster selection</Link> and start a
-          game from there.
+          <Link to="/rosters">the roster selection</Link> and select a roster
+          before starting a game.
         </Typography>
       </Box>
     );
@@ -51,13 +77,15 @@ export const Gamemode = () => {
     setValue(newValue);
   };
 
-  const resetMatch = () => {
-    startNewGame(roster);
+  const resetMatch = async () => {
+    await api.deleteGamestate(roster.id);
+    const game = startNewGame(roster);
+    await api.createGamestate(roster.id, game);
   };
 
-  const changedSinceStart = !deepEqual(
+  const changedSinceStart = hasChanged(
     roster.metadata,
-    gameState[roster.id].rosterMetadata,
+    gameState[roster.id]?.rosterMetadata,
   );
 
   return (
@@ -82,14 +110,7 @@ export const Gamemode = () => {
           </CustomAlert>
         )}
         <Box sx={{ width: "100%", bgcolor: "background.paper", mt: 2 }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="fullWidth"
-            // scrollButtons
-            // allowScrollButtonsMobile
-            // selectionFollowsFocus
-          >
+          <Tabs value={value} onChange={handleChange} variant="fullWidth">
             <Tab label="Trackers" />
             <Tab label="Army overview" />
             <Tab label="Profiles" />

@@ -2,6 +2,7 @@ import { Button, DialogActions, DialogContent } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import {
@@ -13,6 +14,7 @@ export const CreateGameResultModal = () => {
   const { closeModal, modalContext } = useAppState();
   const { endGame } = useGameModeState();
   const navigate = useNavigate();
+  const api = useApi();
   const childRef = useRef<GameResultsFormHandlers>(null);
 
   const saveGameToState = async () => {
@@ -21,6 +23,7 @@ export const CreateGameResultModal = () => {
         if (modalContext.gameId) {
           await navigate("match-history");
           endGame(modalContext.gameId);
+          await api.deleteGamestate(modalContext.gameId);
         }
 
         closeModal();
@@ -30,8 +33,9 @@ export const CreateGameResultModal = () => {
 
   const closeModalAndGame = async () => {
     if (modalContext.gameId) {
-      await navigate("/gamemode/start");
+      await navigate(`/roster/${modalContext.gameId}`);
       endGame(modalContext.gameId);
+      await api.deleteGamestate(modalContext.gameId);
       closeModal();
     }
   };

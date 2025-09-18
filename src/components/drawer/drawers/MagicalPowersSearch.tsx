@@ -1,5 +1,5 @@
 import keywords from "../../../assets/data/keywords.json";
-import { useUsedMagicalPowers } from "../../../hooks/useUsedMagicalPowers.ts";
+import { useUsedMagicalPowers } from "../../../hooks/calculations-and-displays/useUsedMagicalPowers.ts";
 import { KeywordSearch } from "./KeywordSearch.tsx";
 
 export const MagicalPowersSearch = () => {
