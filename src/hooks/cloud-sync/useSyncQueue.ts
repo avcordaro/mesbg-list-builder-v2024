@@ -43,8 +43,7 @@ export function useSyncQueue() {
       await api.createGroup(data);
     },
     games: async (data: { id: string; game: Game }) => {
-      console.warn("Not syncing game for " + data.id);
-      throw new Error("Sync for ongoing games has not yet been implemented");
+      await api.createGamestate(data.id, data.game);
     },
     gameHistory: async (data: PastGame) => {
       await api.createGame(data);
