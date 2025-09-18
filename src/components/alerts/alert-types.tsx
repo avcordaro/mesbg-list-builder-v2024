@@ -31,6 +31,7 @@ export enum AlertTypes {
   TTS_TEXT_COPIED_SUCCESS = "TTS_TEXT_COPIED_SUCCESS",
 
   PASSWORD_RESET_REQUEST_SEND = "PASSWORD_RESET_REQUEST_SEND",
+  API_REQUEST_FAILED = "API_REQUEST_FAILED",
 }
 
 type AlertOptions = {
@@ -330,6 +331,21 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
           <p>
             The imported JSON was incorrectly formatted. Please reexport the
             data and try again.
+          </p>
+        </Fragment>
+      ),
+    },
+  ],
+  [
+    AlertTypes.API_REQUEST_FAILED,
+    {
+      variant: "error",
+      content: (
+        <Fragment>
+          <b>Sync failure!</b>
+          <p>
+            Could not successfully save your application state to your account.{" "}
+            <strong>Please refresh the page and try again.</strong>
           </p>
         </Fragment>
       ),

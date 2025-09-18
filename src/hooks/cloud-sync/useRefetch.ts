@@ -2,6 +2,8 @@ import { useCallback } from "react";
 import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
 import { useCollectionState } from "../../state/collection";
 import { Collection, InventoryState } from "../../state/collection/inventory";
+import { useGameModeState } from "../../state/gamemode";
+import { Game } from "../../state/gamemode/gamestate";
 import { useRecentGamesState } from "../../state/recent-games";
 import { PastGame } from "../../state/recent-games/history";
 import { useRosterBuildingState } from "../../state/roster-building";
@@ -14,6 +16,7 @@ export const useRefetch = () => {
   const resetRostersAndGroups = useRosterBuildingState((state) => state.reset);
   const resetRecentGames = useRecentGamesState((state) => state.reset);
   const resetCollection = useCollectionState((state) => state.reset);
+  const resetGamestate = useGameModeState((state) => state.reset);
 
   const getFromApi = (path: string) => {
     return fetch(`${API_URL}/${path}`, {
@@ -35,6 +38,17 @@ export const useRefetch = () => {
       .filter(isImported);
     const groups = (await groupsResponse.json()) as RosterGroup[];
     resetRostersAndGroups(rosters, groups);
+  };
+
+  const reloadGamestate = async () => {
+    const response = await getFromApi("ongoing-games");
+    const gamestates = (await response.json()) as ({ roster: string } & Game)[];
+    const record = gamestates.reduce((acc, { roster, ...game }) => {
+      acc[roster] = game;
+      return acc;
+    }, {});
+
+    resetGamestate(record);
   };
 
   const reloadRecentGames = async () => {
@@ -67,6 +81,7 @@ export const useRefetch = () => {
   const reloadAll = useCallback(async () => {
     return Promise.all([
       reloadRostersAndGroups(),
+      reloadGamestate(),
       reloadRecentGames(),
       reloadCollections(),
     ]);
@@ -77,6 +92,7 @@ export const useRefetch = () => {
     reloadRostersAndGroups,
     reloadRecentGames,
     reloadCollections,
+    reloadGamestate,
     reloadAll,
   };
 };

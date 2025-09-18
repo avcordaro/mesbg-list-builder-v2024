@@ -21,7 +21,7 @@ export const EndGameStepperDialog = () => {
   const { closeModal, modalContext, triggerAlert } = useAppState();
   const { endGame } = useGameModeState();
   const { addGame } = useRecentGamesState();
-  const { createGame } = useApi();
+  const { createGame, deleteGamestate } = useApi();
   const [activeStep, setActiveStep] = useState(0);
   const [missingFields, setMissingFields] = useState<string[]>([]);
   const [formValues, setFormValues] = useState<PastGame>({
@@ -45,6 +45,7 @@ export const EndGameStepperDialog = () => {
   const closeModalAndEndGame = async () => {
     await navigate(`/roster/${modalContext.gameId}`);
     endGame(modalContext.gameId);
+    await deleteGamestate(modalContext.gameId);
     closeModal();
   };
 
@@ -66,10 +67,11 @@ export const EndGameStepperDialog = () => {
     }
 
     addGame(formValues);
-    createGame(formValues);
+    await createGame(formValues);
     await navigate(`/roster/${modalContext.gameId}`);
     triggerAlert(AlertTypes.EXPORT_HISTORY_ALERT);
     endGame(modalContext.gameId);
+    await deleteGamestate(modalContext.gameId);
     closeModal();
   };
 

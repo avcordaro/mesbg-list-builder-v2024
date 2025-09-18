@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useState, MouseEvent } from "react";
 import { FaChessRook, FaClone } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -19,6 +20,7 @@ import { SquareIconButton } from "../icon-button/SquareIconButton.tsx";
 export const RosterPopoverMenu = (props: { roster: Roster }) => {
   const { setCurrentModal } = useAppState();
   const navigate = useNavigate();
+  const api = useApi();
   const { createRoster, rosters } = useRosterBuildingState();
   const [startNewGame, hasStartedGame] = useGameModeState((state) => [
     state.startNewGame,
@@ -72,7 +74,10 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
   };
 
   const startGame = (event: MouseEvent<HTMLElement>) => {
-    if (!hasStartedGame) startNewGame(props.roster);
+    if (!hasStartedGame) {
+      const game = startNewGame(props.roster);
+      api.createGamestate(props.roster.id, game);
+    }
     navigate(`/gamemode/${props.roster.id}`);
     handleClose(event);
   };

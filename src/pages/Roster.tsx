@@ -43,6 +43,8 @@ import { OpenNavigationDrawerEvent } from "../events/OpenNavigationDrawerEvent.t
 import { useRosterInformation } from "../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useRosterWarnings } from "../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { useScreenSize } from "../hooks/calculations-and-displays/useScreenSize.ts";
+import { useRosterSync } from "../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
+import { useApi } from "../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../state/app";
 import { useGameModeState } from "../state/gamemode";
 import { useUserPreferences } from "../state/preference";
@@ -55,6 +57,8 @@ import { useThemeContext } from "../theme/ThemeContext.tsx";
 export const Roster = () => {
   const screen = useScreenSize();
   const { mode } = useThemeContext();
+  const sync = useRosterSync();
+  const api = useApi();
   const { undo, redo, pastStates, futureStates, clear } =
     useTemporalRosterBuildingState((state) => state);
   const { rosterId } = useParams();
@@ -104,6 +108,11 @@ export const Roster = () => {
     return () =>
       window.removeEventListener("mlb-event--open-nav-bar", openMenuDrawer);
   }, []);
+
+  useEffect(() => {
+    if (roster) sync(roster);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [roster]);
 
   if (!roster) {
     return (
@@ -223,7 +232,10 @@ export const Roster = () => {
                 variant="contained"
                 aria-label="open drawer"
                 onClick={() => {
-                  if (!hasStartedGame) startNewGame(roster);
+                  if (!hasStartedGame) {
+                    const game = startNewGame(roster);
+                    api.createGamestate(roster.id, game);
+                  }
                   navigate(`/gamemode/${rosterId}`);
                 }}
                 startIcon={<FaChessRook />}

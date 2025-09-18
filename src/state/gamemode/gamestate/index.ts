@@ -30,12 +30,12 @@ export type Game = {
 };
 
 export type GameState = {
-  startNewGame: (roster: Roster) => void;
+  startNewGame: (roster: Roster) => Game;
   gameState?: Record<string, Game>;
   updateGameState: (id: string, update: Partial<Game>) => void;
   endGame: (id: string) => void;
 
-  reset: () => void;
+  reset: (state?: Record<string, Game>) => void;
 };
 
 const initialState = {
@@ -45,22 +45,25 @@ const initialState = {
 export const gameStateSlice: Slice<GameModeState, GameState> = (set) => ({
   ...initialState,
 
-  startNewGame: (roster: Roster) =>
+  startNewGame: (roster: Roster) => {
+    const newGame = {
+      ...createGameState(roster),
+      started: Date.now(),
+      lastUpdated: Date.now(),
+      rosterMetadata: roster.metadata,
+    };
     set(
       ({ gameState }) => ({
         gameState: {
           ...gameState,
-          [roster.id]: {
-            ...createGameState(roster),
-            started: Date.now(),
-            lastUpdated: Date.now(),
-            rosterMetadata: roster.metadata,
-          },
+          [roster.id]: newGame,
         },
       }),
       undefined,
       "START_GAME",
-    ),
+    );
+    return newGame;
+  },
   updateGameState: (id, update) =>
     set(
       ({ gameState }) => ({
@@ -90,13 +93,7 @@ export const gameStateSlice: Slice<GameModeState, GameState> = (set) => ({
       "UPDATE_GAME_STATE",
     ),
 
-  reset: () => {
-    set(
-      {
-        gameState: {},
-      },
-      undefined,
-      "CLEAR_STATE",
-    );
+  reset: (gameState: Record<string, Game> = {}) => {
+    set({ gameState }, undefined, "CLEAR_STATE");
   },
 });

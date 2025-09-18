@@ -40,6 +40,7 @@ export const HeroStatTrackers = () => {
     tracker.custom_name = newName;
     trackers[trackerIndex] = tracker;
     updateGameState(rosterId, { trackables: trackers });
+    syncGamestate({ trackables: trackers });
   }
 
   return (

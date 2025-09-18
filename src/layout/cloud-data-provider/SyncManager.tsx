@@ -11,6 +11,7 @@ import {
 } from "react";
 import { CustomAlert } from "../../components/common/alert/CustomAlert.tsx";
 import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
+import { GamestateCloudSyncProvider } from "../../hooks/cloud-sync/GamestateCloudSyncProvider.tsx";
 import { RosterCloudSyncProvider } from "../../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
 import { useRefetch } from "../../hooks/cloud-sync/useRefetch.ts";
 
@@ -73,6 +74,8 @@ export const SyncManager: FunctionComponent<PropsWithChildren> = ({
       </Button>
     </Container>
   ) : (
-    <RosterCloudSyncProvider>{children}</RosterCloudSyncProvider>
+    <RosterCloudSyncProvider>
+      <GamestateCloudSyncProvider>{children}</GamestateCloudSyncProvider>
+    </RosterCloudSyncProvider>
   );
 };
