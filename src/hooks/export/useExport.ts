@@ -1,5 +1,5 @@
 import { mesbgData, siegeEquipmentData } from "../../assets/data.ts";
-import { isSelectedUnit, Roster } from "../../types/roster.ts";
+import { isSelectedUnit, Roster, SelectedUnit } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
 import { download } from "./useDownload.ts";
@@ -21,6 +21,7 @@ export const useExport = () => {
       {
         metadata: {
           leader: roster.metadata.leader,
+          leaderCompulsory: roster.metadata.leaderCompulsory,
           tttSpecialUpgrades: roster.metadata.tttSpecialUpgrades,
           siegeRoster: roster.metadata.siegeRoster,
           siegeRole: roster.metadata.siegeRole,
@@ -33,7 +34,9 @@ export const useExport = () => {
                 id: warband.hero.id,
                 model_id: warband.hero.model_id,
                 MWFW: warband.hero.MWFW,
-                options: warband.hero.options,
+                options: warband.hero.options
+                  .filter((option) => option.quantity > 0)
+                  .map(({ id, name, quantity }) => ({ id, name, quantity })),
                 compulsory: warband.hero.compulsory,
               }
             : null,
@@ -41,7 +44,9 @@ export const useExport = () => {
             id: unit.id,
             model_id: unit.model_id,
             MWFW: unit.MWFW,
-            options: unit.options,
+            options: unit.options
+              .filter((option) => option.quantity > 0)
+              .map(({ id, name, quantity }) => ({ id, name, quantity })),
             quantity: unit.quantity,
           })),
           meta: warband.meta,
@@ -105,30 +110,41 @@ export const useExport = () => {
   const isImported = (importedRoster: Roster): importedRoster is Roster =>
     !!(importedRoster as Roster)?.armyList;
 
+  function hydrateUnit(unit: SelectedUnit, quantity?: number) {
+    if (unit.model_id.startsWith("[siege]")) {
+      return calculator.recalculatePointsForUnit({
+        ...siegeEquipmentData[unit.model_id],
+        ...unit,
+        quantity: quantity ?? unit.quantity,
+      });
+    }
+    const base = mesbgData[unit.model_id];
+    const selectedOptions = unit.options.filter(
+      (option) => option.quantity > 0,
+    );
+    return calculator.recalculatePointsForUnit({
+      ...base,
+      ...unit,
+      options: base.options.map((option) => {
+        const os = selectedOptions.find((o) => o.name === option.name);
+        return os ? { ...option, quantity: os.quantity } : option;
+      }),
+      quantity: quantity ?? unit.quantity,
+    });
+  }
+
   function rehydrateRoster(uploadedRoster: Partial<Roster>): Roster {
     console.debug("rehydrating roster data from imported json");
+
     return calculator.recalculateRoster({
       ...uploadedRoster,
       warbands: uploadedRoster.warbands.map(({ id, hero, units, meta }) =>
         calculator.recalculateWarband({
           id: id,
           meta: meta,
-          hero: hero
-            ? calculator.recalculatePointsForUnit({
-                quantity: 1,
-                ...mesbgData[hero.model_id],
-                ...hero,
-              })
-            : null,
+          hero: hero ? hydrateUnit(hero, 1) : null,
           units: [
-            ...units.filter(isSelectedUnit).map((unit) =>
-              calculator.recalculatePointsForUnit({
-                ...(unit.model_id.startsWith("[siege]")
-                  ? siegeEquipmentData[unit.model_id]
-                  : mesbgData[unit.model_id]),
-                ...unit,
-              }),
-            ),
+            ...units.filter(isSelectedUnit).map((unit) => hydrateUnit(unit)),
           ],
         }),
       ),
