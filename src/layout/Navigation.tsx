@@ -285,7 +285,6 @@ const useRosters = () => {
           .filter(([key]) => key !== "ungrouped")
           .sort(([groupOne], [groupTwo]) => {
             const [a, b] = [groupMap[groupOne], groupMap[groupTwo]];
-            console.table({ a, b });
             if (a && b) return a.name.localeCompare(b.name);
             else return !a ? 0 : 1;
           })

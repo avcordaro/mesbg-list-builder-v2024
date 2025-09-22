@@ -80,7 +80,7 @@ export const RosterCloudSyncProvider = ({
     if (!roster || !auth.user) return;
     if (isEqual(roster, previousRosterRef.current)) return;
     previousRosterRef.current = roster;
-    console.log("Starting debounce...");
+    console.debug("Starting debounce...");
     debouncedSync(roster);
   }
 

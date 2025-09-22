@@ -56,7 +56,7 @@ export const SignIn = () => {
     const data = new FormData(event.currentTarget);
     auth
       .signIn(data.get("email") as string, data.get("password") as string)
-      .then((response) => console.log(response))
+      .then((response) => console.debug(response))
       .catch((error) =>
         setSignInError(
           errorMap[error.code] ??

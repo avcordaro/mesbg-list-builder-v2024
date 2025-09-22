@@ -61,7 +61,7 @@ export const SignUp = () => {
         data.get("password") as string,
         data.get("name") as string,
       )
-      .then((response) => console.log(response))
+      .then((response) => console.debug(response))
       .catch((error) => {
         if (error.code === "auth/password-does-not-meet-requirements") {
           const reason = error.message?.match(/\[(.*?)]/);

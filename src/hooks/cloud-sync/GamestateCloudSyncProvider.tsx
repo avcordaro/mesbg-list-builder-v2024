@@ -82,7 +82,7 @@ export const GamestateCloudSyncProvider = ({
     if (!rosterId || !game || !auth.user) return;
     if (isEqual(game, previousRosterRef.current)) return;
     previousRosterRef.current = game;
-    console.log("Starting debounce...");
+    console.debug("Starting debounce...");
     debouncedSync(rosterId, game);
   }
 

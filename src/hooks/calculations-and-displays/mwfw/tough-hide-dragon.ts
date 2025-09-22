@@ -27,8 +27,6 @@ export const handler: MwfwUpdater = {
     const [m, w, f, x] = dragon.split(":");
     const mwfw = [m, w, f, Number(x) + 2].join(":");
 
-    console.log(mwfw);
-
     return [["", mwfw]];
   },
 };
