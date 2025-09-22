@@ -24,10 +24,9 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
   const navigate = useNavigate();
   const { closeModal } = useAppState();
   const { importJsonRoster } = useExport();
-  const { createRoster, rosters, groups } = useRosterBuildingState();
+  const { createRoster, groups } = useRosterBuildingState();
   const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const { groupId: groupSlug } = useParams();
-  const existingRosterIds = rosters.map(({ id }) => id);
 
   const [JSONImport, setJSONImport] = useState("");
   const [JSONImportError, setJSONImportError] = useState("");
@@ -59,12 +58,9 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
       return;
     }
 
-    const id = slugify(roster.name);
     const importedRoster = {
       ...roster,
-      id: existingRosterIds.includes(id)
-        ? withSuffix(id, existingRosterIds)
-        : id,
+      id: withSuffix(slugify(roster.name)),
       group: groupId,
     };
     createRoster(importedRoster);

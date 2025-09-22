@@ -1,4 +1,4 @@
-import { useState, MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuilder.ts";
@@ -16,7 +16,6 @@ export const useCreateRoster = () => {
   const buildNewRoster = useNewRosterBuilder();
   const { id: groupId } =
     groups.find((group) => group.slug === groupSlug) || {};
-  const existingRosterIds = rosters.map(({ id }) => id);
 
   const [rosterName, setRosterName] = useState("");
   const [maxRosterPoints, setMaxRosterPoints] = useState("");
@@ -32,14 +31,6 @@ export const useCreateRoster = () => {
 
   function updateMaxRosterPoints(value: string) {
     setMaxRosterPoints(value);
-  }
-
-  function getRosterId(rosterNameValue: string) {
-    let id = slugify(rosterNameValue);
-    if (existingRosterIds.includes(id)) {
-      id = withSuffix(id, existingRosterIds);
-    }
-    return id;
   }
 
   function fillRosterNameIfEmpty(rosterNameValue: string) {
@@ -73,7 +64,7 @@ export const useCreateRoster = () => {
     if (armyList.army) {
       const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
       const newRoster = buildNewRoster({
-        id: getRosterId(rosterNameValue),
+        id: withSuffix(slugify(rosterNameValue)),
         name: rosterNameValue,
         armyList: armyList.army,
         enableSiege: enableSiege,

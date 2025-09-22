@@ -15,7 +15,6 @@ export const useCreateCustomRoster = () => {
   const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const { id: groupId } =
     groups.find((group) => group.slug === groupSlug) || {};
-  const existingRosterIds = rosters.map(({ id }) => id);
 
   const [rosterName, setRosterName] = useState("");
   const [maxRosterPoints, setMaxRosterPoints] = useState("");
@@ -41,14 +40,6 @@ export const useCreateCustomRoster = () => {
     return `Custom: ${goodOrEvil} (${maxNameIndex + 1})`;
   }
 
-  function getRosterId(rosterNameValue: string) {
-    let id = slugify(rosterNameValue);
-    if (existingRosterIds.includes(id)) {
-      id = withSuffix(id, existingRosterIds);
-    }
-    return id;
-  }
-
   function handleCreateNewRoster(e: MouseEvent) {
     e.preventDefault();
 
@@ -57,7 +48,7 @@ export const useCreateCustomRoster = () => {
     const rosterNameValue = fillRosterNameIfEmpty(rosterName.trim());
     const newRoster: Roster = {
       ...emptyRoster,
-      id: getRosterId(rosterNameValue),
+      id: withSuffix(slugify(rosterNameValue)),
       name: rosterNameValue,
       armyList: `Custom: ${goodOrEvil}`,
       group: groupId,

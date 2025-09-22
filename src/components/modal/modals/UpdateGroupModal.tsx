@@ -36,14 +36,14 @@ export const UpdateGroupModal = () => {
     setRosterGroupNameValid(nameValid);
 
     if (nameValid) {
-      const slug = withSuffix(slugify(rosterGroupNameValue));
-      updateGroup(id, {
+      const group = {
         name: rosterGroupNameValue,
-        slug: slug,
+        slug: withSuffix(slugify(rosterGroupNameValue)),
         icon: rosterGroupIcon?.name,
-      });
+      };
+      updateGroup(id, group);
       if (redirect === true) {
-        navigate(`/rosters/${slug}`);
+        navigate(`/rosters/${group.slug}`);
       }
       triggerAlert(AlertTypes.UPDATE_GROUP_SUCCES);
       closeModal();

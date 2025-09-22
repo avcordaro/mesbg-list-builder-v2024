@@ -5,7 +5,7 @@ import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useState, MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import { FaChessRook, FaClone } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
@@ -21,12 +21,11 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
   const { setCurrentModal } = useAppState();
   const navigate = useNavigate();
   const api = useApi();
-  const { createRoster, rosters } = useRosterBuildingState();
+  const { createRoster } = useRosterBuildingState();
   const [startNewGame, hasStartedGame] = useGameModeState((state) => [
     state.startNewGame,
     state.gameState[props.roster.id],
   ]);
-  const existingRosterIds = rosters.map(({ id }) => id);
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -51,15 +50,12 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
   };
 
   const cloneRoster = (event: MouseEvent<HTMLElement>) => {
-    let id = slugify(props.roster.name);
-    if (existingRosterIds.includes(id)) {
-      id = withSuffix(id, existingRosterIds);
-    }
-    createRoster({
+    const newRoster = {
       ...props.roster,
-      id: id,
+      id: withSuffix(slugify(props.roster.name)),
       name: "Copy of '" + props.roster.name + "'",
-    });
+    };
+    createRoster(newRoster);
 
     handleClose(event);
   };
