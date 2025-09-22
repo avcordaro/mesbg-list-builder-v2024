@@ -15,9 +15,13 @@ export const Home = () => {
     <Container maxWidth={false} sx={{ mt: 2, mb: 5 }}>
       <Stack direction="column" gap={1} flexWrap="wrap">
         <Stack direction="row" justifyContent="space-between">
-          <Stack gap={2} sx={{ maxWidth: "min(calc(100% - 60px), 84ch)" }}>
+          <Stack gap={1} sx={{ maxWidth: "min(100%, 84ch)" }}>
             <Stack direction="row" justifyContent="space-between">
-              <Typography variant="h5" className="middle-earth">
+              <Typography
+                variant="h5"
+                className="middle-earth"
+                sx={{ pt: 2.4, my: 0 }}
+              >
                 Welcome to the
               </Typography>
               <a href={DISCORD_LINK} target="_blank" rel="noreferrer">
@@ -28,7 +32,7 @@ export const Home = () => {
                 />
               </a>
             </Stack>
-            <Typography variant="h3" className="middle-earth">
+            <Typography variant="h3" className="middle-earth" sx={{ mt: 0 }}>
               MESBG List Builder
             </Typography>
             <Typography variant="body1" sx={{ fontSize: "1.3rem" }}>
@@ -63,6 +67,7 @@ export const Home = () => {
               size="large"
               startIcon={<FaPatreon />}
               sx={{
+                my: 2,
                 color: "#F96854",
               }}
               onClick={() => window.open(PATREON_LINK, "_blank")}

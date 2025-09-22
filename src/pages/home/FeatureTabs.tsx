@@ -21,18 +21,14 @@ export const FeatureTabs = () => {
     setValue(newValue);
   };
   return (
-    <Box
-      sx={{
-        maxWidth: "min(calc(100% - 60px), 84ch)",
-      }}
-    >
+    <Box sx={{ my: 3, maxWidth: "min(100%, 84ch)" }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         Features
       </Typography>
 
       <Box>
         <Tabs
-          variant="scrollable"
+          variant="fullWidth"
           scrollButtons="auto"
           value={value}
           onChange={handleChange}
@@ -42,8 +38,6 @@ export const FeatureTabs = () => {
               <span>
                 Create your
                 <br />
-                mesbg
-                <br />
                 army lists
               </span>
             }
@@ -52,9 +46,7 @@ export const FeatureTabs = () => {
           <Tab
             label={
               <span>
-                Have a quick
-                <br />
-                lookup of some
+                lookup
                 <br />
                 special rules
               </span>
@@ -66,8 +58,6 @@ export const FeatureTabs = () => {
               <span>
                 Use digital
                 <br />
-                Might, will, fate
-                <br />
                 trackers
               </span>
             }
@@ -78,7 +68,7 @@ export const FeatureTabs = () => {
               <span>
                 Record the
                 <br />
-                results of your <br /> games
+                games
               </span>
             }
             {...a11yProps(4)}
