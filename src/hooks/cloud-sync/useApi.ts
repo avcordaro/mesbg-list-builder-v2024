@@ -8,6 +8,17 @@ import { RosterGroup } from "../../state/roster-building/groups";
 import { Roster } from "../../types/roster.ts";
 import { useExport } from "../export/useExport.ts";
 
+class ApiError extends Error {
+  readonly statusCode: number;
+  readonly response: Response;
+
+  constructor(message: string, response: Response) {
+    super(message);
+    this.response = response;
+    this.statusCode = response.status;
+  }
+}
+
 export const useApi = () => {
   const auth = useAuth();
   const { convertRosterToJson } = useExport();
@@ -17,6 +28,7 @@ export const useApi = () => {
     url: string,
     method: "POST" | "PUT" | "PATCH" | "DELETE",
     body?: string,
+    alertOnFailure: boolean = true,
   ) => {
     if (!auth.user) return Promise.resolve(); // no auth - no remote.
     const idToken = await auth.user.getIdToken();
@@ -29,8 +41,9 @@ export const useApi = () => {
     });
     if (!response.ok) {
       const { title, message } = await response.json();
-      triggerAlert(AlertTypes.API_REQUEST_FAILED, { title, message });
-      throw new Error(`API Request failed: ${message}`);
+      if (alertOnFailure)
+        triggerAlert(AlertTypes.API_REQUEST_FAILED, { title, message });
+      throw new ApiError(`API Request failed: ${message}`, response);
     }
 
     return response;
@@ -39,14 +52,17 @@ export const useApi = () => {
   const deleteRoster = (rosterId: string) =>
     request(`/rosters/${rosterId}`, "DELETE");
 
-  const createRoster = (roster: Roster) =>
-    request("/rosters", "POST", convertRosterToJson(roster));
+  const createRoster = (roster: Roster, alertOnFailure: boolean = true) =>
+    request("/rosters", "POST", convertRosterToJson(roster), alertOnFailure);
 
   const updateRoster = (roster: Roster) =>
     request(`/rosters/${roster.id}`, "PUT", convertRosterToJson(roster));
 
   const createGroup = (group: RosterGroup) =>
     request("/groups", "POST", JSON.stringify(group));
+
+  const updateGroup = (group: Omit<RosterGroup, "rosters">) =>
+    request(`/groups/${group.id}`, "PUT", JSON.stringify(group));
 
   const addRosterToGroup = (groupId: string, rosterId: string) =>
     request(`/groups/${groupId}/add/${rosterId}`, "PATCH");
@@ -97,6 +113,7 @@ export const useApi = () => {
     updateRoster,
     deleteRoster,
     createGroup,
+    updateGroup,
     addRosterToGroup,
     removeRosterFromGroup,
     deleteGroup,

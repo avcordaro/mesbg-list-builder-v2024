@@ -1,9 +1,9 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
-import { slugify, withSuffix } from "../../../utils/string.ts";
 import { AlertTypes } from "../../alerts/alert-types.tsx";
 import {
   GroupIconSelector,
@@ -19,6 +19,7 @@ export const UpdateGroupModal = () => {
   const { updateGroup, groups } = useRosterBuildingState();
   const { id, name, icon } =
     groups.find((group) => group.slug === groupId) || {};
+  const api = useApi();
 
   const navigate = useNavigate();
 
@@ -37,11 +38,13 @@ export const UpdateGroupModal = () => {
 
     if (nameValid) {
       const group = {
+        id: groupId,
         name: rosterGroupNameValue,
-        slug: withSuffix(slugify(rosterGroupNameValue)),
+        slug: groupId,
         icon: rosterGroupIcon?.name,
       };
       updateGroup(id, group);
+      api.updateGroup(group);
       if (redirect === true) {
         navigate(`/rosters/${group.slug}`);
       }

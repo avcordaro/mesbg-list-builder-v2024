@@ -283,9 +283,12 @@ const useRosters = () => {
     : [
         ...Object.entries(groupedRosters)
           .filter(([key]) => key !== "ungrouped")
-          .sort((a, b) =>
-            groupMap[a[0]].name.localeCompare(groupMap[b[0]].name),
-          )
+          .sort(([groupOne], [groupTwo]) => {
+            const [a, b] = [groupMap[groupOne], groupMap[groupTwo]];
+            console.table({ a, b });
+            if (a && b) return a.name.localeCompare(b.name);
+            else return !a ? 0 : 1;
+          })
           .map(([group, groupRosters]) => ({
             action: () => {},
             active:

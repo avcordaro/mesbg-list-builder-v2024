@@ -4,6 +4,7 @@ import { Game } from "../../state/gamemode/gamestate";
 import { PastGame } from "../../state/recent-games/history";
 import { RosterGroup } from "../../state/roster-building/groups";
 import { Roster } from "../../types/roster.ts";
+import { slugify, withSuffix } from "../../utils/string.ts";
 import { useApi } from "./useApi.ts";
 
 export type EntityType =
@@ -35,12 +36,31 @@ export function useSyncQueue() {
   const [completed, setCompleted] = useState(0);
 
   const api = useApi();
-  const apiMap: Record<EntityType, (data: SyncItemData) => Promise<void>> = {
+  const apiMap: Record<
+    EntityType,
+    (
+      data: SyncItemData,
+      mappedIds?: Record<string, string>,
+    ) => Promise<void | string>
+  > = {
     rosters: async (data: Roster) => {
-      await api.createRoster(data);
+      try {
+        await api.createRoster(data, false);
+      } catch (e) {
+        if (e.statusCode === 409) {
+          const newId = withSuffix(slugify(data.name));
+          await api.createRoster({ ...data, id: newId });
+          return newId;
+        } else {
+          throw e;
+        }
+      }
     },
-    groups: async (data: RosterGroup) => {
-      await api.createGroup(data);
+    groups: async (data: RosterGroup, mappedIds) => {
+      await api.createGroup({
+        ...data,
+        rosters: data.rosters.map((roster) => mappedIds[roster] ?? roster),
+      });
     },
     games: async (data: { id: string; game: Game }) => {
       await api.createGamestate(data.id, data.game);
@@ -68,6 +88,7 @@ export function useSyncQueue() {
   }, []);
 
   const processQueue = useCallback(async () => {
+    const idMap = {};
     for (const item of queue) {
       if (item.status === "pending") {
         setQueue((prev) =>
@@ -76,7 +97,8 @@ export function useSyncQueue() {
           ),
         );
         try {
-          await apiMap[item.type](item.data);
+          const id = await apiMap[item.type](item.data, idMap);
+          if (id) idMap[(item.data as Roster).id] = id;
           setQueue((prev) =>
             prev.map((q) => (q.id === item.id ? { ...q, status: "done" } : q)),
           );
