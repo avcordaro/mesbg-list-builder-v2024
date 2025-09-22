@@ -18,10 +18,11 @@ export const useRefetch = () => {
   const resetCollection = useCollectionState((state) => state.reset);
   const resetGamestate = useGameModeState((state) => state.reset);
 
-  const getFromApi = (path: string) => {
+  const getFromApi = async (path: string) => {
+    const idToken = await auth.user.getIdToken();
     return fetch(`${API_URL}/${path}`, {
       headers: {
-        Authorization: "Bearer " + auth.idToken,
+        Authorization: "Bearer " + idToken,
       },
     });
   };

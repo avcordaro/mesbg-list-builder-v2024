@@ -18,12 +18,13 @@ export const useApi = () => {
     method: "POST" | "PUT" | "PATCH" | "DELETE",
     body?: string,
   ) => {
-    if (!auth.idToken) return Promise.resolve(); // no auth - no remote.
+    if (!auth.user) return Promise.resolve(); // no auth - no remote.
+    const idToken = await auth.user.getIdToken();
     const response = await fetch(`${API_URL}${url}`, {
       method,
       body,
       headers: {
-        Authorization: "Bearer " + auth.idToken,
+        Authorization: "Bearer " + idToken,
       },
     });
     if (!response.ok) {

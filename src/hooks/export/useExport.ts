@@ -1,3 +1,4 @@
+import { v4 as randomUuid } from "uuid";
 import { mesbgData, siegeEquipmentData } from "../../assets/data.ts";
 import { isSelectedUnit, Roster, SelectedUnit } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
@@ -31,7 +32,6 @@ export const useExport = () => {
           id: warband.id,
           hero: warband.hero
             ? {
-                id: warband.hero.id,
                 model_id: warband.hero.model_id,
                 MWFW: warband.hero.MWFW,
                 options: warband.hero.options
@@ -41,7 +41,6 @@ export const useExport = () => {
               }
             : null,
           units: warband.units.filter(isSelectedUnit).map((unit) => ({
-            id: unit.id,
             model_id: unit.model_id,
             MWFW: unit.MWFW,
             options: unit.options
@@ -81,7 +80,6 @@ export const useExport = () => {
         "warbands",
         "warbands[].id",
         "warbands[].units",
-        "warbands[].units[].id",
         "warbands[].units[].model_id",
         "warbands[].units[].MWFW",
         "warbands[].units[].options",
@@ -113,6 +111,7 @@ export const useExport = () => {
   function hydrateUnit(unit: SelectedUnit, quantity?: number) {
     if (unit.model_id.startsWith("[siege]")) {
       return calculator.recalculatePointsForUnit({
+        id: randomUuid(),
         ...siegeEquipmentData[unit.model_id],
         ...unit,
         quantity: quantity ?? unit.quantity,
@@ -123,6 +122,7 @@ export const useExport = () => {
       (option) => option.quantity > 0,
     );
     return calculator.recalculatePointsForUnit({
+      id: randomUuid(),
       ...base,
       ...unit,
       options: base.options.map((option) => {
