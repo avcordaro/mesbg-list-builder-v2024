@@ -38,8 +38,7 @@ import {
 } from "react";
 import { AiFillTrophy } from "react-icons/ai";
 import { FaDatabase, FaDiscord, FaPatreon } from "react-icons/fa";
-import { GiMightyForce, GiSwordsEmblem } from "react-icons/gi";
-import { HiFire } from "react-icons/hi";
+import { GiSwordsEmblem } from "react-icons/gi";
 import { HiIdentification } from "react-icons/hi2";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
@@ -379,27 +378,15 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
     },
     { divider: true },
     {
-      icon: <AutoAwesome />,
-      label: "Special Rules",
-      action: () => openSidebar(DrawerTypes.SPECIAL_RULE_SEARCH),
-      active: false,
-    },
-    {
-      icon: <HiFire style={{ fontSize: "1.5rem" }} />,
-      label: "Magical Powers",
-      action: () => openSidebar(DrawerTypes.MAGICAL_POWER_SEARCH),
-      active: false,
-    },
-    {
-      icon: <GiMightyForce style={{ fontSize: "1.5rem" }} />,
-      label: "Heroic Actions",
-      action: () => openSidebar(DrawerTypes.HEROIC_ACTION_SEARCH),
-      active: false,
-    },
-    {
       icon: <HiIdentification style={{ fontSize: "1.5rem" }} />,
       label: "Profiles",
       action: () => openSidebar(DrawerTypes.PROFILE_SEARCH),
+      active: false,
+    },
+    {
+      icon: <AutoAwesome />,
+      label: "Special rules & Magic",
+      action: () => openSidebar(DrawerTypes.KEYWORD_SEARCH),
       active: false,
     },
     {

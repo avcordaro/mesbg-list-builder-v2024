@@ -1,14 +1,16 @@
 import keywords from "../../../assets/data/keywords.json";
+import { useUsedMagicalPowers } from "../../../hooks/calculations-and-displays/useUsedMagicalPowers.ts";
 import { useUsedSpecialRules } from "../../../hooks/calculations-and-displays/useUsedSpecialRules.ts";
 import { KeywordSearch } from "./KeywordSearch.tsx";
 
 export const SpecialRulesSearch = () => {
-  const allSpecialRules = keywords.filter(
-    (keyword) => keyword.type === "special_rule",
-  );
   const usedSpecialRules = useUsedSpecialRules();
+  const usedMagicalPowers = useUsedMagicalPowers();
 
   return (
-    <KeywordSearch keywords={allSpecialRules} usedKeywords={usedSpecialRules} />
+    <KeywordSearch
+      keywords={keywords}
+      usedKeywords={[...usedSpecialRules, ...usedMagicalPowers]}
+    />
   );
 };

@@ -202,7 +202,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                             },
                           }}
                           onClick={() => {
-                            openSidebar(DrawerTypes.SPECIAL_RULE_SEARCH, {
+                            openSidebar(DrawerTypes.KEYWORD_SEARCH, {
                               searchKeyword: rule.replace(/\(.*?\)/g, ""),
                             });
                           }}
@@ -260,7 +260,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                             },
                           }}
                           onClick={() => {
-                            openSidebar(DrawerTypes.MAGICAL_POWER_SEARCH, {
+                            openSidebar(DrawerTypes.KEYWORD_SEARCH, {
                               searchKeyword: power.name,
                             });
                           }}
@@ -288,7 +288,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                             },
                           }}
                           onClick={() => {
-                            openSidebar(DrawerTypes.HEROIC_ACTION_SEARCH, {
+                            openSidebar(DrawerTypes.KEYWORD_SEARCH, {
                               searchKeyword: action,
                             });
                           }}

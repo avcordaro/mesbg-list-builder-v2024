@@ -8,6 +8,8 @@ import {
   TextField,
 } from "@mui/material";
 import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Fragment, FunctionComponent, useState } from "react";
 import { useAppState } from "../../../state/app";
@@ -18,37 +20,68 @@ const Keyword = ({
   active_passive,
   description,
   used,
+  type,
   expanded: expandedProp,
 }: {
   name: string;
   active_passive?: string;
   description: string;
   used: boolean;
+  type: string;
   expanded?: boolean;
 }) => {
   const { preferences } = useUserPreferences();
   const [expanded, setExpanded] = useState(expandedProp || false);
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  const chipConfig = {
+    special_rule: {
+      label: "Special rule",
+      color: "secondary",
+    },
+    magical_power: {
+      label: "Magical power",
+      color: "info",
+    },
+    heroic_action: {
+      label: "Heroic action",
+      color: "warning",
+    },
+  }[type] as any;
+
   return (
     <Accordion expanded={expanded} onClick={() => setExpanded(!expanded)}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography
-          variant="body1"
-          component="div"
-          color={
-            !preferences.colorCodedRules
-              ? "inherit"
-              : used
-                ? "success.light"
-                : "textSecondary"
-          }
-          sx={{
-            textDecoration:
-              preferences.colorCodedRules && used ? "underline" : "normal",
-          }}
+        <Stack
+          justifyContent="space-between"
+          direction="row"
+          sx={{ width: "100%" }}
         >
-          <b>{name}</b> {active_passive ? <i>({active_passive})</i> : ""}
-        </Typography>
+          <Typography
+            variant="body1"
+            component="div"
+            color={
+              !preferences.colorCodedRules
+                ? "inherit"
+                : used
+                  ? "success.light"
+                  : "textSecondary"
+            }
+            sx={{
+              textDecoration:
+                preferences.colorCodedRules && used ? "underline" : "normal",
+            }}
+          >
+            <b>{name}</b> {active_passive ? <i>({active_passive})</i> : ""}
+          </Typography>
+          {chipConfig && (
+            <Chip
+              size="small"
+              label={chipConfig.label}
+              color={chipConfig.color}
+            />
+          )}
+        </Stack>
       </AccordionSummary>
       <AccordionDetails>
         <Typography>
@@ -64,7 +97,12 @@ const Keyword = ({
 };
 
 export const KeywordSearch: FunctionComponent<{
-  keywords: { name: string; active_passive?: string; description: string }[];
+  keywords: {
+    name: string;
+    active_passive?: string;
+    description: string;
+    type: string;
+  }[];
   usedKeywords?: string[];
 }> = ({ keywords, usedKeywords = [] }) => {
   const { openSidebarContext } = useAppState();
