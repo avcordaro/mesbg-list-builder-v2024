@@ -21,7 +21,7 @@ export const useExport = () => {
     const s = JSON.stringify(
       {
         metadata: {
-          leader: roster.metadata.leader,
+          leader: roster.metadata.leader ?? "",
           leaderCompulsory: roster.metadata.leaderCompulsory,
           tttSpecialUpgrades: roster.metadata.tttSpecialUpgrades,
           siegeRoster: roster.metadata.siegeRoster,
