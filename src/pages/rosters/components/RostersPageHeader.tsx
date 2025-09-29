@@ -7,7 +7,7 @@ import { GroupOptionsPopoverMenu } from "../../../components/common/roster-group
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { RosterGroup } from "../../../state/roster-building/groups/index.ts";
 import { PATREON_LINK } from "../../home/Home.tsx";
-import { RosterBreadCrumbs } from "./RosterBreadCrumbs.tsx";
+import { RostersBreadCrumbs } from "./RostersBreadCrumbs.tsx";
 
 type RostersPageHeaderProps = {
   group?: RosterGroup;
@@ -53,7 +53,7 @@ export const RostersPageHeader: FunctionComponent<RostersPageHeaderProps> = ({
             </Typography>
             <GroupOptionsPopoverMenu groupId={group.slug} redirect={true} />
           </Stack>
-          <RosterBreadCrumbs group={group} />
+          <RostersBreadCrumbs group={group} />
         </>
       ) : (
         <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>

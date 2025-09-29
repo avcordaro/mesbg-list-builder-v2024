@@ -55,7 +55,10 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         ),
         rosters: get().rosters.map((roster) =>
           update.rosters?.includes(roster.id)
-            ? { ...roster, group: id }
+            ? {
+                ...roster,
+                group: get().groups.find((group) => group.id === id).slug,
+              }
             : roster,
         ),
       }),
