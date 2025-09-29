@@ -67,6 +67,9 @@ export const useApi = () => {
   const setParentGroup = (groupId: string, parent: string) =>
     request(`/groups/${groupId}/parent/${parent}`, "PATCH");
 
+  const removeParentGroup = (groupId: string) =>
+    request(`/groups/${groupId}/parent`, "DELETE");
+
   const addRosterToGroup = (groupId: string, rosterId: string) =>
     request(`/groups/${groupId}/add/${rosterId}`, "PATCH");
 
@@ -118,6 +121,7 @@ export const useApi = () => {
     createGroup,
     updateGroup,
     setParentGroup,
+    removeParentGroup,
     addRosterToGroup,
     removeRosterFromGroup,
     deleteGroup,

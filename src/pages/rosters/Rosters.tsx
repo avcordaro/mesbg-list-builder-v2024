@@ -7,6 +7,7 @@ import { NewRosterButton } from "../../components/atoms/new-roster-button/NewRos
 import { useRosterBuildingState } from "../../state/roster-building";
 import { RostersPageHeader } from "./components/RostersPageHeader.tsx";
 import { RostersSearchFilter } from "./components/RostersSearchFilter.tsx";
+import { RemoveFromGroupDroppable } from "./components/cards/RemoveFromGroupDroppable.tsx";
 import { RosterCardList } from "./components/cards/RosterCardList.tsx";
 import { RosterGroupCardList } from "./components/cards/RosterGroupCardList.tsx";
 import { useRostersDragAndDrop } from "./useRostersDragAndDrop.ts";
@@ -28,6 +29,7 @@ export const Rosters: FunctionComponent = () => {
           <RostersPageHeader group={activeGroup} />
           <RostersSearchFilter filter={filter} setFilter={setFilter} />
           <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
+            <RemoveFromGroupDroppable visible={!!activeGroup} />
             <RosterGroupCardList groups={groups} dragged={dragging} />
             <RosterCardList rosters={rosters} dragged={dragging} />
           </Stack>

@@ -89,48 +89,7 @@
 //             flexWrap="wrap"
 //             flex={1}
 //           >
-//             <Droppable droppableId={REMOVE_FOM_GROUP}>
-//               {(provided, snapshot) => (
-//                 <Stack
-//                   ref={provided.innerRef}
-//                   {...provided.droppableProps}
-//                   sx={[
-//                     {
-//                       p: 1,
-//                       border: 2,
-//                       width: screen.isMobile ? "100%" : `${CARD_SIZE_IN_PX}px`,
-//                       borderStyle: "dashed",
-//                       borderColor: (theme) => theme.palette.text.disabled,
-//                     },
-//                     snapshot.isDraggingOver
-//                       ? {
-//                           backgroundColor: "#f6f6f6",
-//                         }
-//                       : {},
-//                   ]}
-//                   justifyContent="center"
-//                   alignItems="center"
-//                 >
-//                   <Typography
-//                     variant="body1"
-//                     color="textSecondary"
-//                     sx={{ width: "24ch", textAlign: "center" }}
-//                   >
-//                     Drag and drop your roster here to remove it from the group.
-//                   </Typography>
-//                   <Box
-//                     sx={{
-//                       "&>*": {
-//                         width: "0px !important",
-//                         height: "0px !important",
-//                       },
-//                     }}
-//                   >
-//                     {provided.placeholder}
-//                   </Box>
-//                 </Stack>
-//               )}
-//             </Droppable>
+//
 //             {rosterLinks.map((card, index) => (
 //               <Droppable
 //                 droppableId={card.roster.id}
