@@ -6,14 +6,12 @@ import {
   DropResult,
 } from "@hello-pangea/dnd";
 import { CancelRounded } from "@mui/icons-material";
-import { Button, InputAdornment, TextField } from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import { FaPatreon } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 import { NewRosterButton } from "../../components/atoms/new-roster-button/NewRosterButton.tsx";
 import {
@@ -28,7 +26,7 @@ import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSi
 import { useApi } from "../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
-import { PATREON_LINK } from "../home/Home.tsx";
+import { RostersPageHeader } from "./components/RostersPageHeader.tsx";
 import {
   RosterSortButton,
   SortField,
@@ -106,35 +104,7 @@ export const Rosters: FunctionComponent = () => {
   return (
     <Container maxWidth={false} sx={{ my: 2 }}>
       <Stack>
-        <Stack
-          direction={screen.isMobile ? "column-reverse" : "row"}
-          gap={2}
-          justifyContent="space-between"
-        >
-          <Typography variant="h4" className="middle-earth">
-            My Rosters
-          </Typography>
-          <Button
-            variant="outlined"
-            size="large"
-            startIcon={<FaPatreon />}
-            sx={{
-              color: "#F96854",
-              borderColor: "#F96854",
-              p: 1,
-              px: 3,
-            }}
-            onClick={() => window.open(PATREON_LINK, "_blank")}
-          >
-            Support us on patreon
-          </Button>
-        </Stack>
-
-        <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-          Note: You can create roster groups by simply dragging and dropping one
-          roster onto another, or onto an existing group.
-        </Typography>
-
+        <RostersPageHeader />
         <Stack direction="row" gap={2} sx={{ py: 2 }}>
           <TextField
             id="database-filter-input"
