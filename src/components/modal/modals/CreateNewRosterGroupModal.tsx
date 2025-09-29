@@ -1,5 +1,6 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -17,6 +18,7 @@ export const CreateNewRosterGroupModal = () => {
   } = useAppState();
   const { createGroup } = useRosterBuildingState();
   const { createGroup: remoteCreate } = useApi();
+  const { groupId: parentGroupId } = useParams();
 
   const [rosterGroupName, setRosterGroupName] = useState("");
   const [rosterGroupNameValid, setRosterGroupNameValid] = useState(true);
@@ -42,6 +44,7 @@ export const CreateNewRosterGroupModal = () => {
         name: rosterGroupNameValue,
         slug: withSuffix(slugify(rosterGroupNameValue)),
         rosters: rosters.map((roster: Roster) => roster.id),
+        parent: parentGroupId,
         icon: rosterGroupIcon?.name,
       };
       const id = createGroup(group);

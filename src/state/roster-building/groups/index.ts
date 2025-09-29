@@ -8,6 +8,7 @@ export type RosterGroup = {
   slug: string;
   icon?: string;
   rosters: string[];
+  parent?: string; // if set: matches a slug of another group.
 };
 
 type RosterGroupStateActions = {

@@ -5,15 +5,13 @@ import {
   DropResult,
 } from "@hello-pangea/dnd";
 import { CancelRounded } from "@mui/icons-material";
-import { Breadcrumbs, Button, InputAdornment, TextField } from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
 import { ChangeEvent, FunctionComponent, useState } from "react";
-import { FaPatreon } from "react-icons/fa";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { Link } from "../../components/atoms/link/Link.tsx";
 import { NewRosterButton } from "../../components/atoms/new-roster-button/NewRosterButton.tsx";
@@ -22,13 +20,11 @@ import {
   RosterSummaryCard,
   RosterSummaryCardProps,
 } from "../../components/common/roster-card/RosterSummaryCard.tsx";
-import { GroupOptionsPopoverMenu } from "../../components/common/roster-group-card/RosterGroupPopoverMenu.tsx";
 import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useApi } from "../../hooks/cloud-sync/useApi.ts";
 import { useRosterBuildingState } from "../../state/roster-building";
-import { useThemeContext } from "../../theme/ThemeContext.tsx";
-import { PATREON_LINK } from "../home/Home.tsx";
+import { RostersPageHeader } from "./components/RostersPageHeader.tsx";
 import {
   RosterSortButton,
   SortField,
@@ -44,8 +40,7 @@ export const RosterGroup: FunctionComponent = () => {
   const screen = useScreenSize();
   const navigate = useNavigate();
   const [filter, setFilter] = useState("");
-  const { palette } = useTheme();
-  const { mode } = useThemeContext();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const group = groups.find((group) => group.slug === slug);
   const api = useApi();
@@ -116,58 +111,7 @@ export const RosterGroup: FunctionComponent = () => {
     <Container maxWidth={false} sx={{ my: 2 }}>
       <DragDropContext onDragEnd={onDragEnd}>
         <Stack sx={{ pb: 10 }}>
-          <Stack flexGrow={1} gap={1}>
-            <Stack
-              direction={screen.isMobile ? "column-reverse" : "row"}
-              gap={2}
-              justifyContent="space-between"
-            >
-              <Typography variant="h4" className="middle-earth">
-                My Rosters
-              </Typography>
-              <Button
-                variant="outlined"
-                size="large"
-                startIcon={<FaPatreon />}
-                sx={{
-                  color: "#F96854",
-                  borderColor: "#F96854",
-                  p: 1,
-                  px: 3,
-                }}
-                onClick={() => window.open(PATREON_LINK, "_blank")}
-              >
-                Support us on patreon
-              </Button>
-            </Stack>
-            <Stack direction="row" alignItems="center" sx={{ mt: -2 }}>
-              <Typography
-                variant="h6"
-                className="middle-earth"
-                color="textSecondary"
-              >
-                {group.name}
-              </Typography>
-              <GroupOptionsPopoverMenu groupId={slug} redirect={true} />
-            </Stack>
-
-            <Breadcrumbs>
-              <Link
-                to="/rosters"
-                style={{
-                  textDecoration: "none",
-                  color:
-                    mode === "dark" ? palette.info.light : palette.info.main,
-                }}
-              >
-                Rosters
-              </Link>
-              <Typography sx={{ color: "text.secondary" }}>
-                {group.name}
-              </Typography>
-            </Breadcrumbs>
-          </Stack>
-
+          <RostersPageHeader group={group} />
           <Stack direction="row" gap={2} sx={{ pt: 2, width: "100%" }}>
             <TextField
               id="database-filter-input"
@@ -203,7 +147,6 @@ export const RosterGroup: FunctionComponent = () => {
               field={searchParams.get("sortBy") as SortField}
             />
           </Stack>
-
           <Stack
             direction="row"
             gap={2}
