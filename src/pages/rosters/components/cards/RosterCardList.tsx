@@ -6,11 +6,10 @@ import { RosterDroppable } from "./RosterDroppable.tsx";
 
 type RosterCardListProps = {
   rosters: Roster[];
-  draggedRoster?: string;
+  dragged?: string;
 };
 
 const getVisibleRosters = (rosters: Roster[], groupId: string) => {
-  console.log(rosters);
   return !groupId
     ? rosters.filter((group) => !group.group)
     : rosters.filter((group) => group.group === groupId);
@@ -18,7 +17,7 @@ const getVisibleRosters = (rosters: Roster[], groupId: string) => {
 
 export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   rosters,
-  draggedRoster,
+  dragged,
 }) => {
   const [searchParams] = useSearchParams();
 
@@ -32,7 +31,7 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
         key={roster.id}
         roster={roster}
         index={index}
-        isDragged={draggedRoster === roster.id}
+        isDragged={dragged}
       />
     ));
 };

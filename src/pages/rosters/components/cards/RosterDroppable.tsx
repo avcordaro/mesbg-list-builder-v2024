@@ -10,7 +10,7 @@ import { Roster } from "../../../../types/roster.ts";
 type RosterDroppableProps = {
   roster: Roster;
   index: number;
-  isDragged?: boolean;
+  isDragged?: string;
 };
 
 export const RosterDroppable = ({
@@ -20,11 +20,15 @@ export const RosterDroppable = ({
 }: RosterDroppableProps) => {
   const screen = useScreenSize();
   return (
-    <Droppable droppableId={"roster:" + roster.id}>
+    <Droppable
+      droppableId={"roster:" + roster.id}
+      isDropDisabled={isDragged?.startsWith("group")}
+    >
       {(provided, snapshot) => {
         return (
           <Box
             ref={provided.innerRef}
+            {...provided.droppableProps}
             sx={[
               {
                 width: screen.isTooSmall ? "100%" : `${CARD_SIZE_IN_PX}px`,
@@ -43,7 +47,7 @@ export const RosterDroppable = ({
                   },
             ]}
           >
-            <Draggable draggableId={roster.id} index={index}>
+            <Draggable draggableId={"roster:" + roster.id} index={index}>
               {(draggableProvided, draggableSnapshot) => {
                 const { style, ...props } = draggableProvided.draggableProps;
                 return (
@@ -51,7 +55,7 @@ export const RosterDroppable = ({
                     ref={draggableProvided.innerRef}
                     {...draggableProvided.dragHandleProps}
                     {...props}
-                    style={isDragged ? style : {}}
+                    style={isDragged === "roster:" + roster.id ? style : {}}
                   >
                     <Box
                       sx={[
