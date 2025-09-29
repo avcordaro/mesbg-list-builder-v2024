@@ -5,6 +5,7 @@ import { RosterGroupDroppable } from "./RosterGroupDroppable.tsx";
 
 type RosterGroupCardListProps = {
   groups: RosterGroup[];
+  dragged?: string;
 };
 
 const getVisibleGroups = (groups: RosterGroup[], groupId?: string) => {
@@ -15,11 +16,16 @@ const getVisibleGroups = (groups: RosterGroup[], groupId?: string) => {
 
 export const RosterGroupCardList: FunctionComponent<
   RosterGroupCardListProps
-> = ({ groups }) => {
+> = ({ groups, dragged }) => {
   const { groupId } = useParams();
   const visibleGroups = getVisibleGroups(groups, groupId);
 
-  return visibleGroups.map((group) => (
-    <RosterGroupDroppable group={group} key={group.id} />
+  return visibleGroups.map((group, index) => (
+    <RosterGroupDroppable
+      group={group}
+      key={group.id}
+      index={index}
+      isDragged={dragged}
+    />
   ));
 };
