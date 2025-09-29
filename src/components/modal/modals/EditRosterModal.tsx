@@ -1,9 +1,15 @@
 import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuilder.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
+import {
+  ArmySelectionInput,
+  SelectedArmyList,
+} from "../../atoms/army-selector/ArmySelectionInput.tsx";
 
 export const EditRosterModal = () => {
   const {
@@ -11,9 +17,15 @@ export const EditRosterModal = () => {
     modalContext: { roster },
   } = useAppState();
   const { updateRoster } = useRosterBuildingState();
+  const rebuildRoster = useNewRosterBuilder();
 
   const [rosterName, setRosterName] = useState(roster?.name || "");
   const [rosterNameValid, setRosterNameValid] = useState(true);
+  const [armyList, setArmyList] = useState<SelectedArmyList>({
+    title: roster.armyList,
+    army: roster.armyList,
+    type: "",
+  });
 
   const [rosterPointsLimit, setRosterPointsLimit] = useState(
     roster?.metadata.maxPoints ? String(roster.metadata.maxPoints) : "",
@@ -32,14 +44,30 @@ export const EditRosterModal = () => {
     setRosterPointsLimitValid(pointLimitValid);
 
     if (nameValid && pointLimitValid) {
-      updateRoster({
-        ...roster,
-        name: rosterNameValue,
-        metadata: {
-          ...roster.metadata,
-          maxPoints: Number(pointLimit),
-        },
-      });
+      if (armyList === roster.armyList) {
+        updateRoster({
+          ...roster,
+          name: rosterNameValue,
+          metadata: {
+            ...roster.metadata,
+            maxPoints: Number(pointLimit),
+          },
+        });
+      } else {
+        updateRoster(
+          rebuildRoster({
+            id: roster.id,
+            groupId: roster.group,
+            name: rosterNameValue,
+            armyList: armyList.army,
+            maximumPoints: Number(pointLimit),
+            enableSiege: roster.metadata.siegeRoster,
+            siegeRole: roster.metadata.siegeRole,
+            withHero: armyList.hero,
+          }),
+        );
+      }
+
       closeModal();
     }
   };
@@ -57,19 +85,23 @@ export const EditRosterModal = () => {
   return (
     <>
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
-        <CustomAlert severity="warning" title="">
-          <Typography>
-            You can change the name of your roster. The ID, and thus the URL to
-            your roster, will remain unchanged!
-          </Typography>
-        </CustomAlert>
+        {armyList.army !== roster.armyList && (
+          <Box sx={{ mb: 2 }}>
+            <CustomAlert severity="warning" title="Changing the army list">
+              <Typography>
+                Changing the army list on your roster will reset your current
+                selection. You are basically starting over from scratch!
+              </Typography>
+            </CustomAlert>
+          </Box>
+        )}
 
-        <TextField
-          value={roster.armyList}
-          label="Army"
-          disabled
-          sx={{ mt: 2 }}
-        />
+        {roster.armyList.startsWith("Custom:") ? (
+          <TextField value={roster.armyList} label="Army" disabled />
+        ) : (
+          <ArmySelectionInput armyList={armyList} setArmyList={setArmyList} />
+        )}
+
         <TextField
           fullWidth
           label="Roster name"
