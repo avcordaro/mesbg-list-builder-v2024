@@ -5,12 +5,13 @@ import { useApi } from "../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
 
-export const REMOVE_FOM_GROUP = "remove-from-group";
+export const REMOVE_FOM_GROUP = "remove:from-group";
 
 export const useRostersDragAndDrop = () => {
   const api = useApi();
   const { setCurrentModal } = useAppState();
-  const { rosters, groups, updateGroup } = useRosterBuildingState();
+  const { rosters, groups, updateGroup, updateRoster } =
+    useRosterBuildingState();
 
   const [dragging, setDragging] = useState<string>();
 
@@ -29,12 +30,63 @@ export const useRostersDragAndDrop = () => {
     api.addRosterToGroup(groupSlug, rosterId);
   }
 
+  function removeRosterFromGroup(groupId: string, rosterId: string) {
+    const group = groups.find((group) => group.id === groupId);
+    const newRosters = group.rosters.filter((roster) => roster !== rosterId);
+
+    updateRoster({
+      ...rosters.find(({ id }) => id === rosterId),
+      group: null,
+    });
+    updateGroup(groupId, { rosters: newRosters });
+    api.removeRosterFromGroup(group.slug, rosterId);
+  }
+
   function setParentGroup(parent: string, groupId: string) {
     const groupSlug = groups.find((group) => group.id === groupId)?.slug;
     const parentSlug = groups.find((group) => group.id === parent)?.slug;
 
     updateGroup(groupId, { parent: parentSlug });
     api.setParentGroup(groupSlug, parentSlug);
+  }
+
+  function moveGroupUpOneGroup(itemId: string) {
+    const group = groups.find((group) => group.id === itemId);
+    const groupSlug = group.slug;
+    const parentId = group.parent;
+    const parentOfParent = groups.find(
+      (group) => group.slug === parentId,
+    )?.parent;
+
+    if (parentOfParent) {
+      updateGroup(itemId, { parent: parentOfParent });
+      api.setParentGroup(groupSlug, parentOfParent);
+    } else {
+      updateGroup(itemId, { parent: null });
+      api.removeParentGroup(groupSlug);
+    }
+  }
+
+  function moveRosterUpOneGroup(itemId: string) {
+    const roster = rosters.find((roster) => roster.id === itemId);
+    const currentGroup = groups.find((group) => group.slug === roster.group);
+    const parentGroup = groups.find(
+      (group) => group.slug === currentGroup.parent,
+    );
+
+    if (parentGroup) {
+      addRosterToGroup(parentGroup.id, roster.id);
+    } else {
+      removeRosterFromGroup(currentGroup.id, roster.id);
+    }
+  }
+
+  function removeFromGroup(itemType: string, itemId: string) {
+    if (itemType === "group") {
+      moveGroupUpOneGroup(itemId);
+    } else if (itemType === "roster") {
+      moveRosterUpOneGroup(itemId);
+    }
   }
 
   function onDragEnd(result: DropResult) {
@@ -57,7 +109,10 @@ export const useRostersDragAndDrop = () => {
     const [destType, destId] = result.destination.droppableId.split(":");
     const [sourceType, sourceId] = result.source.droppableId.split(":");
 
-    if (sourceType === "group" && destType === "group") {
+    if (destType === "remove") {
+      console.log(`Remove ${sourceType} ${sourceId} from the current group...`);
+      removeFromGroup(sourceType, sourceId);
+    } else if (sourceType === "group" && destType === "group") {
       console.log(`Set parent group for ${sourceId} to group ${destId}`);
       setParentGroup(destId, sourceId);
     } else if (sourceType === "roster" && destType === "group") {
