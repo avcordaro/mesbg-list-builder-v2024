@@ -30,7 +30,7 @@ function selectParentGroups(group: RosterGroup) {
   return ({ groups }) => getParentGroups(group, groups);
 }
 
-export const RosterBreadCrumbs: FunctionComponent<RosterBreadCrumbsProps> = ({
+export const RostersBreadCrumbs: FunctionComponent<RosterBreadCrumbsProps> = ({
   group,
 }) => {
   const { palette } = useTheme();
