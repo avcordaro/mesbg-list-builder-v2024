@@ -12,16 +12,14 @@ export const useRostersDragAndDrop = () => {
   const { setCurrentModal } = useAppState();
   const { rosters, groups, updateGroup } = useRosterBuildingState();
 
-  const [draggingRoster, setDraggingRoster] = useState<string>();
+  const [dragging, setDragging] = useState<string>();
 
   function onDragStart(start: DragStart) {
-    setDraggingRoster(start.draggableId);
+    setDragging(start.draggableId);
   }
 
   function addRosterToGroup(groupId: string, rosterId: string) {
-    console.debug(`Add roster ${rosterId} to group ${groupId}`);
     const groupSlug = groups.find((group) => group.id === groupId)?.slug;
-
     updateGroup(groupId, {
       rosters: [
         ...groups.find((group) => group.id === groupId).rosters,
@@ -31,27 +29,53 @@ export const useRostersDragAndDrop = () => {
     api.addRosterToGroup(groupSlug, rosterId);
   }
 
+  function setParentGroup(parent: string, groupId: string) {
+    const groupSlug = groups.find((group) => group.id === groupId)?.slug;
+    const parentSlug = groups.find((group) => group.id === parent)?.slug;
+
+    updateGroup(groupId, { parent: parentSlug });
+    api.setParentGroup(groupSlug, parentSlug);
+  }
+
   function onDragEnd(result: DropResult) {
-    setDraggingRoster(null);
+    setDragging(null);
 
-    if (!result.destination) return; // dropped outside a droppable container. Nothing to be done.
-
-    if (result.source.droppableId === result.destination.droppableId) return; // dropped item on its self (same spot). Nothing needs to be done here.
-
-    const [type, destinationId] = result.destination.droppableId.split(":");
-
-    if (type === "group") {
-      addRosterToGroup(destinationId, result.draggableId);
+    if (!result.destination) {
+      console.debug(
+        "Dropped outside a droppable container. Nothing to be done.",
+      );
       return;
     }
 
-    console.debug(`Attempt create group...`);
-    const rosterA = rosters.find(({ id }) => id === result.draggableId);
-    const rosterB = rosters.find(({ id }) => id === destinationId);
-    setCurrentModal(ModalTypes.CREATE_ROSTER_GROUP, {
-      rosters: [rosterA, rosterB],
-    });
+    if (result.source.droppableId === result.destination.droppableId) {
+      console.debug(
+        "Dropped item on its self (same spot). Nothing needs to be done here.",
+      );
+      return;
+    }
+
+    const [destType, destId] = result.destination.droppableId.split(":");
+    const [sourceType, sourceId] = result.source.droppableId.split(":");
+
+    if (sourceType === "group" && destType === "group") {
+      console.log(`Set parent group for ${sourceId} to group ${destId}`);
+      setParentGroup(destId, sourceId);
+    } else if (sourceType === "roster" && destType === "group") {
+      console.log(`Add roster ${sourceId} to group ${destId}`);
+      addRosterToGroup(destId, sourceId);
+    } else if (sourceType === "roster" && destType === "roster") {
+      console.log(`Create new group with rosters...`);
+      const rosterA = rosters.find(({ id }) => id === sourceId);
+      const rosterB = rosters.find(({ id }) => id === destId);
+      setCurrentModal(ModalTypes.CREATE_ROSTER_GROUP, {
+        rosters: [rosterA, rosterB],
+      });
+    } else {
+      console.warn(
+        `Unable to perform operation dropping ${sourceType} on ${destType}`,
+      );
+    }
   }
 
-  return { onDragStart, onDragEnd, draggingRoster };
+  return { onDragStart, onDragEnd, dragging };
 };

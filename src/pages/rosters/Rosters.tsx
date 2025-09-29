@@ -15,7 +15,7 @@ export const Rosters: FunctionComponent = () => {
   const { groupId } = useParams();
 
   const { rosters, groups } = useRosterBuildingState();
-  const { onDragStart, onDragEnd, draggingRoster } = useRostersDragAndDrop();
+  const { onDragStart, onDragEnd, dragging } = useRostersDragAndDrop();
 
   const activeGroup = groups.find((group) => group.slug === groupId);
 
@@ -28,8 +28,8 @@ export const Rosters: FunctionComponent = () => {
           <RostersPageHeader group={activeGroup} />
           <RostersSearchFilter filter={filter} setFilter={setFilter} />
           <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
-            <RosterGroupCardList groups={groups} />
-            <RosterCardList rosters={rosters} draggedRoster={draggingRoster} />
+            <RosterGroupCardList groups={groups} dragged={dragging} />
+            <RosterCardList rosters={rosters} dragged={dragging} />
           </Stack>
         </Stack>
       </DragDropContext>
