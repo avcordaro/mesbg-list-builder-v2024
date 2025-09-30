@@ -11,7 +11,8 @@
       "Replaced the create-or-import roster card with a FAB as was already done on mobile."
     ],
     "bugfixes": [
-      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card."
+      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card.",
+      "Fix issue where duplicated rosters are not saved and synced."
     ]
   },
   "1.33": {
