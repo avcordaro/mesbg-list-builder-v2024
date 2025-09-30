@@ -55,7 +55,11 @@ export const RosterPopoverMenu = (props: { roster: Roster }) => {
       id: withSuffix(slugify(props.roster.name)),
       name: "Copy of '" + props.roster.name + "'",
     };
+
     createRoster(newRoster);
+    api.createRoster(newRoster).then(() => {
+      if (newRoster.group) api.addRosterToGroup(newRoster.group, newRoster.id);
+    });
 
     handleClose(event);
   };
