@@ -6,28 +6,10 @@ import { Link } from "../../../components/atoms/link/Link.tsx";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { RosterGroup } from "../../../state/roster-building/groups";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
+import { selectParentGroups } from "../../../utils/groups.ts";
 
 interface RosterBreadCrumbsProps {
   group?: RosterGroup;
-}
-
-function getGroup(parentId: string, groups: RosterGroup[]): RosterGroup {
-  return groups.find((group: RosterGroup) => group.slug === parentId);
-}
-
-const getParentGroups = (
-  group: RosterGroup,
-  others: RosterGroup[],
-): RosterGroup[] => {
-  if (!group.parent) {
-    return [];
-  }
-  const parent = getGroup(group.parent, others);
-  return [...getParentGroups(parent, others), parent];
-};
-
-function selectParentGroups(group: RosterGroup) {
-  return ({ groups }) => getParentGroups(group, groups);
 }
 
 export const RostersBreadCrumbs: FunctionComponent<RosterBreadCrumbsProps> = ({
