@@ -17,7 +17,8 @@
     "bugfixes": [
       "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card.",
       "Fix issue where duplicated rosters are not saved and synced.",
-      "Fix mismatch in id and slug field for roster groups making them unable to appear in the breadcrumbs."
+      "Fix mismatch in id and slug field for roster groups making them unable to appear in the breadcrumbs.",
+      "Replace the image rendering utility for one that better supports firefox."
     ]
   },
   "1.33": {
