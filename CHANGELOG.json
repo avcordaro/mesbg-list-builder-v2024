@@ -5,7 +5,8 @@
       "Added a button to create a roster group, allowing empty groups and filling them later.",
       "Added the ability to drag and drop groups on each other to created nested groups.",
       "Enabled the army list input on edit roster allowing you to switch between army list (this clears the existing rosters!)",
-      "Added points values to the army composition in the PDF export."
+      "Added points values to the army composition in the PDF export.",
+      "Added more complex query options on the rosters page allowing you to narrow your search to find the exact roster."
     ],
     "changed": [
       "Update the default dark-mode setting to match the system settings of the device.",
