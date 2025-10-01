@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import html2canvas from "html2canvas";
+import * as htmlToImage from "html-to-image";
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { armyListData } from "../../../assets/data.ts";
 import backgroundCover from "../../../assets/images/roster-summary/background.jpg";
@@ -40,25 +40,19 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
 
     const createScreenshot = () => {
       const rosterList = document.getElementById("rosterImageView");
-      const admission = document.getElementById("admission");
-      if (admission) {
-        admission.style.display = "inline-block";
-      }
 
       setScreenshotting(true);
       setTimeout(() => {
-        html2canvas(rosterList).then(function (data) {
-          setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
-            screenshot: data.toDataURL("image/png"),
-            rawScreenshot: data,
-            onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
-          });
-          setScreenshotting(false);
-        });
-
-        if (admission) {
-          admission.style.display = "none";
-        }
+        htmlToImage
+          .toPng(rosterList, { skipFonts: true })
+          .then((dataUrl) => {
+            setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
+              screenshot: dataUrl,
+              onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
+            });
+            setScreenshotting(false);
+          })
+          .catch(alert);
       });
     };
 
@@ -124,17 +118,16 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
               id="admission"
               sx={{
                 mt: 0,
-                display: "none",
                 textAlign: "center",
                 width: "100%",
               }}
               variant="body2"
             >
-              Created with MESBG List Builder (
+              Created with MESBG List Builder
+              <br />
               <a href="#" style={{ textDecoration: "none" }}>
                 https://mesbg-list-builder.com
               </a>
-              )
             </Typography>
           </Stack>
         </WithRibbon>

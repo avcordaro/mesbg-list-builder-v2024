@@ -12,7 +12,7 @@ import {
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import html2canvas from "html2canvas";
+import * as htmlToImage from "html-to-image";
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { GiQueenCrown } from "react-icons/gi";
 
@@ -156,18 +156,19 @@ export const RosterTableView = forwardRef<
 
     setScreenshotting(true);
     setTimeout(() => {
-      html2canvas(rosterList).then(function (data) {
-        setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
-          screenshot: data.toDataURL(),
-          rawScreenshot: data,
-          onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
-        });
-        setScreenshotting(false);
-      });
-
-      if (admission) {
-        admission.style.display = "none";
-      }
+      htmlToImage
+        .toPng(rosterList, { skipFonts: true })
+        .then(function (data) {
+          setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
+            screenshot: data,
+            onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
+          });
+          setScreenshotting(false);
+          if (admission) {
+            admission.style.display = "none";
+          }
+        })
+        .catch(alert);
     });
   };
 
