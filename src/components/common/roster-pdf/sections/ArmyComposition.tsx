@@ -51,6 +51,9 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
           </>
         )}
       </TableCell>
+      <TableCell size="small" align="right">
+        {unit.pointsTotal} pts.
+      </TableCell>
     </TableRow>
   );
 }
@@ -132,11 +135,25 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
                     size="small"
                     colSpan={2}
                     sx={{
-                      textAlign: "center",
+                      fontWeight: "bold",
                       backgroundColor: mode === "dark" ? "#3F3F3F" : "#F3F3F3",
                     }}
                   >
                     Warband {index + 1}
+                  </TableCell>
+                  <TableCell
+                    size="small"
+                    align="right"
+                    sx={{
+                      fontWeight: "bold",
+                      backgroundColor: mode === "dark" ? "#3F3F3F" : "#F3F3F3",
+                    }}
+                  >
+                    {warband
+                      .filter(isSelectedUnit)
+                      .map((unit) => unit.pointsTotal)
+                      .reduce((a, b) => a + b, 0)}{" "}
+                    pts.
                   </TableCell>
                 </TableRow>
                 {warband.map((unit, index) => (
