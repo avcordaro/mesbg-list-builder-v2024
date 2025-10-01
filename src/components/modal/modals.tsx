@@ -20,6 +20,7 @@ import { FaImage } from "react-icons/fa6";
 import { GiSwordsEmblem } from "react-icons/gi";
 import { AddToCollection } from "./modals/AddToCollection.tsx";
 import { ChartsModal } from "./modals/ChartsModal.tsx";
+import { ConfirmBulkDeleteRosterModal } from "./modals/ConfirmBulkDeleteRosterModal.tsx";
 import { ConfirmDeleteGroupModal } from "./modals/ConfirmDeleteGroupModal.tsx";
 import { ConfirmDeleteRosterModal } from "./modals/ConfirmDeleteRosterModal.tsx";
 import { ConfirmDisbandGroupModal } from "./modals/ConfirmDisbandGroupModal.tsx";
@@ -60,6 +61,7 @@ export enum ModalTypes {
   ROSTER_SCREENSHOT = "ROSTER_SCREENSHOT",
 
   CONFIRM_DELETE_ROSTER = "CONFIRM_DELETE_ROSTER",
+  CONFIRM_BULK_DELETE_ROSTER = "CONFIRM_BULK_DELETE_ROSTER",
   EDIT_ROSTER_NAME = "EDIT_ROSTER_NAME",
   CREATE_ROSTER_GROUP = "CREATE_ROSTER_GROUP",
 
@@ -163,6 +165,16 @@ export const modals = new Map<ModalTypes, ModalProps>([
       icon: <DeleteForever />,
       title: "Delete roster",
       children: <ConfirmDeleteRosterModal />,
+      overflow: "none",
+      maxWidth: "sm",
+    },
+  ],
+  [
+    ModalTypes.CONFIRM_BULK_DELETE_ROSTER,
+    {
+      icon: <DeleteForever />,
+      title: "Delete rosters",
+      children: <ConfirmBulkDeleteRosterModal />,
       overflow: "none",
       maxWidth: "sm",
     },

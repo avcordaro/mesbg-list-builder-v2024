@@ -9,6 +9,9 @@ type RosterCardListProps = {
   rosters: Roster[];
   dragged?: string;
   filter?: string;
+  deleting: boolean;
+  selectedRosters: string[];
+  selectRoster: (value: string) => void;
 };
 
 const getRosterInGroup = (rosters: Roster[], groupId: string) => {
@@ -21,6 +24,9 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   rosters,
   dragged,
   filter,
+  deleting,
+  selectRoster,
+  selectedRosters,
 }) => {
   const { groupId } = useParams();
   const [searchParams] = useSearchParams();
@@ -39,6 +45,9 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
         index={index}
         isDragged={dragged}
         isDisabled={!!filter}
+        isDeleting={deleting}
+        isMarkedForDeletion={selectedRosters.includes(roster.id)}
+        markForDeletion={() => selectRoster(roster.id)}
       />
     ));
 };
