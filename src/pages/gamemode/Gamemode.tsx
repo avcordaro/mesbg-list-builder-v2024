@@ -2,7 +2,7 @@ import { Button, Tab, Tabs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { SyntheticEvent, useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { CustomAlert } from "../../components/atoms/alert/CustomAlert.tsx";
 import {
   drawerWidth,
@@ -50,10 +50,23 @@ export const Gamemode = () => {
   const [value, setValue] = useState(0);
   const [rosterChangedWarning, setRosterChangedWarning] = useState(true);
 
+  const game = gameState[roster.id];
+  const prevGame = useRef<typeof game>();
+  const firstRenderRef = useRef(true);
+
   useEffect(() => {
-    if (gameState[roster.id]) {
-      syncGame(roster.id, gameState[roster.id]);
+    if (!game) return;
+
+    if (
+      prevGame.current !== undefined &&
+      game !== prevGame.current &&
+      !firstRenderRef.current
+    ) {
+      syncGame(roster.id, game);
     }
+
+    prevGame.current = game;
+    firstRenderRef.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameState, roster.id]);
 

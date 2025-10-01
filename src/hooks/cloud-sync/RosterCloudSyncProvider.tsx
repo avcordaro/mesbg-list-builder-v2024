@@ -109,12 +109,12 @@ export const RosterCloudSyncProvider = ({
   }, [open]);
 
   function sync(roster: Roster) {
-    console.debug("Attempting sync roster...");
+    console.info("Attempting sync roster...");
     if (!roster || !auth.user) return;
     if (isEqual(roster, previousRosterRef.current)) return;
     previousRosterRef.current = roster;
 
-    console.debug("Starting debounce...");
+    console.info("Starting debounce...");
     startRef.current = Date.now();
     setRemaining(delay);
     setOpen(true);
