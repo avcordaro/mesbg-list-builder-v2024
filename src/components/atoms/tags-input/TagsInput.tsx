@@ -1,14 +1,15 @@
-import { TextField, Chip, Box } from "@mui/material";
-import { useState, KeyboardEvent, FunctionComponent, FormEvent } from "react";
+import { Box, Chip, TextField } from "@mui/material";
+import { FormEvent, FunctionComponent, KeyboardEvent, useState } from "react";
 
 type AdditionalTagsInputProps = {
   values: string[];
   onChange: (values: string[]) => void;
+  size?: "small" | "medium";
 };
 
 export const AdditionalTagsInput: FunctionComponent<
   AdditionalTagsInputProps
-> = ({ values: tags, onChange }) => {
+> = ({ values: tags, onChange, size = "small" }) => {
   const [input, setInput] = useState("");
 
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -56,7 +57,7 @@ export const AdditionalTagsInput: FunctionComponent<
         onInput={handleOnInput}
         onKeyDown={handleKeyDown}
         sx={{ mt: 1 }}
-        size="small"
+        size={size}
       />
     </Box>
   );

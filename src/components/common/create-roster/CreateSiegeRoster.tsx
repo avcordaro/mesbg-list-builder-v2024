@@ -3,6 +3,7 @@ import { forwardRef, MouseEvent, useImperativeHandle, useState } from "react";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { ArmySelectionInput } from "../../atoms/army-selector/ArmySelectionInput.tsx";
 import { CustomSwitch } from "../../atoms/switch/CustomSwitch.tsx";
+import { AdditionalTagsInput } from "../../atoms/tags-input/TagsInput.tsx";
 import { useCreateRoster } from "./useCreateRoster.ts";
 
 export type CreateSiegeRosterHandlers = {
@@ -16,6 +17,8 @@ export const CreateSiegeRoster = forwardRef<CreateSiegeRosterHandlers>(
       rosterName,
       updateRosterName,
       maxRosterPoints,
+      tags,
+      setTags,
       updateMaxRosterPoints,
       handleCreateNewRoster,
     } = useCreateRoster();
@@ -89,6 +92,7 @@ export const CreateSiegeRoster = forwardRef<CreateSiegeRosterHandlers>(
             input: { type: "number" },
           }}
         />
+        <AdditionalTagsInput values={tags} onChange={setTags} size="medium" />
       </>
     );
   },

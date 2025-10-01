@@ -24,6 +24,7 @@ export const useCreateRoster = () => {
     type: "",
     army: "",
   });
+  const [tags, setTags] = useState([]);
 
   function updateRosterName(value: string) {
     setRosterName(value);
@@ -72,6 +73,7 @@ export const useCreateRoster = () => {
         maximumPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
         siegeRole: enableSiege ? rosterSiegeRole : undefined,
         withHero: armyList.hero,
+        tags,
       });
 
       createRoster(newRoster);
@@ -87,6 +89,8 @@ export const useCreateRoster = () => {
     setArmyList,
     rosterName,
     setRosterName,
+    tags,
+    setTags,
     updateRosterName,
     maxRosterPoints,
     setMaxRosterPoints,

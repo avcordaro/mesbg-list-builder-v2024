@@ -10,6 +10,7 @@ import {
   ArmySelectionInput,
   SelectedArmyList,
 } from "../../atoms/army-selector/ArmySelectionInput.tsx";
+import { AdditionalTagsInput } from "../../atoms/tags-input/TagsInput.tsx";
 
 export const EditRosterModal = () => {
   const {
@@ -26,6 +27,7 @@ export const EditRosterModal = () => {
     army: roster.armyList,
     type: "",
   });
+  const [tags, setTags] = useState(roster.metadata.tags || []);
 
   const [rosterPointsLimit, setRosterPointsLimit] = useState(
     roster?.metadata.maxPoints ? String(roster.metadata.maxPoints) : "",
@@ -44,13 +46,14 @@ export const EditRosterModal = () => {
     setRosterPointsLimitValid(pointLimitValid);
 
     if (nameValid && pointLimitValid) {
-      if (armyList === roster.armyList) {
+      if (armyList.army === roster.armyList) {
         updateRoster({
           ...roster,
           name: rosterNameValue,
           metadata: {
             ...roster.metadata,
             maxPoints: Number(pointLimit),
+            tags,
           },
         });
       } else {
@@ -64,6 +67,7 @@ export const EditRosterModal = () => {
             enableSiege: roster.metadata.siegeRoster,
             siegeRole: roster.metadata.siegeRole,
             withHero: armyList.hero,
+            tags,
           }),
         );
       }
@@ -126,6 +130,7 @@ export const EditRosterModal = () => {
           value={rosterPointsLimit}
           onChange={(e) => updateRosterPointsLimit(e.target.value)}
         />
+        <AdditionalTagsInput values={tags} onChange={setTags} size="medium" />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button
