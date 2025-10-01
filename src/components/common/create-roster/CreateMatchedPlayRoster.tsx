@@ -2,6 +2,7 @@ import { TextField } from "@mui/material";
 import { forwardRef, MouseEvent, useImperativeHandle } from "react";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { ArmySelectionInput } from "../../atoms/army-selector/ArmySelectionInput.tsx";
+import { AdditionalTagsInput } from "../../atoms/tags-input/TagsInput.tsx";
 import { useCreateRoster } from "./useCreateRoster.ts";
 
 export type CreateMatchedPlayRosterHandlers = {
@@ -13,7 +14,9 @@ export const CreateMatchedPlayRoster =
       armyList,
       rosterName,
       maxRosterPoints,
+      tags,
       setArmyList,
+      setTags,
       updateRosterName,
       updateMaxRosterPoints,
       handleCreateNewRoster,
@@ -53,6 +56,8 @@ export const CreateMatchedPlayRoster =
             input: { type: "number" },
           }}
         />
+
+        <AdditionalTagsInput values={tags} onChange={setTags} size="medium" />
       </>
     );
   });

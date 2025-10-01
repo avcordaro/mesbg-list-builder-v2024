@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   drawerWidth,
   RosterInfoDrawer,
@@ -24,6 +24,9 @@ import { RosterSidebarButton } from "./RosterSidebarButton.tsx";
 import { StartGameButton } from "./StartGameButton.tsx";
 
 export const RosterData = ({ roster }: { roster: Roster }) => {
+  const prevRoster = useRef<typeof roster>();
+  const firstRenderRef = useRef(true);
+
   const warnings = useRosterWarnings();
   const screen = useScreenSize();
   const sync = useRosterSync();
@@ -46,7 +49,18 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
   }, []);
 
   useEffect(() => {
-    if (roster) sync(roster);
+    if (!roster) return;
+
+    if (
+      prevRoster.current !== undefined &&
+      roster !== prevRoster.current &&
+      !firstRenderRef.current
+    ) {
+      sync(roster);
+    }
+
+    prevRoster.current = roster;
+    firstRenderRef.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roster]);
 

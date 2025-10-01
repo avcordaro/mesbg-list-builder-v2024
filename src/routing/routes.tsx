@@ -13,7 +13,6 @@ import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
 import { Home } from "../pages/home/Home.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
 import { Roster } from "../pages/roster/Roster.tsx";
-import { RosterGroup } from "../pages/rosters/RosterGroup.tsx";
 import { Rosters } from "../pages/rosters/Rosters.tsx";
 import { SharedRoster } from "../pages/shared/Roster.tsx";
 import { RedirectTo } from "./RedirectTo.tsx";
@@ -36,7 +35,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: "rosters/:groupId",
-        element: <RosterGroup />,
+        element: <Rosters />,
         errorElement: <AppFallback />,
       },
       {

@@ -8,6 +8,7 @@ export type RosterGroup = {
   slug: string;
   icon?: string;
   rosters: string[];
+  parent?: string; // if set: matches a slug of another group.
 };
 
 type RosterGroupStateActions = {
@@ -54,7 +55,10 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         ),
         rosters: get().rosters.map((roster) =>
           update.rosters?.includes(roster.id)
-            ? { ...roster, group: id }
+            ? {
+                ...roster,
+                group: get().groups.find((group) => group.id === id).slug,
+              }
             : roster,
         ),
       }),

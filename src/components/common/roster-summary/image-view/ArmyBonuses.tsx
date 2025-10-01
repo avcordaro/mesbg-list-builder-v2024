@@ -71,12 +71,15 @@ export const ArmyBonuses = () => {
                     </Typography>
                   )}
                   <Stack gap={1}>
-                    {rule.description.split("\n").map((line, index) => (
-                      <Typography
-                        key={index}
-                        dangerouslySetInnerHTML={{ __html: line }}
-                      />
-                    ))}
+                    {rule.description
+                      .split("\n")
+                      .filter((line) => !!line)
+                      .map((line, index) => (
+                        <Typography
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: line }}
+                        />
+                      ))}
                   </Stack>
                 </Box>
               ))}

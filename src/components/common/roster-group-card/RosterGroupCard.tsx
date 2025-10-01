@@ -4,25 +4,25 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { RosterGroup } from "../../../state/roster-building/groups";
+import { pluralize } from "../../../utils/string.ts";
 import { GroupIcon } from "../../atoms/group-icon/GroupIcon.tsx";
 import { Link } from "../../atoms/link/Link.tsx";
 import { CARD_SIZE_IN_PX } from "../roster-card/RosterSummaryCard.tsx";
 import { GroupOptionsPopoverMenu } from "./RosterGroupPopoverMenu.tsx";
+import { useRosterGroupStats } from "./useRosterGroupStats.ts";
 
 export type RosterSummaryCardProps = {
-  name: string;
-  slug: string;
-  rosters: number;
-  icon?: string;
+  group: RosterGroup;
+  dragged?: boolean;
 };
 
 export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
-  name,
-  slug,
-  rosters,
-  icon,
+  group,
+  dragged,
 }) => {
   const screen = useScreenSize();
+  const { rosterCount, groupCount } = useRosterGroupStats(group.slug);
   const spacing = screen.isTooSmall ? "40px" : "10px";
   const cardStyle = {
     left: spacing,
@@ -35,10 +35,12 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
   };
 
   const maxStackSize = 7;
-  const minStackSize = 3;
-  const rotation = 1.5;
+  const minStackSize = 4;
+  const rotation = 1.7;
 
-  const stackSize = Math.min(maxStackSize, Math.max(minStackSize, rosters));
+  const stackSize = dragged
+    ? 1
+    : Math.min(maxStackSize, Math.max(minStackSize, rosterCount));
 
   const stack = new Array(stackSize)
     .fill(Number)
@@ -51,9 +53,9 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
 
   return (
     <Link
-      to={`/rosters/${slug}`}
+      to={`/rosters/${group.slug}`}
       style={{ textDecoration: "none", color: "inherit" }}
-      data-test-id={"rosters--" + slug + "--group-link"}
+      data-test-id={"rosters--" + group.slug + "--group-link"}
     >
       <Box
         sx={{
@@ -95,7 +97,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 },
               }}
             >
-              <GroupIcon icon={icon} />
+              <GroupIcon icon={group.icon} />
             </Box>
             <Typography
               variant="h6"
@@ -107,11 +109,10 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 width: "300px", // Set a fixed width or max-width for overflow
               }}
             >
-              {name}
+              {group.name}
             </Typography>
             <Typography
               variant="body2"
-              className="middle-earth"
               sx={{
                 whiteSpace: "nowrap", // Prevent text from wrapping
                 overflow: "hidden", // Hide the overflowing text
@@ -120,7 +121,20 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
                 fontSize: "1rem",
               }}
             >
-              {rosters} Rosters
+              {groupCount > 0 &&
+                `${groupCount} ${pluralize("Group")(groupCount)}`}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                whiteSpace: "nowrap", // Prevent text from wrapping
+                overflow: "hidden", // Hide the overflowing text
+                textOverflow: "ellipsis", // Show ellipsis when text overflows
+                width: "200px", // Set a fixed width or max-width for overflow
+                fontSize: "1rem",
+              }}
+            >
+              {rosterCount} {pluralize("Roster")(rosterCount)}
             </Typography>
           </Stack>
         </Card>
@@ -131,7 +145,7 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
             top: screen.isTooSmall ? 64 : 24,
           }}
         >
-          <GroupOptionsPopoverMenu groupId={slug} />
+          <GroupOptionsPopoverMenu groupId={group.slug} />
         </Box>
       </Box>
     </Link>

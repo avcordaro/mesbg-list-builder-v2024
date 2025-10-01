@@ -1,4 +1,3 @@
-import { Breadcrumbs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -6,11 +5,11 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useProfiles } from "../../../hooks/profiles/useProfiles.ts";
+import { RosterNotFound } from "../../../pages/not-found/RosterNotFound.tsx";
+import { RosterBreadcrumbs } from "../../../pages/roster/RosterBreadcrumbs.tsx";
 import { useUserPreferences } from "../../../state/preference";
-import { useRosterBuildingState } from "../../../state/roster-building";
 import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
-import { Link } from "../../atoms/link/Link.tsx";
 import { ArmyComposition } from "./sections/ArmyComposition.tsx";
 import { HeroicActionList } from "./sections/HeroicActionList.tsx";
 import { MagicalPowerList } from "./sections/MagicalPowers.tsx";
@@ -23,67 +22,23 @@ export const PdfView = () => {
   const { roster } = useRosterInformation();
 
   if (!roster) {
-    return (
-      <Box sx={{ m: 2 }}>
-        <Typography variant="h4" className="middle-earth">
-          Roster not found!
-        </Typography>
-        <Typography sx={{ mb: 2 }}>
-          One does not simply navigate to a roster that does not exist.
-        </Typography>
-        <Typography>
-          Please navigate back to <Link to="/rosters">My Rosters</Link> and
-          select a roster from there.
-        </Typography>
-      </Box>
-    );
+    return <RosterNotFound />;
   }
 
   return <PrintablePdf />;
 };
 
 const PrintablePdf = () => {
-  const { profiles, missingProfiles } = useProfiles();
-  const { roster } = useRosterInformation();
-  const { groups } = useRosterBuildingState();
-  const group = roster.group && groups.find(({ id }) => roster.group === id);
-
   const theme = useTheme();
   const themeContext = useThemeContext();
   const { preferences } = useUserPreferences();
+  const { roster } = useRosterInformation();
+  const { profiles, missingProfiles } = useProfiles();
 
   return (
     <>
       <Container sx={{ mb: 8, py: 2, maxWidth: "calc(100vw - 3*24px)" }}>
-        <Breadcrumbs sx={{ mb: 1 }}>
-          <Link
-            to="/rosters"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            My Rosters
-          </Link>
-          {group && (
-            <Link
-              to={`/rosters/${group.slug}`}
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              {group.name}
-            </Link>
-          )}
-          <Link
-            to={`/roster/${roster.id}`}
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            {roster.name}
-          </Link>
-          <Typography sx={{ color: "text.secondary" }}>Printable</Typography>
-        </Breadcrumbs>
+        <RosterBreadcrumbs roster={roster} subpath="PDF" />
 
         <Stack gap={1} sx={{ mb: 2 }}>
           {missingProfiles.length > 0 && (
