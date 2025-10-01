@@ -59,3 +59,7 @@ export function findBestMatch(str: string, obj: Record<string, unknown>) {
   }
   return null;
 }
+
+export function pluralize(word: string, plural = "s") {
+  return (items: number) => (items > 1 ? word + plural : word);
+}

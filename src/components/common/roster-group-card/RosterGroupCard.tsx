@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { RosterGroup } from "../../../state/roster-building/groups";
+import { pluralize } from "../../../utils/string.ts";
 import { GroupIcon } from "../../atoms/group-icon/GroupIcon.tsx";
 import { Link } from "../../atoms/link/Link.tsx";
 import { CARD_SIZE_IN_PX } from "../roster-card/RosterSummaryCard.tsx";
@@ -49,10 +50,6 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
         : Math.random() * index * rotation,
     )
     .reverse();
-
-  const pluralize = (word: string) => {
-    return (items: number, plural = "s") => (items > 1 ? word + plural : word);
-  };
 
   return (
     <Link

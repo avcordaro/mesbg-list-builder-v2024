@@ -11,11 +11,9 @@ export const useCreateRoster = () => {
   const navigate = useNavigate();
   const { groupId: groupSlug } = useParams();
   const { closeModal } = useAppState();
-  const { createRoster, rosters, groups } = useRosterBuildingState();
+  const { createRoster, rosters } = useRosterBuildingState();
   const { createRoster: remoteCreate, addRosterToGroup } = useApi();
   const buildNewRoster = useNewRosterBuilder();
-  const { id: groupId } =
-    groups.find((group) => group.slug === groupSlug) || {};
 
   const [rosterName, setRosterName] = useState("");
   const [maxRosterPoints, setMaxRosterPoints] = useState("");
@@ -69,7 +67,7 @@ export const useCreateRoster = () => {
         name: rosterNameValue,
         armyList: armyList.army,
         enableSiege: enableSiege,
-        groupId: groupId,
+        groupId: groupSlug,
         maximumPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
         siegeRole: enableSiege ? rosterSiegeRole : undefined,
         withHero: armyList.hero,
@@ -77,8 +75,9 @@ export const useCreateRoster = () => {
       });
 
       createRoster(newRoster);
-      remoteCreate(newRoster);
-      if (groupSlug) addRosterToGroup(groupSlug, newRoster.id);
+      remoteCreate(newRoster).then(() => {
+        if (groupSlug) addRosterToGroup(groupSlug, newRoster.id);
+      });
       navigate(`/roster/${newRoster.id}`, { viewTransition: true });
       closeModal();
     }

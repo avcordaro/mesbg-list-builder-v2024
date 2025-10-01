@@ -17,6 +17,9 @@ export const CARD_SIZE_IN_PX = 300;
 
 export type RosterSummaryCardProps = {
   roster: Roster;
+  isDeleting?: boolean;
+  isMarkedForDeletion?: boolean;
+  markForDeletion: () => void;
 };
 
 const KeyValue = ({ label, value }) => {
@@ -39,6 +42,9 @@ const KeyValue = ({ label, value }) => {
 
 export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
   roster,
+  isDeleting,
+  markForDeletion,
+  isMarkedForDeletion,
 }) => {
   const screen = useScreenSize();
   const { mode } = useThemeContext();
@@ -52,7 +58,10 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
   return (
     <Link
       to={`/roster/${roster.id}`}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+      }}
       data-test-id={"rosters--" + roster.id + "--link"}
     >
       <Card
@@ -61,6 +70,17 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
           minWidth: `${CARD_SIZE_IN_PX}px`,
           aspectRatio: "1/1",
           position: "relative",
+          backgroundColor: isMarkedForDeletion
+            ? mode === "dark"
+              ? "rgb(123,19,19)"
+              : "#ffe3e3"
+            : "inherit",
+        }}
+        onClick={(e) => {
+          if (isDeleting) {
+            e.preventDefault();
+            markForDeletion();
+          }
         }}
         elevation={4}
       >

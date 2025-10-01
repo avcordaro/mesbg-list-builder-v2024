@@ -23,7 +23,9 @@ export const CustomAlert: FunctionComponent<
     >
       {title && (
         <AlertTitle>
-          <Typography fontWeight="bold">{title}</Typography>
+          <Typography fontWeight="bold" component="div">
+            {title}
+          </Typography>
         </AlertTitle>
       )}
       {children}

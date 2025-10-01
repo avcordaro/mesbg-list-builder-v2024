@@ -12,6 +12,9 @@ type RosterDroppableProps = {
   index: number;
   isDragged?: string;
   isDisabled?: boolean;
+  isDeleting?: boolean;
+  isMarkedForDeletion?: boolean;
+  markForDeletion: () => void;
 };
 
 export const RosterDroppable = ({
@@ -19,6 +22,9 @@ export const RosterDroppable = ({
   index,
   isDragged,
   isDisabled,
+  isDeleting,
+  isMarkedForDeletion,
+  markForDeletion,
 }: RosterDroppableProps) => {
   const screen = useScreenSize();
   return (
@@ -84,7 +90,12 @@ export const RosterDroppable = ({
                             },
                       ]}
                     >
-                      <RosterSummaryCard roster={roster} />
+                      <RosterSummaryCard
+                        roster={roster}
+                        isDeleting={isDeleting}
+                        isMarkedForDeletion={isMarkedForDeletion}
+                        markForDeletion={markForDeletion}
+                      />
                     </Box>
                   </Box>
                 );
