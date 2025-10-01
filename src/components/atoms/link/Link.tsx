@@ -9,8 +9,8 @@ export const Link: FunctionComponent<LinkProps> = (props) => {
     <RouterLink
       {...props}
       style={{
-        ...props.style,
         color: theme.palette.secondary.main,
+        ...props.style,
       }}
     >
       {props.children}
