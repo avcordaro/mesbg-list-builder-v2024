@@ -11,18 +11,20 @@ type RosterDroppableProps = {
   roster: Roster;
   index: number;
   isDragged?: string;
+  isDisabled?: boolean;
 };
 
 export const RosterDroppable = ({
   roster,
   index,
   isDragged,
+  isDisabled,
 }: RosterDroppableProps) => {
   const screen = useScreenSize();
   return (
     <Droppable
       droppableId={"roster:" + roster.id}
-      isDropDisabled={isDragged?.startsWith("group")}
+      isDropDisabled={isDisabled || isDragged?.startsWith("group")}
     >
       {(provided, snapshot) => {
         return (
@@ -47,7 +49,11 @@ export const RosterDroppable = ({
                   },
             ]}
           >
-            <Draggable draggableId={"roster:" + roster.id} index={index}>
+            <Draggable
+              draggableId={"roster:" + roster.id}
+              index={index}
+              isDragDisabled={isDisabled}
+            >
               {(draggableProvided, draggableSnapshot) => {
                 const { style, ...props } = draggableProvided.draggableProps;
                 return (

@@ -29,9 +29,17 @@ export const Rosters: FunctionComponent = () => {
           <RostersPageHeader group={activeGroup} />
           <RostersSearchFilter filter={filter} setFilter={setFilter} />
           <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
-            <RemoveFromGroupDroppable visible={!!activeGroup} />
-            <RosterGroupCardList groups={groups} dragged={dragging} />
-            <RosterCardList rosters={rosters} dragged={dragging} />
+            <RemoveFromGroupDroppable visible={!!activeGroup && !filter} />
+            <RosterGroupCardList
+              groups={groups}
+              filter={filter}
+              dragged={dragging}
+            />
+            <RosterCardList
+              rosters={rosters}
+              filter={filter}
+              dragged={dragging}
+            />
           </Stack>
         </Stack>
       </DragDropContext>

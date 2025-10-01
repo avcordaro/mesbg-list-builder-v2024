@@ -1,9 +1,11 @@
-import { CancelRounded } from "@mui/icons-material";
-import { InputAdornment, TextField } from "@mui/material";
+import { InfoOutlined } from "@mui/icons-material";
+import { Collapse, InputAdornment, TextField } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
-import { ChangeEvent, FunctionComponent } from "react";
+import Typography from "@mui/material/Typography";
+import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { CustomAlert } from "../../../components/atoms/alert/CustomAlert.tsx";
 import {
   RosterSortButton,
   SortField,
@@ -20,6 +22,7 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
   setFilter,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [showHelperText, setShowHelperText] = useState(false);
 
   const setSortParams = (field: SortField, order: SortOrder) => {
     const params = new URLSearchParams();
@@ -29,40 +32,61 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
   };
 
   return (
-    <Stack direction="row" gap={2} sx={{ py: 2 }}>
-      <TextField
-        id="database-filter-input"
-        label="Filter"
-        placeholder="Start typing to filter"
-        value={filter}
-        fullWidth
-        onChange={(event: ChangeEvent<HTMLInputElement>) => {
-          setFilter(event.target.value);
-        }}
-        slotProps={{
-          input: {
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="clear filters"
-                  onClick={() => setFilter("")}
-                  edge="end"
-                  sx={{
-                    display: filter.length > 0 ? "inherit" : "none",
-                  }}
-                >
-                  <CancelRounded />
-                </IconButton>
-              </InputAdornment>
-            ),
-          },
-        }}
-      />
-      <RosterSortButton
-        setOrdering={setSortParams}
-        order={searchParams.get("direction") as SortOrder}
-        field={searchParams.get("sortBy") as SortField}
-      />
-    </Stack>
+    <>
+      <Stack direction="row" gap={2} sx={{ py: 2 }}>
+        <TextField
+          id="database-filter-input"
+          label="Filter"
+          placeholder="Start typing to filter"
+          value={filter}
+          fullWidth
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+            setFilter(event.target.value);
+          }}
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="show query helper"
+                    onClick={() => setShowHelperText((value) => !value)}
+                    edge="end"
+                    color="info"
+                  >
+                    <InfoOutlined />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
+        <RosterSortButton
+          setOrdering={setSortParams}
+          order={searchParams.get("direction") as SortOrder}
+          field={searchParams.get("sortBy") as SortField}
+        />
+      </Stack>
+      <Collapse in={showHelperText}>
+        <CustomAlert
+          title="Query helper"
+          severity="info"
+          onClose={() => setShowHelperText(false)}
+        >
+          <Typography>
+            Filter rosters with queries like:{" "}
+            <pre style={{ display: "inline" }}>
+              &quot;type=evil&name=my army&points&gt;700&quot;
+            </pre>
+          </Typography>
+          <Typography sx={{ mt: 1 }}>
+            Available fields: type, army, name, points, units, bows, throw,
+            might, will, fate
+            <br />
+            Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine
+            multiple rules with &.
+          </Typography>
+        </CustomAlert>
+      </Collapse>
+    </>
   );
 };

@@ -2,14 +2,16 @@ import { FunctionComponent } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { Roster } from "../../../../types/roster";
 import { getComparator } from "../../sorting/sorting.ts";
+import { useRosterSearch } from "../useRosterSearch.ts";
 import { RosterDroppable } from "./RosterDroppable.tsx";
 
 type RosterCardListProps = {
   rosters: Roster[];
   dragged?: string;
+  filter?: string;
 };
 
-const getVisibleRosters = (rosters: Roster[], groupId: string) => {
+const getRosterInGroup = (rosters: Roster[], groupId: string) => {
   return !groupId
     ? rosters.filter((group) => !group.group)
     : rosters.filter((group) => group.group === groupId);
@@ -18,11 +20,15 @@ const getVisibleRosters = (rosters: Roster[], groupId: string) => {
 export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   rosters,
   dragged,
+  filter,
 }) => {
-  const [searchParams] = useSearchParams();
-
   const { groupId } = useParams();
-  const visibleRosters = getVisibleRosters(rosters, groupId);
+  const [searchParams] = useSearchParams();
+  const { filterRosters } = useRosterSearch();
+
+  const visibleRosters = filter
+    ? filterRosters(rosters, filter)
+    : getRosterInGroup(rosters, groupId);
 
   return visibleRosters
     .sort(getComparator(searchParams))
@@ -32,6 +38,7 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
         roster={roster}
         index={index}
         isDragged={dragged}
+        isDisabled={!!filter}
       />
     ));
 };
