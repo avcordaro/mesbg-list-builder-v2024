@@ -11,6 +11,7 @@ type NewRosterArguments = {
   enableSiege: boolean;
   siegeRole: "Attacker" | "Defender" | undefined;
   withHero: string | undefined;
+  tags?: string[];
 };
 
 export const useNewRosterBuilder = () => {
@@ -26,6 +27,7 @@ export const useNewRosterBuilder = () => {
     enableSiege,
     siegeRole,
     withHero,
+    tags,
   }: NewRosterArguments) {
     return addInitialHero(
       addMandatoryUnits({
@@ -39,6 +41,7 @@ export const useNewRosterBuilder = () => {
           maxPoints: maximumPoints ? Number(maximumPoints) : undefined,
           siegeRoster: enableSiege,
           siegeRole: enableSiege ? siegeRole : undefined,
+          tags,
         },
       }),
       withHero,

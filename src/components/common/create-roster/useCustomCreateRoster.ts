@@ -19,6 +19,7 @@ export const useCreateCustomRoster = () => {
   const [rosterName, setRosterName] = useState("");
   const [maxRosterPoints, setMaxRosterPoints] = useState("");
   const [goodOrEvil, setGoodOrEvil] = useState("Good");
+  const [tags, setTags] = useState([]);
 
   function fillRosterNameIfEmpty(rosterNameValue: string) {
     if (rosterNameValue) {
@@ -57,6 +58,7 @@ export const useCreateCustomRoster = () => {
         maxPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
         siegeRoster: true,
         siegeRole: "Both",
+        tags,
       },
     };
 
@@ -71,6 +73,8 @@ export const useCreateCustomRoster = () => {
     rosterName,
     maxRosterPoints,
     goodOrEvil,
+    tags,
+    setTags,
     setRosterName,
     setMaxRosterPoints,
     setGoodOrEvil,

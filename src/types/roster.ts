@@ -62,5 +62,6 @@ export type Roster = {
     maxPoints?: number;
     siegeRoster: boolean;
     siegeRole?: "Attacker" | "Defender" | "Both";
+    tags?: string[];
   };
 };

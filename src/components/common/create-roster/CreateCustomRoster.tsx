@@ -2,6 +2,7 @@ import { Stack, TextField, Typography } from "@mui/material";
 import { forwardRef, MouseEvent, useImperativeHandle } from "react";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { CustomSwitch } from "../../atoms/switch/CustomSwitch.tsx";
+import { AdditionalTagsInput } from "../../atoms/tags-input/TagsInput.tsx";
 import { useCreateCustomRoster } from "./useCustomCreateRoster.ts";
 
 export type CreateCustomRosterHandlers = {
@@ -14,9 +15,11 @@ export const CreateCustomRoster = forwardRef<CreateCustomRosterHandlers>(
       rosterName,
       maxRosterPoints,
       goodOrEvil,
+      tags,
       setRosterName,
       setMaxRosterPoints,
       setGoodOrEvil,
+      setTags,
       handleCreateNewRoster,
     } = useCreateCustomRoster();
 
@@ -85,6 +88,7 @@ export const CreateCustomRoster = forwardRef<CreateCustomRosterHandlers>(
             input: { type: "number" },
           }}
         />
+        <AdditionalTagsInput values={tags} onChange={setTags} size="medium" />
       </>
     );
   },
