@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CustomAlert } from "../../../components/atoms/alert/CustomAlert.tsx";
+import { RosterBulkDeleteButton } from "../bulk-delete/RosterBulkDeleteButton.tsx";
 import {
   RosterSortButton,
   SortField,
@@ -15,11 +16,17 @@ import {
 type RosterFilterProps = {
   filter: string;
   setFilter: (filter: string) => void;
+  deleting: boolean;
+  toggleDelete: () => void;
+  selectedRosters: string[];
 };
 
 export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
   filter,
   setFilter,
+  deleting,
+  toggleDelete,
+  selectedRosters,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [showHelperText, setShowHelperText] = useState(false);
@@ -65,6 +72,11 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
           order={searchParams.get("direction") as SortOrder}
           field={searchParams.get("sortBy") as SortField}
         />
+        <RosterBulkDeleteButton
+          toggleBulkDelete={toggleDelete}
+          isDeleting={deleting}
+          selectedRosters={selectedRosters}
+        />
       </Stack>
       <Collapse in={showHelperText}>
         <CustomAlert
@@ -72,7 +84,7 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
           severity="info"
           onClose={() => setShowHelperText(false)}
         >
-          <Typography>
+          <Typography component="div">
             Filter rosters with queries like:{" "}
             <pre style={{ display: "inline" }}>
               &quot;type=evil&name=my army&points&gt;700&quot;

@@ -5,6 +5,7 @@ import { FunctionComponent, useState } from "react";
 import { useParams } from "react-router-dom";
 import { NewRosterButton } from "../../components/atoms/new-roster-button/NewRosterButton.tsx";
 import { useRosterBuildingState } from "../../state/roster-building";
+import { useBulkDelete } from "./bulk-delete/useBulkDelete.ts";
 import { RostersPageHeader } from "./components/RostersPageHeader.tsx";
 import { RostersSearchFilter } from "./components/RostersSearchFilter.tsx";
 import { RemoveFromGroupDroppable } from "./components/cards/RemoveFromGroupDroppable.tsx";
@@ -17,6 +18,8 @@ export const Rosters: FunctionComponent = () => {
 
   const { rosters, groups } = useRosterBuildingState();
   const { onDragStart, onDragEnd, dragging } = useRostersDragAndDrop();
+  const { toggleDeleting, deleting, selectRoster, selectedRosters } =
+    useBulkDelete();
 
   const activeGroup = groups.find((group) => group.slug === groupId);
 
@@ -27,7 +30,13 @@ export const Rosters: FunctionComponent = () => {
       <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
         <Stack>
           <RostersPageHeader group={activeGroup} />
-          <RostersSearchFilter filter={filter} setFilter={setFilter} />
+          <RostersSearchFilter
+            filter={filter}
+            setFilter={setFilter}
+            deleting={deleting}
+            selectedRosters={selectedRosters}
+            toggleDelete={toggleDeleting}
+          />
           <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
             <RemoveFromGroupDroppable visible={!!activeGroup && !filter} />
             <RosterGroupCardList
@@ -39,6 +48,9 @@ export const Rosters: FunctionComponent = () => {
               rosters={rosters}
               filter={filter}
               dragged={dragging}
+              deleting={deleting}
+              selectedRosters={selectedRosters}
+              selectRoster={selectRoster}
             />
           </Stack>
         </Stack>
