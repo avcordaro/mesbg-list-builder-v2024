@@ -44,6 +44,20 @@ export const useRosterSearch = () => {
     function matchesCondition(roster: Roster, condition: Condition): boolean {
       if (condition === null) return true;
       const fieldValue = resolveField(roster, condition.field);
+
+      // Special handling for arrays
+      if (Array.isArray(fieldValue)) {
+        console.log(fieldValue);
+        switch (condition.operator) {
+          case "=":
+            return fieldValue.includes(condition.value);
+          case "!=":
+            return !fieldValue.includes(condition.value);
+          default:
+            return false; // numeric comparisons don’t apply to arrays
+        }
+      }
+
       switch (condition.operator) {
         case "=":
           return fieldValue == condition.value;
@@ -79,6 +93,8 @@ export const useRosterSearch = () => {
       might: (roster: Roster) => roster.metadata.might,
       will: (roster: Roster) => roster.metadata.will,
       fate: (roster: Roster) => roster.metadata.fate,
+      tag: (roster: Roster) =>
+        (roster.metadata.tags ?? []).map((tag) => tag.toLocaleLowerCase()),
       default: (roster: Roster, field: string) => getFieldValue(roster, field),
     };
   }

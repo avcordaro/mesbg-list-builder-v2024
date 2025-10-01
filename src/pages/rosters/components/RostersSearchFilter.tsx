@@ -79,7 +79,7 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
             </pre>
           </Typography>
           <Typography sx={{ mt: 1 }}>
-            Available fields: type, army, name, points, units, bows, throw,
+            Available fields: type, army, name, points, tag, units, bows, throw,
             might, will, fate
             <br />
             Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine
