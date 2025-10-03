@@ -7,7 +7,8 @@
       "Update the default dark-mode setting to match the system settings of the device."
     ],
     "bugfixes": [
-      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card."
+      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card.",
+      "Corrected the number of Wounds for King's Champion Heralds in the MWF Tracker."
     ]
   },
   "1.33": {
