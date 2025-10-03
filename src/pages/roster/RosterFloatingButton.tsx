@@ -135,8 +135,8 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
         ariaLabel="action-buttons"
         sx={{
           position: "fixed",
-          bottom: 80,
-          right: { xl: `calc(${drawerWidth}ch + 16px)`, xs: 16 },
+          bottom: 16,
+          right: { xl: `calc(${drawerWidth}ch + 80px)`, xs: 80 },
         }}
         icon={<SpeedDialIcon icon={<History />} openIcon={<Close />} />}
         open={redoOpen}
