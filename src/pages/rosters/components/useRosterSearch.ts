@@ -85,7 +85,7 @@ export const useRosterSearch = () => {
     return {
       type: (roster: Roster) => armyData[roster.armyList].toLocaleLowerCase(),
       army: (roster: Roster) => roster.armyList.toLocaleLowerCase(),
-      name: (roster: Roster) => roster.name,
+      name: (roster: Roster) => roster.name.toLocaleLowerCase(),
       points: (roster: Roster) => roster.metadata.points,
       units: (roster: Roster) => roster.metadata.units,
       bows: (roster: Roster) => roster.metadata.bows,
