@@ -38,7 +38,7 @@ export const useRosterBuildingState = create<
       {
         name: "mlb-rosters",
         storage: createJSONStorage(() => localStorage),
-        version: 1,
+        version: 2,
         partialize: (state) => ({
           rosters: state.rosters,
           groups: state.groups,

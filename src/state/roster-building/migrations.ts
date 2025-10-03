@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 import { slugify, withSuffix } from "../../utils/string.ts";
 import { BuilderState } from "./builder-selection";
-import { RosterGroupState } from "./groups";
+import { RosterGroup, RosterGroupState } from "./groups";
 import { RosterBuildingState } from "./index.ts";
 import { RosterState } from "./roster";
 
@@ -18,6 +18,14 @@ export const migrations = (
     console.debug("Migrating to v1");
     migratedState = v1Migration(oldState as RosterState & BuilderState);
     console.log("Migration v1;", { migratedState });
+  }
+
+  if (version <= 1) {
+    console.debug("Migrating to v2");
+    migratedState = v2Migration(
+      oldState as RosterState & RosterGroupState & BuilderState,
+    );
+    console.log("Migration v2;", { migratedState });
   }
 
   console.log("Migration completed", { newState: migratedState });
@@ -65,4 +73,29 @@ const v1Migration = (
   );
 
   return { rosters, groups } as RosterState & BuilderState & RosterGroupState;
+};
+
+/**
+ * Migration #2 changes how rosters are linked to groups. In v1 roster groups were linked to a group using the group id.
+ * With this migration we change rosters that use an ID to the group slug. This is done since the API uses just the
+ * slug and having both makes things quite complicated in the long run.
+ */
+const v2Migration = (
+  state: RosterState & RosterGroupState & BuilderState,
+): RosterState & BuilderState & RosterGroupState => {
+  const rosters = state.rosters.map((roster) => {
+    // If the roster is not in a group, it does not have to be altered.
+    if (!roster.group) return roster;
+
+    // find group by id (OR slug for those already migrated via the API)
+    const linkedGroup = (group: RosterGroup) =>
+      group.id === roster.group || group.slug === roster.group;
+
+    const group = state.groups.find(linkedGroup);
+    return { ...roster, group: group?.slug };
+  });
+
+  return { rosters, groups: state.groups } as RosterState &
+    BuilderState &
+    RosterGroupState;
 };
