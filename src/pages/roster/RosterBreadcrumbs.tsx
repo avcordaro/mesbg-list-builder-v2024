@@ -55,7 +55,7 @@ export const RosterBreadcrumbs = ({
       )}
       {subpath ? (
         <Link
-          to={`/rosters/${roster.id}`}
+          to={`/roster/${roster.id}`}
           style={{
             textDecoration: "none",
             color: mode === "dark" ? palette.info.light : palette.info.main,
