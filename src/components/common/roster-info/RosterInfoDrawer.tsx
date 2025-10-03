@@ -1,7 +1,7 @@
 import Drawer from "@mui/material/Drawer";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
-import { DrawerHeader } from "../../../layout/Navigation.tsx";
+import { MenuDrawerHeader } from "../../../layout/navigation/MenuDrawerHeader.tsx";
 import { Roster } from "../../../types/roster.ts";
 import { RosterInformation } from "./RosterInformation.tsx";
 
@@ -46,7 +46,7 @@ export const RosterInfoDrawer = ({
       }}
       open={infoOpen}
     >
-      {screen.isDesktop && <DrawerHeader />}
+      {screen.isDesktop && <MenuDrawerHeader />}
       <RosterInformation
         roster={roster}
         onClose={() => setInfoOpen(false)}
