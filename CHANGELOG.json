@@ -1,24 +1,25 @@
 {
   "main": {
     "added": [
-      "Added an indicator when changes are pending for sync with a way to force a sync.",
-      "Added a button to create a roster group, allowing empty groups and filling them later.",
       "Added the ability to drag and drop groups on each other to created nested groups.",
-      "Enabled the army list input on edit roster allowing you to switch between army list (this clears the existing rosters!)",
-      "Added points values to the army composition in the PDF export.",
+      "Added a button to create a roster group, allowing empty groups and filling them later.",
+      "Added the ability to bulk delete your created rosters.",
       "Added more complex query options on the rosters page allowing you to narrow your search to find the exact roster.",
-      "Allow adding tags to created rosters for finding rosters even more quickly.",
-      "Added the ability to bulk delete your created rosters."
+      "Added an tags field to rosters for finding rosters even more quickly.",
+      "Enabled the army list input on edit roster allowing you to switch between army list (this clears the existing rosters!)",
+      "Added an indicator when changes are pending for sync with a way to force a sync.",
+      "Added points values to the army composition in the PDF export.",
+      "Added more options to the menu popover on the roster page allowing you to open the summary without having to enter the builder."
     ],
     "changed": [
       "Update the default dark-mode setting to match the system settings of the device.",
       "Replaced the create-or-import roster card with a FAB as was already done on mobile."
     ],
     "bugfixes": [
-      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card.",
-      "Corrected the number of Wounds for King's Champion Heralds in the MWF Tracker.",
       "Fix issue where duplicated rosters are not saved and synced.",
       "Fix mismatch in id and slug field for roster groups making them unable to appear in the breadcrumbs.",
+      "Corrected the wording of the Skin-changer special rule on Beorn the Bear's profile card.",
+      "Corrected the number of Wounds for King's Champion Heralds in the MWF Tracker.",
       "Replace the image rendering utility for one that better supports firefox.",
       "Fixed scaling issue with the new game switcher on mobile screens."
     ]
