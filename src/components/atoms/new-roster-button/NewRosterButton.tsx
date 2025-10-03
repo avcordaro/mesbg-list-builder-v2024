@@ -17,7 +17,7 @@ export const NewRosterButton: FunctionComponent = () => {
     <Box ref={speedDialRef}>
       <SpeedDial
         ariaLabel="action-buttons"
-        sx={{ position: "fixed", bottom: 32, right: 32 }}
+        sx={{ position: "fixed", bottom: 16, right: 16 }}
         icon={<SpeedDialIcon />}
         open={fabOpen}
         onClick={() => setFabOpen((x) => !x)}
