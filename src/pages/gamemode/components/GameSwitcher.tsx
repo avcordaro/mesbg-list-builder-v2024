@@ -6,6 +6,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Stack from "@mui/material/Stack";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { Game } from "../../../state/gamemode/gamestate";
 import { useRosterBuildingState } from "../../../state/roster-building";
 
@@ -16,6 +17,7 @@ interface GameSwitcherProps {
 
 export const GameSwitcher = ({ games, activeGame }: GameSwitcherProps) => {
   const navigate = useNavigate();
+  const screen = useScreenSize();
   const rosters = useRosterBuildingState((state) =>
     Object.fromEntries(
       state.rosters.map(({ id, name, armyList }) => [
@@ -43,7 +45,7 @@ export const GameSwitcher = ({ games, activeGame }: GameSwitcherProps) => {
 
   return (
     <Stack direction="row" gap={2} sx={{ mb: 1 }}>
-      <FormControl fullWidth size="small">
+      <FormControl size="small" fullWidth>
         <InputLabel id="gameswitcher">Switch to game...</InputLabel>
         <Select
           labelId="gameswitcher"
@@ -51,6 +53,12 @@ export const GameSwitcher = ({ games, activeGame }: GameSwitcherProps) => {
           value={selectedGame}
           label="Switch to game..."
           onChange={handleChange}
+          sx={{
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+            maxWidth: screen.isMobile ? "24ch" : "unset",
+          }}
         >
           {otherGames.map((game) => (
             <MenuItem key={game.roster} value={game.roster}>
