@@ -2,12 +2,10 @@ import { v4 as randomUuid } from "uuid";
 import { mesbgData, siegeEquipmentData } from "../../assets/data.ts";
 import { isSelectedUnit, Roster, SelectedUnit } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
-import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
 import { download } from "./useDownload.ts";
 import { useJsonValidation } from "./useJsonValidation.ts";
 
 export const useExport = () => {
-  const { roster } = useRosterInformation();
   const jsonValidation = useJsonValidation();
   const calculator = useCalculator();
 
@@ -154,10 +152,10 @@ export const useExport = () => {
 
   return {
     convertRosterToJson,
-    exportToClipboard: () => {
+    exportToClipboard: (roster: Roster) => {
       window.navigator.clipboard.writeText(convertRosterToJson(roster));
     },
-    exportToFile: (fileName: string) =>
+    exportToFile: (roster: Roster, fileName: string) =>
       download(convertRosterToJson(roster), fileName, "application/json"),
     importJsonRoster: (jsonString: string) => convertJsonToRoster(jsonString),
     isImported,

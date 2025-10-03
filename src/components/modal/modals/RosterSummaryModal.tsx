@@ -31,7 +31,10 @@ import {
 } from "../../common/roster-summary/TextView.tsx";
 
 export const RosterSummaryModal = () => {
-  const { closeModal } = useAppState();
+  const {
+    closeModal,
+    modalContext: { roster, withArmyName = false },
+  } = useAppState();
   const { preferences } = useUserPreferences();
   const rosterTextRef = useRef<RosterTextViewHandlers>();
   const rosterTableRef = useRef<RosterTableViewHandlers>();
@@ -40,7 +43,9 @@ export const RosterSummaryModal = () => {
   const [plainTextView, setPlainTextView] = useState(false);
   const [showArmyBonus, setShowArmyBonus] = useState(false);
   const [showUnitTotals, setShowUnitTotals] = useState(false);
-  const [includeRosterName, setIncludeRosterName] = useState(false);
+  const [includeRosterName, setIncludeRosterName] = useState(
+    withArmyName && roster.name !== roster.armyList,
+  );
 
   const handleTotalsToggle = () => setShowUnitTotals(!showUnitTotals);
   const handlePlainTextToggle = () => setPlainTextView(!plainTextView);
@@ -110,12 +115,14 @@ export const RosterSummaryModal = () => {
       <DialogContent>
         {plainTextView ? (
           <RosterTextView
+            roster={roster}
             showArmyBonus={showArmyBonus}
             showUnitTotals={showUnitTotals}
             ref={rosterTextRef}
           />
         ) : preferences.oldShareScreen ? (
           <RosterTableView
+            roster={roster}
             showArmyBonus={showArmyBonus}
             showUnitTotals={showUnitTotals}
             includeRosterName={includeRosterName}
@@ -123,6 +130,7 @@ export const RosterSummaryModal = () => {
           />
         ) : (
           <ImageView
+            roster={roster}
             showArmyBonus={showArmyBonus}
             showUnitTotals={showUnitTotals}
             includeRosterName={includeRosterName}

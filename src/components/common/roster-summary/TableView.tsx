@@ -88,8 +88,13 @@ const RosterTotalRows = ({ roster }: { roster: Roster }) => {
   );
 };
 
-const WarbandRows = ({ warband }: { warband: Warband }) => {
-  const { roster } = useRosterInformation();
+const WarbandRows = ({
+  warband,
+  leader,
+}: {
+  warband: Warband;
+  leader?: string;
+}) => {
   const { mode } = useThemeContext();
 
   const rowStyle: SxProps = {
@@ -115,9 +120,7 @@ const WarbandRows = ({ warband }: { warband: Warband }) => {
                 options: [],
               } as SelectedUnit)
         }
-        leader={
-          isSelectedUnit(warband.hero) && roster.metadata.leader === warband.id
-        }
+        leader={isSelectedUnit(warband.hero) && leader === warband.id}
         rowStyle={rowStyle}
       />
       {warband.units.filter(isSelectedUnit).map((unit) => (
@@ -129,6 +132,7 @@ const WarbandRows = ({ warband }: { warband: Warband }) => {
 
 export type RosterTableViewHandlers = { createScreenshot: () => void };
 export type RosterTableViewProps = {
+  roster: Roster;
   showArmyBonus: boolean;
   showUnitTotals: boolean;
   includeRosterName: boolean;
@@ -136,14 +140,14 @@ export type RosterTableViewProps = {
 export const RosterTableView = forwardRef<
   RosterTableViewHandlers,
   RosterTableViewProps
->(({ showArmyBonus, showUnitTotals, includeRosterName }, ref) => {
+>(({ roster, showArmyBonus, showUnitTotals, includeRosterName }, ref) => {
   const { mode } = useThemeContext();
   const { setCurrentModal } = useAppState();
-  const { roster, getAdjustedMetaData } = useRosterInformation();
+  const { getAdjustedMetaData } = useRosterInformation();
   const { break_point } = armyListData[roster.armyList];
 
   const { might, will, fate, units, points, bows, throwingWeapons } =
-    getAdjustedMetaData();
+    getAdjustedMetaData(roster);
 
   const [screenshotting, setScreenshotting] = useState(false);
 
@@ -161,7 +165,8 @@ export const RosterTableView = forwardRef<
         .then(function (data) {
           setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
             screenshot: data,
-            onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
+            onClose: () =>
+              setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),
           });
           setScreenshotting(false);
           if (admission) {
@@ -275,7 +280,11 @@ export const RosterTableView = forwardRef<
             ) : (
               <>
                 {roster.warbands.map((warband) => (
-                  <WarbandRows key={warband.id} warband={warband} />
+                  <WarbandRows
+                    key={warband.id}
+                    warband={warband}
+                    leader={roster.metadata.leader}
+                  />
                 ))}
               </>
             )}

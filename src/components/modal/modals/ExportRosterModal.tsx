@@ -8,15 +8,16 @@ import {
   InputLabel,
 } from "@mui/material";
 import { useState } from "react";
-import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useExport } from "../../../hooks/export/useExport.ts";
 import { useAppState } from "../../../state/app";
 import { slugify } from "../../../utils/string.ts";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 
 export const ExportRosterModal = () => {
-  const { closeModal } = useAppState();
-  const { roster } = useRosterInformation();
+  const {
+    closeModal,
+    modalContext: { roster },
+  } = useAppState();
   const { exportToFile, exportToClipboard } = useExport();
 
   const [filename, setFilename] = useState(slugify(roster.name));
@@ -27,14 +28,14 @@ export const ExportRosterModal = () => {
     const validFilename = filename.trim().length > 0;
     setFilenameValid(validFilename);
     if (validFilename) {
-      exportToFile(filename + ".json");
+      exportToFile(roster, filename + ".json");
       closeModal();
     }
   };
 
   const handleCopy = (e) => {
     e.preventDefault();
-    exportToClipboard();
+    exportToClipboard(roster);
     closeModal();
   };
 

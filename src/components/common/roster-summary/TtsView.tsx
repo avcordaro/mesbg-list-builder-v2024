@@ -2,15 +2,18 @@ import Link from "@mui/material/Link";
 import TextField from "@mui/material/TextField";
 import { forwardRef, useImperativeHandle } from "react";
 import tta2mlbJson from "../../../assets/data/tta2mlb.json";
-import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
-import { isSelectedUnit, SelectedUnit } from "../../../types/roster.ts";
+import { isSelectedUnit, Roster, SelectedUnit } from "../../../types/roster.ts";
 import { selectedOptionWithType } from "../../../utils/options.ts";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
 
 export type RosterTextViewHandlers = {
   copyToClipboard: () => void;
+};
+
+export type RosterTextViewProps = {
+  roster: Roster;
 };
 
 const getOptions = ({ options }: SelectedUnit) =>
@@ -31,80 +34,78 @@ const getAdditionalIncludes = (roster) => {
   return "";
 };
 
-export const RosterTabletopSimView = forwardRef<RosterTextViewHandlers>(
-  (_, ref) => {
-    const { roster } = useRosterInformation();
-    const { triggerAlert } = useAppState();
+export const RosterTabletopSimView = forwardRef<
+  RosterTextViewHandlers,
+  RosterTextViewProps
+>(({ roster }, ref) => {
+  const { triggerAlert } = useAppState();
 
-    const additionalIncludes = getAdditionalIncludes(roster);
-    const exportText =
-      roster.warbands
-        .filter((warband) => isSelectedUnit(warband.hero))
-        .map(({ hero, units }) => {
-          const name = tta2mlb[hero.name]
-            ? tta2mlb[hero.name](hero)
-            : hero.name;
-          const leader =
-            hero.unit_type === "Siege Engine"
-              ? name
-              : `(${name}: ${getOptions(hero)})`;
-          const followers = units.filter(isSelectedUnit).map((unit) => {
-            const unitName = tta2mlb[unit.name]
-              ? tta2mlb[unit.name](unit)
-              : unit.name;
-            const options = getOptions(unit);
-            return `    (${unit.quantity}x ${unitName}: ${options})`;
-          });
-          return followers.length
-            ? `${leader}\n${followers.join("\n")}\n`
-            : `${leader}\n`;
-        })
-        .join("\n") + additionalIncludes;
+  const additionalIncludes = getAdditionalIncludes(roster);
+  const exportText =
+    roster.warbands
+      .filter((warband) => isSelectedUnit(warband.hero))
+      .map(({ hero, units }) => {
+        const name = tta2mlb[hero.name] ? tta2mlb[hero.name](hero) : hero.name;
+        const leader =
+          hero.unit_type === "Siege Engine"
+            ? name
+            : `(${name}: ${getOptions(hero)})`;
+        const followers = units.filter(isSelectedUnit).map((unit) => {
+          const unitName = tta2mlb[unit.name]
+            ? tta2mlb[unit.name](unit)
+            : unit.name;
+          const options = getOptions(unit);
+          return `    (${unit.quantity}x ${unitName}: ${options})`;
+        });
+        return followers.length
+          ? `${leader}\n${followers.join("\n")}\n`
+          : `${leader}\n`;
+      })
+      .join("\n") + additionalIncludes;
 
-    useImperativeHandle(ref, () => ({
-      copyToClipboard: async () => {
-        await window.navigator.clipboard.writeText(exportText);
-        triggerAlert(AlertTypes.TTS_TEXT_COPIED_SUCCESS);
-      },
-    }));
+  useImperativeHandle(ref, () => ({
+    copyToClipboard: async () => {
+      await window.navigator.clipboard.writeText(exportText);
+      triggerAlert(AlertTypes.TTS_TEXT_COPIED_SUCCESS);
+    },
+  }));
 
-    return (
-      <>
-        <CustomAlert severity="warning" title="">
-          The{" "}
-          <Link
-            href="https://steamcommunity.com/sharedfiles/filedetails/?l=swedish&id=3133220714"
-            color="primary"
-            target="_blank"
-          >
-            MESBG FTC Plugin
-          </Link>{" "}
-          for Tabletop Simulator is based of the model names from Tabletop
-          Admiral. Since there will be no 1-to-1 match on unit names it could be
-          that some models will fail to load. Please let us know so we can add
-          it to our <strong>TTA to MLB</strong> name map.
-        </CustomAlert>
-        <TextField
-          id="outlined-multiline-static"
-          fullWidth
-          hiddenLabel
-          multiline
-          rows={16}
-          defaultValue={exportText}
-          disabled
-          size="small"
-          sx={{
-            mt: 2,
-            "& .MuiInputBase-input.Mui-disabled": {
-              WebkitTextFillColor: (theme) => theme.palette.text.primary, // Needed for some browsers (like Chrome)
-              color: (theme) => theme.palette.text.primary,
-            },
-          }}
-        />
-      </>
-    );
-  },
-);
+  return (
+    <>
+      <CustomAlert severity="warning" title="">
+        The{" "}
+        <Link
+          href="https://steamcommunity.com/sharedfiles/filedetails/?l=swedish&id=3133220714"
+          color="primary"
+          target="_blank"
+        >
+          MESBG FTC Plugin
+        </Link>{" "}
+        for Tabletop Simulator is based of the model names from Tabletop
+        Admiral. Since there will be no 1-to-1 match on unit names it could be
+        that some models will fail to load. Please let us know so we can add it
+        to our <strong>TTA to MLB</strong> name map.
+      </CustomAlert>
+      <TextField
+        id="outlined-multiline-static"
+        fullWidth
+        hiddenLabel
+        multiline
+        rows={16}
+        defaultValue={exportText}
+        disabled
+        size="small"
+        sx={{
+          mt: 2,
+          "& .MuiInputBase-input.Mui-disabled": {
+            WebkitTextFillColor: (theme) => theme.palette.text.primary, // Needed for some browsers (like Chrome)
+            color: (theme) => theme.palette.text.primary,
+          },
+        }}
+      />
+    </>
+  );
+});
 
 const siegeUnitMappings: Record<string, (unit: SelectedUnit) => string> = {
   Windlance: (unit) =>

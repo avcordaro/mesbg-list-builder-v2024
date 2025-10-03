@@ -3,7 +3,6 @@ import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { heroConstraintData } from "../../../../assets/data.ts";
-import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import {
   isSelectedUnit,
   isSiegeEquipment,
@@ -14,16 +13,14 @@ import { UnitRow } from "./UnitRow.tsx";
 export const WarbandSection = ({
   warband,
   index,
+  leader,
+  isCustomRoster = false,
 }: {
   warband: Warband;
   index: number;
+  leader?: string;
+  isCustomRoster?: boolean;
 }) => {
-  const {
-    roster: {
-      metadata: { leader },
-    },
-    isCustomRoster,
-  } = useRosterInformation();
   const hero = warband.hero;
   const heroOptions =
     (!!hero &&

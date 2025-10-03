@@ -4,11 +4,13 @@ import { useRosterInformation } from "../../../hooks/calculations-and-displays/u
 import {
   FreshUnit,
   isSelectedUnit,
+  Roster,
   SelectedUnit,
 } from "../../../types/roster.ts";
 import { getSumOfUnits } from "./totalUnits.ts";
 
 export type RosterTextViewProps = {
+  roster: Roster;
   showArmyBonus: boolean;
   showUnitTotals: boolean;
 };

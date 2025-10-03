@@ -8,13 +8,18 @@ import defeatedIcon from "../../../../assets/images/roster-summary/defeated.png"
 import throwIcon from "../../../../assets/images/roster-summary/throw-weapon.png";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useRosterWarnings } from "../../../../hooks/calculations-and-displays/useRosterWarnings.ts";
+import { Roster } from "../../../../types/roster.ts";
 
 interface HeaderBlockProps {
+  roster: Roster;
   includeRosterName: boolean;
 }
 
-export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
-  const { roster, getAdjustedMetaData } = useRosterInformation();
+export const HeaderBlock = ({
+  includeRosterName,
+  roster,
+}: HeaderBlockProps) => {
+  const { getAdjustedMetaData } = useRosterInformation();
   const { break_point, bow_limit, throw_limit } = armyListData[roster.armyList];
   const {
     might,
@@ -26,8 +31,8 @@ export const HeaderBlock = ({ includeRosterName }: HeaderBlockProps) => {
     bowLimit,
     throwLimit,
     throwingWeapons,
-  } = getAdjustedMetaData();
-  const warnings = useRosterWarnings();
+  } = getAdjustedMetaData(roster);
+  const warnings = useRosterWarnings(roster);
 
   const maxBows = Math.ceil(bowLimit * bow_limit);
   const maxThrows = Math.ceil(throwLimit * throw_limit);

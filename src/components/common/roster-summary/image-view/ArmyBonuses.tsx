@@ -4,11 +4,12 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { armyListData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
+import { Roster } from "../../../../types/roster.ts";
 import { isMovieQuote } from "../../../../utils/string.ts";
 
-export const ArmyBonuses = () => {
-  const { roster, getAdjustedMetaData } = useRosterInformation();
-  const { tttSpecialUpgrades } = getAdjustedMetaData();
+export const ArmyBonuses = ({ roster }: { roster: Roster }) => {
+  const { getAdjustedMetaData } = useRosterInformation();
+  const { tttSpecialUpgrades } = getAdjustedMetaData(roster);
   const armyListMetadata = armyListData[roster.armyList];
 
   return (
