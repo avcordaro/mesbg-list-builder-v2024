@@ -3,7 +3,7 @@ import { Roster } from "../../../types/roster";
 
 type Condition = {
   field: string;
-  operator: "=" | "<" | ">" | "<=" | ">=" | "!=";
+  operator: "=" | "<" | ">" | "<=" | ">=" | "!=" | "~";
   value: string | number;
 };
 
@@ -23,7 +23,7 @@ export const useRosterSearch = () => {
     const regex = /^([a-zA-Z0-9_.]+)([=<>!]+)(.+)$/;
     return query.split("&").map((part) => {
       const match = part.trim().match(regex);
-      if (!match) return null;
+      if (!match) return { field: "", operator: "~", value: part };
       const [, field, operator, rawValue] = match;
       const value = isNaN(Number(rawValue)) ? rawValue : Number(rawValue);
       return { field, operator: operator as Condition["operator"], value };
@@ -34,20 +34,16 @@ export const useRosterSearch = () => {
     const conditions = parseQuery(query.toLocaleLowerCase());
     const resolvers = buildResolvers();
 
-    if (conditions.filter((value) => !!value).length === 0) return [];
-
     function resolveField(roster: Roster, field: string) {
       if (field in resolvers) return resolvers[field](roster);
       return resolvers.default(roster, field);
     }
 
     function matchesCondition(roster: Roster, condition: Condition): boolean {
-      if (condition === null) return true;
       const fieldValue = resolveField(roster, condition.field);
 
       // Special handling for arrays
       if (Array.isArray(fieldValue)) {
-        console.log(fieldValue);
         switch (condition.operator) {
           case "=":
             return fieldValue.includes(condition.value);
@@ -59,6 +55,8 @@ export const useRosterSearch = () => {
       }
 
       switch (condition.operator) {
+        case "~":
+          return fieldValue.includes(condition.value);
         case "=":
           return fieldValue == condition.value;
         case "!=":
@@ -95,6 +93,10 @@ export const useRosterSearch = () => {
       fate: (roster: Roster) => roster.metadata.fate,
       tag: (roster: Roster) =>
         (roster.metadata.tags ?? []).map((tag) => tag.toLocaleLowerCase()),
+      "": (roster: Roster) =>
+        roster.name.toLocaleLowerCase() +
+        "::" +
+        roster.armyList.toLocaleLowerCase(),
       default: (roster: Roster, field: string) => getFieldValue(roster, field),
     };
   }
