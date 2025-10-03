@@ -12,7 +12,10 @@ import { RosterTextViewHandlers } from "../../common/roster-summary/TextView.tsx
 import { RosterTabletopSimView } from "../../common/roster-summary/TtsView.tsx";
 
 export const TabletopSimulatorExportModal = () => {
-  const { closeModal } = useAppState();
+  const {
+    closeModal,
+    modalContext: { roster },
+  } = useAppState();
   const rosterTextRef = useRef<RosterTextViewHandlers>();
 
   return (
@@ -56,7 +59,7 @@ export const TabletopSimulatorExportModal = () => {
       <Divider />
       <DialogTitle></DialogTitle>
       <DialogContent>
-        <RosterTabletopSimView ref={rosterTextRef} />
+        <RosterTabletopSimView ref={rosterTextRef} roster={roster} />
       </DialogContent>
     </>
   );

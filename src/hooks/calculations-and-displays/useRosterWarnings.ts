@@ -371,17 +371,17 @@ function isActiveRule(setOfModelIds: string[]) {
   };
 }
 
-export const useRosterWarnings = (): WarningRule[] => {
-  const rosterInformation = useRosterInformation();
+export const useRosterWarnings = (roster?: Roster): WarningRule[] => {
+  const { getSetOfModelIds, roster: currentRoster } = useRosterInformation();
   const { preferences } = useUserPreferences();
-  const setOfModelIds = rosterInformation.getSetOfModelIds();
+  const setOfModelIds = getSetOfModelIds(roster ?? currentRoster);
   const allWarnings = data as WarningRules;
 
   const possibleWarnings = [
-    ...(allWarnings[rosterInformation.roster.armyList] || []),
+    ...(allWarnings[(roster ?? currentRoster).armyList] || []),
     ...setOfModelIds.flatMap((model) => allWarnings[model]),
     ...extraScriptedRosterWarnings(
-      rosterInformation.roster,
+      roster ?? currentRoster,
       preferences.allowCompulsoryGeneralDelete,
     ),
   ].filter((v) => !!v);

@@ -43,7 +43,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
     {
       icon: <SaveIcon />,
       name: "Export roster",
-      callback: () => setCurrentModal(ModalTypes.EXPORT_ROSTER),
+      callback: () => setCurrentModal(ModalTypes.EXPORT_ROSTER, { roster }),
       disabled: roster.metadata.units === 0,
     },
     {
@@ -61,13 +61,14 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
     {
       icon: <GiRollingDices size="1.8rem" />,
       name: "Tabletop Simulator Export",
-      callback: () => setCurrentModal(ModalTypes.TABLETOP_SIM_EXPORT),
+      callback: () =>
+        setCurrentModal(ModalTypes.TABLETOP_SIM_EXPORT, { roster }),
       disabled: roster.metadata.units === 0,
     },
     {
       icon: <ShareIcon />,
       name: "Roster summary & sharing",
-      callback: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY),
+      callback: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),
       disabled: roster.metadata.units === 0,
     },
   ];
