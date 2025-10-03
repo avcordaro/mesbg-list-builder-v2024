@@ -1,4 +1,4 @@
-import { Slide } from "@mui/material";
+import { Portal, Slide } from "@mui/material";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import debounce from "lodash/debounce";
@@ -130,24 +130,26 @@ export const RosterCloudSyncProvider = ({
   return (
     <RosterSyncContext.Provider value={sync}>
       {children}
-      <Snackbar
-        open={open}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-        TransitionComponent={Slide}
-        message={`Syncing roster in ${Math.ceil(remaining / 1000)}s`}
-        action={
-          <Button color="primary" size="small" onClick={handleClose}>
-            sync now!
-          </Button>
-        }
-        sx={{ bottom: 90, backgroundColor: "transparent", zIndex: 1000 }}
-        ContentProps={{
-          sx: {
-            backgroundColor: (theme) => theme.palette.background.paper,
-            color: (theme) => theme.palette.text.primary,
-          },
-        }}
-      />
+      <Portal>
+        <Snackbar
+          open={open}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          TransitionComponent={Slide}
+          message={`Syncing roster in ${Math.ceil(remaining / 1000)}s`}
+          action={
+            <Button color="primary" size="small" onClick={handleClose}>
+              sync now!
+            </Button>
+          }
+          sx={{ bottom: 85, backgroundColor: "transparent", zIndex: 1000 }}
+          ContentProps={{
+            sx: {
+              backgroundColor: (theme) => theme.palette.background.paper,
+              color: (theme) => theme.palette.text.primary,
+            },
+          }}
+        />
+      </Portal>
     </RosterSyncContext.Provider>
   );
 };
