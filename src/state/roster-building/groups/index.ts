@@ -1,4 +1,3 @@
-import { v4 } from "uuid";
 import { Slice } from "../../Slice.ts";
 import { RosterBuildingState } from "../index.ts";
 
@@ -13,9 +12,9 @@ export type RosterGroup = {
 
 type RosterGroupStateActions = {
   createGroup: (group: Omit<RosterGroup, "id">) => string;
-  updateGroup: (id: string, update: Partial<Omit<RosterGroup, "id">>) => void;
-  disbandGroup: (id: RosterGroup["id"]) => void;
-  deleteGroup: (id: RosterGroup["id"]) => void;
+  updateGroup: (id: string, update: Partial<Omit<RosterGroup, "slug">>) => void;
+  disbandGroup: (id: RosterGroup["slug"]) => void;
+  deleteGroup: (id: RosterGroup["slug"]) => void;
 };
 
 export type RosterGroupState = {
@@ -33,7 +32,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
   ...initialBuilderState,
 
   createGroup: (group) => {
-    const id = v4();
+    const id = group.slug;
     set(
       ({ groups }) => ({
         groups: [...groups, { ...group, id }],

@@ -5,8 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
+import { RosterGroup } from "../../../state/roster-building/groups";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
+
+function findSubgroups(slug: string, groups: RosterGroup[]): RosterGroup[] {
+  return groups
+    .filter((g) => g.parent === slug)
+    .flatMap((child) => [child, ...findSubgroups(child.slug, groups)]);
+}
 
 export const ConfirmDeleteGroupModal = () => {
   const {
@@ -22,12 +29,22 @@ export const ConfirmDeleteGroupModal = () => {
 
   const [rosterGroupName, setRosterGroupName] = useState("");
 
-  const handleConfirmDisband = (e) => {
+  const performDeletion = async (id: string, slug: string) => {
+    await api.deleteGroup(slug, false);
+    deleteGroup(id);
+  };
+
+  const handleConfirmDisband = async (e) => {
     e.preventDefault();
 
     if (id) {
-      deleteGroup(id);
-      api.deleteGroup(groupId, false);
+      const upForDeletion = [
+        { id: id, slug: groupId },
+        ...findSubgroups(groupId, groups).map(({ id, slug }) => ({ id, slug })),
+      ];
+      for (const group of upForDeletion) {
+        await performDeletion(group.id, group.slug);
+      }
       if (redirect === true) {
         navigate("/rosters");
       }

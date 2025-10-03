@@ -4,8 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
+import { RosterGroup } from "../../../state/roster-building/groups";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
+
+function findDirectSubgroups(
+  slug: string,
+  groups: RosterGroup[],
+): RosterGroup[] {
+  return groups.filter((g) => g.parent === slug);
+}
 
 export const ConfirmDisbandGroupModal = () => {
   const {
@@ -13,17 +21,28 @@ export const ConfirmDisbandGroupModal = () => {
     modalContext: { groupId, redirect },
     triggerAlert,
   } = useAppState();
-  const { disbandGroup, groups } = useRosterBuildingState();
-  const { deleteGroup } = useApi();
-  const id = groups.find((group) => group.slug === groupId)?.id;
+  const { disbandGroup, groups, updateGroup } = useRosterBuildingState();
+  const api = useApi();
+  const group = groups.find((group) => group.slug === groupId);
   const navigate = useNavigate();
 
-  const handleConfirmDisband = (e) => {
+  const handleConfirmDisband = async (e) => {
     e.preventDefault();
 
-    if (id) {
-      disbandGroup(id);
-      deleteGroup(groupId, true);
+    if (group) {
+      const subgroups = findDirectSubgroups(groupId, groups);
+      for (const subgroup of subgroups) {
+        if (!group.parent) {
+          await api.removeParentGroup(subgroup.slug);
+        } else {
+          await api.setParentGroup(subgroup.slug, group.parent);
+        }
+        updateGroup(subgroup.id, { ...subgroup, parent: group.parent });
+      }
+
+      await api.deleteGroup(groupId, true);
+      disbandGroup(group.id);
+
       if (redirect === true) {
         navigate("/rosters");
       }
@@ -44,8 +63,8 @@ export const ConfirmDisbandGroupModal = () => {
 
         <CustomAlert severity="info" title="">
           <Typography>
-            Disbanding a roster group means the rosters will be moved back to
-            your &apos;My Rosters&apos; page.{" "}
+            Disbanding a roster group means the rosters and subgroups inside
+            this group will be moved to their parent group.{" "}
             <strong>They will not be deleted!</strong>
           </Typography>
         </CustomAlert>
