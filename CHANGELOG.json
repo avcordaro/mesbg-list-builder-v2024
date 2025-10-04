@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.34": {
     "added": [
       "Added the ability to drag and drop groups on each other to created nested groups.",
       "Added a button to create a roster group, allowing empty groups and filling them later.",
