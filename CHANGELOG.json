@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye."
+    ]
+  },
   "1.34": {
     "added": [
       "Added the ability to drag and drop groups on each other to created nested groups.",

@@ -660,6 +660,23 @@
     "valid_warband_units": [],
     "extra_profiles": []
   },
+  "[army-of-the-great-eye] mordor-orc-shaman": {
+    "valid_warband_units": [
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight",
+      "[army-of-the-great-eye] black-guard-drummer",
+      "[army-of-the-great-eye] black-guard-of-barad-dur",
+      "[army-of-the-great-eye] morgul-stalker",
+      "[army-of-the-great-eye] orc-tracker"
+    ],
+    "extra_profiles": []
+  },
   "[army-of-the-great-eye] mordor-orc-taskmaster": {
     "valid_warband_units": [
       "[army-of-the-great-eye] mordor-orc-drummer",
