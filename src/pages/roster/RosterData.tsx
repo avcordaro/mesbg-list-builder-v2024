@@ -29,7 +29,7 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
 
   const warnings = useRosterWarnings();
   const screen = useScreenSize();
-  const sync = useRosterSync();
+  const { sync } = useRosterSync();
   const displayMobileToolbar = useUserPreferences(
     ({ preferences }) => preferences.mobileRosterToolbar,
   );

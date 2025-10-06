@@ -17,7 +17,15 @@ import { useAuth } from "../../firebase/FirebaseAuthContext";
 import { Roster } from "../../types/roster";
 import { useApi } from "./useApi";
 
-const RosterSyncContext = createContext<(roster: Roster) => void>(() => {});
+type SyncContext = {
+  sync: (roster: Roster) => void;
+  syncPending: boolean;
+};
+
+const RosterSyncContext = createContext<SyncContext>({
+  sync: () => {},
+  syncPending: false,
+});
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useRosterSync = () => useContext(RosterSyncContext);
@@ -27,7 +35,6 @@ export const RosterCloudSyncProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  console.debug("Using the roster sync provider...");
   const auth = useAuth();
   const { updateRoster } = useApi();
   const previousRosterRef = useRef<Roster | null>(null);
@@ -128,7 +135,7 @@ export const RosterCloudSyncProvider = ({
   };
 
   return (
-    <RosterSyncContext.Provider value={sync}>
+    <RosterSyncContext.Provider value={{ sync, syncPending: open }}>
       {children}
       <Portal>
         <Snackbar
@@ -141,7 +148,7 @@ export const RosterCloudSyncProvider = ({
               sync now!
             </Button>
           }
-          sx={{ bottom: 85, backgroundColor: "transparent", zIndex: 1000 }}
+          sx={{ backgroundColor: "transparent", zIndex: 1000 }}
           ContentProps={{
             sx: {
               backgroundColor: (theme) => theme.palette.background.paper,

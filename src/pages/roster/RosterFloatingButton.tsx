@@ -21,6 +21,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { drawerWidth } from "../../components/common/roster-info/RosterInfoDrawer.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useRosterSync } from "../../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
 import { useAppState } from "../../state/app";
 import { useTemporalRosterBuildingState } from "../../state/roster-building";
 import { useThemeContext } from "../../theme/ThemeContext.tsx";
@@ -30,6 +31,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
   const navigate = useNavigate();
   const screen = useScreenSize();
   const { mode } = useThemeContext();
+  const { syncPending } = useRosterSync();
   const { setCurrentModal } = useAppState();
   const { undo, redo, pastStates, futureStates, clear } =
     useTemporalRosterBuildingState((state) => state);
@@ -94,11 +96,12 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
   return (
     <Box ref={speedDialRef}>
       <SpeedDial
-        ariaLabel="action-buttons"
+        ariaLabel="share-buttons"
         sx={{
           position: "fixed",
-          bottom: 16,
+          bottom: syncPending && screen.isMobile ? 62 : 16,
           right: screen.isDesktop ? `calc(${drawerWidth}ch + 16px)` : 16,
+          transition: "bottom 0.3s",
         }}
         icon={<SpeedDialIcon icon={<ShareIcon />} openIcon={<Close />} />}
         open={fabOpen}
@@ -133,11 +136,12 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
       </SpeedDial>
 
       <SpeedDial
-        ariaLabel="action-buttons"
+        ariaLabel="undo-buttons"
         sx={{
           position: "fixed",
-          bottom: 16,
+          bottom: syncPending && screen.isMobile ? 62 : 16,
           right: { xl: `calc(${drawerWidth}ch + 80px)`, xs: 80 },
+          transition: "bottom 0.3s",
         }}
         icon={<SpeedDialIcon icon={<History />} openIcon={<Close />} />}
         open={redoOpen}

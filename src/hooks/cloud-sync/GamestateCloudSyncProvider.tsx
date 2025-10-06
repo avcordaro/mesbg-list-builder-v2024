@@ -29,7 +29,6 @@ export const GamestateCloudSyncProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  console.debug("Using the roster sync provider...");
   const auth = useAuth();
   const { updateGamestate } = useApi();
   const previousRosterRef = useRef<Game | null>(null);
