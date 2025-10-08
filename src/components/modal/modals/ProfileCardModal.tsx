@@ -50,7 +50,11 @@ export const ProfileCardModal = () => {
               m: "auto",
             }}
           >
-            <UnitProfileCard army={unit.profile_origin} profile={unit.name} />
+            <UnitProfileCard
+              army={unit.profile_origin}
+              profile={unit.name}
+              dynamic={true}
+            />
             <ExtraProfileCards unit={unit} />
           </Box>
         )}
