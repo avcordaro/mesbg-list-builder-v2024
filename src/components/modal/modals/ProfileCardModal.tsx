@@ -29,20 +29,10 @@ export const ProfileCardModal = () => {
   return (
     <>
       <DialogContent>
-        <Typography variant="body2">
-          You can download a zip of all profile cards for your current army list
-          by clicking on the floating action button in the bottom right, and
-          selecting{" "}
-          <Typography
-            variant="body2"
-            component="strong"
-            fontWeight={800}
-            color={palette.primary.main}
-          >
-            Download profile cards
-          </Typography>
+        <Typography variant="body1" textAlign="center" fontWeight="bold">
+          Rule texts on these cards are summarized for quick reference. For full
+          and official wording, always consult the rulebook.
         </Typography>
-
         {unit != null && (
           <Box
             sx={{
@@ -54,6 +44,19 @@ export const ProfileCardModal = () => {
             <ExtraProfileCards unit={unit} />
           </Box>
         )}
+        <Typography variant="body2" textAlign="center" sx={{ mt: 2 }}>
+          You can download a zip of all profile cards for your current army list
+          by clicking on the floating action button in the bottom right, and
+          selecting{" "}
+          <Typography
+            variant="body2"
+            component="strong"
+            fontWeight={800}
+            color={palette.primary.main}
+          >
+            Download quick reference cards
+          </Typography>
+        </Typography>
       </DialogContent>
     </>
   );
