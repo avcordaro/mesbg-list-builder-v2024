@@ -1,7 +1,9 @@
 {
   "main": {
     "bugfixes": [
-      "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye."
+      "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye.",
+      "Corrected duplicated options on the custom roster profiles.",
+      "Added missing AMWF options on The Witch-King and Ringwraiths taking in custom rosters."
     ]
   },
   "1.34": {
