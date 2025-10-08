@@ -1638,37 +1638,6 @@
         "Shield"
       ]
     },
-    "Halbarad": {
-      "Mv": "6\"",
-      "Fv": "5",
-      "Sv": "3+",
-      "S": "4",
-      "D": "5",
-      "A": "2",
-      "W": "2",
-      "C": "4+",
-      "I": "4+",
-      "active_or_passive_rules": [
-        {
-          "name": "Banner of Arwen Evenstar",
-          "type": "Passive",
-          "description": "A banner with a range of 6\", and Halbarad does not suffer the usual -1 penalty in Duel rolls. Additionally, friendly models within 6\" and in Line of Sight of the banner automatically pass any Courage Tests they are required to take."
-        }
-      ],
-      "magic_powers": [],
-      "heroic_actions": [
-        "Heroic Accuracy",
-        "Heroic Strike"
-      ],
-      "special_rules": [
-        "Woodland Creature"
-      ],
-      "wargear": [
-        "Armour",
-        "hand weapon",
-        "bow"
-      ]
-    },
     "Knight of Dale": {
       "Mv": "6\"",
       "Fv": "4",
@@ -5127,52 +5096,6 @@
       ],
       "wargear": [
         "Light armour",
-        "Horn of the Hammerhand"
-      ]
-    },
-    "Helm Hammerhand": {
-      "Mv": "6\"",
-      "Fv": "6",
-      "Sv": "4+",
-      "S": "5",
-      "D": "7",
-      "A": "3",
-      "W": "3",
-      "C": "4+",
-      "I": "5+",
-      "active_or_passive_rules": [
-        {
-          "name": "The Horn of the Hammerhand",
-          "type": "Active",
-          "description": "Once per game at start of any Move phase, Helm can blow this horn. Until the end of that turn, enemy models within 24\" of Helm suffer a -1 penalty to Courage tests."
-        },
-        {
-          "name": "The Hammerhand",
-          "type": "Active",
-          "description": "Helm never counts as unarmed."
-        },
-        {
-          "name": "Into the Fray",
-          "type": "Active",
-          "description": "Helm may declare a free Heroic Combat each Fight phase. However, after he has slain an enemy model, he must always Charge an enemy model if possible, for the rest of the battle."
-        }
-      ],
-      "magic_powers": [],
-      "heroic_actions": [
-        "Heroic Strike",
-        "Heroic Strength",
-        "Heroic Challenge"
-      ],
-      "special_rules": [
-        "Burly",
-        "Expert Rider",
-        "Horse Lord",
-        "Leader (Rohan Royal Guard)"
-      ],
-      "wargear": [
-        "Heavy armour",
-        "two-handed weapon",
-        "hand weapon",
         "Horn of the Hammerhand"
       ]
     },
