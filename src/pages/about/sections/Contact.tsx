@@ -37,7 +37,7 @@ export const Contact = () => (
       </Box>
       <Box component="li">
         <strong>Email</strong>: Prefer direct contact? Reach us at{" "}
-        <Link to="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Feature request">
+        <Link to="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024)">
           support@mesbg-list-builder.com
         </Link>
         .
