@@ -97,13 +97,13 @@ export const useCalculator = () => {
   }
 
   function getBowLimit(unit: SelectedUnit): number {
-    if (unit.name === "Farmer Maggot") return 2;
+    if (unit.name === "Farmer Maggot") return 3;
     if (!unit.bow_limit) return 0;
     return unit.quantity * (unit.siege_crew || 1);
   }
 
   function getThrowLimit(unit: SelectedUnit): number {
-    if (unit.name === "Farmer Maggot") return 2;
+    if (unit.name === "Farmer Maggot") return 3;
     return unit.quantity * (unit.siege_crew || 1);
   }
 
