@@ -20893,7 +20893,23 @@
     "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
-    "options": []
+    "options": [
+      {
+        "id": "OPT1437",
+        "name": "Upgrade to Venomback Spider",
+        "points": 2,
+        "type": "special_warband_upgrade",
+        "dependencies": [
+          {
+            "type": "requires-all",
+            "condition": "in-warband",
+            "dependencies": [
+              "[moria] ashrak"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "[moria] fell-warg": {
     "model_id": "[moria] fell-warg",
