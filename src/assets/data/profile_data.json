@@ -1364,7 +1364,7 @@
         {
           "name": "\"Stand by our Men!\"",
           "type": "Passive",
-          "description": "If Hilda-Bianca Charges into Combat, then during the ensuing Fight phase, she and friendly Lake-town models within 3\" of her gain a bonus of +1 To Wound when making Strikes."
+          "description": "If Hilda-Bianca Charges into Combat, then during the ensuing Fight phase, she and friendly Lake-town Warrior models within 3\" of her gain a bonus of +1 To Wound when making Strikes."
         }
       ],
       "magic_powers": [],

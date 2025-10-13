@@ -10677,7 +10677,7 @@
     "profile_origin": "Evil Legacy",
     "name": "Moria Blackshield Shaman",
     "unit_type": "Minor Hero",
-    "base_points": 45,
+    "base_points": 50,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [
@@ -20732,7 +20732,7 @@
     "profile_origin": "Evil Legacy",
     "name": "Moria Blackshield Shaman",
     "unit_type": "Minor Hero",
-    "base_points": 45,
+    "base_points": 50,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [

@@ -3,7 +3,9 @@
     "bugfixes": [
       "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye.",
       "Corrected duplicated options on the custom roster profiles.",
-      "Added missing AMWF options on The Witch-King and Ringwraiths taking in custom rosters."
+      "Added missing AMWF options on The Witch-King and Ringwraiths taking in custom rosters.",
+      "Fixed a typo on the profile card of Hilda-Bianca for her special rule.",
+      "Fixed the point cost of Moria Blackshield Shamans."
     ]
   },
   "1.34": {
