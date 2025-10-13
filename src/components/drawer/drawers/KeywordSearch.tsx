@@ -11,7 +11,7 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { Fragment, FunctionComponent, useState } from "react";
+import { Fragment, FunctionComponent, SyntheticEvent, useState } from "react";
 import { useAppState } from "../../../state/app";
 import { useUserPreferences } from "../../../state/preference";
 
@@ -49,8 +49,12 @@ const Keyword = ({
     },
   }[type] as any;
 
+  const handleChange = (_: SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded);
+  };
+
   return (
-    <Accordion expanded={expanded} onClick={() => setExpanded(!expanded)}>
+    <Accordion expanded={expanded} onChange={handleChange}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Stack
           justifyContent="space-between"
