@@ -189,6 +189,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 bottom: 0,
                 background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
+                pointerEvents: "none",
               },
             }
           : {},
@@ -352,6 +353,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 bottom: 0,
                 background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
+                pointerEvents: "none",
               },
             }
           : {},

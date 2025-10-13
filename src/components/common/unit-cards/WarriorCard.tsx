@@ -34,7 +34,7 @@ export type WarriorCardProps = {
   remove: () => void;
 };
 
-export const invalidUnitSelectionBackgroundTint = "rgba(250, 100, 100, 0.15)";
+export const invalidUnitSelectionBackgroundTint = "rgba(255, 0, 0, 0.2)";
 export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   unit,
   followerOf,
@@ -130,6 +130,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                 bottom: 0,
                 background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
+                pointerEvents: "none",
               },
             }
           : {},
@@ -260,6 +261,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                 bottom: 0,
                 background: invalidUnitSelectionBackgroundTint,
                 zIndex: 1,
+                pointerEvents: "none",
               },
             }
           : {},
