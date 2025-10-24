@@ -9,6 +9,7 @@ import { About } from "../pages/about/About.tsx";
 import { SignIn } from "../pages/account/SignIn.tsx";
 import { SignUp } from "../pages/account/SignUp.tsx";
 import { Database } from "../pages/database/Database.tsx";
+import { ProfileCardDemoPage } from "../pages/demo/ProfileCardDemoPage.tsx";
 import { Gamemode } from "../pages/gamemode/Gamemode.tsx";
 import { Home } from "../pages/home/Home.tsx";
 import { SavedGameResults } from "../pages/match-history/SavedGameResults.tsx";
@@ -96,6 +97,11 @@ export const routes: RouteObject[] = [
       {
         path: "shared/roster/:sid",
         element: <SharedRoster />,
+        errorElement: <AppFallback />,
+      },
+      {
+        path: "demo/profile-cards",
+        element: <ProfileCardDemoPage />,
         errorElement: <AppFallback />,
       },
       {
