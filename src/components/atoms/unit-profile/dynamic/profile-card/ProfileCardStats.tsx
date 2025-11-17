@@ -6,26 +6,39 @@ import TableRow from "@mui/material/TableRow";
 import { cellStyles, mwfShieldStyles } from "./ProfileCardStats.styles";
 import { useCard } from "./useCard";
 
-export const ProfileCardStats = () => {
+const SiegeStats = () => {
+  const { stats } = useCard();
+  return (
+    <>
+      <TableHead>
+        <TableRow>
+          <TableCell>Range</TableCell>
+          <TableCell />
+          <TableCell>S</TableCell>
+          <TableCell>D</TableCell>
+          <TableCell>W</TableCell>
+          <TableCell colSpan={3} />
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>{stats.range}</TableCell>
+          <TableCell />
+          <TableCell>{stats.s}</TableCell>
+          <TableCell>{stats.d}</TableCell>
+          <TableCell>{stats.w}</TableCell>
+          <TableCell colSpan={3} />
+        </TableRow>
+      </TableBody>
+    </>
+  );
+};
+
+const UnitStats = () => {
   const { stats } = useCard();
   const hasMWF = stats.M || stats.W || stats.F;
   return (
-    <Table
-      size="small"
-      sx={{
-        my: 1,
-        maxWidth: "50ch",
-        td: {
-          ...cellStyles,
-          pt: 1,
-        },
-        th: {
-          ...cellStyles,
-          backgroundColor: "#F3E7D7",
-          fontWeight: "bold",
-        },
-      }}
-    >
+    <>
       <TableHead>
         <TableRow>
           <TableCell>Mv</TableCell>
@@ -60,6 +73,30 @@ export const ProfileCardStats = () => {
           <TableCell sx={hasMWF ? mwfShieldStyles : {}}>{stats.F}</TableCell>
         </TableRow>
       </TableBody>
+    </>
+  );
+};
+
+export const ProfileCardStats = () => {
+  const { stats } = useCard();
+  return (
+    <Table
+      size="small"
+      sx={{
+        my: 1,
+        maxWidth: "50ch",
+        td: {
+          ...cellStyles,
+          pt: 1,
+        },
+        th: {
+          ...cellStyles,
+          backgroundColor: "#F3E7D7",
+          fontWeight: "bold",
+        },
+      }}
+    >
+      {stats.range ? <SiegeStats /> : <UnitStats />}
     </Table>
   );
 };

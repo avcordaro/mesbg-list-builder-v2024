@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
@@ -32,6 +31,15 @@ export const ProfileCardDemoPage = () => {
       <Stack direction="row" flexWrap="wrap" gap={1}>
         {Object.values(profiles as Record<string, Profile>)
           .filter((profile) => profile.card_config.layout === "custom")
+          .map((profile) => (
+            <DynamicCard
+              key={profile.id}
+              name={profile.profile}
+              origin={profile.origin}
+            />
+          ))}
+        {Object.values(profiles as Record<string, Profile>)
+          .filter((profile) => profile.card_config.layout === "siege")
           .map((profile) => (
             <DynamicCard
               key={profile.id}
@@ -101,51 +109,6 @@ export const ProfileCardDemoPage = () => {
             />
           ))}
       </Stack>
-
-      <Box sx={{ my: 10 }}>
-        <Typography variant="h4" className="middle-earth">
-          Not implemented profile cards:
-        </Typography>
-        <Stack direction="row" flexWrap="wrap">
-          {Object.values(profiles as Record<string, Profile>)
-            .filter((profile) =>
-              ["mount", "siege"].includes(profile.card_config.layout),
-            )
-            .sort((a, b) =>
-              a.card_config.layout.localeCompare(b.card_config.layout),
-            )
-            .map((profile) => (
-              <Box key={profile.id} sx={{ flex: "1 0 21%", mx: 5 }}>
-                <Typography
-                  component="span"
-                  lineHeight={1}
-                  color={getColor(profile.card_config.layout)}
-                >
-                  <strong>{profile.profile}</strong> from{" "}
-                  <strong>{profile.origin}</strong>:{" "}
-                  <i>{profile.card_config.layout}</i>
-                </Typography>
-              </Box>
-            ))}
-        </Stack>
-      </Box>
     </Container>
   );
 };
-
-function getColor(layout: string) {
-  if (layout == "custom") {
-    return "error.light";
-  }
-  if (layout == "siege") {
-    return "primary.light";
-  }
-  if (layout == "additional") {
-    return "secondary.light";
-  }
-  if (layout == "none" || layout == "mount") {
-    return "textDisabled";
-  }
-
-  return "#000";
-}

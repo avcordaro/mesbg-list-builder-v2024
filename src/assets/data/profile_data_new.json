@@ -15762,7 +15762,9 @@
     "book": "Armies of The Lord of the Rings | Page 169",
     "options": [],
     "stats": {},
-    "card_config": {}
+    "card_config": {
+      "layout": "additional"
+    }
   },
   "[isengard] bill-ferny": {
     "id": "[isengard] bill-ferny",

@@ -41,6 +41,8 @@ export function DynamicCard({ name, origin }: DynamicCardProps) {
 
     case "custom":
       return <CustomProfileCard profile={profile} />;
+    case "siege":
+      return <CustomProfileCard profile={profile} />;
 
     default:
       return <EmptyProfileCard profile={profile} />;
