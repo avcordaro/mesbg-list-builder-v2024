@@ -54,7 +54,10 @@ function addWarbandWithSpecificUnit(
   }
 }
 
-export const useWarbandMutations = (rosterId: string, warbandId: string) => {
+export const useWarbandMutations = (
+  rosterId: string | null,
+  warbandId: string,
+) => {
   const calculator = useCalculator();
   const { sync } = useRosterSync();
 

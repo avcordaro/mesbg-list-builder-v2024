@@ -1,4 +1,6 @@
 import Stack from "@mui/material/Stack";
+import { useEffect } from "react";
+import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useWarbandMutations } from "../../../hooks/mutations/useWarbandMutations.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
@@ -13,15 +15,17 @@ export const UnitSelector = () => {
   const {
     selectionType,
     selectionFocus: [warbandId, unitId],
-    armyList,
   } = useRosterBuildingState();
+  const { roster } = useRosterInformation();
   const { closeSidebar } = useAppState();
-  const roster = useRosterBuildingState(({ rosters }) =>
-    rosters.find(({ id }) => id === armyList),
-  );
-
   const { handleHeroSelection, handleUnitSelection, handleSiegeSelection } =
-    useWarbandMutations(roster.id, warbandId);
+    useWarbandMutations(roster?.id, warbandId);
+
+  useEffect(() => {
+    if (!roster) {
+      closeSidebar();
+    }
+  }, [roster]);
 
   function selectUnit(unit: Unit) {
     console.debug(
@@ -50,41 +54,44 @@ export const UnitSelector = () => {
   }
 
   return (
-    <Stack
-      spacing={2}
-      sx={{
-        height: "100%",
-      }}
-    >
-      {selectionType === "hero" &&
-        (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
-          <CustomHeroSelectionList
-            armyList={roster.armyList}
-            selectUnit={selectUnit}
-          />
-        ) : (
-          <HeroSelectionList
-            armyList={roster.armyList}
-            selectUnit={selectUnit}
-          />
-        ))}
-      {selectionType === "unit" &&
-        (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
-          <CustomUnitSelectionList
-            armyList={roster.armyList}
-            selectUnit={selectUnit}
-          />
-        ) : (
-          <UnitSelectionList
-            leadingHeroModelId={
-              roster.warbands.find(({ id }) => id === warbandId)?.hero?.model_id
-            }
-            selectUnit={selectUnit}
-          />
-        ))}
-      {selectionType === "siege" && (
-        <SiegeSelectionList selectEquipment={selectEquipment} />
-      )}
-    </Stack>
+    roster && (
+      <Stack
+        spacing={2}
+        sx={{
+          height: "100%",
+        }}
+      >
+        {selectionType === "hero" &&
+          (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
+            <CustomHeroSelectionList
+              armyList={roster.armyList}
+              selectUnit={selectUnit}
+            />
+          ) : (
+            <HeroSelectionList
+              armyList={roster.armyList}
+              selectUnit={selectUnit}
+            />
+          ))}
+        {selectionType === "unit" &&
+          (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
+            <CustomUnitSelectionList
+              armyList={roster.armyList}
+              selectUnit={selectUnit}
+            />
+          ) : (
+            <UnitSelectionList
+              leadingHeroModelId={
+                roster.warbands.find(({ id }) => id === warbandId)?.hero
+                  ?.model_id
+              }
+              selectUnit={selectUnit}
+            />
+          ))}
+        {selectionType === "siege" && (
+          <SiegeSelectionList selectEquipment={selectEquipment} />
+        )}
+      </Stack>
+    )
   );
 };

@@ -8,7 +8,8 @@
       "Fixed the point cost of Moria Blackshield Shamans.",
       "Fixed the bow limit calculation for Grip/Fang and Wolf.",
       "Fix bad UX on the keyword drawer.",
-      "Fixed a typo on Buhrdur's profile card."
+      "Fixed a typo on Buhrdur's profile card.",
+      "Fixed undefined roster id issue when navigating back with the unit selection drawer open."
     ]
   },
   "1.34": {
