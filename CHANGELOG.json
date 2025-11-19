@@ -9,7 +9,8 @@
       "Fixed the bow limit calculation for Grip/Fang and Wolf.",
       "Fix bad UX on the keyword drawer.",
       "Fixed a typo on Buhrdur's profile card.",
-      "Fixed undefined roster id issue when navigating back with the unit selection drawer open."
+      "Fixed undefined roster id issue when navigating back with the unit selection drawer open.",
+      "Fixed the Glamdring special rule on Gandalf's profile cards."
     ]
   },
   "1.34": {

@@ -2823,7 +2823,7 @@
         {
           "name": "Glamdring",
           "type": "Active",
-          "description": "Elven hand-and-a-half weapon. Gandalf's strength is 5 when making strikes with Glamdring."
+          "description": "Elven hand-and-a-half weapon. Gandalf gains a bonus of +1 Strength when making strikes with Glamdring."
         },
         {
           "name": "Narya",
@@ -7653,7 +7653,7 @@
         {
           "name": "Glamdring",
           "type": "Active",
-          "description": "Elven hand-and-a-half weapon. Gandalf's strength is 5 when making strikes with Glamdring."
+          "description": "Elven hand-and-a-half weapon. Gandalf gains a bonus of +1 Strength when making strikes with Glamdring."
         },
         {
           "name": "Narya",
@@ -10799,7 +10799,7 @@
         {
           "name": "Glamdring",
           "type": "Active",
-          "description": "Elven hand-and-a-half weapon. Gandalf's strength is 5 when making strikes with Glamdring."
+          "description": "Elven hand-and-a-half weapon. Gandalf gains a bonus of +1 Strength when making strikes with Glamdring."
         },
         {
           "name": "Narya",
