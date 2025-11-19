@@ -10,7 +10,8 @@
       "Fix bad UX on the keyword drawer.",
       "Fixed a typo on Buhrdur's profile card.",
       "Fixed undefined roster id issue when navigating back with the unit selection drawer open.",
-      "Fixed the Glamdring special rule on Gandalf's profile cards."
+      "Fixed the Glamdring special rule on Gandalf's profile cards.",
+      "Fixed the incorrect Spear option for Warriors of Dale in the Defenders of Erebor list."
     ]
   },
   "1.34": {
