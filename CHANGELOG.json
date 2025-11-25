@@ -12,7 +12,8 @@
       "Fixed undefined roster id issue when navigating back with the unit selection drawer open.",
       "Fixed the Glamdring special rule on Gandalf's profile cards.",
       "Fixed the incorrect Spear option for Warriors of Dale in the Defenders of Erebor list.",
-      "Fixed the Transfix casting value on Orc Shaman profiles."
+      "Fixed the Transfix casting value on Orc Shaman and Uruk-hai Shaman profiles.",
+      "Fixed Thorin's Oakenshield option so that it increases his Defence value."
     ]
   },
   "1.34": {

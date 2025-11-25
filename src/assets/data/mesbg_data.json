@@ -22260,7 +22260,14 @@
       {
         "id": "OPT0803",
         "name": "The Oakenshield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
@@ -31797,7 +31804,14 @@
       {
         "id": "OPT0711",
         "name": "The Oakenshield",
-        "points": 5
+        "points": 5,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
       }
     ]
   },
