@@ -1,8 +1,9 @@
 {
   "main": {
     "added": [
-      "Added an max units indicator on the add unit button at the bottom of the warband",
-      "Added a number to indicate the number of the warband you are adding"
+      "Added an max units indicator on the add unit button at the bottom of the warband.",
+      "Added a number to indicate the number of the warband you are adding.",
+      "Added a filter on the collection page allowing easily finding specific items."
     ],
     "bugfixes": [
       "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye.",
