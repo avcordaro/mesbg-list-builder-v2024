@@ -8,6 +8,7 @@ import { useRosterInformation } from "../../../hooks/calculations-and-displays/u
 import { useRosterSorting } from "../../../hooks/mutations/useRosterSorting.ts";
 import { useWarbandMutations } from "../../../hooks/mutations/useWarbandMutations.ts";
 import { Warband as WarbandType } from "../../../types/roster.ts";
+import { toOrdinal } from "../../../utils/string.ts";
 import { Warband, WarbandActions } from "./Warband.tsx";
 
 export type WarbandListProps = {
@@ -120,7 +121,7 @@ export const WarbandList: FunctionComponent<WarbandListProps> = ({
           variant="contained"
           data-test-id="add-warband"
         >
-          Add Warband
+          Add {toOrdinal(warbands.length + 1)} Warband
         </Button>
       )}
     </Stack>

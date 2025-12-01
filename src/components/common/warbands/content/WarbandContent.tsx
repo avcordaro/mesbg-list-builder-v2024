@@ -29,7 +29,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
     id: warbandId,
     hero,
     units,
-    meta: { num: warbandNum },
+    meta: { num: warbandNum, units: currUnits, maxUnits },
   },
   collapsed,
 }) => {
@@ -221,7 +221,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                 endIcon={<AddIcon />}
                 data-test-id={`warband-${warbandNum}--add-unit`}
               >
-                Add Unit
+                Add Unit ({currUnits}/{maxUnits})
               </Button>
               <Button
                 onClick={() => mutations.addSiegeEquipment()}
@@ -243,7 +243,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
               endIcon={<AddIcon />}
               data-test-id={`warband-${warbandNum}--add-unit`}
             >
-              Add Unit
+              Add Unit ({currUnits}/{maxUnits})
             </Button>
           )}
         </>

@@ -63,3 +63,9 @@ export function findBestMatch(str: string, obj: Record<string, unknown>) {
 export function pluralize(word: string, plural = "s") {
   return (items: number) => (items > 1 ? word + plural : word);
 }
+
+export function toOrdinal(n: number): string {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
