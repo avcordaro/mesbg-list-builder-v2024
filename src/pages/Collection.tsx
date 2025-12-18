@@ -24,6 +24,7 @@ import {
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { ChangeEvent, useRef, useState } from "react";
@@ -37,7 +38,6 @@ import { useUserPreferences } from "../state/preference";
 import { useThemeContext } from "../theme/ThemeContext.tsx";
 import { rows as databaseRows } from "./database/data.ts";
 import { COMPOSED_UNIT_MAP } from "./database/utils/special-rows.ts";
-import IconButton from "@mui/material/IconButton";
 
 export const Collection = () => {
   const { palette } = useTheme();

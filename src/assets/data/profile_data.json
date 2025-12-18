@@ -7267,7 +7267,7 @@
         {
           "name": "Ring of Barahir",
           "type": "Passive",
-          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a 6, he is not affected by that power."
+          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
         },
         {
           "name": "Anduril, Flame of the West",
@@ -10500,7 +10500,7 @@
         {
           "name": "Ring of Barahir",
           "type": "Passive",
-          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a 6, he is not affected by that power."
+          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
         },
         {
           "name": "Anduril, Flame of the West",

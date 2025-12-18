@@ -1,10 +1,14 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fixed a typo for Aragorn's Ring of Barahir special rule, regarding a roll of a natural 6."
+    ]
+  },
   "1.35": {
     "added": [
       "Added an max units indicator on the add unit button at the bottom of the warband.",
       "Added a number to indicate the number of the warband you are adding.",
-      "Added a filter on the collection page allowing easily finding specific items."
+      "Added a filter on the collection page allowing easily finding specific items.",
     ],
     "bugfixes": [
       "Corrected the valid warband units for Orc Shamans in the Army of the Great Eye.",
