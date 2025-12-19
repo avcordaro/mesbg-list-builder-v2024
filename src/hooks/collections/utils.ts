@@ -94,7 +94,7 @@ export function calculateGenericModels(
   return Object.fromEntries(
     Object.entries(groupBy(collection, "mount")).map(([key, value]) => {
       return [
-        key,
+        key?.toLowerCase(),
         Number(
           value.find((c) =>
             typeof c.options === "string"
