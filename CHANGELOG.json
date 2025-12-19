@@ -5,7 +5,8 @@
     ],
     "bugfixes": [
       "Fixed a typo for Aragorn's Ring of Barahir special rule, regarding a roll of a natural 6.",
-      "Fixed issue where named mounts would not register as being in your collection."
+      "Fixed issue where named mounts would not register as being in your collection.",
+      "Corrected the Tookish Hunters upgrade for the Tabletop Simulator export."
     ]
   },
   "1.35": {

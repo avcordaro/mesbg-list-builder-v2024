@@ -6597,7 +6597,8 @@
               "[battle-of-bywater] paladin-took-thain-of-the-shire"
             ]
           }
-        ]
+        ],
+        "tts_name": "Tookish Hunter"
       }
     ]
   },
@@ -31436,7 +31437,8 @@
               "[the-shire] paladin-took-thain-of-the-shire"
             ]
           }
-        ]
+        ],
+        "tts_name": "Tookish Hunter"
       }
     ]
   },
