@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d storybook-static",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:data": "python3 data/scripts/main.py",
+    "build:data": "python3 data/scripts/main.py && python3 data/scripts/profiles.py",
     "watch:data": "find ./data -name '*.xlsx' | entr npm run build:data                                                                                                                                                                   todo-app\n"
   },
   "dependencies": {
