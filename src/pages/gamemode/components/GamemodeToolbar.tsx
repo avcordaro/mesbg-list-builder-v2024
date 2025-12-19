@@ -71,7 +71,7 @@ export const GamemodeToolbar = () => {
   const totalMight = game.trackables
     .map((t) => Number(t.xMWFW.split(":")[0]))
     .reduce((a, b) => a + b, 0);
-  return screen.isMobile ? (
+  return !screen.isDesktop ? (
     <>
       <Stack direction="row" justifyContent="space-between" sx={{ my: 2 }}>
         <Button
@@ -115,7 +115,7 @@ export const GamemodeToolbar = () => {
           Might: <b>{totalMight}</b>
         </Typography>
       </Stack>
-      <Stack direction="row" gap={2} justifyContent="center">
+      <Stack direction="row" gap={2} justifyContent="center" sx={{ mb: 3 }}>
         <Typography variant="h6" className="middle-earth">
           Casualties:
         </Typography>
@@ -131,7 +131,7 @@ export const GamemodeToolbar = () => {
           variant="h6"
           sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
         >
-          {casualties}
+          {casualties} / {roster.metadata.units}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
@@ -164,7 +164,11 @@ export const GamemodeToolbar = () => {
         </ButtonGroup>
       </Box>
       <Stack direction="row" gap={2}>
-        <Typography variant="h6" className="middle-earth">
+        <Typography
+          variant="h6"
+          className="middle-earth"
+          sx={{ mx: 0.25, fontSize: "1.2rem" }}
+        >
           Casualties:
         </Typography>
         <SquareIconButton
@@ -177,9 +181,9 @@ export const GamemodeToolbar = () => {
         />
         <Typography
           variant="h6"
-          sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
+          sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}
         >
-          {casualties}
+          {casualties} / {roster.metadata.units}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
