@@ -1,5 +1,12 @@
 import { Close, Delete, Refresh } from "@mui/icons-material";
-import { Button, ButtonGroup, IconButton, Stack, Tooltip } from "@mui/material";
+import {
+  Button,
+  ButtonGroup,
+  Collapse,
+  IconButton,
+  Stack,
+  Tooltip,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
@@ -7,6 +14,7 @@ import { FunctionComponent } from "react";
 import { BiPencil } from "react-icons/bi";
 import { armyListData } from "../../../assets/data.ts";
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useRosterSync } from "../../../hooks/cloud-sync/RosterCloudSyncProvider";
 import { useUpdateRosterVersion } from "../../../hooks/mutations/useUpdateRosterVersion.ts";
 import { useAppState } from "../../../state/app";
 import { Roster } from "../../../types/roster.ts";
@@ -28,6 +36,7 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
   const { isOutdatedRoster, updateRoster } = useUpdateRosterVersion();
+  const { syncPending, syncNow } = useRosterSync();
   const screen = useScreenSize();
   return (
     <Stack gap={2} sx={{ p: 2 }}>
@@ -149,6 +158,16 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (
           </Tooltip>
         </ButtonGroup>
       )}
+      <Collapse in={syncPending} sx={{ width: "100%" }}>
+        <Button
+          variant="outlined"
+          color="success"
+          fullWidth
+          onClick={(e) => syncNow(e)}
+        >
+          Sync to account
+        </Button>
+      </Collapse>
 
       <Warnings />
       <RosterOverview {...props} />

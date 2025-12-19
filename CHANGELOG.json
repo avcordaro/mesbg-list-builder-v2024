@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added an additional sync button on the roster information to allow flushing the pending sync operations."
+    ],
     "bugfixes": [
       "Fixed a typo for Aragorn's Ring of Barahir special rule, regarding a roll of a natural 6.",
       "Fixed issue where named mounts would not register as being in your collection."

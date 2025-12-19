@@ -19,11 +19,13 @@ import { useApi } from "./useApi";
 
 type SyncContext = {
   sync: (roster: Roster) => void;
+  syncNow: (event: MouseEvent<HTMLElement>) => void;
   syncPending: boolean;
 };
 
 const RosterSyncContext = createContext<SyncContext>({
   sync: () => {},
+  syncNow: () => {},
   syncPending: false,
 });
 
@@ -134,8 +136,12 @@ export const RosterCloudSyncProvider = ({
     flush();
   };
 
+  const syncNow = async (event: MouseEvent<HTMLElement>) => {
+    handleClose(event);
+  };
+
   return (
-    <RosterSyncContext.Provider value={{ sync, syncPending: open }}>
+    <RosterSyncContext.Provider value={{ sync, syncNow, syncPending: open }}>
       {children}
       <Portal>
         <Snackbar
