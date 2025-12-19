@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.36": {
     "added": [
       "Added an additional sync button on the roster information to allow flushing the pending sync operations.",
       "Added the total unit count to the Casualties tracker in gamemode."
