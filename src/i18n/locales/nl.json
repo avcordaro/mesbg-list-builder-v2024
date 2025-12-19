@@ -1,0 +1,51 @@
+{
+  "model": {
+    "ranger-of-the-north": {
+      "name": "Ranger van het Noorden"
+    },
+    "samewise": {
+      "name": "Sam Gewissies"
+    }
+  },
+  "army": {
+    "list": {
+      "mordor": {
+        "name": "Mordor"
+      },
+      "moria": {
+        "special-rules": {
+          "rule-1": {
+            "title": "\"Wij kunnen er niet uit, ze komen eraan.\"",
+            "description": "Vriendelijke Moria Goblin-modellen die in Gevecht zijn met een vijandelijk model dat als Ingesloten wordt beschouwd, krijgen een bonus van +1 op hun Gevechtswaarde voor de duur van het Gevecht."
+          },
+          "rule-2": {
+            "title": "Kruipende Krijgers"
+          }
+        }
+      },
+      "army-of-the-great-eye": {
+        "name": "Leger van het grote oog"
+      }
+    },
+    "type": {
+      "good": "Goed",
+      "evil": "Kwaad"
+    }
+  },
+  "options": {
+    "orc-bow": {
+      "name": "Ork boog"
+    },
+    "shield": {
+      "name": "Schild"
+    }
+  },
+  "keyword": {
+    "special-rule": {
+      "black-dart": {
+        "name": "Zwarte Pijl",
+        "description": "<b>Duur</b>: Instant\n\nEen duistere, sinistere kracht schiet uit de hand van de spreker, dringt door in het vlees van het slachtoffer en baant zich een weg naar het hart.\n\nDeze Magische Kracht richt zich op één vijandelijk model binnen bereik. Het doelwit lijdt onmiddellijk één Treffer met Kracht 6. Als deze Magische Kracht een Cavalerie-model als doelwit heeft, moet de spreker kiezen of de Ruiter of het Rijdier het doelwit is."
+      }
+    }
+  }
+}
