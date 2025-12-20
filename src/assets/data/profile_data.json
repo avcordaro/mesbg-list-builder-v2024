@@ -10033,7 +10033,7 @@
         {
           "name": "The One Ring",
           "type": "Passive",
-          "description": "Roll a D6 each time Sauron loses his last Wound. On 2+, restore 1 Wound. May use Might to improve this roll."
+          "description": "Does not follow normal rules for the One Ring. Instead, roll a D6 each time Sauron loses his last Wound. On 2+, restore 1 Wound. May use Might to improve this roll"
         },
         {
           "name": "Unstoppable!",

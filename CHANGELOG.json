@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fixed Sauron's One Ring special rule to clarify that it does not follow the normal rules for the One Ring."
+    ]
+  },
   "1.36": {
     "added": [
       "Added an additional sync button on the roster information to allow flushing the pending sync operations.",
