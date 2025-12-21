@@ -48,6 +48,10 @@ export const useCollectionWarnings = (
           : { ...c, options: c.options.map((o) => o.toLowerCase()) },
       );
 
+  // A list of selected options and selected mount
+  const mount = getMountName(clonedUnit);
+  const options = getListOfOptionsForGivenUnit(clonedUnit);
+
   // The amount of miniatures marked as 'Generic' grouped by their mount.
   const generics = calculateGenericModels(collection);
   // The total amount of selected grouped by chosen options
@@ -56,10 +60,6 @@ export const useCollectionWarnings = (
     clonedUnit,
     collection,
   );
-
-  // A list of selected options and selected mount
-  const mount = getMountName(clonedUnit);
-  const options = getListOfOptionsForGivenUnit(clonedUnit);
 
   // The total amount of generic models used,
   // used to check if there are enough models in the collection.
@@ -93,21 +93,20 @@ export const useCollectionWarnings = (
 
   // // Debug line given a specific profile name,
   // // ~ Keep commented until needed!! ~
-  // if (clonedUnit.name.includes("Orc W")) {
-  //   console.dir({
-  //     name: clonedUnit.name,
-  //     generics,
-  //     mount,
-  //     bestMatchingMount,
-  //     amountOfGenericsForGivenMount,
-  //     totalGenericsUsed,
-  //     collection,
-  //     options,
-  //     totalSelected,
-  //     available,
-  //     selected,
-  //   });
-  // }
+  if (clonedUnit.name.includes("")) {
+    console.log(clonedUnit.name, {
+      generics,
+      mount,
+      bestMatchingMount,
+      amountOfGenericsForGivenMount,
+      totalGenericsUsed,
+      collection,
+      options,
+      totalSelected,
+      available,
+      selected,
+    });
+  }
 
   return {
     warnings: "on",

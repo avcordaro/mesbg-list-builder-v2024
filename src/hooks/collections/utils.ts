@@ -28,6 +28,11 @@ export function getTotalSelectedModelsGroupedPerChosenOptions(
       .map(({ name, unit_type, options, quantity }) => {
         let selectedOptions = options
           .filter((o) => o.quantity > 0)
+          .filter((o) =>
+            unit_type.includes("Hero") && o.type
+              ? !o.type.includes("mount")
+              : true,
+          )
           .map((o) => o.name.toLowerCase());
         if (
           name === "Rohan Royal Guard" &&
@@ -38,9 +43,11 @@ export function getTotalSelectedModelsGroupedPerChosenOptions(
         return {
           options: selectedOptions,
           mount: unit_type.includes("Hero")
-            ? options.find(
-                (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
-              )?.name || ""
+            ? options
+                .find(
+                  (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
+                )
+                ?.name.toLowerCase() || ""
             : "",
           quantity,
         };
@@ -108,7 +115,14 @@ export function calculateGenericModels(
 }
 
 export function getListOfOptionsForGivenUnit(unit: SelectedUnit): string[] {
-  let options = unit.options.filter((o) => o.quantity > 0).map((o) => o.name);
+  let options = unit.options
+    .filter((o) => o.quantity > 0)
+    .filter((o) =>
+      unit.unit_type.includes("Hero") && o.type
+        ? !o.type.includes("mount")
+        : true,
+    )
+    .map((o) => o.name);
   if (
     unit.name === "Rohan Royal Guard" &&
     arraysMatch(options, ["horse", "throwing spears"])

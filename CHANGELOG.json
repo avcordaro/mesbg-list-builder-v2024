@@ -1,7 +1,8 @@
 {
   "main": {
     "bugfixes": [
-      "Fixed Sauron's One Ring special rule to clarify that it does not follow the normal rules for the One Ring."
+      "Fixed Sauron's One Ring special rule to clarify that it does not follow the normal rules for the One Ring.",
+      "Fix collection calculation for heroes with mounts amd non-generic options."
     ]
   },
   "1.36": {
