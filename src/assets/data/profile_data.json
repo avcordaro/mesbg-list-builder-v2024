@@ -7878,9 +7878,9 @@
           "description": "If Legolas has fewer kills than Gimli, he gains +1 To Wound on shooting attacks."
         },
         {
-          "name": "Dead Shot",
+          "name": "Deadly Shot",
           "type": "Active",
-          "description": "Legolas can make three shooting attacks during the Shoot Phase. He can still shoot whilst Engaged in Combat, and does not suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he in Engaged in Combat with, requiring no In The Way tests."
+          "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
         },
         {
           "name": "Pinpoint Shot",
@@ -12329,7 +12329,7 @@
         {
           "name": "Deadly Shot",
           "type": "Active",
-          "description": "Legolas can make three shooting attacks during the Shoot Phase. He can still shoot whilst Engaged in Combat, and does not suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he in Engaged in Combat with, requiring no In The Way tests."
+          "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
         },
         {
           "name": "Pinpoint Shot",
@@ -13592,7 +13592,7 @@
         {
           "name": "Flame of Udun",
           "type": "Passive",
-          "description": "If an enemy is Wounded, and not slain at the end of a Combat, roll a D6. On 6, the model is Set Ablaze, unless they are immune to fire-based attacks."
+          "description": "If an enemy is Wounded, and not slain at the end of a Combat, roll a D6. On 6, the model is Set Ablaze, unless they are immune to fire-based attacks. The Balrog is itself immune to fire-based attacks."
         },
         {
           "name": "Demon of the Ancient World",
