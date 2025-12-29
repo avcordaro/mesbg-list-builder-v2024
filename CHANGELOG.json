@@ -5,7 +5,8 @@
       "Fix collection calculation for heroes with mounts amd non-generic options.",
       "Fixed the Cavalry keyword that was incorrect on the Rider of the Dead profile.",
       "Fixed a typo in The Balrog's special rule for Flame of Udun.",
-      "Fixed a typo in Legolas' special rule for Deadly Shot."
+      "Fixed a typo in Legolas' special rule for Deadly Shot.",
+      "Fixed a typo in Legolas' special rule for Pinpoint Shot."
     ]
   },
   "1.36": {

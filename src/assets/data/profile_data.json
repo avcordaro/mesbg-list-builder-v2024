@@ -7885,7 +7885,7 @@
         {
           "name": "Pinpoint Shot",
           "type": "Active",
-          "description": "Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn't need to make any In The Way rolls."
+          "description": "Instead of shooting normally, Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn’t need to make any In The Way rolls - the shot will automatically hit its target."
         }
       ],
       "magic_powers": [],
@@ -12334,7 +12334,7 @@
         {
           "name": "Pinpoint Shot",
           "type": "Active",
-          "description": "Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn't need to make any In The Way rolls."
+          "description": "Instead of shooting normally, Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn’t need to make any In The Way rolls - the shot will automatically hit its target."
         }
       ],
       "magic_powers": [],
