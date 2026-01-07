@@ -14,7 +14,6 @@ import SaveIcon from "@mui/icons-material/Save";
 import { Breakpoint } from "@mui/material";
 import { ReactNode } from "react";
 import { BiExport } from "react-icons/bi";
-import { BsFillPersonVcardFill } from "react-icons/bs";
 import { FaFileImport } from "react-icons/fa";
 import { FaImage } from "react-icons/fa6";
 import { GiSwordsEmblem } from "react-icons/gi";
@@ -136,8 +135,7 @@ export const modals = new Map<ModalTypes, ModalProps>([
   [
     ModalTypes.PROFILE_CARD,
     {
-      icon: <BsFillPersonVcardFill />,
-      title: "",
+      customModalHeader: true,
       children: <ProfileCardModal />,
     },
   ],
