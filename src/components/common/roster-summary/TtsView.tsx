@@ -21,6 +21,7 @@ const getOptions = ({ options }: SelectedUnit) =>
     .filter((option) => option.quantity > 0)
     .filter((option) => option.type !== "ringwraith_amwf")
     .map((option) => option.tts_name ?? option.name)
+    .sort((a, b) => a.localeCompare(b))
     .join(", ");
 
 const getAdditionalIncludes = (roster) => {

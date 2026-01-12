@@ -57,7 +57,6 @@ export const TabletopSimulatorExportModal = () => {
         </Box>
       </DialogTitle>
       <Divider />
-      <DialogTitle></DialogTitle>
       <DialogContent>
         <RosterTabletopSimView ref={rosterTextRef} roster={roster} />
       </DialogContent>
