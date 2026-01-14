@@ -2870,7 +2870,7 @@
       {
         "name": "Glamdring",
         "type": "Active",
-        "description": "Elven hand-and-a-half weapon. Gandalf's strength is 5 when making strikes with Glamdring."
+        "description": "Elven hand-and-a-half weapon. Gandalf gains a bonus of +1 Strength when making strikes with Glamdring."
       },
       {
         "name": "Narya",
@@ -5166,12 +5166,12 @@
       {
         "name": "Deadly Shot",
         "type": "Active",
-        "description": "Legolas can make three shooting attacks during the Shoot Phase. He can still shoot whilst Engaged in Combat, and does not suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he in Engaged in Combat with, requiring no In The Way tests."
+        "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
       },
       {
         "name": "Pinpoint Shot",
         "type": "Active",
-        "description": "Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn't need to make any In The Way rolls."
+        "description": "Instead of shooting normally, Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn’t need to make any In The Way rolls - the shot will automatically hit its target."
       }
     ],
     "options": [
@@ -10815,7 +10815,7 @@
       {
         "name": "Ring of Barahir",
         "type": "Passive",
-        "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a 6, he is not affected by that power."
+        "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
       },
       {
         "name": "Anduril, Flame of the West",
@@ -16063,7 +16063,7 @@
       {
         "name": "Transfix",
         "range": "12\"",
-        "cast": "4+"
+        "cast": "5+"
       }
     ],
     "options": [
@@ -17088,7 +17088,7 @@
       {
         "name": "Transfix",
         "range": "12\"",
-        "cast": "4+"
+        "cast": "5+"
       }
     ],
     "options": [
@@ -17926,7 +17926,7 @@
       {
         "name": "\"Stand by our Men!\"",
         "type": "Passive",
-        "description": "If Hilda-Bianca Charges into Combat, then during the ensuing Fight phase, she and friendly Lake-town models within 3\" of her gain a bonus of +1 To Wound when making Strikes."
+        "description": "If Hilda-Bianca Charges into Combat, then during the ensuing Fight phase, she and friendly Lake-town Warrior models within 3\" of her gain a bonus of +1 To Wound when making Strikes."
       }
     ],
     "options": [],
@@ -19083,7 +19083,7 @@
       {
         "name": "Transfix",
         "range": "12\"",
-        "cast": "4+"
+        "cast": "5+"
       }
     ],
     "options": [
@@ -19918,7 +19918,7 @@
       {
         "name": "The One Ring",
         "type": "Passive",
-        "description": "Roll a D6 each time Sauron loses his last Wound. On 2+, restore 1 Wound. May use Might to improve this roll."
+        "description": "Does not follow normal rules for the One Ring. Instead, roll a D6 each time Sauron loses his last Wound. On 2+, restore 1 Wound. May use Might to improve this roll"
       },
       {
         "name": "Unstoppable!",
@@ -22781,7 +22781,7 @@
       {
         "name": "Ring of Barahir",
         "type": "Passive",
-        "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a 6, he is not affected by that power."
+        "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
       },
       {
         "name": "Anduril, Flame of the West",
@@ -24526,14 +24526,14 @@
         "description": "If Legolas has fewer kills than Gimli, he gains +1 To Wound on shooting attacks."
       },
       {
-        "name": "Dead Shot",
+        "name": "Deadly Shot",
         "type": "Active",
-        "description": "Legolas can make three shooting attacks during the Shoot Phase. He can still shoot whilst Engaged in Combat, and does not suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he in Engaged in Combat with, requiring no In The Way tests."
+        "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
       },
       {
         "name": "Pinpoint Shot",
         "type": "Active",
-        "description": "Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn't need to make any In The Way rolls."
+        "description": "Instead of shooting normally, Legolas can make a single shot against an enemy Engaged in Combat with himself or a friendly model. If the To Hit roll is successful, he doesn’t need to make any In The Way rolls - the shot will automatically hit its target."
       }
     ],
     "options": [
@@ -27112,7 +27112,7 @@
       {
         "name": "Flame of Udun",
         "type": "Passive",
-        "description": "If an enemy is Wounded, and not slain at the end of a Combat, roll a D6. On 6, the model is Set Ablaze, unless they are immune to fire-based attacks."
+        "description": "If an enemy is Wounded, and not slain at the end of a Combat, roll a D6. On 6, the model is Set Ablaze, unless they are immune to fire-based attacks. The Balrog is itself immune to fire-based attacks."
       },
       {
         "name": "Demon of the Ancient World",
