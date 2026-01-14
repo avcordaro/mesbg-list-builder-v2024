@@ -27,6 +27,9 @@ export const SimpleHeroCard: FunctionComponent<ProfileCardProps> = ({
           <ProfileCard.Magic />
         </ProfileCard.Body>
       </Stack>
+      <ProfileCard.Footer>
+        <ProfileCard.Trackers />
+      </ProfileCard.Footer>
     </ProfileCard>
   );
 };

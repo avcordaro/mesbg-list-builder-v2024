@@ -37,7 +37,7 @@ export const ProfileCard = ({
           <Typography
             sx={{
               position: "absolute",
-              bottom: 8,
+              top: 8,
               textAlign: "center",
               width: "100%",
               fontSize: "1rem",

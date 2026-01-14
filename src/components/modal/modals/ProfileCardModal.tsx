@@ -22,7 +22,7 @@ export const ProfileCardModal = () => {
   const { palette } = useTheme();
   const { isMobile } = useScreenSize();
 
-  const [isDynamicCard, setIsDynamicCard] = useState<boolean>(false);
+  const [isDynamicCard, setIsDynamicCard] = useState<boolean>(true);
 
   const handleToggle = (checked: boolean) => {
     setIsDynamicCard(checked);
