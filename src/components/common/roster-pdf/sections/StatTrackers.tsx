@@ -9,33 +9,14 @@ import {
   Theme,
 } from "@mui/material";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { createGameState } from "../../../../state/gamemode/gamestate/create-game-state.ts";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
-
-const CheckboxList = ({ amount }: { amount: string }) => {
-  const { mode } = useThemeContext();
-  return (
-    <Stack direction="row" gap={1} flexWrap="wrap" justifyContent="center">
-      {Array.from({ length: Number(amount) }).map((_, index) => (
-        <div
-          key={index}
-          className="stat-tracker-box"
-          style={{
-            width: "20px",
-            height: "20px",
-            border: mode === "dark" ? "1px solid white" : "1px solid black",
-            borderRadius: "20px",
-          }}
-        ></div>
-      ))}
-    </Stack>
-  );
-};
+import { CheckboxList } from "../../../atoms/trackers/CheckboxList.tsx";
 
 export const StatTrackers = () => {
+  const { mode } = useThemeContext();
   const { roster } = useRosterInformation();
   const { trackables, customTrackers } = createGameState(roster);
 
@@ -92,16 +73,16 @@ export const StatTrackers = () => {
               <TableRow key={index}>
                 <TableCell sx={cellStyling}>{row.name}</TableCell>
                 <TableCell sx={cellStyling}>
-                  <CheckboxList amount={row.might} />
+                  <CheckboxList amount={row.might} mode={mode} />
                 </TableCell>
                 <TableCell sx={cellStyling}>
-                  <CheckboxList amount={row.will} />
+                  <CheckboxList amount={row.will} mode={mode} />
                 </TableCell>
                 <TableCell sx={cellStyling}>
-                  <CheckboxList amount={row.fate} />
+                  <CheckboxList amount={row.fate} mode={mode} />
                 </TableCell>
                 <TableCell sx={cellStyling}>
-                  <CheckboxList amount={row.wounds} />
+                  <CheckboxList amount={row.wounds} mode={mode} />
                 </TableCell>
               </TableRow>
             ))}
@@ -112,7 +93,7 @@ export const StatTrackers = () => {
                 <TableCell sx={cellStyling} />
                 <TableCell sx={cellStyling} />
                 <TableCell sx={cellStyling}>
-                  <CheckboxList amount={row.wounds.toString()} />
+                  <CheckboxList amount={row.wounds.toString()} mode={mode} />
                 </TableCell>
               </TableRow>
             ))}
