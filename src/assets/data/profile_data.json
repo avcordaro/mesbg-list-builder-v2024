@@ -5318,7 +5318,7 @@
         {
           "name": "Stalwart Fighter",
           "type": "Active",
-          "description": "Whilst Olwyn is outnumbered in Combat, enemy models require a 6 To Wound her, regardless of Strength. Enemy models may still use Might to influence their To Wound rolls as normal."
+          "description": "Whilst Olwyn is outnumbered in a Combat, enemy models will require a 6 To Wound her when making Strikes, regardless of their Strength. Note, as this does not require a natural 6, enemy models may use Might to influence their To Wound rolls against Olwyn and any bonuses To Wound will still apply as normal."
         }
       ],
       "magic_powers": [],
@@ -7267,7 +7267,7 @@
         {
           "name": "Ring of Barahir",
           "type": "Passive",
-          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
+          "description": "When affected by a Magical Power, and after any resist tests have been made (if able), Aragorn may roll a D6. On a natural 6, he is not affected by that power."
         },
         {
           "name": "Anduril, Flame of the West",
@@ -10500,7 +10500,7 @@
         {
           "name": "Ring of Barahir",
           "type": "Passive",
-          "description": "When affected by a Magical Power, and after any resist tests, Aragorn may roll a D6. On a natural 6, he is not affected by that power."
+          "description": "When affected by a Magical Power, and after any resist tests have been made (if able), Aragorn may roll a D6. On a natural 6, he is not affected by that power."
         },
         {
           "name": "Anduril, Flame of the West",
