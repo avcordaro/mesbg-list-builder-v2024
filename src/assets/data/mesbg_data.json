@@ -2845,13 +2845,6 @@
         "mount_name": "Fell Beast"
       },
       {
-        "id": "OPT1013",
-        "name": "Horse",
-        "points": 20,
-        "type": "mount",
-        "mount_name": "Horse"
-      },
-      {
         "id": "OPT1014",
         "name": "Morgul Blade",
         "points": 10
