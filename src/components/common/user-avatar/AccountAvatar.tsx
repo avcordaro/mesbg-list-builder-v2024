@@ -102,6 +102,10 @@ const AccountMenu = ({ user, signOut }: AccountMenuProps) => {
 export const AccountAvatar = () => {
   const auth = useAuth();
 
+  if (!auth.firebaseEnabled) {
+    return null;
+  }
+
   if (!auth.user) {
     return <SignInLink />;
   }

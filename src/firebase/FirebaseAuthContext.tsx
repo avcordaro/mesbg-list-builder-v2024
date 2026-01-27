@@ -18,6 +18,7 @@ type AuthContextProps = {
   user: User | null;
   idToken: string | null;
   loading: boolean;
+  firebaseEnabled: boolean;
 } & FirebaseAuthFunctions;
 
 // Define the default state of AuthContext
@@ -41,6 +42,8 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
   const authFunctions = useFirebaseAuth();
 
   useEffect(() => {
+    // If auth is miss configured, skip it.
+    if (!auth) return () => null;
     // Listen to user authentication state changes
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       setUser(firebaseUser);
@@ -58,8 +61,16 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, idToken, loading, ...authFunctions }}>
-      {loading ? (
+    <AuthContext.Provider
+      value={{
+        firebaseEnabled: !!auth,
+        user,
+        idToken,
+        loading,
+        ...authFunctions,
+      }}
+    >
+      {loading && !!auth ? (
         <Box
           sx={{
             display: "flex",
