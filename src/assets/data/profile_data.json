@@ -9323,7 +9323,7 @@
         {
           "name": "Adaptive Fighter",
           "type": "Active",
-          "description": "If Gorbah wins a Duel Roll, he may choose an enemy model involved in the Combat, and that model must back away in a direction chosen by Gorbag. For example, they may be forced to back away over the edge of cliff, and take fall damage. Other models then back away as normal and Strikes are resolved."
+          "description": "If Gorbag wins a Duel Roll, he may choose an enemy model involved in the Combat, and that model must back away in a direction chosen by Gorbag. For example, they may be forced to back away over the edge of cliff, and take fall damage. Other models then back away as normal and Strikes are resolved."
         }
       ],
       "magic_powers": [],
