@@ -12,7 +12,8 @@
       "Fixed the wording on Olwyn's Stalwart Fighter special rule.",
       "Fixed the missing Heroic Challenge on Aldrac's profile.",
       "Fixed the missing Unique keyword on Grinnah's profile card.",
-      "Removed the horse option from the generic Ringwraith in the Army of the Great Eye."
+      "Removed the horse option from the generic Ringwraith in the Army of the Great Eye.",
+      "Fixed a typo on for Gorbag's name on his profile."
     ],
     "security": [
       "Make the account service optional by validating env vars, allowing local development without shared credentials."
