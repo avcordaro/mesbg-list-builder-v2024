@@ -7,6 +7,7 @@ import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useWarbandMutations } from "../../../../hooks/mutations/useWarbandMutations.ts";
+import { useLockContext } from "../../../../lock/LockContext.tsx";
 import { useAppState } from "../../../../state/app";
 import { useRosterBuildingState } from "../../../../state/roster-building";
 import { Unit } from "../../../../types/mesbg-data.types.ts";
@@ -34,6 +35,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
   collapsed,
 }) => {
   const { rosterId: armyId } = useParams();
+  const { lock } = useLockContext();
   const mutations = useWarbandMutations(armyId, warbandId);
   const { openSidebar, setCurrentModal } = useAppState();
   const { updateBuilderSidebar } = useRosterBuildingState();
@@ -124,7 +126,12 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
             }
           >
             {units.map((unit, index) => (
-              <Draggable key={unit.id} draggableId={unit.id} index={index}>
+              <Draggable
+                key={unit.id}
+                draggableId={unit.id}
+                index={index}
+                isDragDisabled={lock}
+              >
                 {(draggable, draggableSnapshot) => (
                   <Box
                     ref={draggable.innerRef}

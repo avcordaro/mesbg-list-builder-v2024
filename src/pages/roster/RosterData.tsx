@@ -20,6 +20,7 @@ import { useUserPreferences } from "../../state/preference";
 import { Roster } from "../../types/roster.ts";
 import { RosterBreadcrumbs } from "./RosterBreadcrumbs.tsx";
 import { RosterFloatingButton } from "./RosterFloatingButton.tsx";
+import { RosterLockButton } from "./RosterLockButton.tsx";
 import { RosterSidebarButton } from "./RosterSidebarButton.tsx";
 import { StartGameButton } from "./StartGameButton.tsx";
 
@@ -100,6 +101,7 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
           >
             <RosterBreadcrumbs roster={roster} />
             <Stack gap={2} direction="row">
+              <RosterLockButton />
               <StartGameButton roster={roster} />
               <RosterSidebarButton />
             </Stack>
