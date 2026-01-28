@@ -143,9 +143,7 @@ export const Settings = () => {
         <SettingsOption
           icon={<DarkMode />}
           label="Darkmode"
-          description={
-            "Switch between light and dark themes to adjust the app's appearance for better readability and comfort in different lighting conditions."
-          }
+          description="Switch between light and dark themes to adjust the app's appearance for better readability and comfort in different lighting conditions."
           value={mode === "dark"}
           onChange={toggleTheme}
         />
@@ -180,9 +178,7 @@ export const Settings = () => {
         <SettingsOption
           icon={<PhotoCameraOutlined />}
           label="Use the old roster summary table"
-          description={
-            "If you dislike the new Roster Summary screen you can go back to the old v2018 'black and white' table layout."
-          }
+          description="If you dislike the new Roster Summary screen you can go back to the old v2018 'black and white' table layout."
           value={preferences.oldShareScreen || false}
           onChange={updatePreference("oldShareScreen")}
         />
@@ -213,7 +209,7 @@ export const Settings = () => {
         />
         <SettingsOption
           icon={<SwitchAccessShortcut />}
-          label={"Move 'active' special rules and magical powers to the top"}
+          label="Move 'active' special rules and magical powers to the top"
           description={
             "Split the list of special rules and magical powers in their respective drawers into a list of rules " +
             "that are applicable to the selected roster."

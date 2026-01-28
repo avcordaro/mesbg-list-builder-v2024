@@ -7,6 +7,7 @@ import { createRef, FunctionComponent, useEffect, useRef } from "react";
 import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useRosterSorting } from "../../../hooks/mutations/useRosterSorting.ts";
 import { useWarbandMutations } from "../../../hooks/mutations/useWarbandMutations.ts";
+import { useLockContext } from "../../../lock/LockContext.tsx";
 import { Warband as WarbandType } from "../../../types/roster.ts";
 import { toOrdinal } from "../../../utils/string.ts";
 import { Warband, WarbandActions } from "./Warband.tsx";
@@ -18,6 +19,7 @@ export type WarbandListProps = {
 export const WarbandList: FunctionComponent<WarbandListProps> = ({
   warbands,
 }) => {
+  const { lock } = useLockContext();
   const { canSupportMoreWarbands, roster } = useRosterInformation();
   const { addNewWarband } = useWarbandMutations(roster.id, null);
   const sorting = useRosterSorting();
@@ -67,6 +69,7 @@ export const WarbandList: FunctionComponent<WarbandListProps> = ({
                   draggableId={warband.id}
                   index={index}
                   key={warband.id}
+                  isDragDisabled={lock}
                 >
                   {(draggable, snapshot) => (
                     <Box
