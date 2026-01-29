@@ -86,6 +86,7 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
           {new Date(row.gameDate).toLocaleDateString("en-UK", {
             day: "2-digit",
             month: "long",
+            timeZone: "UTC",
             year: "numeric",
           })}
         </TableCell>
