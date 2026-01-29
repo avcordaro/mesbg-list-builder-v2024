@@ -50,7 +50,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
     },
     {
       icon: <Download />,
-      name: "Download profile cards",
+      name: "Download quick reference cards",
       callback: () => setCurrentModal(ModalTypes.DOWNLOAD_PROFILE_CARDS),
       disabled: roster.metadata.units === 0,
     },

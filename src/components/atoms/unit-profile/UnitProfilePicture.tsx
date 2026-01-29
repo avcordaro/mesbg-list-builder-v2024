@@ -5,7 +5,7 @@ import fallbackLogo from "../../../assets/images/default.png";
 export type UnitProfileProps = {
   army: string;
   profile: string;
-  size?: "normal" | "smaller";
+  size?: "normal" | "smaller" | "large" | number;
   opacity?: number;
 };
 
@@ -15,7 +15,9 @@ export const UnitProfilePicture: FunctionComponent<UnitProfileProps> = ({
   size = "normal",
   opacity = 100,
 }) => {
-  const sizeUnits = size === "normal" ? 100 : 75;
+  const sizeUnits: number = isNaN(Number(size))
+    ? { normal: 100, smaller: 75, large: 150 }[size]
+    : (size as number);
   return (
     <Avatar
       alt={`Profile picture for ${profile}`}
