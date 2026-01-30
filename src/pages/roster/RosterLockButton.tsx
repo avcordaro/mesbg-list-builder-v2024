@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { FaLock, FaLockOpen } from "react-icons/fa";
+import { TbMobiledata, TbMobiledataOff } from "react-icons/tb";
 import { useLockContext } from "../../hooks/lock/useLockContext";
 
 export const RosterLockButton = () => {
@@ -13,10 +13,10 @@ export const RosterLockButton = () => {
         whiteSpace: "nowrap", // Prevent text from wrapping
         minWidth: "20ch",
       }}
-      startIcon={lock ? <FaLockOpen /> : <FaLock />}
+      startIcon={lock ? <TbMobiledataOff /> : <TbMobiledata />}
       onClick={() => toggleLock()}
     >
-      {lock ? "Unlock" : "Lock"} roster
+      {lock ? "Drag & Drop: Off" : "Drag & Drop: On"}
     </Button>
   );
 };
