@@ -136,9 +136,7 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
               {row.tags?.length > 0 && (
                 <Stack direction="row" gap={1} alignItems="center">
                   <Typography>Tags: </Typography>
-                  {row.tags?.map((tag) => (
-                    <Chip key={tag} label={tag} />
-                  ))}
+                  {row.tags?.map((tag) => <Chip key={tag} label={tag} />)}
                 </Stack>
               )}
 
