@@ -105,8 +105,8 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
             >
               <RosterBreadcrumbs roster={roster} />
               <Stack gap={2} direction="row">
-                <RosterLockButton />
                 <StartGameButton roster={roster} />
+                <RosterLockButton />
                 <RosterSidebarButton />
               </Stack>
             </Stack>
