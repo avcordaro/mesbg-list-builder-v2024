@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added the ability to disable the drag and drop inside the roster editor to help with mobile navigation and touch input (by Jean-Loup Trolliard)"
+    ],
     "bugfixes": [
       "Fixed Sauron's One Ring special rule to clarify that it does not follow the normal rules for the One Ring.",
       "Fix collection calculation for heroes with mounts amd non-generic options.",
