@@ -1,6 +1,5 @@
 import {
   createContext,
-  useContext,
   ReactNode,
   useState,
   useCallback,
@@ -12,16 +11,9 @@ type LockContextType = {
   toggleLock: () => void;
 };
 
-const LockContext = createContext<LockContextType | undefined>(undefined);
-
-export const useLockContext = () => {
-  const context = useContext(LockContext);
-
-  if (!context)
-    throw new Error("useLockContext must be used within LockContext");
-
-  return context;
-};
+export const LockContext = createContext<LockContextType | undefined>(
+  undefined,
+);
 
 export const LockContextProvider = ({ children }: { children: ReactNode }) => {
   const [lock, setLock] = useState(false);
