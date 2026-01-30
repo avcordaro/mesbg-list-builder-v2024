@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useState,
-  useCallback,
-  useMemo,
-} from "react";
+import { createContext, ReactNode, useState } from "react";
 
 type LockContextType = {
   lock: boolean;
@@ -18,17 +12,12 @@ export const LockContext = createContext<LockContextType | undefined>(
 export const LockContextProvider = ({ children }: { children: ReactNode }) => {
   const [lock, setLock] = useState(false);
 
-  const toggleLock = useCallback(() => {
-    setLock((prev) => !prev);
-  }, []);
+  const toggleLock = () => setLock((prev) => !prev);
 
-  const contextValue = useMemo(
-    () => ({
-      lock,
-      toggleLock,
-    }),
-    [lock, toggleLock],
-  );
+  const contextValue = {
+    lock,
+    toggleLock,
+  };
 
   return (
     <LockContext.Provider value={contextValue}>{children}</LockContext.Provider>
