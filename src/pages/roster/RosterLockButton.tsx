@@ -1,17 +1,37 @@
-import Button from "@mui/material/Button";
+import { Button, IconButton } from "@mui/material";
 import { TbMobiledata, TbMobiledataOff } from "react-icons/tb";
+import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useLockContext } from "../../hooks/lock/useLockContext";
 
 export const RosterLockButton = () => {
+  const screen = useScreenSize();
   const { lock, toggleLock } = useLockContext();
 
-  return (
+  return screen.isMobile ? (
+    <IconButton
+      aria-label="Toggle Drag & Drop"
+      onClick={() => toggleLock()}
+      sx={{
+        backgroundColor: (theme) => theme.palette.grey[400],
+        color: (theme) => theme.palette.success.contrastText,
+        "&:hover": {
+          backgroundColor: (theme) => theme.palette.grey[500],
+        },
+      }}
+    >
+      {lock ? <TbMobiledataOff /> : <TbMobiledata />}
+    </IconButton>
+  ) : (
     <Button
-      color="inherit"
       variant="contained"
       sx={{
         whiteSpace: "nowrap", // Prevent text from wrapping
         minWidth: "20ch",
+        backgroundColor: (theme) => theme.palette.grey[400],
+        color: (theme) => theme.palette.success.contrastText,
+        "&:hover": {
+          backgroundColor: (theme) => theme.palette.grey[500],
+        },
       }}
       startIcon={lock ? <TbMobiledataOff /> : <TbMobiledata />}
       onClick={() => toggleLock()}
