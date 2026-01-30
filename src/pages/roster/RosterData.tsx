@@ -16,6 +16,7 @@ import { OpenNavigationDrawerEvent } from "../../events/OpenNavigationDrawerEven
 import { useRosterWarnings } from "../../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useRosterSync } from "../../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
+import { LockContextProvider } from "../../lock/LockContext.tsx";
 import { useUserPreferences } from "../../state/preference";
 import { Roster } from "../../types/roster.ts";
 import { RosterBreadcrumbs } from "./RosterBreadcrumbs.tsx";
@@ -88,26 +89,30 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
               : 2,
         }}
       >
-        <Box
-          sx={{
-            width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
-          }}
-        >
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ mb: 2 }}
+        <LockContextProvider>
+          <Box
+            sx={{
+              width: screen.isDesktop
+                ? `calc(100% - ${drawerWidth}ch)`
+                : "100%",
+            }}
           >
-            <RosterBreadcrumbs roster={roster} />
-            <Stack gap={2} direction="row">
-              <RosterLockButton />
-              <StartGameButton roster={roster} />
-              <RosterSidebarButton />
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+              sx={{ mb: 2 }}
+            >
+              <RosterBreadcrumbs roster={roster} />
+              <Stack gap={2} direction="row">
+                <RosterLockButton />
+                <StartGameButton roster={roster} />
+                <RosterSidebarButton />
+              </Stack>
             </Stack>
-          </Stack>
-          <WarbandList warbands={roster.warbands} />
-        </Box>
+            <WarbandList warbands={roster.warbands} />
+          </Box>
+        </LockContextProvider>
         <RosterInfoDrawer roster={roster} editable={true} />
         <RosterFloatingButton roster={roster} />
       </Container>
