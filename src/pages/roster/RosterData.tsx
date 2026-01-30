@@ -16,7 +16,7 @@ import { OpenNavigationDrawerEvent } from "../../events/OpenNavigationDrawerEven
 import { useRosterWarnings } from "../../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useRosterSync } from "../../hooks/cloud-sync/RosterCloudSyncProvider.tsx";
-import { LockContextProvider } from "../../lock/LockContext.tsx";
+import { LockContextProvider } from "../../hooks/lock/LockContext.tsx";
 import { useUserPreferences } from "../../state/preference";
 import { Roster } from "../../types/roster.ts";
 import { RosterBreadcrumbs } from "./RosterBreadcrumbs.tsx";

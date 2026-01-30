@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LockContext } from "../../lock/LockContext";
+import { LockContext } from "./LockContext.tsx";
 
 export const useLockContext = () => {
   const context = useContext(LockContext);

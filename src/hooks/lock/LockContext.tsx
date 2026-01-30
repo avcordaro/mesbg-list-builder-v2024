@@ -14,12 +14,14 @@ export const LockContextProvider = ({ children }: { children: ReactNode }) => {
 
   const toggleLock = () => setLock((prev) => !prev);
 
-  const contextValue = {
-    lock,
-    toggleLock,
-  };
-
   return (
-    <LockContext.Provider value={contextValue}>{children}</LockContext.Provider>
+    <LockContext.Provider
+      value={{
+        lock,
+        toggleLock,
+      }}
+    >
+      {children}
+    </LockContext.Provider>
   );
 };
