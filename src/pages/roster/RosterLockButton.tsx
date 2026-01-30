@@ -7,7 +7,7 @@ export const RosterLockButton = () => {
 
   return (
     <Button
-      color="secondary"
+      color="inherit"
       variant="contained"
       sx={{
         whiteSpace: "nowrap", // Prevent text from wrapping
