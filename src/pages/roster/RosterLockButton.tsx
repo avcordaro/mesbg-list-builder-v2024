@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
 import { FaLock, FaLockOpen } from "react-icons/fa";
-import { useLockContext } from "../../lock/LockContext.tsx";
+import { useLockContext } from "../../hooks/lock/useLockContext";
 
 export const RosterLockButton = () => {
   const { lock, toggleLock } = useLockContext();
