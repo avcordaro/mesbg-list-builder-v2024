@@ -21,7 +21,7 @@ export const RosterLockButton = () => {
     >
       {lock ? <TbMobiledataOff /> : <TbMobiledata />}
     </IconButton>
-  ) : (
+  ) : !screen.isDesktop ? (
     <Button
       variant="contained"
       sx={{
@@ -38,5 +38,5 @@ export const RosterLockButton = () => {
     >
       {lock ? "Drag & Drop: Off" : "Drag & Drop: On"}
     </Button>
-  );
+  ) : null;
 };
