@@ -97,14 +97,9 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
                 : "100%",
             }}
           >
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              sx={{ mb: 2 }}
-            >
+            <Stack direction="column" sx={{ mb: 2 }}>
               <RosterBreadcrumbs roster={roster} />
-              <Stack gap={2} direction="row">
+              <Stack gap={2} direction="row" justifyContent="end">
                 <StartGameButton roster={roster} />
                 <RosterLockButton />
                 <RosterSidebarButton />
