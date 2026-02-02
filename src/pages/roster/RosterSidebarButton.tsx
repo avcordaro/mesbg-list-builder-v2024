@@ -7,7 +7,12 @@ export const RosterSidebarButton = () => {
   const screen = useScreenSize();
   const warnings = useRosterWarnings();
 
-  return !screen.isDesktop ? (
+  if (screen.isDesktop) {
+    // The toggle button is not rendered as the roster-info sidebar is always shown on desktop.
+    return null;
+  }
+
+  return (
     <IconButton
       aria-label="open drawer"
       onClick={() =>
@@ -33,5 +38,5 @@ export const RosterSidebarButton = () => {
     >
       {warnings.length > 0 ? <WarningRounded /> : <Info />}
     </IconButton>
-  ) : null;
+  );
 };
