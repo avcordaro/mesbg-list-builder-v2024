@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.37": {
     "added": [
       "Added the ability to disable the drag and drop inside the roster editor to help with mobile navigation and touch input (by Jean-Loup Trolliard)"
     ],
