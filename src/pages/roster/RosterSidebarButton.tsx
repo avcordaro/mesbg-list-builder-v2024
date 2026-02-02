@@ -1,5 +1,4 @@
 import { Info, WarningRounded } from "@mui/icons-material";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { useRosterWarnings } from "../../hooks/calculations-and-displays/useRosterWarnings.ts";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
@@ -8,7 +7,7 @@ export const RosterSidebarButton = () => {
   const screen = useScreenSize();
   const warnings = useRosterWarnings();
 
-  return screen.isMobile ? (
+  return !screen.isDesktop ? (
     <IconButton
       aria-label="open drawer"
       onClick={() =>
@@ -34,20 +33,5 @@ export const RosterSidebarButton = () => {
     >
       {warnings.length > 0 ? <WarningRounded /> : <Info />}
     </IconButton>
-  ) : !screen.isDesktop ? (
-    <Button
-      color={warnings.length > 0 ? "error" : "success"}
-      variant="contained"
-      aria-label="open drawer"
-      onClick={() =>
-        window.dispatchEvent(new Event("mlb-event--open-roster-info"))
-      }
-      startIcon={warnings.length > 0 ? <WarningRounded /> : <Info />}
-      sx={{
-        whiteSpace: "nowrap", // Prevent text from wrapping
-      }}
-    >
-      Roster information
-    </Button>
   ) : null;
 };

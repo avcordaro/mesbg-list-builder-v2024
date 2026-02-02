@@ -7,7 +7,7 @@ export const RosterLockButton = () => {
   const screen = useScreenSize();
   const { lock, toggleLock } = useLockContext();
 
-  return screen.isMobile ? (
+  return !screen.isDesktop ? (
     <IconButton
       aria-label="Toggle Drag & Drop"
       onClick={() => toggleLock()}
@@ -21,7 +21,7 @@ export const RosterLockButton = () => {
     >
       {lock ? <TbMobiledataOff /> : <TbMobiledata />}
     </IconButton>
-  ) : !screen.isDesktop ? (
+  ) : !screen.isTablet ? (
     <Button
       variant="contained"
       sx={{
