@@ -41,6 +41,7 @@ export const useNewRosterBuilder = () => {
           maxPoints: maximumPoints ? Number(maximumPoints) : undefined,
           siegeRoster: enableSiege,
           siegeRole: enableSiege ? siegeRole : undefined,
+          tttSpecialUpgrades: armyList === "The Three Trolls" ? [] : undefined,
           tags,
         },
       }),
