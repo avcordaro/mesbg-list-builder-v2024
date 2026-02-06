@@ -22131,6 +22131,7 @@
         "type": "mount",
         "included": true,
         "mount_name": "Great Eagle",
+        "tts_name": "Exchange Staff of Power for Great Eagle",
         "quantity": 1
       }
     ]
@@ -27610,6 +27611,7 @@
         "type": "mount",
         "included": true,
         "mount_name": "Great Eagle",
+        "tts_name": "Exchange Staff of Power for Great Eagle",
         "quantity": 1
       }
     ]

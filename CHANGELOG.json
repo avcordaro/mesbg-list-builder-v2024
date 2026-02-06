@@ -4,7 +4,8 @@
       "Pushed the buttons on the roster builder to a new line, giving more space on smaller screens."
     ],
     "bugfixes": [
-      "Added an initial value to The Three Trolls special upgrades list resolving errors when referencing before adding an initial rule."
+      "Added an initial value to The Three Trolls special upgrades list resolving errors when referencing before adding an initial rule.",
+      "Added a TTS export name mapping for the Exchange Staff for Great Eagle option of Radagast"
     ]
   },
   "1.37": {
