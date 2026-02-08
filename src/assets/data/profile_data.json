@@ -4956,7 +4956,7 @@
         {
           "name": "Fight to the Last",
           "type": "Passive",
-          "description": "If Haleth is engaged in combat, Aragorn and friendly Rohan Infantry models within 6\" gain +1 Fight value. This ends immediately if Haleth is slain."
+          "description": "If at the start of the Fight Phase Haleth is Engaged in Combat, then for the duration of the Fight Phase Aragorn and other friendly Rohan Infantry models within 6\" gain a bonus of +1 to their Fight Value. This benefit ends immediately if Haleth is slain."
         }
       ],
       "magic_powers": [],

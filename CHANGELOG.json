@@ -5,7 +5,8 @@
     ],
     "bugfixes": [
       "Added an initial value to The Three Trolls special upgrades list resolving errors when referencing before adding an initial rule.",
-      "Added a TTS export name mapping for the Exchange Staff for Great Eagle option of Radagast"
+      "Added a TTS export name mapping for the Exchange Staff for Great Eagle option of Radagast",
+      "Fixed the wording of Haleth's Fight to the Last special rule."
     ]
   },
   "1.37": {
