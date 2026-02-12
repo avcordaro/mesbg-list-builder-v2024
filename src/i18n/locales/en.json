@@ -1,0 +1,56 @@
+{
+  "model": {
+    "ranger-of-the-north": {
+      "name": "Ranger of the North"
+    },
+    "samewise": {
+      "name": "Samwise Gamgee"
+    }
+  },
+  "army": {
+    "list": {
+      "mordor": {
+        "name": "Mordor"
+      },
+      "moria": {
+        "additional-rules": {
+          "rule-1": {
+            "description": "Beast Warrior models may only be included in Drûzhag's Warband."
+          }
+        },
+        "special-rules": {
+          "rule-1": {
+            "title": "\"We cannot get out, they are coming.\"",
+            "description": "Friendly Moria Goblin models Engaged in Combat with an enemy model that would be considered Trapped gain a bonus of +1 to their Fight Value for the duration of the Combat."
+          },
+          "rule-2": {
+            "title": "Skittering Warriors"
+          }
+        }
+      },
+      "army-of-the-great-eye": {
+        "name": "Army of the Great Eye"
+      }
+    },
+    "type": {
+      "good": "Good",
+      "evil": "Evil"
+    }
+  },
+  "options": {
+    "orc-bow": {
+      "name": "Orc bow"
+    },
+    "shield": {
+      "name": "Shield"
+    }
+  },
+  "keyword": {
+    "special-rule": {
+      "black-dart": {
+        "name": "Black Dart",
+        "description": "<b>Duration</b>: Instant\n\nA sinister dark force leaps from the caster’s hand, driving itself into the flesh of its victim and towards their heart.\n\nThis Magical Power targets one enemy model within range. The target immediately suffers one Strength 6 hit. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the Mount is the target."
+      }
+    }
+  }
+}
