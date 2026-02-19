@@ -1,12 +1,14 @@
 {
   "main": {
     "changed": [
-      "Pushed the buttons on the roster builder to a new line, giving more space on smaller screens."
+      "Pushed the buttons on the roster builder to a new line, giving more space on smaller screens.",
+      "Updated MLB with the latest FAQs/Errata changes released on 19th February 2026."
     ],
     "bugfixes": [
       "Added an initial value to The Three Trolls special upgrades list resolving errors when referencing before adding an initial rule.",
       "Added a TTS export name mapping for the Exchange Staff for Great Eagle option of Radagast",
-      "Fixed the wording of Haleth's Fight to the Last special rule."
+      "Fixed the wording of Haleth's Fight to the Last special rule.",
+      "Fixed an incorrect Heroic Action on Thorin Oakenshield, King Under the Mountain's profile card."
     ]
   },
   "1.37": {

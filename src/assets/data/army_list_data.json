@@ -249,7 +249,7 @@
       },
       {
         "title": "The Voice of Saruman",
-        "description": "During his Activation, Saruman can use one of the following abilities instead of Casting a Magical Power. Each of these abilities can only be used once per game.\n\nConjure Lightning \u2013 Choose a point on the battlefield at least 12\" away from any friendly model (with the exception of Grima Wormtongue). Each model within 2\" of the chosen point suffers a Strength 6 hit. If a Cavalry model is affected, both the rider and Mount will suffer a Strength 6 hit.\n\nSummon Gale \u2013 Until the end of the turn, enemy models halve their Move Value.\n\nCall Thunder \u2013 Until the end of the turn, enemy models have the Fearful special rule."
+        "description": "During his Activation, Saruman can use one of the following abilities instead of Casting a Magical Power. Each of these abilities can only be used once per game.\n\nConjure Lightning \u2013 Choose a point on the battlefield at least 12\" away from any friendly model (including Grima Wormtongue). Each model within 2\" of the chosen point suffers a Strength 6 hit. If a Cavalry model is affected, both the rider and Mount will suffer a Strength 6 hit.\n\nSummon Gale \u2013 Until the end of the turn, enemy models halve their Move Value.\n\nCall Thunder \u2013 Until the end of the turn, enemy models have the Fearful special rule."
       },
       {
         "title": "Spies of Saruman",
@@ -263,7 +263,11 @@
     ]
   },
   "Army of Thror": {
-    "additional_rules": [],
+    "additional_rules": [
+      {
+        "description": "An Army of Thror Army may have up to 50% of its Warrior models armed with throwing weapons rather than the usual 33%."
+      }
+    ],
     "special_rules": [
       {
         "title": "Thror ruled with utter surety",
@@ -275,7 +279,7 @@
       }
     ],
     "bow_limit": 0.33,
-    "throw_limit": 0.33,
+    "throw_limit": 0.5,
     "rule_highlights": []
   },
   "Arnor": {
@@ -858,7 +862,7 @@
     "special_rules": [
       {
         "title": "Drums in the Deep",
-        "description": "Enemy models suffer a -1 penalty to any Courage Tests they are required to take, whilst friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take. Additionally, friendly Moria Goblin models always count as being in range of a banner."
+        "description": "Once per game, at the start of any Move Phase, a Depths of Moria player can declare they are using this special rule. If they do, until the End Phase of the turn, enemy models suffer a -1 penalty to any Courage Tests they are required to take, whilst friendly Moria Goblin models gain a bonus of +1 to any Courage Tests they are required to take. Additionally, until the End Phase of the turn, friendly Moria Goblin models count as being in range of a banner."
       },
       {
         "title": "Dominion of the Balrog",
@@ -2324,7 +2328,7 @@
       },
       {
         "title": "Piercing Cry",
-        "description": "Once per game, at the start of any Move Phase, Gwaihir can use this special rule so long as he is alive and on the battlefield. If he does, then enemy models within 6\" of Gwaihir cannot Move during that turn, but may otherwise act normally."
+        "description": "Once per game, at the start of any Move Phase, Gwaihir can use this special rule so long as he is alive and on the battlefield. If he does, then enemy models within 6\" of Gwaihir cannot Charge during that turn, but may otherwise act normally."
       }
     ],
     "bow_limit": 0.33,
