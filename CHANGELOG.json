@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.38": {
     "changed": [
       "Pushed the buttons on the roster builder to a new line, giving more space on smaller screens.",
       "Updated MLB with the latest FAQs/Errata changes released on 19th February 2026."
