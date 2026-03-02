@@ -148,6 +148,7 @@ export const modals = new Map<ModalTypes, ModalProps>([
       title: "",
       children: <ChartsModal />,
       overflow: "none",
+      maxWidth: "md",
     },
   ],
   [
