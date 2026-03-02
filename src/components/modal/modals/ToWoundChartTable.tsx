@@ -8,7 +8,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize";
+import { GiPerspectiveDiceSixFacesOne } from "react-icons/gi";
 
 const TO_WOUND_DATA: string[][] = [
   ["4+", "5+", "5+", "6+", "6+", "6+/4+", "6+/5+", "6+/6+", "-", "-"],
@@ -23,16 +23,14 @@ const TO_WOUND_DATA: string[][] = [
   ["3+", "3+", "3+", "3+", "3+", "3+", "3+", "3+", "4+", "4+"],
 ];
 
-const headerBgLight = "rgba(139, 90, 43, 0.25)";
-const headerBgDark = "rgba(180, 140, 90, 0.35)";
-const headerBorder = "1px solid rgba(139, 90, 43, 0.5)";
-
 export function ToWoundChartTable() {
   const theme = useTheme();
-  const screen = useScreenSize();
-  const isDark = theme.palette.mode === "dark";
-  const headerBg = isDark ? headerBgDark : headerBgLight;
-  console.log(screen);
+  const headerBg = theme.palette.grey[900];
+  const headerTextColor = theme.palette.getContrastText(headerBg);
+  const oddRowBg = theme.palette.grey[800];
+  const evenRowBg = theme.palette.grey[700];
+  const borderColor = theme.palette.divider;
+  const headerBorder = `1px solid ${borderColor}`;
   return (
     <Box
       sx={{
@@ -51,6 +49,7 @@ export function ToWoundChartTable() {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: headerBg,
+          color: headerTextColor,
           border: headerBorder,
           borderRight: "none",
           borderTopLeftRadius: 4,
@@ -83,19 +82,20 @@ export function ToWoundChartTable() {
           },
           "& th": {
             backgroundColor: headerBg,
+            color: headerTextColor,
             fontWeight: 700,
           },
           "& tbody tr:nth-of-type(even) td": {
-            backgroundColor: (t) => t.palette.action.hover,
+            backgroundColor: evenRowBg,
+            color: headerTextColor,
           },
           "& tbody tr:nth-of-type(odd) td": {
-            backgroundColor: (t) =>
-              t.palette.mode === "dark"
-                ? t.palette.background.paper
-                : t.palette.background.default,
+            backgroundColor: oddRowBg,
+            color: headerTextColor,
           },
-          "& tbody tr:nth-of-type(odd) th": {
+          "& tbody tr th": {
             backgroundColor: headerBg,
+            color: headerTextColor,
           },
           "& thead th:first-of-type": {
             borderTopLeftRadius: 0,
@@ -121,7 +121,7 @@ export function ToWoundChartTable() {
               sx={{ borderRight: headerBorder }}
               aria-hidden
             >
-              🎲
+              <GiPerspectiveDiceSixFacesOne size={20} />
             </TableCell>
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((d) => (
               <TableCell key={d} component="th" scope="col">
@@ -136,7 +136,7 @@ export function ToWoundChartTable() {
               <TableCell
                 component="th"
                 scope="row"
-                sx={{ backgroundColor: headerBg }}
+                sx={{ backgroundColor: headerBg, color: headerTextColor }}
               >
                 {i + 1}
               </TableCell>
