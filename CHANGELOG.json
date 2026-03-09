@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Added a Tabletop Sim export name for The Banner of Minas Tirith to match the FTC."
+    ]
+  },
   "1.38": {
     "changed": [
       "Pushed the buttons on the roster builder to a new line, giving more space on smaller screens.",

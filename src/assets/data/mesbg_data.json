@@ -24195,7 +24195,8 @@
       {
         "id": "OPT0487",
         "name": "The Banner of Minas Tirith",
-        "points": 40
+        "points": 40,
+        "tts_name": "Banner of Minas Tirith"
       },
       {
         "id": "OPT0488",
