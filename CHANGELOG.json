@@ -2,7 +2,8 @@
   "main": {
     "bugfixes": [
       "Added a Tabletop Sim export name for The Banner of Minas Tirith to match the FTC.",
-      "Fixed the duplicated text for the Impaler special rule for War Camels."
+      "Fixed the duplicated text for the Impaler special rule for War Camels.",
+      "Added the rule text for Flamming Ammunition to the Mordor Siege Bow's profile."
     ]
   },
   "1.38": {
