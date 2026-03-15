@@ -1,7 +1,8 @@
 {
   "main": {
     "bugfixes": [
-      "Added a Tabletop Sim export name for The Banner of Minas Tirith to match the FTC."
+      "Added a Tabletop Sim export name for The Banner of Minas Tirith to match the FTC.",
+      "Fixed the duplicated text for the Impaler special rule for War Camels."
     ]
   },
   "1.38": {

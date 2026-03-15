@@ -7096,7 +7096,7 @@
         {
           "name": "Impaler",
           "type": "Active",
-          "description": "Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between. Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between."
+          "description": "Each time this model Charges into Combat, it will inflict a single Strength 4 hit upon one model it has Charged (Cavalry models suffer this hit on both the rider and the Mount). If after this hit, this model is no longer Engaged in Combat, they may continue their Move in any way their controlling player wishes; stopping straight away, Charging another enemy model, or anything in between."
         }
       ],
       "special_rules": []
