@@ -1,0 +1,43 @@
+name: Remove "waiting for author" when author responds
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  remove-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const labelName = "waiting for author";
+
+            const issue = context.payload.issue;
+            const commentAuthor = context.payload.comment.user.login;
+            const issueAuthor = issue.user.login;
+
+            if (commentAuthor !== issueAuthor) {
+              console.log("Comment is not from the author.");
+              return;
+            }
+
+            const labels = issue.labels.map(l => l.name);
+
+            if (!labels.includes(labelName)) {
+              console.log("Label not present.");
+              return;
+            }
+
+            await github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              name: labelName
+            });
+
+            console.log(`Removed '${labelName}' label`);

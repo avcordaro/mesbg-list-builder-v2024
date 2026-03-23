@@ -1,0 +1,18 @@
+name: Mark as in-progress when assigned
+
+on:
+  issues:
+    types: [assigned]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  add-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add in-progress label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: in-progress

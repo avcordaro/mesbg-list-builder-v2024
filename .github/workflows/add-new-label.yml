@@ -1,0 +1,20 @@
+name: Add "new" label
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  add-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add new label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: new
