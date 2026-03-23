@@ -1,7 +1,7 @@
 ---
 name: "✍ Correction"
 about: Correcting issues in regards to rules
-title: "[:writing_hand:] <profile and rule name>"
+title: "✍ <profile and rule name>"
 labels: correction
 assignees: ""
 ---

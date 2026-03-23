@@ -1,7 +1,7 @@
 ---
 name: "⭐ Feature request"
 about: Suggest an idea for this project
-title: "[:star:] <one-line description>"
+title: "⭐ <one-line description>"
 labels: enhancement
 assignees: ""
 ---
