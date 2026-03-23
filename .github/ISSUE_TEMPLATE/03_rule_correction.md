@@ -1,5 +1,5 @@
 ---
-name: Correction
+name: ":hand_writing: Correction"
 about: Correcting issues in regards to rules
 title: "[:hand_writing:] <profile and rule name>"
 labels: correction

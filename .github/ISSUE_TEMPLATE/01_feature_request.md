@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: ":star: Feature request"
 about: Suggest an idea for this project
 title: "[:star:] <one-line description>"
 labels: enhancement
