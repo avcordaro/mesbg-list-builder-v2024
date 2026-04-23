@@ -5,7 +5,8 @@
       "Fixed the duplicated text for the Impaler special rule for War Camels.",
       "Added the rule text for Flamming Ammunition to the Mordor Siege Bow's profile.",
       "Corrected Lord Thorne's Dunland keyword to Rohan, on his profile.",
-      "Updated Beechbone's outdated profile picture."
+      "Updated Beechbone's outdated profile picture.",
+      "Fix warnings regarding the Corsair Fleet 'must be general' rules."
     ]
   },
   "1.38": {
