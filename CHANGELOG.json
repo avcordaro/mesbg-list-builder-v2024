@@ -1,19 +1,21 @@
 {
   "main": {
     "added": [
-      "Allow for adding additional points or units towards the breakpoints, for whenever you get a free unit on a tournament."
+      "Allow for adding additional points or units towards the breakpoints, for whenever you get a free unit on a tournament.",
+      "Allow locking drag & drop utility on the My Rosters page."
+    ],
+    "changed": [
+      "Updated the sorting on the rosters page to allow for groups to be filtered and sorted.",
+      "Remove already filtered options from the search bar at the top of the match history page.",
+      "Made the drag and drop lock persist between sessions."
     ],
     "bugfixes": [
       "Added a Tabletop Sim export name for The Banner of Minas Tirith to match the FTC.",
       "Fixed the duplicated text for the Impaler special rule for War Camels.",
-      "Added the rule text for Flamming Ammunition to the Mordor Siege Bow's profile.",
+      "Fixed warnings regarding the Corsair Fleet 'must be general' rules.",
+      "Added the missing rule text for Flaming Ammunition to the Mordor Siege Bow's profile.",
       "Corrected Lord Thorne's Dunland keyword to Rohan, on his profile.",
       "Updated Beechbone's outdated profile picture.",
-      "Fix warnings regarding the Corsair Fleet 'must be general' rules."
-    ],
-    "changed": [
-      "Updated the sorting on the rosters page to allow for groups to be filtered and sorted.",
-      "Remove already filtered options from the search bar at the top of the match history page."
     ],
     "removed": [
       "Removed some navigation items from the sidebar menu to reduce clutter."
