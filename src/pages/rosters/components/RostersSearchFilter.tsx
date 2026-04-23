@@ -84,19 +84,28 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
           severity="info"
           onClose={() => setShowHelperText(false)}
         >
-          <Typography component="div">
-            Filter rosters with queries like:{" "}
-            <pre style={{ display: "inline" }}>
-              &quot;type=evil&name=my army&points&gt;700&quot;
-            </pre>
-          </Typography>
-          <Typography sx={{ mt: 1 }}>
-            Available fields: type, army, name, points, tag, units, bows, throw,
-            might, will, fate
-            <br />
-            Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine
-            multiple rules with &.
-          </Typography>
+          <Stack gap={2}>
+            <Typography component="div">
+              Filter rosters with queries like:{" "}
+              <pre style={{ display: "inline" }}>
+                &quot;type=evil&name=my army&points&gt;700&quot;
+              </pre>
+            </Typography>
+            <Typography>
+              Available fields: type, army, name, points, tag, units, bows,
+              throw, might, will, fate
+              <br />
+              Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine
+              multiple rules with &.
+            </Typography>
+            <Typography>
+              Prefix your query with{" "}
+              <i>
+                <code>&quot;~ignore-groups&quot;</code>
+              </i>{" "}
+              to do a global search within all your rosters.
+            </Typography>
+          </Stack>
         </CustomAlert>
       </Collapse>
     </>

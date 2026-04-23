@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { Roster } from "../../../../types/roster";
 import { getComparator } from "../../sorting/sorting.ts";
-import { useRosterSearch } from "../useRosterSearch.ts";
 import { RosterDroppable } from "./RosterDroppable.tsx";
+import { useRosterFilter } from "./useRosterFilter.ts";
 
 type RosterCardListProps = {
   rosters: Roster[];
@@ -14,12 +14,6 @@ type RosterCardListProps = {
   selectRoster: (value: string) => void;
 };
 
-const getRosterInGroup = (rosters: Roster[], groupId: string) => {
-  return !groupId
-    ? rosters.filter((group) => !group.group)
-    : rosters.filter((group) => group.group === groupId);
-};
-
 export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   rosters,
   dragged,
@@ -28,14 +22,8 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   selectRoster,
   selectedRosters,
 }) => {
-  const { groupId } = useParams();
   const [searchParams] = useSearchParams();
-  const { filterRosters } = useRosterSearch();
-
-  const currentRosters = getRosterInGroup(rosters, groupId);
-  const visibleRosters = filter
-    ? filterRosters(currentRosters, filter)
-    : currentRosters;
+  const visibleRosters = useRosterFilter(rosters, filter);
 
   return visibleRosters
     .sort(getComparator(searchParams))
