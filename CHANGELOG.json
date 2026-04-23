@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.39": {
     "added": [
       "Allow for adding additional points or units towards the breakpoints, for whenever you get a free unit on a tournament.",
       "Allow locking drag & drop utility on the My Rosters page."
