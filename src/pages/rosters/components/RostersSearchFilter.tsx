@@ -1,11 +1,14 @@
 import { InfoOutlined } from "@mui/icons-material";
-import { Collapse, InputAdornment, TextField } from "@mui/material";
+import { Button, Collapse, InputAdornment, TextField } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, FunctionComponent, useState } from "react";
+import { TbMobiledata, TbMobiledataOff } from "react-icons/tb";
 import { useSearchParams } from "react-router-dom";
 import { CustomAlert } from "../../../components/atoms/alert/CustomAlert.tsx";
+import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useLockContext } from "../../../hooks/lock/useLockContext.ts";
 import { RosterBulkDeleteButton } from "../bulk-delete/RosterBulkDeleteButton.tsx";
 import {
   RosterSortButton,
@@ -67,6 +70,7 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
             },
           }}
         />
+        <DragAndLockButton />
         <RosterSortButton
           setOrdering={setSortParams}
           order={searchParams.get("direction") as SortOrder}
@@ -111,3 +115,31 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
     </>
   );
 };
+
+function DragAndLockButton() {
+  const screen = useScreenSize();
+  const { lock, toggleLock } = useLockContext();
+
+  if (screen.isMobile) return null;
+
+  return (
+    <Button
+      sx={{ width: "5ch" }}
+      variant="outlined"
+      color="inherit"
+      aria-label="toggle drag and drop"
+      onClick={toggleLock}
+    >
+      <Stack alignItems="center" sx={{ pt: 0.4 }}>
+        {lock ? (
+          <TbMobiledataOff fontSize="1.45rem" />
+        ) : (
+          <TbMobiledata fontSize="1.45rem" />
+        )}
+        <Typography variant="subtitle1" sx={{ fontSize: "0.65rem" }}>
+          {lock ? "Off" : "On"}
+        </Typography>
+      </Stack>
+    </Button>
+  );
+}

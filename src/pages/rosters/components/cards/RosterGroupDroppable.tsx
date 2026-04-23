@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { CARD_SIZE_IN_PX } from "../../../../components/common/roster-card/RosterSummaryCard.tsx";
 import { RosterGroupCard } from "../../../../components/common/roster-group-card/RosterGroupCard.tsx";
 import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
+import { useLockContext } from "../../../../hooks/lock/useLockContext.ts";
 import { RosterGroup } from "../../../../state/roster-building/groups";
 
 export const RosterGroupDroppable = ({
@@ -15,6 +16,7 @@ export const RosterGroupDroppable = ({
   isDragged?: string;
 }) => {
   const screen = useScreenSize();
+  const { lock } = useLockContext();
   return (
     <Droppable droppableId={"group:" + group.id}>
       {(provided, snapshot) => (
@@ -39,7 +41,11 @@ export const RosterGroupDroppable = ({
                 },
           ]}
         >
-          <Draggable draggableId={"group:" + group.id} index={index}>
+          <Draggable
+            draggableId={"group:" + group.id}
+            index={index}
+            isDragDisabled={lock}
+          >
             {(draggableProvided, draggableSnapshot) => {
               const { style, ...props } = draggableProvided.draggableProps;
               return (

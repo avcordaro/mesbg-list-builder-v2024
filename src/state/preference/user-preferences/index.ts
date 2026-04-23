@@ -7,7 +7,8 @@ export type Preferences =
   | "oldShareScreen"
   | "hideRostersInNavigation"
   | "forceShowCardActionButtons"
-  | "dragAndDropRoster"
+  | "dragAndDropUnits"
+  | "dragAndDropRosters"
   //   Builder restriction preferences
   | "allowCompulsoryGeneralDelete"
   //   Collection preferences
@@ -44,7 +45,8 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     splitActiveRules: false,
     oldShareScreen: false,
     collectionWarnings: false,
-    dragAndDropRoster: false,
+    dragAndDropUnits: false,
+    dragAndDropRosters: false,
     darkMode:
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches,
