@@ -8,6 +8,8 @@ type NewRosterArguments = {
   groupId: string;
   armyList: string;
   maximumPoints: number | undefined;
+  addUnits: number | undefined;
+  addPoints: number | undefined;
   enableSiege: boolean;
   siegeRole: "Attacker" | "Defender" | undefined;
   withHero: string | undefined;
@@ -24,6 +26,8 @@ export const useNewRosterBuilder = () => {
     groupId,
     armyList,
     maximumPoints,
+    addPoints,
+    addUnits,
     enableSiege,
     siegeRole,
     withHero,
@@ -40,6 +44,8 @@ export const useNewRosterBuilder = () => {
           ...emptyRoster.metadata,
           maxPoints: maximumPoints ? Number(maximumPoints) : undefined,
           siegeRoster: enableSiege,
+          addPoints,
+          addUnits,
           siegeRole: enableSiege ? siegeRole : undefined,
           tttSpecialUpgrades: armyList === "The Three Trolls" ? [] : undefined,
           tags,

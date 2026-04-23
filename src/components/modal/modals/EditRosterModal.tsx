@@ -1,5 +1,13 @@
-import { Button, DialogActions, DialogContent, TextField } from "@mui/material";
+import {
+  Button,
+  DialogActions,
+  DialogContent,
+  FormHelperText,
+  Stack,
+  TextField,
+} from "@mui/material";
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuilder.ts";
@@ -32,6 +40,12 @@ export const EditRosterModal = () => {
   const [rosterPointsLimit, setRosterPointsLimit] = useState(
     roster?.metadata.maxPoints ? String(roster.metadata.maxPoints) : "",
   );
+  const [rosterAddPoints, setRosterAddPoints] = useState(
+    roster?.metadata.addPoints ? String(roster.metadata.addPoints) : "",
+  );
+  const [rosterAddUnits, setRosterAddUnits] = useState(
+    roster?.metadata.addUnits ? String(roster.metadata.addUnits) : "",
+  );
   const [rosterPointsLimitValid, setRosterPointsLimitValid] = useState(true);
 
   const handleUpdateRoster = (e) => {
@@ -53,6 +67,8 @@ export const EditRosterModal = () => {
           metadata: {
             ...roster.metadata,
             maxPoints: Number(pointLimit),
+            addUnits: Number(rosterAddUnits),
+            addPoints: Number(rosterAddPoints),
             tags,
           },
         });
@@ -64,6 +80,8 @@ export const EditRosterModal = () => {
             name: rosterNameValue,
             armyList: armyList.army,
             maximumPoints: Number(pointLimit),
+            addUnits: Number(rosterAddUnits),
+            addPoints: Number(rosterAddPoints),
             enableSiege: roster.metadata.siegeRoster,
             siegeRole: roster.metadata.siegeRole,
             withHero: armyList.hero,
@@ -84,6 +102,14 @@ export const EditRosterModal = () => {
   function updateRosterPointsLimit(value: string) {
     setRosterPointsLimit(value);
     setRosterPointsLimitValid(true);
+  }
+
+  function updateRosterAddPoints(value: string) {
+    setRosterAddPoints(value);
+  }
+
+  function updateRosterAddUnits(value: string) {
+    setRosterAddUnits(value);
   }
 
   return (
@@ -131,6 +157,30 @@ export const EditRosterModal = () => {
           onChange={(e) => updateRosterPointsLimit(e.target.value)}
         />
         <AdditionalTagsInput values={tags} onChange={setTags} size="medium" />
+
+        <Divider variant="middle">
+          <Typography className="middle-earth" variant="h6">
+            Addtional settings
+          </Typography>
+        </Divider>
+        <Stack direction="row" gap={2} sx={{ mb: -1 }}>
+          <TextField
+            fullWidth
+            label="Fake units"
+            value={rosterAddUnits}
+            onChange={(e) => updateRosterAddUnits(e.target.value)}
+          />
+          <TextField
+            fullWidth
+            label="Fake points"
+            value={rosterAddPoints}
+            onChange={(e) => updateRosterAddPoints(e.target.value)}
+          />
+        </Stack>
+        <FormHelperText sx={{ ml: 1.5 }}>
+          These are added or subtracted from the total units or points of the
+          roster.
+        </FormHelperText>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button
