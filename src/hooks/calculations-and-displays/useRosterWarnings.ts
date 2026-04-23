@@ -32,6 +32,71 @@ function checkIncompatible(
   );
 }
 
+function handleSpecialGeneralSelection(
+  roster: Roster,
+  warnings: WarningRule[],
+) {
+  const heroes = roster.warbands
+    .filter((wb) => isSelectedUnit(wb.hero))
+    .map((wb) => wb.hero?.model_id);
+  const leader = roster.warbands.find((wb) => wb.id === roster.metadata.leader)
+    ?.hero?.model_id;
+
+  if (roster.armyList === "Corsair Fleet") {
+    if (leader === "[corsair-fleet] dalamyr-fleetmaster-of-umbar") {
+      return;
+    } else if (
+      heroes.includes("[corsair-fleet] dalamyr-fleetmaster-of-umbar")
+    ) {
+      warnings.push({
+        warning:
+          "If your army contains Dalamyr, then he should always be the Army's General.",
+        type: undefined,
+        dependencies: [],
+      });
+    } else if (leader !== "[corsair-fleet] corsair-captain-general") {
+      warnings.push({
+        warning:
+          "The Army must always contain a Corsair Captain, who must be the Army's General.",
+        type: undefined,
+        dependencies: [],
+      });
+    }
+  }
+}
+
+function addHeroicTierWarnings(roster: Roster, warnings: WarningRule[]) {
+  const heroicTiers = roster.warbands
+    .filter(
+      ({ hero }) => isSelectedUnit(hero) && hero.unit_type.includes("Hero"),
+    )
+    .map(({ hero }) => hero)
+    .sort(byHeroicTier)
+    .map(({ unit_type }) => unit_type)
+    .filter((t, i, s) => s.findIndex((o) => o === t) === i);
+
+  const leaderTier = roster.warbands.find(
+    (wb) => wb.id === roster.metadata.leader,
+  )?.hero?.unit_type;
+  const leaderTierIndex = heroicTiers.findIndex((tier) => tier === leaderTier);
+
+  if (leaderTierIndex === -1) {
+    // warband was deleted... so there actually isn't a leader...
+    warnings.push({
+      warning: `An army list should always have an army general.`,
+      type: undefined,
+      dependencies: [],
+    });
+  } else if (leaderTierIndex !== 0) {
+    // leader is not the highest available heroic tier...
+    warnings.push({
+      warning: `The army general should always be the hero with the highest tier available. You should select a ${heroicTiers[0]} to be your army general.`,
+      type: undefined,
+      dependencies: [],
+    });
+  }
+}
+
 function extraScriptedRosterWarnings(
   roster: Roster,
   ignoreCompulsoryArmyGeneral: boolean,
@@ -318,36 +383,10 @@ function extraScriptedRosterWarnings(
     roster.metadata.leader &&
     (!roster.metadata.leaderCompulsory || ignoreCompulsoryArmyGeneral)
   ) {
-    const heroicTiers = roster.warbands
-      .filter(
-        ({ hero }) => isSelectedUnit(hero) && hero.unit_type.includes("Hero"),
-      )
-      .map(({ hero }) => hero)
-      .sort(byHeroicTier)
-      .map(({ unit_type }) => unit_type)
-      .filter((t, i, s) => s.findIndex((o) => o === t) === i);
-
-    const leaderTier = roster.warbands.find(
-      (wb) => wb.id === roster.metadata.leader,
-    )?.hero?.unit_type;
-    const leaderTierIndex = heroicTiers.findIndex(
-      (tier) => tier === leaderTier,
-    );
-
-    if (leaderTierIndex === -1) {
-      // warband was deleted... so there actually isn't a leader...
-      warnings.push({
-        warning: `An army list should always have an army general.`,
-        type: undefined,
-        dependencies: [],
-      });
-    } else if (leaderTierIndex !== 0) {
-      // leader is not the highest available heroic tier...
-      warnings.push({
-        warning: `The army general should always be the hero with the highest tier available. You should select a ${heroicTiers[0]} to be your army general.`,
-        type: undefined,
-        dependencies: [],
-      });
+    if (["Corsair Fleet"].includes(roster.armyList)) {
+      handleSpecialGeneralSelection(roster, warnings);
+    } else {
+      addHeroicTierWarnings(roster, warnings);
     }
   }
 
