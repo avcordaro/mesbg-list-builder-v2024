@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode } from "react";
+import { useUserPreferences } from "../../state/preference";
 
 type LockContextType = {
   lock: boolean;
@@ -10,14 +11,15 @@ export const LockContext = createContext<LockContextType | undefined>(
 );
 
 export const LockContextProvider = ({ children }: { children: ReactNode }) => {
-  const [lock, setLock] = useState(false);
+  const { preferences, setPreference } = useUserPreferences();
 
-  const toggleLock = () => setLock((prev) => !prev);
+  const toggleLock = () =>
+    setPreference("dragAndDropRoster", !preferences.dragAndDropRoster);
 
   return (
     <LockContext.Provider
       value={{
-        lock,
+        lock: preferences.dragAndDropRoster,
         toggleLock,
       }}
     >
