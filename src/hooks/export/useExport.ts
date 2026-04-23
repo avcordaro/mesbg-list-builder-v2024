@@ -26,6 +26,8 @@ export const useExport = () => {
           siegeRole: roster.metadata.siegeRole,
           maxPoints: roster.metadata.maxPoints,
           tags: roster.metadata.tags,
+          addUnits: roster.metadata.addUnits,
+          addPoints: roster.metadata.addPoints,
         },
         warbands: roster.warbands.map((warband) => ({
           id: warband.id,
