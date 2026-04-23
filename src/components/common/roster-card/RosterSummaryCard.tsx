@@ -70,11 +70,7 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
           minWidth: `${CARD_SIZE_IN_PX}px`,
           aspectRatio: "1/1",
           position: "relative",
-          backgroundColor: isMarkedForDeletion
-            ? mode === "dark"
-              ? "rgb(123,19,19)"
-              : "#ffe3e3"
-            : "inherit",
+          backgroundColor: isMarkedForDeletion ? (mode === "dark" ? "rgb(123,19,19)" : "#ffe3e3") : "inherit",
         }}
         onClick={(e) => {
           if (isDeleting) {
@@ -94,9 +90,7 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
                   whiteSpace: "nowrap", // Prevent text from wrapping
                   overflow: "hidden", // Hide the overflowing text
                   textOverflow: "ellipsis", // Show ellipsis when text overflows
-                  width: screen.isTooSmall
-                    ? `${CARD_SIZE_IN_PX}px`
-                    : `${CARD_SIZE_IN_PX / 1.5}px`, // Set a fixed width or max-width for overflow
+                  width: screen.isTooSmall ? `${CARD_SIZE_IN_PX}px` : `${CARD_SIZE_IN_PX / 1.5}px`, // Set a fixed width or max-width for overflow
                 }}
               >
                 {roster.name}
@@ -106,8 +100,7 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
                 variant="body2"
                 sx={{
                   textDecoration: "underline",
-                  color: ({ palette }) =>
-                    mode === "dark" ? palette.grey.A400 : palette.grey.A700,
+                  color: ({ palette }) => (mode === "dark" ? palette.grey.A400 : palette.grey.A700),
                 }}
               >
                 <i>{roster.armyList}</i>
@@ -127,10 +120,7 @@ export const RosterSummaryCard: FunctionComponent<RosterSummaryCardProps> = ({
               <KeyValue label="Warbands" value={roster.warbands.length} />
               <KeyValue label="Might" value={roster.metadata.might} />
               <KeyValue label="Bows" value={roster.metadata.bows} />
-              <KeyValue
-                label="Thr. Weap"
-                value={roster.metadata.throwingWeapons}
-              />
+              <KeyValue label="Thr. Weap" value={roster.metadata.throwingWeapons} />
             </Box>
           </Stack>
           <Box

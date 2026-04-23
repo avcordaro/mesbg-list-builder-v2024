@@ -5,8 +5,6 @@ export const isHeroWhoLeads = (hero: SelectedUnit): boolean => {
   if (hero.name === "Smaug") return false;
 
   return (
-    !["Independent Hero", "Independent Hero*", "Siege Engine"].includes(
-      hero.unit_type,
-    ) && hero.no_followers !== true
+    !["Independent Hero", "Independent Hero*", "Siege Engine"].includes(hero.unit_type) && hero.no_followers !== true
   );
 };

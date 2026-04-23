@@ -20,15 +20,6 @@ export const sidebarSlice: Slice<ApplicationState, SidebarState> = (set) => ({
   ...initialState,
 
   openSidebar: (sidebar, context) =>
-    set(
-      { currentlyOpenendSidebar: sidebar, openSidebarContext: context },
-      undefined,
-      "OPEN_SIDEBAR",
-    ),
-  closeSidebar: () =>
-    set(
-      { currentlyOpenendSidebar: null, openSidebarContext: null },
-      undefined,
-      "CLOSE_SIDEBAR",
-    ),
+    set({ currentlyOpenendSidebar: sidebar, openSidebarContext: context }, undefined, "OPEN_SIDEBAR"),
+  closeSidebar: () => set({ currentlyOpenendSidebar: null, openSidebarContext: null }, undefined, "CLOSE_SIDEBAR"),
 });

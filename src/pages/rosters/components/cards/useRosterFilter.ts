@@ -19,10 +19,7 @@ export const useRosterFilter = (rosters: Roster[], filter: string) => {
   }
 
   if (filter.startsWith(IGNORE_GROUPS)) {
-    const updatedFilterString = filter
-      .replace(IGNORE_GROUPS, "")
-      .replace("&", "")
-      .trim();
+    const updatedFilterString = filter.replace(IGNORE_GROUPS, "").replace("&", "").trim();
     return filterRosters(rosters, updatedFilterString);
   }
 
@@ -30,7 +27,5 @@ export const useRosterFilter = (rosters: Roster[], filter: string) => {
 };
 
 function getRosterInGroup(rosters: Roster[], groupId: string) {
-  return !groupId
-    ? rosters.filter((group) => !group.group)
-    : rosters.filter((group) => group.group === groupId);
+  return !groupId ? rosters.filter((group) => !group.group) : rosters.filter((group) => group.group === groupId);
 }

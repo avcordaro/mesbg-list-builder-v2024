@@ -41,34 +41,28 @@ export const useApi = () => {
     });
     if (!response.ok) {
       const { title, message } = await response.json();
-      if (alertOnFailure)
-        triggerAlert(AlertTypes.API_REQUEST_FAILED, { title, message });
+      if (alertOnFailure) triggerAlert(AlertTypes.API_REQUEST_FAILED, { title, message });
       throw new ApiError(`API Request failed: ${message}`, response);
     }
 
     return response;
   };
 
-  const deleteRoster = (rosterId: string) =>
-    request(`/rosters/${rosterId}`, "DELETE");
+  const deleteRoster = (rosterId: string) => request(`/rosters/${rosterId}`, "DELETE");
 
   const createRoster = (roster: Roster, alertOnFailure: boolean = true) =>
     request("/rosters", "POST", convertRosterToJson(roster), alertOnFailure);
 
-  const updateRoster = (roster: Roster) =>
-    request(`/rosters/${roster.id}`, "PUT", convertRosterToJson(roster));
+  const updateRoster = (roster: Roster) => request(`/rosters/${roster.id}`, "PUT", convertRosterToJson(roster));
 
-  const createGroup = (group: RosterGroup) =>
-    request("/groups", "POST", JSON.stringify(group));
+  const createGroup = (group: RosterGroup) => request("/groups", "POST", JSON.stringify(group));
 
   const updateGroup = (group: Omit<RosterGroup, "rosters">) =>
     request(`/groups/${group.id}`, "PUT", JSON.stringify(group));
 
-  const setParentGroup = (groupId: string, parent: string) =>
-    request(`/groups/${groupId}/parent/${parent}`, "PATCH");
+  const setParentGroup = (groupId: string, parent: string) => request(`/groups/${groupId}/parent/${parent}`, "PATCH");
 
-  const removeParentGroup = (groupId: string) =>
-    request(`/groups/${groupId}/parent`, "DELETE");
+  const removeParentGroup = (groupId: string) => request(`/groups/${groupId}/parent`, "DELETE");
 
   const addRosterToGroup = (groupId: string, rosterId: string) =>
     request(`/groups/${groupId}/add/${rosterId}`, "PATCH");
@@ -83,36 +77,20 @@ export const useApi = () => {
     request("/ongoing-games", "POST", JSON.stringify({ roster, ...game }));
 
   const updateGamestate = (roster: string, game: Game) =>
-    request(
-      `/ongoing-games/${roster}`,
-      "PUT",
-      JSON.stringify({ roster, ...game }),
-    );
+    request(`/ongoing-games/${roster}`, "PUT", JSON.stringify({ roster, ...game }));
 
-  const deleteGamestate = (roster: string) =>
-    request(`/ongoing-games/${roster}`, "DELETE");
+  const deleteGamestate = (roster: string) => request(`/ongoing-games/${roster}`, "DELETE");
 
-  const createGame = async (game: PastGame) =>
-    request("/games", "POST", JSON.stringify(game));
+  const createGame = async (game: PastGame) => request("/games", "POST", JSON.stringify(game));
 
-  const updateGame = (game: PastGame) =>
-    request(`/games/${game.id}`, "PUT", JSON.stringify(game));
+  const updateGame = (game: PastGame) => request(`/games/${game.id}`, "PUT", JSON.stringify(game));
 
   const deleteGame = (gameId: string) => request(`/games/${gameId}`, "DELETE");
 
-  const upsertCollection = async (
-    group: string,
-    model: string,
-    collection: ModelInventory,
-  ) =>
-    request(
-      `/collection/${group}/${model}`,
-      "PUT",
-      JSON.stringify(collection.collection),
-    );
+  const upsertCollection = async (group: string, model: string, collection: ModelInventory) =>
+    request(`/collection/${group}/${model}`, "PUT", JSON.stringify(collection.collection));
 
-  const deleteFromCollection = (group: string, model: string) =>
-    request(`/collection/${group}/${model}`, "DELETE");
+  const deleteFromCollection = (group: string, model: string) => request(`/collection/${group}/${model}`, "DELETE");
 
   return {
     createRoster,

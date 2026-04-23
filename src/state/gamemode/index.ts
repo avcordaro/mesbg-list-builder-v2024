@@ -5,10 +5,7 @@ import { victoryPointsSlice, VictoryPointsState } from "./victory-points";
 
 export type GameModeState = GameState & VictoryPointsState;
 
-export const useGameModeState = create<
-  GameModeState,
-  [["zustand/devtools", unknown], ["zustand/persist", unknown]]
->(
+export const useGameModeState = create<GameModeState, [["zustand/devtools", unknown], ["zustand/persist", unknown]]>(
   devtools(
     persist(
       (...args) => ({

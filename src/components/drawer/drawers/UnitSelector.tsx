@@ -18,8 +18,7 @@ export const UnitSelector = () => {
   } = useRosterBuildingState();
   const { roster } = useRosterInformation();
   const { closeSidebar } = useAppState();
-  const { handleHeroSelection, handleUnitSelection, handleSiegeSelection } =
-    useWarbandMutations(roster?.id, warbandId);
+  const { handleHeroSelection, handleUnitSelection, handleSiegeSelection } = useWarbandMutations(roster?.id, warbandId);
 
   useEffect(() => {
     if (!roster) {
@@ -28,9 +27,7 @@ export const UnitSelector = () => {
   }, [roster]);
 
   function selectUnit(unit: Unit) {
-    console.debug(
-      `select ${selectionType} for wb ${warbandId} in ${roster.name}; ${unit.name}`,
-    );
+    console.debug(`select ${selectionType} for wb ${warbandId} in ${roster.name}; ${unit.name}`);
     switch (selectionType) {
       case "hero":
         handleHeroSelection(unit);
@@ -44,9 +41,7 @@ export const UnitSelector = () => {
   }
 
   function selectEquipment(equipment: SiegeEquipment) {
-    console.debug(
-      `select ${selectionType} for wb ${warbandId} in ${roster.name}; ${equipment.name}`,
-    );
+    console.debug(`select ${selectionType} for wb ${warbandId} in ${roster.name}; ${equipment.name}`);
 
     handleSiegeSelection(equipment);
 
@@ -63,34 +58,20 @@ export const UnitSelector = () => {
       >
         {selectionType === "hero" &&
           (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
-            <CustomHeroSelectionList
-              armyList={roster.armyList}
-              selectUnit={selectUnit}
-            />
+            <CustomHeroSelectionList armyList={roster.armyList} selectUnit={selectUnit} />
           ) : (
-            <HeroSelectionList
-              armyList={roster.armyList}
-              selectUnit={selectUnit}
-            />
+            <HeroSelectionList armyList={roster.armyList} selectUnit={selectUnit} />
           ))}
         {selectionType === "unit" &&
           (["Custom: Good", "Custom: Evil"].includes(roster.armyList) ? (
-            <CustomUnitSelectionList
-              armyList={roster.armyList}
-              selectUnit={selectUnit}
-            />
+            <CustomUnitSelectionList armyList={roster.armyList} selectUnit={selectUnit} />
           ) : (
             <UnitSelectionList
-              leadingHeroModelId={
-                roster.warbands.find(({ id }) => id === warbandId)?.hero
-                  ?.model_id
-              }
+              leadingHeroModelId={roster.warbands.find(({ id }) => id === warbandId)?.hero?.model_id}
               selectUnit={selectUnit}
             />
           ))}
-        {selectionType === "siege" && (
-          <SiegeSelectionList selectEquipment={selectEquipment} />
-        )}
+        {selectionType === "siege" && <SiegeSelectionList selectEquipment={selectEquipment} />}
       </Stack>
     )
   );

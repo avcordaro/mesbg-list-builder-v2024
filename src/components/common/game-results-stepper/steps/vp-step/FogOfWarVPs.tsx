@@ -44,24 +44,13 @@ export const FogOfWarVPs: FunctionComponent<QuestionListProps> = (props) => {
   const [activeStep, setActiveStep] = useState(0);
 
   const [selectedModelVPs, setSelectedModelVPs] = useState(victoryPoints[0]);
-  const [selectedTerrainVPs, setSelectedTerrainVPs] = useState(
-    victoryPoints[1],
-  );
+  const [selectedTerrainVPs, setSelectedTerrainVPs] = useState(victoryPoints[1]);
   const [generalVPs, setGeneralVPs] = useState(victoryPoints[2]);
   const [brokenVPs, setBrokenVPs] = useState(victoryPoints[3]);
 
-  const getObjectiveVPs = (
-    modelVPs: number[],
-    terrainVPs: number[],
-  ): [number, number] => {
-    const playerObjectives = [...modelVPs.slice(0, 2), terrainVPs[0]].reduce(
-      (a, b) => a + b,
-      0,
-    );
-    const opponentObjectives = [...modelVPs.slice(2, 4), terrainVPs[1]].reduce(
-      (a, b) => a - b,
-      0,
-    );
+  const getObjectiveVPs = (modelVPs: number[], terrainVPs: number[]): [number, number] => {
+    const playerObjectives = [...modelVPs.slice(0, 2), terrainVPs[0]].reduce((a, b) => a + b, 0);
+    const opponentObjectives = [...modelVPs.slice(2, 4), terrainVPs[1]].reduce((a, b) => a - b, 0);
 
     return [playerObjectives, opponentObjectives];
   };
@@ -69,14 +58,8 @@ export const FogOfWarVPs: FunctionComponent<QuestionListProps> = (props) => {
   const updateGameResultState = () => {
     const objectiveVPs = getObjectiveVPs(selectedModelVPs, selectedTerrainVPs);
 
-    const playerVPs = [objectiveVPs[0], generalVPs[0], brokenVPs[0]].reduce(
-      (a, b) => a + b,
-      0,
-    );
-    const opponentVPs = [objectiveVPs[1], generalVPs[1], brokenVPs[1]].reduce(
-      (a, b) => a - b,
-      0,
-    );
+    const playerVPs = [objectiveVPs[0], generalVPs[0], brokenVPs[0]].reduce((a, b) => a + b, 0);
+    const opponentVPs = [objectiveVPs[1], generalVPs[1], brokenVPs[1]].reduce((a, b) => a - b, 0);
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -86,12 +69,7 @@ export const FogOfWarVPs: FunctionComponent<QuestionListProps> = (props) => {
 
   useEffect(() => {
     updateGameResultState();
-    setVictoryPoints([
-      selectedModelVPs,
-      selectedTerrainVPs,
-      generalVPs,
-      brokenVPs,
-    ]);
+    setVictoryPoints([selectedModelVPs, selectedTerrainVPs, generalVPs, brokenVPs]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedModelVPs, selectedTerrainVPs, generalVPs, brokenVPs]);
 
@@ -101,32 +79,20 @@ export const FogOfWarVPs: FunctionComponent<QuestionListProps> = (props) => {
         <Stack>
           <RadioMatrix
             rows={["Your Nominated Hero", "Their Nominated Hero"]}
-            columns={[
-              "Zero fate used",
-              "Used Fate but no Wounds",
-              "Wounded",
-              "Killed",
-            ]}
+            columns={["Zero fate used", "Used Fate but no Wounds", "Wounded", "Killed"]}
             values={[5, 3, 1, 0]}
             selection={[selectedModelVPs[0], selectedModelVPs[2]]}
-            setSelection={([x, y]) =>
-              setSelectedModelVPs(([, a, , b]) => [x, a, y, b])
-            }
+            setSelection={([x, y]) => setSelectedModelVPs(([, a, , b]) => [x, a, y, b])}
           />
           <RadioMatrix
             rows={["Your selected Enemy Hero", "Their selected Enemy Hero"]}
             columns={["Unharmed", "Wounded", "Killed", "Killed in combat"]}
             values={[0, 1, 3, 5]}
             selection={[selectedModelVPs[1], selectedModelVPs[3]]}
-            setSelection={([x, y]) =>
-              setSelectedModelVPs(([a, , b]) => [a, x, b, y])
-            }
+            setSelection={([x, y]) => setSelectedModelVPs(([a, , b]) => [a, x, b, y])}
           />
           <RadioMatrix
-            rows={[
-              "Your selected terrain piece",
-              "Their selected terrain piece",
-            ]}
+            rows={["Your selected terrain piece", "Their selected terrain piece"]}
             columns={[
               "No or less models",
               "More models",
@@ -155,15 +121,9 @@ export const FogOfWarVPs: FunctionComponent<QuestionListProps> = (props) => {
         </Stack>
       )}
 
-      {activeStep === BROKEN && (
-        <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />
-      )}
+      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />}
 
-      <VictoryPointStepper
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-        totalSteps={3}
-      />
+      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={3} />
     </Box>
   );
 };

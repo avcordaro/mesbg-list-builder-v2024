@@ -34,16 +34,14 @@ export const DominationVPs: FunctionComponent<QuestionListProps> = (props) => {
   const [brokenVPs, setBrokenVPs] = useState(victoryPoints[2]);
 
   const updateGameResultState = () => {
-    const playerVPs = [
-      ...objectiveVPs.filter((value) => value > 0),
-      generalVPs[0],
-      brokenVPs[0],
-    ].reduce((a, b) => a + b, 0);
-    const opponentVPs = [
-      ...objectiveVPs.filter((value) => value < 0),
-      generalVPs[1],
-      brokenVPs[1],
-    ].reduce((a, b) => a - b, 0);
+    const playerVPs = [...objectiveVPs.filter((value) => value > 0), generalVPs[0], brokenVPs[0]].reduce(
+      (a, b) => a + b,
+      0,
+    );
+    const opponentVPs = [...objectiveVPs.filter((value) => value < 0), generalVPs[1], brokenVPs[1]].reduce(
+      (a, b) => a - b,
+      0,
+    );
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -61,22 +59,8 @@ export const DominationVPs: FunctionComponent<QuestionListProps> = (props) => {
     <Box sx={{ mt: 2 }}>
       {activeStep === OBJECTIVES && (
         <RadioMatrix
-          rows={[
-            "Objective 1",
-            "Objective 2",
-            "Objective 3",
-            "Objective 4",
-            "Objective 5",
-          ]}
-          columns={[
-            "Fully Mine",
-            "2x Mine",
-            "Mine",
-            "Neutral / Tied",
-            "Theirs",
-            "2x Theirs",
-            "Fully Theirs",
-          ]}
+          rows={["Objective 1", "Objective 2", "Objective 3", "Objective 4", "Objective 5"]}
+          columns={["Fully Mine", "2x Mine", "Mine", "Neutral / Tied", "Theirs", "2x Theirs", "Fully Theirs"]}
           values={[3, 2, 1, 0, -1, -2, -3]}
           selection={objectiveVPs}
           setSelection={setObjectiveVPs}
@@ -98,15 +82,9 @@ export const DominationVPs: FunctionComponent<QuestionListProps> = (props) => {
         </Stack>
       )}
 
-      {activeStep === BROKEN && (
-        <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />
-      )}
+      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />}
 
-      <VictoryPointStepper
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-        totalSteps={3}
-      />
+      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={3} />
     </Box>
   );
 };

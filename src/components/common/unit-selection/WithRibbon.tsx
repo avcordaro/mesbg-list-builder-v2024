@@ -8,9 +8,12 @@ type WithRibbonProps = {
   type?: "regular" | "share-image";
 };
 
-export const WithRibbon: FunctionComponent<
-  PropsWithChildren<WithRibbonProps>
-> = ({ label, hideRibbon = false, type = "regular", children }) => {
+export const WithRibbon: FunctionComponent<PropsWithChildren<WithRibbonProps>> = ({
+  label,
+  hideRibbon = false,
+  type = "regular",
+  children,
+}) => {
   const { mode } = useThemeContext();
   const color = mode === "dark" ? "400" : "800";
 
@@ -39,8 +42,7 @@ export const WithRibbon: FunctionComponent<
             py: 0.1,
             m: -0.2,
             backgroundColor: ({ palette }) => palette.grey[color],
-            color: ({ palette }) =>
-              palette.getContrastText(palette.grey[color]),
+            color: ({ palette }) => palette.getContrastText(palette.grey[color]),
           },
           type === "regular"
             ? {}

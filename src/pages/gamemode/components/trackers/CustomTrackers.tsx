@@ -28,12 +28,7 @@ export const CustomTrackers = () => {
 
   return (
     <>
-      <Stack
-        gap={1}
-        direction={screen.isMobile ? "column" : "row"}
-        justifyContent="space-around"
-        flexWrap="wrap"
-      >
+      <Stack gap={1} direction={screen.isMobile ? "column" : "row"} justifyContent="space-around" flexWrap="wrap">
         {trackers.map((tracker) => (
           <CustomTracker tracker={tracker} key={tracker.id} />
         ))}

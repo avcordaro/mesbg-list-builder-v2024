@@ -14,9 +14,7 @@ export type SquareIconButtonProps = {
   testName?: string;
 };
 
-export const SquareIconButton: FunctionComponent<SquareIconButtonProps> = (
-  props,
-) => {
+export const SquareIconButton: FunctionComponent<SquareIconButtonProps> = (props) => {
   return (
     <IconButton
       onClick={props.onClick}

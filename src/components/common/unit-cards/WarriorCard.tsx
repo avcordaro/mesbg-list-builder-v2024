@@ -53,17 +53,14 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
   const calculator = useCalculator();
   const { checkDependency } = useOptionDependencies(warbandId);
   const screen = useScreenSize();
-  const { warnings, available, selected, overExceededCollection } =
-    useCollectionWarnings(unit);
+  const { warnings, available, selected, overExceededCollection } = useCollectionWarnings(unit);
   const { preferences } = useUserPreferences();
 
   const valid =
     isCustomRoster ||
     followerOf === undefined ||
     followerOf === null ||
-    heroConstraintData[followerOf].valid_warband_units.includes(
-      unit.model_id,
-    ) ||
+    heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id) ||
     isSiegeEquipment(unit);
 
   function updateQuantity(value: number) {
@@ -88,15 +85,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
 
   function getOptionsForUnit(): Option[] {
     return unit.options.filter((option, _, self) => {
-      if (!option.dependencies || option.dependencies.length === 0)
-        return option;
+      if (!option.dependencies || option.dependencies.length === 0) return option;
 
       const optionAvailable = option.dependencies.some(checkDependency);
       if (!optionAvailable && option.quantity > 0) {
         // removing the option from the selected options as it is not available (anymore)
-        updateOptions(
-          self.map((o) => (o.id === option.id ? { ...o, quantity: 0 } : o)),
-        );
+        updateOptions(self.map((o) => (o.id === option.id ? { ...o, quantity: 0 } : o)));
       }
 
       return optionAvailable;
@@ -116,8 +110,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           p: 1.5,
           position: "relative",
           zIndex: 0,
-          backgroundColor: ({ palette }) =>
-            mode === "dark" ? palette.grey["800"] : "",
+          backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["800"] : ""),
         },
         !valid
           ? {
@@ -138,20 +131,12 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
       elevation={2}
     >
       <Stack direction="row" gap={2} alignItems="center">
-        <UnitProfilePicture
-          army={unit.profile_origin}
-          profile={unit.name}
-          size="smaller"
-        />
+        <UnitProfilePicture army={unit.profile_origin} profile={unit.name} size="smaller" />
         <Stack direction="column" justifyContent="center" flexGrow={1}>
           <Typography
             variant="h6"
             fontWeight="bold"
-            color={
-              warnings === "on" && overExceededCollection
-                ? "warning.dark"
-                : "inherit"
-            }
+            color={warnings === "on" && overExceededCollection ? "warning.dark" : "inherit"}
           >
             {unit.quantity ?? 1}x {unit.name}
           </Typography>
@@ -165,17 +150,9 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
             <Collapse in={!collapsed}>
               <Typography
                 sx={{ textAlign: "end" }}
-                color={
-                  overExceededCollection
-                    ? mode === "dark"
-                      ? "error.light"
-                      : "error.dark"
-                    : "inherit"
-                }
+                color={overExceededCollection ? (mode === "dark" ? "error.light" : "error.dark") : "inherit"}
               >
-                {available === 0
-                  ? "Not in collection"
-                  : `Left in collection: ${available - selected}`}
+                {available === 0 ? "Not in collection" : `Left in collection: ${available - selected}`}
               </Typography>
             </Collapse>
           )}
@@ -196,13 +173,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           <Box sx={{ px: 2, py: 1 }}>
             <OptionList
               options={getOptionsForUnit()}
-              variant={
-                isCustomRoster
-                  ? "multiple"
-                  : unit.opt_mandatory
-                    ? "single-mandatory"
-                    : "single"
-              }
+              variant={isCustomRoster ? "multiple" : unit.opt_mandatory ? "single-mandatory" : "single"}
               onSelect={updateOptions}
               warbandNum={warbandNum}
               index={index}
@@ -212,12 +183,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
         )}
       </Collapse>
       <Collapse in={!(collapsed && !preferences.forceShowCardActionButtons)}>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          sx={{ mt: 2, mr: 2 }}
-          gap={8}
-        >
+        <Stack direction="row" justifyContent="space-between" sx={{ mt: 2, mr: 2 }} gap={8}>
           <QuantityButtons
             quantity={unit.quantity}
             updateQuantity={updateQuantity}
@@ -247,8 +213,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           position: "relative",
           zIndex: 0,
           transition: "padding 0.5s",
-          backgroundColor: ({ palette }) =>
-            mode === "dark" ? palette.grey["800"] : "",
+          backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["800"] : ""),
         },
         !valid
           ? {
@@ -278,10 +243,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
           }}
         >
           <Collapse in={!collapsed} unmountOnExit={true}>
-            <UnitProfilePicture
-              army={unit.profile_origin}
-              profile={unit.name}
-            />
+            <UnitProfilePicture army={unit.profile_origin} profile={unit.name} />
           </Collapse>
           <QuantityButtons
             quantity={unit.quantity}
@@ -304,11 +266,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                color={
-                  warnings === "on" && overExceededCollection
-                    ? "warning.dark"
-                    : "inherit"
-                }
+                color={warnings === "on" && overExceededCollection ? "warning.dark" : "inherit"}
               >
                 {unit.quantity ?? 1}x {unit.name}{" "}
                 {collapsed && (
@@ -336,13 +294,7 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
               {!!unit.options.length && (
                 <OptionList
                   options={getOptionsForUnit()}
-                  variant={
-                    isCustomRoster
-                      ? "multiple"
-                      : unit.opt_mandatory
-                        ? "single-mandatory"
-                        : "single"
-                  }
+                  variant={isCustomRoster ? "multiple" : unit.opt_mandatory ? "single-mandatory" : "single"}
                   onSelect={updateOptions}
                   warbandNum={warbandNum}
                   index={index}
@@ -369,23 +321,14 @@ export const WarriorCard: FunctionComponent<WarriorCardProps> = ({
                   gap: 0.5,
                 }}
               >
-                Points: <b>{unit.pointsTotal}</b> (per unit:{" "}
-                {unit.pointsPerUnit})
+                Points: <b>{unit.pointsTotal}</b> (per unit: {unit.pointsPerUnit})
               </Typography>
               {warnings === "on" && (
                 <Typography
                   sx={{ textAlign: "end" }}
-                  color={
-                    overExceededCollection
-                      ? mode === "dark"
-                        ? "error.light"
-                        : "error.dark"
-                      : "inherit"
-                  }
+                  color={overExceededCollection ? (mode === "dark" ? "error.light" : "error.dark") : "inherit"}
                 >
-                  {available === 0
-                    ? "Not in collection"
-                    : `Left in collection: ${available - selected}`}
+                  {available === 0 ? "Not in collection" : `Left in collection: ${available - selected}`}
                 </Typography>
               )}
             </Collapse>

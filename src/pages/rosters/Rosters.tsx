@@ -18,8 +18,7 @@ export const Rosters: FunctionComponent = () => {
 
   const { rosters, groups } = useRosterBuildingState();
   const { onDragStart, onDragEnd, dragging } = useRostersDragAndDrop();
-  const { toggleDeleting, deleting, selectRoster, selectedRosters } =
-    useBulkDelete();
+  const { toggleDeleting, deleting, selectRoster, selectedRosters } = useBulkDelete();
 
   const activeGroup = groups.find((group) => group.slug === groupId);
 
@@ -39,11 +38,7 @@ export const Rosters: FunctionComponent = () => {
           />
           <Stack direction="row" gap={4} sx={{ m: 1 }} flexWrap="wrap" flex={1}>
             <RemoveFromGroupDroppable visible={!!activeGroup && !filter} />
-            <RosterGroupCardList
-              groups={groups}
-              filter={filter}
-              dragged={dragging}
-            />
+            <RosterGroupCardList groups={groups} filter={filter} dragged={dragging} />
             <RosterCardList
               rosters={rosters}
               filter={filter}

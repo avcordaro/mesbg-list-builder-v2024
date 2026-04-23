@@ -1,12 +1,4 @@
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  FormControl,
-  FormHelperText,
-  Input,
-  InputLabel,
-} from "@mui/material";
+import { Button, DialogActions, DialogContent, FormControl, FormHelperText, Input, InputLabel } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import { download } from "../../../hooks/export/useDownload.ts";
@@ -26,11 +18,7 @@ export const ExportCollection = () => {
     const validFilename = filename.trim().length > 0;
     setFilenameValid(validFilename);
     if (validFilename) {
-      download(
-        JSON.stringify(inventory),
-        filename + ".json",
-        "application/json",
-      );
+      download(JSON.stringify(inventory), filename + ".json", "application/json");
       closeModal();
     }
   };
@@ -59,11 +47,7 @@ export const ExportCollection = () => {
               }}
               endAdornment=".json"
             />
-            {!filenameValid && (
-              <FormHelperText id="component-error-text">
-                Filename cannot be empty
-              </FormHelperText>
-            )}
+            {!filenameValid && <FormHelperText id="component-error-text">Filename cannot be empty</FormHelperText>}
           </FormControl>
         </Stack>
       </DialogContent>

@@ -21,9 +21,7 @@ const ListBuilderAlert = ({
 
   const { variant, content, options } = alertMap.get(type);
 
-  const contentWithProps = isValidElement(content)
-    ? cloneElement(content, { context } as unknown)
-    : content;
+  const contentWithProps = isValidElement(content) ? cloneElement(content, { context } as unknown) : content;
 
   // Auto hide of alert, if configured
   useEffect(() => {
@@ -57,19 +55,10 @@ export const Alerts = () => {
 
   return (
     <Portal>
-      <Snackbar
-        open={true}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        TransitionComponent={Slide}
-      >
+      <Snackbar open={true} anchorOrigin={{ vertical: "top", horizontal: "center" }} TransitionComponent={Slide}>
         <Stack gap={1}>
           {activeAlerts.map((alert) => (
-            <ListBuilderAlert
-              id={alert.id}
-              key={alert.id}
-              type={alert.type}
-              context={alert.context}
-            />
+            <ListBuilderAlert id={alert.id} key={alert.id} type={alert.type} context={alert.context} />
           ))}
         </Stack>
       </Snackbar>

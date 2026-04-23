@@ -19,12 +19,7 @@ export const GameSwitcher = ({ games, activeGame }: GameSwitcherProps) => {
   const navigate = useNavigate();
   const screen = useScreenSize();
   const rosters = useRosterBuildingState((state) =>
-    Object.fromEntries(
-      state.rosters.map(({ id, name, armyList }) => [
-        id,
-        `${name} (${armyList})`,
-      ]),
-    ),
+    Object.fromEntries(state.rosters.map(({ id, name, armyList }) => [id, `${name} (${armyList})`])),
   );
   const [otherGames, setOtherGames] = useState(games);
   const [selectedGame, setSelectedGame] = useState("");

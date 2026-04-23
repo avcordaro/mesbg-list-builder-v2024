@@ -5,9 +5,7 @@ import { GuardedRoute } from "../../routing/GuardedRoute.tsx";
 import { InitialSyncRequest } from "./InitialSyncRequest.tsx";
 import { SyncManager } from "./SyncManager.tsx";
 
-export const WithCloudSync: FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
+export const WithCloudSync: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const auth = useAuth();
   const location = useLocation();
 

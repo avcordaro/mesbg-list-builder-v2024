@@ -13,27 +13,21 @@ export const Contact = () => (
     title="Connect with us"
     additionalButton={
       <a href={DISCORD_LINK} target="_blank" rel="noreferrer">
-        <img
-          src={discord}
-          alt="join the list builder on discord"
-          style={{ height: "45px", float: "right" }}
-        />
+        <img src={discord} alt="join the list builder on discord" style={{ height: "45px", float: "right" }} />
       </a>
     }
   >
     <Paragraph>
-      We welcome feedback, questions, and contributions from the community. You
-      can reach us through the following channels:
+      We welcome feedback, questions, and contributions from the community. You can reach us through the following
+      channels:
     </Paragraph>
 
     <Stack component="ul" direction="column" spacing={1}>
       <Box component="li">
-        <strong>Discord</strong>: Join our community to chat in real time, ask
-        questions, or share ideas.
+        <strong>Discord</strong>: Join our community to chat in real time, ask questions, or share ideas.
       </Box>
       <Box component="li">
-        <strong>GitHub</strong>: Report issues, contribute code, or follow
-        ongoing development.
+        <strong>GitHub</strong>: Report issues, contribute code, or follow ongoing development.
       </Box>
       <Box component="li">
         <strong>Email</strong>: Prefer direct contact? Reach us at{" "}
@@ -43,8 +37,7 @@ export const Contact = () => (
         .
       </Box>
       <Box component="li">
-        <strong>Patreon</strong>: Support our work and gain access to exclusive
-        updates and insights.
+        <strong>Patreon</strong>: Support our work and gain access to exclusive updates and insights.
       </Box>
     </Stack>
 

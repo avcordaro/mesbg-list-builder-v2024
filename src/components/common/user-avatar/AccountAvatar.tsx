@@ -26,9 +26,7 @@ const SignInLink = () => {
           bgcolor: ({ palette }) => palette.primary.main,
           cursor: "pointer",
         }}
-        onClick={() =>
-          navigate("/sign-in", { state: { allowNavigation: true } })
-        }
+        onClick={() => navigate("/sign-in", { state: { allowNavigation: true } })}
       >
         <Person sx={{ color: ({ palette }) => palette.primary.contrastText }} />
       </Avatar>

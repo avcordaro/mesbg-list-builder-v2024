@@ -10,9 +10,7 @@ import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
 
 function findSubgroups(slug: string, groups: RosterGroup[]): RosterGroup[] {
-  return groups
-    .filter((g) => g.parent === slug)
-    .flatMap((child) => [child, ...findSubgroups(child.slug, groups)]);
+  return groups.filter((g) => g.parent === slug).flatMap((child) => [child, ...findSubgroups(child.slug, groups)]);
 }
 
 export const ConfirmDeleteGroupModal = () => {
@@ -67,10 +65,7 @@ export const ConfirmDeleteGroupModal = () => {
           <CustomAlert severity="error" title="">
             <Typography>
               Deleting this roster group will also delete the{" "}
-              {affectedRosters.length === 1
-                ? "roster"
-                : `${affectedRosters.length} rosters`}{" "}
-              inside of it.
+              {affectedRosters.length === 1 ? "roster" : `${affectedRosters.length} rosters`} inside of it.
             </Typography>
           </CustomAlert>
         )}
@@ -88,11 +83,7 @@ export const ConfirmDeleteGroupModal = () => {
         />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
-        <Button
-          variant="text"
-          onClick={closeModal}
-          data-test-id="dialog--cancel-button"
-        >
+        <Button variant="text" onClick={closeModal} data-test-id="dialog--cancel-button">
           Cancel
         </Button>
         <Button

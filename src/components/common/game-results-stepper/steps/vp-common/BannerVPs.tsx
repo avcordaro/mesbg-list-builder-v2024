@@ -6,10 +6,7 @@ type BannerVPsProps = {
   setValue: (value: number[]) => void;
 };
 
-export const BannerVPs: FunctionComponent<BannerVPsProps> = ({
-  value,
-  setValue,
-}) => {
+export const BannerVPs: FunctionComponent<BannerVPsProps> = ({ value, setValue }) => {
   return (
     <Stack gap={2}>
       <TextField

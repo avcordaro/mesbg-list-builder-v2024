@@ -5,10 +5,7 @@ import { FunctionComponent } from "react";
 import { AdditionalTagsInput } from "../../../atoms/tags-input/TagsInput.tsx";
 import { StepProps } from "./StepProps.ts";
 
-export const AdditionalTagsStep: FunctionComponent<StepProps> = ({
-  formValues,
-  updateFormValues,
-}) => {
+export const AdditionalTagsStep: FunctionComponent<StepProps> = ({ formValues, updateFormValues }) => {
   return (
     <>
       <StepLabel
@@ -21,15 +18,9 @@ export const AdditionalTagsStep: FunctionComponent<StepProps> = ({
         General - Additional Tags
       </StepLabel>
       <StepContent>
-        <Typography>
-          Adding extra tags to your match allows you to filter them in the match
-          history page.
-        </Typography>
+        <Typography>Adding extra tags to your match allows you to filter them in the match history page.</Typography>
         <Box sx={{ my: 2 }}>
-          <AdditionalTagsInput
-            values={formValues.tags}
-            onChange={(values) => updateFormValues({ tags: values })}
-          />
+          <AdditionalTagsInput values={formValues.tags} onChange={(values) => updateFormValues({ tags: values })} />
         </Box>
       </StepContent>
     </>

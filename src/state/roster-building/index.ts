@@ -30,8 +30,7 @@ export const useRosterBuildingState = create<
           partialize: (state) => ({
             rosters: state.rosters,
           }),
-          equality: (pastState, currentState) =>
-            deepEqual(pastState, currentState),
+          equality: (pastState, currentState) => deepEqual(pastState, currentState),
           limit: 20,
         },
       ),
@@ -49,6 +48,5 @@ export const useRosterBuildingState = create<
   ),
 );
 
-export const useTemporalRosterBuildingState = <T>(
-  selector: (state: TemporalState<RosterBuildingState>) => T,
-) => useStore(useRosterBuildingState.temporal, selector);
+export const useTemporalRosterBuildingState = <T>(selector: (state: TemporalState<RosterBuildingState>) => T) =>
+  useStore(useRosterBuildingState.temporal, selector);

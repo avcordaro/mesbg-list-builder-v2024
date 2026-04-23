@@ -13,11 +13,7 @@ export const NavigationMenu = ({ open }: NavigationMenuProps) => {
   return (
     <List component="nav">
       {menuItems.map((item, index) =>
-        isDivider(item) ? (
-          <Divider key={index} />
-        ) : (
-          <NavItemLink key={index} item={item} open={open} />
-        ),
+        isDivider(item) ? <Divider key={index} /> : <NavItemLink key={index} item={item} open={open} />,
       )}
     </List>
   );

@@ -24,18 +24,8 @@ function duplicates(item: SpecialRule, index: number, self: SpecialRule[]) {
 }
 
 function mapSpecialRule(sr: string) {
-  if (
-    [
-      "Poisoned Sword",
-      "Poisoned Spear",
-      "Poisoned War Spear",
-      "Poisoned Blowpipe",
-      "Poisoned Fangs",
-    ].includes(sr)
-  ) {
-    const rule = keywords.find(
-      (keyword) => keyword.name === "Poisoned Weapons",
-    );
+  if (["Poisoned Sword", "Poisoned Spear", "Poisoned War Spear", "Poisoned Blowpipe", "Poisoned Fangs"].includes(sr)) {
+    const rule = keywords.find((keyword) => keyword.name === "Poisoned Weapons");
     return {
       name: sr,
       type: rule?.active_passive,
@@ -51,9 +41,7 @@ function mapSpecialRule(sr: string) {
     };
   }
 
-  const rule = keywords.find(
-    (keyword) => keyword.name === sr.replace(/\(.*?\)/g, "(X)"),
-  );
+  const rule = keywords.find((keyword) => keyword.name === sr.replace(/\(.*?\)/g, "(X)"));
   return {
     name: rule?.name || sr,
     type: rule?.active_passive,
@@ -61,11 +49,7 @@ function mapSpecialRule(sr: string) {
   };
 }
 
-function mapAopRule(rule: {
-  name: string;
-  type: "Active" | "Passive";
-  description: string;
-}) {
+function mapAopRule(rule: { name: string; type: "Active" | "Passive"; description: string }) {
   return {
     ...rule,
     type: rule.type || "Passive",
@@ -108,8 +92,7 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
                   if (armyList === "The Three Trolls") {
                     return (
                       rule.troll_purchase !== true ||
-                      (metadata.tttSpecialUpgrades &&
-                        metadata.tttSpecialUpgrades.includes(rule.title))
+                      (metadata.tttSpecialUpgrades && metadata.tttSpecialUpgrades.includes(rule.title))
                     );
                   }
                   return true;
@@ -121,26 +104,19 @@ export const SpecialRuleList = ({ profiles }: SpecialRuleListProps) => {
                     sx={{ pageBreakInside: "avoid" }}
                   >
                     {isMovieQuote(rule.title) ? (
-                      <Typography
-                        component={rule.troll_purchase === true ? "li" : "p"}
-                      >
+                      <Typography component={rule.troll_purchase === true ? "li" : "p"}>
                         <b>
                           <i>{rule.title}</i>
                         </b>
                       </Typography>
                     ) : (
-                      <Typography
-                        component={rule.troll_purchase === true ? "li" : "p"}
-                      >
+                      <Typography component={rule.troll_purchase === true ? "li" : "p"}>
                         <b>{rule.title}</b>
                       </Typography>
                     )}
                     <Stack gap={0.5}>
                       {rule.description.split("\n").map((paragraph, index) => (
-                        <Typography
-                          key={index}
-                          dangerouslySetInnerHTML={{ __html: paragraph }}
-                        />
+                        <Typography key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                       ))}
                     </Stack>
                   </Box>

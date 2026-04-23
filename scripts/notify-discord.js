@@ -82,8 +82,7 @@ function buildPayload(version) {
       {
         title: `We have just released version ${version}!`,
         url: "https://mesbg-list-builder.com/changelog",
-        description:
-          "Below are some of the most important changes released in this version.",
+        description: "Below are some of the most important changes released in this version.",
         fields: changes,
         footer: {
           text: "For the full changelog, please visit https://mesbg-list-builder.com/changelog.",
@@ -94,13 +93,10 @@ function buildPayload(version) {
 }
 
 function validateIfShouldRun(version) {
-  const semverRegex =
-    /^v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[\w.-]+)?(?:\+[\w.-]+)?$/;
+  const semverRegex = /^v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[\w.-]+)?(?:\+[\w.-]+)?$/;
 
   if (!semverRegex.test(version)) {
-    console.log(
-      "The version did not match a semver version. Was this run on a tag or manually?",
-    );
+    console.log("The version did not match a semver version. Was this run on a tag or manually?");
     process.exit();
   }
 

@@ -12,15 +12,10 @@ export const useMwfMutations = () => {
     return handledModels.includes(unit.model_id);
   }
 
-  function handleSpecialMwfForUnit(
-    unit: SelectedUnit,
-    options: Option[],
-  ): SelectedUnit["MWFW"] {
+  function handleSpecialMwfForUnit(unit: SelectedUnit, options: Option[]): SelectedUnit["MWFW"] {
     if (!hasSpecialMwfRules(unit)) return unit.MWFW;
 
-    const handler = handlers.find((handler) =>
-      handler.isMatchingUnit(unit.model_id),
-    );
+    const handler = handlers.find((handler) => handler.isMatchingUnit(unit.model_id));
     if (!handler) {
       console.error(
         "No handler found to handle MWFW for unit which is listed in the hasSpecialMwfRules list!",

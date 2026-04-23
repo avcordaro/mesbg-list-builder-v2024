@@ -1,13 +1,6 @@
 import { Share } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  FormControlLabel,
-  FormGroup,
-} from "@mui/material";
+import { Button, DialogActions, DialogContent, DialogTitle, FormControlLabel, FormGroup } from "@mui/material";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
@@ -17,18 +10,9 @@ import { FaClipboard, FaImage } from "react-icons/fa6";
 import { useAppState } from "../../../state/app";
 import { useUserPreferences } from "../../../state/preference";
 import { CustomSwitch as Switch } from "../../atoms/switch/CustomSwitch.tsx";
-import {
-  ImageView,
-  ImageViewViewHandlers,
-} from "../../common/roster-summary/ImageView.tsx";
-import {
-  RosterTableView,
-  RosterTableViewHandlers,
-} from "../../common/roster-summary/TableView.tsx";
-import {
-  RosterTextView,
-  RosterTextViewHandlers,
-} from "../../common/roster-summary/TextView.tsx";
+import { ImageView, ImageViewViewHandlers } from "../../common/roster-summary/ImageView.tsx";
+import { RosterTableView, RosterTableViewHandlers } from "../../common/roster-summary/TableView.tsx";
+import { RosterTextView, RosterTextViewHandlers } from "../../common/roster-summary/TextView.tsx";
 
 export const RosterSummaryModal = () => {
   const {
@@ -43,9 +27,7 @@ export const RosterSummaryModal = () => {
   const [plainTextView, setPlainTextView] = useState(false);
   const [showArmyBonus, setShowArmyBonus] = useState(false);
   const [showUnitTotals, setShowUnitTotals] = useState(false);
-  const [includeRosterName, setIncludeRosterName] = useState(
-    withArmyName && roster.name !== roster.armyList,
-  );
+  const [includeRosterName, setIncludeRosterName] = useState(withArmyName && roster.name !== roster.armyList);
 
   const handleTotalsToggle = () => setShowUnitTotals(!showUnitTotals);
   const handlePlainTextToggle = () => setPlainTextView(!plainTextView);
@@ -102,11 +84,7 @@ export const RosterSummaryModal = () => {
             )}
           </Box>
 
-          <IconButton
-            onClick={() => closeModal()}
-            sx={{ ml: "auto" }}
-            data-test-id="dialog--close-button"
-          >
+          <IconButton onClick={() => closeModal()} sx={{ ml: "auto" }} data-test-id="dialog--close-button">
             <CloseIcon />
           </IconButton>
         </Box>

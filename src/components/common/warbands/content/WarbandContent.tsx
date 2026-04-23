@@ -40,9 +40,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
   const { openSidebar, setCurrentModal } = useAppState();
   const { updateBuilderSidebar } = useRosterBuildingState();
   const isWarbandWithLeader = !!useRosterBuildingState(({ rosters }) =>
-    rosters.find(
-      ({ id, metadata: { leader } }) => id === armyId && leader === warbandId,
-    ),
+    rosters.find(({ id, metadata: { leader } }) => id === armyId && leader === warbandId),
   );
   const { getAdjustedMetaData } = useRosterInformation();
   const { siegeRoster } = getAdjustedMetaData();
@@ -102,11 +100,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
         />
       )}
 
-      <Droppable
-        droppableId={warbandId}
-        type="unit"
-        isDropDisabled={!hero || !isHeroWhoLeads(hero)}
-      >
+      <Droppable droppableId={warbandId} type="unit" isDropDisabled={!hero || !isHeroWhoLeads(hero)}>
         {(droppable, droppableSnapshot) => (
           <Stack
             ref={droppable.innerRef}
@@ -126,12 +120,7 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
             }
           >
             {units.map((unit, index) => (
-              <Draggable
-                key={unit.id}
-                draggableId={unit.id}
-                index={index}
-                isDragDisabled={lock}
-              >
+              <Draggable key={unit.id} draggableId={unit.id} index={index} isDragDisabled={lock}>
                 {(draggable, draggableSnapshot) => (
                   <Box
                     ref={draggable.innerRef}
@@ -139,24 +128,17 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                     {...draggable.dragHandleProps}
                     data-scroll-id={unit.id}
                   >
-                    <Box
-                      sx={[
-                        { transition: "padding 0.3s ease" },
-                        draggableSnapshot.isDragging ? { p: 3 } : {},
-                      ]}
-                    >
+                    <Box sx={[{ transition: "padding 0.3s ease" }, draggableSnapshot.isDragging ? { p: 3 } : {}]}>
                       <Box
                         sx={
                           draggableSnapshot.isDragging
                             ? {
                                 transform: "rotate(1.5deg)",
                                 boxShadow: "1rem 1rem 1rem #00000099",
-                                transition:
-                                  "transform 0.3s ease, boxShadow 0.3s ease",
+                                transition: "transform 0.3s ease, boxShadow 0.3s ease",
                               }
                             : {
-                                transition:
-                                  "transform 0.3s ease, boxShadow 0.3s ease",
+                                transition: "transform 0.3s ease, boxShadow 0.3s ease",
                               }
                         }
                       >
@@ -192,12 +174,8 @@ export const WarbandContent: FunctionComponent<WarbandContentProps> = ({
                                 warbandNum={warbandNum}
                                 index={index + 1} // +1 offset for the warband captain.
                                 openProfileCard={() => openProfileCard(unit)}
-                                updateUnit={(updatedUnit) =>
-                                  mutations.updateUnit(updatedUnit)
-                                }
-                                duplicate={() =>
-                                  mutations.duplicateUnit(unit.id)
-                                }
+                                updateUnit={(updatedUnit) => mutations.updateUnit(updatedUnit)}
+                                duplicate={() => mutations.duplicateUnit(unit.id)}
                                 remove={() => mutations.removeUnit(unit.id)}
                                 reselect={() => openUnitPicker(unit.id)}
                                 collapsed={collapsed}

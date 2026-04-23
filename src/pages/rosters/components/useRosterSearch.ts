@@ -9,10 +9,7 @@ type Condition = {
 
 export const useRosterSearch = () => {
   const armyData = Object.fromEntries(
-    Object.entries(mesbgData).map(([, value]) => [
-      value.army_list,
-      value.army_type?.replace("(Legacy)", ""),
-    ]),
+    Object.entries(mesbgData).map(([, value]) => [value.army_list, value.army_type?.replace("(Legacy)", "")]),
   );
 
   function getFieldValue(obj: object, path: string): string | number | boolean {
@@ -74,9 +71,7 @@ export const useRosterSearch = () => {
       }
     }
 
-    return rosters.filter((roster) =>
-      conditions.every((cond) => matchesCondition(roster, cond)),
-    );
+    return rosters.filter((roster) => conditions.every((cond) => matchesCondition(roster, cond)));
   }
 
   function buildResolvers() {
@@ -91,12 +86,8 @@ export const useRosterSearch = () => {
       might: (roster: Roster) => roster.metadata.might,
       will: (roster: Roster) => roster.metadata.will,
       fate: (roster: Roster) => roster.metadata.fate,
-      tag: (roster: Roster) =>
-        (roster.metadata.tags ?? []).map((tag) => tag.toLocaleLowerCase()),
-      "": (roster: Roster) =>
-        roster.name.toLocaleLowerCase() +
-        "::" +
-        roster.armyList.toLocaleLowerCase(),
+      tag: (roster: Roster) => (roster.metadata.tags ?? []).map((tag) => tag.toLocaleLowerCase()),
+      "": (roster: Roster) => roster.name.toLocaleLowerCase() + "::" + roster.armyList.toLocaleLowerCase(),
       default: (roster: Roster, field: string) => getFieldValue(roster, field),
     };
   }

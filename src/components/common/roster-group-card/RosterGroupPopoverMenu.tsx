@@ -11,13 +11,7 @@ import { useThemeContext } from "../../../theme/ThemeContext.tsx";
 import { SquareIconButton } from "../../atoms/icon-button/SquareIconButton.tsx";
 import { ModalTypes } from "../../modal/modals.tsx";
 
-export const GroupOptionsPopoverMenu = ({
-  groupId,
-  redirect,
-}: {
-  groupId: string;
-  redirect?: boolean;
-}) => {
+export const GroupOptionsPopoverMenu = ({ groupId, redirect }: { groupId: string; redirect?: boolean }) => {
   const { mode } = useThemeContext();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { setCurrentModal } = useAppState();

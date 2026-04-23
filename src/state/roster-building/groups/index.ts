@@ -25,10 +25,7 @@ export const initialBuilderState = {
   groups: [],
 };
 
-export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
-  set,
-  get,
-) => ({
+export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (set, get) => ({
   ...initialBuilderState,
 
   createGroup: (group) => {
@@ -36,9 +33,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
     set(
       ({ groups }) => ({
         groups: [...groups, { ...group, id }],
-        rosters: get().rosters.map((roster) =>
-          group.rosters.includes(roster.id) ? { ...roster, group: id } : roster,
-        ),
+        rosters: get().rosters.map((roster) => (group.rosters.includes(roster.id) ? { ...roster, group: id } : roster)),
       }),
       undefined,
       "CREATE_ROSTER_GROUP",
@@ -49,9 +44,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
   updateGroup: (id, update) =>
     set(
       ({ groups }) => ({
-        groups: groups.map((group) =>
-          group.id === id ? { ...group, ...update } : group,
-        ),
+        groups: groups.map((group) => (group.id === id ? { ...group, ...update } : group)),
         rosters: get().rosters.map((roster) =>
           update.rosters?.includes(roster.id)
             ? {
@@ -72,9 +65,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         return {
           groups: groups.filter((group) => group.id !== id),
           rosters: get().rosters.map((roster) =>
-            group.rosters.includes(roster.id)
-              ? { ...roster, group: null }
-              : roster,
+            group.rosters.includes(roster.id) ? { ...roster, group: null } : roster,
           ),
         };
       },
@@ -88,9 +79,7 @@ export const groupSlice: Slice<RosterBuildingState, RosterGroupState> = (
         const group = groups.find((group) => group.id === id);
         return {
           groups: groups.filter((group) => group.id !== id),
-          rosters: get().rosters.filter(
-            (roster) => !group.rosters.includes(roster.id),
-          ),
+          rosters: get().rosters.filter((roster) => !group.rosters.includes(roster.id)),
         };
       },
       undefined,

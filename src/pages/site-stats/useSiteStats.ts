@@ -46,9 +46,7 @@ export function useSharedStats() {
 }
 
 async function fetchSharedStats(): Promise<SharedStats> {
-  const res = await fetch(
-    "https://api.mesbg-list-builder.com/v2024/shared/stats",
-  );
+  const res = await fetch("https://api.mesbg-list-builder.com/v2024/shared/stats");
 
   if (!res.ok) {
     throw new Error("Failed to fetch stats");

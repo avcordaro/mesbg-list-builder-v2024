@@ -9,16 +9,9 @@ interface ScenariosPlayedProps {
 export const ScenariosPlayedBarChart = ({ data }: ScenariosPlayedProps) => {
   const { palette } = useTheme();
 
-  const barColors = [
-    palette.success.light,
-    palette.warning.light,
-    palette.error.light,
-  ];
+  const barColors = [palette.success.light, palette.warning.light, palette.error.light];
 
-  const scenariosPlayed: Record<
-    string,
-    { won: number; lost: number; draw: number }
-  > = data
+  const scenariosPlayed: Record<string, { won: number; lost: number; draw: number }> = data
     .filter((game) => !!game.scenarioPlayed)
     .flatMap((game) => ({
       scenario: game.scenarioPlayed,

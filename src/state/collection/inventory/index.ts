@@ -33,11 +33,7 @@ type Inventory = Record<string, Record<string, ModelInventory>>;
 export type InventoryState = {
   inventory: Inventory;
 
-  upsertInventory: (
-    group: string,
-    name: string,
-    inventory: ModelInventory,
-  ) => void;
+  upsertInventory: (group: string, name: string, inventory: ModelInventory) => void;
 
   deleteEntry: (group: string, name: string) => void;
 
@@ -48,9 +44,7 @@ const initialState = {
   inventory: {},
 };
 
-export const inventorySlice: Slice<CollectionState, InventoryState> = (
-  set,
-) => ({
+export const inventorySlice: Slice<CollectionState, InventoryState> = (set) => ({
   ...initialState,
 
   upsertInventory: (group, name, modelInventoryUpdate) =>

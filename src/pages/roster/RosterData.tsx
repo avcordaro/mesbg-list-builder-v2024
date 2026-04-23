@@ -2,10 +2,7 @@ import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useEffect, useRef, useState } from "react";
-import {
-  drawerWidth,
-  RosterInfoDrawer,
-} from "../../components/common/roster-info/RosterInfoDrawer.tsx";
+import { drawerWidth, RosterInfoDrawer } from "../../components/common/roster-info/RosterInfoDrawer.tsx";
 import {
   MobileRosterInfoToolbar,
   ROSTER_INFO_BAR_HEIGHT,
@@ -32,13 +29,9 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
   const warnings = useRosterWarnings();
   const screen = useScreenSize();
   const { sync } = useRosterSync();
-  const displayMobileToolbar = useUserPreferences(
-    ({ preferences }) => preferences.mobileRosterToolbar,
-  );
+  const displayMobileToolbar = useUserPreferences(({ preferences }) => preferences.mobileRosterToolbar);
   const [navDrawerOpen, setNavDrawerOpen] = useState(false);
-  const toolbarsActive = [displayMobileToolbar, warnings.length > 0].filter(
-    (value) => value === true,
-  ).length;
+  const toolbarsActive = [displayMobileToolbar, warnings.length > 0].filter((value) => value === true).length;
 
   useEffect(() => {
     function openMenuDrawer(event: OpenNavigationDrawerEvent) {
@@ -46,18 +39,13 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
     }
 
     window.addEventListener("mlb-event--open-nav-bar", openMenuDrawer);
-    return () =>
-      window.removeEventListener("mlb-event--open-nav-bar", openMenuDrawer);
+    return () => window.removeEventListener("mlb-event--open-nav-bar", openMenuDrawer);
   }, []);
 
   useEffect(() => {
     if (!roster) return;
 
-    if (
-      prevRoster.current !== undefined &&
-      roster !== prevRoster.current &&
-      !firstRenderRef.current
-    ) {
+    if (prevRoster.current !== undefined && roster !== prevRoster.current && !firstRenderRef.current) {
       sync(roster);
     }
 
@@ -92,9 +80,7 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
         <LockContextProvider>
           <Box
             sx={{
-              width: screen.isDesktop
-                ? `calc(100% - ${drawerWidth}ch)`
-                : "100%",
+              width: screen.isDesktop ? `calc(100% - ${drawerWidth}ch)` : "100%",
             }}
           >
             <Stack direction="column" sx={{ mb: 2 }}>

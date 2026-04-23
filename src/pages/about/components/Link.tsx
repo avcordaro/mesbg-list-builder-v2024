@@ -12,10 +12,7 @@ export const Link = ({ to, children }: PropsWithChildren<{ to: string }>) => {
       target="_blank"
       rel="noreferrer"
       style={{
-        color:
-          themeContext.mode === "dark"
-            ? theme.palette.secondary.light
-            : theme.palette.secondary.dark,
+        color: themeContext.mode === "dark" ? theme.palette.secondary.light : theme.palette.secondary.dark,
       }}
     >
       {children}

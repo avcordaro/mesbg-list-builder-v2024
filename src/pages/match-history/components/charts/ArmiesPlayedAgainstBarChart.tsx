@@ -9,16 +9,9 @@ interface ArmiesPlayedProps {
 export const ArmiesPlayedAgainstBarChart = ({ data }: ArmiesPlayedProps) => {
   const { palette } = useTheme();
 
-  const barColors = [
-    palette.success.light,
-    palette.warning.light,
-    palette.error.light,
-  ];
+  const barColors = [palette.success.light, palette.warning.light, palette.error.light];
 
-  const armiesPlayed: Record<
-    string,
-    { won: number; lost: number; draw: number }
-  > = data
+  const armiesPlayed: Record<string, { won: number; lost: number; draw: number }> = data
     .filter((game) => !!game.opponentArmies)
     .flatMap((game) => ({
       armies: game.opponentArmies.split(",").map((a) => a.trim()),

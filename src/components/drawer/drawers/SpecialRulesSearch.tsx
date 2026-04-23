@@ -7,10 +7,5 @@ export const SpecialRulesSearch = () => {
   const usedSpecialRules = useUsedSpecialRules();
   const usedMagicalPowers = useUsedMagicalPowers();
 
-  return (
-    <KeywordSearch
-      keywords={keywords}
-      usedKeywords={[...usedSpecialRules, ...usedMagicalPowers]}
-    />
-  );
+  return <KeywordSearch keywords={keywords} usedKeywords={[...usedSpecialRules, ...usedMagicalPowers]} />;
 };

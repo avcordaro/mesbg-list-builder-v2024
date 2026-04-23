@@ -1,11 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
@@ -43,9 +36,7 @@ const SpecialRules = ({ profile }: { profile: Profile }) => {
     ...profile.active_or_passive_rules,
     ...profile.special_rules.map((rule) => ({
       ...keywords.find((kw) =>
-        rule.endsWith("bane")
-          ? kw.name === "Bane Weapons"
-          : kw.name === rule.replace(/\(.*?\)/g, "(X)"),
+        rule.endsWith("bane") ? kw.name === "Bane Weapons" : kw.name === rule.replace(/\(.*?\)/g, "(X)"),
       ),
       name: rule,
     })),
@@ -86,10 +77,7 @@ const MagicalPowers = ({ profile }: { profile: Profile }) => {
           <Typography sx={{ mt: 0.5 }}>
             <b>Magical powers:</b>
           </Typography>
-          <TableContainer
-            component="div"
-            sx={{ width: "42ch", borderBottom: "none" }}
-          >
+          <TableContainer component="div" sx={{ width: "42ch", borderBottom: "none" }}>
             <Table size="small">
               <TableHead>
                 <TableRow>
@@ -98,9 +86,7 @@ const MagicalPowers = ({ profile }: { profile: Profile }) => {
                   <TableCell />
                 </TableRow>
               </TableHead>
-              <TableBody
-                sx={{ "& > *:last-child > *": { borderBottom: "none" } }}
-              >
+              <TableBody sx={{ "& > *:last-child > *": { borderBottom: "none" } }}>
                 {profile.magic_powers.map((power, index) => (
                   <TableRow key={index}>
                     <TableCell>{power.name}</TableCell>
@@ -127,9 +113,7 @@ const HeroicActions = ({ profile }: { profile: Profile }) => {
   }
 
   if (includePdfHeroicActionDescriptions) {
-    const heroicActions = profile.heroic_actions.map((action) =>
-      keywords.find((kw) => kw.name === action),
-    );
+    const heroicActions = profile.heroic_actions.map((action) => keywords.find((kw) => kw.name === action));
 
     return (
       <>
@@ -160,11 +144,7 @@ const HeroicActions = ({ profile }: { profile: Profile }) => {
   );
 };
 
-const AdditionalProfiles = ({
-  additionalProfiles,
-}: {
-  additionalProfiles: Profile[];
-}) => {
+const AdditionalProfiles = ({ additionalProfiles }: { additionalProfiles: Profile[] }) => {
   return (
     <Box sx={{ pl: 2, mt: 2 }}>
       {additionalProfiles.map((profile, index) => (
@@ -196,9 +176,7 @@ const ListItem = ({ profile }: { profile: Profile }) => {
         <HeroicActions profile={profile} />
         <SpecialRules profile={profile} />
         <MagicalPowers profile={profile} />
-        <AdditionalProfiles
-          additionalProfiles={profile?.additional_stats || []}
-        />
+        <AdditionalProfiles additionalProfiles={profile?.additional_stats || []} />
       </Box>
     </>
   );

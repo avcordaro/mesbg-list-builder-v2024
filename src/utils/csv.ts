@@ -1,6 +1,4 @@
-export function objectToCSV<T extends Record<string, unknown>>(
-  data: T[],
-): string {
+export function objectToCSV<T extends Record<string, unknown>>(data: T[]): string {
   if (!Array.isArray(data) || data.length === 0) {
     return "";
   }

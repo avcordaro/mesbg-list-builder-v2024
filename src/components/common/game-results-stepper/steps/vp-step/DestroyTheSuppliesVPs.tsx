@@ -37,9 +37,7 @@ const BANNERS = 3;
  * - You score 1 Victory Point if you have at least one banner remaining at the end of the game.
  * If you have more banners remaining than your opponent, then you instead score 2 Victory Points
  */
-export const DestroyTheSuppliesVPs: FunctionComponent<QuestionListProps> = (
-  props,
-) => {
+export const DestroyTheSuppliesVPs: FunctionComponent<QuestionListProps> = (props) => {
   const { victoryPoints, setVictoryPoints } = useGameModeState();
   const [activeStep, setActiveStep] = useState(0);
 
@@ -79,18 +77,8 @@ export const DestroyTheSuppliesVPs: FunctionComponent<QuestionListProps> = (
   const updateGameResultState = () => {
     const bannerVPs = getBannerVPs(bannersRemaining[0], bannersRemaining[1]);
     const oVPs = getObjectiveVPs(objectiveVPs);
-    const playerVPs = [
-      oVPs[0],
-      bannerVPs[0],
-      generalVPs[0],
-      brokenVPs[0],
-    ].reduce((a, b) => a + b, 0);
-    const opponentVPs = [
-      oVPs[1],
-      bannerVPs[1],
-      generalVPs[1],
-      brokenVPs[1],
-    ].reduce((a, b) => a - b, 0);
+    const playerVPs = [oVPs[0], bannerVPs[0], generalVPs[0], brokenVPs[0]].reduce((a, b) => a + b, 0);
+    const opponentVPs = [oVPs[1], bannerVPs[1], generalVPs[1], brokenVPs[1]].reduce((a, b) => a - b, 0);
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -129,8 +117,7 @@ export const DestroyTheSuppliesVPs: FunctionComponent<QuestionListProps> = (
             setSelection={setObjectiveVPs}
           />
           <Typography variant="caption">
-            [1]: Supply Marker that has not been destroyed, but has more
-            attackers within 3&quot; than defenders.
+            [1]: Supply Marker that has not been destroyed, but has more attackers within 3&quot; than defenders.
           </Typography>
         </>
       )}
@@ -150,18 +137,10 @@ export const DestroyTheSuppliesVPs: FunctionComponent<QuestionListProps> = (
           />
         </Stack>
       )}
-      {activeStep === BROKEN && (
-        <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />
-      )}
-      {activeStep === BANNERS && (
-        <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />
-      )}
+      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />}
+      {activeStep === BANNERS && <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />}
 
-      <VictoryPointStepper
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-        totalSteps={4}
-      />
+      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={4} />
     </Box>
   );
 };

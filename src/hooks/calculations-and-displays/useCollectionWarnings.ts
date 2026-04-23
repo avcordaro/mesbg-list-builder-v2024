@@ -38,8 +38,7 @@ export const useCollectionWarnings = (
 
   // The full collection for a given miniature
   const modelInventory =
-    inventory[unit.profile_origin] &&
-    inventory[unit.profile_origin][unit.name.replace(" (General)", "")];
+    inventory[unit.profile_origin] && inventory[unit.profile_origin][unit.name.replace(" (General)", "")];
   const collection = !modelInventory
     ? ([] as Collection[])
     : modelInventory.collection.map((c) =>
@@ -55,18 +54,12 @@ export const useCollectionWarnings = (
   // The amount of miniatures marked as 'Generic' grouped by their mount.
   const generics = calculateGenericModels(collection);
   // The total amount of selected grouped by chosen options
-  const totalSelected = getTotalSelectedModelsGroupedPerChosenOptions(
-    roster,
-    clonedUnit,
-    collection,
-  );
+  const totalSelected = getTotalSelectedModelsGroupedPerChosenOptions(roster, clonedUnit, collection);
 
   // The total amount of generic models used,
   // used to check if there are enough models in the collection.
   // if (genericsUsed > genericsAvailable) then there is a problem.
-  const totalGenericsUsed = totalSelected
-    .map((ts) => ts.genericsUsed)
-    .reduce((a, b) => a + b, 0);
+  const totalGenericsUsed = totalSelected.map((ts) => ts.genericsUsed).reduce((a, b) => a + b, 0);
 
   const totalGenericsUsedElseWhere = totalSelected
     .filter((ts) => !arraysMatch(ts.options, options))
@@ -86,10 +79,7 @@ export const useCollectionWarnings = (
     totalGenericsUsedElseWhere,
   );
   // The total amount of selected units given the current selection of options
-  const selected = getAmountOfSelectedUnitsWithGivenOptions(
-    totalSelected,
-    options,
-  );
+  const selected = getAmountOfSelectedUnitsWithGivenOptions(totalSelected, options);
 
   // // Debug line given a specific profile name,
   // // ~ Keep commented until needed!! ~
@@ -114,8 +104,6 @@ export const useCollectionWarnings = (
     selected,
     overExceededCollection:
       totalGenericsUsed > amountOfGenericsForGivenMount &&
-      !!totalSelected.find(
-        (ts) => ts.genericsUsed > 0 && arraysMatch(ts.options, options),
-      ),
+      !!totalSelected.find((ts) => ts.genericsUsed > 0 && arraysMatch(ts.options, options)),
   };
 };

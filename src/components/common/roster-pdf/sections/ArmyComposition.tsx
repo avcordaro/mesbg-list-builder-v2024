@@ -1,10 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-} from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -13,11 +7,7 @@ import { armyListData } from "../../../../assets/data.ts";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useUserPreferences } from "../../../../state/preference";
 import { useThemeContext } from "../../../../theme/ThemeContext.tsx";
-import {
-  FreshUnit,
-  isSelectedUnit,
-  SelectedUnit,
-} from "../../../../types/roster.ts";
+import { FreshUnit, isSelectedUnit, SelectedUnit } from "../../../../types/roster.ts";
 
 function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
   if (!isSelectedUnit(unit)) {
@@ -39,16 +29,7 @@ function UnitRow({ unit }: { unit: FreshUnit | SelectedUnit }) {
       <TableCell size="small">
         {unit.name}{" "}
         {options.length > 0 && (
-          <>
-            (
-            {options
-              ?.map(
-                ({ quantity, max, name }) =>
-                  `${max > 1 ? `${quantity} ` : ""}${name}`,
-              )
-              ?.join(", ")}
-            )
-          </>
+          <>({options?.map(({ quantity, max, name }) => `${max > 1 ? `${quantity} ` : ""}${name}`)?.join(", ")})</>
         )}
       </TableCell>
       <TableCell size="small" align="right">
@@ -65,13 +46,9 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
     preferences: { removePdfPageBreak },
   } = useUserPreferences();
 
-  const warbands = roster.warbands.map((warband) => [
-    warband.hero,
-    ...warband.units.filter(isSelectedUnit),
-  ]);
+  const warbands = roster.warbands.map((warband) => [warband.hero, ...warband.units.filter(isSelectedUnit)]);
 
-  const { might, units, points, bows, throwingWeapons, will, fate } =
-    getAdjustedMetaData();
+  const { might, units, points, bows, throwingWeapons, will, fate } = getAdjustedMetaData();
   const { break_point } = armyListData[roster.armyList];
 
   return (
@@ -81,12 +58,7 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
           <Typography variant="h5" sx={{ mb: 2 }}>
             Army Composition
           </Typography>
-          <Stack
-            direction="row"
-            gap={2}
-            sx={{ mb: 1 }}
-            justifyContent="space-between"
-          >
+          <Stack direction="row" gap={2} sx={{ mb: 1 }} justifyContent="space-between">
             <Typography>
               Points: <b>{points}</b>
             </Typography>
@@ -100,12 +72,7 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
               Throwing weapons: <b>{throwingWeapons}</b>
             </Typography>
           </Stack>{" "}
-          <Stack
-            direction="row"
-            gap={2}
-            sx={{ mb: 1 }}
-            justifyContent="space-around"
-          >
+          <Stack direction="row" gap={2} sx={{ mb: 1 }} justifyContent="space-around">
             <Typography>
               Might / Will / Fate:{" "}
               <b>
@@ -113,11 +80,7 @@ export const ArmyComposition = ({ noCaption }: { noCaption?: boolean }) => {
               </b>
             </Typography>
             <Typography>
-              Break Point:{" "}
-              <b>
-                {units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0}{" "}
-                dead
-              </b>
+              Break Point: <b>{units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0} dead</b>
             </Typography>
             <Typography>
               Quartered: <b>{Math.floor(0.25 * units)} alive</b>

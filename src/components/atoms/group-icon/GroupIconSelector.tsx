@@ -18,10 +18,7 @@ export const GroupIconSelector = ({
   selectedIcon: Option;
   setSelectedIcon: (newValue: Option) => void;
 }) => {
-  const getIconSet = (
-    icons: Record<string, JSX.Element>,
-    type: Option["type"],
-  ): Option[] =>
+  const getIconSet = (icons: Record<string, JSX.Element>, type: Option["type"]): Option[] =>
     Object.entries(icons)
       .map(([name, icon]) => ({ name, icon, type }))
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -59,10 +56,7 @@ export const GroupIconSelector = ({
           helperText={
             <Typography variant="body2" component="span">
               Extra custom icons can be included on request. See{" "}
-              <a href="https://react-icons.github.io/react-icons/">
-                react-icons
-              </a>{" "}
-              for all potential options.
+              <a href="https://react-icons.github.io/react-icons/">react-icons</a> for all potential options.
             </Typography>
           }
         />

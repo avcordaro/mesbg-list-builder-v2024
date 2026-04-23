@@ -37,9 +37,7 @@ export const ExportHistoryModal = () => {
     setFilenameValid(validFilename);
     if (validFilename) {
       download(
-        fileType === "json"
-          ? JSON.stringify(recentGames)
-          : objectToCSV(recentGames),
+        fileType === "json" ? JSON.stringify(recentGames) : objectToCSV(recentGames),
         fileType === "json" ? filename + ".json" : filename + ".csv",
         fileType === "json" ? "application/json" : "text/csv",
       );
@@ -49,10 +47,7 @@ export const ExportHistoryModal = () => {
 
   const handleCopy = (e) => {
     e.preventDefault();
-    const content =
-      fileType === "json"
-        ? JSON.stringify(recentGames)
-        : objectToCSV(recentGames);
+    const content = fileType === "json" ? JSON.stringify(recentGames) : objectToCSV(recentGames);
     window.navigator.clipboard.writeText(content);
     triggerAlert(AlertTypes.EXPORT_HISTORY_ALERT);
     closeModal();
@@ -74,28 +69,13 @@ export const ExportHistoryModal = () => {
               }}
               endAdornment={"." + fileType}
             />
-            {!filenameValid && (
-              <FormHelperText id="component-error-text">
-                Filename cannot be empty
-              </FormHelperText>
-            )}
+            {!filenameValid && <FormHelperText id="component-error-text">Filename cannot be empty</FormHelperText>}
           </FormControl>
           <FormControl>
-            <FormLabel id="demo-controlled-radio-buttons-group">
-              Export to
-            </FormLabel>
-            <RadioGroup
-              row
-              name="filetype"
-              value={fileType}
-              onChange={handleChange}
-            >
+            <FormLabel id="demo-controlled-radio-buttons-group">Export to</FormLabel>
+            <RadioGroup row name="filetype" value={fileType} onChange={handleChange}>
               <FormControlLabel value="json" control={<Radio />} label="JSON" />
-              <FormControlLabel
-                value="csv"
-                control={<Radio />}
-                label="CSV (importable in Excel)"
-              />
+              <FormControlLabel value="csv" control={<Radio />} label="CSV (importable in Excel)" />
             </RadioGroup>
           </FormControl>
         </Stack>

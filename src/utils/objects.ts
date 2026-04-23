@@ -3,16 +3,12 @@ export function deepEqual(x, y) {
     tx = typeof x,
     ty = typeof y;
   return x && y && tx === "object" && tx === ty
-    ? ok(x).length === ok(y).length &&
-        ok(x).every((key) => deepEqual(x[key], y[key]))
+    ? ok(x).length === ok(y).length && ok(x).every((key) => deepEqual(x[key], y[key]))
     : x === y;
 }
 
 export function hasValue(value: string | number | unknown) {
-  return (
-    (typeof value === "string" && value.trim() !== "") ||
-    typeof value === "number"
-  );
+  return (typeof value === "string" && value.trim() !== "") || typeof value === "number";
 }
 
 export function isAboveZero(value: number) {

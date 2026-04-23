@@ -16,10 +16,7 @@ const armiesByType = Object.values(data)
       .replace(" (Legacy)", ""),
     faction: item.profile_origin,
   }))
-  .filter(
-    (item, index, array) =>
-      array.findIndex((other) => other.army === item.army) === index,
-  )
+  .filter((item, index, array) => array.findIndex((other) => other.army === item.army) === index)
   .reduce(
     (a, { army, faction, type }) => {
       if (!a[type]) a[type] = new Set();
@@ -83,9 +80,7 @@ export const ArmyPicker: FunctionComponent<ArmyPickerProps> = (props) => {
 
   useEffect(() => {
     if (props.defaultSelection) {
-      const defaultSelection = allOptions.filter((option) =>
-        props.defaultSelection.includes(option.army),
-      );
+      const defaultSelection = allOptions.filter((option) => props.defaultSelection.includes(option.army));
       onOptionSelectionChanged(defaultSelection);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

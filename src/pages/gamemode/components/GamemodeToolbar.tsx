@@ -62,15 +62,11 @@ export const GamemodeToolbar = () => {
 
   const armyListMetadata = armyListData[roster.armyList];
   const breakPointDead =
-    metadata.units > 0
-      ? Math.floor(metadata.units * (armyListMetadata.break_point ?? 0.5)) + 1
-      : 0;
+    metadata.units > 0 ? Math.floor(metadata.units * (armyListMetadata.break_point ?? 0.5)) + 1 : 0;
   const quarter = metadata.units - Math.floor(metadata.units * 0.25);
   const casualties = game.casualties + game.heroCasualties;
 
-  const totalMight = game.trackables
-    .map((t) => Number(t.xMWFW.split(":")[0]))
-    .reduce((a, b) => a + b, 0);
+  const totalMight = game.trackables.map((t) => Number(t.xMWFW.split(":")[0])).reduce((a, b) => a + b, 0);
   return !screen.isDesktop ? (
     <>
       <Stack direction="row" justifyContent="space-between" sx={{ my: 2 }}>
@@ -89,27 +85,11 @@ export const GamemodeToolbar = () => {
         </Button>
       </Stack>
       <Stack direction="row" justifyContent="space-around" sx={{ m: 2 }}>
-        <Typography
-          color={breakPointDead - casualties <= 0 ? "error" : "inherit"}
-        >
-          Until Broken:{" "}
-          <b>
-            {breakPointDead - casualties > 0 ? (
-              breakPointDead - casualties
-            ) : (
-              <GiCrackedShield />
-            )}
-          </b>
+        <Typography color={breakPointDead - casualties <= 0 ? "error" : "inherit"}>
+          Until Broken: <b>{breakPointDead - casualties > 0 ? breakPointDead - casualties : <GiCrackedShield />}</b>
         </Typography>
         <Typography color={quarter - casualties <= 0 ? "error" : "inherit"}>
-          Until Quartered:{" "}
-          <b>
-            {quarter - casualties > 0 ? (
-              quarter - casualties
-            ) : (
-              <FaSkullCrossbones />
-            )}
-          </b>
+          Until Quartered: <b>{quarter - casualties > 0 ? quarter - casualties : <FaSkullCrossbones />}</b>
         </Typography>
         <Typography color={totalMight <= 0 ? "error" : "inherit"}>
           Might: <b>{totalMight}</b>
@@ -127,10 +107,7 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography
-          variant="h6"
-          sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
-        >
+        <Typography variant="h6" sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}>
           {casualties} / {roster.metadata.units}
         </Typography>
         <SquareIconButton
@@ -164,11 +141,7 @@ export const GamemodeToolbar = () => {
         </ButtonGroup>
       </Box>
       <Stack direction="row" gap={2}>
-        <Typography
-          variant="h6"
-          className="middle-earth"
-          sx={{ mx: 0.25, fontSize: "1.2rem" }}
-        >
+        <Typography variant="h6" className="middle-earth" sx={{ mx: 0.25, fontSize: "1.2rem" }}>
           Casualties:
         </Typography>
         <SquareIconButton
@@ -179,10 +152,7 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography
-          variant="h6"
-          sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}
-        >
+        <Typography variant="h6" sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}>
           {casualties} / {roster.metadata.units}
         </Typography>
         <SquareIconButton
@@ -198,27 +168,13 @@ export const GamemodeToolbar = () => {
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           color={breakPointDead - casualties <= 0 ? "error" : "inherit"}
         >
-          Until Broken:{" "}
-          <b>
-            {breakPointDead - casualties > 0 ? (
-              breakPointDead - casualties
-            ) : (
-              <GiCrackedShield />
-            )}
-          </b>
+          Until Broken: <b>{breakPointDead - casualties > 0 ? breakPointDead - casualties : <GiCrackedShield />}</b>
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           color={quarter - casualties <= 0 ? "error" : "inherit"}
         >
-          Until Quartered:{" "}
-          <b>
-            {quarter - casualties > 0 ? (
-              quarter - casualties
-            ) : (
-              <FaSkullCrossbones />
-            )}
-          </b>
+          Until Quartered: <b>{quarter - casualties > 0 ? quarter - casualties : <FaSkullCrossbones />}</b>
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
