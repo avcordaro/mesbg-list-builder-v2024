@@ -69,6 +69,8 @@ export const useCreateRoster = () => {
         enableSiege: enableSiege,
         groupId: groupSlug,
         maximumPoints: maxRosterPoints ? Number(maxRosterPoints) : undefined,
+        addUnits: undefined,
+        addPoints: undefined,
         siegeRole: enableSiege ? rosterSiegeRole : undefined,
         withHero: armyList.hero,
         tags,
