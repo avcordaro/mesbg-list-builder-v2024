@@ -12,6 +12,8 @@ import { useRosterInformation } from "../../../../hooks/calculations-and-display
 import { RosterInformationProps } from "../RosterInformation.tsx";
 import { RosterInformationSection } from "../RosterInformationSection.tsx";
 
+const formatSigned = (value: number) => `${value > 0 ? "+" : ""}${value}`;
+
 export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
   roster,
 }) => {
@@ -30,17 +32,24 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
     metadata.throwLimit * armyListMetadata.throw_limit,
   );
 
+  const pointsNumerator = metadata.addPoints
+    ? `${metadata.points}${formatSigned(metadata.addPoints)}`
+    : metadata.points;
+  const totalPoints = metadata.points + metadata.addPoints;
+
   const rows = [
     {
       label: "Points",
       value: metadata.maxPoints
-        ? `${metadata.points} / ${metadata.maxPoints}`
-        : metadata.points,
-      valid: !metadata.maxPoints || metadata.points <= metadata.maxPoints,
+        ? `${pointsNumerator} / ${metadata.maxPoints}`
+        : pointsNumerator,
+      valid: !metadata.maxPoints || totalPoints <= metadata.maxPoints,
     },
     {
       label: "Units",
-      value: metadata.units,
+      value: metadata.addUnits
+        ? `${metadata.units}${formatSigned(metadata.addUnits)}`
+        : metadata.units,
     },
     {
       label: "Break point",

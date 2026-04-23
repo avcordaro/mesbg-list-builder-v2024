@@ -63,5 +63,7 @@ export type Roster = {
     siegeRoster: boolean;
     siegeRole?: "Attacker" | "Defender" | "Both";
     tags?: string[];
+    addUnits?: number;
+    addPoints?: number;
   };
 };
