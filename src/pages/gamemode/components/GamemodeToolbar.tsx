@@ -61,9 +61,9 @@ export const GamemodeToolbar = () => {
   };
 
   const armyListMetadata = armyListData[roster.armyList];
-  const breakPointDead =
-    metadata.units > 0 ? Math.floor(metadata.units * (armyListMetadata.break_point ?? 0.5)) + 1 : 0;
-  const quarter = metadata.units - Math.floor(metadata.units * 0.25);
+  const [breakPointDead] = getPoint(metadata.units + (metadata.addUnits ?? 0), armyListMetadata.break_point ?? 0.5, 1);
+  const [, quarterDead] = getPoint(metadata.units + (metadata.addUnits ?? 0), 0.25);
+
   const casualties = game.casualties + game.heroCasualties;
 
   const totalMight = game.trackables.map((t) => Number(t.xMWFW.split(":")[0])).reduce((a, b) => a + b, 0);
@@ -88,8 +88,8 @@ export const GamemodeToolbar = () => {
         <Typography color={breakPointDead - casualties <= 0 ? "error" : "inherit"}>
           Until Broken: <b>{breakPointDead - casualties > 0 ? breakPointDead - casualties : <GiCrackedShield />}</b>
         </Typography>
-        <Typography color={quarter - casualties <= 0 ? "error" : "inherit"}>
-          Until Quartered: <b>{quarter - casualties > 0 ? quarter - casualties : <FaSkullCrossbones />}</b>
+        <Typography color={quarterDead - casualties <= 0 ? "error" : "inherit"}>
+          Until Quartered: <b>{quarterDead - casualties > 0 ? quarterDead - casualties : <FaSkullCrossbones />}</b>
         </Typography>
         <Typography color={totalMight <= 0 ? "error" : "inherit"}>
           Might: <b>{totalMight}</b>
@@ -108,7 +108,7 @@ export const GamemodeToolbar = () => {
           disabled={game.casualties === 0}
         />
         <Typography variant="h6" sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}>
-          {casualties} / {roster.metadata.units}
+          {casualties} / {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
@@ -153,7 +153,7 @@ export const GamemodeToolbar = () => {
           disabled={game.casualties === 0}
         />
         <Typography variant="h6" sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}>
-          {casualties} / {roster.metadata.units}
+          {casualties} / {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
@@ -172,9 +172,9 @@ export const GamemodeToolbar = () => {
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
-          color={quarter - casualties <= 0 ? "error" : "inherit"}
+          color={quarterDead - casualties <= 0 ? "error" : "inherit"}
         >
-          Until Quartered: <b>{quarter - casualties > 0 ? quarter - casualties : <FaSkullCrossbones />}</b>
+          Until Quartered: <b>{quarterDead - casualties > 0 ? quarterDead - casualties : <FaSkullCrossbones />}</b>
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
@@ -186,3 +186,13 @@ export const GamemodeToolbar = () => {
     </Toolbar>
   );
 };
+
+function getPoint(units: number, divider: number, deadOffset = 0) {
+  if (units <= 0) {
+    return [0, 0];
+  }
+
+  const dead = Math.floor(units * divider) + deadOffset;
+  const alive = units - dead;
+  return [dead, alive];
+}
