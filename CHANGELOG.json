@@ -9,7 +9,8 @@
       "Fix warnings regarding the Corsair Fleet 'must be general' rules."
     ],
     "changed": [
-      "Updated the sorting on the rosters page to allow for groups to be filtered and sorted."
+      "Updated the sorting on the rosters page to allow for groups to be filtered and sorted.",
+      "Remove already filtered options from the search bar at the top of the match history page."
     ],
     "removed": [
       "Removed some navigation items from the sidebar menu to reduce clutter."

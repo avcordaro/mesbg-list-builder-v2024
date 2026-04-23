@@ -113,7 +113,7 @@ export const SavedGameResults = () => {
         Match History
       </Typography>
       <Stack sx={{ py: 1 }} gap={3}>
-        <FilterForm onChange={onFilterChanged} />
+        <FilterForm onChange={onFilterChanged} options={filteredGames} />
         {recentGames.length > 0 ? (
           <>
             {filteredGames.length > 0 ? (

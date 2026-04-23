@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { FunctionComponent, useState } from "react";
-import { useRecentGamesState } from "../../../state/recent-games";
+import { PastGame } from "../../../state/recent-games/history";
 
 export type Filters = {
   army: string;
@@ -16,13 +16,14 @@ export type Filters = {
 };
 
 export type FilterFormProps = {
+  options: PastGame[];
   onChange: (filters: Filters) => void;
 };
 
 export const FilterForm: FunctionComponent<FilterFormProps> = ({
+  options,
   onChange,
 }) => {
-  const { recentGames } = useRecentGamesState();
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"));
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -47,28 +48,24 @@ export const FilterForm: FunctionComponent<FilterFormProps> = ({
 
   const armyOptions = [
     ...new Set(
-      recentGames.flatMap(
+      options.flatMap(
         (game) => game.armies.split(",").map((s) => s.trim()) || [],
       ),
     ),
   ];
   const opponentOptions = [
-    ...new Set(recentGames.flatMap((game) => game.opponentName || [])),
+    ...new Set(options.flatMap((game) => game.opponentName || [])),
   ];
   const opponentArmyOptions = [
     ...new Set(
-      recentGames.flatMap(
+      options.flatMap(
         (game) => game.opponentArmies?.split(",").map((s) => s.trim()) || [],
       ),
     ),
   ];
-  const tagOptions = [
-    ...new Set(recentGames.flatMap((game) => game.tags || [])),
-  ];
+  const tagOptions = [...new Set(options.flatMap((game) => game.tags || []))];
   const scenarioOptions = [
-    ...new Set(
-      recentGames.map((game) => game.scenarioPlayed).filter((s) => !!s),
-    ),
+    ...new Set(options.map((game) => game.scenarioPlayed).filter((s) => !!s)),
   ];
 
   return (
