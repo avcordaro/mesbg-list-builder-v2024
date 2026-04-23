@@ -1,6 +1,5 @@
 {
-  "main": {},
-  "1.39": {
+  "main": {
     "added": [
       "Allow for adding additional points or units towards the breakpoints, for whenever you get a free unit on a tournament.",
       "Allow locking drag & drop utility on the My Rosters page."
@@ -16,7 +15,7 @@
       "Fixed warnings regarding the Corsair Fleet 'must be general' rules.",
       "Added the missing rule text for Flaming Ammunition to the Mordor Siege Bow's profile.",
       "Corrected Lord Thorne's Dunland keyword to Rohan, on his profile.",
-      "Updated Beechbone's outdated profile picture.",
+      "Updated Beechbone's outdated profile picture."
     ],
     "removed": [
       "Removed some navigation items from the sidebar menu to reduce clutter."
