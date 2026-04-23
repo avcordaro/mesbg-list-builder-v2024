@@ -10,6 +10,9 @@
     ],
     "changed": [
       "Updated the sorting on the rosters page to allow for groups to be filtered and sorted."
+    ],
+    "removed": [
+      "Removed some navigation items from the sidebar menu to reduce clutter."
     ]
   },
   "1.38": {
