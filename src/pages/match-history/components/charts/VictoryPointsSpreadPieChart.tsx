@@ -6,23 +6,12 @@ interface VictoryPointsWonLostProps {
   data: PastGame[];
 }
 
-export const VictoryPointsSpreadPieChart = ({
-  data,
-}: VictoryPointsWonLostProps) => {
+export const VictoryPointsSpreadPieChart = ({ data }: VictoryPointsWonLostProps) => {
   const { palette } = useTheme();
 
   const victoryPoints = data
-    .map((game) => [
-      Number(game.victoryPoints),
-      Number(game.opponentVictoryPoints ?? 0),
-    ])
-    .reduce(
-      ([totalWon, totalLost], [won, lost]) => [
-        totalWon + won,
-        totalLost + lost,
-      ],
-      [0, 0],
-    );
+    .map((game) => [Number(game.victoryPoints), Number(game.opponentVictoryPoints ?? 0)])
+    .reduce(([totalWon, totalLost], [won, lost]) => [totalWon + won, totalLost + lost], [0, 0]);
 
   const victoryPointData = {
     labels: ["Earned by you", "Lost to opponents"],

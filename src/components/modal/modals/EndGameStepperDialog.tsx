@@ -8,10 +8,7 @@ import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
 import { useRecentGamesState } from "../../../state/recent-games";
 import { PastGame } from "../../../state/recent-games/history";
-import {
-  findStepWithError,
-  validateFormInputForStepper,
-} from "../../common/game-results-form/validateInput.ts";
+import { findStepWithError, validateFormInputForStepper } from "../../common/game-results-form/validateInput.ts";
 import { GameResultStepper } from "../../common/game-results-stepper/GameResultStepper.tsx";
 import { steps as resultStepperSteps } from "../../common/game-results-stepper/steps.ts";
 import { AlertTypes } from "../../notifications/alert-types.tsx";

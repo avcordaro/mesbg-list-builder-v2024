@@ -2,12 +2,7 @@ import { useEffect } from "react";
 import { mesbgData, siegeEquipmentData } from "../../assets/data.ts";
 import { useUserPreferences } from "../../state/preference";
 import { useRosterBuildingState } from "../../state/roster-building";
-import {
-  FreshUnit,
-  isSelectedUnit,
-  Roster,
-  SelectedUnit,
-} from "../../types/roster.ts";
+import { FreshUnit, isSelectedUnit, Roster, SelectedUnit } from "../../types/roster.ts";
 import { deepEqual } from "../../utils/objects.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 import { useRosterInformation } from "../calculations-and-displays/useRosterInformation.ts";
@@ -41,11 +36,7 @@ export const useUpdateRosterVersion = () => {
       console.debug("Automatically updating roster to new version.");
       updateRoster();
     } else {
-      console.debug(
-        "Datafiles changed for roster but automatic updates are disabled.",
-        roster,
-        getUpdatedRoster(),
-      );
+      console.debug("Datafiles changed for roster but automatic updates are disabled.", roster, getUpdatedRoster());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roster.id]);
@@ -53,9 +44,7 @@ export const useUpdateRosterVersion = () => {
   // Function overloads.
   function reloadUnit(unit: SelectedUnit): SelectedUnit;
   function reloadUnit(unit: FreshUnit): FreshUnit;
-  function reloadUnit(
-    unit: FreshUnit | SelectedUnit,
-  ): FreshUnit | SelectedUnit {
+  function reloadUnit(unit: FreshUnit | SelectedUnit): FreshUnit | SelectedUnit {
     if (!isSelectedUnit(unit)) {
       return unit;
     }
@@ -81,8 +70,7 @@ export const useUpdateRosterVersion = () => {
       MWFW,
       options: modelData.options.map((option) => {
         const quantity = options.find(
-          (oldOption) =>
-            oldOption.name === option.name || oldOption.id === option.id,
+          (oldOption) => oldOption.name === option.name || oldOption.id === option.id,
         )?.quantity;
         return quantity === undefined ? option : { ...option, quantity };
       }),

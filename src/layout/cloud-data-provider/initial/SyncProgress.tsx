@@ -1,13 +1,5 @@
 import { Done, Error, PauseCircle } from "@mui/icons-material";
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Typography,
-} from "@mui/material";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,8 +14,7 @@ interface SyncProgressProps {
 
 export const SyncProgress = ({ items }: SyncProgressProps) => {
   const navigate = useNavigate();
-  const { queue, failedItems, progress, addItems, processQueue, retryFailed } =
-    useSyncQueue();
+  const { queue, failedItems, progress, addItems, processQueue, retryFailed } = useSyncQueue();
 
   // Track already-queued items by "type:id"
   const addedKeysRef = useRef<Set<string>>(new Set());
@@ -65,22 +56,19 @@ export const SyncProgress = ({ items }: SyncProgressProps) => {
   return (
     <>
       <Typography>
-        We noticed you still have some data saved locally on your device. Let’s
-        sync it to your account so you can always access it, no matter where you
-        log in.
+        We noticed you still have some data saved locally on your device. Let’s sync it to your account so you can
+        always access it, no matter where you log in.
       </Typography>
       {progress !== 1 ? (
         <CustomAlert severity="warning" title="Uploading data...">
-          We’re syncing your data to your account. Please wait until the
-          progress is complete before continuing. Leaving this page early may
-          cause some of your data to be lost.
+          We’re syncing your data to your account. Please wait until the progress is complete before continuing. Leaving
+          this page early may cause some of your data to be lost.
         </CustomAlert>
       ) : failedItems.length > 0 ? (
         <>
           <CustomAlert severity="error" title="Failed items">
-            Some of the items were not correctly saved. You can retry syncing
-            those items or ignore the error and create the data again if
-            necessary.
+            Some of the items were not correctly saved. You can retry syncing those items or ignore the error and create
+            the data again if necessary.
           </CustomAlert>
           <Button
             onClick={() => {
@@ -94,8 +82,7 @@ export const SyncProgress = ({ items }: SyncProgressProps) => {
       ) : (
         <>
           <CustomAlert severity="success" title="Upload complete">
-            Your data has been successfully added to your account. You can now
-            return to the application.
+            Your data has been successfully added to your account. You can now return to the application.
           </CustomAlert>
           <Button
             onClick={() => {
@@ -109,11 +96,7 @@ export const SyncProgress = ({ items }: SyncProgressProps) => {
 
       <LinearProgressWithLabel value={Math.round(progress * 100)} />
       <TableContainer component={Paper}>
-        <Table
-          sx={{ minWidth: 650 }}
-          size="small"
-          aria-label="table with all the unsynced items"
-        >
+        <Table sx={{ minWidth: 650 }} size="small" aria-label="table with all the unsynced items">
           <TableBody>
             {queue.map((row, index) => (
               <TableRow key={index}>
@@ -133,11 +116,7 @@ export const SyncProgress = ({ items }: SyncProgressProps) => {
                     </small>{" "}
                     {row.id}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    component="small"
-                    fontSize=".8rem"
-                  >
+                  <Typography variant="body2" component="small" fontSize=".8rem">
                     {row.error}
                   </Typography>
                 </TableCell>

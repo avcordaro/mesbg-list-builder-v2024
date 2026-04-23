@@ -12,8 +12,7 @@ export const ApiErrorAlert: FunctionComponent<{
           {props.context.title}
         </Typography>
         <Typography variant="body2">
-          A request to sync with the server failed:{" "}
-          <i>{props.context.message}</i>
+          A request to sync with the server failed: <i>{props.context.message}</i>
         </Typography>
       </Stack>
     </Fragment>

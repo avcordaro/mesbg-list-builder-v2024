@@ -3,20 +3,10 @@ import { getSumOfUnits } from "../../../components/common/roster-summary/totalUn
 import { convertRosterToProfiles } from "../../../hooks/profiles/profile-utils/profiles.ts";
 import { SiegeEquipment } from "../../../types/mesbg-data.types.ts";
 import { Profile } from "../../../types/profile-data.types.ts";
-import {
-  FreshUnit,
-  isSelectedUnit,
-  Roster,
-  SelectedUnit,
-} from "../../../types/roster.ts";
+import { FreshUnit, isSelectedUnit, Roster, SelectedUnit } from "../../../types/roster.ts";
 import { CustomTracker, Trackable } from "./index.ts";
 
-const convertToStats = (
-  name: string | number,
-  MWFW: string,
-  unit: SelectedUnit,
-  isArmyLeader: boolean,
-): Trackable => ({
+const convertToStats = (name: string | number, MWFW: string, unit: SelectedUnit, isArmyLeader: boolean): Trackable => ({
   name: String(name),
   MWFW: MWFW,
   xMWFW: MWFW,
@@ -24,10 +14,7 @@ const convertToStats = (
   leader: isArmyLeader,
 });
 
-const mapHeroToStats = (
-  unit: SelectedUnit | FreshUnit | SiegeEquipment,
-  isArmyLeader?: boolean,
-): Trackable[] => {
+const mapHeroToStats = (unit: SelectedUnit | FreshUnit | SiegeEquipment, isArmyLeader?: boolean): Trackable[] => {
   // check if a unit is selected (and not an empty selector box)
   if (!isSelectedUnit(unit)) return null;
   // check if unit is a hero
@@ -35,15 +22,11 @@ const mapHeroToStats = (
 
   // check if unit is composed of multiple hero's (such as Alladan & Elrohir)
   if (unit.MWFW.length > 1) {
-    return unit.MWFW.map(([name, MWFW]) =>
-      convertToStats(name, MWFW, unit, isArmyLeader),
-    );
+    return unit.MWFW.map(([name, MWFW]) => convertToStats(name, MWFW, unit, isArmyLeader));
   }
 
   const [[name, MWFW]] = unit.MWFW;
-  return Array.from({ length: unit.quantity }, () =>
-    convertToStats(name || unit.name, MWFW, unit, isArmyLeader),
-  );
+  return Array.from({ length: unit.quantity }, () => convertToStats(name || unit.name, MWFW, unit, isArmyLeader));
 };
 
 const getHeroes = (roster: Roster): Trackable[] => {
@@ -77,8 +60,7 @@ const mapListToTrackers = (
       })),
     )
     .flatMap((tracker) => {
-      if (!tracker.additional_stats)
-        return includeSelf ? [{ name: tracker.name, W: tracker.W }] : [];
+      if (!tracker.additional_stats) return includeSelf ? [{ name: tracker.name, W: tracker.W }] : [];
       return includeSelf
         ? [
             { name: tracker.name, W: tracker.W },
@@ -132,17 +114,10 @@ const getListOfMultiWoundModels = (roster: Roster): CustomTracker[] => {
     "Girion, Lord of Dale", // Windlance
     "Bard the Bowman", // Windlance
   ];
-  const excludedCases = [
-    "Haradrim Commander",
-    "Mahud Beastmaster Chieftain",
-    "Royal War Mumak",
-  ];
+  const excludedCases = ["Haradrim Commander", "Mahud Beastmaster Chieftain", "Royal War Mumak"];
   const additionalTrackers = mapListToTrackers(
     profiles
-      .filter(
-        ({ type, name }) =>
-          type?.includes("Hero") && specialCases.includes(name),
-      )
+      .filter(({ type, name }) => type?.includes("Hero") && specialCases.includes(name))
       .map(({ name, additional_stats }) => {
         return {
           name,

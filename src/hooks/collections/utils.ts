@@ -21,33 +21,21 @@ export function getTotalSelectedModelsGroupedPerChosenOptions(
       .filter(isSelectedUnit)
       .filter(
         ({ name, profile_origin }) =>
-          name.replace(" (General)", "") ===
-            unit.name.replace(" (General)", "") &&
+          name.replace(" (General)", "") === unit.name.replace(" (General)", "") &&
           profile_origin === unit.profile_origin,
       )
       .map(({ name, unit_type, options, quantity }) => {
         let selectedOptions = options
           .filter((o) => o.quantity > 0)
-          .filter((o) =>
-            unit_type.includes("Hero") && o.type
-              ? !o.type.includes("mount")
-              : true,
-          )
+          .filter((o) => (unit_type.includes("Hero") && o.type ? !o.type.includes("mount") : true))
           .map((o) => o.name.toLowerCase());
-        if (
-          name === "Rohan Royal Guard" &&
-          arraysMatch(selectedOptions, ["horse", "throwing spears"])
-        ) {
+        if (name === "Rohan Royal Guard" && arraysMatch(selectedOptions, ["horse", "throwing spears"])) {
           selectedOptions = ["horse and throwing spears"];
         }
         return {
           options: selectedOptions,
           mount: unit_type.includes("Hero")
-            ? options
-                .find(
-                  (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
-                )
-                ?.name.toLowerCase() || ""
+            ? options.find((o) => o.quantity > 0 && o.type && o.type.includes("mount"))?.name.toLowerCase() || ""
             : "",
           quantity,
         };
@@ -95,19 +83,14 @@ export function getTotalSelectedModelsGroupedPerChosenOptions(
   });
 }
 
-export function calculateGenericModels(
-  collection: Collection[],
-): GenericModels {
+export function calculateGenericModels(collection: Collection[]): GenericModels {
   return Object.fromEntries(
     Object.entries(groupBy(collection, "mount")).map(([key, value]) => {
       return [
         key?.toLowerCase(),
         Number(
-          value.find((c) =>
-            typeof c.options === "string"
-              ? c.options === "generic"
-              : c.options.includes("generic"),
-          )?.amount || "0",
+          value.find((c) => (typeof c.options === "string" ? c.options === "generic" : c.options.includes("generic")))
+            ?.amount || "0",
         ),
       ];
     }),
@@ -117,16 +100,9 @@ export function calculateGenericModels(
 export function getListOfOptionsForGivenUnit(unit: SelectedUnit): string[] {
   let options = unit.options
     .filter((o) => o.quantity > 0)
-    .filter((o) =>
-      unit.unit_type.includes("Hero") && o.type
-        ? !o.type.includes("mount")
-        : true,
-    )
+    .filter((o) => (unit.unit_type.includes("Hero") && o.type ? !o.type.includes("mount") : true))
     .map((o) => o.name);
-  if (
-    unit.name === "Rohan Royal Guard" &&
-    arraysMatch(options, ["horse", "throwing spears"])
-  ) {
+  if (unit.name === "Rohan Royal Guard" && arraysMatch(options, ["horse", "throwing spears"])) {
     options = ["horse and throwing spears"];
   }
   return options;
@@ -135,9 +111,7 @@ export function getListOfOptionsForGivenUnit(unit: SelectedUnit): string[] {
 export function getMountName(unit: SelectedUnit) {
   return (
     (unit.unit_type.includes("Hero") &&
-      unit.options.find(
-        (o) => o.quantity > 0 && o.type && o.type.includes("mount"),
-      )?.name) ||
+      unit.options.find((o) => o.quantity > 0 && o.type && o.type.includes("mount"))?.name) ||
     ""
   );
 }
@@ -155,20 +129,13 @@ export function getAmountOfAvailableUnitsIncludingGenerics(
         (ts) =>
           arraysMatch(
             typeof ts.options === "string" ? [ts.options] : ts.options,
-            options.length === 0
-              ? ["none"]
-              : options.filter((o) => o !== mount),
+            options.length === 0 ? ["none"] : options.filter((o) => o !== mount),
           ) && mount.includes(ts.mount),
       )?.amount || "0",
     ) + Math.max(amountOfGenericsForGivenMount - totalGenericsUsedElseWhere, 0)
   );
 }
 
-export function getAmountOfSelectedUnitsWithGivenOptions(
-  totalSelected: SelectedModel[],
-  options: string[],
-) {
-  return (
-    totalSelected.find((ts) => arraysMatch(ts.options, options))?.quantity || 0
-  );
+export function getAmountOfSelectedUnitsWithGivenOptions(totalSelected: SelectedModel[], options: string[]) {
+  return totalSelected.find((ts) => arraysMatch(ts.options, options))?.quantity || 0;
 }

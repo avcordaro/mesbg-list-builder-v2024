@@ -30,9 +30,7 @@ export const useMandatoryUnits = () => {
     const additionalWarbands = (warningRulesData[roster.armyList] || [])
       .filter((rule) => rule.type === "compulsory")
       .filter((rule) => rule.warning.includes("must always contain"))
-      .filter(
-        (rule) => !rule.warning.includes("who is always the Army's General"),
-      )
+      .filter((rule) => !rule.warning.includes("who is always the Army's General"))
       .flatMap((rule) => rule.dependencies)
       .map((modelId) => mesbgData[modelId])
       .filter((unit) => !!unit)
@@ -86,11 +84,7 @@ export const useMandatoryUnits = () => {
     });
   }
 
-  function createWarband(
-    warbandNumber: number,
-    hero: Unit,
-    units: SelectedUnit[] = [],
-  ): Warband {
+  function createWarband(warbandNumber: number, hero: Unit, units: SelectedUnit[] = []): Warband {
     return {
       id: randomUuid(),
       hero: calculator.recalculatePointsForUnit({

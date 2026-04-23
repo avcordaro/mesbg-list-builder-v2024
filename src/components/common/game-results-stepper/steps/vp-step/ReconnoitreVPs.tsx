@@ -38,10 +38,7 @@ export const ReconnoitreVPs: FunctionComponent<QuestionListProps> = (props) => {
     return a >= x && a >= b * x;
   };
 
-  const getEscapeVPs = (
-    playerEscapedModels: number,
-    enemyEscapedModels: number,
-  ): [number, number] => {
+  const getEscapeVPs = (playerEscapedModels: number, enemyEscapedModels: number): [number, number] => {
     if (playerEscapedModels === enemyEscapedModels) {
       return [0, 0];
     }
@@ -66,29 +63,19 @@ export const ReconnoitreVPs: FunctionComponent<QuestionListProps> = (props) => {
   };
 
   const getObjectiveVPs = (objectiveVPs: number[]): [number, number] => {
-    const [playerModels, playerHeroes, opponentModels, opponentHeroes] =
-      objectiveVPs;
+    const [playerModels, playerHeroes, opponentModels, opponentHeroes] = objectiveVPs;
 
     const heroVPs = Math.min(playerHeroes, 3);
     const oHeroVps = Math.min(opponentHeroes, 3);
-    const [playerEscapeVPs, opponentEscapeVPs] = getEscapeVPs(
-      playerModels,
-      opponentModels,
-    );
+    const [playerEscapeVPs, opponentEscapeVPs] = getEscapeVPs(playerModels, opponentModels);
 
     return [heroVPs + playerEscapeVPs, -(oHeroVps + opponentEscapeVPs)];
   };
 
   const updateGameResultState = () => {
     const escapeVPs = getObjectiveVPs(objectiveVPs);
-    const playerVPs = [escapeVPs[0], generalVPs[0], brokenVPs[0]].reduce(
-      (a, b) => a + b,
-      0,
-    );
-    const opponentVPs = [escapeVPs[1], generalVPs[1], brokenVPs[1]].reduce(
-      (a, b) => a - b,
-      0,
-    );
+    const playerVPs = [escapeVPs[0], generalVPs[0], brokenVPs[0]].reduce((a, b) => a + b, 0);
+    const opponentVPs = [escapeVPs[1], generalVPs[1], brokenVPs[1]].reduce((a, b) => a - b, 0);
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -104,12 +91,7 @@ export const ReconnoitreVPs: FunctionComponent<QuestionListProps> = (props) => {
 
   return (
     <Box sx={{ mt: 2 }}>
-      {activeStep === OBJECTIVES && (
-        <ReconnoitreObjectiveVPs
-          value={objectiveVPs}
-          setValue={setObjectiveVPs}
-        />
-      )}
+      {activeStep === OBJECTIVES && <ReconnoitreObjectiveVPs value={objectiveVPs} setValue={setObjectiveVPs} />}
 
       {activeStep === GENERAL && (
         <Stack>
@@ -126,15 +108,9 @@ export const ReconnoitreVPs: FunctionComponent<QuestionListProps> = (props) => {
         </Stack>
       )}
 
-      {activeStep === BROKEN && (
-        <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />
-      )}
+      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />}
 
-      <VictoryPointStepper
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-        totalSteps={3}
-      />
+      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={3} />
     </Box>
   );
 };
@@ -143,9 +119,7 @@ type HoldGroundObjectiveVPsProps = {
   value: number[];
   setValue: (value: (number | null)[]) => void;
 };
-const ReconnoitreObjectiveVPs: FunctionComponent<
-  HoldGroundObjectiveVPsProps
-> = ({ value, setValue }) => {
+const ReconnoitreObjectiveVPs: FunctionComponent<HoldGroundObjectiveVPsProps> = ({ value, setValue }) => {
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value ? Number(event.target.value) : null;
     return setValue([newValue, value[1], value[2], value[3]]);

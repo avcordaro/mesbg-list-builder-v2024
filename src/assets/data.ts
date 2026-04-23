@@ -13,17 +13,12 @@ import siegeEquipmentRaw from "./data/siege_equipment.json";
 import warningRulesRaw from "./data/warning_rules.json";
 
 export const armyListData: ArmyListData = armyListDataRaw;
-export const heroConstraintData: HeroConstraintsDataType =
-  heroConstraintDataRaw;
+export const heroConstraintData: HeroConstraintsDataType = heroConstraintDataRaw;
 export const keywords: KeywordsType = keywordsRaw as KeywordsType;
-export const mesbgData: Record<string, Unit> = mesbgDataRaw as Record<
-  string,
-  Unit
->;
-export const siegeEquipmentData: Record<string, SiegeEquipment> =
-  siegeEquipmentRaw as Record<string, SiegeEquipment>;
-export const profileData: Record<
+export const mesbgData: Record<string, Unit> = mesbgDataRaw as Record<string, Unit>;
+export const siegeEquipmentData: Record<string, SiegeEquipment> = siegeEquipmentRaw as Record<string, SiegeEquipment>;
+export const profileData: Record<string, Record<string, Profile>> = profileDataRaw as Record<
   string,
   Record<string, Profile>
-> = profileDataRaw as Record<string, Record<string, Profile>>;
+>;
 export const warningRulesData: WarningRules = warningRulesRaw as WarningRules;

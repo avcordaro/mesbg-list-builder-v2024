@@ -1,10 +1,4 @@
-import {
-  isSelectedUnit,
-  isSiegeEquipment,
-  Roster,
-  SelectedUnit,
-  Warband,
-} from "../../types/roster.ts";
+import { isSelectedUnit, isSiegeEquipment, Roster, SelectedUnit, Warband } from "../../types/roster.ts";
 import { isNotNull } from "../../utils/nulls.ts";
 
 const heroesThatAreIncludedInTheWarbandCount = [
@@ -17,34 +11,22 @@ const heroesThatAreIncludedInTheWarbandCount = [
 
 function heroAdditionalUnitRosterCount(warband: Warband) {
   if (!warband.hero) return 0;
-  if (
-    warband.hero?.name === "Saruman" &&
-    warband.units.filter(isSelectedUnit).find((unit) => unit.name === "Grima")
-  ) {
+  if (warband.hero?.name === "Saruman" && warband.units.filter(isSelectedUnit).find((unit) => unit.name === "Grima")) {
     return 2; // this includes Saruman and Grima
   }
 
   if (["Gandalf the White", "Eowyn"].includes(warband.hero?.name)) {
-    const passengers = warband.hero.options.find(
-      (option) => option.type === "passenger" && option.quantity > 0,
-    );
+    const passengers = warband.hero.options.find((option) => option.type === "passenger" && option.quantity > 0);
     return 1 + (passengers?.passengers ?? 0);
   }
 
   if (["Bofur the Dwarf, Champion of Erebor"].includes(warband.hero?.name)) {
-    const hasTroll = warband.hero.options.find(
-      (option) => option.name === "Troll Brute" && option.quantity > 0,
-    );
+    const hasTroll = warband.hero.options.find((option) => option.name === "Troll Brute" && option.quantity > 0);
     return hasTroll ? 2 : 1;
   }
 
   if (
-    [
-      "Mumak War Leader",
-      "War Mumak of Harad",
-      "Troll Brute",
-      "Great Beast of Gorgoroth",
-    ].includes(warband.hero?.name)
+    ["Mumak War Leader", "War Mumak of Harad", "Troll Brute", "Great Beast of Gorgoroth"].includes(warband.hero?.name)
   ) {
     return 2;
   }
@@ -60,17 +42,11 @@ function heroAdditionalUnitWarbandCount(warband: Warband) {
   if (!warband.hero) return 0;
 
   if (warband.hero?.name === "Treebeard") {
-    const passenger = warband.hero.options.find(
-      (option) => option.type === "passenger",
-    );
+    const passenger = warband.hero.options.find((option) => option.type === "passenger");
     if (passenger) return passenger.passengers * (passenger.quantity ?? 0);
   }
 
-  if (
-    warband.units
-      .filter(isSelectedUnit)
-      .find((unit) => unit.name === "Farmer Maggot")
-  ) {
+  if (warband.units.filter(isSelectedUnit).find((unit) => unit.name === "Farmer Maggot")) {
     return 1;
   }
 
@@ -120,17 +96,14 @@ export const useCalculator = () => {
         option.quantity > 0,
     );
 
-    if (unit.default_throw || hasThrowingWeapon)
-      return unit.quantity * (unit.siege_crew || 1);
+    if (unit.default_throw || hasThrowingWeapon) return unit.quantity * (unit.siege_crew || 1);
 
     return 0;
   }
 
   function recalculatePointsForUnit(unit: SelectedUnit): SelectedUnit {
     const base = unit.base_points;
-    const optionCost = unit.options
-      .map((option) => option.points * option.quantity || 0)
-      .reduce((a, b) => a + b, 0);
+    const optionCost = unit.options.map((option) => option.points * option.quantity || 0).reduce((a, b) => a + b, 0);
 
     const pointsPerUnit = base + optionCost;
     const pointsTotal = pointsPerUnit * unit.quantity;
@@ -148,16 +121,10 @@ export const useCalculator = () => {
       .filter((unit) => !isSiegeEquipment(unit))
       .filter(
         // If Grima is deployed as part of Saruman's warband, he should not take up space in the warband.
-        (unit) =>
-          warband?.hero?.name === "Saruman" ? unit.name !== "Grima" : true,
+        (unit) => (warband?.hero?.name === "Saruman" ? unit.name !== "Grima" : true),
       )
       .map((unit) => unit.quantity * (unit.siege_crew || 1))
-      .reduce(
-        (a, b) => a + b,
-        heroesThatAreIncludedInTheWarbandCount.includes(warband.hero?.model_id)
-          ? 1
-          : 0,
-      );
+      .reduce((a, b) => a + b, heroesThatAreIncludedInTheWarbandCount.includes(warband.hero?.model_id) ? 1 : 0);
 
     const totalPoints = [warband.hero, ...warband.units]
       .filter(isNotNull)
@@ -190,9 +157,7 @@ export const useCalculator = () => {
       .map(getThrowLimit)
       .reduce(
         (a, b) => a + b,
-        warband.hero &&
-          (warband.hero.unit_type === "Siege Engine" ||
-            warband.hero.name === "Farmer Maggot")
+        warband.hero && (warband.hero.unit_type === "Siege Engine" || warband.hero.name === "Farmer Maggot")
           ? getThrowLimit(warband.hero)
           : 0,
       );
@@ -202,10 +167,7 @@ export const useCalculator = () => {
       meta: {
         num: warband.meta.num,
         points: totalPoints,
-        units:
-          totalUnits +
-          (warband.hero?.siege_crew || 0) +
-          heroAdditionalUnitWarbandCount(warband),
+        units: totalUnits + (warband.hero?.siege_crew || 0) + heroAdditionalUnitWarbandCount(warband),
         heroes: warband.hero ? heroAdditionalUnitRosterCount(warband) : 0,
         bows: totalBows,
         throwingWeapons: totalThrowingWeapons,

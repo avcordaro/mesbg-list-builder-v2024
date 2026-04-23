@@ -92,9 +92,7 @@ export const rows: DatabaseRow[] = Object.values(
       unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
       army_list: dataPoint.map((p) => p.army_list),
       option_mandatory: dataPoint[0].opt_mandatory,
-      options: dataPoint
-        .flatMap((p) => p.options)
-        .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
+      options: dataPoint.flatMap((p) => p.options).filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
       MWFW: dataPoint.flatMap((p) => p.MWFW),
       profile: profile,
     };
@@ -108,9 +106,7 @@ export const rows: DatabaseRow[] = Object.values(
           : ["-", "-", "-"];
     return {
       ...row,
-      Mv: !Number.isNaN(parseInt(row.profile.Mv))
-        ? parseInt(row.profile.Mv)
-        : -1,
+      Mv: !Number.isNaN(parseInt(row.profile.Mv)) ? parseInt(row.profile.Mv) : -1,
       M,
       W,
       F,

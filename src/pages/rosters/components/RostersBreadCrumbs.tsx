@@ -12,9 +12,7 @@ interface RosterBreadCrumbsProps {
   group?: RosterGroup;
 }
 
-export const RostersBreadCrumbs: FunctionComponent<RosterBreadCrumbsProps> = ({
-  group,
-}) => {
+export const RostersBreadCrumbs: FunctionComponent<RosterBreadCrumbsProps> = ({ group }) => {
   const { palette } = useTheme();
   const { mode } = useThemeContext();
   const parents = useRosterBuildingState(selectParentGroups(group));

@@ -1,10 +1,4 @@
-import {
-  BookmarkAdd,
-  Cancel,
-  CancelRounded,
-  Edit,
-  UploadFile,
-} from "@mui/icons-material";
+import { BookmarkAdd, Cancel, CancelRounded, Edit, UploadFile } from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
 import {
   Button,
@@ -77,32 +71,25 @@ export const Collection = () => {
   };
 
   return (
-    <Container
-      maxWidth={false}
-      sx={{ p: 2, mb: 12, maxWidth: "calc(100vw - 3*24px)" }}
-    >
+    <Container maxWidth={false} sx={{ p: 2, mb: 12, maxWidth: "calc(100vw - 3*24px)" }}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         My Collection
       </Typography>
 
       <Typography>
-        Easily manage your personal collection of miniatures, which allows the
-        list builder to provide helpful warnings if you exceed the models
-        available in your collection. These warnings can be enabled/disabled in
-        the app settings.
+        Easily manage your personal collection of miniatures, which allows the list builder to provide helpful warnings
+        if you exceed the models available in your collection. These warnings can be enabled/disabled in the app
+        settings.
       </Typography>
       <Typography sx={{ my: 2 }}>
-        You can add models to your collection using the{" "}
-        <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
+        You can add models to your collection using the <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
         <Link to="/database">Profile Database</Link> page.
       </Typography>
       {!preferences.collectionWarnings && (
         <Alert severity="warning" icon={false} sx={{ my: 1 }}>
           <Typography sx={{ gap: 0.4 }}>
             Collection warnings in the list builder are currently turned off.
-            <Button onClick={() => setPreference("collectionWarnings", true)}>
-              Click here
-            </Button>
+            <Button onClick={() => setPreference("collectionWarnings", true)}>Click here</Button>
             to enable them.
           </Typography>
         </Alert>
@@ -141,8 +128,7 @@ export const Collection = () => {
           }}
         />
         <FormHelperText sx={{ mt: -0.5 }}>
-          You can combine filters using semicolons - for example: &quot;Gondor;
-          Aragorn&quot;
+          You can combine filters using semicolons - for example: &quot;Gondor; Aragorn&quot;
         </FormHelperText>
       </Stack>
       <TableContainer sx={{ mt: 2 }}>
@@ -150,10 +136,7 @@ export const Collection = () => {
           <TableHead
             sx={{
               "& > tr > th": {
-                backgroundColor: (theme) =>
-                  mode === "dark"
-                    ? theme.palette.grey.A700
-                    : theme.palette.grey.A200,
+                backgroundColor: (theme) => (mode === "dark" ? theme.palette.grey.A700 : theme.palette.grey.A200),
               },
             }}
           >
@@ -173,15 +156,12 @@ export const Collection = () => {
           <TableBody>
             {collection
               .filter((row) => {
-                const searchString =
-                  `${row.origin} ${row.modelName}`.toLowerCase();
+                const searchString = `${row.origin} ${row.modelName}`.toLowerCase();
                 return filterElements.every((el) => searchString.includes(el));
               })
               .map((row, index) => {
                 const dbRow = databaseRows.find(
-                  (dbRow) =>
-                    dbRow.profile_origin === row.origin &&
-                    dbRow.name === row.modelName,
+                  (dbRow) => dbRow.profile_origin === row.origin && dbRow.name === row.modelName,
                 );
                 return (
                   <TableRow key={index}>
@@ -190,10 +170,7 @@ export const Collection = () => {
                     <TableCell size="small">
                       {row.inventory.collection.map((item, itemIndex) => (
                         <Typography key={itemIndex}>
-                          {item.amount}x{" "}
-                          {typeof item.options === "string"
-                            ? item.options
-                            : item.options.join(", ")}
+                          {item.amount}x {typeof item.options === "string" ? item.options : item.options.join(", ")}
                           {item.mount ? ` on ${item.mount}` : ""}
                         </Typography>
                       ))}
@@ -205,23 +182,15 @@ export const Collection = () => {
                           iconColor={palette.primary.contrastText}
                           backgroundColor={palette.primary.main}
                           backgroundColorHover={palette.primary.dark}
-                          disabled={
-                            !dbRow &&
-                            !["Shank & Wrot", "Bard's Family"].includes(
-                              row.modelName,
-                            )
-                          }
+                          disabled={!dbRow && !["Shank & Wrot", "Bard's Family"].includes(row.modelName)}
                           iconPadding="1"
                           onClick={() => {
                             setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
                               unit: {
-                                name:
-                                  COMPOSED_UNIT_MAP[row.modelName] ||
-                                  row.modelName,
+                                name: COMPOSED_UNIT_MAP[row.modelName] || row.modelName,
                                 profile_origin: row.origin,
                                 options: dbRow?.options ?? [],
-                                option_mandatory:
-                                  dbRow?.option_mandatory ?? false,
+                                option_mandatory: dbRow?.option_mandatory ?? false,
                                 unit_type: dbRow?.unit_type || ["Hero"],
                               },
                               title: `Edit collection`,
@@ -247,10 +216,9 @@ export const Collection = () => {
                 <TableCell colSpan={4}>
                   <Alert severity="info">
                     <Typography>
-                      Your collection is currently empty! You can add models to
-                      your collection using the{" "}
-                      <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on
-                      the <Link to="/database">Profile Database</Link> page.
+                      Your collection is currently empty! You can add models to your collection using the{" "}
+                      <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button on the{" "}
+                      <Link to="/database">Profile Database</Link> page.
                     </Typography>
                   </Alert>
                 </TableCell>

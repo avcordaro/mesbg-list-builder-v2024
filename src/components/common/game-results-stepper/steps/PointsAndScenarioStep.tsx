@@ -1,11 +1,4 @@
-import {
-  Autocomplete,
-  Collapse,
-  Stack,
-  StepContent,
-  StepLabel,
-  TextField,
-} from "@mui/material";
+import { Autocomplete, Collapse, Stack, StepContent, StepLabel, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { useGameModeState } from "../../../../state/gamemode";
@@ -61,10 +54,7 @@ export const PointsAndScenarioStep: FunctionComponent<StepProps> = ({
   return (
     <>
       <StepLabel
-        error={
-          missingFields.includes("Scenario Played") ||
-          missingFields.includes("Points")
-        }
+        error={missingFields.includes("Scenario Played") || missingFields.includes("Points")}
         optional={
           <Collapse in={!activeStep}>
             <Typography variant="caption" color="textDisabled">
@@ -77,10 +67,9 @@ export const PointsAndScenarioStep: FunctionComponent<StepProps> = ({
       </StepLabel>
       <StepContent>
         <Typography>
-          Select which scenario was played and how much points was agreed upon.
-          The selected scenario will affect the victory points step. You are
-          able to add your custom scenario name in case of narrative matches or
-          when playing games out-side-the-book
+          Select which scenario was played and how much points was agreed upon. The selected scenario will affect the
+          victory points step. You are able to add your custom scenario name in case of narrative matches or when
+          playing games out-side-the-book
         </Typography>
         <Stack gap={2} sx={{ my: 2 }}>
           <Autocomplete
@@ -103,13 +92,9 @@ export const PointsAndScenarioStep: FunctionComponent<StepProps> = ({
               />
             )}
             filterOptions={(options, { inputValue }) => {
-              const filtered = options.filter((option) =>
-                option.toLowerCase().includes(inputValue.toLowerCase()),
-              );
+              const filtered = options.filter((option) => option.toLowerCase().includes(inputValue.toLowerCase()));
 
-              const isExisting = options.some(
-                (option) => inputValue.toLowerCase() === option.toLowerCase(),
-              );
+              const isExisting = options.some((option) => inputValue.toLowerCase() === option.toLowerCase());
               if (inputValue !== "" && !isExisting) {
                 filtered.push(`Custom: "${inputValue}"`);
               }

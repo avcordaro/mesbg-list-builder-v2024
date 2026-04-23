@@ -6,10 +6,7 @@ import { sidebarSlice, SidebarState } from "./sidebar";
 
 export type ApplicationState = ModalState & SidebarState & AlertState;
 
-export const useAppState = create<
-  ApplicationState,
-  [["zustand/devtools", unknown]]
->(
+export const useAppState = create<ApplicationState, [["zustand/devtools", unknown]]>(
   devtools((...args) => ({
     ...modalSlice(...args),
     ...sidebarSlice(...args),

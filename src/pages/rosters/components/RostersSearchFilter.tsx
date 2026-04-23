@@ -7,11 +7,7 @@ import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CustomAlert } from "../../../components/atoms/alert/CustomAlert.tsx";
 import { RosterBulkDeleteButton } from "../bulk-delete/RosterBulkDeleteButton.tsx";
-import {
-  RosterSortButton,
-  SortField,
-  SortOrder,
-} from "../sorting/RosterSortButton.tsx";
+import { RosterSortButton, SortField, SortOrder } from "../sorting/RosterSortButton.tsx";
 
 type RosterFilterProps = {
   filter: string;
@@ -79,24 +75,16 @@ export const RostersSearchFilter: FunctionComponent<RosterFilterProps> = ({
         />
       </Stack>
       <Collapse in={showHelperText}>
-        <CustomAlert
-          title="Query helper"
-          severity="info"
-          onClose={() => setShowHelperText(false)}
-        >
+        <CustomAlert title="Query helper" severity="info" onClose={() => setShowHelperText(false)}>
           <Stack gap={2}>
             <Typography component="div">
               Filter rosters with queries like:{" "}
-              <pre style={{ display: "inline" }}>
-                &quot;type=evil&name=my army&points&gt;700&quot;
-              </pre>
+              <pre style={{ display: "inline" }}>&quot;type=evil&name=my army&points&gt;700&quot;</pre>
             </Typography>
             <Typography>
-              Available fields: type, army, name, points, tag, units, bows,
-              throw, might, will, fate
+              Available fields: type, army, name, points, tag, units, bows, throw, might, will, fate
               <br />
-              Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine
-              multiple rules with &.
+              Use =, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons. Combine multiple rules with &.
             </Typography>
             <Typography>
               Prefix your query with{" "}

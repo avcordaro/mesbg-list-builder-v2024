@@ -1,10 +1,4 @@
-import {
-  AutoAwesome,
-  CategoryOutlined,
-  Info,
-  Segment,
-  Settings,
-} from "@mui/icons-material";
+import { AutoAwesome, CategoryOutlined, Info, Segment, Settings } from "@mui/icons-material";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import { AiFillTrophy } from "react-icons/ai";
 import { FaDatabase } from "react-icons/fa";

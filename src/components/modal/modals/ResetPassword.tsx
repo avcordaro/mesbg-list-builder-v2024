@@ -1,10 +1,4 @@
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  Stack,
-  TextField,
-} from "@mui/material";
+import { Button, DialogActions, DialogContent, Stack, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useFirebaseAuth } from "../../../firebase/useFirebaseAuth.ts";
@@ -43,14 +37,12 @@ export const ResetPassword = () => {
       <DialogContent>
         <Stack gap={1}>
           <CustomAlert severity="info" title="Reset password request">
-            Please provide the email adres you signed up with so we can send you
-            a reset password link.
+            Please provide the email adres you signed up with so we can send you a reset password link.
           </CustomAlert>
           {firebaseError && (
             <CustomAlert severity="error" title="Request failed">
               <Typography>
-                The authentication provider failed to send the password reset.
-                We received the following error:{" "}
+                The authentication provider failed to send the password reset. We received the following error:{" "}
                 <b>&quot;{firebaseError}&quot;</b>.
               </Typography>
               <Typography>Please reach out if the problem persists.</Typography>
@@ -63,11 +55,7 @@ export const ResetPassword = () => {
           fullWidth
           label="Emailadress"
           error={!emailValid}
-          helperText={
-            !emailValid
-              ? "That doesn’t look like a valid email address. Please check and try again."
-              : ""
-          }
+          helperText={!emailValid ? "That doesn’t look like a valid email address. Please check and try again." : ""}
           value={email}
           type="email"
           onChange={(e) => {
@@ -86,11 +74,7 @@ export const ResetPassword = () => {
         >
           Cancel
         </Button>
-        <Button
-          variant="contained"
-          onClick={sendRequest}
-          data-test-id="dialog--submit-button"
-        >
+        <Button variant="contained" onClick={sendRequest} data-test-id="dialog--submit-button">
           Send request
         </Button>
       </DialogActions>

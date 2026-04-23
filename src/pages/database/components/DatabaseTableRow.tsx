@@ -36,9 +36,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
 
   const existsInInv =
     !!inventory[row.profile_origin] &&
-    !!inventory[row.profile_origin][
-      COMPOSED_UNIT_MAP[row.name] || row.name.replaceAll(" (General)", "")
-    ];
+    !!inventory[row.profile_origin][COMPOSED_UNIT_MAP[row.name] || row.name.replaceAll(" (General)", "")];
 
   const [might, will, fate] = [row.M, row.W, row.F];
 
@@ -46,11 +44,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
     <>
       <TableRow sx={{ "& > *": { borderBottom: "unset !important" } }}>
         <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
+          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -60,12 +54,8 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
           <SquareIconButton
             icon={<BsFillPersonVcardFill />}
             iconColor={palette.primary.contrastText}
-            backgroundColor={
-              mode === "dark" ? palette.grey.A400 : palette.grey.A700
-            }
-            backgroundColorHover={
-              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
-            }
+            backgroundColor={mode === "dark" ? palette.grey.A400 : palette.grey.A700}
+            backgroundColorHover={mode === "dark" ? palette.grey.A700 : palette.grey["900"]}
             onClick={() => {
               setCurrentModal(ModalTypes.PROFILE_CARD, {
                 unit: {
@@ -79,9 +69,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
         </TableCell>
         {screen.isDesktop && (
           <>
-            <TableCell align="center">
-              {row.profile.Mv !== "-" ? row.profile.Mv : row.profile.Range}
-            </TableCell>
+            <TableCell align="center">{row.profile.Mv !== "-" ? row.profile.Mv : row.profile.Range}</TableCell>
             <TableCell align="center">{row.profile.Fv}</TableCell>
             <TableCell align="center">{row.profile.Sv}</TableCell>
             <TableCell align="center">{row.profile.S}</TableCell>
@@ -100,30 +88,20 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
             icon={existsInInv ? <Edit /> : <BookmarkAdd />}
             iconColor={palette.primary.contrastText}
             backgroundColor={
-              existsInInv
-                ? palette.primary.dark
-                : mode === "dark"
-                  ? palette.grey.A400
-                  : palette.grey.A700
+              existsInInv ? palette.primary.dark : mode === "dark" ? palette.grey.A400 : palette.grey.A700
             }
-            backgroundColorHover={
-              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
-            }
+            backgroundColorHover={mode === "dark" ? palette.grey.A700 : palette.grey["900"]}
             iconPadding="0.5rem"
             onClick={() => {
               setCurrentModal(ModalTypes.ADD_TO_COLLECTION, {
                 unit: {
-                  name:
-                    COMPOSED_UNIT_MAP[row.name] ||
-                    row.name.replaceAll(" (General)", ""),
+                  name: COMPOSED_UNIT_MAP[row.name] || row.name.replaceAll(" (General)", ""),
                   profile_origin: row.profile_origin,
                   options: row.options,
                   option_mandatory: row.option_mandatory,
                   unit_type: row.unit_type,
                 },
-                title: existsInInv
-                  ? `Edit collection`
-                  : `Add to your collection`,
+                title: existsInInv ? `Edit collection` : `Add to your collection`,
               });
             }}
           />
@@ -156,9 +134,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                       <TableBody>
                         <TableRow>
                           <TableCell align="center">
-                            {row.profile.Mv !== "-"
-                              ? row.profile.Mv
-                              : row.profile.Range}
+                            {row.profile.Mv !== "-" ? row.profile.Mv : row.profile.Range}
                           </TableCell>
                           <TableCell align="center">{row.profile.Fv}</TableCell>
                           <TableCell align="center">{row.profile.Sv}</TableCell>
@@ -186,8 +162,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                 </ExtraInfoRow>
               )}
 
-              {(row.profile.special_rules.length > 0 ||
-                row.profile.active_or_passive_rules.length > 0) && (
+              {(row.profile.special_rules.length > 0 || row.profile.active_or_passive_rules.length > 0) && (
                 <ExtraInfoRow title="Special Rules">
                   <Typography>
                     {row.profile.special_rules.map((rule, index, self) => (
@@ -209,39 +184,35 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
                         >
                           {rule}
                         </Box>
-                        {index < self.length - 1 ||
-                          (row.profile.active_or_passive_rules.length > 0 &&
-                            ",")}{" "}
+                        {index < self.length - 1 || (row.profile.active_or_passive_rules.length > 0 && ",")}{" "}
                       </Fragment>
                     ))}
-                    {row.profile.active_or_passive_rules.map(
-                      (rule, index, self) => (
-                        <Fragment key={rule.name}>
-                          <Box
-                            component="span"
-                            sx={{
-                              textDecoration: "underline",
-                              cursor: "pointer",
-                              "&:hover": {
-                                color: (theme) => theme.palette.primary.main,
+                    {row.profile.active_or_passive_rules.map((rule, index, self) => (
+                      <Fragment key={rule.name}>
+                        <Box
+                          component="span"
+                          sx={{
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                            "&:hover": {
+                              color: (theme) => theme.palette.primary.main,
+                            },
+                          }}
+                          onClick={() => {
+                            setCurrentModal(ModalTypes.PROFILE_CARD, {
+                              unit: {
+                                name: row.name,
+                                profile_origin: row.profile_origin,
                               },
-                            }}
-                            onClick={() => {
-                              setCurrentModal(ModalTypes.PROFILE_CARD, {
-                                unit: {
-                                  name: row.name,
-                                  profile_origin: row.profile_origin,
-                                },
-                                title: row.name,
-                              });
-                            }}
-                          >
-                            {rule.name}
-                          </Box>
-                          {index < self.length - 1 && ","}{" "}
-                        </Fragment>
-                      ),
-                    )}
+                              title: row.name,
+                            });
+                          }}
+                        >
+                          {rule.name}
+                        </Box>
+                        {index < self.length - 1 && ","}{" "}
+                      </Fragment>
+                    ))}
                   </Typography>
                 </ExtraInfoRow>
               )}
@@ -303,9 +274,7 @@ export const DatabaseTableRow = ({ row }: { row: DatabaseRow }) => {
               )}
               {row.options.length > 0 && (
                 <ExtraInfoRow title="Possible options">
-                  <Typography>
-                    &quot;{row.options.map((o) => o.name).join('", "')}&quot;
-                  </Typography>
+                  <Typography>&quot;{row.options.map((o) => o.name).join('", "')}&quot;</Typography>
                 </ExtraInfoRow>
               )}
             </Stack>

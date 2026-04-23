@@ -1,11 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  Radio,
-  RadioGroup,
-  Stack,
-  TextField,
-} from "@mui/material";
+import { FormControl, FormLabel, Radio, RadioGroup, Stack, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
@@ -69,20 +62,14 @@ export const ToTheDeathVPs: FunctionComponent<QuestionListProps> = (props) => {
   const updateGameResultState = () => {
     const bannerVPs = getBannerVPs(bannersRemaining[0], bannersRemaining[1]);
     const heroKillVPs = getHeroKillVPs();
-    const playerVPs = [
-      generalVPs[0],
-      brokenVPs[0],
-      bannerVPs[0],
-      quarteredVPs[0],
-      heroKillVPs[0],
-    ].reduce((a, b) => a + b, 0);
-    const opponentVPs = [
-      generalVPs[1],
-      brokenVPs[1],
-      bannerVPs[1],
-      quarteredVPs[1],
-      heroKillVPs[1],
-    ].reduce((a, b) => a - b, 0);
+    const playerVPs = [generalVPs[0], brokenVPs[0], bannerVPs[0], quarteredVPs[0], heroKillVPs[0]].reduce(
+      (a, b) => a + b,
+      0,
+    );
+    const opponentVPs = [generalVPs[1], brokenVPs[1], bannerVPs[1], quarteredVPs[1], heroKillVPs[1]].reduce(
+      (a, b) => a - b,
+      0,
+    );
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -92,58 +79,25 @@ export const ToTheDeathVPs: FunctionComponent<QuestionListProps> = (props) => {
 
   useEffect(() => {
     updateGameResultState();
-    setVictoryPoints([
-      generalVPs,
-      brokenVPs,
-      bannersRemaining,
-      quarteredVPs,
-      heroesKilled,
-    ]);
+    setVictoryPoints([generalVPs, brokenVPs, bannersRemaining, quarteredVPs, heroesKilled]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [generalVPs, brokenVPs, bannersRemaining, quarteredVPs, heroesKilled]);
 
   return (
     <Box sx={{ mt: 2 }}>
-      {activeStep === GENERAL && (
-        <ToTheDeathGeneralWoundVPs
-          value={generalVPs}
-          setValue={setGeneralVPs}
-        />
-      )}
+      {activeStep === GENERAL && <ToTheDeathGeneralWoundVPs value={generalVPs} setValue={setGeneralVPs} />}
 
-      {activeStep === BROKEN && (
-        <BrokenVPs
-          value={brokenVPs}
-          setValue={setBrokenVPs}
-          vpSpread={[0, 3, 5]}
-        />
-      )}
+      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} vpSpread={[0, 3, 5]} />}
 
-      {activeStep === BANNERS && (
-        <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />
-      )}
+      {activeStep === BANNERS && <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />}
 
       {activeStep === QUARTERED && (
-        <BrokenVPs
-          value={quarteredVPs}
-          setValue={setQuarteredVPs}
-          label="quartered"
-          vpSpread={[0, 3, 3]}
-        />
+        <BrokenVPs value={quarteredVPs} setValue={setQuarteredVPs} label="quartered" vpSpread={[0, 3, 3]} />
       )}
 
-      {activeStep === HERO_KILLS && (
-        <ToTheDeathHeroKillVPs
-          value={heroesKilled}
-          setValue={setHeroesKilled}
-        />
-      )}
+      {activeStep === HERO_KILLS && <ToTheDeathHeroKillVPs value={heroesKilled} setValue={setHeroesKilled} />}
 
-      <VictoryPointStepper
-        activeStep={activeStep}
-        setActiveStep={setActiveStep}
-        totalSteps={5}
-      />
+      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={5} />
     </Box>
   );
 };
@@ -152,9 +106,7 @@ type GeneralWoundVPsProps = {
   setValue: (value: number[]) => void;
   value: number[];
 };
-export const ToTheDeathGeneralWoundVPs: FunctionComponent<
-  GeneralWoundVPsProps
-> = ({ value, setValue }) => {
+export const ToTheDeathGeneralWoundVPs: FunctionComponent<GeneralWoundVPsProps> = ({ value, setValue }) => {
   const vpSpread = { killed: 5, oneWound: 3, wounded: 1, unharmed: 0 };
   const handleOnChange = (_: ChangeEvent, v: string) => {
     setValue([value[0], -vpSpread[v]]);
@@ -167,59 +119,19 @@ export const ToTheDeathGeneralWoundVPs: FunctionComponent<
       <FormControl>
         <FormLabel>Your General</FormLabel>
         <RadioGroup row name="hero" onChange={handleOnChange}>
-          <FormControlLabel
-            value="unharmed"
-            checked={value[1] === 0}
-            control={<Radio />}
-            label="Unharmed"
-          />
-          <FormControlLabel
-            value="wounded"
-            checked={value[1] === -1}
-            control={<Radio />}
-            label="Wounded"
-          />
-          <FormControlLabel
-            value="oneWound"
-            checked={value[1] === -3}
-            control={<Radio />}
-            label="One wound left"
-          />
-          <FormControlLabel
-            value="killed"
-            checked={value[1] === -5}
-            control={<Radio />}
-            label="Killed"
-          />
+          <FormControlLabel value="unharmed" checked={value[1] === 0} control={<Radio />} label="Unharmed" />
+          <FormControlLabel value="wounded" checked={value[1] === -1} control={<Radio />} label="Wounded" />
+          <FormControlLabel value="oneWound" checked={value[1] === -3} control={<Radio />} label="One wound left" />
+          <FormControlLabel value="killed" checked={value[1] === -5} control={<Radio />} label="Killed" />
         </RadioGroup>
       </FormControl>
       <FormControl>
         <FormLabel>Enemy General</FormLabel>
         <RadioGroup row name="hero" onChange={handleOnChangeEnemy}>
-          <FormControlLabel
-            value="unharmed"
-            checked={value[0] === 0}
-            control={<Radio />}
-            label="Unharmed"
-          />
-          <FormControlLabel
-            value="wounded"
-            checked={value[0] === 1}
-            control={<Radio />}
-            label="Wounded"
-          />
-          <FormControlLabel
-            value="oneWound"
-            checked={value[0] === 3}
-            control={<Radio />}
-            label="One wound left"
-          />
-          <FormControlLabel
-            value="killed"
-            checked={value[0] === 5}
-            control={<Radio />}
-            label="Killed"
-          />
+          <FormControlLabel value="unharmed" checked={value[0] === 0} control={<Radio />} label="Unharmed" />
+          <FormControlLabel value="wounded" checked={value[0] === 1} control={<Radio />} label="Wounded" />
+          <FormControlLabel value="oneWound" checked={value[0] === 3} control={<Radio />} label="One wound left" />
+          <FormControlLabel value="killed" checked={value[0] === 5} control={<Radio />} label="Killed" />
         </RadioGroup>
       </FormControl>
     </Stack>
@@ -230,10 +142,7 @@ type HeroKillVPsProps = {
   value: number[];
   setValue: (value: (number | null)[]) => void;
 };
-const ToTheDeathHeroKillVPs: FunctionComponent<HeroKillVPsProps> = ({
-  value,
-  setValue,
-}) => {
+const ToTheDeathHeroKillVPs: FunctionComponent<HeroKillVPsProps> = ({ value, setValue }) => {
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value ? Number(event.target.value) : null;
     return setValue([newValue, value[1]]);

@@ -2,14 +2,7 @@ import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import { getIdToken, onAuthStateChanged, User } from "firebase/auth";
-import {
-  createContext,
-  FunctionComponent,
-  PropsWithChildren,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, FunctionComponent, PropsWithChildren, useContext, useEffect, useState } from "react";
 import { auth } from "./config";
 import { FirebaseAuthFunctions, useFirebaseAuth } from "./useFirebaseAuth.ts";
 
@@ -33,9 +26,7 @@ export const useAuth = () => {
   return context;
 };
 
-export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
+export const AuthProvider: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [idToken, setIdToken] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -83,9 +74,7 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({
           }}
         >
           <CircularProgress color="inherit" size={100} thickness={2} />
-          <Typography variant="overline">
-            Getting account information...
-          </Typography>
+          <Typography variant="overline">Getting account information...</Typography>
         </Box>
       ) : (
         children

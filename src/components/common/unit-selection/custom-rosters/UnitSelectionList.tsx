@@ -14,10 +14,7 @@ export type UnitSelectionListProps = {
   selectUnit: (unit: Unit) => void;
 };
 
-export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
-  armyList,
-  selectUnit,
-}) => {
+export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({ armyList, selectUnit }) => {
   const [filter, setFilter] = useState("");
   const [rows, setRows] = useState([]);
   const mergeDuplicateUnits = useMergedUnitData();
@@ -27,15 +24,8 @@ export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
   const units: Unit[] = mergeDuplicateUnits(
     Object.values(mesbgData)
       .filter((unit) => unit.army_type.includes(goodOrEvil))
-      .filter(
-        (unit) =>
-          unit.unit_type === "Warrior" || unit.unit_type === "Independent Hero",
-      )
-      .filter(
-        (unit: Unit) =>
-          !unit.unique ||
-          !actualSelectedModels.includes(removeArmyListSection(unit.model_id)),
-      )
+      .filter((unit) => unit.unit_type === "Warrior" || unit.unit_type === "Independent Hero")
+      .filter((unit: Unit) => !unit.unique || !actualSelectedModels.includes(removeArmyListSection(unit.model_id)))
       .sort((a, b) => {
         const byPoints = b.base_points > a.base_points ? 1 : -1;
         const byName = b.name.localeCompare(a.name);
@@ -46,11 +36,7 @@ export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
   );
 
   useEffect(() => {
-    setRows(
-      units.filter((unit) =>
-        unit.name.toLowerCase().includes(filter.toLowerCase()),
-      ),
-    );
+    setRows(units.filter((unit) => unit.name.toLowerCase().includes(filter.toLowerCase())));
   }, [filter, setRows, units]);
 
   return (
@@ -67,9 +53,7 @@ export const UnitSelectionList: FunctionComponent<UnitSelectionListProps> = ({
       <Virtuoso
         style={{ height: "100%", minHeight: "200px" }}
         totalCount={rows.length}
-        itemContent={(index) => (
-          <VirtualUnitRow unit={rows[index]} selectUnit={selectUnit} />
-        )}
+        itemContent={(index) => <VirtualUnitRow unit={rows[index]} selectUnit={selectUnit} />}
       />
     </Stack>
   );

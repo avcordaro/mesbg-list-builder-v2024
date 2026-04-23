@@ -28,16 +28,10 @@ export const RosterNotFound = () => {
       <Typography variant="h4" className="middle-earth">
         Roster not found!
       </Typography>
-      <img
-        alt="Image of a broken sword"
-        src={brokenSword}
-        style={{ width: "300px", margin: "auto" }}
-      />
+      <img alt="Image of a broken sword" src={brokenSword} style={{ width: "300px", margin: "auto" }} />
       <Typography sx={{ mb: 2 }}>
-        &quot;Even the wise cannot see all ends. The roster you seek is no
-        longer in this realm
-        <br /> perhaps it was never forged, or has been cast into the fires of
-        Mount Doom.&quot;
+        &quot;Even the wise cannot see all ends. The roster you seek is no longer in this realm
+        <br /> perhaps it was never forged, or has been cast into the fires of Mount Doom.&quot;
       </Typography>
       <Box
         sx={{
@@ -48,28 +42,16 @@ export const RosterNotFound = () => {
         }}
       >
         <Stack gap={2}>
-          <Button
-            color="inherit"
-            fullWidth
-            onClick={() => navigate("/rosters")}
-          >
+          <Button color="inherit" fullWidth onClick={() => navigate("/rosters")}>
             Return the your rosters.
           </Button>
-          <Button
-            color="inherit"
-            fullWidth
-            onClick={() => setCurrentModal(ModalTypes.CREATE_NEW_ROSTER)}
-          >
+          <Button color="inherit" fullWidth onClick={() => setCurrentModal(ModalTypes.CREATE_NEW_ROSTER)}>
             Create a new roster
           </Button>
           <Button color="inherit" fullWidth onClick={() => navigate("/")}>
             Return to the homepage
           </Button>
-          <Button
-            color="inherit"
-            fullWidth
-            onClick={() => window.open(DISCORD_LINK)}
-          >
+          <Button color="inherit" fullWidth onClick={() => window.open(DISCORD_LINK)}>
             Ask for support
           </Button>
         </Stack>

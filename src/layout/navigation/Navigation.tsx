@@ -7,12 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import {
-  FunctionComponent,
-  PropsWithChildren,
-  useEffect,
-  useState,
-} from "react";
+import { FunctionComponent, PropsWithChildren, useEffect, useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import title from "../../assets/images/title-v2024.png";
 import { AccountAvatar } from "../../components/common/user-avatar/AccountAvatar.tsx";
@@ -30,9 +25,7 @@ const baseMenuIconStyles = {
   transition: "opacity 0.3s ease, transform 0.3s ease",
 };
 
-export const Navigation: FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
+export const Navigation: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [open, setOpen] = useState(false);
 
   const toggleMenuDrawer = () => {
@@ -46,15 +39,8 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       window.dispatchEvent(new OpenNavigationDrawerEvent(true));
     }
 
-    window.addEventListener(
-      "mlb-event--open-navigation-drawer",
-      openMenuDrawer,
-    );
-    return () =>
-      window.removeEventListener(
-        "mlb-event--open-navigation-drawer",
-        openMenuDrawer,
-      );
+    window.addEventListener("mlb-event--open-navigation-drawer", openMenuDrawer);
+    return () => window.removeEventListener("mlb-event--open-navigation-drawer", openMenuDrawer);
   }, []);
 
   return (
@@ -88,17 +74,9 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
             />
           </IconButton>
           {/* Logo */}
-          <Button
-            aria-label="logo"
-            sx={{ mr: 2 }}
-            href={window.location.protocol + "//" + window.location.host}
-          >
+          <Button aria-label="logo" sx={{ mr: 2 }} href={window.location.protocol + "//" + window.location.host}>
             <img src={logo} alt="Logo" style={{ height: "50px" }} />
-            <img
-              src={title}
-              alt="MESBG List Builder"
-              style={{ maxHeight: "42px", margin: "0 .25rem" }}
-            />
+            <img src={title} alt="MESBG List Builder" style={{ maxHeight: "42px", margin: "0 .25rem" }} />
           </Button>
           <Box flexGrow={1} />
           <AccountAvatar />
@@ -106,11 +84,7 @@ export const Navigation: FunctionComponent<PropsWithChildren> = ({
       </AppBar>
       <MenuDrawer variant="permanent" open={open} id="navigation-drawer">
         <MenuDrawerHeader>
-          <Typography
-            variant="h6"
-            className="middle-earth"
-            sx={{ textAlign: "start" }}
-          >
+          <Typography variant="h6" className="middle-earth" sx={{ textAlign: "start" }}>
             Menu
           </Typography>
         </MenuDrawerHeader>

@@ -8,36 +8,23 @@ export type FactionLogoProps = {
   size?: number;
 };
 
-export const FactionIcon: FunctionComponent<FactionLogoProps> = ({
-  faction,
-  size = 24,
-}) => {
+export const FactionIcon: FunctionComponent<FactionLogoProps> = ({ faction, size = 24 }) => {
   const { mode } = useThemeContext();
 
-  faction =
-    { "Custom: Good": "Custom (Good)", "Custom: Evil": "Custom (Evil)" }[
-      faction
-    ] ?? faction;
+  faction = { "Custom: Good": "Custom (Good)", "Custom: Evil": "Custom (Evil)" }[faction] ?? faction;
 
   return (
     <Avatar
       variant="square"
       alt={`${faction} logo`}
-      src={
-        `${RESOURCES_URL}/images/faction_logos/` +
-        faction +
-        `.png?version=${BUILD_VERSION}`
-      }
+      src={`${RESOURCES_URL}/images/faction_logos/` + faction + `.png?version=${BUILD_VERSION}`}
       sx={{
         width: size,
         height: size,
         display: "inline-block",
         backgroundColor: "transparent",
         "& .MuiAvatar-img": {
-          filter:
-            mode === "dark"
-              ? "brightness(0.2) invert(1)"
-              : "brightness(1.1) saturate(100%) blur(0.2px)",
+          filter: mode === "dark" ? "brightness(0.2) invert(1)" : "brightness(1.1) saturate(100%) blur(0.2px)",
         },
       }}
     >

@@ -17,23 +17,11 @@ import { UnitProfilePicture } from "../../atoms/unit-profile/UnitProfilePicture.
 import { ModalTypes } from "../../modal/modals.tsx";
 
 export type UnitSelectionButtonProps = {
-  unit: Pick<
-    Unit,
-    | "army_list"
-    | "name"
-    | "profile_origin"
-    | "base_points"
-    | "MWFW"
-    | "unit_type"
-    | "options"
-  >;
+  unit: Pick<Unit, "army_list" | "name" | "profile_origin" | "base_points" | "MWFW" | "unit_type" | "options">;
   onClick: () => void;
 };
 
-export function UnitSelectionButton({
-  unit,
-  onClick,
-}: UnitSelectionButtonProps) {
+export function UnitSelectionButton({ unit, onClick }: UnitSelectionButtonProps) {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
   const { inventory } = useCollectionState();
@@ -41,26 +29,23 @@ export function UnitSelectionButton({
   const { roster } = useRosterInformation();
 
   const totalCollection =
-    inventory[unit.profile_origin] &&
-    inventory[unit.profile_origin][unit.name.replace(" (General)", "")]
-      ? inventory[unit.profile_origin][
-          unit.name.replace(" (General)", "")
-        ].collection.reduce((a, b) => a + Number(b.amount), 0)
+    inventory[unit.profile_origin] && inventory[unit.profile_origin][unit.name.replace(" (General)", "")]
+      ? inventory[unit.profile_origin][unit.name.replace(" (General)", "")].collection.reduce(
+          (a, b) => a + Number(b.amount),
+          0,
+        )
       : 0;
   const totalSelected = roster.warbands
     .flatMap((wb) => [wb.hero, ...wb.units])
     .filter(isSelectedUnit)
     .filter(
       (ru) =>
-        ru.name.replace(" (General)", "") ===
-          unit.name.replace(" (General)", "") &&
+        ru.name.replace(" (General)", "") === unit.name.replace(" (General)", "") &&
         ru.profile_origin === unit.profile_origin,
     )
     .reduce((a, b) => a + Number(b.quantity), 0);
 
-  const points = unit.options
-    .filter((o) => o.included)
-    .reduce((a, b) => a + b.points * b.quantity, unit.base_points);
+  const points = unit.options.filter((o) => o.included).reduce((a, b) => a + b.points * b.quantity, unit.base_points);
 
   const handleCardClick = (e) => {
     e.stopPropagation();
@@ -119,11 +104,7 @@ export function UnitSelectionButton({
                   {totalCollection - totalSelected <= 0 ? (
                     <Category
                       sx={{ fontSize: "1rem" }}
-                      color={
-                        totalCollection - totalSelected < 0
-                          ? "error"
-                          : "warning"
-                      }
+                      color={totalCollection - totalSelected < 0 ? "error" : "warning"}
                     />
                   ) : (
                     <CategoryOutlined

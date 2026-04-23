@@ -34,10 +34,7 @@ export const useMergedUnitData = () => {
   }
 
   function withMissingOptions(unit: Unit): Unit {
-    if (
-      unit.name === "The Witch-king of Angmar" &&
-      unit.profile_origin === "Mordor"
-    ) {
+    if (unit.name === "The Witch-king of Angmar" && unit.profile_origin === "Mordor") {
       return {
         ...unit,
         options: [
@@ -102,8 +99,6 @@ export const useMergedUnitData = () => {
       }
     }
 
-    return Array.from(map.values())
-      .map(withMissingOptions)
-      .map(withSortedOptions);
+    return Array.from(map.values()).map(withMissingOptions).map(withSortedOptions);
   };
 };

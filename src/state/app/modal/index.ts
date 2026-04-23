@@ -21,11 +21,7 @@ export const modalSlice: Slice<ApplicationState, ModalState> = (set) => ({
   ...initialModalState,
 
   setCurrentModal: (modal, context) =>
-    set(
-      { currentlyOpenendModal: modal, modalContext: context },
-      undefined,
-      "OPEN_MODAL",
-    ),
+    set({ currentlyOpenendModal: modal, modalContext: context }, undefined, "OPEN_MODAL"),
   closeModal: () =>
     set(
       {

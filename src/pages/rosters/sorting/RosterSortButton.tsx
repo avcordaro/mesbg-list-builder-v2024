@@ -5,10 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { MouseEvent, useEffect, useMemo, useState } from "react";
-import {
-  AiOutlineSortAscending,
-  AiOutlineSortDescending,
-} from "react-icons/ai";
+import { AiOutlineSortAscending, AiOutlineSortDescending } from "react-icons/ai";
 import { FcCheckmark } from "react-icons/fc";
 
 export type SortOrder = "asc" | "desc";
@@ -25,10 +22,7 @@ export const RosterSortButton = ({
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const fields: SortField[] = useMemo(
-    () => ["name", "army", "points", "units"],
-    [],
-  );
+  const fields: SortField[] = useMemo(() => ["name", "army", "points", "units"], []);
   const icons = {
     asc: <AiOutlineSortAscending fontSize="1.45rem" />,
     desc: <AiOutlineSortDescending fontSize="1.45rem" />,
@@ -45,13 +39,10 @@ export const RosterSortButton = ({
     }
   }, [order, field, fields, setOrdering]);
 
-  const setSorting =
-    (field: SortField) =>
-    (order: "asc" | "desc") =>
-    (e: MouseEvent<HTMLElement>) => {
-      setOrdering(field, order);
-      handleClose(e);
-    };
+  const setSorting = (field: SortField) => (order: "asc" | "desc") => (e: MouseEvent<HTMLElement>) => {
+    setOrdering(field, order);
+    handleClose(e);
+  };
 
   const handleOpenSortOptions = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault();
@@ -82,32 +73,21 @@ export const RosterSortButton = ({
           </Typography>
         </Stack>
       </Button>
-      <Menu
-        id="menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+      <Menu id="menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
         {fields
           .flatMap((field) => [
             { field, order: "asc" as const },
             { field, order: "desc" as const },
           ])
           .map((sortItem) => (
-            <MenuItem
-              onClick={setSorting(sortItem.field)(sortItem.order)}
-              key={`${sortItem.field}-${sortItem.order}`}
-            >
+            <MenuItem onClick={setSorting(sortItem.field)(sortItem.order)} key={`${sortItem.field}-${sortItem.order}`}>
               <ListItemText sx={{ width: "20ch", textTransform: "capitalize" }}>
                 {sortItem.field} {sortItem.order}.
               </ListItemText>
               <ListItemIcon
                 sx={{
                   justifyContent: "end",
-                  visibility:
-                    field === sortItem.field && order === sortItem.order
-                      ? "visible"
-                      : "hidden",
+                  visibility: field === sortItem.field && order === sortItem.order ? "visible" : "hidden",
                 }}
               >
                 <FcCheckmark />

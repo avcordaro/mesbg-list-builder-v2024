@@ -44,17 +44,10 @@ export const ImportGameHistoryModal = () => {
   const [importedData, setImportedData] = useState("");
   const [importedDataType, setImportedDataType] = useState("");
   const [importAlert, setImportAlert] = useState(false);
-  const [onDuplicate, setOnDuplicate] = useState<
-    "overwrite" | "ignore" | "create-new"
-  >("overwrite");
+  const [onDuplicate, setOnDuplicate] = useState<"overwrite" | "ignore" | "create-new">("overwrite");
 
   const handleChangeOnDuplicate = (event: ChangeEvent<HTMLInputElement>) => {
-    setOnDuplicate(
-      (event.target as HTMLInputElement).value as
-        | "overwrite"
-        | "ignore"
-        | "create-new",
-    );
+    setOnDuplicate((event.target as HTMLInputElement).value as "overwrite" | "ignore" | "create-new");
   };
 
   const handleChangeOnDataType = (event: ChangeEvent<HTMLInputElement>) => {
@@ -150,25 +143,16 @@ export const ImportGameHistoryModal = () => {
                 multiline
                 maxRows={4}
                 value={importedData}
-                onChange={(e) =>
-                  setImportedData(
-                    e.target.value
-                      .replace(/^"(.*)"$/, "$1")
-                      .replaceAll('""', '"'),
-                  )
-                }
+                onChange={(e) => setImportedData(e.target.value.replace(/^"(.*)"$/, "$1").replaceAll('""', '"'))}
               />
               {importAlert && (
                 <FormHelperText id="component-error-text">
                   {importedDataType.split("/").length > 1 ? (
-                    <>
-                      Importing the data as {importedDataType.split("/")[1]}{" "}
-                      resulted in an error.
-                    </>
+                    <>Importing the data as {importedDataType.split("/")[1]} resulted in an error.</>
                   ) : (
                     <>
-                      Importing the data resulted in an error. Please check the
-                      import and verify a data type has been selected!
+                      Importing the data resulted in an error. Please check the import and verify a data type has been
+                      selected!
                     </>
                   )}
                 </FormHelperText>
@@ -189,12 +173,7 @@ export const ImportGameHistoryModal = () => {
               style={{ display: "none" }}
               onChange={handleFileChange}
             />
-            <Button
-              variant="contained"
-              onClick={handleButtonClick}
-              fullWidth
-              startIcon={<AttachFileOutlined />}
-            >
+            <Button variant="contained" onClick={handleButtonClick} fullWidth startIcon={<AttachFileOutlined />}>
               Select a file
             </Button>
           </Grid2>
@@ -203,36 +182,18 @@ export const ImportGameHistoryModal = () => {
               <FormLabel id="demo-controlled-radio-buttons-group">
                 What is the format of the data you are importing?
               </FormLabel>
-              <RadioGroup
-                row
-                name="importedDataType"
-                value={importedDataType}
-                onChange={handleChangeOnDataType}
-              >
-                <FormControlLabel
-                  value="application/json"
-                  control={<Radio />}
-                  label="JSON"
-                />
-                <FormControlLabel
-                  value="text/csv"
-                  control={<Radio />}
-                  label="CSV"
-                />
+              <RadioGroup row name="importedDataType" value={importedDataType} onChange={handleChangeOnDataType}>
+                <FormControlLabel value="application/json" control={<Radio />} label="JSON" />
+                <FormControlLabel value="text/csv" control={<Radio />} label="CSV" />
               </RadioGroup>
             </FormControl>
             <Grid2 size={12}>
               <FormControl>
                 <FormLabel id="demo-controlled-radio-buttons-group">
-                  What action should be taken for duplicated games found between
-                  current match history and the imported data?
+                  What action should be taken for duplicated games found between current match history and the imported
+                  data?
                 </FormLabel>
-                <RadioGroup
-                  row
-                  name="filetype"
-                  value={onDuplicate}
-                  onChange={handleChangeOnDuplicate}
-                >
+                <RadioGroup row name="filetype" value={onDuplicate} onChange={handleChangeOnDuplicate}>
                   <FormControlLabel
                     value="overwrite"
                     control={<Radio />}
@@ -264,11 +225,7 @@ export const ImportGameHistoryModal = () => {
         >
           Cancel
         </Button>
-        <Button
-          variant="contained"
-          onClick={handleImport}
-          data-test-id="dialog--submit-button"
-        >
+        <Button variant="contained" onClick={handleImport} data-test-id="dialog--submit-button">
           Import
         </Button>
       </DialogActions>

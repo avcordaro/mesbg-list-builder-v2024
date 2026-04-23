@@ -6,11 +6,7 @@ import armyListData from "../../../../assets/data/army_list_data.json";
 import { mesbgData } from "../../../../assets/data.ts";
 import { useRosterBuildingState } from "../../../../state/roster-building";
 import { ArmyListData } from "../../../../types/army-list-data.types.ts";
-import {
-  isSelectedUnit,
-  SelectedUnit,
-  Warband,
-} from "../../../../types/roster.ts";
+import { isSelectedUnit, SelectedUnit, Warband } from "../../../../types/roster.ts";
 import { isMovieQuote } from "../../../../utils/string.ts";
 import { CustomSwitch } from "../../../atoms/switch/CustomSwitch.tsx";
 import { RosterInformationProps } from "../RosterInformation.tsx";
@@ -26,8 +22,7 @@ export const SpecialRules: FunctionComponent<
 
   const trollUpgrades = roster.metadata.tttSpecialUpgrades || [];
 
-  if (!armyListMetadata || armyListMetadata.special_rules.length === 0)
-    return <></>;
+  if (!armyListMetadata || armyListMetadata.special_rules.length === 0) return <></>;
 
   function updateUnitMwf(hero: SelectedUnit, enabled: boolean): SelectedUnit {
     const rawStats = mesbgData[hero.model_id];
@@ -42,12 +37,8 @@ export const SpecialRules: FunctionComponent<
     return (warband: Warband) => {
       return {
         ...warband,
-        hero: isSelectedUnit(warband.hero)
-          ? updateUnitMwf(warband.hero, enabled)
-          : warband.hero,
-        units: warband.units.map((unit) =>
-          isSelectedUnit(unit) ? updateUnitMwf(unit, enabled) : unit,
-        ),
+        hero: isSelectedUnit(warband.hero) ? updateUnitMwf(warband.hero, enabled) : warband.hero,
+        units: warband.units.map((unit) => (isSelectedUnit(unit) ? updateUnitMwf(unit, enabled) : unit)),
       };
     };
   }
@@ -91,19 +82,13 @@ export const SpecialRules: FunctionComponent<
             return editable || trollUpgrades.includes(rule.title);
           })
           .map((rule, index) => (
-            <Box
-              component="li"
-              key={index}
-              sx={{ py: size === "normal" ? 1 : 0 }}
-            >
+            <Box component="li" key={index} sx={{ py: size === "normal" ? 1 : 0 }}>
               {isMovieQuote(rule.title) ? (
                 <Typography sx={{ ml: rule.troll_purchase === true ? -1 : 0 }}>
                   {rule.troll_purchase === true && (
                     <CustomSwitch
                       checked={trollUpgrades.includes(rule.title)}
-                      onChange={(_, checked) =>
-                        changeRuleState(rule.title, checked)
-                      }
+                      onChange={(_, checked) => changeRuleState(rule.title, checked)}
                       disabled={!editable}
                     />
                   )}
@@ -116,26 +101,18 @@ export const SpecialRules: FunctionComponent<
                   {rule.troll_purchase === true && (
                     <CustomSwitch
                       checked={trollUpgrades.includes(rule.title)}
-                      onChange={(_, checked) =>
-                        changeRuleState(rule.title, checked)
-                      }
+                      onChange={(_, checked) => changeRuleState(rule.title, checked)}
                       disabled={!editable}
                     />
                   )}
                   <b>
-                    {rule.title}{" "}
-                    {rule.title === "A Troll's Hoard" && (
-                      <i>({trollUpgrades.length * 50} points)</i>
-                    )}
+                    {rule.title} {rule.title === "A Troll's Hoard" && <i>({trollUpgrades.length * 50} points)</i>}
                   </b>
                 </Typography>
               )}
               <Stack gap={1}>
                 {rule.description.split("\n").map((line, index) => (
-                  <Typography
-                    key={index}
-                    dangerouslySetInnerHTML={{ __html: line }}
-                  />
+                  <Typography key={index} dangerouslySetInnerHTML={{ __html: line }} />
                 ))}
               </Stack>
             </Box>

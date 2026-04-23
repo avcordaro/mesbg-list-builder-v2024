@@ -1,10 +1,4 @@
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  ImageList,
-  ImageListItem,
-} from "@mui/material";
+import { Button, DialogActions, DialogContent, ImageList, ImageListItem } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useState } from "react";
@@ -32,21 +26,14 @@ export const DownloadProfileCardModal = () => {
     const profileCards: string[] = [];
     roster.warbands.forEach((warband) => {
       if (warband.hero) {
-        profileCards.push(
-          [warband.hero.profile_origin, warband.hero.name].join("|"),
-        );
+        profileCards.push([warband.hero.profile_origin, warband.hero.name].join("|"));
         if (
           warband.hero.unit_type !== "Siege Engine" &&
-          hero_constraint_data[warband.hero.model_id]["extra_profiles"].length >
-            0
+          hero_constraint_data[warband.hero.model_id]["extra_profiles"].length > 0
         ) {
-          hero_constraint_data[warband.hero.model_id]["extra_profiles"].forEach(
-            (profile: string) => {
-              profileCards.push(
-                [warband.hero.profile_origin, profile].join("|"),
-              );
-            },
-          );
+          hero_constraint_data[warband.hero.model_id]["extra_profiles"].forEach((profile: string) => {
+            profileCards.push([warband.hero.profile_origin, profile].join("|"));
+          });
         }
       }
       warband.units.filter(isSelectedUnit).forEach((unit) => {

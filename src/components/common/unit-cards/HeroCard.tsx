@@ -60,14 +60,11 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   const { roster, getSetOfModelIds, isCustomRoster } = useRosterInformation();
   const screen = useScreenSize();
   const mwf = useMwfMutations();
-  const { warnings, available, selected, overExceededCollection } =
-    useCollectionWarnings(unit);
+  const { warnings, available, selected, overExceededCollection } = useCollectionWarnings(unit);
   const { preferences } = useUserPreferences();
 
   const valid =
-    isCustomRoster ||
-    !followerOf ||
-    heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
+    isCustomRoster || !followerOf || heroConstraintData[followerOf].valid_warband_units.includes(unit.model_id);
 
   const selectedOptions = unit.options
     .filter((option) => option.included !== true)
@@ -81,9 +78,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
     updateUnit(
       calculator.recalculatePointsForUnit({
         ...unit,
-        MWFW: mwf.hasSpecialMwfRules(unit)
-          ? mwf.handleSpecialMwfForUnit(unit, options)
-          : unit.MWFW,
+        MWFW: mwf.hasSpecialMwfRules(unit) ? mwf.handleSpecialMwfForUnit(unit, options) : unit.MWFW,
         options: options,
       }),
     );
@@ -102,15 +97,12 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
   function getOptionsForUnit(): (Option & { selectable?: boolean })[] {
     return unit.options
       .filter((option, _, self) => {
-        if (!option.dependencies || option.dependencies.length === 0)
-          return option;
+        if (!option.dependencies || option.dependencies.length === 0) return option;
 
         const optionAvailable = option.dependencies.some(checkDependency);
         if (!optionAvailable && option.quantity > 0) {
           // removing the option from the selected options as it is not available (anymore)
-          updateOptions(
-            self.map((o) => (o.id === option.id ? { ...o, quantity: 0 } : o)),
-          );
+          updateOptions(self.map((o) => (o.id === option.id ? { ...o, quantity: 0 } : o)));
         }
 
         return optionAvailable;
@@ -125,43 +117,30 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 (other) =>
                   other.name === "Shadowfax" &&
                   other.quantity > 0 &&
-                  !getSetOfModelIds().find((model) =>
-                    model.includes("peregrin-took"),
-                  ),
+                  !getSetOfModelIds().find((model) => model.includes("peregrin-took")),
               ),
           };
         }
 
-        if (
-          unit.name === "Treebeard" &&
-          option.name.startsWith("Elven Cloak")
-        ) {
+        if (unit.name === "Treebeard" && option.name.startsWith("Elven Cloak")) {
           return {
             ...option,
             selectable:
               option.quantity === 1 ||
-              !!unit.options.find(
-                (other) =>
-                  other.name === "Merry & Pippin" && other.quantity > 0,
-              ),
+              !!unit.options.find((other) => other.name === "Merry & Pippin" && other.quantity > 0),
           };
         }
 
         if (unit.name === "Dragon") {
           if (option.quantity > 0) return option;
 
-          const optionCap =
-            unit.model_id === "[dragons-of-the-north] dragon-general" ? 3 : 2;
+          const optionCap = unit.model_id === "[dragons-of-the-north] dragon-general" ? 3 : 2;
 
-          const selectedOptions = otherOptions
-            .map(({ quantity }) => quantity ?? 0)
-            .reduce((a, b) => a + b, 0);
+          const selectedOptions = otherOptions.map(({ quantity }) => quantity ?? 0).reduce((a, b) => a + b, 0);
 
           const isCapped = selectedOptions < optionCap;
 
-          return isCapped
-            ? { ...option, selectable: true }
-            : { ...option, selectable: false };
+          return isCapped ? { ...option, selectable: true } : { ...option, selectable: false };
         }
 
         return option;
@@ -175,8 +154,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           p: 0.5,
           position: "relative",
           zIndex: 0,
-          backgroundColor: ({ palette }) =>
-            mode === "dark" ? palette.grey["800"] : "",
+          backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["800"] : ""),
         },
         !valid
           ? {
@@ -203,17 +181,12 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           p: 1.5,
           transition: "padding 0.5s",
           border: ({ palette: { success, grey } }) =>
-            "3px " +
-            (isLeader ? "solid " + success.light : "dashed " + grey.A400),
+            "3px " + (isLeader ? "solid " + success.light : "dashed " + grey.A400),
         }}
       >
         <Stack direction="row" gap={2}>
           <Stack>
-            <UnitProfilePicture
-              army={unit.profile_origin}
-              profile={unit.name}
-              size="smaller"
-            />
+            <UnitProfilePicture army={unit.profile_origin} profile={unit.name} size="smaller" />
             {!!toggleLeader && (
               <Collapse in={!collapsed}>
                 <LeaderToggle
@@ -231,15 +204,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             <Typography
               variant="h6"
               fontWeight="bold"
-              color={
-                warnings === "on" && overExceededCollection
-                  ? "warning.dark"
-                  : "inherit"
-              }
+              color={warnings === "on" && overExceededCollection ? "warning.dark" : "inherit"}
             >
-              {!unit.unique && followerOf
-                ? `${unit.quantity}x ${unit.name}`
-                : unit.name}
+              {!unit.unique && followerOf ? `${unit.quantity}x ${unit.name}` : unit.name}
             </Typography>
             <Typography
               data-test-id={`unit-card--points--w${warbandNum}-i${index}`}
@@ -260,17 +227,9 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
                 <MwfBadge unit={unit} />
                 {warnings === "on" && (
                   <Typography
-                    color={
-                      overExceededCollection
-                        ? mode === "dark"
-                          ? "error.light"
-                          : "error.dark"
-                        : "inherit"
-                    }
+                    color={overExceededCollection ? (mode === "dark" ? "error.light" : "error.dark") : "inherit"}
                   >
-                    {available === 0
-                      ? "Not in collection"
-                      : `Left in collection: ${available - selected}`}
+                    {available === 0 ? "Not in collection" : `Left in collection: ${available - selected}`}
                   </Typography>
                 )}
               </Stack>
@@ -311,18 +270,8 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               />
             )}
             <CardActionButtons
-              remove={
-                unit.compulsory === true &&
-                !preferences.allowCompulsoryGeneralDelete
-                  ? null
-                  : remove
-              }
-              reselect={
-                unit.compulsory === true &&
-                !preferences.allowCompulsoryGeneralDelete
-                  ? null
-                  : reselect
-              }
+              remove={unit.compulsory === true && !preferences.allowCompulsoryGeneralDelete ? null : remove}
+              reselect={unit.compulsory === true && !preferences.allowCompulsoryGeneralDelete ? null : reselect}
               openProfileCard={openProfileCard}
               warbandNum={warbandNum}
               index={index}
@@ -339,8 +288,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           p: 0.5,
           position: "relative",
           zIndex: 0,
-          backgroundColor: ({ palette }) =>
-            mode === "dark" ? palette.grey["800"] : "",
+          backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["800"] : ""),
         },
         !valid
           ? {
@@ -369,8 +317,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
           p: collapsed ? 0.25 : 1.5,
           transition: "padding 0.5s",
           border: ({ palette: { success, grey } }) =>
-            "3px " +
-            (isLeader ? "solid " + success.light : "dashed " + grey.A400),
+            "3px " + (isLeader ? "solid " + success.light : "dashed " + grey.A400),
         }}
       >
         <Stack direction="column" gap={1}>
@@ -383,10 +330,7 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             }}
           >
             <Collapse in={!collapsed} unmountOnExit={true}>
-              <UnitProfilePicture
-                army={unit.profile_origin}
-                profile={unit.name}
-              />
+              <UnitProfilePicture army={unit.profile_origin} profile={unit.name} />
             </Collapse>
             {!unit.unique && followerOf && (
               <QuantityButtons
@@ -400,26 +344,15 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
             )}
           </Stack>
         </Stack>
-        <Stack
-          flexGrow={1}
-          sx={{ px: 1 }}
-          direction="row"
-          justifyContent="center"
-        >
+        <Stack flexGrow={1} sx={{ px: 1 }} direction="row" justifyContent="center">
           <Stack direction="column" flexGrow={1} justifyContent="start">
             <Stack direction="row" gap={2} alignItems="center">
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                color={
-                  warnings === "on" && overExceededCollection
-                    ? "warning.dark"
-                    : "inherit"
-                }
+                color={warnings === "on" && overExceededCollection ? "warning.dark" : "inherit"}
               >
-                {!unit.unique && followerOf
-                  ? `${unit.quantity}x ${unit.name}`
-                  : unit.name}{" "}
+                {!unit.unique && followerOf ? `${unit.quantity}x ${unit.name}` : unit.name}{" "}
                 {collapsed && (
                   <span
                     style={{ fontWeight: "normal" }}
@@ -492,33 +425,15 @@ export const HeroCard: FunctionComponent<HeroCardProps> = ({
               </Typography>
               {warnings === "on" && (
                 <Typography
-                  color={
-                    overExceededCollection
-                      ? mode === "dark"
-                        ? "error.light"
-                        : "error.dark"
-                      : "inherit"
-                  }
+                  color={overExceededCollection ? (mode === "dark" ? "error.light" : "error.dark") : "inherit"}
                 >
-                  {available === 0
-                    ? "Not in collection"
-                    : `Left in collection: ${available - selected}`}
+                  {available === 0 ? "Not in collection" : `Left in collection: ${available - selected}`}
                 </Typography>
               )}
             </Collapse>
             <CardActionButtons
-              remove={
-                unit.compulsory === true &&
-                !preferences.allowCompulsoryGeneralDelete
-                  ? null
-                  : remove
-              }
-              reselect={
-                unit.compulsory === true &&
-                !preferences.allowCompulsoryGeneralDelete
-                  ? null
-                  : reselect
-              }
+              remove={unit.compulsory === true && !preferences.allowCompulsoryGeneralDelete ? null : remove}
+              reselect={unit.compulsory === true && !preferences.allowCompulsoryGeneralDelete ? null : reselect}
               openProfileCard={openProfileCard}
               warbandNum={warbandNum}
               index={index}

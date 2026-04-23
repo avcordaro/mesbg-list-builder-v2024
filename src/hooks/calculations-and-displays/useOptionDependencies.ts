@@ -4,10 +4,7 @@ import { useRosterInformation } from "./useRosterInformation.ts";
 export const useOptionDependencies = (warbandId: string) => {
   const rosterInformation = useRosterInformation();
 
-  function checkRoster(
-    type: "requires-all" | "requires-one" | "requires-none",
-    dependencies: string[],
-  ): boolean {
+  function checkRoster(type: "requires-all" | "requires-one" | "requires-none", dependencies: string[]): boolean {
     const modelIds = rosterInformation.getSetOfModelIds();
     switch (type) {
       case "requires-all":
@@ -21,10 +18,7 @@ export const useOptionDependencies = (warbandId: string) => {
     }
   }
 
-  function checkWarband(
-    type: "requires-all" | "requires-one" | "requires-none",
-    dependencies: string[],
-  ): boolean {
+  function checkWarband(type: "requires-all" | "requires-one" | "requires-none", dependencies: string[]): boolean {
     const modelIds = rosterInformation.getSetOfModelIdsInWarband(warbandId);
     switch (type) {
       case "requires-all":
@@ -53,8 +47,7 @@ export const useOptionDependencies = (warbandId: string) => {
     };
   }
 
-  const checkDependency = (d: OptionDependency): boolean =>
-    optionDependency(d).isMet();
+  const checkDependency = (d: OptionDependency): boolean => optionDependency(d).isMet();
 
   return {
     checkDependency,

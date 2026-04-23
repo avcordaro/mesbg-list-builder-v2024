@@ -10,12 +10,7 @@ import { Roster } from "../../../types/roster.ts";
 import { NavLink } from "./NavItemLink.tsx";
 
 const buildTree =
-  (
-    currentPath: string,
-    navigate: (to: string) => void,
-    hideRosters: boolean,
-    games: string[],
-  ) =>
+  (currentPath: string, navigate: (to: string) => void, hideRosters: boolean, games: string[]) =>
   (groups: RosterGroup[], rosters: Roster[]): NavLink[] => {
     const rootMenu: NavLink[] = [];
     const groupMap = new Map<string, NavLink>();
@@ -68,9 +63,7 @@ export const useRosterMenuItems = () => {
   const navigate = useNavigate();
   const { preferences } = useUserPreferences();
   const { rosters, groups } = useRosterBuildingState();
-  const rostersWithOngoingGame = useGameModeState((state) =>
-    Object.keys(state.gameState),
-  );
+  const rostersWithOngoingGame = useGameModeState((state) => Object.keys(state.gameState));
 
   return buildTree(
     location.pathname,

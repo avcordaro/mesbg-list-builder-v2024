@@ -1,11 +1,6 @@
 import { Add, UploadFile } from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
-import {
-  SpeedDial,
-  SpeedDialAction,
-  SpeedDialIcon,
-  Typography,
-} from "@mui/material";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -77,24 +72,13 @@ export const SavedGameResults = () => {
 
   function matchesFilter(game: PastGame, filters: Filters) {
     const matchesArmy = game.armies.includes(filters.army || "");
-    const matchesOpponent =
-      game.opponentName?.includes(filters.opponent || "") ?? true;
-    const matchesOpponentArmy =
-      game.opponentArmies?.includes(filters.opponentArmy || "") ?? true;
+    const matchesOpponent = game.opponentName?.includes(filters.opponent || "") ?? true;
+    const matchesOpponentArmy = game.opponentArmies?.includes(filters.opponentArmy || "") ?? true;
     const matchesResult = game.result.includes(filters.result || "");
-    const matchesTag =
-      !filters.tag || game.tags?.some((tag) => tag.includes(filters.tag || ""));
-    const matchesScenario =
-      game.scenarioPlayed?.includes(filters.scenario || "") ?? true;
+    const matchesTag = !filters.tag || game.tags?.some((tag) => tag.includes(filters.tag || ""));
+    const matchesScenario = game.scenarioPlayed?.includes(filters.scenario || "") ?? true;
 
-    return (
-      matchesArmy &&
-      matchesOpponent &&
-      matchesOpponentArmy &&
-      matchesResult &&
-      matchesTag &&
-      matchesScenario
-    );
+    return matchesArmy && matchesOpponent && matchesOpponentArmy && matchesResult && matchesTag && matchesScenario;
   }
 
   const onFilterChanged = (filters: Filters) => {
@@ -102,9 +86,7 @@ export const SavedGameResults = () => {
   };
 
   useEffect(() => {
-    setFilteredGames(
-      recentGames.filter((game) => matchesFilter(game, filters)),
-    );
+    setFilteredGames(recentGames.filter((game) => matchesFilter(game, filters)));
   }, [filters, recentGames]);
 
   return (
@@ -123,17 +105,14 @@ export const SavedGameResults = () => {
               </>
             ) : (
               <CustomAlert severity="warning" title="">
-                Your current filter combination resulted in 0 games. Please
-                adjust the filters.
+                Your current filter combination resulted in 0 games. Please adjust the filters.
               </CustomAlert>
             )}
           </>
         ) : (
           <CustomAlert severity="info" title="">
-            You have 0 games on record. Play a match using the{" "}
-            <em>&quot;Game Mode&quot;</em> from the roster builder or{" "}
-            <em>create/import</em> games using the Floating button in the bottom
-            right.
+            You have 0 games on record. Play a match using the <em>&quot;Game Mode&quot;</em> from the roster builder or{" "}
+            <em>create/import</em> games using the Floating button in the bottom right.
           </CustomAlert>
         )}
 

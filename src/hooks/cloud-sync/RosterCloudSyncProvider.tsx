@@ -3,16 +3,7 @@ import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import debounce from "lodash/debounce";
 import isEqual from "lodash/isEqual";
-import {
-  createContext,
-  MouseEvent,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { createContext, MouseEvent, ReactNode, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { useAuth } from "../../firebase/FirebaseAuthContext";
 import { Roster } from "../../types/roster";
 import { useApi } from "./useApi";
@@ -32,11 +23,7 @@ const RosterSyncContext = createContext<SyncContext>({
 // eslint-disable-next-line react-refresh/only-export-components
 export const useRosterSync = () => useContext(RosterSyncContext);
 
-export const RosterCloudSyncProvider = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
+export const RosterCloudSyncProvider = ({ children }: { children: ReactNode }) => {
   const auth = useAuth();
   const { updateRoster } = useApi();
   const previousRosterRef = useRef<Roster | null>(null);

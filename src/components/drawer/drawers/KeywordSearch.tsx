@@ -1,12 +1,6 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SearchIcon from "@mui/icons-material/Search";
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  InputAdornment,
-  TextField,
-} from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, InputAdornment, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
@@ -56,35 +50,18 @@ const Keyword = ({
   return (
     <Accordion expanded={expanded} onChange={handleChange}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Stack
-          justifyContent="space-between"
-          direction="row"
-          sx={{ width: "100%" }}
-        >
+        <Stack justifyContent="space-between" direction="row" sx={{ width: "100%" }}>
           <Typography
             variant="body1"
             component="div"
-            color={
-              !preferences.colorCodedRules
-                ? "inherit"
-                : used
-                  ? "success.light"
-                  : "textSecondary"
-            }
+            color={!preferences.colorCodedRules ? "inherit" : used ? "success.light" : "textSecondary"}
             sx={{
-              textDecoration:
-                preferences.colorCodedRules && used ? "underline" : "normal",
+              textDecoration: preferences.colorCodedRules && used ? "underline" : "normal",
             }}
           >
             <b>{name}</b> {active_passive ? <i>({active_passive})</i> : ""}
           </Typography>
-          {chipConfig && (
-            <Chip
-              size="small"
-              label={chipConfig.label}
-              color={chipConfig.color}
-            />
-          )}
+          {chipConfig && <Chip size="small" label={chipConfig.label} color={chipConfig.color} />}
         </Stack>
       </AccordionSummary>
       <AccordionDetails>
@@ -110,21 +87,15 @@ export const KeywordSearch: FunctionComponent<{
   usedKeywords?: string[];
 }> = ({ keywords, usedKeywords = [] }) => {
   const { openSidebarContext } = useAppState();
-  const [searchTerm, setSearchTerm] = useState(
-    openSidebarContext?.searchKeyword || "",
-  );
+  const [searchTerm, setSearchTerm] = useState(openSidebarContext?.searchKeyword || "");
   const [keywordList, setKeywordList] = useState(
-    keywords.filter((kw) =>
-      kw.name.toLowerCase().includes(searchTerm.toLowerCase()),
-    ),
+    keywords.filter((kw) => kw.name.toLowerCase().includes(searchTerm.toLowerCase())),
   );
   const { preferences } = useUserPreferences();
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
-    const newKeywordList = keywords.filter((kw) =>
-      kw.name.toLowerCase().includes(e.target.value.trim().toLowerCase()),
-    );
+    const newKeywordList = keywords.filter((kw) => kw.name.toLowerCase().includes(e.target.value.trim().toLowerCase()));
     setKeywordList(newKeywordList);
   };
 
@@ -172,18 +143,10 @@ export const KeywordSearch: FunctionComponent<{
       )}
 
       {keywordList
-        .filter(
-          (rule) =>
-            !preferences.splitActiveRules || !usedKeywords.includes(rule.name),
-        )
+        .filter((rule) => !preferences.splitActiveRules || !usedKeywords.includes(rule.name))
         .map((kw) => {
           return (
-            <Keyword
-              {...kw}
-              key={kw.name}
-              used={usedKeywords.includes(kw.name)}
-              expanded={keywordList.length === 1}
-            />
+            <Keyword {...kw} key={kw.name} used={usedKeywords.includes(kw.name)} expanded={keywordList.length === 1} />
           );
         })}
     </Fragment>

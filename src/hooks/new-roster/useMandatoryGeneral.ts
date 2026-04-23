@@ -13,9 +13,7 @@ export const useMandatoryGeneral = () => {
     if (!rules) return roster;
 
     const compulsoryRules = rules.filter(
-      ({ type, warning }) =>
-        type === "compulsory" &&
-        warning.includes("who is always the Army's General"),
+      ({ type, warning }) => type === "compulsory" && warning.includes("who is always the Army's General"),
     );
     if (compulsoryRules.length === 0) return roster;
 

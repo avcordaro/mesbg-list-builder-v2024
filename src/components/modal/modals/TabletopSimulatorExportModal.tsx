@@ -47,11 +47,7 @@ export const TabletopSimulatorExportModal = () => {
             </Button>
           </Box>
 
-          <IconButton
-            onClick={() => closeModal()}
-            sx={{ ml: "auto" }}
-            data-test-id="dialog--close-button"
-          >
+          <IconButton onClick={() => closeModal()} sx={{ ml: "auto" }} data-test-id="dialog--close-button">
             <CloseIcon />
           </IconButton>
         </Box>

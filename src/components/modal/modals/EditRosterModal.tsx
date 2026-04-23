@@ -1,11 +1,4 @@
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  FormHelperText,
-  Stack,
-  TextField,
-} from "@mui/material";
+import { Button, DialogActions, DialogContent, FormHelperText, Stack, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
@@ -14,10 +7,7 @@ import { useNewRosterBuilder } from "../../../hooks/new-roster/useNewRosterBuild
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
-import {
-  ArmySelectionInput,
-  SelectedArmyList,
-} from "../../atoms/army-selector/ArmySelectionInput.tsx";
+import { ArmySelectionInput, SelectedArmyList } from "../../atoms/army-selector/ArmySelectionInput.tsx";
 import { AdditionalTagsInput } from "../../atoms/tags-input/TagsInput.tsx";
 
 export const EditRosterModal = () => {
@@ -119,8 +109,8 @@ export const EditRosterModal = () => {
           <Box sx={{ mb: 2 }}>
             <CustomAlert severity="warning" title="Changing the army list">
               <Typography>
-                Changing the army list on your roster will reset your current
-                selection. You are basically starting over from scratch!
+                Changing the army list on your roster will reset your current selection. You are basically starting over
+                from scratch!
               </Typography>
             </CustomAlert>
           </Box>
@@ -136,11 +126,7 @@ export const EditRosterModal = () => {
           fullWidth
           label="Roster name"
           error={!rosterNameValid}
-          helperText={
-            !rosterNameValid
-              ? "Roster name cannot be empty and must be unique."
-              : ""
-          }
+          helperText={!rosterNameValid ? "Roster name cannot be empty and must be unique." : ""}
           value={rosterName}
           onChange={(e) => updateRosterName(e.target.value)}
         />
@@ -148,11 +134,7 @@ export const EditRosterModal = () => {
           fullWidth
           label="Points limit (optional)"
           error={!rosterPointsLimitValid}
-          helperText={
-            !rosterPointsLimitValid
-              ? "The roster points limit needs to be above 0"
-              : ""
-          }
+          helperText={!rosterPointsLimitValid ? "The roster points limit needs to be above 0" : ""}
           value={rosterPointsLimit}
           onChange={(e) => updateRosterPointsLimit(e.target.value)}
         />
@@ -178,8 +160,7 @@ export const EditRosterModal = () => {
           />
         </Stack>
         <FormHelperText sx={{ ml: 1.5 }}>
-          These are added or subtracted from the total units or points of the
-          roster.
+          These are added or subtracted from the total units or points of the roster.
         </FormHelperText>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>

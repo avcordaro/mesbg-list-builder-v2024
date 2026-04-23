@@ -16,21 +16,13 @@ export const ArmyBonuses = ({ roster }: { roster: Roster }) => {
     <Stack>
       {armyListMetadata?.additional_rules?.length > 0 && (
         <>
-          <Typography
-            variant="h6"
-            color="#800000"
-            fontWeight="bold"
-            textAlign="center"
-          >
+          <Typography variant="h6" color="#800000" fontWeight="bold" textAlign="center">
             Additional Rules
           </Typography>
           {armyListMetadata.additional_rules.map((rule, index) => (
             <Typography key={index}>
               &#9679;&nbsp;&nbsp;
-              <Typography
-                component="span"
-                dangerouslySetInnerHTML={{ __html: rule.description }}
-              />
+              <Typography component="span" dangerouslySetInnerHTML={{ __html: rule.description }} />
             </Typography>
           ))}
         </>
@@ -38,13 +30,7 @@ export const ArmyBonuses = ({ roster }: { roster: Roster }) => {
 
       {armyListMetadata?.special_rules?.length > 0 && (
         <>
-          <Typography
-            variant="h6"
-            color="#800000"
-            fontWeight="bold"
-            textAlign="center"
-            sx={{ mt: 2 }}
-          >
+          <Typography variant="h6" color="#800000" fontWeight="bold" textAlign="center" sx={{ mt: 2 }}>
             Special Rules
           </Typography>
           <Box component="ul" sx={{ listStyle: "none", pl: 0, mb: 1 }}>
@@ -65,9 +51,7 @@ export const ArmyBonuses = ({ roster }: { roster: Roster }) => {
                     <Typography>
                       <b>
                         {rule.title}{" "}
-                        {rule.title === "A Troll's Hoard" && (
-                          <i>({tttSpecialUpgrades.length * 50} points)</i>
-                        )}
+                        {rule.title === "A Troll's Hoard" && <i>({tttSpecialUpgrades.length * 50} points)</i>}
                       </b>
                     </Typography>
                   )}
@@ -76,10 +60,7 @@ export const ArmyBonuses = ({ roster }: { roster: Roster }) => {
                       .split("\n")
                       .filter((line) => !!line)
                       .map((line, index) => (
-                        <Typography
-                          key={index}
-                          dangerouslySetInnerHTML={{ __html: line }}
-                        />
+                        <Typography key={index} dangerouslySetInnerHTML={{ __html: line }} />
                       ))}
                   </Stack>
                 </Box>

@@ -5,11 +5,7 @@ import hero_constraint_data from "../../../../assets/data/hero_constraint_data.j
 import { UnitProfileCard } from "../../../../components/atoms/unit-profile/UnitProfileCard.tsx";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
-import {
-  isSelectedUnit,
-  isSiegeEquipment,
-  SelectedUnit,
-} from "../../../../types/roster.ts";
+import { isSelectedUnit, isSiegeEquipment, SelectedUnit } from "../../../../types/roster.ts";
 
 export const ProfileCards = () => {
   const { roster } = useRosterInformation();
@@ -27,11 +23,7 @@ export const ProfileCards = () => {
     if (hero.name === "Azog") {
       // Filter the white warg / signal tower if the option is not chosen.
       return extraProfiles
-        .filter((profile) =>
-          hero.options.find(
-            (option) => option.name === profile && option.quantity === 1,
-          ),
-        )
+        .filter((profile) => hero.options.find((option) => option.name === profile && option.quantity === 1))
         .map((profile) => ({
           profile,
           army: hero.profile_origin,
@@ -40,9 +32,7 @@ export const ProfileCards = () => {
 
     if (hero.name === "Treebeard") {
       // Filter Merry & Pippin's profiles if not chosen as passengers.
-      const hasMerryPippin = hero.options.find(
-        (option) => option.name === "Merry & Pippin" && option.quantity === 1,
-      );
+      const hasMerryPippin = hero.options.find((option) => option.name === "Merry & Pippin" && option.quantity === 1);
       if (hasMerryPippin) {
         return extraProfiles.map((profile) => ({
           profile,
@@ -58,24 +48,22 @@ export const ProfileCards = () => {
     }));
   };
 
-  const allProfiles: { profile: string; army: string }[] =
-    roster.warbands.flatMap(({ hero, units }) => {
-      if (!isSelectedUnit(hero)) return [];
-      const heroProfile = { profile: hero.name, army: hero.profile_origin };
-      const extraProfiles = getExtraProfilesForHero(hero);
-      const unitProfiles = units
-        .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
-        .map((unit: SelectedUnit) => ({
-          profile: unit.name,
-          army: unit.profile_origin,
-        }));
+  const allProfiles: { profile: string; army: string }[] = roster.warbands.flatMap(({ hero, units }) => {
+    if (!isSelectedUnit(hero)) return [];
+    const heroProfile = { profile: hero.name, army: hero.profile_origin };
+    const extraProfiles = getExtraProfilesForHero(hero);
+    const unitProfiles = units
+      .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
+      .map((unit: SelectedUnit) => ({
+        profile: unit.name,
+        army: unit.profile_origin,
+      }));
 
-      return [heroProfile, ...extraProfiles, ...unitProfiles];
-    });
+    return [heroProfile, ...extraProfiles, ...unitProfiles];
+  });
 
   const uniqueProfiles = allProfiles.filter(
-    (item, index, self) =>
-      index === self.findIndex((t) => t.profile === item.profile),
+    (item, index, self) => index === self.findIndex((t) => t.profile === item.profile),
   );
 
   const defaultColums = screen.isMobile ? 2 : screen.isTablet ? 3 : 4;

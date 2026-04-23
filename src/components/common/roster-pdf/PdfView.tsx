@@ -42,45 +42,33 @@ const PrintablePdf = () => {
 
         <Stack gap={1} sx={{ mb: 2 }}>
           {missingProfiles.length > 0 && (
-            <CustomAlert
-              severity="error"
-              title="Some selected units are missing profile data"
-            >
+            <CustomAlert severity="error" title="Some selected units are missing profile data">
               <Typography>
-                Some of the units selected in your roster have no registered
-                profile data. If you see this message, please let us know via{" "}
+                Some of the units selected in your roster have no registered profile data. If you see this message,
+                please let us know via{" "}
                 <a
                   href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2018) - Bug/Correction"
                   style={{
-                    color:
-                      themeContext.mode === "dark"
-                        ? theme.palette.secondary.light
-                        : theme.palette.secondary.dark,
+                    color: themeContext.mode === "dark" ? theme.palette.secondary.light : theme.palette.secondary.dark,
                   }}
                 >
                   support@mesbg-list-builder.com
                 </a>
                 .
               </Typography>
-              <Typography sx={{ mt: 1 }}>
-                The following units have no profile data:
-              </Typography>
+              <Typography sx={{ mt: 1 }}>The following units have no profile data:</Typography>
               <Typography sx={{ mt: 1 }} variant="body2">
                 <i>{JSON.stringify(missingProfiles)}</i>
               </Typography>
             </CustomAlert>
           )}
           <CustomAlert severity="info" title="">
-            Below is a preview of the PDF. You can print it directly or save it
-            as a PDF.{" "}
+            Below is a preview of the PDF. You can print it directly or save it as a PDF.{" "}
             <a
               onClick={() => window.print()}
               href="#"
               style={{
-                color:
-                  themeContext.mode === "dark"
-                    ? theme.palette.secondary.light
-                    : theme.palette.secondary.dark,
+                color: themeContext.mode === "dark" ? theme.palette.secondary.light : theme.palette.secondary.dark,
               }}
             >
               Click here
@@ -91,31 +79,23 @@ const PrintablePdf = () => {
 
         <Box className="print-section">
           <Stack gap={4}>
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfQuickRefTable) && (
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfQuickRefTable) && (
               <QuickReferenceTable profiles={profiles} />
             )}
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfArmyComposition) && <ArmyComposition />}
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfProfiles) && (
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfArmyComposition) && <ArmyComposition />}
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfProfiles) && (
               <UnitProfileList units={profiles} />
             )}
             {(!preferences.enableHidePdfSections ||
               !preferences.hidePdfSpecialRules ||
-              !preferences.hidePdfArmyRules) && (
-              <SpecialRuleList profiles={profiles} />
-            )}
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfHeroicActions) && (
+              !preferences.hidePdfArmyRules) && <SpecialRuleList profiles={profiles} />}
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfHeroicActions) && (
               <HeroicActionList profiles={profiles} />
             )}
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfMagicPowers) && (
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfMagicPowers) && (
               <MagicalPowerList profiles={profiles} />
             )}
-            {(!preferences.enableHidePdfSections ||
-              !preferences.hidePdfStatTrackers) && <StatTrackers />}
+            {(!preferences.enableHidePdfSections || !preferences.hidePdfStatTrackers) && <StatTrackers />}
           </Stack>
         </Box>
       </Container>

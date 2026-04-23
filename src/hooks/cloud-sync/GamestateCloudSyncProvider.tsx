@@ -3,32 +3,17 @@ import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import debounce from "lodash/debounce";
 import isEqual from "lodash/isEqual";
-import {
-  createContext,
-  MouseEvent,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { createContext, MouseEvent, ReactNode, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { useAuth } from "../../firebase/FirebaseAuthContext";
 import { Game } from "../../state/gamemode/gamestate";
 import { useApi } from "./useApi";
 
-const GamestateSyncContext = createContext<
-  (roster: string, gamestate: Game) => void
->(() => {});
+const GamestateSyncContext = createContext<(roster: string, gamestate: Game) => void>(() => {});
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useGamestateSync = () => useContext(GamestateSyncContext);
 
-export const GamestateCloudSyncProvider = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
+export const GamestateCloudSyncProvider = ({ children }: { children: ReactNode }) => {
   const auth = useAuth();
   const { updateGamestate } = useApi();
   const previousRosterRef = useRef<Game | null>(null);

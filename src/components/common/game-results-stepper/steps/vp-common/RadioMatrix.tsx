@@ -1,12 +1,4 @@
-import {
-  Radio,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
+import { Radio, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { ReactNode } from "react";
 
@@ -18,17 +10,9 @@ interface RadioMatrixProps {
   setSelection: (selection: number[]) => void;
 }
 
-const RadioMatrix = ({
-  rows,
-  columns,
-  values,
-  selection,
-  setSelection,
-}: RadioMatrixProps) => {
+const RadioMatrix = ({ rows, columns, values, selection, setSelection }: RadioMatrixProps) => {
   const handleChange = (rowIndex: number, colIndex: number) => {
-    const newSelectedValues = selection.map((row, index) =>
-      index === rowIndex ? values[colIndex] : row,
-    );
+    const newSelectedValues = selection.map((row, index) => (index === rowIndex ? values[colIndex] : row));
 
     setSelection(newSelectedValues);
   };
@@ -41,9 +25,7 @@ const RadioMatrix = ({
             <TableCell></TableCell>
             {columns.map((label, index) => (
               <TableCell key={index} align="center">
-                <Typography sx={{ textWrap: "nowrap", minWidth: "8ch" }}>
-                  {label}
-                </Typography>
+                <Typography sx={{ textWrap: "nowrap", minWidth: "8ch" }}>{label}</Typography>
               </TableCell>
             ))}
           </TableRow>

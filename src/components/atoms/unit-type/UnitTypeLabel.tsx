@@ -6,9 +6,7 @@ export type UnitTypeLabelProps = {
   unitType: string;
 };
 
-export const UnitTypeLabel: FunctionComponent<UnitTypeLabelProps> = ({
-  unitType,
-}) => {
+export const UnitTypeLabel: FunctionComponent<UnitTypeLabelProps> = ({ unitType }) => {
   const { mode } = useThemeContext();
   return (
     <Chip

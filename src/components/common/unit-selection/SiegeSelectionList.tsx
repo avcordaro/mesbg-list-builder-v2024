@@ -11,9 +11,7 @@ export type UnitSelectionListProps = {
   selectEquipment: (equipment: SiegeEquipment) => void;
 };
 
-export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
-  selectEquipment,
-}) => {
+export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({ selectEquipment }) => {
   const { getAdjustedMetaData } = useRosterInformation();
   const { siegeRoster, siegeRole } = getAdjustedMetaData();
 
@@ -21,17 +19,14 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
     return (
       <Stack gap={1.5}>
         <CustomAlert severity="error" title="">
-          The current roster is not eligible for siege equipment. Create a new
-          roster and mark it as a siege roster.
+          The current roster is not eligible for siege equipment. Create a new roster and mark it as a siege roster.
         </CustomAlert>
       </Stack>
     );
   }
 
   const equipment = Object.values(siegeEquipmentData)
-    .filter(
-      (equipment) => siegeRole === "Both" || equipment.siege_role === siegeRole,
-    )
+    .filter((equipment) => siegeRole === "Both" || equipment.siege_role === siegeRole)
     .sort((a, b) => {
       const x = a.name.localeCompare(b.name);
       const y = a.base_points > b.base_points ? -1 : 1;
@@ -43,9 +38,8 @@ export const SiegeSelectionList: FunctionComponent<UnitSelectionListProps> = ({
     <Stack gap={1.5}>
       <Typography color="textSecondary">
         <small>
-          Equipment to be used for siege games. The full details can be found in
-          the &apos;Sieges&apos; section of the main rulebook (pages 146 to
-          148).
+          Equipment to be used for siege games. The full details can be found in the &apos;Sieges&apos; section of the
+          main rulebook (pages 146 to 148).
         </small>
       </Typography>
       {equipment.map((item) => (

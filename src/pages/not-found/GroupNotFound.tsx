@@ -25,16 +25,11 @@ export const GroupNotFound = () => {
       <Typography variant="h4" className="middle-earth">
         Group not found!
       </Typography>
-      <img
-        alt="Image of a broken sword"
-        src={brokenSword}
-        style={{ width: "300px", margin: "auto" }}
-      />
+      <img alt="Image of a broken sword" src={brokenSword} style={{ width: "300px", margin: "auto" }} />
       <Typography sx={{ mb: 2 }}>
         &quot;The group you sought has passed into shadow.
         <br />
-        Its voices are silent, its tale untold, and its road forever
-        untraveled.&quot;
+        Its voices are silent, its tale untold, and its road forever untraveled.&quot;
       </Typography>
       <Box
         sx={{
@@ -45,21 +40,13 @@ export const GroupNotFound = () => {
         }}
       >
         <Stack gap={2}>
-          <Button
-            color="inherit"
-            fullWidth
-            onClick={() => navigate("/rosters")}
-          >
+          <Button color="inherit" fullWidth onClick={() => navigate("/rosters")}>
             Return the your rosters.
           </Button>
           <Button color="inherit" fullWidth onClick={() => navigate("/")}>
             Return to the homepage
           </Button>
-          <Button
-            color="inherit"
-            fullWidth
-            onClick={() => window.open(DISCORD_LINK)}
-          >
+          <Button color="inherit" fullWidth onClick={() => window.open(DISCORD_LINK)}>
             Ask for support
           </Button>
         </Stack>

@@ -22,21 +22,11 @@ export const LeaderToggle: FunctionComponent<HeroLeaderToggleProps> = ({
 }) => {
   const { preferences } = useUserPreferences();
 
-  if (
-    !isLeader &&
-    isLeaderCompulsory &&
-    !preferences.allowCompulsoryGeneralDelete
-  )
-    return <></>;
+  if (!isLeader && isLeaderCompulsory && !preferences.allowCompulsoryGeneralDelete) return <></>;
 
   const textColor = isLeader ? "success" : "default";
   return (
-    <Stack
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-      color={textColor}
-    >
+    <Stack direction="row" justifyContent="center" alignItems="center" color={textColor}>
       <Typography color={textColor} display="flex" justifyContent="center">
         <GiQueenCrown />
       </Typography>
@@ -44,9 +34,7 @@ export const LeaderToggle: FunctionComponent<HeroLeaderToggleProps> = ({
         name="leader-toggle"
         checked={isLeader}
         color={textColor}
-        disabled={
-          isLeaderCompulsory && !preferences.allowCompulsoryGeneralDelete
-        }
+        disabled={isLeaderCompulsory && !preferences.allowCompulsoryGeneralDelete}
         onChange={(_, checked) => handleToggle(checked)}
         data-test-id={testId}
         data-test-unit-name={testName}

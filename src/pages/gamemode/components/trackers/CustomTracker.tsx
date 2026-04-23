@@ -11,9 +11,7 @@ type CustomTrackerProps = {
   tracker: CustomTrackerType;
 };
 
-export const CustomTracker: FunctionComponent<CustomTrackerProps> = ({
-  tracker,
-}) => {
+export const CustomTracker: FunctionComponent<CustomTrackerProps> = ({ tracker }) => {
   const { rosterId } = useParams();
   const screen = useScreenSize();
   const { gameState, updateGameState } = useGameModeState();
@@ -24,9 +22,7 @@ export const CustomTracker: FunctionComponent<CustomTrackerProps> = ({
   const updateTrackerValue = (newValue: number) => {
     updateGameState(rosterId, {
       customTrackers: trackers.map((otherTracker) =>
-        otherTracker.id !== tracker.id
-          ? otherTracker
-          : { ...otherTracker, value: newValue },
+        otherTracker.id !== tracker.id ? otherTracker : { ...otherTracker, value: newValue },
       ),
     });
   };
@@ -34,9 +30,7 @@ export const CustomTracker: FunctionComponent<CustomTrackerProps> = ({
   const updateTrackerLabel = (newLabel: string) => {
     updateGameState(rosterId, {
       customTrackers: trackers.map((otherTracker) =>
-        otherTracker.id !== tracker.id
-          ? otherTracker
-          : { ...otherTracker, name: newLabel },
+        otherTracker.id !== tracker.id ? otherTracker : { ...otherTracker, name: newLabel },
       ),
     });
   };
@@ -52,27 +46,13 @@ export const CustomTracker: FunctionComponent<CustomTrackerProps> = ({
       key={tracker.id}
       sx={[
         { p: 0.5, pb: 1.5 },
-        screen.isTablet
-          ? { flex: "1 1 33%", minWidth: "33%" }
-          : { flex: "1 1 25%", minWidth: "25%" },
+        screen.isTablet ? { flex: "1 1 33%", minWidth: "33%" } : { flex: "1 1 25%", minWidth: "25%" },
       ]}
       elevation={5}
     >
-      <Stack
-        justifyContent={screen.isMobile ? "space-between" : "center"}
-        alignItems="center"
-        gap={1}
-      >
-        <EditableTrackerLabel
-          label={tracker.name}
-          updateLabel={updateTrackerLabel}
-          removeTracker={removeTracker}
-        />
-        <Counter
-          value={tracker.value}
-          maxValue={tracker.maxValue}
-          update={updateTrackerValue}
-        />
+      <Stack justifyContent={screen.isMobile ? "space-between" : "center"} alignItems="center" gap={1}>
+        <EditableTrackerLabel label={tracker.name} updateLabel={updateTrackerLabel} removeTracker={removeTracker} />
+        <Counter value={tracker.value} maxValue={tracker.maxValue} update={updateTrackerValue} />
       </Stack>
     </Paper>
   );

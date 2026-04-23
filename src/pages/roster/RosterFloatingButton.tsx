@@ -1,19 +1,7 @@
-import {
-  Close,
-  Download,
-  History,
-  Print,
-  Redo,
-  Undo,
-} from "@mui/icons-material";
+import { Close, Download, History, Print, Redo, Undo } from "@mui/icons-material";
 import SaveIcon from "@mui/icons-material/Save";
 import ShareIcon from "@mui/icons-material/Share";
-import {
-  Badge,
-  SpeedDial,
-  SpeedDialAction,
-  SpeedDialIcon,
-} from "@mui/material";
+import { Badge, SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useEffect, useRef, useState } from "react";
 import { GiRollingDices } from "react-icons/gi";
@@ -33,8 +21,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
   const { mode } = useThemeContext();
   const { syncPending } = useRosterSync();
   const { setCurrentModal } = useAppState();
-  const { undo, redo, pastStates, futureStates, clear } =
-    useTemporalRosterBuildingState((state) => state);
+  const { undo, redo, pastStates, futureStates, clear } = useTemporalRosterBuildingState((state) => state);
   const { rosterId } = useParams();
 
   const speedDialRef = useRef<HTMLDivElement | null>(null);
@@ -63,8 +50,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
     {
       icon: <GiRollingDices size="1.8rem" />,
       name: "Tabletop Simulator Export",
-      callback: () =>
-        setCurrentModal(ModalTypes.TABLETOP_SIM_EXPORT, { roster }),
+      callback: () => setCurrentModal(ModalTypes.TABLETOP_SIM_EXPORT, { roster }),
       disabled: roster.metadata.units === 0,
     },
     {
@@ -85,8 +71,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
       if (!event.ctrlKey) return;
 
       if (event.key === "z" && !event.shiftKey) undo();
-      else if (event.key === "y" || (event.shiftKey && event.key === "z"))
-        redo();
+      else if (event.key === "y" || (event.shiftKey && event.key === "z")) redo();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -146,9 +131,7 @@ export const RosterFloatingButton = ({ roster }: { roster: RosterType }) => {
         icon={<SpeedDialIcon icon={<History />} openIcon={<Close />} />}
         open={redoOpen}
         onClick={() => setRedoOpen((x) => !x)}
-        hidden={
-          fabOpen || (pastStates.length === 0 && futureStates.length === 0)
-        }
+        hidden={fabOpen || (pastStates.length === 0 && futureStates.length === 0)}
         FabProps={{
           sx: {
             color: "black",

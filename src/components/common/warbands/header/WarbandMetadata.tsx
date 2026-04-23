@@ -27,9 +27,7 @@ export const WarbandMetadata: FunctionComponent<WarbandMetadataProps> = ({
       <Typography color="white">
         Points: <b>{points}</b>
       </Typography>
-      <Typography
-        color={maxUnits !== "-" && units > maxUnits ? "warning" : "white"}
-      >
+      <Typography color={maxUnits !== "-" && units > maxUnits ? "warning" : "white"}>
         Units:{" "}
         <b>
           {units} / {maxUnits}

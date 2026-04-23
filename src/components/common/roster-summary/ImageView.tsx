@@ -30,9 +30,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
     const unitTotals = getSumOfUnits(roster);
     const [screenshotting, setScreenshotting] = useState(false);
 
-    const isCustomRoster = ["Custom: Good", "Custom: Evil"].includes(
-      roster.armyList,
-    );
+    const isCustomRoster = ["Custom: Good", "Custom: Evil"].includes(roster.armyList);
     const hasLegacyUnits =
       roster.warbands
         .flatMap((wb) => [wb.hero, ...wb.units])
@@ -51,8 +49,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
           .then((dataUrl) => {
             setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
               screenshot: dataUrl,
-              onClose: () =>
-                setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),
+              onClose: () => setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),
             });
             setScreenshotting(false);
           })
@@ -65,10 +62,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
     }));
 
     return (
-      <Box
-        id="rosterImageView"
-        sx={screenshotting ? { width: "700px", p: 0.2 } : { p: 0.2 }}
-      >
+      <Box id="rosterImageView" sx={screenshotting ? { width: "700px", p: 0.2 } : { p: 0.2 }}>
         <WithRibbon
           label={isLegacyArmy ? "Legacy Army" : "Includes Legacy"}
           hideRibbon={!isLegacyArmy && !hasLegacyUnits}
@@ -84,10 +78,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
               color: "#363636",
             }}
           >
-            <HeaderBlock
-              includeRosterName={includeRosterName}
-              roster={roster}
-            />
+            <HeaderBlock includeRosterName={includeRosterName} roster={roster} />
             <Divider sx={{ height: 2, bgcolor: "#800000" }} />
             <Stack gap={2} sx={{ py: 2 }}>
               {!showUnitTotals &&

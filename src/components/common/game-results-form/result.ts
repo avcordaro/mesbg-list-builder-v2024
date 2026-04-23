@@ -4,11 +4,7 @@ export type Result = "Won" | "Lost" | "Draw";
 
 export const results: Result[] = ["Won", "Lost", "Draw"];
 
-export const calculateResult = (
-  vp: string | number,
-  ovp: string | number,
-  originalResult: Result,
-): Result => {
+export const calculateResult = (vp: string | number, ovp: string | number, originalResult: Result): Result => {
   if (!hasValue(vp) || !hasValue(ovp)) {
     return originalResult;
   }

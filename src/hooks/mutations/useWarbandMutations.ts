@@ -6,29 +6,18 @@ import { useAppState } from "../../state/app";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { emptyWarband as newWarband } from "../../state/roster-building/roster";
 import { SiegeEquipment, Unit } from "../../types/mesbg-data.types.ts";
-import {
-  FreshUnit,
-  isSelectedUnit,
-  Roster,
-  SelectedUnit,
-} from "../../types/roster.ts";
+import { FreshUnit, isSelectedUnit, Roster, SelectedUnit } from "../../types/roster.ts";
 import { useCalculator } from "../calculations-and-displays/useCalculator.ts";
 
 import { useRosterSync } from "../cloud-sync/RosterCloudSyncProvider.tsx";
 
 function getBrotherId(unit: Unit, [left, right]: [string, string]) {
   const otherBrotherName = unit.name === left ? right : left;
-  const otherBrotherId = unit.model_id.replace(
-    /\]\s.*$/,
-    `] ${otherBrotherName.toLowerCase()}`,
-  );
+  const otherBrotherId = unit.model_id.replace(/\]\s.*$/, `] ${otherBrotherName.toLowerCase()}`);
   return otherBrotherId;
 }
 
-function addWarbandWithSpecificUnit(
-  updatedRoster: Roster,
-  otherBrotherId: string,
-) {
+function addWarbandWithSpecificUnit(updatedRoster: Roster, otherBrotherId: string) {
   const rosterContainsTheOtherBrother = updatedRoster.warbands
     .map((wb) => wb.hero)
     .filter(isSelectedUnit)
@@ -54,37 +43,28 @@ function addWarbandWithSpecificUnit(
   }
 }
 
-export const useWarbandMutations = (
-  rosterId: string | null,
-  warbandId: string,
-) => {
+export const useWarbandMutations = (rosterId: string | null, warbandId: string) => {
   const calculator = useCalculator();
   const { sync } = useRosterSync();
 
   const triggerAlert = useAppState((state) => state.triggerAlert);
   const openSidebar = useAppState((state) => state.openSidebar);
-  const updateBuilderSidebar = useRosterBuildingState(
-    (state) => state.updateBuilderSidebar,
-  );
-  const [roster, recalculateAndUpdate] = useRosterBuildingState(
-    (state): [Roster, (roster: Roster) => void] => [
-      state.rosters.find(({ id }) => id === rosterId),
-      (roster) => {
-        const rosterUpdate = calculator.recalculateRoster({
-          ...roster,
-          warbands: roster.warbands.map(calculator.recalculateWarband),
-        });
-        state.updateRoster(rosterUpdate);
-        sync(rosterUpdate);
-      },
-    ],
-  );
+  const updateBuilderSidebar = useRosterBuildingState((state) => state.updateBuilderSidebar);
+  const [roster, recalculateAndUpdate] = useRosterBuildingState((state): [Roster, (roster: Roster) => void] => [
+    state.rosters.find(({ id }) => id === rosterId),
+    (roster) => {
+      const rosterUpdate = calculator.recalculateRoster({
+        ...roster,
+        warbands: roster.warbands.map(calculator.recalculateWarband),
+      });
+      state.updateRoster(rosterUpdate);
+      sync(rosterUpdate);
+    },
+  ]);
 
   function handleHeroSelection(unit: Unit) {
     console.debug(`Select hero for ${warbandId}: ${unit.name}`);
-    const points = unit.options
-      .filter((o) => o.included)
-      .reduce((a, b) => a + b.points * b.quantity, unit.base_points);
+    const points = unit.options.filter((o) => o.included).reduce((a, b) => a + b.points * b.quantity, unit.base_points);
 
     const updatedRoster: Roster = {
       ...roster,
@@ -294,9 +274,7 @@ export const useWarbandMutations = (
     console.debug(`Empty warband ${warbandId}`);
     const updatedRoster: Roster = {
       ...roster,
-      warbands: roster.warbands.map((wb) =>
-        wb.id === warbandId ? { ...wb, units: [] } : wb,
-      ),
+      warbands: roster.warbands.map((wb) => (wb.id === warbandId ? { ...wb, units: [] } : wb)),
     };
     recalculateAndUpdate(updatedRoster);
     triggerAlert(AlertTypes.EMPTY_WARBAND_SUCCESS);
@@ -331,17 +309,11 @@ export const useWarbandMutations = (
         {
           ...warband,
           id: newWarbandId,
-          hero: warband.hero?.unique
-            ? null
-            : { ...warband.hero, id: randomUuid() },
+          hero: warband.hero?.unique ? null : { ...warband.hero, id: randomUuid() },
           units: [
             ...warband.units
               .filter(isSelectedUnit)
-              .map((unit) =>
-                unit.unique
-                  ? { id: randomUuid() }
-                  : { ...unit, id: randomUuid() },
-              ),
+              .map((unit) => (unit.unique ? { id: randomUuid() } : { ...unit, id: randomUuid() })),
           ],
           meta: {
             ...warband.meta,

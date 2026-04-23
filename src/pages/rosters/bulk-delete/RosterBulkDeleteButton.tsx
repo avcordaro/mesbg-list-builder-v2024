@@ -18,13 +18,7 @@ export const RosterBulkDeleteButton = ({
         <Button
           sx={{ width: "5ch" }}
           variant="outlined"
-          color={
-            isDeleting
-              ? selectedRosters.length > 0
-                ? "error"
-                : "warning"
-              : "inherit"
-          }
+          color={isDeleting ? (selectedRosters.length > 0 ? "error" : "warning") : "inherit"}
           aria-label="bulk delete"
           onClick={toggleBulkDelete}
         >

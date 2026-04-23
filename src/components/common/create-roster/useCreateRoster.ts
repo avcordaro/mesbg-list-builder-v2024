@@ -37,9 +37,7 @@ export const useCreateRoster = () => {
       return rosterNameValue;
     }
     const regex = new RegExp(`^${armyList.army} ?(\\(\\d+\\))?$`);
-    const matchingRosterNames = rosters
-      .filter((roster) => regex.test(roster.name))
-      .map((r) => r.name);
+    const matchingRosterNames = rosters.filter((roster) => regex.test(roster.name)).map((r) => r.name);
 
     if (matchingRosterNames.length === 0) return `${armyList.army}`;
     const maxNameIndex = Math.max(
@@ -52,11 +50,7 @@ export const useCreateRoster = () => {
     return `${armyList.army} (${maxNameIndex + 1})`;
   }
 
-  function handleCreateNewRoster(
-    e: MouseEvent,
-    enableSiege?: boolean,
-    rosterSiegeRole?: "Attacker" | "Defender",
-  ) {
+  function handleCreateNewRoster(e: MouseEvent, enableSiege?: boolean, rosterSiegeRole?: "Attacker" | "Defender") {
     e.preventDefault();
 
     if (maxRosterPoints !== "" && Number(maxRosterPoints) <= 0) return;

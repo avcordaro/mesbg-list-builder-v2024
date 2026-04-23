@@ -1,10 +1,4 @@
-import {
-  Collapse,
-  Stack,
-  StepContent,
-  StepLabel,
-  TextField,
-} from "@mui/material";
+import { Collapse, Stack, StepContent, StepLabel, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { ArmyPicker } from "../../../atoms/army-selector/ArmyPicker.tsx";
@@ -32,9 +26,7 @@ export const OpponentArmyStep: FunctionComponent<StepProps> = ({
         Players - Opponent Name & Army
       </StepLabel>
       <StepContent>
-        <Typography>
-          Some extra description on what this step is about
-        </Typography>
+        <Typography>Some extra description on what this step is about</Typography>
         <Stack gap={2} sx={{ my: 2 }}>
           <TextField
             fullWidth
@@ -54,9 +46,7 @@ export const OpponentArmyStep: FunctionComponent<StepProps> = ({
               })
             }
             required
-            defaultSelection={formValues.opponentArmies
-              .split(",")
-              .map((o) => o.trim())}
+            defaultSelection={formValues.opponentArmies.split(",").map((o) => o.trim())}
           />
         </Stack>
       </StepContent>

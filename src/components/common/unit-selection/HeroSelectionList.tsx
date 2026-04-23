@@ -14,23 +14,15 @@ export type HeroSelectionListProps = {
   selectUnit: (unit: Unit) => void;
 };
 
-export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
-  armyList,
-  selectUnit,
-}) => {
+export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({ armyList, selectUnit }) => {
   const selectedModels = useRosterInformation().getSetOfModelIds();
   const [filter, setFilter] = useState("");
 
   const heroes: Unit[] = Object.values(mesbgData)
-    .filter(
-      (unit) =>
-        unit.unit_type.includes("Hero") || unit.unit_type === "Siege Engine",
-    )
+    .filter((unit) => unit.unit_type.includes("Hero") || unit.unit_type === "Siege Engine")
     .filter((unit) => unit.army_list === armyList)
     .filter(handleSpecialRestriction)
-    .filter(
-      (unit: Unit) => !unit.unique || !selectedModels.includes(unit.model_id),
-    )
+    .filter((unit: Unit) => !unit.unique || !selectedModels.includes(unit.model_id))
     .sort(byHeroicTier);
 
   return (
@@ -45,15 +37,9 @@ export const HeroSelectionList: FunctionComponent<HeroSelectionListProps> = ({
         }}
       />
       {heroes
-        .filter((hero) =>
-          hero.name.toLowerCase().includes(filter.toLowerCase()),
-        )
+        .filter((hero) => hero.name.toLowerCase().includes(filter.toLowerCase()))
         .map((hero) => (
-          <WithRibbon
-            key={hero.model_id}
-            label="Legacy"
-            hideRibbon={!hero.legacy}
-          >
+          <WithRibbon key={hero.model_id} label="Legacy" hideRibbon={!hero.legacy}>
             <UnitSelectionButton unit={hero} onClick={() => selectUnit(hero)} />
           </WithRibbon>
         ))}
