@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useLockContext } from "../../../../hooks/lock/useLockContext.ts";
 import { Roster } from "../../../../types/roster";
 import { getComparator } from "../../sorting/sorting.ts";
 import { RosterDroppable } from "./RosterDroppable.tsx";
@@ -24,6 +25,7 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
 }) => {
   const [searchParams] = useSearchParams();
   const visibleRosters = useRosterFilter(rosters, filter);
+  const { lock } = useLockContext();
 
   return visibleRosters
     .sort(getComparator(searchParams))
@@ -33,7 +35,7 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
         roster={roster}
         index={index}
         isDragged={dragged}
-        isDisabled={!!filter}
+        isDisabled={lock || !!filter}
         isDeleting={deleting}
         isMarkedForDeletion={selectedRosters.includes(roster.id)}
         markForDeletion={() => selectRoster(roster.id)}

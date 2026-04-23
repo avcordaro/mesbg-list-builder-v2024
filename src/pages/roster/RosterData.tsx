@@ -89,7 +89,7 @@ export const RosterData = ({ roster }: { roster: Roster }) => {
               : 2,
         }}
       >
-        <LockContextProvider>
+        <LockContextProvider settingsKey="dragAndDropRosters">
           <Box
             sx={{
               width: screen.isDesktop
