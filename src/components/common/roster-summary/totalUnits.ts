@@ -5,8 +5,14 @@ const defaultOptions = {
   ignoreOptions: false,
 };
 
-export const getSumOfUnits = (roster: Roster, options: { ignoreOptions: boolean } = defaultOptions) => {
-  const units = roster.warbands.flatMap((warband) => [warband.hero, ...warband.units]);
+export const getSumOfUnits = (
+  roster: Roster,
+  options: { ignoreOptions: boolean } = defaultOptions,
+) => {
+  const units = roster.warbands.flatMap((warband) => [
+    warband.hero,
+    ...warband.units,
+  ]);
 
   const totalledUnits: SelectedUnit[] = Object.values(
     Object.create(units)

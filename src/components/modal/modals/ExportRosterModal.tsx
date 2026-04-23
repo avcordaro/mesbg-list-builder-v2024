@@ -1,4 +1,12 @@
-import { Button, DialogActions, DialogContent, FormControl, FormHelperText, Input, InputLabel } from "@mui/material";
+import {
+  Button,
+  DialogActions,
+  DialogContent,
+  FormControl,
+  FormHelperText,
+  Input,
+  InputLabel,
+} from "@mui/material";
 import { useState } from "react";
 import { useExport } from "../../../hooks/export/useExport.ts";
 import { useAppState } from "../../../state/app";
@@ -35,10 +43,16 @@ export const ExportRosterModal = () => {
     <>
       <DialogContent>
         <CustomAlert severity="info" title="">
-          You can export your roster to a <i>.json</i> (or to your clipboard). This allows you to reimport your roster
-          on another device or when you lose your browser data.
+          You can export your roster to a <i>.json</i> (or to your clipboard).
+          This allows you to reimport your roster on another device or when you
+          lose your browser data.
         </CustomAlert>
-        <FormControl error={!filenameValid} variant="standard" fullWidth sx={{ mt: 2 }}>
+        <FormControl
+          error={!filenameValid}
+          variant="standard"
+          fullWidth
+          sx={{ mt: 2 }}
+        >
           <InputLabel htmlFor="component-error">Roster filename</InputLabel>
           <Input
             value={filename}
@@ -50,12 +64,20 @@ export const ExportRosterModal = () => {
             }}
             endAdornment=".json"
           />
-          {!filenameValid && <FormHelperText id="component-error-text">Filename cannot be empty</FormHelperText>}
+          {!filenameValid && (
+            <FormHelperText id="component-error-text">
+              Filename cannot be empty
+            </FormHelperText>
+          )}
         </FormControl>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button onClick={handleCopy}>copy to clipboard</Button>
-        <Button variant="contained" onClick={handleExport} disabled={!filenameValid}>
+        <Button
+          variant="contained"
+          onClick={handleExport}
+          disabled={!filenameValid}
+        >
           Save file
         </Button>
       </DialogActions>

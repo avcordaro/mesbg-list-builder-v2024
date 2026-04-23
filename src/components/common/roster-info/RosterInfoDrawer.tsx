@@ -7,7 +7,13 @@ import { RosterInformation } from "./RosterInformation.tsx";
 
 export const drawerWidth = 55;
 
-export const RosterInfoDrawer = ({ roster, editable }: { roster: Roster; editable?: boolean }) => {
+export const RosterInfoDrawer = ({
+  roster,
+  editable,
+}: {
+  roster: Roster;
+  editable?: boolean;
+}) => {
   const screen = useScreenSize();
   const [infoOpen, setInfoOpen] = useState(false);
 
@@ -17,8 +23,15 @@ export const RosterInfoDrawer = ({ roster, editable }: { roster: Roster; editabl
       setInfoOpen(true);
     };
 
-    window.addEventListener("mlb-event--open-roster-info", handleOpenRosterInfo);
-    return () => window.removeEventListener("mlb-event--open-roster-info", handleOpenRosterInfo);
+    window.addEventListener(
+      "mlb-event--open-roster-info",
+      handleOpenRosterInfo,
+    );
+    return () =>
+      window.removeEventListener(
+        "mlb-event--open-roster-info",
+        handleOpenRosterInfo,
+      );
   }, [roster]);
 
   return (
@@ -34,7 +47,11 @@ export const RosterInfoDrawer = ({ roster, editable }: { roster: Roster; editabl
       open={infoOpen}
     >
       {screen.isDesktop && <MenuDrawerHeader />}
-      <RosterInformation roster={roster} onClose={() => setInfoOpen(false)} editable={editable} />
+      <RosterInformation
+        roster={roster}
+        onClose={() => setInfoOpen(false)}
+        editable={editable}
+      />
     </Drawer>
   );
 };

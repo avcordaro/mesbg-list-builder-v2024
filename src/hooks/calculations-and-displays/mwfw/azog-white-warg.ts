@@ -4,14 +4,19 @@ import { SelectedUnit } from "../../../types/roster.ts";
 import { selectedOptionWithName } from "../../../utils/options.ts";
 import { MwfwUpdater } from "../useMwfMutations.ts";
 
-export const handledModels = ["[pits-of-dol-guldur] azog-the-defiler", "[azog's-hunters] azog-the-defiler"];
+export const handledModels = [
+  "[pits-of-dol-guldur] azog-the-defiler",
+  "[azog's-hunters] azog-the-defiler",
+];
 
 export const handler: MwfwUpdater = {
   isMatchingUnit(unitId: string): boolean {
     return handledModels.includes(unitId);
   },
   update(unit: SelectedUnit, options: Option[]): SelectedUnit["MWFW"] {
-    const hasTheWhiteWarg = !!options.find(selectedOptionWithName("The White Warg"));
+    const hasTheWhiteWarg = !!options.find(
+      selectedOptionWithName("The White Warg"),
+    );
 
     const untouchedMWFW = mesbgData[unit.model_id].MWFW;
 

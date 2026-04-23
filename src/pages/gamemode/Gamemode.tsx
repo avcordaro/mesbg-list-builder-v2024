@@ -4,7 +4,10 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { CustomAlert } from "../../components/atoms/alert/CustomAlert.tsx";
-import { drawerWidth, RosterInfoDrawer } from "../../components/common/roster-info/RosterInfoDrawer.tsx";
+import {
+  drawerWidth,
+  RosterInfoDrawer,
+} from "../../components/common/roster-info/RosterInfoDrawer.tsx";
 import { useRosterInformation } from "../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useScreenSize } from "../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useGamestateSync } from "../../hooks/cloud-sync/GamestateCloudSyncProvider.tsx";
@@ -54,7 +57,11 @@ export const Gamemode = () => {
   useEffect(() => {
     if (!game) return;
 
-    if (prevGame.current !== undefined && game !== prevGame.current && !firstRenderRef.current) {
+    if (
+      prevGame.current !== undefined &&
+      game !== prevGame.current &&
+      !firstRenderRef.current
+    ) {
       syncGame(roster.id, game);
     }
 
@@ -81,7 +88,10 @@ export const Gamemode = () => {
     await api.createGamestate(roster.id, game);
   };
 
-  const changedSinceStart = hasChanged(roster.metadata, gameState[roster.id]?.rosterMetadata);
+  const changedSinceStart = hasChanged(
+    roster.metadata,
+    gameState[roster.id]?.rosterMetadata,
+  );
 
   return (
     <Container maxWidth={false} sx={{ p: 2 }}>
@@ -108,7 +118,8 @@ export const Gamemode = () => {
           >
             <Typography>
               Your roster was changed after starting this match.
-              <Button onClick={resetMatch}>Click here</Button> to reset your game to your current roster.
+              <Button onClick={resetMatch}>Click here</Button> to reset your
+              game to your current roster.
             </Typography>
           </CustomAlert>
         )}
@@ -118,7 +129,9 @@ export const Gamemode = () => {
             <Tab label="Army overview" />
             <Tab label="Profiles" />
             <Tab label="Stats table" />
-            {!screen.isDesktop && !screen.isTooSmall && <Tab label="Roster Info" />}
+            {!screen.isDesktop && !screen.isTooSmall && (
+              <Tab label="Roster Info" />
+            )}
           </Tabs>
         </Box>
         <TabPanel tabName="trackers" visible={value === 0}>

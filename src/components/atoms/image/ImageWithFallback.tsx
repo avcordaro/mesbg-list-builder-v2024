@@ -26,5 +26,13 @@ export const ImageWithFallback: FunctionComponent<ImageWithFallbackProps> = ({
     setUsingFallback(true);
   };
 
-  return <img src={source} style={style} className={className} onError={onError} alt={alt} />;
+  return (
+    <img
+      src={source}
+      style={style}
+      className={className}
+      onError={onError}
+      alt={alt}
+    />
+  );
 };

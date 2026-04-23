@@ -7,7 +7,9 @@ export const useScrollToElement = () => {
 
   return function (scrollId: string, offset: number = 70) {
     if (!isMobile) return;
-    const element = document.querySelectorAll(`[data-scroll-id="${scrollId}"]`).item(0);
+    const element = document
+      .querySelectorAll(`[data-scroll-id="${scrollId}"]`)
+      .item(0);
     if (!element) {
       console.error(`No element with scroll-id="${scrollId}".`);
       return;

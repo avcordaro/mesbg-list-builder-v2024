@@ -9,7 +9,10 @@ export const StartGameButton = ({ roster }: { roster: RosterType }) => {
   const api = useApi();
   const navigate = useNavigate();
 
-  const [startNewGame, hasStartedGame] = useGameModeState((state) => [state.startNewGame, state.gameState[roster.id]]);
+  const [startNewGame, hasStartedGame] = useGameModeState((state) => [
+    state.startNewGame,
+    state.gameState[roster.id],
+  ]);
 
   return (
     <Button

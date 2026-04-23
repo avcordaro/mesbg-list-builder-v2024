@@ -1,6 +1,9 @@
 import { Draggable, Droppable } from "@hello-pangea/dnd";
 import Box from "@mui/material/Box";
-import { CARD_SIZE_IN_PX, RosterSummaryCard } from "../../../../components/common/roster-card/RosterSummaryCard.tsx";
+import {
+  CARD_SIZE_IN_PX,
+  RosterSummaryCard,
+} from "../../../../components/common/roster-card/RosterSummaryCard.tsx";
 import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { Roster } from "../../../../types/roster.ts";
 
@@ -25,7 +28,10 @@ export const RosterDroppable = ({
 }: RosterDroppableProps) => {
   const screen = useScreenSize();
   return (
-    <Droppable droppableId={"roster:" + roster.id} isDropDisabled={isDisabled || isDragged?.startsWith("group")}>
+    <Droppable
+      droppableId={"roster:" + roster.id}
+      isDropDisabled={isDisabled || isDragged?.startsWith("group")}
+    >
       {(provided, snapshot) => {
         return (
           <Box
@@ -49,7 +55,11 @@ export const RosterDroppable = ({
                   },
             ]}
           >
-            <Draggable draggableId={"roster:" + roster.id} index={index} isDragDisabled={isDisabled}>
+            <Draggable
+              draggableId={"roster:" + roster.id}
+              index={index}
+              isDragDisabled={isDisabled}
+            >
               {(draggableProvided, draggableSnapshot) => {
                 const { style, ...props } = draggableProvided.draggableProps;
                 return (
@@ -62,17 +72,21 @@ export const RosterDroppable = ({
                     <Box
                       sx={[
                         {
-                          width: screen.isTooSmall ? "100%" : `${CARD_SIZE_IN_PX}px`,
+                          width: screen.isTooSmall
+                            ? "100%"
+                            : `${CARD_SIZE_IN_PX}px`,
                           aspectRatio: "1/1",
                         },
                         draggableSnapshot.isDragging
                           ? {
                               transform: "rotate(1.5deg)",
                               boxShadow: "1rem 1rem 1rem #00000099",
-                              transition: "transform 0.3s ease, boxShadow 0.3s ease",
+                              transition:
+                                "transform 0.3s ease, boxShadow 0.3s ease",
                             }
                           : {
-                              transition: "transform 0.3s ease, boxShadow 0.3s ease",
+                              transition:
+                                "transform 0.3s ease, boxShadow 0.3s ease",
                             },
                       ]}
                     >
@@ -87,7 +101,9 @@ export const RosterDroppable = ({
                 );
               }}
             </Draggable>
-            <Box sx={{ "&>*": { height: "0px !important" } }}>{provided.placeholder}</Box>
+            <Box sx={{ "&>*": { height: "0px !important" } }}>
+              {provided.placeholder}
+            </Box>
           </Box>
         );
       }}

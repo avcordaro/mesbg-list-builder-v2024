@@ -5,7 +5,9 @@ type LockContextType = {
   toggleLock: () => void;
 };
 
-export const LockContext = createContext<LockContextType | undefined>(undefined);
+export const LockContext = createContext<LockContextType | undefined>(
+  undefined,
+);
 
 export const LockContextProvider = ({ children }: { children: ReactNode }) => {
   const [lock, setLock] = useState(false);

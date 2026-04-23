@@ -4,15 +4,30 @@ import DialogContent from "@mui/material/DialogContent";
 import Stack from "@mui/material/Stack";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import { PropsWithChildren, SyntheticEvent, MouseEvent, useRef, useState } from "react";
+import {
+  PropsWithChildren,
+  SyntheticEvent,
+  MouseEvent,
+  useRef,
+  useState,
+} from "react";
 import { useAppState } from "../../../state/app";
-import { CreateCustomRoster, CreateCustomRosterHandlers } from "../../common/create-roster/CreateCustomRoster.tsx";
+import {
+  CreateCustomRoster,
+  CreateCustomRosterHandlers,
+} from "../../common/create-roster/CreateCustomRoster.tsx";
 import {
   CreateMatchedPlayRoster,
   CreateMatchedPlayRosterHandlers,
 } from "../../common/create-roster/CreateMatchedPlayRoster.tsx";
-import { CreateSiegeRoster, CreateSiegeRosterHandlers } from "../../common/create-roster/CreateSiegeRoster.tsx";
-import { ImportRoster, ImportRosterHandlers } from "../../common/create-roster/ImportRoster.tsx";
+import {
+  CreateSiegeRoster,
+  CreateSiegeRosterHandlers,
+} from "../../common/create-roster/CreateSiegeRoster.tsx";
+import {
+  ImportRoster,
+  ImportRosterHandlers,
+} from "../../common/create-roster/ImportRoster.tsx";
 
 export const CreateNewRosterModal = () => {
   const { closeModal } = useAppState();
@@ -44,7 +59,12 @@ export const CreateNewRosterModal = () => {
     const { children, value } = props;
 
     return (
-      <div role="tabpanel" hidden={value !== activeTab} id={`${value}-tab`} aria-labelledby={`${value}-tab`}>
+      <div
+        role="tabpanel"
+        hidden={value !== activeTab}
+        id={`${value}-tab`}
+        aria-labelledby={`${value}-tab`}
+      >
         {value === activeTab && <Stack gap={1}>{children}</Stack>}
       </div>
     );
@@ -82,7 +102,11 @@ export const CreateNewRosterModal = () => {
         >
           Cancel
         </Button>
-        <Button variant="contained" onClick={createNewRoster} data-test-id="dialog--submit-button">
+        <Button
+          variant="contained"
+          onClick={createNewRoster}
+          data-test-id="dialog--submit-button"
+        >
           Create roster
         </Button>
       </DialogActions>

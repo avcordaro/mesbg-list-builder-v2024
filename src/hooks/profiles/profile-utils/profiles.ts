@@ -1,7 +1,12 @@
 import { profileData } from "../../../assets/data.ts";
 import { Option, StatModifier } from "../../../types/mesbg-data.types.ts";
 import { Stats } from "../../../types/profile-data.types.ts";
-import { isSelectedUnit, Roster, SelectedUnit, Warband } from "../../../types/roster.ts";
+import {
+  isSelectedUnit,
+  Roster,
+  SelectedUnit,
+  Warband,
+} from "../../../types/roster.ts";
 import { selectedOptionWithName } from "../../../utils/options.ts";
 import { getAdditionalStats } from "./additional-profiles.ts";
 import { combineProfiles, duplicateProfiles } from "./deduplication.ts";
@@ -17,9 +22,12 @@ type ProfileList = {
 
 export const isMissingProfile = (
   unit: Profile[] | { missing: true; profile: string },
-): unit is { missing: true; profile: string } => !!(unit as { missing: true; profile: string })?.missing === true;
+): unit is { missing: true; profile: string } =>
+  !!(unit as { missing: true; profile: string })?.missing === true;
 
-const sumModifiers = (modifiers: StatModifier[]): Record<keyof Stats, number> => {
+const sumModifiers = (
+  modifiers: StatModifier[],
+): Record<keyof Stats, number> => {
   return modifiers.reduce(
     (acc, { stat, mod }) => {
       acc[stat] = (acc[stat] || 0) + mod;
@@ -58,7 +66,8 @@ const getCorrectedProfileBasedOnOptionSelection = (
   originalStats: Stats,
 ): { suffix: string; correctedStats: Partial<Stats> } => {
   const modifiers = options.filter(
-    (option) => option.quantity > 0 && !!option.modifiers && option.modifiers.length > 0,
+    (option) =>
+      option.quantity > 0 && !!option.modifiers && option.modifiers.length > 0,
   );
 
   if (modifiers.length === 0) return { correctedStats: {}, suffix: "" };
@@ -85,12 +94,16 @@ const getCorrectedProfileBasedOnOptionSelection = (
  *
  * @param unit
  */
-function transformUnitToListOfProfiles(unit: SelectedUnit): Profile[] | { missing: true; profile: string } {
+function transformUnitToListOfProfiles(
+  unit: SelectedUnit,
+): Profile[] | { missing: true; profile: string } {
   const army = profileData[unit.profile_origin];
-  if (!army) return { missing: true, profile: `${unit.profile_origin} - ${unit.name}` };
+  if (!army)
+    return { missing: true, profile: `${unit.profile_origin} - ${unit.name}` };
 
   const profile = army[unit.name];
-  if (!profile) return { missing: true, profile: `${unit.profile_origin} - ${unit.name}` };
+  if (!profile)
+    return { missing: true, profile: `${unit.profile_origin} - ${unit.name}` };
 
   if (unit.name.includes("&") || unit.name === "Sharkey and Worm") {
     return profile.additional_stats.map((stats) => {
@@ -101,23 +114,33 @@ function transformUnitToListOfProfiles(unit: SelectedUnit): Profile[] | { missin
           HM: "-",
           HW: "-",
           HF: "-",
-          type: ["Snow Troll"].includes(stats.name) ? "Warrior" : unit.unit_type,
+          type: ["Snow Troll"].includes(stats.name)
+            ? "Warrior"
+            : unit.unit_type,
         };
       const [HM, HW, HF] = MWFW[1].split(":");
       return { ...stats, HM, HW, HF, type: unit.unit_type };
     });
   }
 
-  if (unit.profile_origin === "Mordor" && ["The Witch-king of Angmar", "Ringwraith"].includes(unit.name)) {
+  if (
+    unit.profile_origin === "Mordor" &&
+    ["The Witch-king of Angmar", "Ringwraith"].includes(unit.name)
+  ) {
     const regex = /^(\d+)A \/ (\d+)M \/ (\d+)W \/ (\d+)F$/;
-    const amwfOption = unit.options.find((option) => option.name.match(regex) && option.quantity > 0);
+    const amwfOption = unit.options.find(
+      (option) => option.name.match(regex) && option.quantity > 0,
+    );
     if (amwfOption) {
       const matches = amwfOption.name.match(regex);
       profile.A = matches[1];
     }
   }
 
-  const { correctedStats, suffix } = getCorrectedProfileBasedOnOptionSelection(unit.options, profile);
+  const { correctedStats, suffix } = getCorrectedProfileBasedOnOptionSelection(
+    unit.options,
+    profile,
+  );
 
   const modifiedProfile = {
     ...profile,
@@ -126,14 +149,21 @@ function transformUnitToListOfProfiles(unit: SelectedUnit): Profile[] | { missin
   };
   const additional_stats =
     suffix && !unit.unique
-      ? [{ name: suffix, ...modifiedProfile }, ...getAdditionalStats(unit, profile)]
+      ? [
+          { name: suffix, ...modifiedProfile },
+          ...getAdditionalStats(unit, profile),
+        ]
       : getAdditionalStats(unit, profile);
   const additional_special_rules = getAdditionalSpecialRules(unit);
-  const used_active_or_passive_rules = profile.active_or_passive_rules.filter((rule) => {
-    if (!rule.option_dependency) return true;
-    const option = unit.options.find(selectedOptionWithName(rule.option_dependency));
-    return !!option; // return true if the option was found with quantity >0
-  });
+  const used_active_or_passive_rules = profile.active_or_passive_rules.filter(
+    (rule) => {
+      if (!rule.option_dependency) return true;
+      const option = unit.options.find(
+        selectedOptionWithName(rule.option_dependency),
+      );
+      return !!option; // return true if the option was found with quantity >0
+    },
+  );
 
   return [
     {
@@ -166,23 +196,27 @@ function convertWarbandToUnits(warband: Warband): SelectedUnit[] {
  * @param roster
  */
 export function convertRosterToProfiles(roster: Roster): ProfileList {
-  const allUnits = roster.warbands.flatMap(convertWarbandToUnits).sort(byHeroicTier);
+  const allUnits = roster.warbands
+    .flatMap(convertWarbandToUnits)
+    .sort(byHeroicTier);
 
-  const { profiles, missing } = allUnits.map(transformUnitToListOfProfiles).reduce(
-    (data, current) => {
-      if (isMissingProfile(current)) {
-        data["missing"] = [...data["missing"], current.profile];
-      } else {
-        data["profiles"] = [...data["profiles"], ...current];
-      }
+  const { profiles, missing } = allUnits
+    .map(transformUnitToListOfProfiles)
+    .reduce(
+      (data, current) => {
+        if (isMissingProfile(current)) {
+          data["missing"] = [...data["missing"], current.profile];
+        } else {
+          data["profiles"] = [...data["profiles"], ...current];
+        }
 
-      return data;
-    },
-    {
-      profiles: [],
-      missing: [],
-    },
-  );
+        return data;
+      },
+      {
+        profiles: [],
+        missing: [],
+      },
+    );
   return {
     profiles: profiles.map(combineProfiles()).filter(duplicateProfiles()),
     missing,

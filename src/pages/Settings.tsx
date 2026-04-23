@@ -44,14 +44,27 @@ export type SettingsOptionProps = {
 };
 
 const SettingsOption: FunctionComponent<SettingsOptionProps> = (props) => {
-  const handleToggle = (_: ChangeEvent<HTMLInputElement>, value: boolean) => props.onChange(value);
+  const handleToggle = (_: ChangeEvent<HTMLInputElement>, value: boolean) =>
+    props.onChange(value);
 
   return (
     <ListItem>
-      <ListItemButton onClick={() => props.onChange(!props.value)} disabled={props.disabled}>
+      <ListItemButton
+        onClick={() => props.onChange(!props.value)}
+        disabled={props.disabled}
+      >
         <ListItemIcon>{props.icon}</ListItemIcon>
-        <ListItemText id={slugify(props.label)} primary={props.label} secondary={props.description} />
-        <Switch edge="end" onChange={handleToggle} checked={props.value} disabled={props.disabled} />
+        <ListItemText
+          id={slugify(props.label)}
+          primary={props.label}
+          secondary={props.description}
+        />
+        <Switch
+          edge="end"
+          onChange={handleToggle}
+          checked={props.value}
+          disabled={props.disabled}
+        />
       </ListItemButton>
     </ListItem>
   );
@@ -109,7 +122,8 @@ export const Settings = () => {
     },
   ];
 
-  const updatePreference = (preference: Preferences) => (value: boolean) => setPreference(preference, value);
+  const updatePreference = (preference: Preferences) => (value: boolean) =>
+    setPreference(preference, value);
 
   return (
     <Container maxWidth="md" sx={{ mt: 2, mb: 5 }}>

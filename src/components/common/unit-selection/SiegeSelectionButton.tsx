@@ -12,7 +12,11 @@ export type UnitSelectionButtonProps = {
   onClick: () => void;
 };
 
-export function SiegeSelectionButton({ equipment, showRole = false, onClick }: UnitSelectionButtonProps) {
+export function SiegeSelectionButton({
+  equipment,
+  showRole = false,
+  onClick,
+}: UnitSelectionButtonProps) {
   const { palette } = useTheme();
 
   return (
@@ -27,7 +31,10 @@ export function SiegeSelectionButton({ equipment, showRole = false, onClick }: U
       }}
     >
       <Stack direction="row" spacing={1} alignItems="center">
-        <UnitProfilePicture army={equipment.profile_origin} profile={equipment.name} />
+        <UnitProfilePicture
+          army={equipment.profile_origin}
+          profile={equipment.name}
+        />
 
         <Stack direction="column" alignItems="start" flexGrow={1}>
           <Stack direction="row" alignItems="center" sx={{ width: "100%" }}>

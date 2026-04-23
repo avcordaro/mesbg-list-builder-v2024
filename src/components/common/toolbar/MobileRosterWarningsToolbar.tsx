@@ -27,7 +27,9 @@ export const MobileRosterWarningsToolbar = () => {
               width: "100%",
             }}
           >
-            {warnings.length === 1 ? warnings[0].warning : "There are multiple errors in the roster information."}
+            {warnings.length === 1
+              ? warnings[0].warning
+              : "There are multiple errors in the roster information."}
           </Typography>
         </Toolbar>
       )}

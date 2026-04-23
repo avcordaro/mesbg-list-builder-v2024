@@ -1,4 +1,10 @@
-import { Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { armyListData } from "../../../../assets/data.ts";
@@ -18,7 +24,9 @@ function getPoint(units: number, divider: number, deadOffset = 0) {
   return [dead, alive];
 }
 
-export const RosterOverview: FunctionComponent<RosterInformationProps> = ({ roster }) => {
+export const RosterOverview: FunctionComponent<RosterInformationProps> = ({
+  roster,
+}) => {
   const { getAdjustedMetaData } = useRosterInformation();
   const armyListMetadata = armyListData[roster.armyList];
   const metadata = getAdjustedMetaData(roster);
@@ -28,10 +36,15 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({ rost
     armyListMetadata.break_point ?? 0.5,
     1,
   );
-  const [quarterAlive, quarterDead] = getPoint(metadata.units + (metadata.addUnits ?? 0), 0.25);
+  const [quarterAlive, quarterDead] = getPoint(
+    metadata.units + (metadata.addUnits ?? 0),
+    0.25,
+  );
 
   const bowLimit = Math.ceil(metadata.bowLimit * armyListMetadata.bow_limit);
-  const throwLimit = Math.ceil(metadata.throwLimit * armyListMetadata.throw_limit);
+  const throwLimit = Math.ceil(
+    metadata.throwLimit * armyListMetadata.throw_limit,
+  );
 
   const pointsNumerator = metadata.addPoints
     ? `${metadata.points}${formatSigned(metadata.addPoints)}`
@@ -41,12 +54,16 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({ rost
   const rows = [
     {
       label: "Points",
-      value: metadata.maxPoints ? `${pointsNumerator} / ${metadata.maxPoints}` : pointsNumerator,
+      value: metadata.maxPoints
+        ? `${pointsNumerator} / ${metadata.maxPoints}`
+        : pointsNumerator,
       valid: !metadata.maxPoints || totalPoints <= metadata.maxPoints,
     },
     {
       label: "Units",
-      value: metadata.addUnits ? `${metadata.units}${formatSigned(metadata.addUnits)}` : metadata.units,
+      value: metadata.addUnits
+        ? `${metadata.units}${formatSigned(metadata.addUnits)}`
+        : metadata.units,
     },
     {
       label: "Break point",
@@ -116,7 +133,9 @@ export const RosterOverview: FunctionComponent<RosterInformationProps> = ({ rost
                   </Typography>
                 </TableCell>
                 <TableCell align="right">
-                  <Typography color={row.valid !== false ? "inherit" : "error"}>{row.value}</Typography>
+                  <Typography color={row.valid !== false ? "inherit" : "error"}>
+                    {row.value}
+                  </Typography>
                 </TableCell>
               </TableRow>
             ))}

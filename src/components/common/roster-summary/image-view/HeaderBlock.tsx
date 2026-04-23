@@ -15,10 +15,23 @@ interface HeaderBlockProps {
   includeRosterName: boolean;
 }
 
-export const HeaderBlock = ({ includeRosterName, roster }: HeaderBlockProps) => {
+export const HeaderBlock = ({
+  includeRosterName,
+  roster,
+}: HeaderBlockProps) => {
   const { getAdjustedMetaData } = useRosterInformation();
   const { break_point, bow_limit, throw_limit } = armyListData[roster.armyList];
-  const { might, will, fate, units, points, bows, bowLimit, throwLimit, throwingWeapons } = getAdjustedMetaData(roster);
+  const {
+    might,
+    will,
+    fate,
+    units,
+    points,
+    bows,
+    bowLimit,
+    throwLimit,
+    throwingWeapons,
+  } = getAdjustedMetaData(roster);
   const warnings = useRosterWarnings(roster);
 
   const maxBows = Math.ceil(bowLimit * bow_limit);
@@ -44,17 +57,43 @@ export const HeaderBlock = ({ includeRosterName, roster }: HeaderBlockProps) => 
           </Typography>
         </>
       )}
-      <Stack direction="row" gap={1} justifyContent="center" alignItems="center">
-        <Typography variant="h5" textAlign="center" textTransform="uppercase" fontWeight="bold" color="#800000">
+      <Stack
+        direction="row"
+        gap={1}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Typography
+          variant="h5"
+          textAlign="center"
+          textTransform="uppercase"
+          fontWeight="bold"
+          color="#800000"
+        >
           {roster.armyList}
         </Typography>
-        {warnings.length > 0 && <ReportProblemRoundedIcon sx={{ color: (theme) => theme.palette.warning.main }} />}
+        {warnings.length > 0 && (
+          <ReportProblemRoundedIcon
+            sx={{ color: (theme) => theme.palette.warning.main }}
+          />
+        )}
       </Stack>
 
-      <Typography variant="h6" textAlign="center" textTransform="uppercase" fontWeight="bold">
+      <Typography
+        variant="h6"
+        textAlign="center"
+        textTransform="uppercase"
+        fontWeight="bold"
+      >
         {points} points | {units} units
       </Typography>
-      <Grid2 container columnSpacing={1} rowSpacing={3} alignItems="center" sx={{ my: 2 }}>
+      <Grid2
+        container
+        columnSpacing={1}
+        rowSpacing={3}
+        alignItems="center"
+        sx={{ my: 2 }}
+      >
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>
           <img
             alt="total bows icon"
@@ -76,7 +115,8 @@ export const HeaderBlock = ({ includeRosterName, roster }: HeaderBlockProps) => 
             }}
           />
           <Typography fontWeight="bold">
-            {throwingWeapons} <sup style={{ fontWeight: "normal" }}>/ {maxThrows}</sup>
+            {throwingWeapons}{" "}
+            <sup style={{ fontWeight: "normal" }}>/ {maxThrows}</sup>
           </Typography>{" "}
         </Grid2>
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>
@@ -88,7 +128,8 @@ export const HeaderBlock = ({ includeRosterName, roster }: HeaderBlockProps) => 
             }}
           />
           <Typography fontWeight="bold">
-            {(units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0) + " dead"}
+            {(units > 0 ? Math.floor(units * (break_point ?? 0.5)) + 1 : 0) +
+              " dead"}
           </Typography>
         </Grid2>
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>
@@ -99,7 +140,9 @@ export const HeaderBlock = ({ includeRosterName, roster }: HeaderBlockProps) => 
               height: iconHeight,
             }}
           />
-          <Typography fontWeight="bold">{Math.floor(0.25 * units)} left</Typography>
+          <Typography fontWeight="bold">
+            {Math.floor(0.25 * units)} left
+          </Typography>
         </Grid2>
         <Grid2 size={2.4} sx={{ textAlign: "center" }}>
           <Typography

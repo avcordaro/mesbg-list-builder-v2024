@@ -6,37 +6,58 @@ import { byHeroicTier } from "../profiles/profile-utils/sorting.ts";
 import { useRosterInformation } from "./useRosterInformation.ts";
 
 function checkRequiresOne(rule: WarningRule, setOfModelIds: string[]): boolean {
-  return !rule.dependencies.some((compulsoryModel) => setOfModelIds.includes(compulsoryModel));
+  return !rule.dependencies.some((compulsoryModel) =>
+    setOfModelIds.includes(compulsoryModel),
+  );
 }
 
 function checkRequiresAll(rule: WarningRule, setOfModelIds: string[]): boolean {
-  return !rule.dependencies.every((compulsoryModel) => setOfModelIds.includes(compulsoryModel));
+  return !rule.dependencies.every((compulsoryModel) =>
+    setOfModelIds.includes(compulsoryModel),
+  );
 }
 
 function checkCompulsory(rule: WarningRule, setOfModelIds: string[]): boolean {
-  return !rule.dependencies.every((compulsoryModel) => setOfModelIds.includes(compulsoryModel));
+  return !rule.dependencies.every((compulsoryModel) =>
+    setOfModelIds.includes(compulsoryModel),
+  );
 }
 
-function checkIncompatible(rule: WarningRule, setOfModelIds: string[]): boolean {
-  return rule.dependencies.some((incompatibleModel) => setOfModelIds.includes(incompatibleModel));
+function checkIncompatible(
+  rule: WarningRule,
+  setOfModelIds: string[],
+): boolean {
+  return rule.dependencies.some((incompatibleModel) =>
+    setOfModelIds.includes(incompatibleModel),
+  );
 }
 
-function handleSpecialGeneralSelection(roster: Roster, warnings: WarningRule[]) {
-  const heroes = roster.warbands.filter((wb) => isSelectedUnit(wb.hero)).map((wb) => wb.hero?.model_id);
-  const leader = roster.warbands.find((wb) => wb.id === roster.metadata.leader)?.hero?.model_id;
+function handleSpecialGeneralSelection(
+  roster: Roster,
+  warnings: WarningRule[],
+) {
+  const heroes = roster.warbands
+    .filter((wb) => isSelectedUnit(wb.hero))
+    .map((wb) => wb.hero?.model_id);
+  const leader = roster.warbands.find((wb) => wb.id === roster.metadata.leader)
+    ?.hero?.model_id;
 
   if (roster.armyList === "Corsair Fleet") {
     if (leader === "[corsair-fleet] dalamyr-fleetmaster-of-umbar") {
       return;
-    } else if (heroes.includes("[corsair-fleet] dalamyr-fleetmaster-of-umbar")) {
+    } else if (
+      heroes.includes("[corsair-fleet] dalamyr-fleetmaster-of-umbar")
+    ) {
       warnings.push({
-        warning: "If your army contains Dalamyr, then he should always be the Army's General.",
+        warning:
+          "If your army contains Dalamyr, then he should always be the Army's General.",
         type: undefined,
         dependencies: [],
       });
     } else if (leader !== "[corsair-fleet] corsair-captain-general") {
       warnings.push({
-        warning: "The Army must always contain a Corsair Captain, who must be the Army's General.",
+        warning:
+          "The Army must always contain a Corsair Captain, who must be the Army's General.",
         type: undefined,
         dependencies: [],
       });
@@ -46,13 +67,17 @@ function handleSpecialGeneralSelection(roster: Roster, warnings: WarningRule[]) 
 
 function addHeroicTierWarnings(roster: Roster, warnings: WarningRule[]) {
   const heroicTiers = roster.warbands
-    .filter(({ hero }) => isSelectedUnit(hero) && hero.unit_type.includes("Hero"))
+    .filter(
+      ({ hero }) => isSelectedUnit(hero) && hero.unit_type.includes("Hero"),
+    )
     .map(({ hero }) => hero)
     .sort(byHeroicTier)
     .map(({ unit_type }) => unit_type)
     .filter((t, i, s) => s.findIndex((o) => o === t) === i);
 
-  const leaderTier = roster.warbands.find((wb) => wb.id === roster.metadata.leader)?.hero?.unit_type;
+  const leaderTier = roster.warbands.find(
+    (wb) => wb.id === roster.metadata.leader,
+  )?.hero?.unit_type;
   const leaderTierIndex = heroicTiers.findIndex((tier) => tier === leaderTier);
 
   if (leaderTierIndex === -1) {
@@ -72,10 +97,17 @@ function addHeroicTierWarnings(roster: Roster, warnings: WarningRule[]) {
   }
 }
 
-function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral: boolean): WarningRule[] {
+function extraScriptedRosterWarnings(
+  roster: Roster,
+  ignoreCompulsoryArmyGeneral: boolean,
+): WarningRule[] {
   const warnings = [];
 
-  if (["The Eagles", "Radagast's Alliance", "The Battle of Five Armies"].includes(roster.armyList)) {
+  if (
+    ["The Eagles", "Radagast's Alliance", "The Battle of Five Armies"].includes(
+      roster.armyList,
+    )
+  ) {
     const units = roster.warbands
       .flatMap((wb) => [wb.hero, ...wb.units])
       .filter(isSelectedUnit)
@@ -138,9 +170,14 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
   if (roster.armyList === "Men of the West") {
     const containsAnyMountedHero = !!roster.warbands.find(
       ({ hero }) =>
-        isSelectedUnit(hero) && !!hero.options.find((option) => option.type === "mount" && option.quantity > 0),
+        isSelectedUnit(hero) &&
+        !!hero.options.find(
+          (option) => option.type === "mount" && option.quantity > 0,
+        ),
     );
-    const hasGwaihir = !!roster.warbands.find(({ hero }) => isSelectedUnit(hero) && hero.name === "Gwaihir");
+    const hasGwaihir = !!roster.warbands.find(
+      ({ hero }) => isSelectedUnit(hero) && hero.name === "Gwaihir",
+    );
 
     if (containsAnyMountedHero && hasGwaihir) {
       warnings.push({
@@ -200,7 +237,9 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
       }))
       .reduce(
         ([orcs, goblins], { type, quantity }) =>
-          type === "orc" ? [orcs + quantity, goblins] : [orcs, goblins + quantity],
+          type === "orc"
+            ? [orcs + quantity, goblins]
+            : [orcs, goblins + quantity],
         [0, 0],
       );
 
@@ -269,9 +308,15 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
         type: lothlorienIds.includes(unit.model_id) ? "lothlorien" : "other",
         quantity: unit.quantity + unit.quantity * unit.siege_crew,
       }))
-      .reduce(([l, o], { type, quantity }) => (type === "lothlorien" ? [l + quantity, o] : [l, o + quantity]), [0, 0]);
+      .reduce(
+        ([l, o], { type, quantity }) =>
+          type === "lothlorien" ? [l + quantity, o] : [l, o + quantity],
+        [0, 0],
+      );
 
-    const perc = Math.floor((lothlorienModels / (others + lothlorienModels)) * 100);
+    const perc = Math.floor(
+      (lothlorienModels / (others + lothlorienModels)) * 100,
+    );
     if (perc > 33) {
       warnings.push({
         warning: `Only 33% of this army can have the Lothlórien keyword. The current roster has ${perc}% models with the Lothlórien keyword`,
@@ -281,7 +326,14 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
     }
   }
 
-  if (["Defenders of the Pelennor", "Men of the West", "Rivendell", "The Grey Company"].includes(roster.armyList)) {
+  if (
+    [
+      "Defenders of the Pelennor",
+      "Men of the West",
+      "Rivendell",
+      "The Grey Company",
+    ].includes(roster.armyList)
+  ) {
     const brothers = roster.warbands
       .map((wb) => wb.hero)
       .filter(isSelectedUnit)
@@ -303,9 +355,13 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
     }
   }
 
-  const siegeEngines = roster.warbands.filter(({ hero }) => hero?.unit_type === "Siege Engine");
+  const siegeEngines = roster.warbands.filter(
+    ({ hero }) => hero?.unit_type === "Siege Engine",
+  );
   const heroesOfFort = roster.warbands.filter(({ hero }) =>
-    ["Hero of Legend", "Hero of Valour", "Hero of Fortitude"].includes(hero?.unit_type),
+    ["Hero of Legend", "Hero of Valour", "Hero of Fortitude"].includes(
+      hero?.unit_type,
+    ),
   );
   if (siegeEngines > heroesOfFort) {
     warnings.push({
@@ -323,7 +379,10 @@ function extraScriptedRosterWarnings(roster: Roster, ignoreCompulsoryArmyGeneral
     });
   }
 
-  if (roster.metadata.leader && (!roster.metadata.leaderCompulsory || ignoreCompulsoryArmyGeneral)) {
+  if (
+    roster.metadata.leader &&
+    (!roster.metadata.leaderCompulsory || ignoreCompulsoryArmyGeneral)
+  ) {
     if (["Corsair Fleet"].includes(roster.armyList)) {
       handleSpecialGeneralSelection(roster, warnings);
     } else {
@@ -360,7 +419,10 @@ export const useRosterWarnings = (roster?: Roster): WarningRule[] => {
   const possibleWarnings = [
     ...(allWarnings[(roster ?? currentRoster).armyList] || []),
     ...setOfModelIds.flatMap((model) => allWarnings[model]),
-    ...extraScriptedRosterWarnings(roster ?? currentRoster, preferences.allowCompulsoryGeneralDelete),
+    ...extraScriptedRosterWarnings(
+      roster ?? currentRoster,
+      preferences.allowCompulsoryGeneralDelete,
+    ),
   ].filter((v) => !!v);
 
   if (!possibleWarnings || possibleWarnings.length === 0) return [];

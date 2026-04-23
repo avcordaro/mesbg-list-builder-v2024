@@ -46,7 +46,10 @@ export const HoldGroundVPs: FunctionComponent<QuestionListProps> = (props) => {
     if (playerModelsOnObjective === enemyModelsOnObjective) {
       return [0, 0];
     }
-    if (playerModelsOnObjective >= enemyModelsOnObjective * 3 || enemyModelsOnObjective === 0) {
+    if (
+      playerModelsOnObjective >= enemyModelsOnObjective * 3 ||
+      enemyModelsOnObjective === 0
+    ) {
       return [12, 0];
     }
     if (playerModelsOnObjective >= enemyModelsOnObjective * 2) {
@@ -55,7 +58,10 @@ export const HoldGroundVPs: FunctionComponent<QuestionListProps> = (props) => {
     if (playerModelsOnObjective > enemyModelsOnObjective) {
       return [4, 0];
     }
-    if (enemyModelsOnObjective >= playerModelsOnObjective * 3 || playerModelsOnObjective === 0) {
+    if (
+      enemyModelsOnObjective >= playerModelsOnObjective * 3 ||
+      playerModelsOnObjective === 0
+    ) {
       return [0, -12];
     }
     if (enemyModelsOnObjective >= playerModelsOnObjective * 2) {
@@ -67,16 +73,23 @@ export const HoldGroundVPs: FunctionComponent<QuestionListProps> = (props) => {
   };
 
   const updateGameResultState = () => {
-    const objectiveVPs = getObjectiveVPs(modelsOnObjective[0], modelsOnObjective[1]);
+    const objectiveVPs = getObjectiveVPs(
+      modelsOnObjective[0],
+      modelsOnObjective[1],
+    );
 
-    const playerVPs = [objectiveVPs[0], generalVPs[0], brokenVPs[0], bannersRemaining[1] > 0 ? 0 : 2].reduce(
-      (a, b) => a + b,
-      0,
-    );
-    const opponentVPs = [objectiveVPs[1], generalVPs[1], brokenVPs[1], bannersRemaining[0] > 0 ? 0 : -2].reduce(
-      (a, b) => a - b,
-      0,
-    );
+    const playerVPs = [
+      objectiveVPs[0],
+      generalVPs[0],
+      brokenVPs[0],
+      bannersRemaining[1] > 0 ? 0 : 2,
+    ].reduce((a, b) => a + b, 0);
+    const opponentVPs = [
+      objectiveVPs[1],
+      generalVPs[1],
+      brokenVPs[1],
+      bannersRemaining[0] > 0 ? 0 : -2,
+    ].reduce((a, b) => a - b, 0);
 
     props.updateFormValues({
       victoryPoints: playerVPs,
@@ -86,14 +99,22 @@ export const HoldGroundVPs: FunctionComponent<QuestionListProps> = (props) => {
 
   useEffect(() => {
     updateGameResultState();
-    setVictoryPoints([modelsOnObjective, generalVPs, brokenVPs, bannersRemaining]);
+    setVictoryPoints([
+      modelsOnObjective,
+      generalVPs,
+      brokenVPs,
+      bannersRemaining,
+    ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modelsOnObjective, generalVPs, brokenVPs, bannersRemaining]);
 
   return (
     <Box sx={{ mt: 2 }}>
       {activeStep === OBJECTIVES && (
-        <HoldGroundObjectiveVPs value={modelsOnObjective} setValue={setModelsOnObjective} />
+        <HoldGroundObjectiveVPs
+          value={modelsOnObjective}
+          setValue={setModelsOnObjective}
+        />
       )}
 
       {activeStep === GENERAL && (
@@ -113,11 +134,19 @@ export const HoldGroundVPs: FunctionComponent<QuestionListProps> = (props) => {
         </Stack>
       )}
 
-      {activeStep === BROKEN && <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />}
+      {activeStep === BROKEN && (
+        <BrokenVPs value={brokenVPs} setValue={setBrokenVPs} />
+      )}
 
-      {activeStep === BANNERS && <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />}
+      {activeStep === BANNERS && (
+        <BannerVPs value={bannersRemaining} setValue={setBannersRemaining} />
+      )}
 
-      <VictoryPointStepper activeStep={activeStep} setActiveStep={setActiveStep} totalSteps={4} />
+      <VictoryPointStepper
+        activeStep={activeStep}
+        setActiveStep={setActiveStep}
+        totalSteps={4}
+      />
     </Box>
   );
 };
@@ -126,7 +155,9 @@ type HoldGroundObjectiveVPsProps = {
   value: number[];
   setValue: (value: (number | null)[]) => void;
 };
-const HoldGroundObjectiveVPs: FunctionComponent<HoldGroundObjectiveVPsProps> = ({ value, setValue }) => {
+const HoldGroundObjectiveVPs: FunctionComponent<
+  HoldGroundObjectiveVPsProps
+> = ({ value, setValue }) => {
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value ? Number(event.target.value) : null;
     return setValue([newValue, value[1]]);

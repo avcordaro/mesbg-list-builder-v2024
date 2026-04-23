@@ -15,7 +15,9 @@ export const RosterSidebarButton = () => {
   return (
     <IconButton
       aria-label="open drawer"
-      onClick={() => window.dispatchEvent(new Event("mlb-event--open-roster-info"))}
+      onClick={() =>
+        window.dispatchEvent(new Event("mlb-event--open-roster-info"))
+      }
       sx={
         warnings.length > 0
           ? {

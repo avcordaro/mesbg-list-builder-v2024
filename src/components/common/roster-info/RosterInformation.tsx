@@ -1,5 +1,12 @@
 import { Close, Delete, Refresh } from "@mui/icons-material";
-import { Button, ButtonGroup, Collapse, IconButton, Stack, Tooltip } from "@mui/material";
+import {
+  Button,
+  ButtonGroup,
+  Collapse,
+  IconButton,
+  Stack,
+  Tooltip,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
@@ -23,7 +30,9 @@ export type RosterInformationProps = {
   editable?: boolean;
 };
 
-export const RosterInformation: FunctionComponent<RosterInformationProps> = (props) => {
+export const RosterInformation: FunctionComponent<RosterInformationProps> = (
+  props,
+) => {
   const { palette } = useTheme();
   const { setCurrentModal } = useAppState();
   const { isOutdatedRoster, updateRoster } = useUpdateRosterVersion();
@@ -32,7 +41,11 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (pro
   return (
     <Stack gap={2} sx={{ p: 2 }}>
       <Box>
-        <Stack direction={screen.isDesktop ? "row" : "row-reverse"} justifyContent="space-between" flexWrap="wrap">
+        <Stack
+          direction={screen.isDesktop ? "row" : "row-reverse"}
+          justifyContent="space-between"
+          flexWrap="wrap"
+        >
           {screen.isDesktop ? (
             <></>
           ) : (
@@ -146,7 +159,12 @@ export const RosterInformation: FunctionComponent<RosterInformationProps> = (pro
         </ButtonGroup>
       )}
       <Collapse in={syncPending} sx={{ width: "100%" }}>
-        <Button variant="outlined" color="success" fullWidth onClick={(e) => syncNow(e)}>
+        <Button
+          variant="outlined"
+          color="success"
+          fullWidth
+          onClick={(e) => syncNow(e)}
+        >
           Sync to account
         </Button>
       </Collapse>

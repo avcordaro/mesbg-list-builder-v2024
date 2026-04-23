@@ -15,42 +15,45 @@ export type WarbandActions = {
   collapseAll: (collapsed: boolean) => void;
 };
 
-export const Warband = forwardRef<WarbandActions, WarbandProps>(({ warband, collapseAll }, ref) => {
-  const { mode } = useThemeContext();
-  const [collapsed, setCollapsed] = useState(false);
+export const Warband = forwardRef<WarbandActions, WarbandProps>(
+  ({ warband, collapseAll }, ref) => {
+    const { mode } = useThemeContext();
+    const [collapsed, setCollapsed] = useState(false);
 
-  function collapseWarband() {
-    setCollapsed(!collapsed);
-  }
-  function collapseAllWarbands() {
-    collapseAll(!collapsed);
-  }
+    function collapseWarband() {
+      setCollapsed(!collapsed);
+    }
+    function collapseAllWarbands() {
+      collapseAll(!collapsed);
+    }
 
-  useImperativeHandle(ref, () => ({
-    collapseAll: (collapsed: boolean) => setCollapsed(collapsed),
-  }));
+    useImperativeHandle(ref, () => ({
+      collapseAll: (collapsed: boolean) => setCollapsed(collapsed),
+    }));
 
-  return (
-    <Card
-      variant="elevation"
-      elevation={3}
-      data-scroll-id={warband.id}
-      sx={{
-        backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["900"] : palette.grey.A700),
-        p: 1,
-        minWidth: "420px",
-      }}
-    >
-      <Stack gap={1}>
-        <WarbandHeader
-          warbandId={warband.id}
-          meta={warband.meta}
-          collapse={collapseWarband}
-          collapseAll={collapseAllWarbands}
-          collapsed={collapsed}
-        />
-        <WarbandContent warband={warband} collapsed={collapsed} />
-      </Stack>
-    </Card>
-  );
-});
+    return (
+      <Card
+        variant="elevation"
+        elevation={3}
+        data-scroll-id={warband.id}
+        sx={{
+          backgroundColor: ({ palette }) =>
+            mode === "dark" ? palette.grey["900"] : palette.grey.A700,
+          p: 1,
+          minWidth: "420px",
+        }}
+      >
+        <Stack gap={1}>
+          <WarbandHeader
+            warbandId={warband.id}
+            meta={warband.meta}
+            collapse={collapseWarband}
+            collapseAll={collapseAllWarbands}
+            collapsed={collapsed}
+          />
+          <WarbandContent warband={warband} collapsed={collapsed} />
+        </Stack>
+      </Card>
+    );
+  },
+);

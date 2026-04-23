@@ -1,4 +1,11 @@
-import { Button, FormControl, FormLabel, Link, Stack, TextField } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  FormLabel,
+  Link,
+  Stack,
+  TextField,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
@@ -12,12 +19,16 @@ import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
 import { useAppState } from "../../state/app";
 
 const errorMap = {
-  "auth/invalid-credential": "Invalid login details. Check your email and password and try again.",
-  "auth/email-already-exists": "An account with this email already exists. Sign in or use a different email.",
-  "auth/invalid-email": "That doesn’t look like a valid email address. Please check and try again.",
+  "auth/invalid-credential":
+    "Invalid login details. Check your email and password and try again.",
+  "auth/email-already-exists":
+    "An account with this email already exists. Sign in or use a different email.",
+  "auth/invalid-email":
+    "That doesn’t look like a valid email address. Please check and try again.",
   "auth/invalid-password":
     "Your password must be at least 6 characters long and include a mix of letters, numbers, and special characters.",
-  "auth/invalid-display-name": "You display name cannot be empty. Please provide us with you name",
+  "auth/invalid-display-name":
+    "You display name cannot be empty. Please provide us with you name",
   "auth/too-many-requests": "",
 };
 
@@ -47,7 +58,10 @@ export const SignIn = () => {
       .signIn(data.get("email") as string, data.get("password") as string)
       .then((response) => console.debug(response))
       .catch((error) =>
-        setSignInError(errorMap[error.code] ?? "Oops! We encountered an error. Please refresh the page and try again."),
+        setSignInError(
+          errorMap[error.code] ??
+            "Oops! We encountered an error. Please refresh the page and try again.",
+        ),
       );
   };
 
@@ -83,13 +97,22 @@ export const SignIn = () => {
       <Typography variant="h4" className="middle-earth">
         Sign In
       </Typography>
-      <Typography sx={{ mb: 3 }}>Sign in with a personal account to easily sync your data between devices.</Typography>
+      <Typography sx={{ mb: 3 }}>
+        Sign in with a personal account to easily sync your data between
+        devices.
+      </Typography>
 
       <Button
         color="inherit"
         variant="outlined"
         fullWidth
-        startIcon={<img src={googleIcon} alt="google icon" style={{ width: "2.5rem", aspectRatio: "1 / 1" }} />}
+        startIcon={
+          <img
+            src={googleIcon}
+            alt="google icon"
+            style={{ width: "2.5rem", aspectRatio: "1 / 1" }}
+          />
+        }
         onClick={auth.signInWithGoogle}
       >
         Sign in With Google
@@ -159,7 +182,9 @@ export const SignIn = () => {
           type="button"
           onClick={() =>
             setCurrentModal(ModalTypes.RESET_PASSWORD, {
-              email: (document.getElementById("email") as HTMLInputElement)?.value ?? "",
+              email:
+                (document.getElementById("email") as HTMLInputElement)?.value ??
+                "",
             })
           }
           variant="body2"
@@ -167,12 +192,28 @@ export const SignIn = () => {
         >
           Forgot your password?
         </Link>
-        <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          onClick={validateInputs}
+        >
           Sign in
         </Button>
-        <Stack direction="row" gap={2} justifyContent="center" alignItems="center">
+        <Stack
+          direction="row"
+          gap={2}
+          justifyContent="center"
+          alignItems="center"
+        >
           <Typography>Don&apos;t have an account?</Typography>
-          <Button onClick={() => navigate("/sign-up", { state: { allowNavigation: true } })}>Sign up</Button>
+          <Button
+            onClick={() =>
+              navigate("/sign-up", { state: { allowNavigation: true } })
+            }
+          >
+            Sign up
+          </Button>
         </Stack>
       </Box>
     </Container>

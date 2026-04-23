@@ -28,7 +28,15 @@ export type NavDivider = {
 
 export type NavItem = NavDivider | NavLink;
 
-export const NavItemLink = ({ item, open, pl = 0 }: { item: NavLink; open: boolean; pl?: number }) => {
+export const NavItemLink = ({
+  item,
+  open,
+  pl = 0,
+}: {
+  item: NavLink;
+  open: boolean;
+  pl?: number;
+}) => {
   const [expanded, setExpanded] = useState<boolean>(item.showCaret);
 
   return (
@@ -38,13 +46,17 @@ export const NavItemLink = ({ item, open, pl = 0 }: { item: NavLink; open: boole
           <ListItemButton
             sx={[
               { minHeight: 48, pr: 2.5, pl: pl + 2.5 },
-              open ? { justifyContent: "initial" } : { justifyContent: "center" },
+              open
+                ? { justifyContent: "initial" }
+                : { justifyContent: "center" },
             ]}
             selected={item.active}
             onClick={() => {
               if (item.showCaret) {
                 setExpanded(!expanded);
-                window.dispatchEvent(new Event("mlb-event--open-navigation-drawer"));
+                window.dispatchEvent(
+                  new Event("mlb-event--open-navigation-drawer"),
+                );
               } else {
                 item.action();
               }
@@ -53,8 +65,18 @@ export const NavItemLink = ({ item, open, pl = 0 }: { item: NavLink; open: boole
             data-test-id={slugify(item.label) + "--nav-link"}
           >
             <Tooltip title={open ? "" : item.label}>
-              <ListItemIcon sx={[{ minWidth: 0, justifyContent: "center" }, open ? { mr: 3 } : { mr: "auto" }]}>
-                <Badge color="primary" variant="dot" badgeContent={item.badge ? 1 : 0} overlap="circular">
+              <ListItemIcon
+                sx={[
+                  { minWidth: 0, justifyContent: "center" },
+                  open ? { mr: 3 } : { mr: "auto" },
+                ]}
+              >
+                <Badge
+                  color="primary"
+                  variant="dot"
+                  badgeContent={item.badge ? 1 : 0}
+                  overlap="circular"
+                >
                   {item.icon}
                 </Badge>
               </ListItemIcon>
@@ -76,7 +98,9 @@ export const NavItemLink = ({ item, open, pl = 0 }: { item: NavLink; open: boole
               ]}
             />
 
-            {item.children && item.showCaret && open && <> {expanded ? <ExpandLess /> : <ExpandMore />}</>}
+            {item.children && item.showCaret && open && (
+              <> {expanded ? <ExpandLess /> : <ExpandMore />}</>
+            )}
           </ListItemButton>
         </ListItem>
       </Tooltip>
@@ -87,7 +111,12 @@ export const NavItemLink = ({ item, open, pl = 0 }: { item: NavLink; open: boole
             isDivider(subItem) ? (
               <Divider key={index} />
             ) : (
-              <NavItemLink key={index} item={subItem} open={open} pl={open ? pl + 3 : 0} />
+              <NavItemLink
+                key={index}
+                item={subItem}
+                open={open}
+                pl={open ? pl + 3 : 0}
+              />
             ),
           )}
         </Collapse>

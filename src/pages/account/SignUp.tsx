@@ -1,4 +1,10 @@
-import { Button, FormControl, FormLabel, Stack, TextField } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  FormLabel,
+  Stack,
+  TextField,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -8,11 +14,14 @@ import { CustomAlert } from "../../components/atoms/alert/CustomAlert.tsx";
 import { useAuth } from "../../firebase/FirebaseAuthContext.tsx";
 
 const errorMap = {
-  "auth/email-already-in-use": "An account with this email already exists. Sign in or use a different email.",
-  "auth/invalid-email": "That doesn’t look like a valid email address. Please check and try again.",
+  "auth/email-already-in-use":
+    "An account with this email already exists. Sign in or use a different email.",
+  "auth/invalid-email":
+    "That doesn’t look like a valid email address. Please check and try again.",
   "auth/invalid-password":
     "Your password must be at least 6 characters long and include a mix of letters, numbers, and special characters.",
-  "auth/invalid-display-name": "You display name cannot be empty. Please provide us with you name",
+  "auth/invalid-display-name":
+    "You display name cannot be empty. Please provide us with you name",
   "auth/too-many-requests": "",
 };
 
@@ -25,8 +34,12 @@ export const SignUp = () => {
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [passwordError, setPasswordError] = useState(false);
   const [passwordErrorMessage, setPasswordErrorMessage] = useState("");
-  const [passwordConfirmationError, setPasswordConfirmationError] = useState(false);
-  const [passwordConfirmationErrorMessage, setPasswordConfirmationErrorMessage] = useState("");
+  const [passwordConfirmationError, setPasswordConfirmationError] =
+    useState(false);
+  const [
+    passwordConfirmationErrorMessage,
+    setPasswordConfirmationErrorMessage,
+  ] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,11 +51,16 @@ export const SignUp = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (nameError || emailError || passwordError || passwordConfirmationError) return;
+    if (nameError || emailError || passwordError || passwordConfirmationError)
+      return;
 
     const data = new FormData(event.currentTarget);
     auth
-      .signUp(data.get("email") as string, data.get("password") as string, data.get("name") as string)
+      .signUp(
+        data.get("email") as string,
+        data.get("password") as string,
+        data.get("name") as string,
+      )
       .then((response) => console.debug(response))
       .catch((error) => {
         if (error.code === "auth/password-does-not-meet-requirements") {
@@ -53,7 +71,8 @@ export const SignUp = () => {
         } else {
           console.error(error.code);
           setSignInError(
-            errorMap[error.code] ?? "Oops! We encountered an error. Please refresh the page and try again.",
+            errorMap[error.code] ??
+              "Oops! We encountered an error. Please refresh the page and try again.",
           );
         }
       });
@@ -63,7 +82,9 @@ export const SignUp = () => {
     const name = document.getElementById("name") as HTMLInputElement;
     const email = document.getElementById("email") as HTMLInputElement;
     const password = document.getElementById("password") as HTMLInputElement;
-    const password2 = document.getElementById("password-confirmation") as HTMLInputElement;
+    const password2 = document.getElementById(
+      "password-confirmation",
+    ) as HTMLInputElement;
 
     let isValid = true;
 
@@ -96,7 +117,9 @@ export const SignUp = () => {
 
     if (password.value !== password2.value) {
       setPasswordConfirmationError(true);
-      setPasswordConfirmationErrorMessage("Your passwords don’t match. Re-enter them to ensure they’re the same.");
+      setPasswordConfirmationErrorMessage(
+        "Your passwords don’t match. Re-enter them to ensure they’re the same.",
+      );
       isValid = false;
     } else {
       setPasswordConfirmationError(false);
@@ -111,7 +134,10 @@ export const SignUp = () => {
       <Typography variant="h4" className="middle-earth">
         Sign Up
       </Typography>
-      <Typography sx={{ mb: 3 }}>Create your account for free by providing your name, email and a password.</Typography>
+      <Typography sx={{ mb: 3 }}>
+        Create your account for free by providing your name, email and a
+        password.
+      </Typography>
 
       {signInError && (
         <Box sx={{ my: 2 }}>
@@ -201,12 +227,28 @@ export const SignUp = () => {
           />
         </FormControl>
 
-        <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          onClick={validateInputs}
+        >
           Create account
         </Button>
-        <Stack direction="row" gap={2} justifyContent="center" alignItems="center">
+        <Stack
+          direction="row"
+          gap={2}
+          justifyContent="center"
+          alignItems="center"
+        >
           <Typography>Already have an account?</Typography>
-          <Button onClick={() => navigate("/sign-in", { state: { allowNavigation: true } })}>Sign In</Button>
+          <Button
+            onClick={() =>
+              navigate("/sign-in", { state: { allowNavigation: true } })
+            }
+          >
+            Sign In
+          </Button>
         </Stack>
       </Box>
     </Container>

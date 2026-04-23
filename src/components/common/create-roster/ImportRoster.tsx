@@ -1,6 +1,12 @@
 import { AttachFileOutlined } from "@mui/icons-material";
 import { Button, TextField } from "@mui/material";
-import { forwardRef, MouseEvent, useImperativeHandle, useRef, useState } from "react";
+import {
+  forwardRef,
+  MouseEvent,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useExport } from "../../../hooks/export/useExport.ts";
@@ -26,16 +32,20 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
   const [JSONImportError, setJSONImportError] = useState("");
 
   const jsonImportTextField = useRef<HTMLInputElement | null>(null);
-  const { id: groupId } = groups.find((group) => group.slug === groupSlug) || {};
+  const { id: groupId } =
+    groups.find((group) => group.slug === groupSlug) || {};
 
   function scrollToBottom() {
     if (jsonImportTextField.current) {
       // Scroll the input to the bottom
-      jsonImportTextField.current.scrollTop = jsonImportTextField.current.scrollHeight;
+      jsonImportTextField.current.scrollTop =
+        jsonImportTextField.current.scrollHeight;
     }
   }
 
-  const hasError = (roster: Roster | { error: true; reason: string }): roster is { error: true; reason: string } =>
+  const hasError = (
+    roster: Roster | { error: true; reason: string },
+  ): roster is { error: true; reason: string } =>
     (roster as { error: true; reason: string }).error === true;
 
   function handleImportRoster(e) {
@@ -102,7 +112,8 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
   return (
     <>
       <CustomAlert title="" severity="info">
-        Reimport a roster by selecting a saved .json file or by pasting the json directly into the textarea.
+        Reimport a roster by selecting a saved .json file or by pasting the json
+        directly into the textarea.
       </CustomAlert>
       <TextField
         fullWidth
@@ -116,8 +127,19 @@ export const ImportRoster = forwardRef<ImportRosterHandlers>((_, ref) => {
         onChange={(e) => setJSONImport(e.target.value)}
       />
 
-      <input id="file-input" type="file" accept=".json" style={{ display: "none" }} onChange={handleFileChange} />
-      <Button variant="contained" onClick={handleButtonClick} fullWidth startIcon={<AttachFileOutlined />}>
+      <input
+        id="file-input"
+        type="file"
+        accept=".json"
+        style={{ display: "none" }}
+        onChange={handleFileChange}
+      />
+      <Button
+        variant="contained"
+        onClick={handleButtonClick}
+        fullWidth
+        startIcon={<AttachFileOutlined />}
+      >
         Select a file
       </Button>
     </>

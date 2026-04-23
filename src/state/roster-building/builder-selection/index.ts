@@ -19,8 +19,11 @@ export const initialBuilderState: BuilderSelectionState = {
   selectionFocus: ["", ""],
 };
 
-export const builderSlice: Slice<RosterBuildingState, BuilderState> = (set) => ({
+export const builderSlice: Slice<RosterBuildingState, BuilderState> = (
+  set,
+) => ({
   ...initialBuilderState,
 
-  updateBuilderSidebar: (update) => set({ ...update }, undefined, "UPDATE_BUILDER_SELECTION_STATE"),
+  updateBuilderSidebar: (update) =>
+    set({ ...update }, undefined, "UPDATE_BUILDER_SELECTION_STATE"),
 });

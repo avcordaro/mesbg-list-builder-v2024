@@ -6,7 +6,9 @@ interface OpponentsPlayedProps {
   data: PastGame[];
 }
 
-export const OpponentsVictoryPointsBarChart = ({ data }: OpponentsPlayedProps) => {
+export const OpponentsVictoryPointsBarChart = ({
+  data,
+}: OpponentsPlayedProps) => {
   const { palette } = useTheme();
 
   const barColors = [palette.success.light, palette.error.light];

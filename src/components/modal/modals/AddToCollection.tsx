@@ -35,7 +35,10 @@ export const AddToCollection = () => {
   const loadoutOptions = [
     "Generic",
     ...unit.options
-      .filter((option: Option) => !isHero || !option.type || !option.type.includes("mount"))
+      .filter(
+        (option: Option) =>
+          !isHero || !option.type || !option.type.includes("mount"),
+      )
       .filter((option: Option) => option.type !== "ringwraith_amwf")
       .map((option: Option) => option.name),
     !unit.option_mandatory ? "None" : null,
@@ -43,9 +46,17 @@ export const AddToCollection = () => {
 
   const mountOptions = unit.options
     .filter((option: Option) => !!option.type && option.type.includes("mount"))
-    .map((option: Option) => option.name.replaceAll("with armour", "").replaceAll("Armoured", "").trim())
+    .map((option: Option) =>
+      option.name
+        .replaceAll("with armour", "")
+        .replaceAll("Armoured", "")
+        .trim(),
+    )
     .filter((name: string) => !name.includes("Upgrade to"))
-    .filter((o: string, i: number, s: string[]) => s.findIndex((ot) => ot === o) === i);
+    .filter(
+      (o: string, i: number, s: string[]) =>
+        s.findIndex((ot) => ot === o) === i,
+    );
 
   const [showErrors, setShowErrors] = useState(false);
   const [loadOuts, setLoadOuts] = useState<
@@ -55,7 +66,8 @@ export const AddToCollection = () => {
       amount: string;
     }[]
   >(
-    !!inventory[unit.profile_origin] && !!inventory[unit.profile_origin][unit.name]
+    !!inventory[unit.profile_origin] &&
+      !!inventory[unit.profile_origin][unit.name]
       ? inventory[unit.profile_origin][unit.name].collection
       : [
           {
@@ -66,13 +78,22 @@ export const AddToCollection = () => {
         ],
   );
 
-  const handleInputChange = (index: number, field: string, value: string | string[]) => {
-    const updatedRows = loadOuts.map((row, i) => (i === index ? { ...row, [field]: value } : row));
+  const handleInputChange = (
+    index: number,
+    field: string,
+    value: string | string[],
+  ) => {
+    const updatedRows = loadOuts.map((row, i) =>
+      i === index ? { ...row, [field]: value } : row,
+    );
     setLoadOuts(updatedRows);
   };
 
   const addRow = () => {
-    setLoadOuts([...loadOuts, { options: isHero ? ["Generic"] : "Generic", mount: "", amount: "" }]);
+    setLoadOuts([
+      ...loadOuts,
+      { options: isHero ? ["Generic"] : "Generic", mount: "", amount: "" },
+    ]);
   };
 
   const removeRow = (index: number) => {
@@ -82,18 +103,32 @@ export const AddToCollection = () => {
   const errors = loadOuts.map(({ amount, options }, index) => {
     const amountToLow = Number(amount) <= 0;
     const missingLoadout = options.length === 0;
-    const hasGenericCombiLoadout = typeof options !== "string" && options.length > 1 && options.includes("Generic");
-    const hasNoneCombiLoadout = typeof options !== "string" && options.length > 1 && options.includes("None");
+    const hasGenericCombiLoadout =
+      typeof options !== "string" &&
+      options.length > 1 &&
+      options.includes("Generic");
+    const hasNoneCombiLoadout =
+      typeof options !== "string" &&
+      options.length > 1 &&
+      options.includes("None");
 
     const errors = [
       amountToLow ? "Amount must be at least 1 or higher" : "",
       missingLoadout ? "A loadout must be selected" : "",
-      hasGenericCombiLoadout ? "Loadout type 'Generic' cannot be combined with other items" : "",
-      hasNoneCombiLoadout ? "Loadout type 'None' cannot be combined with other items" : "",
+      hasGenericCombiLoadout
+        ? "Loadout type 'Generic' cannot be combined with other items"
+        : "",
+      hasNoneCombiLoadout
+        ? "Loadout type 'None' cannot be combined with other items"
+        : "",
     ].filter((s) => !!s);
 
     return {
-      invalid: amountToLow || missingLoadout || hasGenericCombiLoadout || hasNoneCombiLoadout,
+      invalid:
+        amountToLow ||
+        missingLoadout ||
+        hasGenericCombiLoadout ||
+        hasNoneCombiLoadout,
       errorMessages: errors,
       index,
     };
@@ -123,16 +158,18 @@ export const AddToCollection = () => {
             Add <strong>{unit.name}</strong> to you collection of miniatures.
           </AlertTitle>
           <Typography>
-            Adding different loadouts based on the available options will help you to ensure your rosters only include
-            models that you own, providing a seamless way to plan and optimise your army lists.
+            Adding different loadouts based on the available options will help
+            you to ensure your rosters only include models that you own,
+            providing a seamless way to plan and optimise your army lists.
           </Typography>
         </CustomAlert>
 
         {loadoutOptions.length > 2 && (
           <CustomAlert severity="info" title="Generic profiles">
             <Typography>
-              Select the &apos;Generic&apos; option to indicate that the model can be counted as any model under the
-              same name, regardless of options (with the exception of being mounted/on-foot).
+              Select the &apos;Generic&apos; option to indicate that the model
+              can be counted as any model under the same name, regardless of
+              options (with the exception of being mounted/on-foot).
             </Typography>
           </CustomAlert>
         )}
@@ -180,7 +217,9 @@ export const AddToCollection = () => {
                         options={mountOptions}
                         value={loadOut.mount}
                         fullWidth
-                        onChange={(_, value: string | string[]) => handleInputChange(index, "mount", value)}
+                        onChange={(_, value: string | string[]) =>
+                          handleInputChange(index, "mount", value)
+                        }
                         renderInput={(params) => (
                           <TextField
                             {...params}
@@ -198,7 +237,11 @@ export const AddToCollection = () => {
                             checked={loadOut.mount.length > 0}
                             onChange={(_, checked) =>
                               checked
-                                ? handleInputChange(index, "mount", mountOptions[0])
+                                ? handleInputChange(
+                                    index,
+                                    "mount",
+                                    mountOptions[0],
+                                  )
                                 : handleInputChange(index, "mount", "")
                             }
                             name="Mounted"
@@ -211,32 +254,56 @@ export const AddToCollection = () => {
                   </Grid2>
                 )}
                 {loadoutOptions.length > 2 && (
-                  <Grid2 size={isMobile ? 12 : !isHero || mountOptions.length === 0 ? 9 : 6}>
+                  <Grid2
+                    size={
+                      isMobile
+                        ? 12
+                        : !isHero || mountOptions.length === 0
+                          ? 9
+                          : 6
+                    }
+                  >
                     <Autocomplete
                       multiple={isHero}
                       options={loadoutOptions}
                       value={loadOut.options}
                       disableClearable={!isHero}
                       disabled={loadoutOptions.length <= 2}
-                      onChange={(_, value: string | string[]) => handleInputChange(index, "options", value)}
+                      onChange={(_, value: string | string[]) =>
+                        handleInputChange(index, "options", value)
+                      }
                       renderInput={(params) => (
                         <TextField
                           {...params}
                           variant="outlined"
                           label="Loadout"
                           error={showErrors && loadOut.options.length <= 0}
-                          placeholder={isHero ? "Select 1 or more options" : "Select an option"}
+                          placeholder={
+                            isHero
+                              ? "Select 1 or more options"
+                              : "Select an option"
+                          }
                         />
                       )}
                     />
                   </Grid2>
                 )}
                 <Grid2
-                  size={isMobile ? 9 : loadoutOptions.length <= 2 ? (isHero && mountOptions.length > 0 ? 8 : 10) : 2}
+                  size={
+                    isMobile
+                      ? 9
+                      : loadoutOptions.length <= 2
+                        ? isHero && mountOptions.length > 0
+                          ? 8
+                          : 10
+                        : 2
+                  }
                 >
                   <TextField
                     value={loadOut.amount}
-                    onChange={(event) => handleInputChange(index, "amount", event.target.value)}
+                    onChange={(event) =>
+                      handleInputChange(index, "amount", event.target.value)
+                    }
                     fullWidth
                     variant="outlined"
                     label="Amount"
@@ -254,7 +321,11 @@ export const AddToCollection = () => {
                     display: "flex",
                   }}
                 >
-                  <Button color="error" onClick={() => removeRow(index)} disabled={index === 0 && loadOuts.length <= 1}>
+                  <Button
+                    color="error"
+                    onClick={() => removeRow(index)}
+                    disabled={index === 0 && loadOuts.length <= 1}
+                  >
                     Remove
                   </Button>
                 </Grid2>
@@ -262,16 +333,26 @@ export const AddToCollection = () => {
             </FormGroup>
           ))}
 
-          {((isHero && mountOptions.length > 0) || loadoutOptions.length >= 3) && (
+          {((isHero && mountOptions.length > 0) ||
+            loadoutOptions.length >= 3) && (
             <Button onClick={() => addRow()}>Add row</Button>
           )}
         </Stack>
       </DialogContent>
       <DialogActions>
-        <Button variant="text" onClick={closeModal} data-test-id="dialog--cancel-button">
+        <Button
+          variant="text"
+          onClick={closeModal}
+          data-test-id="dialog--cancel-button"
+        >
           Cancel
         </Button>
-        <Button variant="contained" onClick={handleSave} color="primary" data-test-id="dialog--submit-button">
+        <Button
+          variant="contained"
+          onClick={handleSave}
+          color="primary"
+          data-test-id="dialog--submit-button"
+        >
           Save
         </Button>
       </DialogActions>

@@ -7,7 +7,11 @@ interface VictoryPointStepperProps {
   totalSteps: number;
 }
 
-export const VictoryPointStepper = ({ activeStep, setActiveStep, totalSteps }: VictoryPointStepperProps) => {
+export const VictoryPointStepper = ({
+  activeStep,
+  setActiveStep,
+  totalSteps,
+}: VictoryPointStepperProps) => {
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -24,12 +28,20 @@ export const VictoryPointStepper = ({ activeStep, setActiveStep, totalSteps }: V
       sx={{ backgroundColor: "transparent" }}
       activeStep={activeStep}
       nextButton={
-        <Button onClick={handleNext} disabled={activeStep >= totalSteps - 1} endIcon={<KeyboardArrowRight />}>
+        <Button
+          onClick={handleNext}
+          disabled={activeStep >= totalSteps - 1}
+          endIcon={<KeyboardArrowRight />}
+        >
           Next
         </Button>
       }
       backButton={
-        <Button onClick={handleBack} disabled={activeStep === 0} startIcon={<KeyboardArrowLeft />}>
+        <Button
+          onClick={handleBack}
+          disabled={activeStep === 0}
+          startIcon={<KeyboardArrowLeft />}
+        >
           Back
         </Button>
       }

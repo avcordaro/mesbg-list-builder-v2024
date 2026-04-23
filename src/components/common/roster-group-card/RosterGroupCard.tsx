@@ -17,7 +17,10 @@ export type RosterSummaryCardProps = {
   dragged?: boolean;
 };
 
-export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({ group, dragged }) => {
+export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({
+  group,
+  dragged,
+}) => {
   const screen = useScreenSize();
   const { rosterCount, groupCount } = useRosterGroupStats(group.slug);
   const spacing = screen.isTooSmall ? "40px" : "10px";
@@ -35,11 +38,17 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({ gro
   const minStackSize = 4;
   const rotation = 1.7;
 
-  const stackSize = dragged ? 1 : Math.min(maxStackSize, Math.max(minStackSize, rosterCount));
+  const stackSize = dragged
+    ? 1
+    : Math.min(maxStackSize, Math.max(minStackSize, rosterCount));
 
   const stack = new Array(stackSize)
     .fill(Number)
-    .map((_, index) => (index % 2 ? Math.random() * index * -rotation : Math.random() * index * rotation))
+    .map((_, index) =>
+      index % 2
+        ? Math.random() * index * -rotation
+        : Math.random() * index * rotation,
+    )
     .reverse();
 
   return (
@@ -69,8 +78,17 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({ gro
           />
         ))}
 
-        <Card sx={[cardStyle]} elevation={4} data-test-id="rosters--create-a-roster--button">
-          <Stack sx={{ height: "100%" }} justifyContent="center" alignItems="center" textAlign="center">
+        <Card
+          sx={[cardStyle]}
+          elevation={4}
+          data-test-id="rosters--create-a-roster--button"
+        >
+          <Stack
+            sx={{ height: "100%" }}
+            justifyContent="center"
+            alignItems="center"
+            textAlign="center"
+          >
             <Box
               sx={{
                 "& .MuiAvatar-root, svg": {
@@ -103,7 +121,8 @@ export const RosterGroupCard: FunctionComponent<RosterSummaryCardProps> = ({ gro
                 fontSize: "1rem",
               }}
             >
-              {groupCount > 0 && `${groupCount} ${pluralize("Group")(groupCount)}`}
+              {groupCount > 0 &&
+                `${groupCount} ${pluralize("Group")(groupCount)}`}
             </Typography>
             <Typography
               variant="body2"

@@ -6,12 +6,17 @@ import { selectedOptionWithName } from "../../../utils/options.ts";
 import { duplicateProfiles } from "./deduplication.ts";
 import { Profile } from "./profile.type.ts";
 
-const passenger = ({ type, quantity }: Option) => type === "passenger" && quantity > 0;
+const passenger = ({ type, quantity }: Option) =>
+  type === "passenger" && quantity > 0;
 
-function unusedAdditionalStats(unit: SelectedUnit): (stats: Profile) => boolean {
+function unusedAdditionalStats(
+  unit: SelectedUnit,
+): (stats: Profile) => boolean {
   return (stats) => {
     if (unit.name.includes("War Mumak of")) {
-      const hasChief = !!unit.options.find(selectedOptionWithName("Mahud Beastmaster Chieftain"));
+      const hasChief = !!unit.options.find(
+        selectedOptionWithName("Mahud Beastmaster Chieftain"),
+      );
       if (stats.name === "Mahud Beastmaster Chieftain") return hasChief;
       if (stats.name === "Haradrim Commander") return !hasChief;
     }
@@ -32,7 +37,12 @@ function unusedAdditionalStats(unit: SelectedUnit): (stats: Profile) => boolean 
       }
     }
 
-    if (["[garrison-of-dale] girion-lord-of-dale", "[army-of-lake-town] bard-the-bowman"].includes(unit.model_id)) {
+    if (
+      [
+        "[garrison-of-dale] girion-lord-of-dale",
+        "[army-of-lake-town] bard-the-bowman",
+      ].includes(unit.model_id)
+    ) {
       if (stats.name === "Windlance") {
         return !!unit.options.find(selectedOptionWithName("Windlance"));
       }
@@ -40,7 +50,9 @@ function unusedAdditionalStats(unit: SelectedUnit): (stats: Profile) => boolean 
 
     if (unit.name === "Iron Hills Captain") {
       if (stats.name === "Iron Hills Chariot") {
-        return !!unit.options.find(selectedOptionWithName("Iron Hills Chariot"));
+        return !!unit.options.find(
+          selectedOptionWithName("Iron Hills Chariot"),
+        );
       }
     }
 
@@ -48,13 +60,16 @@ function unusedAdditionalStats(unit: SelectedUnit): (stats: Profile) => boolean 
   };
 }
 
-function getAdditionalProfilesFromHeroConstraintsData(unit: SelectedUnit): Profile[] {
+function getAdditionalProfilesFromHeroConstraintsData(
+  unit: SelectedUnit,
+): Profile[] {
   const extraConstraints = heroConstraintData[unit.model_id];
   if (!extraConstraints) return [];
 
   return extraConstraints.extra_profiles
     .map((name: string): Profile => {
-      const rawProfile: RawProfile | undefined = profileData[unit.profile_origin][name];
+      const rawProfile: RawProfile | undefined =
+        profileData[unit.profile_origin][name];
 
       if (!rawProfile) return null;
       return { ...rawProfile, name };
@@ -62,7 +77,9 @@ function getAdditionalProfilesFromHeroConstraintsData(unit: SelectedUnit): Profi
     .filter((profile: Profile) => !!profile)
     .filter(unusedAdditionalStats(unit))
     .flatMap((profile: Profile): Profile[] => {
-      const extraProfileMWFW = unit.MWFW.find(([mwfName]) => String(mwfName).includes(profile.name));
+      const extraProfileMWFW = unit.MWFW.find(([mwfName]) =>
+        String(mwfName).includes(profile.name),
+      );
       if (extraProfileMWFW) {
         const [HM, HW, HF] = extraProfileMWFW[1].split(":");
         return [
@@ -79,8 +96,10 @@ function getAdditionalProfilesFromHeroConstraintsData(unit: SelectedUnit): Profi
           ...profile,
           type: profile.name === "Windlance" ? "Siege Engine" : profile.type,
           additional_stats:
-            ["[garrison-of-dale] girion-lord-of-dale", "[army-of-lake-town] bard-the-bowman"].includes(unit.model_id) &&
-            profile.name === "Windlance"
+            [
+              "[garrison-of-dale] girion-lord-of-dale",
+              "[army-of-lake-town] bard-the-bowman",
+            ].includes(unit.model_id) && profile.name === "Windlance"
               ? []
               : profile.additional_stats,
         },
@@ -95,14 +114,24 @@ function getAdditionalProfilesFromHeroConstraintsData(unit: SelectedUnit): Profi
  * @param unit
  * @param profile
  */
-function getAdditionalProfilesFromMountOptions(profile: RawProfile, unit: SelectedUnit): Profile[] {
+function getAdditionalProfilesFromMountOptions(
+  profile: RawProfile,
+  unit: SelectedUnit,
+): Profile[] {
   const chosenMounts: Profile[] = unit.options
     ?.filter((option) => option.type === "mount" && option.quantity > 0)
-    .filter((option, _, options) => !options.find((other) => other.name === `Upgrade to Armoured ${option.name}`))
+    .filter(
+      (option, _, options) =>
+        !options.find(
+          (other) => other.name === `Upgrade to Armoured ${option.name}`,
+        ),
+    )
     ?.map((mount) => {
       const name = mount.mount_name || mount.name;
       const actualName = name.replaceAll("Upgrade to", "").trim();
-      const mountMwfw = unit.MWFW.find(([mwfName]) => String(mwfName).includes(actualName)) || ["", "-:-:-:-"];
+      const mountMwfw = unit.MWFW.find(([mwfName]) =>
+        String(mwfName).includes(actualName),
+      ) || ["", "-:-:-:-"];
 
       const [HM, HW, HF] = mountMwfw[1].split(":");
       return {
@@ -137,36 +166,49 @@ function getAdditionalProfilesFromMountOptions(profile: RawProfile, unit: Select
  * @param profile
  * @param unit
  */
-function getAdditionalProfilesFromProfileData(profile: RawProfile, unit: SelectedUnit) {
+function getAdditionalProfilesFromProfileData(
+  profile: RawProfile,
+  unit: SelectedUnit,
+) {
   return (
-    profile?.additional_stats?.filter(unusedAdditionalStats(unit))?.map((profile) => {
-      if (
-        unit.name.includes("War Mumak of ") ||
-        unit.name === "Great Beast of Gorgoroth" ||
-        unit.name === "Troll Brute" ||
-        unit.name === "Bard's Family"
-      ) {
-        const riderMwf = unit.MWFW.find(([name]) => String(name).includes(profile.name)) || ["", "-:-:-:-"];
-        const [HM, HW, HF] = riderMwf[1].split(":");
-        return { ...profile, HM, HW, HF };
-      }
+    profile?.additional_stats
+      ?.filter(unusedAdditionalStats(unit))
+      ?.map((profile) => {
+        if (
+          unit.name.includes("War Mumak of ") ||
+          unit.name === "Great Beast of Gorgoroth" ||
+          unit.name === "Troll Brute" ||
+          unit.name === "Bard's Family"
+        ) {
+          const riderMwf = unit.MWFW.find(([name]) =>
+            String(name).includes(profile.name),
+          ) || ["", "-:-:-:-"];
+          const [HM, HW, HF] = riderMwf[1].split(":");
+          return { ...profile, HM, HW, HF };
+        }
 
-      if (unit.name === "Iron Hills Chariot (Captain)" && profile.name === "Iron Hills Captain") {
-        const [HM, HW, HF] = unit.MWFW[0][1].split(":");
-        return { ...profile, HM, HW, HF };
-      }
+        if (
+          unit.name === "Iron Hills Chariot (Captain)" &&
+          profile.name === "Iron Hills Captain"
+        ) {
+          const [HM, HW, HF] = unit.MWFW[0][1].split(":");
+          return { ...profile, HM, HW, HF };
+        }
 
-      if (unit.name === "King's Champion" && profile.name === "Herald") {
-        const [HM, HW, HF] = unit.MWFW[1][1].split(":");
-        return { ...profile, HM, HW, HF };
-      }
+        if (unit.name === "King's Champion" && profile.name === "Herald") {
+          const [HM, HW, HF] = unit.MWFW[1][1].split(":");
+          return { ...profile, HM, HW, HF };
+        }
 
-      return { ...profile };
-    }) || []
+        return { ...profile };
+      }) || []
   );
 }
 
-export function getAdditionalStats(unit: SelectedUnit, profile: RawProfile): Profile[] {
+export function getAdditionalStats(
+  unit: SelectedUnit,
+  profile: RawProfile,
+): Profile[] {
   const additionalStats = [];
 
   additionalStats.push(...getAdditionalProfilesFromProfileData(profile, unit));

@@ -25,7 +25,9 @@ export type WarbandActionButtonsProps = {
   meta: Warband["meta"];
 };
 
-export const WarbandActionButtons: FunctionComponent<WarbandActionButtonsProps> = ({
+export const WarbandActionButtons: FunctionComponent<
+  WarbandActionButtonsProps
+> = ({
   warbandId,
   meta: { num: warbandNum },
   collapsed,
@@ -38,7 +40,10 @@ export const WarbandActionButtons: FunctionComponent<WarbandActionButtonsProps> 
   const { getAdjustedMetaData } = useRosterInformation();
   const { leaderCompulsory, leader } = getAdjustedMetaData();
   const { preferences } = useUserPreferences();
-  const hasCompulsoryLeader = leaderCompulsory && leader === warbandId && !preferences.allowCompulsoryGeneralDelete;
+  const hasCompulsoryLeader =
+    leaderCompulsory &&
+    leader === warbandId &&
+    !preferences.allowCompulsoryGeneralDelete;
   const iconStyle = { fontSize: "1.5rem" };
   const iconPadding = ".5rem";
   return (
@@ -75,7 +80,13 @@ export const WarbandActionButtons: FunctionComponent<WarbandActionButtonsProps> 
         testId={`warband-header--${warbandNum}--duplicate-warband-action`}
       />
       <SquareIconButton
-        icon={collapsed ? <UnfoldMoreDouble sx={iconStyle} /> : <UnfoldLessDouble sx={iconStyle} />}
+        icon={
+          collapsed ? (
+            <UnfoldMoreDouble sx={iconStyle} />
+          ) : (
+            <UnfoldLessDouble sx={iconStyle} />
+          )
+        }
         iconColor={palette.primary.contrastText}
         iconPadding={iconPadding}
         backgroundColor={palette.grey.A400}
@@ -84,7 +95,13 @@ export const WarbandActionButtons: FunctionComponent<WarbandActionButtonsProps> 
         testId={`warband-header--${warbandNum}--collapse-all-action`}
       />
       <SquareIconButton
-        icon={collapsed ? <UnfoldMore sx={iconStyle} /> : <UnfoldLess sx={iconStyle} />}
+        icon={
+          collapsed ? (
+            <UnfoldMore sx={iconStyle} />
+          ) : (
+            <UnfoldLess sx={iconStyle} />
+          )
+        }
         iconColor={palette.primary.contrastText}
         iconPadding={iconPadding}
         backgroundColor={palette.grey.A400}

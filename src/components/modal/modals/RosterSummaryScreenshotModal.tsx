@@ -20,7 +20,12 @@ export const RosterSummaryScreenshotModal = () => {
                 width: "100%",
               }}
             />
-            <Button fullWidth variant="contained" href={modalContext.screenshot} download={roster.id + ".png"}>
+            <Button
+              fullWidth
+              variant="contained"
+              href={modalContext.screenshot}
+              download={roster.id + ".png"}
+            >
               Save image
             </Button>
           </>

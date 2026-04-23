@@ -17,32 +17,34 @@ export function convertBardsFamilyToSingleRows(dataPoint: Unit[]) {
     unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
     army_list: dataPoint.map((p) => p.army_list),
     option_mandatory: dataPoint[0].opt_mandatory,
-    options: dataPoint.flatMap((p) => p.options).filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
   };
   return [
     {
       ...base,
       name: `Bain, Son of Bard`,
       MWFW: dataPoint.flatMap((p) => p.MWFW),
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Bain, Son of Bard",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Bain, Son of Bard"),
     },
     {
       ...base,
       name: `Sigrid`,
       MWFW: dataPoint.flatMap((p) => p.MWFW),
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Sigrid",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Sigrid"),
     },
     {
       ...base,
       name: `Tilda`,
       MWFW: dataPoint.flatMap((p) => p.MWFW),
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Tilda",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Tilda"),
     },
   ];
 }
@@ -54,7 +56,9 @@ export function convertShankAndWrotToSingleRows(dataPoint: Unit[]) {
     unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
     army_list: dataPoint.map((p) => p.army_list),
     option_mandatory: dataPoint[0].opt_mandatory,
-    options: dataPoint.flatMap((p) => p.options).filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
   };
 
   return [
@@ -62,25 +66,25 @@ export function convertShankAndWrotToSingleRows(dataPoint: Unit[]) {
       ...base,
       name: `Shank`,
       MWFW: [dataPoint.flatMap((p) => p.MWFW)[0]],
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Shank",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Shank"),
     },
     {
       ...base,
       name: `Wrot`,
       MWFW: [dataPoint.flatMap((p) => p.MWFW)[1]],
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Wrot",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Wrot"),
     },
     {
       ...base,
       name: `Snow Troll`,
       MWFW: [],
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Snow Troll",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Snow Troll"),
     },
   ];
 }
@@ -92,7 +96,9 @@ export function convertSharkeyAndWormToSingleRows(dataPoint: Unit[]) {
     unit_type: [...new Set(dataPoint.map((p) => p.unit_type))],
     army_list: dataPoint.map((p) => p.army_list),
     option_mandatory: dataPoint[0].opt_mandatory,
-    options: dataPoint.flatMap((p) => p.options).filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
+    options: dataPoint
+      .flatMap((p) => p.options)
+      .filter((o, i, s) => s.findIndex((ot) => ot.name === o.name) === i),
   };
 
   return [
@@ -100,17 +106,17 @@ export function convertSharkeyAndWormToSingleRows(dataPoint: Unit[]) {
       ...base,
       name: `Sharkey`,
       MWFW: [dataPoint.flatMap((p) => p.MWFW)[0]],
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Sharkey",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Sharkey"),
     },
     {
       ...base,
       name: `Worm`,
       MWFW: [dataPoint.flatMap((p) => p.MWFW)[1]],
-      profile: profileData[dataPoint[0].profile_origin][dataPoint[0].name].additional_stats.find(
-        (stat) => stat.name === "Worm",
-      ),
+      profile: profileData[dataPoint[0].profile_origin][
+        dataPoint[0].name
+      ].additional_stats.find((stat) => stat.name === "Worm"),
     },
   ];
 }

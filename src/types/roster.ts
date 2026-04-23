@@ -29,10 +29,13 @@ export type Warband = {
   };
 };
 
-export const isSelectedUnit = (unit: FreshUnit | SelectedUnit | SiegeEquipment): unit is SelectedUnit =>
-  !!(unit as SelectedUnit)?.model_id;
+export const isSelectedUnit = (
+  unit: FreshUnit | SelectedUnit | SiegeEquipment,
+): unit is SelectedUnit => !!(unit as SelectedUnit)?.model_id;
 
-export const isSiegeEquipment = (unit: FreshUnit | SelectedUnit | SiegeEquipment): unit is SiegeEquipment =>
+export const isSiegeEquipment = (
+  unit: FreshUnit | SelectedUnit | SiegeEquipment,
+): unit is SiegeEquipment =>
   !!(unit as SelectedUnit)?.model_id && !!(unit as SiegeEquipment).siege_role;
 
 export type Roster = {

@@ -80,7 +80,10 @@ export type Unit = {
   legacy?: boolean;
 };
 
-export type SiegeEquipment = Pick<Unit, "name" | "unit_type" | "base_points" | "model_id" | "profile_origin"> & {
+export type SiegeEquipment = Pick<
+  Unit,
+  "name" | "unit_type" | "base_points" | "model_id" | "profile_origin"
+> & {
   id?: string;
   siege_role: "Attacker" | "Defender";
 };

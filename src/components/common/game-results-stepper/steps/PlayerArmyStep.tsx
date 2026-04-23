@@ -1,4 +1,10 @@
-import { Collapse, Stack, StepContent, StepLabel, TextField } from "@mui/material";
+import {
+  Collapse,
+  Stack,
+  StepContent,
+  StepLabel,
+  TextField,
+} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { FunctionComponent } from "react";
 import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
@@ -32,7 +38,10 @@ export const PlayerArmyStep: FunctionComponent<StepProps> = ({
         Players - Your army
       </StepLabel>
       <StepContent>
-        <Typography>Select which army you played and how much bows & throwing weapons you included.</Typography>
+        <Typography>
+          Select which army you played and how much bows & throwing weapons you
+          included.
+        </Typography>
         <Stack gap={2} sx={{ my: 2 }}>
           <ArmyPicker
             label="Armies"

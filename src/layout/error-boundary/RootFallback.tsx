@@ -18,7 +18,10 @@ export const RootFallback = () => {
           }}
         >
           <h3 style={{ fontSize: "2rem" }}>A Shadow Has Fallen!</h3>
-          <p>“This page was cast into the fires of Mount Doom… and did not return”</p>
+          <p>
+            “This page was cast into the fires of Mount Doom… and did not
+            return”
+          </p>
           <div>
             <div
               role="alert"
@@ -34,12 +37,16 @@ export const RootFallback = () => {
             >
               <h4>Help us help you!</h4>
               <div>
-                Please do share a screenshot of this page with us either via email or in our discord. We do like to know
-                what happend and resolve the issue.
+                Please do share a screenshot of this page with us either via
+                email or in our discord. We do like to know what happend and
+                resolve the issue.
               </div>
             </div>
             <p>
-              <a href="https://discord.gg/MZfUgRtV56">https://discord.gg/MZfUgRtV56</a> or{" "}
+              <a href="https://discord.gg/MZfUgRtV56">
+                https://discord.gg/MZfUgRtV56
+              </a>{" "}
+              or{" "}
               <a href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Bug/Correction">
                 support@mesbg-list-builder.com
               </a>

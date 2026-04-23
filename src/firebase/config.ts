@@ -1,5 +1,10 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
-import { Auth, browserLocalPersistence, getAuth, setPersistence } from "firebase/auth";
+import {
+  Auth,
+  browserLocalPersistence,
+  getAuth,
+  setPersistence,
+} from "firebase/auth";
 
 const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
@@ -16,7 +21,9 @@ function validateEnvironmentVariables() {
     .map(([key]) => key);
 
   if (missingKeys.length >= 1) {
-    console.warn(`Firebase configuration is incomplete! Missing keys: ${missingKeys}.`);
+    console.warn(
+      `Firebase configuration is incomplete! Missing keys: ${missingKeys}.`,
+    );
     return false;
   }
   return true;

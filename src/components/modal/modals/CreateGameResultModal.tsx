@@ -5,7 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useGameModeState } from "../../../state/gamemode";
-import { GameResultsForm, GameResultsFormHandlers } from "../../common/game-results-form/GameResultsForm.tsx";
+import {
+  GameResultsForm,
+  GameResultsFormHandlers,
+} from "../../common/game-results-form/GameResultsForm.tsx";
 
 export const CreateGameResultModal = () => {
   const { closeModal, modalContext } = useAppState();

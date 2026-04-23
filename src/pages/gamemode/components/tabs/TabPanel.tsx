@@ -9,7 +9,12 @@ export const TabPanel: FunctionComponent<
   }>
 > = ({ tabName, visible, children }) => {
   return (
-    <div role="tabpanel" hidden={!visible} id={slugify(tabName)} aria-labelledby={slugify(tabName)}>
+    <div
+      role="tabpanel"
+      hidden={!visible}
+      id={slugify(tabName)}
+      aria-labelledby={slugify(tabName)}
+    >
       <Box sx={{ p: 3, display: "block" }}>{children}</Box>
     </div>
   );

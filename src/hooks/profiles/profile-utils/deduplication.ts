@@ -11,7 +11,10 @@ export function combineProfiles() {
     if (index === firstIndex) return item;
 
     const firstOccurrence = self[firstIndex];
-    const combined = [...firstOccurrence.additional_stats, ...item.additional_stats];
+    const combined = [
+      ...firstOccurrence.additional_stats,
+      ...item.additional_stats,
+    ];
     firstOccurrence.additional_stats = combined.filter(duplicateProfiles());
     return item;
   };

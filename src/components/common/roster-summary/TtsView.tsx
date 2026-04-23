@@ -35,7 +35,10 @@ const getAdditionalIncludes = (roster) => {
   return "";
 };
 
-export const RosterTabletopSimView = forwardRef<RosterTextViewHandlers, RosterTextViewProps>(({ roster }, ref) => {
+export const RosterTabletopSimView = forwardRef<
+  RosterTextViewHandlers,
+  RosterTextViewProps
+>(({ roster }, ref) => {
   const { triggerAlert } = useAppState();
 
   const additionalIncludes = getAdditionalIncludes(roster);
@@ -44,13 +47,20 @@ export const RosterTabletopSimView = forwardRef<RosterTextViewHandlers, RosterTe
       .filter((warband) => isSelectedUnit(warband.hero))
       .map(({ hero, units }) => {
         const name = tta2mlb[hero.name] ? tta2mlb[hero.name](hero) : hero.name;
-        const leader = hero.unit_type === "Siege Engine" ? name : `(${name}: ${getOptions(hero)})`;
+        const leader =
+          hero.unit_type === "Siege Engine"
+            ? name
+            : `(${name}: ${getOptions(hero)})`;
         const followers = units.filter(isSelectedUnit).map((unit) => {
-          const unitName = tta2mlb[unit.name] ? tta2mlb[unit.name](unit) : unit.name;
+          const unitName = tta2mlb[unit.name]
+            ? tta2mlb[unit.name](unit)
+            : unit.name;
           const options = getOptions(unit);
           return `    (${unit.quantity}x ${unitName}: ${options})`;
         });
-        return followers.length ? `${leader}\n${followers.join("\n")}\n` : `${leader}\n`;
+        return followers.length
+          ? `${leader}\n${followers.join("\n")}\n`
+          : `${leader}\n`;
       })
       .join("\n") + additionalIncludes;
 
@@ -72,9 +82,10 @@ export const RosterTabletopSimView = forwardRef<RosterTextViewHandlers, RosterTe
         >
           MESBG FTC Plugin
         </Link>{" "}
-        for Tabletop Simulator is based of the model names from Tabletop Admiral. Since there will be no 1-to-1 match on
-        unit names it could be that some models will fail to load. Please let us know so we can add it to our{" "}
-        <strong>TTA to MLB</strong> name map.
+        for Tabletop Simulator is based of the model names from Tabletop
+        Admiral. Since there will be no 1-to-1 match on unit names it could be
+        that some models will fail to load. Please let us know so we can add it
+        to our <strong>TTA to MLB</strong> name map.
       </CustomAlert>
       <TextField
         id="outlined-multiline-static"
@@ -98,7 +109,8 @@ export const RosterTabletopSimView = forwardRef<RosterTextViewHandlers, RosterTe
 });
 
 const siegeUnitMappings: Record<string, (unit: SelectedUnit) => string> = {
-  Windlance: (unit) => `(Windlance: ${getOptions(unit)})\n    (1x Dale Siege Veteran: )\n    (1x Dale Crew: )`,
+  Windlance: (unit) =>
+    `(Windlance: ${getOptions(unit)})\n    (1x Dale Siege Veteran: )\n    (1x Dale Crew: )`,
   "Gondor Avenger Bolt Thrower": (unit) =>
     `(Gondor Avenger Bolt Thrower: ${getOptions(unit)})\n    (1x Minas Tirith Siege Veteran: )\n    (2x Minas Tirith Siege Crew: )`,
   "Gondor Battlecry Trebuchet": (unit) =>
@@ -138,14 +150,21 @@ const tta2mlb: Record<string, (unit: SelectedUnit) => string> = {
 
   // Complex mapping including options and quantities.
   "Frodo Baggins": (unit) =>
-    unit.army_list === "Garrison of Ithilien" ? "Frodo Baggins Garrison of Ithilien" : unit.name,
+    unit.army_list === "Garrison of Ithilien"
+      ? "Frodo Baggins Garrison of Ithilien"
+      : unit.name,
   "Khamul the Easterling": (unit) =>
-    unit.profile_origin === "Gundabad & Dol Guldur" ? "Nazgul of Dol Guldur (Khamul)" : "Khamûl the Easterling",
+    unit.profile_origin === "Gundabad & Dol Guldur"
+      ? "Nazgul of Dol Guldur (Khamul)"
+      : "Khamûl the Easterling",
   "Khandish King": (unit) =>
-    unit.model_id === "[variags-of-khand] khandish-king-general" ? unit.name + " Leader" : unit.name,
+    unit.model_id === "[variags-of-khand] khandish-king-general"
+      ? unit.name + " Leader"
+      : unit.name,
   "Moria Blackshield Drum": (unit) =>
     `Moria Blackshield Drummer: )\n    (${unit.quantity}x Moria Blackshield Drum Bearer`,
-  "Moria Goblin Drum": (unit) => `Moria Goblin Drum: )\n    (${unit.quantity * 2}x Moria Goblin Drummer`,
+  "Moria Goblin Drum": (unit) =>
+    `Moria Goblin Drum: )\n    (${unit.quantity * 2}x Moria Goblin Drummer`,
   Ringwraith: (unit) => {
     const type = unit.options.find(selectedOptionWithType("ringwraith_amwf"));
     switch (type?.name) {
@@ -160,7 +179,9 @@ const tta2mlb: Record<string, (unit: SelectedUnit) => string> = {
     }
   },
   "Samwise Gamgee": (unit) =>
-    unit.army_list === "Garrison of Ithilien" ? "Samwise Gamgee Garrison of Ithilien" : unit.name,
+    unit.army_list === "Garrison of Ithilien"
+      ? "Samwise Gamgee Garrison of Ithilien"
+      : unit.name,
   "The Witch-king of Angmar": (unit) => {
     if (unit.profile_origin === "Gundabad & Dol Guldur") {
       return "Nazgul of Dol Guldur (Witch King)";
@@ -177,7 +198,8 @@ const tta2mlb: Record<string, (unit: SelectedUnit) => string> = {
         return unit.name;
     }
   },
-  "Vault Warden Team": (unit) => `Iron Shield Bearer: )\n    (${unit.quantity}x Foe Spear Wielder`,
+  "Vault Warden Team": (unit) =>
+    `Iron Shield Bearer: )\n    (${unit.quantity}x Foe Spear Wielder`,
 };
 
 // Below is a list of all the missing names that are present in the TTA dataset.

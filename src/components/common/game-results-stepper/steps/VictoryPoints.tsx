@@ -18,8 +18,12 @@ export type QuestionListProps = {
   updateFormValues: (values: Partial<PastGame>) => void;
 };
 
-export const VictoryPointsStep: FunctionComponent<StepProps> = ({ formValues, updateFormValues }) => {
-  const { additionalVictoryPoints, setCalculatedVictoryPoints } = useGameModeState();
+export const VictoryPointsStep: FunctionComponent<StepProps> = ({
+  formValues,
+  updateFormValues,
+}) => {
+  const { additionalVictoryPoints, setCalculatedVictoryPoints } =
+    useGameModeState();
 
   const QuestionList = {
     Domination: DominationVPs,
@@ -50,7 +54,9 @@ export const VictoryPointsStep: FunctionComponent<StepProps> = ({ formValues, up
       <StepLabel
         optional={
           <Typography variant="caption" color="textDisabled">
-            {formValues.victoryPoints || 0} - {formValues.opponentVictoryPoints || 0} <i>[ {formValues.result} ]</i>
+            {formValues.victoryPoints || 0} -{" "}
+            {formValues.opponentVictoryPoints || 0}{" "}
+            <i>[ {formValues.result} ]</i>
           </Typography>
         }
       >
@@ -69,12 +75,14 @@ export const VictoryPointsStep: FunctionComponent<StepProps> = ({ formValues, up
           </>
         ) : formValues.scenarioPlayed !== null ? (
           <CustomAlert title="No victory points guide" severity="info">
-            The selected scenario ({formValues.scenarioPlayed}) does not not have a victory points stepper. You can skip
-            this step and fill in the VP&apos;s in the next step.
+            The selected scenario ({formValues.scenarioPlayed}) does not not
+            have a victory points stepper. You can skip this step and fill in
+            the VP&apos;s in the next step.
           </CustomAlert>
         ) : (
           <CustomAlert title="No scenario selected" severity="warning">
-            You have not selected a scenario in step 2. Please go back and select a scenario.
+            You have not selected a scenario in step 2. Please go back and
+            select a scenario.
           </CustomAlert>
         )}
       </StepContent>

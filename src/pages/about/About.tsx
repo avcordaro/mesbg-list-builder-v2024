@@ -14,7 +14,13 @@ export const About = () => {
 
   return (
     <Container maxWidth={false} sx={{ mt: 2, mb: 5 }}>
-      <Stack direction="row" gap={5} flexWrap="wrap" justifyContent="space-around" sx={{ mb: 5 }}>
+      <Stack
+        direction="row"
+        gap={5}
+        flexWrap="wrap"
+        justifyContent="space-around"
+        sx={{ mb: 5 }}
+      >
         <AboutSection />
         <ContactSection />
         <FeaturesSection />
@@ -28,7 +34,10 @@ export const About = () => {
             <a
               href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024)"
               style={{
-                color: themeContext.mode === "dark" ? theme.palette.secondary.light : theme.palette.secondary.dark,
+                color:
+                  themeContext.mode === "dark"
+                    ? theme.palette.secondary.light
+                    : theme.palette.secondary.dark,
               }}
             >
               support@mesbg-list-builder.com

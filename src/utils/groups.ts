@@ -5,7 +5,10 @@ function getGroup(parentId: string, groups: RosterGroup[]): RosterGroup {
   return groups.find((group: RosterGroup) => group.slug === parentId);
 }
 
-const getParentGroups = (group: RosterGroup, others: RosterGroup[]): RosterGroup[] => {
+const getParentGroups = (
+  group: RosterGroup,
+  others: RosterGroup[],
+): RosterGroup[] => {
   if (!group?.parent) {
     return [];
   }
@@ -15,7 +18,10 @@ const getParentGroups = (group: RosterGroup, others: RosterGroup[]): RosterGroup
 
 export function selectRosterGroup(roster: Roster) {
   return (state): RosterGroup =>
-    roster.group && state.groups.find(({ id, slug }) => roster.group === id || roster.group === slug);
+    roster.group &&
+    state.groups.find(
+      ({ id, slug }) => roster.group === id || roster.group === slug,
+    );
 }
 
 export function selectParentGroups(group: RosterGroup) {

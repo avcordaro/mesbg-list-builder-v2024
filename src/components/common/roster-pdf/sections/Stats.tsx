@@ -1,8 +1,19 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 
 export const Stats = ({ profile }: { profile: Profile }) => {
-  const skippedParentRow = ["Vault Warden Team", "Uruk-Hai Demolition Team", "Bard's Family"].includes(profile.name);
+  const skippedParentRow = [
+    "Vault Warden Team",
+    "Uruk-Hai Demolition Team",
+    "Bard's Family",
+  ].includes(profile.name);
   return (
     <TableContainer component="div" sx={{ mb: 2 }}>
       <Table size="small">
@@ -30,7 +41,9 @@ export const Stats = ({ profile }: { profile: Profile }) => {
         <TableBody>
           {!skippedParentRow && (
             <TableRow>
-              {profile.additional_stats && <TableCell>{profile.name}</TableCell>}
+              {profile.additional_stats && (
+                <TableCell>{profile.name}</TableCell>
+              )}
               <TableCell>{profile.Mv}</TableCell>
               <TableCell>{profile.Fv}</TableCell>
               <TableCell>{profile.Sv}</TableCell>
@@ -61,7 +74,12 @@ export const Stats = ({ profile }: { profile: Profile }) => {
               <TableCell>{stats.W}</TableCell>
               <TableCell>{stats.C}</TableCell>
               <TableCell>{stats.I}</TableCell>
-              {(stats.HM || stats.HW || stats.HF || profile.HM || profile.HW || profile.HF) && (
+              {(stats.HM ||
+                stats.HW ||
+                stats.HF ||
+                profile.HM ||
+                profile.HW ||
+                profile.HF) && (
                 <>
                   <TableCell>{stats.HM ?? "-"}</TableCell>
                   <TableCell>{stats.HW ?? "-"}</TableCell>

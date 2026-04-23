@@ -61,12 +61,21 @@ export const GamemodeToolbar = () => {
   };
 
   const armyListMetadata = armyListData[roster.armyList];
-  const [breakPointDead] = getPoint(metadata.units + (metadata.addUnits ?? 0), armyListMetadata.break_point ?? 0.5, 1);
-  const [, quarterDead] = getPoint(metadata.units + (metadata.addUnits ?? 0), 0.25);
+  const [breakPointDead] = getPoint(
+    metadata.units + (metadata.addUnits ?? 0),
+    armyListMetadata.break_point ?? 0.5,
+    1,
+  );
+  const [, quarterDead] = getPoint(
+    metadata.units + (metadata.addUnits ?? 0),
+    0.25,
+  );
 
   const casualties = game.casualties + game.heroCasualties;
 
-  const totalMight = game.trackables.map((t) => Number(t.xMWFW.split(":")[0])).reduce((a, b) => a + b, 0);
+  const totalMight = game.trackables
+    .map((t) => Number(t.xMWFW.split(":")[0]))
+    .reduce((a, b) => a + b, 0);
   return !screen.isDesktop ? (
     <>
       <Stack direction="row" justifyContent="space-between" sx={{ my: 2 }}>
@@ -85,11 +94,27 @@ export const GamemodeToolbar = () => {
         </Button>
       </Stack>
       <Stack direction="row" justifyContent="space-around" sx={{ m: 2 }}>
-        <Typography color={breakPointDead - casualties <= 0 ? "error" : "inherit"}>
-          Until Broken: <b>{breakPointDead - casualties > 0 ? breakPointDead - casualties : <GiCrackedShield />}</b>
+        <Typography
+          color={breakPointDead - casualties <= 0 ? "error" : "inherit"}
+        >
+          Until Broken:{" "}
+          <b>
+            {breakPointDead - casualties > 0 ? (
+              breakPointDead - casualties
+            ) : (
+              <GiCrackedShield />
+            )}
+          </b>
         </Typography>
         <Typography color={quarterDead - casualties <= 0 ? "error" : "inherit"}>
-          Until Quartered: <b>{quarterDead - casualties > 0 ? quarterDead - casualties : <FaSkullCrossbones />}</b>
+          Until Quartered:{" "}
+          <b>
+            {quarterDead - casualties > 0 ? (
+              quarterDead - casualties
+            ) : (
+              <FaSkullCrossbones />
+            )}
+          </b>
         </Typography>
         <Typography color={totalMight <= 0 ? "error" : "inherit"}>
           Might: <b>{totalMight}</b>
@@ -107,8 +132,12 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography variant="h6" sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}>
-          {casualties} / {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
+        <Typography
+          variant="h6"
+          sx={{ mx: 1, fontSize: "1.4rem", fontWeight: "bolder" }}
+        >
+          {casualties} /{" "}
+          {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
@@ -141,7 +170,11 @@ export const GamemodeToolbar = () => {
         </ButtonGroup>
       </Box>
       <Stack direction="row" gap={2}>
-        <Typography variant="h6" className="middle-earth" sx={{ mx: 0.25, fontSize: "1.2rem" }}>
+        <Typography
+          variant="h6"
+          className="middle-earth"
+          sx={{ mx: 0.25, fontSize: "1.2rem" }}
+        >
           Casualties:
         </Typography>
         <SquareIconButton
@@ -152,8 +185,12 @@ export const GamemodeToolbar = () => {
           iconPadding=".3rem"
           disabled={game.casualties === 0}
         />
-        <Typography variant="h6" sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}>
-          {casualties} / {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
+        <Typography
+          variant="h6"
+          sx={{ mx: 0.25, fontSize: "1.2rem", fontWeight: "bolder" }}
+        >
+          {casualties} /{" "}
+          {roster.metadata.units + (roster.metadata.addUnits ?? 0)}
         </Typography>
         <SquareIconButton
           onClick={() => updateCasualties(+1)}
@@ -168,13 +205,27 @@ export const GamemodeToolbar = () => {
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           color={breakPointDead - casualties <= 0 ? "error" : "inherit"}
         >
-          Until Broken: <b>{breakPointDead - casualties > 0 ? breakPointDead - casualties : <GiCrackedShield />}</b>
+          Until Broken:{" "}
+          <b>
+            {breakPointDead - casualties > 0 ? (
+              breakPointDead - casualties
+            ) : (
+              <GiCrackedShield />
+            )}
+          </b>
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           color={quarterDead - casualties <= 0 ? "error" : "inherit"}
         >
-          Until Quartered: <b>{quarterDead - casualties > 0 ? quarterDead - casualties : <FaSkullCrossbones />}</b>
+          Until Quartered:{" "}
+          <b>
+            {quarterDead - casualties > 0 ? (
+              quarterDead - casualties
+            ) : (
+              <FaSkullCrossbones />
+            )}
+          </b>
         </Typography>
         <Typography
           sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
