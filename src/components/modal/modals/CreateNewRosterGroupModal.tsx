@@ -6,7 +6,10 @@ import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
 import { Roster } from "../../../types/roster.ts";
 import { slugify, withSuffix } from "../../../utils/string.ts";
-import { GroupIconSelector, Option as IconOption } from "../../atoms/group-icon/GroupIconSelector.tsx";
+import {
+  GroupIconSelector,
+  Option as IconOption,
+} from "../../atoms/group-icon/GroupIconSelector.tsx";
 
 export const CreateNewRosterGroupModal = () => {
   const {
@@ -58,11 +61,16 @@ export const CreateNewRosterGroupModal = () => {
           fullWidth
           label="Group name"
           error={!rosterGroupNameValid}
-          helperText={!rosterGroupNameValid ? "Group name cannot be empty." : ""}
+          helperText={
+            !rosterGroupNameValid ? "Group name cannot be empty." : ""
+          }
           value={rosterGroupName}
           onChange={(e) => updateRosterName(e.target.value)}
         />
-        <GroupIconSelector selectedIcon={rosterGroupIcon} setSelectedIcon={setRosterGroupIcon} />
+        <GroupIconSelector
+          selectedIcon={rosterGroupIcon}
+          setSelectedIcon={setRosterGroupIcon}
+        />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button

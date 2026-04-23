@@ -15,7 +15,11 @@ interface EditTrackerLabelProps {
   save: (event: MouseEvent<HTMLElement>) => void;
 }
 
-const EditTrackerLabel = ({ value, updateTrackerLabel, save }: EditTrackerLabelProps) => (
+const EditTrackerLabel = ({
+  value,
+  updateTrackerLabel,
+  save,
+}: EditTrackerLabelProps) => (
   <TextField
     value={value}
     onChange={(e) => updateTrackerLabel(e.target.value)}
@@ -73,7 +77,12 @@ const TrackerLabel = ({
         backgroundColor="inherit"
         backgroundColorHover="inherit"
       />
-      <Menu id="menu" anchorEl={menuAnchorRef} open={menuOpen} onClose={closeMenu}>
+      <Menu
+        id="menu"
+        anchorEl={menuAnchorRef}
+        open={menuOpen}
+        onClose={closeMenu}
+      >
         <MenuItem onClick={toggleEditMode}>
           <ListItemIcon>
             <Edit fontSize="small" />
@@ -127,7 +136,11 @@ export const EditableTrackerLabel = ({
   return (
     <>
       {editMode ? (
-        <EditTrackerLabel value={label} updateTrackerLabel={updateLabel} save={toggleEditLabelMode} />
+        <EditTrackerLabel
+          value={label}
+          updateTrackerLabel={updateLabel}
+          save={toggleEditLabelMode}
+        />
       ) : (
         <TrackerLabel
           label={label}

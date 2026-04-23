@@ -1,5 +1,7 @@
 function getNestedValue<T>(obj: T, path: string) {
-  let value = path.split(".").reduce((acc, part) => (acc ? acc[part] : undefined), obj);
+  let value = path
+    .split(".")
+    .reduce((acc, part) => (acc ? acc[part] : undefined), obj);
 
   // Patch values that supposed to be numbers, making sure sorting goes from [ - , * , 0 , 1 , ... ]
   value = value === "-" ? "-2" : value === "*" ? "-1" : value;

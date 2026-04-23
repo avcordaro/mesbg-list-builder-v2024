@@ -6,9 +6,25 @@ interface MatchesOverTimeProps {
   data: PastGame[];
 }
 
-function getMonthRange(firstMonthOnRecord: string, currentDate: string): string[] {
+function getMonthRange(
+  firstMonthOnRecord: string,
+  currentDate: string,
+): string[] {
   // Mapping month names to numbers
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
   // Extract the month and year from the input strings
   const [startMonthName, startYear] = firstMonthOnRecord.split(" ");
@@ -65,12 +81,21 @@ function generateInitialEmptyDataSet(data: PastGame[]) {
 export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
   const { palette } = useTheme();
 
-  const barColors = [palette.success.light, palette.warning.light, palette.error.light];
+  const barColors = [
+    palette.success.light,
+    palette.warning.light,
+    palette.error.light,
+  ];
 
-  const sortedData = data.sort((a, b) => new Date(a.gameDate).getTime() - new Date(b.gameDate).getTime());
+  const sortedData = data.sort(
+    (a, b) => new Date(a.gameDate).getTime() - new Date(b.gameDate).getTime(),
+  );
 
   const wldRatiosPerDay = sortedData.reduce(
-    (acc: { [key: string]: { won: number; lost: number; draw: number } }, game) => {
+    (
+      acc: { [key: string]: { won: number; lost: number; draw: number } },
+      game,
+    ) => {
       const key = new Date(game.gameDate)
         .toLocaleDateString("en-UK", {
           month: "short",
@@ -88,7 +113,9 @@ export const MatchesOverTimeMixedChart = ({ data }: MatchesOverTimeProps) => {
     generateInitialEmptyDataSet(sortedData),
   );
 
-  const matchesPerDay = Object.values(wldRatiosPerDay).map(({ won, lost, draw }) => won + lost + draw);
+  const matchesPerDay = Object.values(wldRatiosPerDay).map(
+    ({ won, lost, draw }) => won + lost + draw,
+  );
 
   const victoryPointsData = {
     labels: Object.keys(wldRatiosPerDay),

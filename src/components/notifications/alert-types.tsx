@@ -73,7 +73,10 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Success!</b>
-          <p>The match was successfully saved and can now be viewed & edited via the Match History page.</p>
+          <p>
+            The match was successfully saved and can now be viewed & edited via
+            the Match History page.
+          </p>
         </Fragment>
       ),
       options: {
@@ -169,7 +172,9 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Successfully duplicated</b>
-          <p>The unit was successfully duplicated and is added to the warband.</p>
+          <p>
+            The unit was successfully duplicated and is added to the warband.
+          </p>
         </Fragment>
       ),
       options: {
@@ -184,7 +189,9 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Successfully duplicated</b>
-          <p>The warband was successfully duplicated and is added to the roster.</p>
+          <p>
+            The warband was successfully duplicated and is added to the roster.
+          </p>
         </Fragment>
       ),
       options: {
@@ -229,7 +236,10 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Failed to delete</b>
-          <p>The group could not be deleted, please refresh the page and try again.</p>
+          <p>
+            The group could not be deleted, please refresh the page and try
+            again.
+          </p>
         </Fragment>
       ),
     },
@@ -256,7 +266,10 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Failed to disbanded</b>
-          <p>The group could not be disbanded, please refresh the page and try again.</p>
+          <p>
+            The group could not be disbanded, please refresh the page and try
+            again.
+          </p>
         </Fragment>
       ),
     },
@@ -283,7 +296,10 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Request sent</b>
-          <p>If the provided email has an account it should receive a password reset link within a few minutes.</p>
+          <p>
+            If the provided email has an account it should receive a password
+            reset link within a few minutes.
+          </p>
         </Fragment>
       ),
       options: {
@@ -313,7 +329,10 @@ export const alertMap = new Map<AlertTypes, AlertProps>([
       content: (
         <Fragment>
           <b>Import incorrect</b>
-          <p>The imported JSON was incorrectly formatted. Please reexport the data and try again.</p>
+          <p>
+            The imported JSON was incorrectly formatted. Please reexport the
+            data and try again.
+          </p>
         </Fragment>
       ),
     },

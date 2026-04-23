@@ -32,12 +32,18 @@ export const LogoutWarningModal = () => {
     <>
       <DialogContent>
         <Typography>
-          Logging out will clear the app’s data from this device. Don’t worry—your information is safely stored in your
-          account and will be restored when you log back in.
+          Logging out will clear the app’s data from this device. Don’t
+          worry—your information is safely stored in your account and will be
+          restored when you log back in.
         </Typography>
       </DialogContent>
       <DialogActions>
-        <Button color="primary" onClick={closeModal} sx={{ minWidth: "20ch" }} data-test-id="dialog--cancel-button">
+        <Button
+          color="primary"
+          onClick={closeModal}
+          sx={{ minWidth: "20ch" }}
+          data-test-id="dialog--cancel-button"
+        >
           Cancel
         </Button>
         <Button

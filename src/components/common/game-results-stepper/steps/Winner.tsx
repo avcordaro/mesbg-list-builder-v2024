@@ -7,15 +7,31 @@ import { calculateResult } from "../../game-results-form/result.ts";
 import { scenarios } from "../../game-results-form/scenarios.ts";
 import { StepProps } from "./StepProps.ts";
 
-export const WinnerStep: FunctionComponent<StepProps> = ({ formValues, missingFields, updateFormValues }) => {
-  const { additionalVictoryPoints, calculatedVictoryPoints, setAdditionalVictoryPoints } = useGameModeState();
+export const WinnerStep: FunctionComponent<StepProps> = ({
+  formValues,
+  missingFields,
+  updateFormValues,
+}) => {
+  const {
+    additionalVictoryPoints,
+    calculatedVictoryPoints,
+    setAdditionalVictoryPoints,
+  } = useGameModeState();
 
-  const updateAdditionalVictoryPoints = (event: ChangeEvent<HTMLInputElement>) => {
+  const updateAdditionalVictoryPoints = (
+    event: ChangeEvent<HTMLInputElement>,
+  ) => {
     const { name, value } = event.target;
     if (name === "victoryPoints") {
-      setAdditionalVictoryPoints([Number(value) - calculatedVictoryPoints[0], additionalVictoryPoints[1]]);
+      setAdditionalVictoryPoints([
+        Number(value) - calculatedVictoryPoints[0],
+        additionalVictoryPoints[1],
+      ]);
     } else {
-      setAdditionalVictoryPoints([additionalVictoryPoints[0], Number(value) - calculatedVictoryPoints[1]]);
+      setAdditionalVictoryPoints([
+        additionalVictoryPoints[0],
+        Number(value) - calculatedVictoryPoints[1],
+      ]);
     }
   };
 
@@ -27,7 +43,9 @@ export const WinnerStep: FunctionComponent<StepProps> = ({ formValues, missingFi
       [name]: value,
       result: calculateResult(
         name === "victoryPoints" ? value : formValues.victoryPoints,
-        name === "opponentVictoryPoints" ? value : formValues.opponentVictoryPoints,
+        name === "opponentVictoryPoints"
+          ? value
+          : formValues.opponentVictoryPoints,
         formValues.result,
       ),
     });
@@ -36,7 +54,10 @@ export const WinnerStep: FunctionComponent<StepProps> = ({ formValues, missingFi
   return (
     <>
       <StepLabel
-        error={missingFields.includes("Victory Points") || missingFields.includes("Opponent's Victory Points")}
+        error={
+          missingFields.includes("Victory Points") ||
+          missingFields.includes("Opponent's Victory Points")
+        }
       >
         Result - Winner
       </StepLabel>
@@ -50,7 +71,13 @@ export const WinnerStep: FunctionComponent<StepProps> = ({ formValues, missingFi
         <Stack gap={2} sx={{ my: 2 }}>
           <CustomAlert
             title="Match result"
-            severity={formValues.result === "Draw" ? "info" : formValues.result === "Won" ? "success" : "error"}
+            severity={
+              formValues.result === "Draw"
+                ? "info"
+                : formValues.result === "Won"
+                  ? "success"
+                  : "error"
+            }
           >
             {
               {

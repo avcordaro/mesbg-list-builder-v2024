@@ -54,7 +54,10 @@ export const SiteStats = () => {
           const Icon = statsIconMap[key as keyof typeof statsIconMap];
 
           return (
-            <Grid size={{ xs: 12, md: 6, lg: isLastRowWide ? 6 : 4 }} key={label}>
+            <Grid
+              size={{ xs: 12, md: 6, lg: isLastRowWide ? 6 : 4 }}
+              key={label}
+            >
               <Card>
                 <CardContent>
                   <Stack direction="row" spacing={4} alignItems="center">
@@ -77,7 +80,11 @@ export const SiteStats = () => {
                     </Typography>
                   </Stack>
                   <Typography variant="h4" sx={{ pt: 0.5, pb: 1, ml: 2 }}>
-                    {loading ? <Skeleton width={120} /> : formatNumber(stats?.[key as keyof typeof stats])}
+                    {loading ? (
+                      <Skeleton width={120} />
+                    ) : (
+                      formatNumber(stats?.[key as keyof typeof stats])
+                    )}
                   </Typography>
                 </CardContent>
               </Card>

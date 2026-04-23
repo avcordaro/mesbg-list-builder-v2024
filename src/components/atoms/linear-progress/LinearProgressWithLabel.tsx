@@ -2,7 +2,9 @@ import { LinearProgress, LinearProgressProps } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-export function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
+export function LinearProgressWithLabel(
+  props: LinearProgressProps & { value: number },
+) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <Box sx={{ width: "100%", mr: 1 }}>

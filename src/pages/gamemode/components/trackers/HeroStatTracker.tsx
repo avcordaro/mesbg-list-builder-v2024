@@ -14,7 +14,11 @@ const TRACKABLE = ["Might", "Will", "Fate", "Wounds"];
 
 type HeroStatTrackerProps = {
   tracker: Trackable;
-  updateMwfw?: (newValue: number, trackerIndex: number, statIndex: number) => void;
+  updateMwfw?: (
+    newValue: number,
+    trackerIndex: number,
+    statIndex: number,
+  ) => void;
   updateName: (newName: string, trackerIndex: number) => void;
   index: number;
 };
@@ -36,12 +40,21 @@ export const HeroStatTracker: FunctionComponent<HeroStatTrackerProps> = ({
 
   return (
     <Paper
-      sx={[{ p: 1 }, alive ? {} : { backgroundColor: mode === "dark" ? "#000000" : "#EFEFEF" }]}
+      sx={[
+        { p: 1 },
+        alive
+          ? {}
+          : { backgroundColor: mode === "dark" ? "#000000" : "#EFEFEF" },
+      ]}
       elevation={alive ? 5 : 0}
     >
       <Stack direction={screen.isMobile ? "column" : "row"}>
         <Stack alignItems="center" sx={{ position: "relative" }}>
-          <UnitProfilePicture army={tracker.profile_origin} profile={tracker.name} opacity={alive ? 100 : 45} />
+          <UnitProfilePicture
+            army={tracker.profile_origin}
+            profile={tracker.name}
+            opacity={alive ? 100 : 45}
+          />
           <Box
             sx={{
               position: "absolute",
@@ -85,14 +98,19 @@ export const HeroStatTracker: FunctionComponent<HeroStatTrackerProps> = ({
                   key={statIndex}
                   sx={{ opacity: alive ? 1 : 0.45 }}
                 >
-                  <Typography sx={{ fontSize: "1.1rem", mt: 0.5 }} className="middle-earth">
+                  <Typography
+                    sx={{ fontSize: "1.1rem", mt: 0.5 }}
+                    className="middle-earth"
+                  >
                     {TRACKABLE[statIndex]}
                   </Typography>
                   <Counter
                     value={Number(value)}
                     maxValue={Number(initialValue)}
                     alive={alive || statIndex === 3}
-                    update={(newValue) => updateMwfw(newValue, index, statIndex)}
+                    update={(newValue) =>
+                      updateMwfw(newValue, index, statIndex)
+                    }
                   />
                 </Stack>
               );

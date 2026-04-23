@@ -22,7 +22,17 @@ import { ScenariosPlayedBarChart } from "./charts/ScenariosPlayedBarChart.tsx";
 import { VictoryPointsSpreadPieChart } from "./charts/VictoryPointsSpreadPieChart.tsx";
 
 // Register the components we need from Chart.js
-ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, Title, Tooltip, Legend, ArcElement, PointElement);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  PointElement,
+);
 
 interface ChartsProps {
   games: PastGame[];

@@ -38,16 +38,26 @@ export const ConfirmDeleteRosterModal = () => {
       <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
         <CustomAlert severity="warning" title="">
           <Typography>
-            Your are about to delete your roster! <b>This action is irreversible.</b> You will have to recreate the
+            Your are about to delete your roster!{" "}
+            <b>This action is irreversible.</b> You will have to recreate the
             roster from scratch!
           </Typography>
         </CustomAlert>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
-        <Button variant="text" onClick={closeModal} data-test-id="dialog--cancel-button">
+        <Button
+          variant="text"
+          onClick={closeModal}
+          data-test-id="dialog--cancel-button"
+        >
           Cancel
         </Button>
-        <Button variant="contained" onClick={handleConfirmDelete} color="error" data-test-id="dialog--submit-button">
+        <Button
+          variant="contained"
+          onClick={handleConfirmDelete}
+          color="error"
+          data-test-id="dialog--submit-button"
+        >
           Delete roster
         </Button>
       </DialogActions>

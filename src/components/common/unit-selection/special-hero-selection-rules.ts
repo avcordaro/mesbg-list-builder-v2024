@@ -11,18 +11,26 @@ export function handleBreakingOfTheFellowshipRestriction(unit: Unit) {
 
 export function handleThorinsCompanyRestriction(unit: Unit) {
   return unit.army_list === "Thorin's Company"
-    ? ["[thorin's-company] gwaihir", "[thorin's-company] thorin-oakenshield"].includes(unit.model_id)
+    ? [
+        "[thorin's-company] gwaihir",
+        "[thorin's-company] thorin-oakenshield",
+      ].includes(unit.model_id)
     : true;
 }
 
 export function handleGarrisonOfIthilien(unit: Unit) {
   return unit.army_list === "Garrison of Ithilien"
-    ? !["[garrison-of-ithilien] samwise-gamgee", "[garrison-of-ithilien] smeagol"].includes(unit.model_id)
+    ? ![
+        "[garrison-of-ithilien] samwise-gamgee",
+        "[garrison-of-ithilien] smeagol",
+      ].includes(unit.model_id)
     : true;
 }
 
 export function handleArmyOfLakeTown(unit: Unit) {
-  return unit.army_list === "Army of Lake-town" ? !["[army-of-lake-town] bard's-family"].includes(unit.model_id) : true;
+  return unit.army_list === "Army of Lake-town"
+    ? !["[army-of-lake-town] bard's-family"].includes(unit.model_id)
+    : true;
 }
 export function handleSurvivorsOfLakeTown(unit: Unit) {
   return unit.army_list === "Survivors of Lake-town"
@@ -37,7 +45,9 @@ export function handleBattleOfTheFiveArmies(unit: Unit) {
 
 export function handleAssaultOnRavenhill(unit: Unit) {
   return unit.army_list === "Assault on Ravenhill"
-    ? ["[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain"].includes(unit.model_id)
+    ? [
+        "[assault-on-ravenhill] thorin-oakenshield-king-under-the-mountain",
+      ].includes(unit.model_id)
     : true;
 }
 
@@ -49,7 +59,9 @@ export function handleBattleOfFornost(unit: Unit) {
 
 export function handleDefendersOfThePelennor(unit: Unit) {
   return unit.army_list === "Defenders of the Pelennor"
-    ? !["[defenders-of-the-pelennor] ranger-of-the-north"].includes(unit.model_id)
+    ? !["[defenders-of-the-pelennor] ranger-of-the-north"].includes(
+        unit.model_id,
+      )
     : true;
 }
 

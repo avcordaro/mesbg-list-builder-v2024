@@ -8,7 +8,10 @@ import { RosterGroup } from "../../../state/roster-building/groups";
 import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
 
-function findDirectSubgroups(slug: string, groups: RosterGroup[]): RosterGroup[] {
+function findDirectSubgroups(
+  slug: string,
+  groups: RosterGroup[],
+): RosterGroup[] {
   return groups.filter((g) => g.parent === slug);
 }
 
@@ -60,16 +63,26 @@ export const ConfirmDisbandGroupModal = () => {
 
         <CustomAlert severity="info" title="">
           <Typography>
-            Disbanding a roster group means the rosters and subgroups inside this group will be moved to their parent
-            group. <strong>They will not be deleted!</strong>
+            Disbanding a roster group means the rosters and subgroups inside
+            this group will be moved to their parent group.{" "}
+            <strong>They will not be deleted!</strong>
           </Typography>
         </CustomAlert>
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
-        <Button variant="text" onClick={closeModal} data-test-id="dialog--cancel-button">
+        <Button
+          variant="text"
+          onClick={closeModal}
+          data-test-id="dialog--cancel-button"
+        >
           Cancel
         </Button>
-        <Button variant="contained" onClick={handleConfirmDisband} color="error" data-test-id="dialog--submit-button">
+        <Button
+          variant="contained"
+          onClick={handleConfirmDisband}
+          color="error"
+          data-test-id="dialog--submit-button"
+        >
           Disband group
         </Button>
       </DialogActions>

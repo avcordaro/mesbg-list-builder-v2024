@@ -27,7 +27,10 @@ export type PastGame = {
 export type GameHistoryState = {
   recentGames: PastGame[];
   addGame: (game: PastGame) => void;
-  importGames: (games: PastGame[], onDuplicate: "overwrite" | "ignore" | "create-new") => void;
+  importGames: (
+    games: PastGame[],
+    onDuplicate: "overwrite" | "ignore" | "create-new",
+  ) => void;
   editGame: (game: PastGame) => void;
   deleteGame: (gameId: string) => void;
 
@@ -49,7 +52,10 @@ function overwriteExistingGames(recentGames: PastGame[], games: PastGame[]) {
   };
 }
 
-function ignoreExistingGamesInImport(recentGames: PastGame[], games: PastGame[]) {
+function ignoreExistingGamesInImport(
+  recentGames: PastGame[],
+  games: PastGame[],
+) {
   const existingGameIds = recentGames.map((game) => game.id);
   return {
     recentGames: [
@@ -60,7 +66,10 @@ function ignoreExistingGamesInImport(recentGames: PastGame[], games: PastGame[])
   };
 }
 
-function generateNewIdsOnImportedGames(recentGames: PastGame[], games: PastGame[]) {
+function generateNewIdsOnImportedGames(
+  recentGames: PastGame[],
+  games: PastGame[],
+) {
   return {
     recentGames: [
       ...recentGames,
@@ -70,10 +79,17 @@ function generateNewIdsOnImportedGames(recentGames: PastGame[], games: PastGame[
   };
 }
 
-export const historySlice: Slice<RecentGamesState, GameHistoryState> = (set) => ({
+export const historySlice: Slice<RecentGamesState, GameHistoryState> = (
+  set,
+) => ({
   ...initialState,
 
-  addGame: (game) => set(({ recentGames }) => ({ recentGames: [...recentGames, game] }), undefined, "ADD_GAME_RESULTS"),
+  addGame: (game) =>
+    set(
+      ({ recentGames }) => ({ recentGames: [...recentGames, game] }),
+      undefined,
+      "ADD_GAME_RESULTS",
+    ),
   importGames: (games, onDuplicate) =>
     set(
       ({ recentGames }) => {
@@ -92,7 +108,9 @@ export const historySlice: Slice<RecentGamesState, GameHistoryState> = (set) => 
   editGame: (game) =>
     set(
       ({ recentGames }) => ({
-        recentGames: recentGames.map((eGame) => (game.id === eGame.id ? game : eGame)),
+        recentGames: recentGames.map((eGame) =>
+          game.id === eGame.id ? game : eGame,
+        ),
       }),
       undefined,
       "EDIT_GAME_RESULTS",

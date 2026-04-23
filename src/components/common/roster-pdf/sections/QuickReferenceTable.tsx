@@ -1,4 +1,11 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
@@ -16,7 +23,21 @@ const ReferenceRow = ({
 }: {
   row: Pick<
     Profile,
-    "name" | "Range" | "Mv" | "Fv" | "Sv" | "S" | "D" | "A" | "W" | "C" | "I" | "HM" | "HW" | "HF" | "type"
+    | "name"
+    | "Range"
+    | "Mv"
+    | "Fv"
+    | "Sv"
+    | "S"
+    | "D"
+    | "A"
+    | "W"
+    | "C"
+    | "I"
+    | "HM"
+    | "HW"
+    | "HF"
+    | "type"
   >;
   indent?: boolean;
   prefix?: string;
@@ -72,7 +93,9 @@ function AdditionalRows({
       ?.filter((stat) => stat.type !== "mount" && stat.type !== "Siege Engine")
 
       // Hide additional profiles that are already displayed at top-level.
-      ?.filter((stat) => !profiles.find((profile) => profile.name === stat.name))
+      ?.filter(
+        (stat) => !profiles.find((profile) => profile.name === stat.name),
+      )
 
       // Convert additional rows to table rows
       ?.map((additionalRow, aIndex) => (
@@ -86,13 +109,19 @@ function AdditionalRows({
   );
 }
 
-export const QuickReferenceTable = ({ profiles, noCaption }: QuickReferenceTableProps) => {
+export const QuickReferenceTable = ({
+  profiles,
+  noCaption,
+}: QuickReferenceTableProps) => {
   const {
     preferences: { removePdfPageBreak },
   } = useUserPreferences();
 
   const mounts = profiles
-    .flatMap((profile) => profile.additional_stats?.filter((stat) => stat.type === "mount") || [])
+    .flatMap(
+      (profile) =>
+        profile.additional_stats?.filter((stat) => stat.type === "mount") || [],
+    )
     .filter(function (item: Profile, index: number, self: Profile[]) {
       return index === self.findIndex((other) => other.name === item.name);
     })
@@ -100,13 +129,20 @@ export const QuickReferenceTable = ({ profiles, noCaption }: QuickReferenceTable
 
   const siegeEngines = [
     ...profiles.filter((row) => row.type === "Siege Engine"),
-    ...profiles.flatMap((profile) => profile.additional_stats?.filter((stat) => stat.type === "Siege Engine") || []),
+    ...profiles.flatMap(
+      (profile) =>
+        profile.additional_stats?.filter(
+          (stat) => stat.type === "Siege Engine",
+        ) || [],
+    ),
   ];
   const additionProfilesFormSiegeEngines = siegeEngines
     .flatMap((profile) => profile?.additional_stats || [])
     .filter((p, i, s) => s.findIndex((o) => o.name === p.name) === i);
 
-  const units = profiles.filter((row) => row.type !== "Siege Engine").concat(additionProfilesFormSiegeEngines);
+  const units = profiles
+    .filter((row) => row.type !== "Siege Engine")
+    .concat(additionProfilesFormSiegeEngines);
 
   return (
     <>
@@ -116,7 +152,9 @@ export const QuickReferenceTable = ({ profiles, noCaption }: QuickReferenceTable
         className={removePdfPageBreak ? "" : "page-break"}
         sx={{ maxWidth: "100%" }}
       >
-        {noCaption !== true && <Typography variant="h5">Quick reference sheet</Typography>}
+        {noCaption !== true && (
+          <Typography variant="h5">Quick reference sheet</Typography>
+        )}
         <Table>
           <TableHead>
             <TableRow>
@@ -154,7 +192,11 @@ export const QuickReferenceTable = ({ profiles, noCaption }: QuickReferenceTable
               return (
                 <Fragment key={index}>
                   {!skippedParentRow && <ReferenceRow row={row} />}
-                  <AdditionalRows parentProfile={row} skippedParentRow={skippedParentRow} profiles={profiles} />
+                  <AdditionalRows
+                    parentProfile={row}
+                    skippedParentRow={skippedParentRow}
+                    profiles={profiles}
+                  />
                 </Fragment>
               );
             })}

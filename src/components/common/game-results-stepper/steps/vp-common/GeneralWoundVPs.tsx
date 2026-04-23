@@ -34,9 +34,24 @@ export const GeneralWoundVPs: FunctionComponent<GeneralWoundVPsProps> = ({
     <FormControl>
       <FormLabel>{label}</FormLabel>
       <RadioGroup row name={groupId} onChange={handleOnChange}>
-        <FormControlLabel value="unharmed" checked={value === vpSpread[0]} control={<Radio />} label="Unharmed" />
-        <FormControlLabel value="wounded" checked={value === vpSpread[1]} control={<Radio />} label="Wounded" />
-        <FormControlLabel value="killed" checked={value === vpSpread[2]} control={<Radio />} label="Killed" />
+        <FormControlLabel
+          value="unharmed"
+          checked={value === vpSpread[0]}
+          control={<Radio />}
+          label="Unharmed"
+        />
+        <FormControlLabel
+          value="wounded"
+          checked={value === vpSpread[1]}
+          control={<Radio />}
+          label="Wounded"
+        />
+        <FormControlLabel
+          value="killed"
+          checked={value === vpSpread[2]}
+          control={<Radio />}
+          label="Killed"
+        />
       </RadioGroup>
     </FormControl>
   );

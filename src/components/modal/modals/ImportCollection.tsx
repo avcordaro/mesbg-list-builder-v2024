@@ -1,5 +1,13 @@
 import { AttachFileOutlined } from "@mui/icons-material";
-import { Button, DialogActions, DialogContent, FormControl, FormHelperText, Input, InputLabel } from "@mui/material";
+import {
+  Button,
+  DialogActions,
+  DialogContent,
+  FormControl,
+  FormHelperText,
+  Input,
+  InputLabel,
+} from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
@@ -25,7 +33,12 @@ export const ImportCollection = () => {
 
       if (
         importData.some(
-          ({ group, model, data }) => !group || !model || !data || !data.collection || data.collection.length === 0,
+          ({ group, model, data }) =>
+            !group ||
+            !model ||
+            !data ||
+            !data.collection ||
+            data.collection.length === 0,
         )
       ) {
         triggerAlert(AlertTypes.IMPORT_COLLECTION_ERROR);
@@ -92,22 +105,30 @@ export const ImportCollection = () => {
         <Stack gap={2}>
           <CustomAlert title="" severity="warning">
             <Typography>
-              Overlapping collection data will be replaced with imported data! <strong>For example:</strong> if you
-              already have an collection entry for the Warrior of Minas Tirith and it is also present in your imported
-              data, your collection will be updated to match the import.
+              Overlapping collection data will be replaced with imported data!{" "}
+              <strong>For example:</strong> if you already have an collection
+              entry for the Warrior of Minas Tirith and it is also present in
+              your imported data, your collection will be updated to match the
+              import.
             </Typography>
             <Typography sx={{ mt: 2 }}>
-              Entries imported which are not part of the profile database will be visible on the collections table but
-              will not have any other effect.
+              Entries imported which are not part of the profile database will
+              be visible on the collections table but will not have any other
+              effect.
             </Typography>
           </CustomAlert>
           <FormControl error={importAlert} variant="standard" fullWidth>
             <InputLabel htmlFor="component-error">Collection data</InputLabel>
-            <Input multiline maxRows={4} value={importedData} onChange={(e) => setImportedData(e.target.value)} />
+            <Input
+              multiline
+              maxRows={4}
+              value={importedData}
+              onChange={(e) => setImportedData(e.target.value)}
+            />
             {importAlert && (
               <FormHelperText id="component-error-text">
-                Importing the data resulted in an error. Please check the import and verify a data type has been
-                selected!
+                Importing the data resulted in an error. Please check the import
+                and verify a data type has been selected!
               </FormHelperText>
             )}
           </FormControl>
@@ -118,7 +139,12 @@ export const ImportCollection = () => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
-          <Button variant="contained" onClick={handleButtonClick} fullWidth startIcon={<AttachFileOutlined />}>
+          <Button
+            variant="contained"
+            onClick={handleButtonClick}
+            fullWidth
+            startIcon={<AttachFileOutlined />}
+          >
             Select a file
           </Button>
         </Stack>

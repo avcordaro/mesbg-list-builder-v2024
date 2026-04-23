@@ -3,7 +3,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import keywords from "../../../../assets/data/keywords.json";
 
-import { MagicalPower as Caster, Profile } from "../../../../hooks/profiles/profile-utils/profile.type.ts";
+import {
+  MagicalPower as Caster,
+  Profile,
+} from "../../../../hooks/profiles/profile-utils/profile.type.ts";
 import { useUserPreferences } from "../../../../state/preference";
 
 interface MagicalPowerListProps {
@@ -69,14 +72,22 @@ export const MagicalPowerList = ({ profiles }: MagicalPowerListProps) => {
                   dangerouslySetInnerHTML={{
                     __html: rule.description
                       ?.replaceAll("\n\n", "<br />")
-                      ?.replaceAll("<b>", "<h4 style='margin-top: 8px; display: inline-block'>")
+                      ?.replaceAll(
+                        "<b>",
+                        "<h4 style='margin-top: 8px; display: inline-block'>",
+                      )
                       ?.replaceAll("</b>:", ":</h4>"),
                   }}
                 />
                 <Typography variant="body2">
                   <b>Cast by: </b>
                   <i>
-                    {rule.casters.map((caster) => `${caster.name} (${caster.range} at ${caster.cast})`).join(" | ")}
+                    {rule.casters
+                      .map(
+                        (caster) =>
+                          `${caster.name} (${caster.range} at ${caster.cast})`,
+                      )
+                      .join(" | ")}
                   </i>
                 </Typography>
               </Box>

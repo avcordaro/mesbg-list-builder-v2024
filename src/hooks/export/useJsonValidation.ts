@@ -1,7 +1,9 @@
 export const useJsonValidation = () => {
   // Function to check if all required keys exist in the JSON object
   function validateKeys(obj: unknown, requiredKeys: string[]) {
-    const missingKeys = requiredKeys.filter((key) => !hasKey(obj, key.split(".")));
+    const missingKeys = requiredKeys.filter(
+      (key) => !hasKey(obj, key.split(".")),
+    );
     if (missingKeys.length > 0) {
       console.warn("Import is missing keys: ", missingKeys);
     }

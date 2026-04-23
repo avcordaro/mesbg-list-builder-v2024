@@ -36,7 +36,10 @@ export const ConfirmBulkDeleteRosterModal = () => {
     localDelete(rostersById[rosterId]);
   };
 
-  const updateProgress = useCallback((newProgress: number) => setProgress(newProgress), [progress]);
+  const updateProgress = useCallback(
+    (newProgress: number) => setProgress(newProgress),
+    [progress],
+  );
 
   const handleConfirmDelete = async (e) => {
     e.preventDefault();
@@ -63,10 +66,14 @@ export const ConfirmBulkDeleteRosterModal = () => {
           <LinearProgressWithLabel value={progress} />
         ) : (
           <>
-            <CustomAlert severity="warning" title={`Deleting ${rosters.length} ${pluralize("roster")(rosters.length)}`}>
+            <CustomAlert
+              severity="warning"
+              title={`Deleting ${rosters.length} ${pluralize("roster")(rosters.length)}`}
+            >
               <Typography>
-                You have selected {rosters.length} {pluralize("roster")(rosters.length)} for deletion. Confirming this
-                action will permanently delete them!
+                You have selected {rosters.length}{" "}
+                {pluralize("roster")(rosters.length)} for deletion. Confirming
+                this action will permanently delete them!
               </Typography>
             </CustomAlert>
             <TableContainer>
@@ -84,7 +91,9 @@ export const ConfirmBulkDeleteRosterModal = () => {
                   {rosters.map((id) => (
                     <TableRow key={id}>
                       <TableCell size="small">{rostersById[id].name}</TableCell>
-                      <TableCell size="small">{rostersById[id].armyList}</TableCell>
+                      <TableCell size="small">
+                        {rostersById[id].armyList}
+                      </TableCell>
                       <TableCell size="small" align="right">
                         {rostersById[id].metadata.points}
                       </TableCell>
@@ -97,7 +106,12 @@ export const ConfirmBulkDeleteRosterModal = () => {
         )}
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
-        <Button variant="text" onClick={closeModal} data-test-id="dialog--cancel-button" disabled={loading}>
+        <Button
+          variant="text"
+          onClick={closeModal}
+          data-test-id="dialog--cancel-button"
+          disabled={loading}
+        >
           Cancel
         </Button>
         <Button

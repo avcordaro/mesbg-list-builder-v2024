@@ -1,6 +1,13 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SearchIcon from "@mui/icons-material/Search";
-import { Accordion, AccordionDetails, AccordionSummary, Button, InputAdornment, TextField } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Button,
+  InputAdornment,
+  TextField,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Fragment, useState } from "react";
@@ -10,7 +17,11 @@ import { CustomAlert } from "../../atoms/alert/CustomAlert.tsx";
 import { Stats } from "../../common/roster-pdf/sections/Stats.tsx";
 import { ModalTypes } from "../../modal/modals.tsx";
 
-const ProfileRow = ({ profile: { profile, profile_origin, name, M, W, F } }: { profile: DatabaseRow }) => {
+const ProfileRow = ({
+  profile: { profile, profile_origin, name, M, W, F },
+}: {
+  profile: DatabaseRow;
+}) => {
   const [expanded, setExpanded] = useState(false);
   const { setCurrentModal } = useAppState();
 
@@ -64,7 +75,9 @@ export const ProfileSearch = () => {
       setProfiles([]);
       return;
     }
-    const newKeywordList = rows.filter((kw) => kw.name.toLowerCase().includes(filter));
+    const newKeywordList = rows.filter((kw) =>
+      kw.name.toLowerCase().includes(filter),
+    );
     setProfiles(newKeywordList);
   };
 
@@ -102,7 +115,10 @@ export const ProfileSearch = () => {
       )}
 
       {profiles.map((profile) => (
-        <ProfileRow key={profile.name + profile.profile_origin} profile={profile} />
+        <ProfileRow
+          key={profile.name + profile.profile_origin}
+          profile={profile}
+        />
       ))}
     </Fragment>
   );

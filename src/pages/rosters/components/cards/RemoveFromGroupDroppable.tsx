@@ -11,7 +11,9 @@ type RemoveFromGroupDroppableProps = {
   visible: boolean;
 };
 
-export const RemoveFromGroupDroppable: FunctionComponent<RemoveFromGroupDroppableProps> = ({ visible }) => {
+export const RemoveFromGroupDroppable: FunctionComponent<
+  RemoveFromGroupDroppableProps
+> = ({ visible }) => {
   const screen = useScreenSize();
 
   if (!visible) return null;
@@ -38,7 +40,11 @@ export const RemoveFromGroupDroppable: FunctionComponent<RemoveFromGroupDroppabl
           justifyContent="center"
           alignItems="center"
         >
-          <Typography variant="body1" color="textSecondary" sx={{ width: "24ch", textAlign: "center" }}>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{ width: "24ch", textAlign: "center" }}
+          >
             Drag your <br />
             Roster or Group
             <br />

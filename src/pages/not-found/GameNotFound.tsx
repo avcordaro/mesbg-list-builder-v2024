@@ -32,11 +32,18 @@ export const GamestateNotFound = ({ roster }: GamestateNotFoundProps) => {
       <Typography variant="h4" className="middle-earth">
         Game not found!
       </Typography>
-      <img alt="Image of a broken sword" src={brokenSword} style={{ width: "300px", margin: "auto" }} />
-      <Typography component="blockquote">&quot;No songs are sung of this company... yet.&quot;</Typography>
+      <img
+        alt="Image of a broken sword"
+        src={brokenSword}
+        style={{ width: "300px", margin: "auto" }}
+      />
+      <Typography component="blockquote">
+        &quot;No songs are sung of this company... yet.&quot;
+      </Typography>
       <Typography sx={{ mb: 2 }}>
-        The road lies before you, untrodden and full of peril. <br /> To write the tale of this roster, you must first
-        take the first step upon the path.
+        The road lies before you, untrodden and full of peril. <br /> To write
+        the tale of this roster, you must first take the first step upon the
+        path.
       </Typography>
       <Box
         sx={{
@@ -50,13 +57,21 @@ export const GamestateNotFound = ({ roster }: GamestateNotFoundProps) => {
           <Button color="inherit" fullWidth onClick={() => startGame(roster)}>
             Start a new game for {roster.name}
           </Button>
-          <Button color="inherit" fullWidth onClick={() => navigate(`/roster/${roster.id}`)}>
+          <Button
+            color="inherit"
+            fullWidth
+            onClick={() => navigate(`/roster/${roster.id}`)}
+          >
             Head back to the roster builder
           </Button>
           <Button color="inherit" fullWidth onClick={() => navigate("/")}>
             Return to the homepage
           </Button>
-          <Button color="inherit" fullWidth onClick={() => window.open(DISCORD_LINK)}>
+          <Button
+            color="inherit"
+            fullWidth
+            onClick={() => window.open(DISCORD_LINK)}
+          >
             Ask for support
           </Button>
         </Stack>

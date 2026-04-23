@@ -26,7 +26,11 @@ export const ResultsPieChart = ({ data }: ResultsProps) => {
     datasets: [
       {
         data: Object.values(results),
-        backgroundColor: [palette.success.light, palette.warning.light, palette.error.light],
+        backgroundColor: [
+          palette.success.light,
+          palette.warning.light,
+          palette.error.light,
+        ],
       },
     ],
   };

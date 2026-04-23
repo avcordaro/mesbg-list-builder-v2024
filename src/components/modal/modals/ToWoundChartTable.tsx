@@ -1,4 +1,13 @@
-import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { GiPerspectiveDiceSixFacesOne } from "react-icons/gi";
 
 const TO_WOUND_DATA: string[][] = [
@@ -96,12 +105,22 @@ export function ToWoundChartTable() {
       >
         <TableHead>
           <TableRow>
-            <TableCell component="th" colSpan={11} scope="colgroup" sx={{ borderBottom: headerBorder }}>
+            <TableCell
+              component="th"
+              colSpan={11}
+              scope="colgroup"
+              sx={{ borderBottom: headerBorder }}
+            >
               DEFENCE
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell component="th" scope="col" sx={{ borderRight: headerBorder }} aria-hidden>
+            <TableCell
+              component="th"
+              scope="col"
+              sx={{ borderRight: headerBorder }}
+              aria-hidden
+            >
               <GiPerspectiveDiceSixFacesOne size={20} />
             </TableCell>
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((d) => (
@@ -114,7 +133,11 @@ export function ToWoundChartTable() {
         <TableBody>
           {TO_WOUND_DATA.map((row, i) => (
             <TableRow key={i}>
-              <TableCell component="th" scope="row" sx={{ backgroundColor: headerBg, color: headerTextColor }}>
+              <TableCell
+                component="th"
+                scope="row"
+                sx={{ backgroundColor: headerBg, color: headerTextColor }}
+              >
                 {i + 1}
               </TableCell>
               {row.map((cell, j) => (

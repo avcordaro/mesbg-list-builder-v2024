@@ -16,7 +16,9 @@ export const handler: MwfwUpdater = {
     return handledModels.includes(unitId);
   },
   update(unit: SelectedUnit, options: Option[]): SelectedUnit["MWFW"] {
-    const hasMahudBeastmasterChieftain = !!options.find(selectedOptionWithName("Mahud Beastmaster Chieftain"));
+    const hasMahudBeastmasterChieftain = !!options.find(
+      selectedOptionWithName("Mahud Beastmaster Chieftain"),
+    );
 
     const untouchedMWFW = mesbgData[unit.model_id].MWFW;
 

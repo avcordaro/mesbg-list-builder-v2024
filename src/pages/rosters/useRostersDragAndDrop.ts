@@ -10,7 +10,8 @@ export const REMOVE_FOM_GROUP = "remove:from-group";
 export const useRostersDragAndDrop = () => {
   const api = useApi();
   const { setCurrentModal } = useAppState();
-  const { rosters, groups, updateGroup, updateRoster } = useRosterBuildingState();
+  const { rosters, groups, updateGroup, updateRoster } =
+    useRosterBuildingState();
 
   const [dragging, setDragging] = useState<string>();
 
@@ -21,7 +22,10 @@ export const useRostersDragAndDrop = () => {
   function addRosterToGroup(groupId: string, rosterId: string) {
     const groupSlug = groups.find((group) => group.id === groupId)?.slug;
     updateGroup(groupId, {
-      rosters: [...groups.find((group) => group.id === groupId).rosters, rosterId],
+      rosters: [
+        ...groups.find((group) => group.id === groupId).rosters,
+        rosterId,
+      ],
     });
     api.addRosterToGroup(groupSlug, rosterId);
   }
@@ -50,7 +54,9 @@ export const useRostersDragAndDrop = () => {
     const group = groups.find((group) => group.id === itemId);
     const groupSlug = group.slug;
     const parentId = group.parent;
-    const parentOfParent = groups.find((group) => group.slug === parentId)?.parent;
+    const parentOfParent = groups.find(
+      (group) => group.slug === parentId,
+    )?.parent;
 
     if (parentOfParent) {
       updateGroup(itemId, { parent: parentOfParent });
@@ -64,7 +70,9 @@ export const useRostersDragAndDrop = () => {
   function moveRosterUpOneGroup(itemId: string) {
     const roster = rosters.find((roster) => roster.id === itemId);
     const currentGroup = groups.find((group) => group.slug === roster.group);
-    const parentGroup = groups.find((group) => group.slug === currentGroup.parent);
+    const parentGroup = groups.find(
+      (group) => group.slug === currentGroup.parent,
+    );
 
     if (parentGroup) {
       addRosterToGroup(parentGroup.id, roster.id);
@@ -85,12 +93,16 @@ export const useRostersDragAndDrop = () => {
     setDragging(null);
 
     if (!result.destination) {
-      console.debug("Dropped outside a droppable container. Nothing to be done.");
+      console.debug(
+        "Dropped outside a droppable container. Nothing to be done.",
+      );
       return;
     }
 
     if (result.source.droppableId === result.destination.droppableId) {
-      console.debug("Dropped item on its self (same spot). Nothing needs to be done here.");
+      console.debug(
+        "Dropped item on its self (same spot). Nothing needs to be done here.",
+      );
       return;
     }
 
@@ -114,7 +126,9 @@ export const useRostersDragAndDrop = () => {
         rosters: [rosterA, rosterB],
       });
     } else {
-      console.warn(`Unable to perform operation dropping ${sourceType} on ${destType}`);
+      console.warn(
+        `Unable to perform operation dropping ${sourceType} on ${destType}`,
+      );
     }
   }
 

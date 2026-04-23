@@ -29,6 +29,10 @@ export const handler: MwfwUpdater = {
       return [untouchedMWFW[0], ["Shadowfax", "0:2:1:1"]];
     }
 
-    return [untouchedMWFW[0], ["Peregrin Took", "1:1:2:2"], ["Shadowfax", "0:2:1:1"]];
+    return [
+      untouchedMWFW[0],
+      ["Peregrin Took", "1:1:2:2"],
+      ["Shadowfax", "0:2:1:1"],
+    ];
   },
 };

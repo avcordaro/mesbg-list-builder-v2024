@@ -15,7 +15,10 @@ export const useRosterSorting = () => {
   const calculator = useCalculator();
   const { updateRoster } = useRosterBuildingState();
 
-  const getResortedWarband = (wb: Warband, reorderedSource: (FreshUnit | SelectedUnit | SiegeEquipment)[]) =>
+  const getResortedWarband = (
+    wb: Warband,
+    reorderedSource: (FreshUnit | SelectedUnit | SiegeEquipment)[],
+  ) =>
     calculator.recalculateWarband({
       ...wb,
       units: reorderedSource,
@@ -26,7 +29,11 @@ export const useRosterSorting = () => {
     if (!result.destination) return;
 
     if (result.type === "warband") {
-      const reorderedWarbands = moveItem(roster.warbands, result.source.index, result.destination.index);
+      const reorderedWarbands = moveItem(
+        roster.warbands,
+        result.source.index,
+        result.destination.index,
+      );
       updateRoster({
         ...roster,
         warbands: reorderedWarbands.map((warband, index) => ({
@@ -44,10 +51,18 @@ export const useRosterSorting = () => {
 
       const warband = roster.warbands.find(byId(srcId));
       if (warband) {
-        const reorderedWarband = moveItem(warband.units, result.source.index, result.destination.index);
+        const reorderedWarband = moveItem(
+          warband.units,
+          result.source.index,
+          result.destination.index,
+        );
         updateRoster({
           ...roster,
-          warbands: roster.warbands.map((wb) => (wb.id === warband.id ? getResortedWarband(wb, reorderedWarband) : wb)),
+          warbands: roster.warbands.map((wb) =>
+            wb.id === warband.id
+              ? getResortedWarband(wb, reorderedWarband)
+              : wb,
+          ),
         });
       }
       return;

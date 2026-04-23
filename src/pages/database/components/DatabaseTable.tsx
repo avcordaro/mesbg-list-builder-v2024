@@ -20,7 +20,12 @@ interface DatabaseTableProps {
   rows: DatabaseRow[];
 }
 
-export const DatabaseTable = ({ order, orderBy, createSortHandler, rows }: DatabaseTableProps) => {
+export const DatabaseTable = ({
+  order,
+  orderBy,
+  createSortHandler,
+  rows,
+}: DatabaseTableProps) => {
   const screen = useScreenSize();
   const { mode } = useThemeContext();
 
@@ -30,7 +35,10 @@ export const DatabaseTable = ({ order, orderBy, createSortHandler, rows }: Datab
         <TableHead
           sx={{
             "& > tr > th": {
-              backgroundColor: (theme) => (mode === "dark" ? theme.palette.grey.A700 : theme.palette.grey.A200),
+              backgroundColor: (theme) =>
+                mode === "dark"
+                  ? theme.palette.grey.A700
+                  : theme.palette.grey.A200,
             },
           }}
         >
@@ -172,7 +180,10 @@ export const DatabaseTable = ({ order, orderBy, createSortHandler, rows }: Datab
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <DatabaseTableRow key={`${row.name}-${row.profile_origin}`} row={row} />
+            <DatabaseTableRow
+              key={`${row.name}-${row.profile_origin}`}
+              row={row}
+            />
           ))}
         </TableBody>
       </Table>

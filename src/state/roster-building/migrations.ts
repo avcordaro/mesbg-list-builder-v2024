@@ -5,7 +5,10 @@ import { RosterGroup, RosterGroupState } from "./groups";
 import { RosterBuildingState } from "./index.ts";
 import { RosterState } from "./roster";
 
-export const migrations = (oldState: unknown, version: number): RosterBuildingState => {
+export const migrations = (
+  oldState: unknown,
+  version: number,
+): RosterBuildingState => {
   console.debug(`Migrating persisted state from version ${version}`, {
     oldState,
   });
@@ -19,7 +22,9 @@ export const migrations = (oldState: unknown, version: number): RosterBuildingSt
 
   if (version <= 1) {
     console.debug("Migrating to v2");
-    migratedState = v2Migration(oldState as RosterState & RosterGroupState & BuilderState);
+    migratedState = v2Migration(
+      oldState as RosterState & RosterGroupState & BuilderState,
+    );
     console.log("Migration v2;", { migratedState });
   }
 
@@ -36,20 +41,27 @@ export const migrations = (oldState: unknown, version: number): RosterBuildingSt
  * After this migration the roster.group field is filled with the ID of the group & a list of groups
  * with id, name, slug and list of rosters is added.
  */
-const v1Migration = (state: RosterState & BuilderState): RosterState & BuilderState & RosterGroupState => {
-  const grouped: Record<string, string[]> = state.rosters.reduce((acc, item) => {
-    if (!item.group) return acc;
-    if (!acc[item.group]) acc[item.group] = [];
-    acc[item.group].push(item.id);
-    return acc;
-  }, {});
+const v1Migration = (
+  state: RosterState & BuilderState,
+): RosterState & BuilderState & RosterGroupState => {
+  const grouped: Record<string, string[]> = state.rosters.reduce(
+    (acc, item) => {
+      if (!item.group) return acc;
+      if (!acc[item.group]) acc[item.group] = [];
+      acc[item.group].push(item.id);
+      return acc;
+    },
+    {},
+  );
 
-  const groups: RosterGroupState["groups"] = Object.entries(grouped).map(([name, rosters]) => ({
-    id: v4(),
-    name: name,
-    slug: withSuffix(slugify(name)),
-    rosters: rosters,
-  }));
+  const groups: RosterGroupState["groups"] = Object.entries(grouped).map(
+    ([name, rosters]) => ({
+      id: v4(),
+      name: name,
+      slug: withSuffix(slugify(name)),
+      rosters: rosters,
+    }),
+  );
 
   const rosters = state.rosters.map((roster) =>
     roster.group
@@ -76,11 +88,14 @@ const v2Migration = (
     if (!roster.group) return roster;
 
     // find group by id (OR slug for those already migrated via the API)
-    const linkedGroup = (group: RosterGroup) => group.id === roster.group || group.slug === roster.group;
+    const linkedGroup = (group: RosterGroup) =>
+      group.id === roster.group || group.slug === roster.group;
 
     const group = state.groups.find(linkedGroup);
     return { ...roster, group: group?.slug };
   });
 
-  return { rosters, groups: state.groups } as RosterState & BuilderState & RosterGroupState;
+  return { rosters, groups: state.groups } as RosterState &
+    BuilderState &
+    RosterGroupState;
 };

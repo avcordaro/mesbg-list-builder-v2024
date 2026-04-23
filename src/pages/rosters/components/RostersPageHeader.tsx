@@ -13,11 +13,16 @@ type RostersPageHeaderProps = {
   group?: RosterGroup;
 };
 
-export const RostersPageHeader: FunctionComponent<RostersPageHeaderProps> = ({ group }) => {
+export const RostersPageHeader: FunctionComponent<RostersPageHeaderProps> = ({
+  group,
+}) => {
   const screen = useScreenSize();
   return (
     <Stack>
-      <Stack direction={screen.isMobile ? "column-reverse" : "row"} justifyContent="space-between">
+      <Stack
+        direction={screen.isMobile ? "column-reverse" : "row"}
+        justifyContent="space-between"
+      >
         <Typography variant="h4" className="middle-earth">
           My Rosters
         </Typography>
@@ -39,7 +44,11 @@ export const RostersPageHeader: FunctionComponent<RostersPageHeaderProps> = ({ g
       {group ? (
         <>
           <Stack direction="row" alignItems="center">
-            <Typography variant="h6" className="middle-earth" color="textSecondary">
+            <Typography
+              variant="h6"
+              className="middle-earth"
+              color="textSecondary"
+            >
               {group.name}
             </Typography>
             <GroupOptionsPopoverMenu groupId={group.slug} redirect={true} />
@@ -48,8 +57,8 @@ export const RostersPageHeader: FunctionComponent<RostersPageHeaderProps> = ({ g
         </>
       ) : (
         <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-          Note: You can create roster groups by simply dragging and dropping one roster onto another, or onto an
-          existing group.
+          Note: You can create roster groups by simply dragging and dropping one
+          roster onto another, or onto an existing group.
         </Typography>
       )}
     </Stack>

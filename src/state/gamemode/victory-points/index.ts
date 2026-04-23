@@ -18,10 +18,13 @@ const initialState = {
   additionalVictoryPoints: [0, 0],
 };
 
-export const victoryPointsSlice: Slice<GameModeState, VictoryPointsState> = (set) => ({
+export const victoryPointsSlice: Slice<GameModeState, VictoryPointsState> = (
+  set,
+) => ({
   ...initialState,
 
-  setVictoryPoints: (vps: number[][]) => set({ victoryPoints: vps }, undefined, "SET_VICTORY_POINTS"),
+  setVictoryPoints: (vps: number[][]) =>
+    set({ victoryPoints: vps }, undefined, "SET_VICTORY_POINTS"),
 
   setCalculatedVictoryPoints: (vps: [number, number]) =>
     set({ calculatedVictoryPoints: vps }, undefined, "SET_CALCULATED_VP"),

@@ -84,10 +84,19 @@ export const InitialSyncRequest = () => {
 
   const [syncing, setSyncing] = useState(false);
   const [unsyncedItems, setUnsyncedItems] = useState(
-    buildListOfUnsyncedItems(rosters, groups, gameState, inventory, recentGames),
+    buildListOfUnsyncedItems(
+      rosters,
+      groups,
+      gameState,
+      inventory,
+      recentGames,
+    ),
   );
 
-  const itemsToSync = useMemo(() => unsyncedItems.filter((item) => item.sync), [unsyncedItems]);
+  const itemsToSync = useMemo(
+    () => unsyncedItems.filter((item) => item.sync),
+    [unsyncedItems],
+  );
 
   const toggleCheckbox = (row: SyncItem, index: number) => {
     const updated = [...unsyncedItems];
@@ -97,7 +106,9 @@ export const InitialSyncRequest = () => {
 
   const toggleAllCheckboxes = () => {
     const allSelected = unsyncedItems.every((item) => item.sync);
-    setUnsyncedItems(unsyncedItems.map((item) => ({ ...item, sync: !allSelected })));
+    setUnsyncedItems(
+      unsyncedItems.map((item) => ({ ...item, sync: !allSelected })),
+    );
   };
 
   const startSyncing = () => setSyncing(true);

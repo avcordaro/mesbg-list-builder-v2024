@@ -3,7 +3,11 @@ import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { heroConstraintData } from "../../../../assets/data.ts";
-import { isSelectedUnit, isSiegeEquipment, Warband } from "../../../../types/roster.ts";
+import {
+  isSelectedUnit,
+  isSiegeEquipment,
+  Warband,
+} from "../../../../types/roster.ts";
 import { UnitRow } from "./UnitRow.tsx";
 
 export const WarbandSection = ({
@@ -67,14 +71,20 @@ export const WarbandSection = ({
       ),
   );
 
-  const overExceededWarbandSize = warband.meta.maxUnits !== "-" && warband.meta.units > warband.meta.maxUnits;
+  const overExceededWarbandSize =
+    warband.meta.maxUnits !== "-" && warband.meta.units > warband.meta.maxUnits;
   const improperUnits =
     !isCustomRoster &&
     !!hero &&
     warband.units
       .filter(isSelectedUnit)
       .filter((unit) => !isSiegeEquipment(unit))
-      .some((unit) => !heroConstraintData[hero.model_id].valid_warband_units.includes(unit.model_id));
+      .some(
+        (unit) =>
+          !heroConstraintData[hero.model_id].valid_warband_units.includes(
+            unit.model_id,
+          ),
+      );
   const problem = overExceededWarbandSize || improperUnits;
 
   return (
@@ -84,33 +94,47 @@ export const WarbandSection = ({
           <Typography variant="h6" color="#800000" fontWeight="bold">
             Warband {index}
           </Typography>
-          {problem && <ReportProblemRoundedIcon sx={{ color: (theme) => theme.palette.warning.main }} />}
+          {problem && (
+            <ReportProblemRoundedIcon
+              sx={{ color: (theme) => theme.palette.warning.main }}
+            />
+          )}
         </Stack>
 
-        <Stack direction="row" gap={1} justifyContent="space-between" sx={{ mb: units.length > 0 ? 2 : 0 }}>
+        <Stack
+          direction="row"
+          gap={1}
+          justifyContent="space-between"
+          sx={{ mb: units.length > 0 ? 2 : 0 }}
+        >
           <Typography>
             <strong>
               {hero?.name?.replaceAll("(General)", "")}
-              {hero?.legacy ? <sup>&#10013;</sup> : ""} {leader === warband.id && <i>(General)</i>}
+              {hero?.legacy ? <sup>&#10013;</sup> : ""}{" "}
+              {leader === warband.id && <i>(General)</i>}
             </strong>{" "}
-            <span style={{ whiteSpace: "wrap" }}>{heroOptions && <>with {heroOptions}</>}</span>
+            <span style={{ whiteSpace: "wrap" }}>
+              {heroOptions && <>with {heroOptions}</>}
+            </span>
           </Typography>
           <Typography sx={{ minWidth: "7ch", textAlign: "end" }}>
             <b>{hero?.pointsTotal || 0} pts</b>
           </Typography>
         </Stack>
 
-        {units.map(({ name, options, quantity, points, unique, legacy }, index) => (
-          <UnitRow
-            key={index}
-            name={name}
-            options={options}
-            quantity={quantity}
-            points={points}
-            unique={unique}
-            legacy={legacy}
-          />
-        ))}
+        {units.map(
+          ({ name, options, quantity, points, unique, legacy }, index) => (
+            <UnitRow
+              key={index}
+              name={name}
+              options={options}
+              quantity={quantity}
+              points={points}
+              unique={unique}
+              legacy={legacy}
+            />
+          ),
+        )}
       </Stack>
       <Divider sx={{ height: 2, bgcolor: "#800000" }} />
     </>

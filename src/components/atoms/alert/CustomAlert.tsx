@@ -10,15 +10,17 @@ export type CustomAlertProps = {
   onClose?: AlertProps["onClose"];
 };
 
-export const CustomAlert: FunctionComponent<PropsWithChildren<CustomAlertProps>> = ({
-  title,
-  severity,
-  onClose,
-  children,
-}) => {
+export const CustomAlert: FunctionComponent<
+  PropsWithChildren<CustomAlertProps>
+> = ({ title, severity, onClose, children }) => {
   const { mode } = useThemeContext();
   return (
-    <Alert severity={severity} variant={mode === "dark" ? "outlined" : "standard"} onClose={onClose} icon={false}>
+    <Alert
+      severity={severity}
+      variant={mode === "dark" ? "outlined" : "standard"}
+      onClose={onClose}
+      icon={false}
+    >
       {title && (
         <AlertTitle>
           <Typography fontWeight="bold" component="div">

@@ -8,9 +8,9 @@ export type RosterInformationSectionProps = {
   title: string;
 };
 
-export const RosterInformationSection: FunctionComponent<PropsWithChildren<RosterInformationSectionProps>> = (
-  props,
-) => {
+export const RosterInformationSection: FunctionComponent<
+  PropsWithChildren<RosterInformationSectionProps>
+> = (props) => {
   return (
     <Box data-test-id={`roster-information--${slugify(props.title)}`}>
       <Divider textAlign="center">

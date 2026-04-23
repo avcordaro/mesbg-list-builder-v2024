@@ -14,7 +14,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error("useThemeContext must be used within ThemeContextProvider");
+  if (!context)
+    throw new Error("useThemeContext must be used within ThemeContextProvider");
   return context;
 };
 
@@ -28,11 +29,16 @@ export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
   const theme = preferences.darkMode ? darkTheme : lightTheme;
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", preferences.darkMode ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      preferences.darkMode ? "dark" : "light",
+    );
   }, [preferences.darkMode]);
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme, mode: preferences.darkMode ? "dark" : "light" }}>
+    <ThemeContext.Provider
+      value={{ toggleTheme, mode: preferences.darkMode ? "dark" : "light" }}
+    >
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}

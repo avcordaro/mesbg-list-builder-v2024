@@ -36,8 +36,12 @@ export const CardActionButtons: FunctionComponent<CardActionButtonsProps> = ({
           <SquareIconButton
             icon={<BsFillPersonVcardFill />}
             iconColor={palette.primary.contrastText}
-            backgroundColor={mode === "dark" ? palette.grey.A400 : palette.grey.A700}
-            backgroundColorHover={mode === "dark" ? palette.grey.A700 : palette.grey["900"]}
+            backgroundColor={
+              mode === "dark" ? palette.grey.A400 : palette.grey.A700
+            }
+            backgroundColorHover={
+              mode === "dark" ? palette.grey.A700 : palette.grey["900"]
+            }
             onClick={openProfileCard}
             testId={`open-profile-card--w${warbandNum}-i${index}`}
             testName={`open-profile-card--${slugify(unitName)}`}

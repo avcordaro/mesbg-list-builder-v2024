@@ -16,7 +16,11 @@ export const HeroStatTrackers = () => {
       .filter((tracker) => tracker.xMWFW.split(":")[3] === "0").length;
   }
 
-  function updateMwfw(newValue: number, trackerIndex: number, statIndex: number) {
+  function updateMwfw(
+    newValue: number,
+    trackerIndex: number,
+    statIndex: number,
+  ) {
     const tracker = trackers[trackerIndex];
     const trackables = tracker.xMWFW.split(":");
     trackables[statIndex] = String(newValue);
@@ -47,10 +51,17 @@ export const HeroStatTrackers = () => {
           textAlign: "center",
         }}
       >
-        Note: Heroes and War Beasts are automatically added as a casualty when their wounds reach 0.
+        Note: Heroes and War Beasts are automatically added as a casualty when
+        their wounds reach 0.
       </Typography>
       {trackers.map((tracker, index) => (
-        <HeroStatTracker tracker={tracker} updateMwfw={updateMwfw} updateName={updateName} index={index} key={index} />
+        <HeroStatTracker
+          tracker={tracker}
+          updateMwfw={updateMwfw}
+          updateName={updateName}
+          index={index}
+          key={index}
+        />
       ))}
     </>
   );

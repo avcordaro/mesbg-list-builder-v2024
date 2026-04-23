@@ -43,7 +43,9 @@ const initialState: Pick<PreferenceState, "preferences"> = {
     splitActiveRules: false,
     oldShareScreen: false,
     collectionWarnings: false,
-    darkMode: window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches,
+    darkMode:
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
     allowCompulsoryGeneralDelete: false,
     removePdfPageBreak: false,
     includePdfSpecialRuleDescriptions: false,
@@ -62,7 +64,9 @@ const initialState: Pick<PreferenceState, "preferences"> = {
   },
 };
 
-export const userPreferences: Slice<PreferenceState, PreferenceState> = (set) => ({
+export const userPreferences: Slice<PreferenceState, PreferenceState> = (
+  set,
+) => ({
   ...initialState,
 
   setPreference: (key: Preferences, value: boolean) =>

@@ -41,7 +41,9 @@ export const OptionItem: FunctionComponent<OptionItemProps> = ({
           disabled={!selectable || option.included}
           onChange={(_, checked) => onSelect(checked)}
           name={option.name}
-          color={option.type === "special_warband_upgrade" ? "secondary" : "primary"}
+          color={
+            option.type === "special_warband_upgrade" ? "secondary" : "primary"
+          }
           sx={{ my: isMobile ? -0.5 : -2 }}
         />
       }

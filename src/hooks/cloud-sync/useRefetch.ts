@@ -28,7 +28,10 @@ export const useRefetch = () => {
   };
 
   const reloadRostersAndGroups = async () => {
-    const [rostersResponse, groupsResponse] = await Promise.all([getFromApi("rosters"), getFromApi("groups")]);
+    const [rostersResponse, groupsResponse] = await Promise.all([
+      getFromApi("rosters"),
+      getFromApi("groups"),
+    ]);
     const rosterData: unknown[] = await rostersResponse.json();
     const rosters = rosterData
       .map((response) => JSON.stringify(response))
@@ -63,18 +66,26 @@ export const useRefetch = () => {
       model: string;
       collection: Collection[];
     }[];
-    const inventory = collection.reduce((acc, { origin, model, collection }) => {
-      if (!acc[origin]) {
-        acc[origin] = {};
-      }
-      acc[origin][model] = { collection };
-      return acc;
-    }, {}) as InventoryState["inventory"];
+    const inventory = collection.reduce(
+      (acc, { origin, model, collection }) => {
+        if (!acc[origin]) {
+          acc[origin] = {};
+        }
+        acc[origin][model] = { collection };
+        return acc;
+      },
+      {},
+    ) as InventoryState["inventory"];
     resetCollection(inventory);
   };
 
   const reloadAll = useCallback(async () => {
-    return Promise.all([reloadRostersAndGroups(), reloadGamestate(), reloadRecentGames(), reloadCollections()]);
+    return Promise.all([
+      reloadRostersAndGroups(),
+      reloadGamestate(),
+      reloadRecentGames(),
+      reloadCollections(),
+    ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

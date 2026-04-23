@@ -59,7 +59,10 @@ const initialState = {
   rosters: [],
 };
 
-export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set, get) => ({
+export const rosterSlice: Slice<RosterBuildingState, RosterState> = (
+  set,
+  get,
+) => ({
   ...initialState,
 
   createRoster: (roster) => {
@@ -67,7 +70,9 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set, get) =
       (state) => ({
         rosters: [...state.rosters, roster],
         groups: get().groups.map((group) =>
-          roster.group && roster.group === group.id ? { ...group, rosters: [...group.rosters, roster.id] } : group,
+          roster.group && roster.group === group.id
+            ? { ...group, rosters: [...group.rosters, roster.id] }
+            : group,
         ),
       }),
       undefined,
@@ -78,7 +83,9 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set, get) =
   updateRoster: (updatedRoster, originalRosterId = updatedRoster.id) => {
     set(
       (state) => ({
-        rosters: state.rosters.map((roster) => (roster.id === originalRosterId ? updatedRoster : roster)),
+        rosters: state.rosters.map((roster) =>
+          roster.id === originalRosterId ? updatedRoster : roster,
+        ),
       }),
       undefined,
       "UPDATE_ROSTER",
@@ -93,7 +100,9 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set, get) =
           roster.group && roster.group === group.id
             ? {
                 ...group,
-                rosters: group.rosters.filter((rosterId) => rosterId !== roster.id),
+                rosters: group.rosters.filter(
+                  (rosterId) => rosterId !== roster.id,
+                ),
               }
             : group,
         ),
@@ -103,5 +112,6 @@ export const rosterSlice: Slice<RosterBuildingState, RosterState> = (set, get) =
     );
   },
 
-  reset: (rosters: Roster[] = [], groups: RosterGroup[] = []) => set({ rosters, groups }, undefined, "CLEAR_STATE"),
+  reset: (rosters: Roster[] = [], groups: RosterGroup[] = []) =>
+    set({ rosters, groups }, undefined, "CLEAR_STATE"),
 });

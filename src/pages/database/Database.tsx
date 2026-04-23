@@ -1,5 +1,11 @@
 import { BookmarkAdd, CancelRounded } from "@mui/icons-material";
-import { FormHelperText, InputAdornment, Stack, TablePagination, TextField } from "@mui/material";
+import {
+  FormHelperText,
+  InputAdornment,
+  Stack,
+  TablePagination,
+  TextField,
+} from "@mui/material";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -52,9 +58,10 @@ export const Database = () => {
     setParams(value, order, orderBy);
   };
 
-  const createSortHandler = (property: string) => (event: MouseEvent<unknown>) => {
-    handleRequestSort(event, property);
-  };
+  const createSortHandler =
+    (property: string) => (event: MouseEvent<unknown>) => {
+      handleRequestSort(event, property);
+    };
 
   const handleChangePage = (_: MouseEvent<unknown>, newPage: number) => {
     setPage(newPage);
@@ -88,12 +95,20 @@ export const Database = () => {
       </Typography>
       <Stack direction="row" gap={0.5} sx={{ mb: 2 }}>
         <Typography>
-          You can add models from this database to your personal <Link to="/collection">collection</Link> of miniatures
-          using the <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button, and choose to receive helpful warnings from
-          the list builder if you exceed the models available in your collection.
+          You can add models from this database to your personal{" "}
+          <Link to="/collection">collection</Link> of miniatures using the{" "}
+          <BookmarkAdd sx={{ verticalAlign: "bottom" }} /> button, and choose to
+          receive helpful warnings from the list builder if you exceed the
+          models available in your collection.
         </Typography>
       </Stack>
-      <Stack direction="row" gap={1} sx={{ mt: 1, mr: 2 }} alignItems="center" justifyContent="space-between">
+      <Stack
+        direction="row"
+        gap={1}
+        sx={{ mt: 1, mr: 2 }}
+        alignItems="center"
+        justifyContent="space-between"
+      >
         <TextField
           id="database-filter-input"
           label="Filter"
@@ -132,11 +147,16 @@ export const Database = () => {
         </Typography>
       </Stack>
       <FormHelperText sx={{ mb: 2 }}>
-        You can combine filters using semicolons - for example: &quot;Gondor; Strike&quot; or &quot;The Free Peoples;
-        Resistant to Magic&quot;
+        You can combine filters using semicolons - for example: &quot;Gondor;
+        Strike&quot; or &quot;The Free Peoples; Resistant to Magic&quot;
       </FormHelperText>
 
-      <DatabaseTable order={order} orderBy={orderBy} createSortHandler={createSortHandler} rows={visibleRows} />
+      <DatabaseTable
+        order={order}
+        orderBy={orderBy}
+        createSortHandler={createSortHandler}
+        rows={visibleRows}
+      />
       <TablePagination
         rowsPerPageOptions={[20, 50, 100, 200, { label: "All", value: -1 }]}
         component="div"

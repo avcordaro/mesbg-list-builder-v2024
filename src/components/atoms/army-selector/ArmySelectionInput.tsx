@@ -17,7 +17,10 @@ export type ArmySelectionInputProps = {
   setArmyList: (armyList: SelectedArmyList) => void;
 };
 
-export const ArmySelectionInput = ({ armyList, setArmyList }: ArmySelectionInputProps) => {
+export const ArmySelectionInput = ({
+  armyList,
+  setArmyList,
+}: ArmySelectionInputProps) => {
   const armyTypeOrder: Record<ArmyType, number> = {
     "Evil (Legacy)": 4,
     "Good (Legacy)": 2,
@@ -31,7 +34,10 @@ export const ArmySelectionInput = ({ armyList, setArmyList }: ArmySelectionInput
       army: item.army_list,
       type: item.army_type,
     }))
-    .filter((value, index, array) => array.findIndex((other) => other.title === value.title) === index)
+    .filter(
+      (value, index, array) =>
+        array.findIndex((other) => other.title === value.title) === index,
+    )
     .sort((a, b) => armyTypeOrder[a.type] - armyTypeOrder[b.type]);
 
   const heroesPerArmy = Object.values(data)
@@ -42,7 +48,10 @@ export const ArmySelectionInput = ({ armyList, setArmyList }: ArmySelectionInput
       army: item.army_list,
       type: "Hero",
     }))
-    .filter((value, index, array) => array.findIndex((other) => other.title === value.title) === index)
+    .filter(
+      (value, index, array) =>
+        array.findIndex((other) => other.title === value.title) === index,
+    )
     .sort((a, b) => armyTypeOrder[a.type] - armyTypeOrder[b.type]);
 
   return (
@@ -68,11 +77,15 @@ export const ArmySelectionInput = ({ armyList, setArmyList }: ArmySelectionInput
       filterOptions={(_, state) => {
         if (state.inputValue.length === 0) return armyLists;
         const f = state.inputValue.toLowerCase();
-        const lists = armyLists.filter(({ army }) => army.toLowerCase().includes(f));
+        const lists = armyLists.filter(({ army }) =>
+          army.toLowerCase().includes(f),
+        );
         if (f.length < 3) {
           return lists;
         }
-        const heroes = heroesPerArmy.filter(({ hero }) => hero.toLowerCase().includes(f));
+        const heroes = heroesPerArmy.filter(({ hero }) =>
+          hero.toLowerCase().includes(f),
+        );
         return [...lists, ...heroes];
       }}
       blurOnSelect={true}

@@ -9,9 +9,16 @@ interface OpponentsPlayedProps {
 export const OpponentsPlayedBarChart = ({ data }: OpponentsPlayedProps) => {
   const { palette } = useTheme();
 
-  const barColors = [palette.success.light, palette.warning.light, palette.error.light];
+  const barColors = [
+    palette.success.light,
+    palette.warning.light,
+    palette.error.light,
+  ];
 
-  const opponentsPlayed: Record<string, { won: number; lost: number; draw: number }> = data
+  const opponentsPlayed: Record<
+    string,
+    { won: number; lost: number; draw: number }
+  > = data
     .filter((game) => !!game.opponentName)
     .flatMap((game) => ({
       opponent: game.opponentName,

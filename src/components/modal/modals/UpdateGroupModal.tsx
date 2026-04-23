@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
 import { useRosterBuildingState } from "../../../state/roster-building";
-import { GroupIconSelector, Option as IconOption } from "../../atoms/group-icon/GroupIconSelector.tsx";
+import {
+  GroupIconSelector,
+  Option as IconOption,
+} from "../../atoms/group-icon/GroupIconSelector.tsx";
 import { AlertTypes } from "../../notifications/alert-types.tsx";
 
 export const UpdateGroupModal = () => {
@@ -14,7 +17,8 @@ export const UpdateGroupModal = () => {
     triggerAlert,
   } = useAppState();
   const { updateGroup, groups } = useRosterBuildingState();
-  const { id, name, icon } = groups.find((group) => group.slug === groupId) || {};
+  const { id, name, icon } =
+    groups.find((group) => group.slug === groupId) || {};
   const api = useApi();
 
   const navigate = useNavigate();
@@ -62,11 +66,16 @@ export const UpdateGroupModal = () => {
           fullWidth
           label="New group name"
           error={!rosterGroupNameValid}
-          helperText={!rosterGroupNameValid ? "The group name cannot be empty." : ""}
+          helperText={
+            !rosterGroupNameValid ? "The group name cannot be empty." : ""
+          }
           value={rosterGroupName}
           onChange={(e) => updateRosterGroupName(e.target.value)}
         />
-        <GroupIconSelector selectedIcon={rosterGroupIcon} setSelectedIcon={setRosterGroupIcon} />
+        <GroupIconSelector
+          selectedIcon={rosterGroupIcon}
+          setSelectedIcon={setRosterGroupIcon}
+        />
       </DialogContent>
       <DialogActions sx={{ display: "flex", gap: 2 }}>
         <Button

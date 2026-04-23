@@ -21,7 +21,13 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { ChangeEvent, FunctionComponent, MouseEvent, useMemo, useState } from "react";
+import {
+  ChangeEvent,
+  FunctionComponent,
+  MouseEvent,
+  useMemo,
+  useState,
+} from "react";
 import { ModalTypes } from "../../../components/modal/modals.tsx";
 import { useApi } from "../../../hooks/cloud-sync/useApi.ts";
 import { useAppState } from "../../../state/app";
@@ -68,7 +74,11 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
     <>
       <TableRow sx={{ "& > *": { borderBottom: "unset !important" } }}>
         <TableCell>
-          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+          <IconButton
+            aria-label="expand row"
+            size="small"
+            onClick={() => setOpen(!open)}
+          >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -90,7 +100,9 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
           )}
         </TableCell>
         <TableCell>
-          <Typography color={resultColours[row.result]}>{row.result}</Typography>
+          <Typography color={resultColours[row.result]}>
+            {row.result}
+          </Typography>
         </TableCell>
         <TableCell>
           <Typography color={resultColours[row.result]}>
@@ -165,7 +177,9 @@ const MatchRow: FunctionComponent<{ row: PastGame }> = ({ row }) => {
                       },
                     }}
                   >
-                    <TableCell>{row.duration && <>{row.duration} minutes</>}</TableCell>
+                    <TableCell>
+                      {row.duration && <>{row.duration} minutes</>}
+                    </TableCell>
                     <TableCell>{row.bows || "0"}</TableCell>
                     <TableCell>{row.throwingWeapons || "0"}</TableCell>
                     <TableCell>{row.scenarioPlayed}</TableCell>
@@ -205,12 +219,16 @@ export const GamesTable = ({ games }: GamesTableProps) => {
   };
 
   // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - games.length) : 0;
+  const emptyRows =
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - games.length) : 0;
 
   const visibleRows = useMemo(
     () =>
       [...games]
-        .sort((a, b) => new Date(b.gameDate).getTime() - new Date(a.gameDate).getTime())
+        .sort(
+          (a, b) =>
+            new Date(b.gameDate).getTime() - new Date(a.gameDate).getTime(),
+        )
         .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage),
     [page, rowsPerPage, games],
   );

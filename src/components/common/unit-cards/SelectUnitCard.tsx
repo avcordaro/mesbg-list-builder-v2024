@@ -40,7 +40,8 @@ export const SelectUnitCard: FunctionComponent<SelectUnitCardButtonProps> = ({
         "&:hover": {
           filter: "brightness(75%)",
         },
-        backgroundColor: ({ palette }) => (mode === "dark" ? palette.grey["800"] : ""),
+        backgroundColor: ({ palette }) =>
+          mode === "dark" ? palette.grey["800"] : "",
       }}
       data-test-id={`select-unit--w${warbandNum}-i${index}`}
     >
@@ -57,7 +58,10 @@ export const SelectUnitCard: FunctionComponent<SelectUnitCardButtonProps> = ({
             },
           }}
         />
-        <Typography variant="body1" sx={{ flexGrow: 1, textAlign: "start", textTransform: "uppercase" }}>
+        <Typography
+          variant="body1"
+          sx={{ flexGrow: 1, textAlign: "start", textTransform: "uppercase" }}
+        >
           <b>{title}</b>
         </Typography>
         {remove && (

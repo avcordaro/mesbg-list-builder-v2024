@@ -23,9 +23,18 @@ module.exports = {
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "react", "react-hooks", "@typescript-eslint", "import"],
+  plugins: [
+    "react-refresh",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "import",
+  ],
   rules: {
-    "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
     "import/order": [
       "error",
       {

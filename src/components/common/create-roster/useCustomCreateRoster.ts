@@ -24,7 +24,9 @@ export const useCreateCustomRoster = () => {
       return rosterNameValue;
     }
     const regex = new RegExp(`^Costum: ${goodOrEvil} ?(\\(\\d+\\))?$`);
-    const matchingRosterNames = rosters.filter((roster) => regex.test(roster.name)).map((r) => r.name);
+    const matchingRosterNames = rosters
+      .filter((roster) => regex.test(roster.name))
+      .map((r) => r.name);
 
     if (matchingRosterNames.length === 0) return `Custom: ${goodOrEvil}`;
     const maxNameIndex = Math.max(

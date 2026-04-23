@@ -67,7 +67,9 @@ export const useExport = () => {
    *
    * @param jsonString
    */
-  function convertJsonToRoster(jsonString: string): Roster | { error: true; reason: string } {
+  function convertJsonToRoster(
+    jsonString: string,
+  ): Roster | { error: true; reason: string } {
     try {
       const uploadedRoster: unknown = JSON.parse(jsonString);
       const hasRequiredKeys = jsonValidation.validateKeys(uploadedRoster, [
@@ -89,7 +91,8 @@ export const useExport = () => {
       if (!hasRequiredKeys) {
         return {
           error: true,
-          reason: "The export is malformed and is missing some of the required key-value pairs",
+          reason:
+            "The export is malformed and is missing some of the required key-value pairs",
         };
       }
 
@@ -103,7 +106,8 @@ export const useExport = () => {
     }
   }
 
-  const isImported = (importedRoster: Roster): importedRoster is Roster => !!(importedRoster as Roster)?.armyList;
+  const isImported = (importedRoster: Roster): importedRoster is Roster =>
+    !!(importedRoster as Roster)?.armyList;
 
   function hydrateUnit(unit: SelectedUnit, quantity?: number) {
     if (unit.model_id.startsWith("[siege]")) {
@@ -115,7 +119,9 @@ export const useExport = () => {
       });
     }
     const base = mesbgData[unit.model_id];
-    const selectedOptions = unit.options.filter((option) => option.quantity > 0);
+    const selectedOptions = unit.options.filter(
+      (option) => option.quantity > 0,
+    );
     return calculator.recalculatePointsForUnit({
       id: randomUuid(),
       ...base,
@@ -138,7 +144,9 @@ export const useExport = () => {
           id: id,
           meta: meta,
           hero: hero ? hydrateUnit(hero, 1) : null,
-          units: [...units.filter(isSelectedUnit).map((unit) => hydrateUnit(unit))],
+          units: [
+            ...units.filter(isSelectedUnit).map((unit) => hydrateUnit(unit)),
+          ],
         }),
       ),
     } as Roster);

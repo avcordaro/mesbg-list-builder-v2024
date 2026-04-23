@@ -14,22 +14,33 @@ export type FirebaseAuthFunctions = {
   signIn: (email: string, password: string) => Promise<UserCredential>;
   signOut: () => Promise<void>;
   signInWithGoogle: () => Promise<UserCredential>;
-  signUp: (email: string, password: string, displayName: string) => Promise<void>;
+  signUp: (
+    email: string,
+    password: string,
+    displayName: string,
+  ) => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
 };
 
 export const useFirebaseAuth: () => FirebaseAuthFunctions = () => {
-  const signUp = async (email: string, password: string, displayName: string) => {
-    await createUserWithEmailAndPassword(auth, email, password).then(({ user }) =>
-      updateProfile(user, { displayName }),
+  const signUp = async (
+    email: string,
+    password: string,
+    displayName: string,
+  ) => {
+    await createUserWithEmailAndPassword(auth, email, password).then(
+      ({ user }) => updateProfile(user, { displayName }),
     );
   };
 
-  const resetPassword = async (email: string) => await sendPasswordResetEmail(auth, email);
+  const resetPassword = async (email: string) =>
+    await sendPasswordResetEmail(auth, email);
 
-  const signIn = async (email: string, password: string) => await signInWithEmailAndPassword(auth, email, password);
+  const signIn = async (email: string, password: string) =>
+    await signInWithEmailAndPassword(auth, email, password);
 
-  const signInWithGoogle = async () => await signInWithPopup(auth, new GoogleAuthProvider());
+  const signInWithGoogle = async () =>
+    await signInWithPopup(auth, new GoogleAuthProvider());
 
   const signOutWrapper = async () => {
     await signOut(auth);

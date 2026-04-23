@@ -45,13 +45,15 @@ export const AppFallback = () => {
         <Typography variant="h3">A Shadow Has Fallen!</Typography>
         <Typography variant="body1">
           “Even the smallest code can bring about the greatest of crashes.
-          <br /> Fear not, traveler, for this is but a passing error in the journey.”
+          <br /> Fear not, traveler, for this is but a passing error in the
+          journey.”
         </Typography>
 
         <Divider />
 
         <Typography>
-          You can download your current state to file and help us recover if something goes missing.
+          You can download your current state to file and help us recover if
+          something goes missing.
         </Typography>
         <Button
           color="primary"
@@ -90,13 +92,17 @@ export const AppFallback = () => {
               <b>Help us help you!</b>
             </Typography>
             <Typography>
-              Please do share a screenshot of this page with us either via email or in our discord. We do like to know
-              what happend and resolve the issue.
+              Please do share a screenshot of this page with us either via email
+              or in our discord. We do like to know what happend and resolve the
+              issue.
             </Typography>
           </Box>
 
           <Typography textAlign="center" variant="body2">
-            <a href="https://discord.gg/MZfUgRtV56">https://discord.gg/MZfUgRtV56</a> or{" "}
+            <a href="https://discord.gg/MZfUgRtV56">
+              https://discord.gg/MZfUgRtV56
+            </a>{" "}
+            or{" "}
             <a href="mailto:support@mesbg-list-builder.com?subject=MESBG List Builder (v2024) - Bug/Correction">
               support@mesbg-list-builder.com
             </a>

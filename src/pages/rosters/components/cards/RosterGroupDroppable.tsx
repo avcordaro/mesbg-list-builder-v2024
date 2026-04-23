@@ -52,26 +52,35 @@ export const RosterGroupDroppable = ({
                   <Box
                     sx={[
                       {
-                        width: screen.isTooSmall ? "100%" : `${CARD_SIZE_IN_PX}px`,
+                        width: screen.isTooSmall
+                          ? "100%"
+                          : `${CARD_SIZE_IN_PX}px`,
                         aspectRatio: "1/1",
                       },
                       draggableSnapshot.isDragging
                         ? {
                             transform: "rotate(1.5deg)",
-                            transition: "transform 0.3s ease, boxShadow 0.3s ease",
+                            transition:
+                              "transform 0.3s ease, boxShadow 0.3s ease",
                           }
                         : {
-                            transition: "transform 0.3s ease, boxShadow 0.3s ease",
+                            transition:
+                              "transform 0.3s ease, boxShadow 0.3s ease",
                           },
                     ]}
                   >
-                    <RosterGroupCard group={group} dragged={isDragged === "group:" + group.id} />
+                    <RosterGroupCard
+                      group={group}
+                      dragged={isDragged === "group:" + group.id}
+                    />
                   </Box>
                 </Box>
               );
             }}
           </Draggable>
-          <Box sx={{ "&>*": { height: "0px !important" } }}>{provided.placeholder}</Box>
+          <Box sx={{ "&>*": { height: "0px !important" } }}>
+            {provided.placeholder}
+          </Box>
         </Box>
       )}
     </Droppable>

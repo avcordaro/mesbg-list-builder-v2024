@@ -27,7 +27,12 @@ export const FeatureTabs = () => {
       </Typography>
 
       <Box>
-        <Tabs variant="fullWidth" scrollButtons="auto" value={value} onChange={handleChange}>
+        <Tabs
+          variant="fullWidth"
+          scrollButtons="auto"
+          value={value}
+          onChange={handleChange}
+        >
           <Tab
             label={
               <span>

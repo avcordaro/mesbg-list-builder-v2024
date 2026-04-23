@@ -7,7 +7,13 @@ import { useThemeContext } from "../../theme/ThemeContext.tsx";
 import { Roster as RosterType } from "../../types/roster.ts";
 import { selectParentGroups, selectRosterGroup } from "../../utils/groups.ts";
 
-export const RosterBreadcrumbs = ({ roster, subpath }: { roster: RosterType; subpath?: string }) => {
+export const RosterBreadcrumbs = ({
+  roster,
+  subpath,
+}: {
+  roster: RosterType;
+  subpath?: string;
+}) => {
   const { palette } = useTheme();
   const { mode } = useThemeContext();
 
@@ -60,7 +66,9 @@ export const RosterBreadcrumbs = ({ roster, subpath }: { roster: RosterType; sub
       ) : (
         <Typography sx={{ color: "text.secondary" }}>{roster.name}</Typography>
       )}
-      {subpath && <Typography sx={{ color: "text.secondary" }}>{subpath}</Typography>}
+      {subpath && (
+        <Typography sx={{ color: "text.secondary" }}>{subpath}</Typography>
+      )}
     </Breadcrumbs>
   );
 };

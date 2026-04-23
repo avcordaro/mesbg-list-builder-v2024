@@ -7,11 +7,9 @@ type AdditionalTagsInputProps = {
   size?: "small" | "medium";
 };
 
-export const AdditionalTagsInput: FunctionComponent<AdditionalTagsInputProps> = ({
-  values: tags,
-  onChange,
-  size = "small",
-}) => {
+export const AdditionalTagsInput: FunctionComponent<
+  AdditionalTagsInputProps
+> = ({ values: tags, onChange, size = "small" }) => {
   const [input, setInput] = useState("");
 
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -42,7 +40,12 @@ export const AdditionalTagsInput: FunctionComponent<AdditionalTagsInputProps> = 
       {tags.length > 0 && (
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
           {tags.map((tag, index) => (
-            <Chip key={index} label={tag} onDelete={() => handleDelete(tag)} variant="filled" />
+            <Chip
+              key={index}
+              label={tag}
+              onDelete={() => handleDelete(tag)}
+              variant="filled"
+            />
           ))}
         </Box>
       )}

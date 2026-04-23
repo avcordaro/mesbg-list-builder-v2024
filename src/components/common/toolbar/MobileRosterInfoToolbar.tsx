@@ -14,7 +14,9 @@ export const MobileRosterInfoToolbar = () => {
 
   const armyListMetadata = armyListData[roster.armyList];
   const bowLimit = Math.ceil(metadata.bowLimit * armyListMetadata.bow_limit);
-  const throwLimit = Math.ceil(metadata.throwLimit * armyListMetadata.throw_limit);
+  const throwLimit = Math.ceil(
+    metadata.throwLimit * armyListMetadata.throw_limit,
+  );
 
   return (
     <>
@@ -28,7 +30,13 @@ export const MobileRosterInfoToolbar = () => {
           }}
         >
           <Stack direction="row" gap={1} flexWrap="wrap" sx={{ m: "auto" }}>
-            <Typography color={!!metadata.maxPoints && metadata.points > metadata.maxPoints ? "warning" : "inherit"}>
+            <Typography
+              color={
+                !!metadata.maxPoints && metadata.points > metadata.maxPoints
+                  ? "warning"
+                  : "inherit"
+              }
+            >
               <span>
                 Pts: <b>{metadata.points}</b>
               </span>
@@ -36,14 +44,20 @@ export const MobileRosterInfoToolbar = () => {
             <Typography>
               Units: <b>{metadata.units}</b>
             </Typography>
-            <Typography color={metadata.bows > bowLimit ? "warning" : "inherit"}>
+            <Typography
+              color={metadata.bows > bowLimit ? "warning" : "inherit"}
+            >
               Bow:{" "}
               <b style={{ display: "inline-flex", gap: "2px" }}>
                 <span>{metadata.bows}</span>
                 {screen.isTablet && <span>/{bowLimit}</span>}
               </b>
             </Typography>
-            <Typography color={metadata.throwingWeapons > throwLimit ? "warning" : "inherit"}>
+            <Typography
+              color={
+                metadata.throwingWeapons > throwLimit ? "warning" : "inherit"
+              }
+            >
               Thr. Weap:{" "}
               <b style={{ display: "inline-flex", gap: "2px" }}>
                 <span>{metadata.throwingWeapons}</span>
