@@ -32,9 +32,10 @@ export const RosterCardList: FunctionComponent<RosterCardListProps> = ({
   const [searchParams] = useSearchParams();
   const { filterRosters } = useRosterSearch();
 
+  const currentRosters = getRosterInGroup(rosters, groupId);
   const visibleRosters = filter
-    ? filterRosters(rosters, filter)
-    : getRosterInGroup(rosters, groupId);
+    ? filterRosters(currentRosters, filter)
+    : currentRosters;
 
   return visibleRosters
     .sort(getComparator(searchParams))

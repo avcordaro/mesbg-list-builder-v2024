@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { RosterGroup } from "../../../../state/roster-building/groups";
+import { getGroupComparator } from "../../sorting/sorting.ts";
 import { RosterGroupDroppable } from "./RosterGroupDroppable.tsx";
 
 type RosterGroupCardListProps = {
@@ -19,14 +20,20 @@ export const RosterGroupCardList: FunctionComponent<
   RosterGroupCardListProps
 > = ({ groups, dragged, filter }) => {
   const { groupId } = useParams();
-  const visibleGroups = filter ? [] : getVisibleGroups(groups, groupId);
+  const [searchParams] = useSearchParams();
 
-  return visibleGroups.map((group, index) => (
-    <RosterGroupDroppable
-      group={group}
-      key={group.id}
-      index={index}
-      isDragged={dragged}
-    />
-  ));
+  const visibleGroups = getVisibleGroups(groups, groupId).filter(
+    (group) => !filter || group.name.toLowerCase().includes(filter),
+  );
+
+  return visibleGroups
+    .sort(getGroupComparator(searchParams))
+    .map((group, index) => (
+      <RosterGroupDroppable
+        group={group}
+        key={group.id}
+        index={index}
+        isDragged={dragged}
+      />
+    ));
 };
