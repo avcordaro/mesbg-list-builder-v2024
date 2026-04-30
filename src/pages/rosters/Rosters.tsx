@@ -7,6 +7,7 @@ import { NewRosterButton } from "../../components/atoms/new-roster-button/NewRos
 import { LockContextProvider } from "../../hooks/lock/LockContext.tsx";
 import { useRosterBuildingState } from "../../state/roster-building";
 import { useBulkDelete } from "./bulk-delete/useBulkDelete.ts";
+import { EmptyRostersMessage } from "./components/EmptyRostersMessage.tsx";
 import { RostersPageHeader } from "./components/RostersPageHeader.tsx";
 import { RostersSearchFilter } from "./components/RostersSearchFilter.tsx";
 import { RemoveFromGroupDroppable } from "./components/cards/RemoveFromGroupDroppable.tsx";
@@ -46,6 +47,7 @@ export const Rosters: FunctionComponent = () => {
               flexWrap="wrap"
               flex={1}
             >
+              {!rosters.length && !groups.length && <EmptyRostersMessage />}
               <RemoveFromGroupDroppable visible={!!activeGroup && !filter} />
               <RosterGroupCardList
                 groups={groups}
