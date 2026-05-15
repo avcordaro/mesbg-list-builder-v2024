@@ -30569,8 +30569,8 @@
             "type": "requires-none",
             "condition": "in-roster",
             "dependencies": [
-              "[numenor] elendil",
-              "[numenor] gil-galad"
+              "[the-last-alliance] elendil",
+              "[the-last-alliance] gil-galad"
             ]
           }
         ],

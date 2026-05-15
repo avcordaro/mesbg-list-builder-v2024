@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fixed option dependencies for The One Ring on Isildur in the Last Alliance army list."
+    ]
+  },
   "1.39": {
     "added": [
       "Allow for adding additional points or units towards the breakpoints, for whenever you get a free unit on a tournament.",
