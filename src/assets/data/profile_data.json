@@ -12164,7 +12164,7 @@
         {
           "name": "Wise Council",
           "type": "Passive",
-          "description": "If Lindir is within 6\" of Elrond, then Elrond may spend a single point of Will each turn for free. If he does not use this point by the end of the turn, then it is lost."
+          "description": "If Lindir is within 6\" of Elrond at the start of the turn, then Elrond may spend a single point of Will each turn for free. If he does not use this point by the end of the turn, then it is lost."
         }
       ],
       "magic_powers": [
