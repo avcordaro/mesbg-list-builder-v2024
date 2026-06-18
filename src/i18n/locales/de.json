@@ -1,0 +1,51 @@
+{
+  "model": {
+    "ranger-of-the-north": {
+      "name": "Ranger des Nordens"
+    },
+    "samewise": {
+      "name": "Samweis Gamdschie"
+    }
+  },
+  "army": {
+    "list": {
+      "mordor": {
+        "name": "Mordor"
+      },
+      "moria": {
+        "special-rules": {
+          "rule-1": {
+            "title": "\"Wir kommen hier nicht raus, sie kommen.\"",
+            "description": "Freundliche Moria-Goblin-Modelle, die im Kampf mit einem feindlichen Modell stehen, das als Eingekreist gilt, erhalten für die Dauer des Kampfes einen Bonus von +1 auf ihren Kampfwert."
+          },
+          "rule-2": {
+            "title": "Kriechende Krieger"
+          }
+        }
+      },
+      "army-of-the-great-eye": {
+        "name": "Armee des Großen Auges"
+      }
+    },
+    "type": {
+      "good": "Gut",
+      "evil": "Schlecht"
+    }
+  },
+  "options": {
+    "orc-bow": {
+      "name": "Ork-bogen"
+    },
+    "shield": {
+      "name": "Schild"
+    }
+  },
+  "keyword": {
+    "special-rule": {
+      "black-dart": {
+        "name": "Schwarzer Pfeil",
+        "description": "<b>Dauer</b>: Sofort\n\nEine finstere, unheilvolle Macht schießt aus der Hand des Zaubernden, dringt in das Fleisch des Opfers ein und bahnt sich ihren Weg zum Herzen.\n\nDiese Magische Kraft richtet sich auf ein feindliches Modell innerhalb der Reichweite. Das Ziel erleidet sofort einen Treffer mit Stärke 6. Falls diese Magische Kraft ein Kavallerie-Modell ins Visier nimmt, muss der Zaubernde wählen, ob der Reiter oder das Reittier das Ziel ist."
+      }
+    }
+  }
+}

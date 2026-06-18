@@ -24,7 +24,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:data": "python3 data/scripts/main.py",
-    "watch:data": "find ./data -name '*.xlsx' | entr npm run build:data                                                                                                                                                                   todo-app\n"
+    "watch:data": "find ./data -name '*.xlsx' | entr npm run build:data",
+    "i18n:gen": "python3 data/scripts/i18n.py"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
