@@ -207,7 +207,7 @@ interface GamesTableProps {
 
 export const GamesTable = ({ games }: GamesTableProps) => {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
@@ -278,7 +278,7 @@ export const GamesTable = ({ games }: GamesTableProps) => {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
+        rowsPerPageOptions={[5, 10, 25, 100]}
         component="div"
         count={games.length}
         rowsPerPage={rowsPerPage}

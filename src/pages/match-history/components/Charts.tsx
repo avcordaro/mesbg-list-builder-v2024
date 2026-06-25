@@ -41,31 +41,28 @@ interface ChartsProps {
 export const Charts = ({ games }: ChartsProps) => {
   return (
     <Grid2 container spacing={6} alignItems="center" justifyContent="center">
-      <Grid2 size={{ sm: 12, md: 9.1 }}>
+      <Grid2 size={{ sm: 12, md: 8 }}>
         <MatchesOverTimeMixedChart data={games} />
       </Grid2>
-
       <Grid2 size={{ sm: 12, md: 4 }}>
         <ResultsPieChart data={games} />
       </Grid2>
-      <Grid2 size={{ sm: 12, md: 6 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <OpponentsPlayedBarChart data={games} />
       </Grid2>
-      <Grid2 size={{ sm: 12, md: 6 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <ScenariosPlayedBarChart data={games} />
       </Grid2>
-
-      <Grid2 size={{ sm: 12, md: 4 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <VictoryPointsSpreadPieChart data={games} />
       </Grid2>
-      <Grid2 size={{ sm: 12, md: 5 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <OpponentsVictoryPointsBarChart data={games} />
       </Grid2>
-
-      <Grid2 size={{ sm: 12, md: 6 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <ArmiesPlayedBarChart data={games} />
       </Grid2>
-      <Grid2 size={{ sm: 12, md: 6 }}>
+      <Grid2 size={{ sm: 12, md: 6, lg: 4 }}>
         <ArmiesPlayedAgainstBarChart data={games} />
       </Grid2>
     </Grid2>

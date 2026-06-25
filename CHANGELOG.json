@@ -1,5 +1,8 @@
 {
   "main": {
+    "added": [
+      "Added a date-range selection on the match history which allows filtering your games from within a specific time frame."
+    ],
     "bugfixes": [
       "Fixed option dependencies for The One Ring on Isildur in the Last Alliance army list.",
       "Fixed the wording of Lindir's Wise Council special rule.",

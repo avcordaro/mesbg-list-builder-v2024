@@ -9,7 +9,7 @@ import {
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CustomAlert } from "../../components/atoms/alert/CustomAlert.tsx";
 import { ModalTypes } from "../../components/modal/modals.tsx";
 import { useAppState } from "../../state/app";
@@ -33,6 +33,7 @@ export const SavedGameResults = () => {
     opponentArmy: "",
     result: "",
     tag: "",
+    date: "",
   });
 
   const speedDialRef = useRef<HTMLDivElement | null>(null);
@@ -75,6 +76,16 @@ export const SavedGameResults = () => {
     },
   ];
 
+  const matchesDateFilter = (gameDate: string, dateFilter: string): boolean => {
+    if (!dateFilter) {
+      return true;
+    }
+
+    const [startDate, endDate] = dateFilter.split("/");
+
+    return gameDate >= startDate && gameDate <= endDate;
+  };
+
   function matchesFilter(game: PastGame, filters: Filters) {
     const matchesArmy = game.armies.includes(filters.army || "");
     const matchesOpponent =
@@ -93,7 +104,8 @@ export const SavedGameResults = () => {
       matchesOpponentArmy &&
       matchesResult &&
       matchesTag &&
-      matchesScenario
+      matchesScenario &&
+      matchesDateFilter(game.gameDate, filters.date)
     );
   }
 
@@ -107,13 +119,25 @@ export const SavedGameResults = () => {
     );
   }, [filters, recentGames]);
 
+  const availableDateRange = useMemo(() => {
+    const dates = recentGames.map((game) => game.gameDate) || [];
+    if (dates.length == 0) return "";
+    if (dates.length == 1) return dates[0] + "/" + dates[0];
+
+    return dates[0] + "/" + dates[dates.length - 1];
+  }, [recentGames]);
+
   return (
-    <Container sx={{ mt: 2, maxWidth: "calc(100vw - 3*24px)" }}>
+    <Container sx={{ mt: 2 }} maxWidth={false}>
       <Typography variant="h4" className="middle-earth" sx={{ mb: 2 }}>
         Match History
       </Typography>
       <Stack sx={{ py: 1 }} gap={3}>
-        <FilterForm onChange={onFilterChanged} options={filteredGames} />
+        <FilterForm
+          onChange={onFilterChanged}
+          options={filteredGames}
+          availableDateRange={availableDateRange}
+        />
         {recentGames.length > 0 ? (
           <>
             {filteredGames.length > 0 ? (
