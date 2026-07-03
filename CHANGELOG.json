@@ -1,5 +1,7 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [ "Updated heroic tier of new Mumak in Usurpers"]
+  },
   "1.41": {
     "added": ["Updated the app with the latest FAQ changes (july 2026) [Thanks to @dragosh1754!]"]
   },

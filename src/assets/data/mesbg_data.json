@@ -33042,54 +33042,6 @@
     "warband_size": 15,
     "options": []
   },
-  "[usurpers-of-edoras] war-mumak-of-harad": {
-    "model_id": "[usurpers-of-edoras] war-mumak-of-harad",
-    "army_type": "Evil",
-    "army_list": "Usurpers of Edoras",
-    "profile_origin": "Fallen Realms",
-    "name": "War Mumak of Harad",
-    "unit_type": "Hero of Fortitude",
-    "base_points": 250,
-    "siege_crew": 0,
-    "MWFW": [
-      [
-        "Haradrim Commander",
-        "2:1:1:2"
-      ],
-      [
-        "War Mumak of Harad",
-        "0:0:0:10"
-      ]
-    ],
-    "warband_size": 12,
-    "options": [
-      {
-        "id": "OPT1472",
-        "name": "Rocks",
-        "points": 20
-      },
-      {
-        "id": "OPT1473",
-        "name": "Sigils of Defiance",
-        "points": 20
-      },
-      {
-        "id": "OPT1474",
-        "name": "Tusk Weapons",
-        "points": 20
-      },
-      {
-        "id": "OPT1475",
-        "name": "Foul Temperament",
-        "points": 15
-      },
-      {
-        "id": "OPT1476",
-        "name": "Rappelling Lines",
-        "points": 10
-      }
-    ]
-  },
   "[usurpers-of-edoras] general-targg": {
     "model_id": "[usurpers-of-edoras] general-targg",
     "army_type": "Evil",
@@ -33162,6 +33114,54 @@
         "id": "OPT0220",
         "name": "Two-handed weapon",
         "points": 5
+      }
+    ]
+  },
+  "[usurpers-of-edoras] war-mumak-of-harad": {
+    "model_id": "[usurpers-of-edoras] war-mumak-of-harad",
+    "army_type": "Evil",
+    "army_list": "Usurpers of Edoras",
+    "profile_origin": "Fallen Realms",
+    "name": "War Mumak of Harad",
+    "unit_type": "Minor Hero",
+    "base_points": 250,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Haradrim Commander",
+        "2:1:1:2"
+      ],
+      [
+        "War Mumak of Harad",
+        "0:0:0:10"
+      ]
+    ],
+    "warband_size": 6,
+    "options": [
+      {
+        "id": "OPT1472",
+        "name": "Rocks",
+        "points": 20
+      },
+      {
+        "id": "OPT1473",
+        "name": "Sigils of Defiance",
+        "points": 20
+      },
+      {
+        "id": "OPT1474",
+        "name": "Tusk Weapons",
+        "points": 20
+      },
+      {
+        "id": "OPT1475",
+        "name": "Foul Temperament",
+        "points": 15
+      },
+      {
+        "id": "OPT1476",
+        "name": "Rappelling Lines",
+        "points": 10
       }
     ]
   },
