@@ -520,9 +520,18 @@
   },
   "[army-of-the-great-eye] goroth-captain-of-the-morannon": {
     "valid_warband_units": [
-      "[army-of-gothmog] morannon-orc",
-      "[army-of-gothmog] mordor-troll",
-      "[army-of-gothmog] mordor-orc-warrior"
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight",
+      "[army-of-the-great-eye] black-guard-drummer",
+      "[army-of-the-great-eye] black-guard-of-barad-dur",
+      "[army-of-the-great-eye] morgul-stalker",
+      "[army-of-the-great-eye] orc-tracker"
     ],
     "extra_profiles": []
   },
@@ -973,9 +982,18 @@
   },
   "[army-of-the-great-eye] zagdush-orc-captain": {
     "valid_warband_units": [
-      "[army-of-gothmog] morannon-orc",
-      "[army-of-gothmog] mordor-troll",
-      "[army-of-gothmog] mordor-orc-warrior"
+      "[army-of-the-great-eye] mordor-orc-drummer",
+      "[army-of-the-great-eye] morannon-orc-warrior",
+      "[army-of-the-great-eye] mordor-orc-warrior",
+      "[army-of-the-great-eye] mordor-warg-rider",
+      "[army-of-the-great-eye] mordor-uruk-hai",
+      "[army-of-the-great-eye] mordor-troll",
+      "[army-of-the-great-eye] black-numenorean-warrior",
+      "[army-of-the-great-eye] black-numenorean-knight",
+      "[army-of-the-great-eye] black-guard-drummer",
+      "[army-of-the-great-eye] black-guard-of-barad-dur",
+      "[army-of-the-great-eye] morgul-stalker",
+      "[army-of-the-great-eye] orc-tracker"
     ],
     "extra_profiles": []
   },
@@ -4589,9 +4607,13 @@
   },
   "[minas-morgul] mordor-orc-shaman": {
     "valid_warband_units": [
-      "[army-of-gothmog] morannon-orc",
-      "[army-of-gothmog] mordor-troll",
-      "[army-of-gothmog] mordor-orc-warrior"
+      "[minas-morgul] mordor-orc-drummer",
+      "[minas-morgul] mordor-orc-warrior",
+      "[minas-morgul] morannon-orc",
+      "[minas-morgul] mordor-troll",
+      "[minas-morgul] spectre",
+      "[minas-morgul] morgul-stalker",
+      "[minas-morgul] orc-tracker"
     ],
     "extra_profiles": []
   },
@@ -7667,7 +7689,9 @@
   },
   "[usurpers-of-edoras] war-mumak-of-harad": {
     "valid_warband_units": [
-      "[usurpers-of-edoras] haradrim-warrior"
+      "[usurpers-of-edoras] haradrim-warrior",
+      "[usurpers-of-edoras] hill-tribesman",
+      "[usurpers-of-edoras] crebain"
     ],
     "extra_profiles": []
   },
