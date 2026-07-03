@@ -1,5 +1,6 @@
 {
-  "main": {
+  "main": {},
+  "1.41": {
     "added": ["Updated the app with the latest FAQ changes (july 2026) [Thanks to @dragosh1754!]"]
   },
   "1.40": {
