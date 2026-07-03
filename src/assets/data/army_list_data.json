@@ -1135,6 +1135,9 @@
     "additional_rules": [
       {
         "description": "A Fords of Isen Army must always contain Th\u00e9odred, who is always the Army's General."
+      },
+      {
+        "description": "A Fords of Isen army may have up to 50% of its Warrior models armed with throwing spears rather than the usual 33%."
       }
     ],
     "special_rules": [
@@ -1152,7 +1155,7 @@
       }
     ],
     "bow_limit": 0.33,
-    "throw_limit": 0.33,
+    "throw_limit": 0.5,
     "rule_highlights": [
       "Sworn Protector (Theodred)",
       "Dominant (2)"
@@ -2846,6 +2849,12 @@
       },
       {
         "description": "Rohirrim Traitors can only be included in Lord Thorne's Warband."
+      },
+      {
+        "description": "If a Usurpers of Edoras Army includes Freca, it cannot include any Harad models."
+      },
+      {
+        "description": "Harad Warrior models can only be included in the Warband of a War M\u00fbmak of Harad. Additionally, they must deploy within the howdah."
       }
     ],
     "special_rules": [
