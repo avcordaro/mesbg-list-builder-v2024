@@ -2846,6 +2846,12 @@
       },
       {
         "description": "Rohirrim Traitors can only be included in Lord Thorne's Warband."
+      },
+      {
+        "description": "If a Usurpers of Edoras Army includes Freca, it cannot include any Harad models."
+      },
+      {
+        "description": "Harad Warrior models can only be included in the Warband of a War M\u00fbmak of Harad. Additionally, they must deploy within the howdah."
       }
     ],
     "special_rules": [

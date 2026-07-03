@@ -7881,7 +7881,7 @@
         {
           "name": "Deadly Shot",
           "type": "Active",
-          "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
+          "description": "Legolas may make three shooting attacks during the Shoot Phase instead of one, using all the normal rules for shooting. Additionally, Legolas may still make shooting attacks whilst he is Engaged in Combat if there are no other friendly models engaged in the same combat, and does not suffer the -1 penalty To Hit for Moving and Shooting so long as he has the Infantry keyword. If Legolas shoots whilst he is Engaged in Combat, he may shoot at enemy models he is Engaged in Combat with, and does not need to make In The Way Tests for shooting at models he is Engaged in Combat with (though they may still block Line of Sight as normal)"
         },
         {
           "name": "Pinpoint Shot",
@@ -12331,7 +12331,7 @@
         {
           "name": "Deadly Shot",
           "type": "Active",
-          "description": "Legolas can make three shooting attacks instead of one during the Shoot Phase, using all the normal rules for shooting. He can still shoot whilst Engaged in Combat, and does not  suffer the -1 penalty To Hit for Moving and Shooting, as long as he has the Infantry keyword. He can also shoot at models he is Engaged in Combat with, requiring no In The Way tests (though they may still block Line of Sight)."
+          "description": "Legolas may make three shooting attacks during the Shoot Phase instead of one, using all the normal rules for shooting. Additionally, Legolas may still make shooting attacks whilst he is Engaged in Combat if there are no other friendly models engaged in the same combat, and does not suffer the -1 penalty To Hit for Moving and Shooting so long as he has the Infantry keyword. If Legolas shoots whilst he is Engaged in Combat, he may shoot at enemy models he is Engaged in Combat with, and does not need to make In The Way Tests for shooting at models he is Engaged in Combat with (though they may still block Line of Sight as normal)"
         },
         {
           "name": "Pinpoint Shot",
