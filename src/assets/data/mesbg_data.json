@@ -649,6 +649,26 @@
     "warband_size": 0,
     "options": [
       {
+        "id": "OPT1446",
+        "name": "Banner and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1448",
+        "name": "War horn and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1445",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1447",
+        "name": "War horn",
+        "points": 25
+      },
+      {
         "id": "OPT1328",
         "name": "Light shield and Flaming Brand",
         "points": 2
@@ -1520,6 +1540,24 @@
       }
     ]
   },
+  "[army-of-gothmog] mordor-orc-captain": {
+    "model_id": "[army-of-gothmog] mordor-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Army of Gothmog",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[army-of-gothmog] mordor-orc-shaman": {
     "model_id": "[army-of-gothmog] mordor-orc-shaman",
     "army_type": "Evil",
@@ -1611,6 +1649,55 @@
       {
         "id": "OPT0105",
         "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[army-of-gothmog] mordor-orc-warrior": {
+    "model_id": "[army-of-gothmog] mordor-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Army of Gothmog",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1457",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1458",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1459",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
+      },
+      {
+        "id": "OPT1460",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1461",
+        "name": "Two-handed weapon",
         "points": 1
       }
     ]
@@ -4261,6 +4348,26 @@
     "MWFW": [],
     "warband_size": 0,
     "options": [
+      {
+        "id": "OPT1442",
+        "name": "Banner and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1444",
+        "name": "War horn and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1441",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1443",
+        "name": "War horn",
+        "points": 25
+      },
       {
         "id": "OPT0352",
         "name": "Light shield and Flaming Brand",
@@ -7252,6 +7359,26 @@
     "warband_size": 0,
     "options": [
       {
+        "id": "OPT1450",
+        "name": "Banner and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1452",
+        "name": "War horn and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1449",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1451",
+        "name": "War horn",
+        "points": 25
+      },
+      {
         "id": "OPT0113",
         "name": "Light shield and flaming brand",
         "points": 2
@@ -7669,7 +7796,15 @@
       ]
     ],
     "warband_size": 6,
-    "options": []
+    "options": [
+      {
+        "id": "OPT1440",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Warg"
+      }
+    ]
   },
   "[buhrdur's-horde] hill-troll": {
     "model_id": "[buhrdur's-horde] hill-troll",
@@ -9427,7 +9562,7 @@
     "profile_origin": "Gondor",
     "name": "Prince Imrahil",
     "unit_type": "Hero of Legend",
-    "base_points": 160,
+    "base_points": 140,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -10758,6 +10893,20 @@
     "siege_crew": 2,
     "bow_limit": true,
     "legacy": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": []
+  },
+  "[depths-of-moria] moria-goblin-drum": {
+    "model_id": "[depths-of-moria] moria-goblin-drum",
+    "army_type": "Evil",
+    "army_list": "Depths of Moria",
+    "profile_origin": "The Misty Mountains",
+    "name": "Moria Goblin Drum",
+    "unit_type": "Warrior",
+    "base_points": 75,
+    "siege_crew": 2,
+    "bow_limit": true,
     "MWFW": [],
     "warband_size": 0,
     "options": []
@@ -14439,7 +14588,7 @@
       },
       {
         "id": "OPT1062",
-        "name": "Exchange shield for war drum",
+        "name": "Exchange shield for war drum (Easterling)",
         "points": 25,
         "modifiers": [
           {
@@ -15612,7 +15761,7 @@
       },
       {
         "id": "OPT0897",
-        "name": "Exchange shield for war drum",
+        "name": "Exchange shield for war drum (Easterling)",
         "points": 25,
         "modifiers": [
           {
@@ -15963,7 +16112,15 @@
       ]
     ],
     "warband_size": 6,
-    "options": []
+    "options": [
+      {
+        "id": "OPT1438",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Warg"
+      }
+    ]
   },
   "[host-of-the-witch-king] barrow-wight": {
     "model_id": "[host-of-the-witch-king] barrow-wight",
@@ -17871,6 +18028,24 @@
     "warband_size": 12,
     "options": []
   },
+  "[legions-of-mordor] mordor-orc-captain": {
+    "model_id": "[legions-of-mordor] mordor-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Legions of Mordor",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[legions-of-mordor] easterling-dragon-knight": {
     "model_id": "[legions-of-mordor] easterling-dragon-knight",
     "army_type": "Evil",
@@ -17988,7 +18163,7 @@
       },
       {
         "id": "OPT1211",
-        "name": "Exchange shield for war drum",
+        "name": "Exchange shield for war drum (Easterling)",
         "points": 25,
         "modifiers": [
           {
@@ -18259,6 +18434,55 @@
       {
         "id": "OPT0301",
         "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
+  "[legions-of-mordor] mordor-orc-warrior": {
+    "model_id": "[legions-of-mordor] mordor-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "Legions of Mordor",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1462",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1463",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1464",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
+      },
+      {
+        "id": "OPT1465",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1466",
+        "name": "Two-handed weapon",
         "points": 1
       }
     ]
@@ -19050,6 +19274,24 @@
     "warband_size": 12,
     "options": []
   },
+  "[lurtz's-scouts] uruk-hai-shaman": {
+    "model_id": "[lurtz's-scouts] uruk-hai-shaman",
+    "army_type": "Evil",
+    "army_list": "Lurtz's Scouts",
+    "profile_origin": "Isengard",
+    "name": "Uruk-Hai Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
+    "options": []
+  },
   "[lurtz's-scouts] uruk-hai-drummer": {
     "model_id": "[lurtz's-scouts] uruk-hai-drummer",
     "army_type": "Evil",
@@ -19133,14 +19375,14 @@
       }
     ]
   },
-  "[men-of-the-west] prince-imrahil": {
-    "model_id": "[men-of-the-west] prince-imrahil",
+  "[men-of-the-west] gwaihir": {
+    "model_id": "[men-of-the-west] gwaihir",
     "army_type": "Good",
     "army_list": "Men of the West",
-    "profile_origin": "Gondor",
-    "name": "Prince Imrahil",
+    "profile_origin": "The Free Peoples",
+    "name": "Gwaihir",
     "unit_type": "Hero of Legend",
-    "base_points": 160,
+    "base_points": 200,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -19152,14 +19394,14 @@
     "warband_size": 18,
     "options": []
   },
-  "[men-of-the-west] gwaihir": {
-    "model_id": "[men-of-the-west] gwaihir",
+  "[men-of-the-west] prince-imrahil": {
+    "model_id": "[men-of-the-west] prince-imrahil",
     "army_type": "Good",
     "army_list": "Men of the West",
-    "profile_origin": "The Free Peoples",
-    "name": "Gwaihir",
+    "profile_origin": "Gondor",
+    "name": "Prince Imrahil",
     "unit_type": "Hero of Legend",
-    "base_points": 150,
+    "base_points": 140,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -22163,7 +22405,7 @@
     "profile_origin": "The Free Peoples",
     "name": "Gwaihir",
     "unit_type": "Hero of Valour",
-    "base_points": 150,
+    "base_points": 200,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -26971,7 +27213,15 @@
       ]
     ],
     "warband_size": 6,
-    "options": []
+    "options": [
+      {
+        "id": "OPT1439",
+        "name": "Warg",
+        "points": 20,
+        "type": "mount",
+        "mount_name": "Warg"
+      }
+    ]
   },
   "[shadows-of-angmar] barrow-wight": {
     "model_id": "[shadows-of-angmar] barrow-wight",
@@ -27744,7 +27994,7 @@
     "profile_origin": "The Free Peoples",
     "name": "Gwaihir",
     "unit_type": "Hero of Valour",
-    "base_points": 150,
+    "base_points": 200,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -28573,6 +28823,24 @@
       }
     ]
   },
+  "[the-black-gate] mordor-orc-captain": {
+    "model_id": "[the-black-gate] mordor-orc-captain",
+    "army_type": "Evil",
+    "army_list": "The Black Gate",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[the-black-gate] mordor-orc-taskmaster": {
     "model_id": "[the-black-gate] mordor-orc-taskmaster",
     "army_type": "Evil",
@@ -28727,6 +28995,55 @@
       }
     ]
   },
+  "[the-black-gate] mordor-orc-warrior": {
+    "model_id": "[the-black-gate] mordor-orc-warrior",
+    "army_type": "Evil",
+    "army_list": "The Black Gate",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Warrior",
+    "unit_type": "Warrior",
+    "base_points": 5,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "opt_mandatory": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1467",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1468",
+        "name": "Orc bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1469",
+        "name": "Shield",
+        "points": 1,
+        "modifiers": [
+          {
+            "stat": "D",
+            "mod": 1,
+            "label": "Shield"
+          }
+        ]
+      },
+      {
+        "id": "OPT1470",
+        "name": "Spear",
+        "points": 1
+      },
+      {
+        "id": "OPT1471",
+        "name": "Two-handed weapon",
+        "points": 1
+      }
+    ]
+  },
   "[the-black-riders] the-witch-king-of-angmar": {
     "model_id": "[the-black-riders] the-witch-king-of-angmar",
     "army_type": "Evil",
@@ -28819,7 +29136,7 @@
     "profile_origin": "The Free Peoples",
     "name": "Gwaihir",
     "unit_type": "Hero of Legend",
-    "base_points": 150,
+    "base_points": 200,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -29037,7 +29354,7 @@
       },
       {
         "id": "OPT0908",
-        "name": "Exchange shield for war drum",
+        "name": "Exchange shield for war drum (Easterling)",
         "points": 25,
         "modifiers": [
           {
@@ -29381,7 +29698,7 @@
     "profile_origin": "Gondor",
     "name": "Prince Imrahil",
     "unit_type": "Hero of Legend",
-    "base_points": 160,
+    "base_points": 140,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -29810,7 +30127,7 @@
     "profile_origin": "Gondor",
     "name": "Prince Imrahil",
     "unit_type": "Hero of Legend",
-    "base_points": 160,
+    "base_points": 140,
     "unique": true,
     "siege_crew": 0,
     "MWFW": [
@@ -31814,6 +32131,25 @@
       }
     ]
   },
+  "[thorin's-company] gwaihir": {
+    "model_id": "[thorin's-company] gwaihir",
+    "army_type": "Good",
+    "army_list": "Thorin's Company",
+    "profile_origin": "The Free Peoples",
+    "name": "Gwaihir",
+    "unit_type": "Hero of Valour",
+    "base_points": 200,
+    "unique": true,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "3:3:3:3"
+      ]
+    ],
+    "warband_size": 15,
+    "options": []
+  },
   "[thorin's-company] gandalf-the-grey": {
     "model_id": "[thorin's-company] gandalf-the-grey",
     "army_type": "Good",
@@ -31828,25 +32164,6 @@
       [
         "",
         "3:6:3:3"
-      ]
-    ],
-    "warband_size": 15,
-    "options": []
-  },
-  "[thorin's-company] gwaihir": {
-    "model_id": "[thorin's-company] gwaihir",
-    "army_type": "Good",
-    "army_list": "Thorin's Company",
-    "profile_origin": "The Free Peoples",
-    "name": "Gwaihir",
-    "unit_type": "Hero of Valour",
-    "base_points": 150,
-    "unique": true,
-    "siege_crew": 0,
-    "MWFW": [
-      [
-        "",
-        "3:3:3:3"
       ]
     ],
     "warband_size": 15,
@@ -32262,6 +32579,24 @@
       ]
     ],
     "warband_size": 12,
+    "options": []
+  },
+  "[ugluk's-scouts] uruk-hai-shaman": {
+    "model_id": "[ugluk's-scouts] uruk-hai-shaman",
+    "army_type": "Evil",
+    "army_list": "Ugluk's Scouts",
+    "profile_origin": "Isengard",
+    "name": "Uruk-Hai Shaman",
+    "unit_type": "Minor Hero",
+    "base_points": 55,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "1:3:1:2"
+      ]
+    ],
+    "warband_size": 6,
     "options": []
   },
   "[ugluk's-scouts] isengard-orc-shaman": {
@@ -32707,6 +33042,54 @@
     "warband_size": 15,
     "options": []
   },
+  "[usurpers-of-edoras] war-mumak-of-harad": {
+    "model_id": "[usurpers-of-edoras] war-mumak-of-harad",
+    "army_type": "Evil",
+    "army_list": "Usurpers of Edoras",
+    "profile_origin": "Fallen Realms",
+    "name": "War Mumak of Harad",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 250,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "Haradrim Commander",
+        "2:1:1:2"
+      ],
+      [
+        "War Mumak of Harad",
+        "0:0:0:10"
+      ]
+    ],
+    "warband_size": 12,
+    "options": [
+      {
+        "id": "OPT1472",
+        "name": "Rocks",
+        "points": 20
+      },
+      {
+        "id": "OPT1473",
+        "name": "Sigils of Defiance",
+        "points": 20
+      },
+      {
+        "id": "OPT1474",
+        "name": "Tusk Weapons",
+        "points": 20
+      },
+      {
+        "id": "OPT1475",
+        "name": "Foul Temperament",
+        "points": 15
+      },
+      {
+        "id": "OPT1476",
+        "name": "Rappelling Lines",
+        "points": 10
+      }
+    ]
+  },
   "[usurpers-of-edoras] general-targg": {
     "model_id": "[usurpers-of-edoras] general-targg",
     "army_type": "Evil",
@@ -32796,6 +33179,32 @@
     "warband_size": 0,
     "options": []
   },
+  "[usurpers-of-edoras] haradrim-warrior": {
+    "model_id": "[usurpers-of-edoras] haradrim-warrior",
+    "army_type": "Evil",
+    "army_list": "Usurpers of Edoras",
+    "profile_origin": "Fallen Realms",
+    "name": "Haradrim Warrior",
+    "unit_type": "Warrior",
+    "base_points": 6,
+    "siege_crew": 0,
+    "bow_limit": true,
+    "MWFW": [],
+    "warband_size": 0,
+    "options": [
+      {
+        "id": "OPT1477",
+        "name": "Bow",
+        "points": 1,
+        "type": "bow"
+      },
+      {
+        "id": "OPT1478",
+        "name": "Spear",
+        "points": 1
+      }
+    ]
+  },
   "[usurpers-of-edoras] rohirrim-traitor": {
     "model_id": "[usurpers-of-edoras] rohirrim-traitor",
     "army_type": "Evil",
@@ -32874,6 +33283,26 @@
     "MWFW": [],
     "warband_size": 0,
     "options": [
+      {
+        "id": "OPT1454",
+        "name": "Banner and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1456",
+        "name": "War horn and light shield",
+        "points": 26
+      },
+      {
+        "id": "OPT1453",
+        "name": "Banner",
+        "points": 25
+      },
+      {
+        "id": "OPT1455",
+        "name": "War horn",
+        "points": 25
+      },
       {
         "id": "OPT0221",
         "name": "Light shield and flaming brand",

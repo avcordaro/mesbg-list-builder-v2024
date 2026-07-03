@@ -1094,5 +1094,14 @@
       ],
       "warning":"You may only include Eagle models in your Army if it also includes Gandalf."
     }
+  ],
+  "[usurpers-of-edoras] war-mumak-of-harad":[
+    {
+      "type":"incompatible",
+      "dependencies":[
+        "[usurpers-of-edoras] freca"
+      ],
+      "warning":"Harad models cannot be included in your army if it also contains Freca"
+    }
   ]
 }
