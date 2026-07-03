@@ -17991,6 +17991,24 @@
     "warband_size": 12,
     "options": []
   },
+  "[legions-of-mordor] mordor-orc-captain": {
+    "model_id": "[legions-of-mordor] mordor-orc-captain",
+    "army_type": "Evil",
+    "army_list": "Legions of Mordor",
+    "profile_origin": "Mordor",
+    "name": "Mordor Orc Captain",
+    "unit_type": "Hero of Fortitude",
+    "base_points": 45,
+    "siege_crew": 0,
+    "MWFW": [
+      [
+        "",
+        "2:1:1:2"
+      ]
+    ],
+    "warband_size": 12,
+    "options": []
+  },
   "[legions-of-mordor] easterling-dragon-knight": {
     "model_id": "[legions-of-mordor] easterling-dragon-knight",
     "army_type": "Evil",

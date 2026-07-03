@@ -272,6 +272,7 @@
   "[army-of-gothmog] goroth-captain-of-the-morannon": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -279,6 +280,7 @@
   "[army-of-gothmog] gothmog": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -286,6 +288,7 @@
   "[army-of-gothmog] gothmog's-enforcer": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -293,6 +296,7 @@
   "[army-of-gothmog] guritz": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -300,6 +304,15 @@
   "[army-of-gothmog] morannon-orc-captain": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
+      "[army-of-gothmog] mordor-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[army-of-gothmog] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -307,6 +320,7 @@
   "[army-of-gothmog] mordor-orc-shaman": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -322,6 +336,7 @@
   "[army-of-gothmog] zagdush-orc-captain": {
     "valid_warband_units": [
       "[army-of-gothmog] morannon-orc",
+      "[army-of-gothmog] mordor-orc-warrior",
       "[army-of-gothmog] mordor-troll"
     ],
     "extra_profiles": []
@@ -3942,6 +3957,7 @@
   "[legions-of-mordor] goroth-captain-of-the-morannon": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -3969,6 +3985,7 @@
   "[legions-of-mordor] great-beast-of-gorgoroth": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4021,6 +4038,7 @@
   "[legions-of-mordor] khamul-the-easterling": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior",
@@ -4032,6 +4050,16 @@
   "[legions-of-mordor] morannon-orc-captain": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-troll",
+      "[legions-of-mordor] black-numenorean-knight",
+      "[legions-of-mordor] black-numenorean-warrior"
+    ],
+    "extra_profiles": []
+  },
+  "[legions-of-mordor] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4096,6 +4124,7 @@
   "[legions-of-mordor] the-betrayer": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior",
@@ -4109,6 +4138,7 @@
   "[legions-of-mordor] the-dark-marshal": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4118,6 +4148,7 @@
   "[legions-of-mordor] the-dwimmerlaik": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4136,6 +4167,7 @@
   "[legions-of-mordor] the-knight-of-umbar": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4145,6 +4177,7 @@
   "[legions-of-mordor] the-shadow-lord": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4154,6 +4187,7 @@
   "[legions-of-mordor] the-tainted": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4163,6 +4197,7 @@
   "[legions-of-mordor] the-undying": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -4192,6 +4227,7 @@
   "[legions-of-mordor] zagdush-orc-captain": {
     "valid_warband_units": [
       "[legions-of-mordor] morannon-orc",
+      "[legions-of-mordor] mordor-orc-warrior",
       "[legions-of-mordor] mordor-troll",
       "[legions-of-mordor] black-numenorean-knight",
       "[legions-of-mordor] black-numenorean-warrior"
@@ -6437,6 +6473,15 @@
   "[the-black-gate] morannon-orc-captain": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
+      "[the-black-gate] mordor-troll"
+    ],
+    "extra_profiles": []
+  },
+  "[the-black-gate] mordor-orc-captain": {
+    "valid_warband_units": [
+      "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6444,6 +6489,7 @@
   "[the-black-gate] mordor-orc-shaman": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6451,6 +6497,7 @@
   "[the-black-gate] mordor-orc-taskmaster": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6458,6 +6505,7 @@
   "[the-black-gate] mordor-troll-chieftain": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6465,6 +6513,7 @@
   "[the-black-gate] mordor-troll-chieftain-general": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6472,6 +6521,7 @@
   "[the-black-gate] mouth-of-sauron": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -6479,6 +6529,7 @@
   "[the-black-gate] ringwraith": {
     "valid_warband_units": [
       "[the-black-gate] morannon-orc",
+      "[the-black-gate] mordor-orc-warrior",
       "[the-black-gate] mordor-troll"
     ],
     "extra_profiles": []
@@ -7608,6 +7659,14 @@
   "[usurpers-of-edoras] lord-thorne-of-the-wold": {
     "valid_warband_units": [
       "[usurpers-of-edoras] rohirrim-traitor"
+    ],
+    "extra_profiles": []
+  },
+  "[usurpers-of-edoras] war-mumak-of-harad": {
+    "valid_warband_units": [
+      "[usurpers-of-edoras] hill-tribesman",
+      "[usurpers-of-edoras] crebain",
+      "[userpers-of-edoras] haradrim-warrior"
     ],
     "extra_profiles": []
   },
