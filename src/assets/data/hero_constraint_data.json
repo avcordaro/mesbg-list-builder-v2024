@@ -6314,7 +6314,9 @@
       "[the-battle-of-five-armies] iron-hills-warrior",
       "[the-battle-of-five-armies] iron-hills-goat-rider"
     ],
-    "extra_profiles": []
+    "extra_profiles": [
+      "Troll Brute"
+    ]
   },
   "[the-battle-of-five-armies] bombur-the-dwarf-champion-of-erebor": {
     "valid_warband_units": [

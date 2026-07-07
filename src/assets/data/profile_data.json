@@ -7212,6 +7212,64 @@
         "If Radagast dismounts from the Great Eagle, it will automatically pass its Courage test for being a Separated Mount."
       ]
     },
+    "Troll Brute": {
+      "Mv": "6\"",
+      "Fv": "5",
+      "Sv": "6+",
+      "S": "7",
+      "D": "6",
+      "A": "3",
+      "W": "4",
+      "C": "6+",
+      "I": "9+",
+      "active_or_passive_rules": [
+        {
+          "name": "Trample",
+          "type": "Active",
+          "description": "When a Troll Brute Tramples, it will inflict 2 Strength 10 hits."
+        }
+      ],
+      "magic_powers": [],
+      "heroic_actions": [],
+      "special_rules": [
+        "Dominant (5)",
+        "Terror",
+        "Fearless",
+        "Large Target"
+      ],
+      "wargear": [
+        "Hand weapons"
+      ],
+      "additional_stats": [
+        {
+          "name": "Orc Commander",
+          "Mv": "6\"",
+          "Fv": "5",
+          "Sv": "5+",
+          "S": "5",
+          "D": "6",
+          "A": "2",
+          "W": "2",
+          "C": "6+",
+          "I": "7+",
+          "active_or_passive_rules": [],
+          "heroic_actions": [
+            "Heroic March"
+          ],
+          "special_rules": [
+            "Ancient Enemies (Dwarf)",
+            "Ancient Enemies (Elf)"
+          ],
+          "wargear": [
+            "Heavy armour",
+            "hand weapon"
+          ]
+        }
+      ],
+      "additional_text": [
+        "A Troll Brute comprises an Orc Commander and the actual Troll Brute."
+      ]
+    },
     "Radagast's Sleigh": {
       "Mv": "10\"",
       "Fv": "2",

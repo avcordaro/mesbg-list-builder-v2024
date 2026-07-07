@@ -1,5 +1,6 @@
 import * as Asfaloth from "./asfaloth.ts";
 import * as Azog from "./azog-white-warg.ts";
+import * as Bofur from "./bofur-troll-brute.ts";
 import * as GandalfTheWhite from "./gandalf-the-white.ts";
 import * as Dragons from "./tough-hide-dragon.ts";
 import * as Treebeard from "./treebeard.ts";
@@ -12,6 +13,7 @@ export default [
   Azog.handler,
   Asfaloth.handler,
   Dragons.handler,
+  Bofur.handler,
 ];
 
 export const handledModels = [
@@ -21,4 +23,5 @@ export const handledModels = [
   ...Azog.handledModels,
   ...Asfaloth.handledModels,
   ...Dragons.handledModels,
+  ...Bofur.handledModels,
 ];
