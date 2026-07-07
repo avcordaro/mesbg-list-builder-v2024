@@ -12951,6 +12951,7 @@
     "name": "Grimbold of Grimslade",
     "unit_type": "Hero of Fortitude",
     "base_points": 65,
+    "unique": true,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [
@@ -16778,6 +16779,7 @@
     "name": "Grimbold of Grimslade",
     "unit_type": "Hero of Fortitude",
     "base_points": 65,
+    "unique": true,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [
