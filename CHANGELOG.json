@@ -1,5 +1,9 @@
 {
   "main": {
+    "added": [
+      "Updated static profile card images for latest FAQ changes (July 2026)",
+      "Updated the profile avatar of Theodred to his new mounted model."
+    ],
     "bugfixes": [
       "Updated heroic tier of new Mumak in Usurpers",
       "Fix the missing stat update for Crebain",
