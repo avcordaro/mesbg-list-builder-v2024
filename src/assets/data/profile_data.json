@@ -13642,7 +13642,7 @@
         {
           "name": "Fiery Lash",
           "type": "Active",
-          "description": "Throwing weapon with Strength 7, range 8. If the target is not slain and is not immune to fire-based attacks, it is pulled into base contact with the Balrog. For Cavalry, the whole model is dragged in this way. If the model cannot be placed in base contact, then it is not moved at all. Also, if the target is pulled into contact with other enemy models, it is not Engaged in Combat with them, only the Balrog."
+          "description": "Throwing weapon with Strength 7, range 8. If the target is not slain, it is pulled into base contact with the Balrog. For Cavalry, the whole model is dragged in this way. If the model cannot be placed in base contact, then it is not moved at all. Also, if the target is pulled into base contact with other enemy models, it is not Engaged in Combat with them unless they subsequently Charge the target model. This is a fire-based attack, so if a model is immune to fire-based attacks, they are immune to this attack."
         },
         {
           "name": "Goblin Mastery",
@@ -13652,7 +13652,7 @@
         {
           "name": "Flame of Udun",
           "type": "Passive",
-          "description": "If an enemy is Wounded, and not slain at the end of a Combat, roll a D6. On 6, the model is Set Ablaze, unless they are immune to fire-based attacks. The Balrog is itself immune to fire-based attacks."
+          "description": "The Balrog is never considered Unarmed. If an enemy is Wounded (even if the Wound is prevented), and not slain at the end of a Combat, roll a D6. On natural 6, the model is Set Ablaze, unless they are immune to fire-based attacks. The Balrog is itself immune to fire-based attacks."
         },
         {
           "name": "Demon of the Ancient World",
@@ -13689,12 +13689,12 @@
         {
           "name": "Many Tentacles",
           "type": "Passive",
-          "description": "At 3 Wounds or less, Attack value becomes 3."
+          "description": "Whilst The Watcher has 3 Wounds or less, its Attacks are reduced to 3."
         },
         {
           "name": "Water Dweller",
           "type": "Passive",
-          "description": "Whilst within any water, The Watcher is never slowed, can still Shoot, and always counts as rolling a 6 on the Swim Chart. Also increases Move value to 8\" and gains Monstrous Charge."
+          "description": "Whilst within any water feature, The Watcher is never slowed, can still Shoot, and always counts as rolling a 6 on the Swim Chart. Additionally, whilst within a water feature, The Watcher increases its Move value to 8\" and gains Monstrous Charge."
         },
         {
           "name": "From the Deep",
