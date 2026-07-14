@@ -16733,6 +16733,7 @@
     "name": "Erkenbrand, Captain of Rohan",
     "unit_type": "Hero of Fortitude",
     "base_points": 90,
+    "unique": true,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [
@@ -25249,6 +25250,7 @@
     "name": "Erkenbrand, Captain of Rohan",
     "unit_type": "Hero of Fortitude",
     "base_points": 90,
+    "unique": true,
     "siege_crew": 0,
     "legacy": true,
     "MWFW": [
