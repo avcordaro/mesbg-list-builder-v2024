@@ -2719,7 +2719,9 @@
     "valid_warband_units": [
       "[erebor-reclaimed] iron-hills-warrior"
     ],
-    "extra_profiles": []
+    "extra_profiles": [
+      "Troll Brute"
+    ]
   },
   "[erebor-reclaimed] bombur-the-dwarf": {
     "valid_warband_units": [

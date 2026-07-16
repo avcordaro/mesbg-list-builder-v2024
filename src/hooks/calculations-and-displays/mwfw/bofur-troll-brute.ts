@@ -6,6 +6,7 @@ import { MwfwUpdater } from "../useMwfMutations.ts";
 
 export const handledModels = [
   "[the-battle-of-five-armies] bofur-the-dwarf-champion-of-erebor",
+  "[erebor-reclaimed] bofur-the-dwarf",
 ];
 
 export const handler: MwfwUpdater = {
