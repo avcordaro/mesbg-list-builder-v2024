@@ -164,6 +164,7 @@ export const RosterTableView = forwardRef<
         .toPng(rosterList, { skipFonts: true })
         .then(function (data) {
           setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
+            roster: roster,
             screenshot: data,
             onClose: () =>
               setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),

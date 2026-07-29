@@ -50,6 +50,7 @@ export const ImageView = forwardRef<ImageViewViewHandlers, ImageViewViewProps>(
           .toPng(rosterList, { skipFonts: true })
           .then((dataUrl) => {
             setCurrentModal(ModalTypes.ROSTER_SCREENSHOT, {
+              roster: roster,
               screenshot: dataUrl,
               onClose: () =>
                 setCurrentModal(ModalTypes.ROSTER_SUMMARY, { roster }),

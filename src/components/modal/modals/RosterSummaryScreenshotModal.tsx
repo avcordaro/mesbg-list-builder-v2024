@@ -1,10 +1,8 @@
 import { Button, DialogContent } from "@mui/material";
-import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useAppState } from "../../../state/app";
 
 export const RosterSummaryScreenshotModal = () => {
   const { modalContext } = useAppState();
-  const { roster } = useRosterInformation();
   return (
     <>
       <DialogContent>
@@ -24,7 +22,7 @@ export const RosterSummaryScreenshotModal = () => {
               fullWidth
               variant="contained"
               href={modalContext.screenshot}
-              download={roster.id + ".png"}
+              download={modalContext.roster.id + ".png"}
             >
               Save image
             </Button>

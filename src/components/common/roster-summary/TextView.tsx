@@ -21,8 +21,8 @@ export type RosterTextViewHandlers = {
 export const RosterTextView = forwardRef<
   RosterTextViewHandlers,
   RosterTextViewProps
->(({ showArmyBonus, showUnitTotals }, ref) => {
-  const { roster, getAdjustedMetaData } = useRosterInformation();
+>(({ roster, showArmyBonus, showUnitTotals }, ref) => {
+  const { getAdjustedMetaData } = useRosterInformation();
   const { additional_rules, special_rules, break_point } =
     armyListData[roster.armyList];
 
@@ -93,7 +93,7 @@ export const RosterTextView = forwardRef<
 
   const createTextView = () => {
     const { might, will, fate, units, points, leader, bows, throwingWeapons } =
-      getAdjustedMetaData();
+      getAdjustedMetaData(roster);
 
     const unitSections = showUnitTotals
       ? `    

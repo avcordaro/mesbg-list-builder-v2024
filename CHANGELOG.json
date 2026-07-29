@@ -13,7 +13,8 @@
       "Fixed the MWF stats on Theodred's profile card.",
       "Fixed the incorrect ordering of MWF header labels on some profile cards.",
       "Fixed the Enchant Blades magical power on Brorgir's profile.",
-      "Fixed the Defence value of Crebain on their profile card."
+      "Fixed the Defence value of Crebain on their profile card.",
+      "Fixed roster summary model when opening from My Rosters page"
     ]
   },
   "1.41": {
