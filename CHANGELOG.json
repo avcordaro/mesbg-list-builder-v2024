@@ -1,5 +1,8 @@
 {
   "main": {
+    "changed": [
+      "Redesigned ProfileCards to allow for full rule display, removing issues with summarized rules."
+    ],
     "added": [
       "Updated static profile card images for latest FAQ changes (July 2026)",
       "Updated the profile avatar of Theodred to his new mounted model."
