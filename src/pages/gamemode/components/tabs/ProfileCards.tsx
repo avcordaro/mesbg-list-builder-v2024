@@ -85,13 +85,6 @@ export const ProfileCards = () => {
         .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
         .flatMap((unit: SelectedUnit) => getOverflowProfiles(unit));
 
-      console.log([
-        heroProfile,
-        ...heroOverflowProfiles,
-        ...extraProfiles,
-        ...unitProfiles,
-        ...unitOverflowProfiles,
-      ]);
       return [
         heroProfile,
         ...heroOverflowProfiles,

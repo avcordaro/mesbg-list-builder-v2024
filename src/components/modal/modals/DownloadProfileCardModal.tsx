@@ -35,10 +35,10 @@ export const DownloadProfileCardModal = () => {
         profileCards.push(
           [warband.hero.profile_origin, warband.hero.name].join("|"),
         );
-        const hero_pdata =
+        const heroProfile =
           profileData[warband.hero.profile_origin][warband.hero.name];
-        if (hero_pdata) {
-          hero_pdata.overflow_cards?.forEach((profile) =>
+        if (heroProfile) {
+          heroProfile.overflow_cards?.forEach((profile) =>
             profileCards.push([warband.hero.profile_origin, profile].join("|")),
           );
         }
@@ -58,10 +58,9 @@ export const DownloadProfileCardModal = () => {
       warband.units.filter(isSelectedUnit).forEach((unit) => {
         if (unit.unit_type !== "Siege Equipment") {
           profileCards.push([unit.profile_origin, unit.name].join("|"));
-          const unit_pdata = profileData[unit.profile_origin][unit.name];
-          console.log(unit_pdata);
-          if (unit_pdata) {
-            unit_pdata.overflow_cards?.forEach((profile) =>
+          const unitProfile = profileData[unit.profile_origin][unit.name];
+          if (unitProfile) {
+            unitProfile.overflow_cards?.forEach((profile) =>
               profileCards.push(
                 [warband.hero.profile_origin, profile].join("|"),
               ),
