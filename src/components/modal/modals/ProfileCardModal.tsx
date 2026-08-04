@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { Fragment } from "react";
-import { heroConstraintData } from "../../../assets/data.ts";
+import { heroConstraintData, profileData } from "../../../assets/data.ts";
 import { useScreenSize } from "../../../hooks/calculations-and-displays/useScreenSize.ts";
 import { useAppState } from "../../../state/app";
 import { Unit } from "../../../types/mesbg-data.types.ts";
@@ -16,7 +16,17 @@ export const ProfileCardModal = () => {
   const { palette } = useTheme();
   const { isMobile } = useScreenSize();
 
-  const ExtraProfileCards = ({ unit }: { unit: Unit }) => {
+  const OverflowProfileCards = ({ unit }: { unit: Unit }) => {
+    const data = profileData[unit.profile_origin][unit.name];
+    if (!data) return null;
+    return data.overflow_cards?.map((profile) => (
+      <Fragment key={profile}>
+        <UnitProfileCard army={unit.profile_origin} profile={profile} />
+      </Fragment>
+    ));
+  };
+
+  const ExtraHeroProfileCards = ({ unit }: { unit: Unit }) => {
     const data = heroConstraintData[unit.model_id];
     if (!data) return null;
     return data.extra_profiles?.map((profile) => (
@@ -51,7 +61,8 @@ export const ProfileCardModal = () => {
             }}
           >
             <UnitProfileCard army={unit.profile_origin} profile={unit.name} />
-            <ExtraProfileCards unit={unit} />
+            <OverflowProfileCards unit={unit} />
+            <ExtraHeroProfileCards unit={unit} />
           </Box>
         )}
       </DialogContent>

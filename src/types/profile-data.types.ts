@@ -19,6 +19,7 @@ export type Profile = Stats & {
   wargear?: string[];
   additional_stats?: AdditionalStat[]; // Optional field to account for the presence of additional stats
   additional_text?: string[]; // Optional field for additional text
+  overflow_cards?: string[]; // Optional field for additional profile cards required for large profiles
 };
 
 type ActivePassiveRule = {

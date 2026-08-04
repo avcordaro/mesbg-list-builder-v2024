@@ -405,10 +405,7 @@
   },
   "[army-of-lake-town] bard's-family": {
     "valid_warband_units": [],
-    "extra_profiles": [
-      "Sigrid",
-      "Tilda"
-    ]
+    "extra_profiles": []
   },
   "[army-of-lake-town] bard-the-bowman": {
     "valid_warband_units": [
@@ -1524,9 +1521,7 @@
       "[azog's-hunters] hunter-orc-warg-rider",
       "[azog's-hunters] fell-warg"
     ],
-    "extra_profiles": [
-      "The White Warg"
-    ]
+    "extra_profiles": []
   },
   "[azog's-hunters] bolg-spawn-of-azog": {
     "valid_warband_units": [
@@ -1682,9 +1677,7 @@
       "[battle-of-bywater] hobbit-militia",
       "[battle-of-bywater] hobbit-archer"
     ],
-    "extra_profiles": [
-      "Grip, Fang and Wolf"
-    ]
+    "extra_profiles": []
   },
   "[battle-of-bywater] farmer-tolman-cotton": {
     "valid_warband_units": [
@@ -3354,9 +3347,7 @@
       "[grand-army-of-the-south] khandish-horseman",
       "[grand-army-of-the-south] khandish-charioteer"
     ],
-    "extra_profiles": [
-      "Royal War Mumak"
-    ]
+    "extra_profiles": []
   },
   "[grand-army-of-the-south] raza-fang-of-the-serpent": {
     "valid_warband_units": [
@@ -3443,9 +3434,7 @@
       "[grand-army-of-the-south] khandish-horseman",
       "[grand-army-of-the-south] khandish-charioteer"
     ],
-    "extra_profiles": [
-      "War Mumak of Harad (Options)"
-    ]
+    "extra_profiles": []
   },
   "[halls-of-thranduil] legolas-greenleaf-prince-of-mirkwood": {
     "valid_warband_units": [
@@ -3505,9 +3494,7 @@
       "[halls-of-thranduil] mirkwood-ranger",
       "[halls-of-thranduil] wood-elf-sentinel"
     ],
-    "extra_profiles": [
-      "Great Elk"
-    ]
+    "extra_profiles": []
   },
   "[harad] haradrim-chieftain": {
     "valid_warband_units": [
@@ -3543,9 +3530,7 @@
       "[harad] abrakhan-merchant-guard",
       "[harad] watcher-of-karna"
     ],
-    "extra_profiles": [
-      "Royal War Mumak"
-    ]
+    "extra_profiles": []
   },
   "[harad] the-betrayer": {
     "valid_warband_units": [
@@ -3572,9 +3557,7 @@
       "[harad] abrakhan-merchant-guard",
       "[harad] watcher-of-karna"
     ],
-    "extra_profiles": [
-      "War Mumak of Harad (Options)"
-    ]
+    "extra_profiles": []
   },
   "[host-of-the-dragon-emperor] brorgir-the-conjurer": {
     "valid_warband_units": [
@@ -3631,9 +3614,7 @@
       "[host-of-the-dragon-emperor] war-drake-of-rhun",
       "[host-of-the-dragon-emperor] easterling-warrior"
     ],
-    "extra_profiles": [
-      "Royal Palanquin"
-    ]
+    "extra_profiles": []
   },
   "[host-of-the-witch-king] aldrac-warlord-of-carn-dum": {
     "valid_warband_units": [
@@ -4102,9 +4083,7 @@
       "[legions-of-mordor] abrakhan-merchant-guard",
       "[legions-of-mordor] watcher-of-karna"
     ],
-    "extra_profiles": [
-      "Royal War Mumak"
-    ]
+    "extra_profiles": []
   },
   "[legions-of-mordor] raza-fang-of-the-serpent": {
     "valid_warband_units": [
@@ -4233,9 +4212,7 @@
       "[legions-of-mordor] abrakhan-merchant-guard",
       "[legions-of-mordor] watcher-of-karna"
     ],
-    "extra_profiles": [
-      "War Mumak of Harad (Options)"
-    ]
+    "extra_profiles": []
   },
   "[legions-of-mordor] zagdush-orc-captain": {
     "valid_warband_units": [
@@ -5035,9 +5012,7 @@
       "[pits-of-dol-guldur] thrain-the-broken",
       "[pits-of-dol-guldur] fell-warg"
     ],
-    "extra_profiles": [
-      "The White Warg"
-    ]
+    "extra_profiles": []
   },
   "[pits-of-dol-guldur] gundabad-orc-captain": {
     "valid_warband_units": [
@@ -5084,9 +5059,7 @@
       "[radagast's-alliance] great-eagle",
       "[radagast's-alliance] fledgeling-great-eagle"
     ],
-    "extra_profiles": [
-      "Beorn the Bear"
-    ]
+    "extra_profiles": []
   },
   "[radagast's-alliance] gwaihir": {
     "valid_warband_units": [
@@ -5100,9 +5073,7 @@
       "[radagast's-alliance] great-eagle",
       "[radagast's-alliance] fledgeling-great-eagle"
     ],
-    "extra_profiles": [
-      "Radagast's Mounts"
-    ]
+    "extra_profiles": []
   },
   "[rangers-of-mirkwood] balin-the-dwarf": {
     "valid_warband_units": [],
@@ -6212,10 +6183,7 @@
   },
   "[survivors-of-lake-town] bard's-family": {
     "valid_warband_units": [],
-    "extra_profiles": [
-      "Sigrid",
-      "Tilda"
-    ]
+    "extra_profiles": []
   },
   "[survivors-of-lake-town] bard-the-bowman": {
     "valid_warband_units": [
@@ -6275,10 +6243,7 @@
   },
   "[the-battle-of-five-armies] bard's-family": {
     "valid_warband_units": [],
-    "extra_profiles": [
-      "Sigrid",
-      "Tilda"
-    ]
+    "extra_profiles": []
   },
   "[the-battle-of-five-armies] bard-the-bowman": {
     "valid_warband_units": [
@@ -6293,9 +6258,7 @@
       "[the-battle-of-five-armies] great-eagle",
       "[the-battle-of-five-armies] fledgeling-great-eagle"
     ],
-    "extra_profiles": [
-      "Beorn the Bear"
-    ]
+    "extra_profiles": []
   },
   "[the-battle-of-five-armies] bifur-the-dwarf-champion-of-erebor": {
     "valid_warband_units": [
@@ -6451,9 +6414,7 @@
       "[the-battle-of-five-armies] great-eagle",
       "[the-battle-of-five-armies] fledgeling-great-eagle"
     ],
-    "extra_profiles": [
-      "Radagast's Mounts"
-    ]
+    "extra_profiles": []
   },
   "[the-battle-of-five-armies] tauriel-ranger-of-mirkwood": {
     "valid_warband_units": [
@@ -6480,17 +6441,13 @@
     "valid_warband_units": [
       "[the-beornings] beorning"
     ],
-    "extra_profiles": [
-      "Beorn the Bear"
-    ]
+    "extra_profiles": []
   },
   "[the-beornings] grimbeorn": {
     "valid_warband_units": [
       "[the-beornings] beorning"
     ],
-    "extra_profiles": [
-      "Grimbeorn the Bear"
-    ]
+    "extra_profiles": []
   },
   "[the-black-gate] morannon-orc-captain": {
     "valid_warband_units": [
@@ -7056,9 +7013,7 @@
       "[the-serpent-horde] haradrim-warrior",
       "[the-serpent-horde] haradrim-raider"
     ],
-    "extra_profiles": [
-      "War Mumak of Harad (Options)"
-    ]
+    "extra_profiles": []
   },
   "[the-shire] bilbo-baggins-ageing-hobbit": {
     "valid_warband_units": [
@@ -7104,9 +7059,7 @@
       "[the-shire] hobbit-militia",
       "[the-shire] hobbit-archer"
     ],
-    "extra_profiles": [
-      "Grip, Fang and Wolf"
-    ]
+    "extra_profiles": []
   },
   "[the-shire] farmer-tolman-cotton": {
     "valid_warband_units": [
@@ -7428,9 +7381,7 @@
       "[the-white-council] thrain-the-broken",
       "[the-white-council] elrond"
     ],
-    "extra_profiles": [
-      "Radagast's Mounts"
-    ]
+    "extra_profiles": []
   },
   "[the-white-council] saruman": {
     "valid_warband_units": [
@@ -7511,9 +7462,7 @@
   },
   "[thorin's-company] radagast-the-brown": {
     "valid_warband_units": [],
-    "extra_profiles": [
-      "Radagast's Mounts"
-    ]
+    "extra_profiles": []
   },
   "[thorin's-company] thorin-oakenshield": {
     "valid_warband_units": [

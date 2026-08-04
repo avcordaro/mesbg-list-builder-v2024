@@ -1,7 +1,7 @@
 import { ImageList, ImageListItem } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import hero_constraint_data from "../../../../assets/data/hero_constraint_data.json";
+import { heroConstraintData, profileData } from "../../../../assets/data.ts";
 import { UnitProfileCard } from "../../../../components/atoms/unit-profile/UnitProfileCard.tsx";
 import { useRosterInformation } from "../../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useScreenSize } from "../../../../hooks/calculations-and-displays/useScreenSize.ts";
@@ -22,7 +22,7 @@ export const ProfileCards = () => {
     if (hero.unit_type === "Siege Engine") {
       return [];
     }
-    const extraProfiles = hero_constraint_data[hero.model_id]["extra_profiles"];
+    const extraProfiles = heroConstraintData[hero.model_id]["extra_profiles"];
 
     if (hero.name === "Azog") {
       // Filter the white warg / signal tower if the option is not chosen.
@@ -58,10 +58,22 @@ export const ProfileCards = () => {
     }));
   };
 
+  const getOverflowProfiles = (unit: SelectedUnit) => {
+    const profile_data = profileData[unit.profile_origin][unit.name];
+    if (!profile_data) {
+      return [];
+    }
+    return (profile_data.overflow_cards ?? []).map((profile_name: string) => ({
+      profile: profile_name,
+      army: unit.profile_origin,
+    }));
+  };
+
   const allProfiles: { profile: string; army: string }[] =
     roster.warbands.flatMap(({ hero, units }) => {
       if (!isSelectedUnit(hero)) return [];
       const heroProfile = { profile: hero.name, army: hero.profile_origin };
+      const heroOverflowProfiles = getOverflowProfiles(hero);
       const extraProfiles = getExtraProfilesForHero(hero);
       const unitProfiles = units
         .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
@@ -69,8 +81,24 @@ export const ProfileCards = () => {
           profile: unit.name,
           army: unit.profile_origin,
         }));
+      const unitOverflowProfiles = units
+        .filter((unit) => isSelectedUnit(unit) && !isSiegeEquipment(unit))
+        .flatMap((unit: SelectedUnit) => getOverflowProfiles(unit));
 
-      return [heroProfile, ...extraProfiles, ...unitProfiles];
+      console.log([
+        heroProfile,
+        ...heroOverflowProfiles,
+        ...extraProfiles,
+        ...unitProfiles,
+        ...unitOverflowProfiles,
+      ]);
+      return [
+        heroProfile,
+        ...heroOverflowProfiles,
+        ...extraProfiles,
+        ...unitProfiles,
+        ...unitOverflowProfiles,
+      ];
     });
 
   const uniqueProfiles = allProfiles.filter(

@@ -8,7 +8,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useState } from "react";
-import hero_constraint_data from "../../../assets/data/hero_constraint_data.json";
+import { heroConstraintData, profileData } from "../../../assets/data.ts";
 import { useRosterInformation } from "../../../hooks/calculations-and-displays/useRosterInformation.ts";
 import { useDownload } from "../../../hooks/export/useDownload.ts";
 import { useAppState } from "../../../state/app";
@@ -35,12 +35,18 @@ export const DownloadProfileCardModal = () => {
         profileCards.push(
           [warband.hero.profile_origin, warband.hero.name].join("|"),
         );
+        const hero_pdata =
+          profileData[warband.hero.profile_origin][warband.hero.name];
+        if (hero_pdata) {
+          hero_pdata.overflow_cards?.forEach((profile) =>
+            profileCards.push([warband.hero.profile_origin, profile].join("|")),
+          );
+        }
         if (
           warband.hero.unit_type !== "Siege Engine" &&
-          hero_constraint_data[warband.hero.model_id]["extra_profiles"].length >
-            0
+          heroConstraintData[warband.hero.model_id]["extra_profiles"].length > 0
         ) {
-          hero_constraint_data[warband.hero.model_id]["extra_profiles"].forEach(
+          heroConstraintData[warband.hero.model_id]["extra_profiles"].forEach(
             (profile: string) => {
               profileCards.push(
                 [warband.hero.profile_origin, profile].join("|"),
@@ -52,6 +58,15 @@ export const DownloadProfileCardModal = () => {
       warband.units.filter(isSelectedUnit).forEach((unit) => {
         if (unit.unit_type !== "Siege Equipment") {
           profileCards.push([unit.profile_origin, unit.name].join("|"));
+          const unit_pdata = profileData[unit.profile_origin][unit.name];
+          console.log(unit_pdata);
+          if (unit_pdata) {
+            unit_pdata.overflow_cards?.forEach((profile) =>
+              profileCards.push(
+                [warband.hero.profile_origin, profile].join("|"),
+              ),
+            );
+          }
         }
       });
     });
