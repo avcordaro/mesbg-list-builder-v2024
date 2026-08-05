@@ -4,7 +4,8 @@
       "Added more padding around the edge of all profile cards, to help with printing them on postcards via printing services with bleed areas etc."
     ],
     "bugfixes": [
-      "Fixed mistakes on the profile cards for Mordor Troll and Hobbit Archers."
+      "Fixed mistakes on the profile cards for Mordor Troll and Hobbit Archers.",
+      "Fixed Smaug's second profile card not showing."
     ]
   },
   "1.42": {
