@@ -1,5 +1,9 @@
 {
-  "main": {},
+  "main": {
+    "bugfixes": [
+      "Fixed mistakes on the profile cards for Mordor Troll and Hobbit Archers."
+    ]
+  },
   "1.42": {
     "changed": [
       "Redesigned ProfileCards to allow for full rule display, removing issues with summarized rules."
