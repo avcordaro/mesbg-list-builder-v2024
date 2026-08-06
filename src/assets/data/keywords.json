@@ -489,7 +489,7 @@
     "name":"Static",
     "type":"special_rule",
     "active_passive":null,
-    "description":"If a Siege Engine has the Static special rule, then it can be Moved or rotated."
+    "description":"If a Siege Engine has the Static special rule, then it cannot be Moved or rotated."
   },
   {
     "name":"Strengthen Will",
