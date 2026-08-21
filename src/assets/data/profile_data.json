@@ -11294,7 +11294,7 @@
         {
           "name": "Loyal to the Captains",
           "type": "Active",
-          "description": "If this model is within 6\" or Boromir or Faramir, they may re-roll To Wound rolls of a natural 1 when making Strikes."
+          "description": "Whilst within 6\" of either Boromir or Faramir, this model may re-roll To Wound Rolls of a natural 1 when making Strikes."
         }
       ],
       "magic_powers": [],
