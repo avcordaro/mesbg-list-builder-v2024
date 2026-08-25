@@ -11542,7 +11542,7 @@
         {
           "name": "Dead-eye Shot",
           "type": "Passive",
-          "description": "When benefiting from a Heroic Shoot, this model may re-roll failed To Wound rolls when making shooting attacks."
+          "description": "When benefiting from a Heroic Shoot, this model may re-roll failed To Wound Rolls when making shooting attacks."
         }
       ],
       "magic_powers": [],
